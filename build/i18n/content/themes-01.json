@@ -1,0 +1,399 @@
+{
+"theme": {
+"anger": {
+"label": "Anger",
+"insight": "In the Prophetic way, anger is a natural energy that is managed, not erased: the Quran does not praise those who never get angry, but those who “when they are angry, they forgive.” The Prophet ﷺ placed true strength in “the one who controls himself when angry”, and gave a step-by-step remedy: seeking refuge with Allah (a remedy for the heart), silence (a remedy for the tongue), and changing position by sitting and then lying down (a remedy for the body). The aim is that anger never turns into a decision or a word you will regret.",
+"plan": {
+"now": [
+"Say: “I seek refuge with Allah from Satan, the outcast,” fall silent now, and do not send any message",
+"Change your position: if you are standing, sit down; if you are sitting, lie down or leave the place",
+"Make wudu (ablution); water cools the heat of the moment"
+],
+"week": [
+"Return to the situation once you are calm and write down: what exactly made me angry? What right am I asking for?",
+"If you hurt someone with a word or action while angry, apologise quickly; that is strength",
+"Identify who you usually get angry with and when, and plan ahead: one sentence you will say before you step away"
+],
+"long": [
+"Train yourself to restrain your anger in small situations so you can do it in big ones",
+"Look at the stress that builds up (sleep, work pressure, hunger); it is the fuel of anger",
+"Pray: “O Allah, I ask You for the word of truth in contentment and in anger”"
+]
+},
+"questions": [
+"If what you said while angry had been recorded, would you be happy to hear it tomorrow?",
+"What is the real need behind your anger: respect? Fairness? Appreciation?",
+"Does your reaction really match the size of the situation?"
+],
+"avoid": [
+"Making life-changing decisions (divorce, resigning, cutting ties) in a moment of anger",
+"Confusing restraining anger with burying your feelings forever without dealing with them",
+"Excusing harm by saying “I was angry”"
+],
+"triggers": [
+"anger",
+"angry",
+"furious",
+"rage",
+"mad at",
+"lost my temper",
+"lose my temper",
+"temper",
+"irritated",
+"annoyed",
+"shouted",
+"yelled",
+"snapped",
+"outburst",
+"frustrated",
+"pissed off",
+"hot-tempered",
+"short-tempered"
+]
+},
+"sadness": {
+"label": "Sadness, worry and distress",
+"insight": "In the Quran and Sunnah, sadness is neither a sin nor weak faith: Ya'qub grieved until his eyes turned white, and the Prophet ﷺ wept and said “The eyes shed tears and the heart grieves.” But the Prophetic way protects sadness from turning into despair or resentment: it directs the complaint to Allah (“I only complain of my suffering and my grief to Allah”), seeks refuge from worry and grief every day, makes worry and grief a source of reward and expiation, and commands seeking treatment, for Allah has not sent down a disease without sending down its cure.",
+"plan": {
+"now": [
+"Recite the supplication for worry: “O Allah, I am Your servant, the son of Your servant… make the Quran the spring of my heart, the remover of my sadness and the reliever of my distress”",
+"Do something small for your body: water, fresh air, a ten-minute walk, or sleep",
+"Write down what weighs on your heart on a sheet of paper, as if you were confiding it to Allah"
+],
+"week": [
+"Talk to someone you trust; hiding sadness doubles it",
+"Keep your prayers on time and make one long prostration in them to pour out your heart",
+"Go back to one habit that used to make you happy, even in a small dose"
+],
+"long": [
+"If the sadness lasts for weeks with disturbed sleep or appetite, or loss of interest in everything, seeing a mental-health professional is part of taking the means",
+"Build a small, steady daily portion of Quran and remembrance",
+"Look for a way to benefit people; meaning drives out emptiness"
+]
+},
+"questions": [
+"Is my sadness tied to a specific event, or is it a general feeling with no clear cause?",
+"When did I last feel some relief? What was I doing?",
+"Who is the person I can open up to today?"
+],
+"avoid": [
+"Treating sadness as proof of weak faith",
+"Cutting yourself off completely from people",
+"Relying on reflection alone without seeking help if the depression lasts"
+],
+"help": "If the sadness lasts more than two weeks with loss of interest in everything, or disturbed sleep and appetite, consult a mental-health professional; seeking treatment is a Prophetic Sunnah.",
+"triggers": [
+"sad",
+"sadness",
+"depressed",
+"depression",
+"unhappy",
+"miserable",
+"down",
+"low",
+"heartbroken",
+"crying",
+"cry",
+"tears",
+"empty inside",
+"worried",
+"worry",
+"distress",
+"grief",
+"sorrow",
+"feel heavy",
+"burdened",
+"gloomy"
+]
+},
+"anxiety": {
+"label": "Anxiety and overthinking",
+"insight": "Anxiety often comes from trying to control the future, and the Quran treats it at the root: “Say: Never will we be struck except by what Allah has decreed for us,” and “Know that if the nation gathered together to benefit you with something, they would not benefit you except with what Allah had already written for you.” Yet the Prophetic way does not call for passivity: “Tie it and rely upon Allah” — take all the means, then let your heart rest. And tranquillity is the fruit of remembrance: “Unquestionably, by the remembrance of Allah hearts are assured.”",
+"plan": {
+"now": [
+"Breathe slowly and say: “Allah is sufficient for me; there is no god but Him; in Him I have put my trust”",
+"Write what worries you in two lists: what I can do, and what is outside my control",
+"Say: “O Allah, it is Your mercy that I hope for, so do not leave me to myself even for the blink of an eye, and set right all my affairs”"
+],
+"week": [
+"Do one step from the “what I can do” list every day",
+"Set a fixed time to think about the problem (15 minutes) and postpone worrying outside it",
+"Keep up the morning and evening remembrances, especially “In the name of Allah, with whose name nothing can cause harm”"
+],
+"long": [
+"Cut down on stimulants (coffee, late nights, news); they fuel anxiety",
+"If panic or anxiety attacks disrupt your life, psychological treatment is effective and legitimate",
+"Build certainty in Allah's decree by reflecting on the verses about trust in Allah"
+]
+},
+"questions": [
+"What is the worst that could happen, and what would I do if it did?",
+"Have I taken every possible means? What is left?",
+"How many times have I worried about something that never happened?"
+],
+"avoid": [
+"Abandoning the means in the name of trust in Allah",
+"Going round in circles with the same thoughts without any practical step",
+"Constantly seeking reassurance from people instead of from Allah"
+],
+"help": "If anxiety comes with panic attacks or repeated physical symptoms, consulting a doctor or a mental-health professional is part of taking the means.",
+"triggers": [
+"anxiety",
+"anxious",
+"worried",
+"worry",
+"worrying",
+"nervous",
+"stress",
+"stressed",
+"panic",
+"panic attack",
+"overthinking",
+"overthink",
+"can't sleep",
+"cannot sleep",
+"insomnia",
+"afraid of the future",
+"uncertain future",
+"restless",
+"tense",
+"on edge",
+"what if"
+]
+},
+"fear": {
+"label": "Fear",
+"insight": "Natural fear is no flaw: Musa was afraid and said “Indeed, we are afraid that he will hasten punishment against us,” and the answer came: “Fear not. Indeed, I am with you both; I hear and I see.” The Prophetic way treats fear by remembering that Allah is with you, by the protective remembrances, and by taking the means (Musa left the city afraid and watchful, and the Prophet ﷺ hid in the cave). The rule is: “Allah is sufficient for us, and He is the best Disposer of affairs” — said by Ibrahim in the fire and by Muhammad ﷺ in the face of the gathered armies.",
+"plan": {
+"now": [
+"Say: “Allah is sufficient for us, and He is the best Disposer of affairs”",
+"If the danger is real and immediate, move away and contact the relevant services at once",
+"Remember: do not fear, Allah is with you, hearing and seeing"
+],
+"week": [
+"Keep to the protective remembrances morning and evening",
+"Identify the source of the fear: is it real or imagined? What means are available to reduce it?",
+"Share your fear with someone who can help you"
+],
+"long": [
+"Face unrealistic fears gradually, in small steps",
+"Strengthen your certainty by reading the stories of the Prophets facing fear"
+]
+},
+"questions": [
+"Am I afraid of a present danger or of a future possibility?",
+"What can I control in this situation?"
+],
+"avoid": [
+"Denying a real danger in the name of trust in Allah",
+"Letting fear keep you from your duties"
+],
+"triggers": [
+"fear",
+"afraid",
+"scared",
+"frightened",
+"terrified",
+"threat",
+"threatened",
+"danger",
+"dangerous",
+"unsafe",
+"phobia",
+"dread"
+]
+},
+"loneliness": {
+"label": "Loneliness and isolation",
+"insight": "Loneliness is a human pain that the Prophets knew: Musa a stranger in Madyan, Maryam alone by the trunk of the palm tree, and the Prophet ﷺ in the Year of Sorrow. The Quran reminds us of a nearness that never leaves: “And when My servants ask you concerning Me — indeed I am near,” “and We are closer to him than his jugular vein.” The Sunnah treats loneliness practically: spreading the greeting of peace creates love, exchanging gifts melts coldness, and good company requires that you “keep yourself patient with those who call upon their Lord.”",
+"plan": {
+"now": [
+"Set aside a few minutes for intimate prayer: tell Allah what is in your heart in your own simple words",
+"Send a message of peace to one person you have lost touch with"
+],
+"week": [
+"Attend a congregational prayer, a study circle or a volunteering activity",
+"Take the first step with a small kindness to a neighbour or colleague (a gift, a question, some help)"
+],
+"long": [
+"Look for steady, righteous company, even if it is one person",
+"Get involved in work that benefits people; giving breaks loneliness"
+]
+},
+"questions": [
+"Am I lonely because there is no one around me, or because I do not feel close to those around me?",
+"Who is the person I used to be close to and could go back to?"
+],
+"avoid": [
+"Always waiting for others to make the first move",
+"Making up for loneliness with harmful company or only with a virtual world"
+],
+"triggers": [
+"lonely",
+"loneliness",
+"alone",
+"isolated",
+"isolation",
+"no friends",
+"nobody understands me",
+"no one understands me",
+"no one cares",
+"nobody cares",
+"by myself",
+"left out",
+"excluded",
+"abandoned",
+"friendless"
+]
+},
+"despair": {
+"label": "Despair and loss of hope",
+"insight": "In the Quran despair goes hand in hand with disbelief: “Indeed, no one despairs of relief from Allah except the disbelieving people,” because the one who despairs judges Allah in a way unbefitting His mercy. Yet the Quran acknowledges moments of human brokenness: even the messengers said “When is the help of Allah?” and the answer came: “Unquestionably, the help of Allah is near.” And the Prophet ﷺ taught that hope is action: “If the Hour is established while one of you has a palm seedling in his hand, let him plant it.”",
+"plan": {
+"now": [
+"Read: “For indeed, with hardship will be ease. Indeed, with hardship will be ease” — and remember that the hardship is one and the ease is two",
+"Do one small thing that can be finished today; a small achievement breaks the feeling of helplessness",
+"Talk to someone you trust, now"
+],
+"week": [
+"Write down three times you went through hardship and were then relieved",
+"Repeat the supplication of Dhun-Nun in every hardship",
+"Choose a “planting the seedling” step in your life: something small you build for the future"
+],
+"long": [
+"Build a simple, steady routine (sleep, prayer, movement) that restores stability",
+"Read the stories of the Prophets facing dead ends (Yunus, Ayyub, Ya'qub)"
+]
+},
+"questions": [
+"Is my despair about the whole situation, or about one approach that did not work?",
+"If my friend were in my place, what would I say to him?"
+],
+"avoid": [
+"Making big decisions while at the bottom of despair",
+"Cutting yourself off completely"
+],
+"help": "If despair comes with thoughts of self-harm or wishing for death, this is an emergency: reach out immediately to someone you trust, a helpline or a doctor.",
+"triggers": [
+"hopeless",
+"hopelessness",
+"despair",
+"give up",
+"giving up",
+"gave up",
+"no hope",
+"lost hope",
+"pointless",
+"no point",
+"nothing matters",
+"can't go on",
+"cannot go on",
+"stuck",
+"no way out",
+"tired of everything",
+"what's the point"
+]
+},
+"grief": {
+"label": "Loss and death",
+"insight": "Loss is the hardest thing a person goes through, and the Prophet ﷺ lived it again and again: he lost his mother, his grandfather, his uncle, his wife Khadijah and his children. When his son Ibrahim died he wept and said: “The eyes shed tears and the heart grieves, but we say only what pleases our Lord.” Grief is legitimate; it is despairing protest that is forbidden. He taught the supplication for calamity: “To Allah we belong and to Him we shall return; O Allah, reward me for my calamity and replace it for me with something better,” and he showed that kindness to the deceased does not end: an ongoing charity, and the prayer of a righteous child.",
+"plan": {
+"now": [
+"Say: “To Allah we belong and to Him we shall return; O Allah, reward me for my calamity and replace it for me with something better”",
+"Allow yourself to cry; the Prophet ﷺ wept",
+"Do not stay alone in the first days"
+],
+"week": [
+"Pray for the deceased every day, and give some charity on their behalf, even a little",
+"Look after the basics: eating, sleeping and prayer",
+"Let the people around you help with practical matters"
+],
+"long": [
+"Set up an ongoing charity for the deceased (a well, a copy of the Quran, beneficial knowledge)",
+"If intense grief lasts for months with no easing at all, seek specialised support",
+"Keep ties with the deceased's relatives and friends; this is part of honouring them"
+]
+},
+"questions": [
+"What can I do now so that its reward reaches the one I lost?",
+"What would they have loved to see me do?"
+],
+"avoid": [
+"Despairing protest in words that object to Allah's decree",
+"Suppressing grief completely in the name of patience",
+"Feeling guilty because you have started to smile again"
+],
+"triggers": [
+"died",
+"death",
+"dead",
+"passed away",
+"passed on",
+"bereavement",
+"bereaved",
+"funeral",
+"grieving",
+"grief",
+"mourning",
+"miscarriage",
+"widow",
+"widowed",
+"my father died",
+"my mother died",
+"lost my mother",
+"lost my father",
+"lost my son",
+"lost my daughter",
+"lost my husband",
+"lost my wife",
+"lost my brother",
+"lost my sister",
+"lost my child",
+"lost a loved one"
+]
+},
+"patience": {
+"label": "Patience in hardship",
+"insight": "Trials are a law of life and do not mean Allah is angry: “The people most severely tested are the Prophets, then those nearest to them, then those nearest to them.” Patience in the Quran is not passivity but resolve (“indeed, that is of the matters requiring determination”), and its reward is without measure. The believer wins in every state: “If something good happens to him he is grateful, and that is good for him; and if something bad happens to him he is patient, and that is good for him.” And patience is a skill that is acquired: “Whoever strives to be patient, Allah will make him patient.”",
+"plan": {
+"now": [
+"Say: “To Allah we belong and to Him we shall return,” and seek help through patience and prayer",
+"Remember that worry and exhaustion themselves expiate sins"
+],
+"week": [
+"Identify what can be changed so you work on it, and what cannot so you bear it patiently",
+"Read the story of a Prophet who was patient through a trial like yours"
+],
+"long": [
+"Pray: “Our Lord, pour upon us patience”",
+"Look for the meaning of this trial in your life: what has it taught you?"
+]
+},
+"questions": [
+"Is my patience the patience of contentment, or the patience of suppression and resentment?",
+"What has changed in me for the better because of this trial?"
+],
+"avoid": [
+"Confusing patience with giving in to an injustice that could be removed",
+"Always interpreting a trial as a punishment"
+],
+"triggers": [
+"patience",
+"patient",
+"trial",
+"test",
+"tested",
+"hardship",
+"hard time",
+"calamity",
+"affliction",
+"struggling",
+"suffering",
+"going through a lot",
+"everything goes wrong",
+"bad luck",
+"why me"
+]
+}
+}
+}

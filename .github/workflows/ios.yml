@@ -1,0 +1,47 @@
+# رِفقة الأُسوة — بناء تطبيق iOS على جهاز ماك سحابي (GitHub Actions)
+# الناتج: Rifqa-unsigned.ipa (للتوقيع والتثبيت عبر Sideloadly/AltStore أو Xcode)
+#          ولقطة شاشة من محاكي iPhone للتأكد من أن التطبيق يعمل.
+name: iOS
+on:
+  workflow_dispatch:
+  push:
+    paths: ["index.html", "css/**", "js/**", "build/ios/**", ".github/workflows/ios.yml"]
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: XcodeGen
+        run: brew install xcodegen
+      - name: Sync web files + generate project
+        run: |
+          bash build/ios/sync-www.sh
+          cd build/ios && xcodegen generate
+      - name: Build for simulator and smoke test on iPhone
+        run: |
+          cd build/ios
+          xcodebuild -project Rifqa.xcodeproj -scheme Rifqa -configuration Debug -sdk iphonesimulator \
+            -derivedDataPath dd CODE_SIGNING_ALLOWED=NO build | tail -5
+          DEV=$(xcrun simctl list devices available | grep -m1 -E "iPhone 13 " | grep -oE '[0-9A-F-]{36}' || true)
+          [ -z "$DEV" ] && DEV=$(xcrun simctl list devices available | grep -m1 -E "iPhone [0-9]+ " | grep -oE '[0-9A-F-]{36}')
+          echo "Simulator: $(xcrun simctl list devices | grep $DEV)"
+          xcrun simctl boot "$DEV" || true
+          xcrun simctl bootstatus "$DEV" -b
+          xcrun simctl install "$DEV" dd/Build/Products/Debug-iphonesimulator/Rifqa.app
+          xcrun simctl launch "$DEV" com.rifqa.aluswa
+          sleep 12
+          xcrun simctl io "$DEV" screenshot "$GITHUB_WORKSPACE/simulator-home.png"
+      - name: Build unsigned IPA (device)
+        run: |
+          cd build/ios
+          xcodebuild -project Rifqa.xcodeproj -scheme Rifqa -configuration Release -sdk iphoneos \
+            -destination 'generic/platform=iOS' -derivedDataPath dd2 \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" build | tail -5
+          mkdir -p Payload && cp -R dd2/Build/Products/Release-iphoneos/Rifqa.app Payload/
+          zip -qr "$GITHUB_WORKSPACE/Rifqa-unsigned.ipa" Payload
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Rifqa-iOS
+          path: |
+            Rifqa-unsigned.ipa
+            simulator-home.png

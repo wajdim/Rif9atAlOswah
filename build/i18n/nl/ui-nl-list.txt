@@ -1,0 +1,419 @@
+0	De Profeet ﷺ
+1	Gekopieerd
+2	Verwijderd uit bewaard
+3	Toegevoegd aan bewaard
+4	Bewaren
+5	Of begin bij een onderwerp
+6	Alle onderwerpen ›
+7	{0} situaties & verhalen
+8	{0} verzen & passages
+9	{0} hadith & smeekbeden
+10	{0} levensonderwerpen
+11	Vers van de dag
+12	Hadith van de dag
+13	Beschrijf je situatie alsjeblieft iets uitgebreider
+14	De Edele Koran
+15	Kopiëren
+16	Profetische hadith
+17	Overleveraar:
+18	Smeekbede uit de Koran
+19	Authentieke smeekbede
+20	Samenvatting van het bericht
+21	Tekst van de hadith
+22	betekenis, niet letterlijk
+23	Uit de Sira-boeken
+24	De details van deze gebeurtenis worden vermeld in de erkende Sira-bronnen ({0}), en over een deel van de bewoording wordt door hadithcritici gediscussieerd. Het is een historisch bericht waarop de Sira steunt, geen hadith van sahih-graad.
+25	Bronnen:
+26	Alle onderdelen openen
+27	Alle onderdelen sluiten
+28	Nu
+29	Deze week
+30	Op de lange termijn
+31	Luister naar het volledige antwoord
+32	Allereerst
+33	Wat je schreef laat diepe pijn zien, en we nemen dat serieus. Je leven is kostbaar voor Allah en voor wie van je houden: “En doodt uzelf niet. Voorwaar, Allah is Meest Barmhartig voor jullie.” Deze app is bedoeld voor bezinning en is alleen niet genoeg bij een crisis als deze. Neem nu contact op met iemand die je vertrouwt, met een crisislijn in je land (in Nederland: 113 Zelfmoordpreventie, 0800-0113 of 113.nl; in België: 1813), of met de dichtstbijzijnde spoedeisende hulp. Om hulp vragen is kracht, geen zwakte, en je staat er niet alleen voor.
+34	Je veiligheid gaat voor
+35	Je situatie lijkt geweld of mishandeling te bevatten. De islam vraagt niet van je om in naam van geduld onder schade te blijven: “Er mag geen schade zijn en geen schade met schade vergelden.” Ben je in gevaar, ga dan naar een veilige plek en neem contact op met een hulpdienst (in Nederland: Veilig Thuis, 0800-2000), de politie of iemand die je vertrouwt, en daarna met een specialist in familie- en recht.
+36	Een gevoelige religieuze of juridische kwestie
+37	Je situatie raakt aan een kwestie (zoals scheiding, erfenis of rechten) met gedetailleerde regels. Wat volgt zijn algemene principes en richtlijnen om over na te denken, geen fatwa; wend je voor een oordeel over jouw geval tot een bevoegde geleerde of een juridisch specialist.
+38	Ik vond in de huidige bibliotheek geen situatie die goed genoeg bij de jouwe past. Probeer details toe te voegen: wie is de andere persoon? Wat is er gebeurd? Hoe voel je je? Wat wil je doen? Of
+39	bekijk de onderwerpen
+40	Sterke overeenkomst
+41	Redelijke overeenkomst
+42	Zwakke overeenkomst
+43	Een eerste lezing van je situatie
+44	Herkende onderwerpen
+45	Algemeen
+46	Gevoelens
+47	(waarschijnlijk)
+48	Niet expliciet genoemd
+49	Betrokken personen
+50	Niet gespecificeerd
+51	Je beschrijft een fout van jezelf
+52	Zwaarte van de situatie
+53	Het Koranische en Profetische perspectief op je situatie
+54	Het bewijs
+55	Wat valt op aan hoe {0} handelde?
+56	Principes die eruit volgen
+57	Hoe kun je er je voordeel mee doen?
+58	Andere situaties die licht werpen op de jouwe
+59	Verwant aan: {0}
+60	Koran
+61	Uit de Edele Koran
+62	Uit de Profetische Soenna
+63	Een praktisch plan voor je situatie
+64	Tik op een stap om hem als gedaan te markeren.
+65	Authentieke smeekbeden die bij je situatie passen
+66	Vragen om jezelf beter te begrijpen
+67	Wat je beter kunt vermijden
+68	Grenzen van dit voorbeeld — wanneer geldt het niet?
+69	Overdenking
+70	Persoonlijke diepteanalyse (optioneel)
+71	De Edele Koran, {0}
+72	Bronnen
+73	Zeer goed gestaafd
+74	Koran, of een hadith in de twee Sahih's of als sahih beoordeeld
+75	Gestaafd
+76	een sahih- of hasan-hadith in de Sunan- en Musnad-verzamelingen
+77	Historisch bericht
+78	uit de Sira-boeken, niet van sahih-hadithgraad.
+79	Verzen worden in standaardspelling getoond; raadpleeg de Mushaf bij het reciteren.
+80	Waarom verschenen deze resultaten? (transparantie van de analyse)
+81	Woorden die uit je tekst zijn opgepikt:
+82	Scores van de situaties:
+83	Methode: tekstnormalisatie en stamvorming → herkenning van onderwerpen en gevoelens → uitbreiding van de zoekvraag → BM25-rangschikking met semantische versterking → de analyse opbouwen uitsluitend uit de opgehaalde teksten.
+84	Beoordeel dit antwoord
+85	Had je iets aan deze lezing? Je beoordeling helpt ons de app te verbeteren
+86	Nieuwe situatie
+87	Samenvatting kopiëren
+88	Delen
+89	Afdrukken / PDF
+90	Onderwerpen verkennen
+91	Rifqat al-Uswa — samenvatting van de overdenking
+92	Situatie:
+93	Meest verwante situatie:
+94	Plan voor nu:
+95	Dit is een begeleidende overdenking, geen fatwa.
+96	Verdiep de analyse met AI
+97	Beperkt tot de hierboven opgehaalde teksten, met vermelding van hun codes
+98	Optioneel — vereist een Claude API-sleutel en een internetverbinding
+99	Het model leest je situatie samen met de opgehaalde, gestaafde passages, schrijft een persoonlijke analyse die ze met elkaar verbindt en stelt concrete stappen voor jouw geval voor. Je tekst wordt alleen hiervoor naar Anthropic gestuurd.
+100	Start de diepteanalyse
+101	Stel een vervolgvraag over je situatie…
+102	Versturen
+103	De gestaafde analyse hierboven is volledig en werkt offline. Wil je een extra laag waarin een taalmodel een persoonlijke analyse schrijft die dezelfde teksten met elkaar verbindt (en geen enkele tekst van daarbuiten), voeg dan een Claude API-sleutel toe in Instellingen.
+104	Instellingen openen
+105	Het model kon dit verzoek niet voltooien. De gestaafde analyse hierboven blijft beschikbaar.
+106	(Maximale lengte bereikt.)
+107	(Houd je aan dezelfde regels: geen tekst behalve uit de opgehaalde passages, en vermeld de codes. Antwoord in het Nederlands.)
+108	{0} situaties · {1} verzen · {2} hadith
+109	Geen passende onderwerpen. Probeer “Alle situaties”, of beschrijf je situatie op de startpagina.
+110	Geen resultaten voor je zoekopdracht.
+111	Jouw beoordeling
+112	Luister naar dit onderwerp
+113	De Koranische en Profetische lezing
+114	Beschrijf je situatie over dit onderwerp
+115	Verwante situaties
+116	Een praktisch plan
+117	Uit de Edele Koran ({0})
+118	Uit de Profetische Soenna ({0})
+119	Smeekbeden
+120	Vragen ter overdenking
+121	Alles
+122	Verzen
+123	Hadith
+124	{0} teksten
+125	Meer tonen
+126	Geen passende teksten.
+127	Situaties
+128	Hadith & smeekbeden
+129	Je hebt nog niets bewaard.
+130	Tik op “Bewaren” bij een situatie, vers of hadith om die hier te zien; beoordeel situaties om ook je beoordelingen hier te zien.
+131	‹ Terug
+132	Luisteren
+133	Uit de Koran
+134	Wat er gebeurde
+135	Context
+136	Betrokken personen:
+137	De teksten
+138	Principes
+139	Wat leren we er vandaag van?
+140	Grenzen van dit voorbeeld
+141	↔ Vergelijk met een andere situatie
+142	Verwante situaties
+143	Beoordeel deze situatie
+144	Beoordeel deze situatie en laat een opmerking achter
+145	Allah de Verhevene zegt, in {0}:
+146	Voorlezen wordt in deze browser niet ondersteund
+147	Er is geen spraakengine op dit apparaat. Installeer “Spraakservices van Google” uit de winkel.
+148	De spraakengine heeft geen Nederlandse stem; het installatiescherm wordt geopend
+149	Er is geen Nederlandse stem geïnstalleerd. In Windows: Instellingen → Tijd en taal → Taal → voeg “Nederlands” toe met de functie “Spraak” en open de app opnieuw.
+150	De situatie wordt voorgelezen
+151	Het onderwerp wordt voorgelezen
+152	Het volledige antwoord wordt voorgelezen
+153	Er is geen tekst om voor te lezen
+154	Kon de recitatie niet laden (geen verbinding)
+155	Kon de recitatie niet laden (geen verbinding); de betekenis wordt in plaats daarvan voorgelezen
+156	Pauzeren
+157	Hervatten
+158	Recitatie door sjeik {0}
+159	Stem 1
+160	Verteller
+161	Gepauzeerd
+162	{0} van {1}
+163	Leessnelheid: {0}×
+164	Wat vind je van dit antwoord?
+165	Beoordeling
+166	{0} van 5
+167	Laat een opmerking of suggestie achter (optioneel): wat hielp je? Wat ontbreekt er?
+168	Voeg de tekst van mijn situatie toe aan de beoordeling (die blijft op je apparaat tenzij je hem verstuurt)
+169	Alleen op je apparaat bewaard; je vindt het onder “Bewaard”
+170	Beoordeling bewaren
+171	Djazak Allahu khayran voor je beoordeling
+172	Bewerken
+173	Al mijn beoordelingen
+174	Kies eerst het aantal sterren
+175	Je beoordeling is bewaard, dank je wel
+176	Rifqat al-Uswa — beoordelingen en feedback van gebruikers (versie {0})
+177	Analyse van een situatie
+178	Situatie
+179	Datum:
+180	Onderwerpen:
+181	Overeenkomst:
+182	Tekst van de situatie:
+183	Opmerking:
+184	Nog geen beoordelingen
+185	Feedback Rifqat al-Uswa
+186	Feedback over de app Rifqat al-Uswa
+187	Mijn beoordelingen en feedback
+188	{0} beoordelingen
+189	Feedback sturen naar de ontwikkelaar
+190	Analyse:
+191	Situatie openen
+192	Verwijderen
+193	man
+194	vrouw
+195	Automatisch
+196	Nog geen Nederlandse stemmen gevonden.
+197	Installeer de Nederlandse stem
+198	Er is geen Nederlandse stem geïnstalleerd. In Windows: Instellingen → Tijd en taal → Taal en regio → voeg “Nederlands” toe met de functie “Spraak” en start de app opnieuw.
+199	Geen bevestigde mannenstem gevonden; probeer de beschikbare stemmen en kies de beste. De app verlaagt automatisch de toonhoogte van stem 1.
+200	Er is maar één Nederlandse stem beschikbaar; de app onderscheidt de twee stemmen door de toonhoogte.
+201	Beoordeling verwijderd
+202	Je koos voorlezen zonder recitatie
+203	Rifqat al-Uswa
+204	Beschrijf je situatie over “{0}” uitgebreid…
+205	Wat je schrijft wordt niet bewaard
+206	Ongeldige sleutel (hij begint met sk-ant-)
+207	Instellingen bewaard
+208	Sleutel verwijderd
+209	Keuze bewaard
+210	De app installeren
+211	tekenen van hevige pijn
+212	Wat je schreef gaat vooral over “{0}”
+213	, en raakt aan “{0}”
+214	, in de context van je relatie met {0}
+215	Wat je schreef gaat over je relatie met {0}.
+216	Je woorden laten gevoelens zien van {0}. Die gevoelens zijn begrijpelijk en je hoeft je er niet schuldig over te voelen; het gaat erom wat we ermee doen.
+217	 en
+218	Een situatie als deze kan gepaard gaan met een gevoel van {0}, ook al zei je dat niet expliciet.
+219	 of
+220	Deze situatie lijkt zwaar op je te drukken en duurt al een tijd, dus we beginnen met wat de druk nu verlicht, vóór de plannen voor de langere termijn.
+221	Ik merkte ook dat je over een fout van jezelf spreekt; een fout erkennen is de helft van de weg, en de Profetische leiding opent voor je de deur van het goedmaken, niet die van zelfbestraffing.
+222	Hier ben jij degene die schade leed; de Profetische weg erkent eerst je recht en biedt je daarna hogere keuzes aan, zonder je die op te leggen.
+223	Het meest verwante voorbeeld dat ik voor je situatie vond: “{0}”.
+224	## Herkende onderwerpen
+225	zekerheid
+226	Gevoelens:
+227	Relatie:
+228	De schrijver erkent een eigen fout:
+229	ja
+230	nee
+231	## Situaties uit de Sira en de Koran (opgehaald)
+232	Wat er gebeurde:
+233	Principes:
+234	Grenzen van toepassing:
+235	Tekst:
+236	[samenvatting van de betekenis]
+237	Vers:
+238	## Verzen (opgehaald)
+239	Les:
+240	## Hadith (opgehaald)
+241	Graad:
+242	## Authentieke smeekbeden (opgehaald)
+243	## De Koranische en Profetische lezing van de onderwerpen
+244	Er is nog geen API-sleutel ingesteld.
+245	De API-sleutel is ongeldig of verlopen.
+246	Deze sleutel heeft geen toegang tot dit model.
+247	De verzoeklimiet is tijdelijk overschreden. Probeer het straks opnieuw.
+248	De Claude-dienst is nu druk. Probeer het straks opnieuw.
+249	Het verzoek is mislukt ({0}).
+250	Fout tijdens het streamen
+251	Er is geen internetverbinding, of het verzoek werd geblokkeerd. De gestaafde analyse hierboven werkt offline.
+252	Lezen wat je schreef en de context begrijpen…
+253	De onderwerpen, gevoelens en de betrokken relatie herkennen…
+254	Verwante situaties ophalen uit de Sira en de verhalen van de profeten…
+255	Zoeken naar de verwante verzen en hadith…
+256	De graden en bronnen van de teksten controleren…
+257	De lezing en het praktische plan opbouwen…
+258	Kies je beoordeling
+259	Zwak
+260	Redelijk
+261	Goed
+262	Zeer goed
+263	Uitstekend
+264	Beschrijf in je eigen woorden wat je doormaakt, dan lezen we het samen met je in het licht van de Edele Koran, de Profetische Soenna en de Sira.
+265	Analyseer mijn situatie
+266	Een app voor bezinning en begeleiding — geen fatwa, en geen vervanging voor geleerden of specialisten. Elk vers en elke hadith erin komt uit een gestaafde bibliotheek met bron en graad, en er wordt nooit een tekst verzonnen.
+267	Verken naar je situatie
+268	Levensonderwerpen, elk met een Koranische en Profetische lezing, situaties, verzen, hadith en smeekbeden
+269	Per onderwerp
+270	Alle situaties (
+271	‹ Terug naar de onderwerpen
+272	De gestaafde bibliotheek
+273	De verzen, hadith en smeekbeden waarop de analyse steunt, met bron en graad
+274	Bewaard
+275	Situaties, verzen en hadith die je bewaarde (alleen op dit apparaat opgeslagen)
+276	Over Rifqat al-Uswa
+277	Hoe werkt het?
+278	De app analyseert wat je schrijft lokaal op je apparaat: ze herkent de onderwerpen, gevoelens en de betrokken relatie, haalt vervolgens uit een gestaafde bibliotheek (situaties uit de Sira en de verhalen van de profeten, verzen, en hadith met hun graad) de teksten die het dichtst bij je situatie liggen, en bouwt daaruit een lezing en een praktisch plan.
+279	Privacy:
+280	Wat je schrijft wordt nooit naar een server gestuurd en niet bewaard. De enige uitzondering: als je “Verdiepen met AI” inschakelt met je eigen sleutel, worden je tekst en de opgehaalde passages rechtstreeks naar Claude (Anthropic) gestuurd om de analyse te maken.
+281	Wetenschappelijke betrouwbaarheid:
+282	De app maakt nooit zelf verzen of hadith; elke tekst komt ongewijzigd uit de bibliotheek. De Nederlandse betekenissen van de Koran zijn van Sofian S. Siregar (via Tanzil.net). De Nederlandse vertalingen van de hadith zijn een eigen vertaling van de app, gemaakt naar de gepubliceerde Engelse vertalingen van sunnah.com; de Arabische tekst blijft altijd de maatstaf. Verzen worden in standaardspelling getoond; raadpleeg de Mushaf bij het reciteren.
+283	Dit is een app voor bezinning en begeleiding; ze vervangt niet de fatwa van een bevoegde geleerde, en niet het advies van een psychologische of juridische professional wanneer dat nodig is.
+284	OK
+285	Instellingen
+286	Taal / اللغة
+287	العربية
+288	Weergave
+289	Licht
+290	Donker
+291	Lettergrootte
+292	Klein
+293	Normaal
+294	Groot
+295	Groter
+296	Klinkertekens in de uitleg
+297	Met tekens
+298	Zonder tekens
+299	Verzen en hadith tonen altijd volledige klinkertekens.
+300	Voorleessnelheid
+301	Langzaam
+302	Normaal
+303	Snel
+304	Sneller
+305	Verzen gereciteerd door een Koranrecitator
+306	Luisteren
+307	Verzen worden in het Arabisch gereciteerd vanuit echte opnamen van bekende recitators (vereist een internetverbinding), gevolgd door hun Nederlandse betekenis. Offline wordt alleen de betekenis voorgelezen.
+308	Stem 1 — de hadith, smeekbeden en betekenissen van verzen
+309	Proberen
+310	Stem 2 — de verteller (titels en uitleg)
+311	Verdiepen met AI (optioneel) — Claude API-sleutel
+312	De gestaafde analyse werkt volledig zonder sleutel en zonder internet. Een sleutel voegt een generatieve analyselaag toe die beperkt blijft tot de opgehaalde teksten. De sleutel wordt alleen op dit apparaat bewaard en rechtstreeks naar api.anthropic.com gestuurd. Vraag er een aan via console.anthropic.com
+313	Model
+314	Sleutel verwijderen
+315	Voorlezen
+316	Een app voor bezinning die je situatie analyseert en verbindt met de Edele Koran, de Profetische Soenna en de Sira, met gestaafde bronnen en duidelijke hadithgraden.
+317	Rifqat al-Uswa
+318	Start
+319	Navigatie
+320	Onderwerpen
+321	Bibliotheek van verzen en hadith
+322	Bibliotheek
+323	Over de app en privacy
+324	Over de app
+325	Schrijf op je eigen manier en zo uitgebreid als je wilt wat er gebeurde… Wie? Wat is er gebeurd? Hoe voel je je? (Nederlands of Arabisch)
+326	Zoek een onderwerp of situatie… bijv. woede, schulden, ouders
+327	Zoek in de teksten… bijv. geduld, levensonderhoud, woede
+328	Vorig fragment
+329	Afspelen of pauzeren
+330	Volgend fragment
+331	Leessnelheid
+332	Stoppen
+333	Voorlezen stoppen
+334	Slechte behandeling en agressie
+335	Ibn Hisham, al-Sira al-Nabawiyya
+336	Fouten
+337	Gezin
+338	Samenleving
+339	Gevoelens en beproevingen
+340	Leiderschap
+341	Succes en kracht
+342	Ibn Kathir, al-Bidaya wa al-Nihaya
+343	Moeilijke beslissingen
+344	Relaties
+345	Yusuf (Jozef), vrede zij met hem
+346	Tafsir Ibn Kathir over soera Yusuf
+347	Ya'qub (Jakob), vrede zij met hem
+348	Yunus (Jona), vrede zij met hem
+349	Ayyub (Job), vrede zij met hem
+350	Tafsir Ibn Kathir (met voorzichtigheid ten aanzien van Isra'iliyyat-berichten)
+351	Musa (Mozes), vrede zij met hem
+352	Ibrahim (Abraham), vrede zij met hem
+353	Maryam (Maria), vrede zij met haar
+354	De moeder van Musa
+355	Abu Bakr al-Siddiq, moge Allah tevreden met hem zijn
+356	Khadija, moge Allah tevreden met haar zijn
+357	Umm Salama, moge Allah tevreden met haar zijn
+358	Abu Hurayra, moge Allah tevreden met hem zijn
+359	Umm Sulaym, moge Allah tevreden met haar zijn
+360	Jurayj de aanbidder
+361	Salman al-Farisi, moge Allah tevreden met hem zijn
+362	Hanzala, moge Allah tevreden met hem zijn
+363	Abu Dharr al-Ghifari, moge Allah tevreden met hem zijn
+364	Fatima, moge Allah tevreden met haar zijn
+365	De twee zonen van Adam
+366	Tafsir Ibn Kathir over soera Al-Ma'ida
+367	Qarun en zijn volk
+368	Sulayman (Salomo), vrede zij met hem
+369	De eigenaar van de twee tuinen en zijn metgezel
+370	Tafsir Ibn Kathir over soera Al-Kahf
+371	Nuh (Noach), vrede zij met hem
+372	Tafsir Ibn Kathir over soera Hud
+373	Luqman de Wijze
+374	Adam, vrede zij met hem
+375	Zakariyya (Zacharias), vrede zij met hem
+376	Hajar (Hagar), vrede zij met haar
+377	Een man uit de vroegere volken
+378	Abu Sufyan tegenover Heraclius
+379	Een man die zijn broeder bezocht
+380	Gevoelens en het zelf
+381	Relaties en gezin
+382	Werk en geld
+383	Gezondheid en studie
+384	Samenleving en rechtvaardigheid
+385	Leiderschap en beslissingen
+386	Mahmoud Khalil Al-Husary
+387	Muhammad Siddiq Al-Minshawi
+388	Abdul Basit Abdul Samad
+389	Mishary Rashid Alafasy
+390	Maher Al-Muaiqly
+391	Saad Al-Ghamdi
+392	Fares Abbad
+393	Geen recitatie (alleen de betekenis wordt voorgelezen)
+394	Claude Opus 5 — de diepste analyse (standaard)
+395	Claude Sonnet 5 — evenwichtig en sneller
+396	Claude Haiku 4.5 — het snelst en het goedkoopst
+397	De situatie die het dichtst bij de jouwe ligt, uit de Koran
+398	De situatie die het dichtst bij de jouwe ligt, uit het leven van de Profeet
+399	,
+400	;
+401	Mannenstem
+402	door de toonhoogte te verlagen
+403	Vrouwenstem
+404	door de toonhoogte te verhogen
+405	Stemmen op dit apparaat
+406	Meer stemmen installeren
+407	Er zijn nog geen stemmen voor deze taal gevonden.
+408	Er is geen {0} stem geïnstalleerd. In Windows: Instellingen → Tijd en taal → Taal en regio → voeg “{1}” toe met de functie “Spraak” en start de app opnieuw (Windows levert de mannenstem “{2}”).
+409	Er is geen mannenstem geïnstalleerd voor deze taal; met “Mannenstem” wordt de toonhoogte van de beschikbare stem verlaagd. Wil je een echte mannenstem, installeer dan een extra stem via de spraakinstellingen van je apparaat.
+410	Mannenstemmen staan bovenaan de lijst.
+411	De sleutel wordt verwijderd zodra je bewaart
+412	Taal & weergave
+413	Taal / Language / اللغة
+414	Diepere analyse met AI (optioneel)
+415	Claude API-sleutel
+416	Annuleren
+417	Taal · Language · اللغة
+418	Sluiten zonder bewaren

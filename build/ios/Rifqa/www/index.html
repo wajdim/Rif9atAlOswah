@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self' https://api.anthropic.com; media-src 'self' data: https://everyayah.com; manifest-src 'self'; worker-src 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>رِفقة الأُسوة</title>
+<meta name="description" content="تطبيق تأملي يحلل موقفك ويربطه بالقرآن الكريم والسنة النبوية والسيرة بمصادر موثقة ودرجات أحاديث واضحة.">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2F4C3E">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="رفقة الأسوة">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/app.css">
+<script>
+/* تطبيق اللغة والوضع وحجم الخط قبل الرسم لتجنب الوميض */
+(function(){try{var p=JSON.parse(localStorage.getItem("rifqa.prefs")||"{}"),d=document.documentElement;
+if(p.lang==="en"){d.setAttribute("lang","en");d.setAttribute("dir","ltr");}
+if(p.theme&&p.theme!=="auto")d.setAttribute("data-theme",p.theme);
+if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
+</script>
+</head>
+<body>
+<div id="app">
+
+  <header class="topbar">
+    <button class="brand-mini" id="btnHome" aria-label="الصفحة الرئيسية">رِفقة الأُسوة</button>
+    <nav class="topnav" aria-label="التنقل">
+      <button class="icon-btn lang-btn" data-act="toggle-lang" id="btnLang" title="English" aria-label="English">EN</button>
+      <button class="icon-btn" data-nav="explore" title="الموضوعات" aria-label="الموضوعات">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M14.5 9.5l-2 5-5 2 2-5z"></path></svg>
+      </button>
+      <button class="icon-btn" data-nav="library" title="مكتبة الآيات والأحاديث" aria-label="المكتبة">
+        <svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10v16H5.5A1.5 1.5 0 0 1 4 18.5z"></path><path d="M14 4h4.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H14z"></path></svg>
+      </button>
+      <button class="icon-btn" data-nav="saved" title="المحفوظات" aria-label="المحفوظات">
+        <svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"></path></svg>
+      </button>
+      <button class="icon-btn" id="btnSettings" title="الإعدادات" aria-label="الإعدادات">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg>
+      </button>
+      <button class="icon-btn" id="btnPrivacy" title="عن التطبيق والخصوصية" aria-label="عن التطبيق">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="11" x2="12" y2="16"></line><circle cx="12" cy="8" r="0.6" fill="currentColor"></circle></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="screens">
+
+    <!-- HOME -->
+    <section id="screen-home" class="screen active">
+      <div class="hero">
+        <div class="logo">رِفقة الأُسوة</div>
+        <div class="ornament"><span class="line"></span><span class="diamond"></span><span class="line rev"></span></div>
+        <p class="tagline">صف ما تمرّ به بكلماتك، وسنقرأه معك في ضوء القرآن الكريم والسنة النبوية والسيرة.</p>
+        <div class="badge-row" id="statsHero"></div>
+      </div>
+
+      <div class="composer">
+        <textarea id="userInput" maxlength="3000" placeholder="اكتب ما حدث معك بطريقتك وبالتفصيل الذي تريد… من؟ ماذا حدث؟ بماذا تشعر؟ (الفصحى أو العامية)"></textarea>
+        <div class="composer-foot">
+          <span class="mode-row" id="aiModeRow" hidden>
+            <label class="switch"><input type="checkbox" id="aiAuto"><span></span></label>
+            <span>تعميق التحليل بالذكاء الاصطناعي</span>
+          </span>
+          <span class="counter" id="charCount">لن يُحفظ ما تكتبه</span>
+          <button class="btn-primary" id="btnSearch">حلّل موقفي</button>
+        </div>
+      </div>
+
+      <div class="home-themes" id="homeThemes"></div>
+      <div class="daily" id="dailyCard"></div>
+
+      <div class="home-foot">
+        <div class="divider2"></div>
+        <p>تطبيق تأملي إرشادي وليس فتوى ولا بديلاً عن أهل العلم أو المختصين. كل آية وحديث فيه مأخوذ من مكتبة موثقة مع ذكر المصدر والدرجة، ولا يُختلق أي نص.</p>
+      </div>
+    </section>
+
+    <!-- LOADING -->
+    <section id="screen-loading" class="screen">
+      <div class="loading-wrap">
+        <div class="spinner"></div>
+        <div class="stage-list" id="stageList"></div>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="screen-result" class="screen">
+      <div class="result-wrap" id="resultWrap"></div>
+    </section>
+
+    <!-- EXPLORE (themes) -->
+    <section id="screen-explore" class="screen">
+      <div class="explore-head">
+        <h2>استكشف حسب حالتك</h2>
+        <p>موضوعات حياتية، لكل منها قراءة قرآنية نبوية ومواقف وآيات وأحاديث وأدعية</p>
+        <div class="stats-bar" id="statsBar"></div>
+      </div>
+      <div class="explore-search">
+        <input type="text" id="exploreSearch" placeholder="ابحث عن موضوع أو موقف… مثل: الغضب، الديون، الوالدين">
+      </div>
+      <div class="explore-tabs">
+        <button class="explore-tab active" id="tabByTopic">حسب الموضوع</button>
+        <button class="explore-tab" id="tabAllSit">كل المواقف (<span id="allCount"></span>)</button>
+      </div>
+      <div id="exploreBody"></div>
+    </section>
+
+    <!-- THEME PAGE -->
+    <section id="screen-theme" class="screen">
+      <button class="back-link" data-nav="explore">‹ رجوع إلى الموضوعات</button>
+      <div id="themePage"></div>
+    </section>
+
+    <!-- LIBRARY -->
+    <section id="screen-library" class="screen">
+      <div class="explore-head">
+        <h2>المكتبة الموثقة</h2>
+        <p>الآيات والأحاديث والأدعية التي يعتمد عليها التحليل، مع المصدر والدرجة</p>
+      </div>
+      <div class="explore-search">
+        <input type="text" id="libSearch" placeholder="ابحث في النصوص… مثل: الصبر، الرزق، الغضب">
+      </div>
+      <div class="lib-wrap">
+        <div class="lib-filters" id="libFilters"></div>
+        <div class="lib-count" id="libCount"></div>
+        <div id="libList"></div>
+      </div>
+    </section>
+
+    <!-- SAVED -->
+    <section id="screen-saved" class="screen">
+      <div class="explore-head">
+        <h2>المحفوظات</h2>
+        <p>ما حفظته من مواقف وآيات وأحاديث (يُحفظ على هذا الجهاز فقط)</p>
+      </div>
+      <div class="lib-wrap" id="savedList"></div>
+    </section>
+
+  </main>
+
+  <div class="detail-panel" id="detailPanel" role="dialog" aria-modal="true"></div>
+
+  <div class="modal-overlay" id="privacyModal" hidden>
+    <div class="modal-box">
+      <h3>عن رِفقة الأُسوة</h3>
+      <p><b>كيف يعمل؟</b> يحلّل التطبيق ما تكتبه محليًا على جهازك: يكتشف الموضوعات والمشاعر وطبيعة العلاقة، ثم يسترجع من مكتبة موثقة (مواقف من السيرة وقصص الأنبياء، وآيات، وأحاديث مع درجاتها) أقرب النصوص لحالتك، ويبني منها قراءة وخطة عملية.</p>
+      <p><b>الخصوصية:</b> ما تكتبه لا يُرسل إلى أي خادم ولا يُحفظ. الاستثناء الوحيد: إذا فعّلت «التعميق بالذكاء الاصطناعي» بمفتاحك الخاص، يُرسل نصك مع المقاطع المسترجعة مباشرة إلى Claude (Anthropic) لتوليد التحليل.</p>
+      <p><b>الأمانة العلمية:</b> لا يولّد التطبيق آيات أو أحاديث؛ كل نص مأخوذ من المكتبة كما هو. الآيات بالرسم الإملائي؛ راجع المصحف عند التلاوة.</p>
+      <p>هذا تطبيق إرشادي تأملي، وليس بديلاً عن فتوى عالم مؤهل أو استشارة مختص نفسي أو قانوني عند الحاجة.</p>
+      <div class="modal-actions"><button class="btn-primary" data-close="privacyModal">حسنًا</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="settingsModal" hidden>
+    <div class="modal-box">
+      <h3>الإعدادات</h3>
+      <div class="set-group">
+        <label>اللغة / Language</label>
+        <div class="seg" id="segLang"><button data-v="ar" lang="ar">العربية</button><button data-v="en" lang="en">English</button></div>
+      </div>
+      <div class="set-group">
+        <label>المظهر</label>
+        <div class="seg" id="segTheme"><button data-v="auto">تلقائي</button><button data-v="light">فاتح</button><button data-v="dark">داكن</button></div>
+      </div>
+      <div class="set-group">
+        <label>حجم الخط</label>
+        <div class="seg" id="segFs"><button data-v="0.93">صغير</button><button data-v="1">عادي</button><button data-v="1.1">كبير</button><button data-v="1.2">أكبر</button></div>
+      </div>
+      <div class="set-group" id="tkGroup">
+        <label>تشكيل النصوص الشارحة</label>
+        <div class="seg" id="segTk"><button data-v="1">مشكولة</button><button data-v="0">بدون تشكيل</button></div>
+        <div class="set-hint">الآيات والأحاديث مشكولة دائمًا. تشكيل الشرح آلي للمساعدة على القراءة الصحيحة، وقد يقع فيه خطأ يسير.</div>
+      </div>
+      <div class="set-group">
+        <label>سرعة القراءة الصوتية</label>
+        <div class="seg" id="segRate"><button data-v="0.8">بطيئة</button><button data-v="1">عادية</button><button data-v="1.2">سريعة</button><button data-v="1.45">أسرع</button></div>
+      </div>
+      <div class="set-group">
+        <label>تلاوة الآيات بصوت القارئ</label>
+        <div class="row-pick"><select id="ttsReciter"></select><button class="btn-ghost sm" data-act="preview-reciter">استماع</button></div>
+        <div class="set-hint">تُتلى الآيات بتسجيلات حقيقية لكبار القراء ضبطًا وتجويدًا (تحتاج اتصالًا بالإنترنت). بدون اتصال يقرؤها صوت الشيخ من النص.</div>
+      </div>
+      <div class="set-group" id="voiceGroup">
+        <label>الصوت 1 — صوت الشيخ (الأحاديث والأدعية)</label>
+        <div class="row-pick"><select id="ttsVoice1"></select><button class="btn-ghost sm" data-act="preview-voice" data-role="1">تجربة</button></div>
+        <label style="margin-top:12px;">الصوت 2 — صوت المحاور (العناوين والشرح)</label>
+        <div class="row-pick"><select id="ttsVoice2"></select><button class="btn-ghost sm" data-act="preview-voice" data-role="2">تجربة</button></div>
+        <div class="set-hint" id="voiceHint"></div>
+      </div>
+      <div class="set-group">
+        <label>التعميق بالذكاء الاصطناعي (اختياري) — مفتاح Claude API</label>
+        <input type="password" id="aiKey" placeholder="sk-ant-..." autocomplete="off" spellcheck="false">
+        <div class="set-hint">يعمل التحليل الموثق كاملًا بدون مفتاح وبدون إنترنت. المفتاح يضيف طبقة تحليل توليدية مقيّدة بالنصوص المسترجعة فقط. يُحفظ المفتاح على هذا الجهاز فقط، ويُرسل مباشرة إلى api.anthropic.com. احصل عليه من console.anthropic.com</div>
+      </div>
+      <div class="set-group">
+        <label>النموذج</label>
+        <select id="aiModel"></select>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-ghost" id="btnClearKey">حذف المفتاح</button>
+        <button class="btn-primary" id="btnSaveSettings">حفظ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- مشغّل القراءة الصوتية -->
+  <div class="tts-bar" id="ttsBar" hidden role="region" aria-label="القراءة الصوتية">
+    <div class="tts-progress"><span id="ttsFill"></span></div>
+    <div class="tts-row">
+      <button class="tts-btn" data-tts="prev" title="المقطع السابق" aria-label="المقطع السابق"><svg viewBox="0 0 24 24"><path d="M8 6l8 6-8 6z"/><line x1="18" y1="6" x2="18" y2="18"/></svg></button>
+      <button class="tts-btn main" data-tts="toggle" id="ttsToggle" title="إيقاف مؤقت" aria-label="تشغيل أو إيقاف مؤقت"></button>
+      <button class="tts-btn" data-tts="next" title="المقطع التالي" aria-label="المقطع التالي"><svg viewBox="0 0 24 24"><path d="M16 6l-8 6 8 6z"/><line x1="6" y1="6" x2="6" y2="18"/></svg></button>
+      <div class="tts-info"><div class="tts-title" id="ttsTitle">القراءة الصوتية</div><div class="tts-sub" id="ttsSub"></div></div>
+      <button class="tts-rate" data-tts="rate" id="ttsRate" title="سرعة القراءة">1×</button>
+      <button class="tts-btn" data-tts="stop" title="إيقاف" aria-label="إيقاف القراءة"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></svg></button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="js/data-situations.js"></script>
+<script src="js/data-situations-2.js"></script>
+<script src="js/data-situations-3.js"></script>
+<script src="js/data-situations-4.js"></script>
+<script src="js/data-quran.js"></script>
+<script src="js/data-hadith.js"></script>
+<script src="js/data-themes.js"></script>
+<script src="js/data-tashkeel.js"></script>
+<script src="js/data-tashkeel-prose.js"></script>
+<script src="js/data-en.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/rag.js"></script>
+<script src="js/tts.js"></script>
+<script src="js/tashkeel-view.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

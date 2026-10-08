@@ -1,0 +1,1955 @@
+{
+"h-niyya": {
+"words": 8,
+"from_source": 8,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-qulub": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-ridallah": {
+"words": 20,
+"from_source": 20,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-khafi": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-ghadab-julus": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-ghadab-istiadha": {
+"words": 23,
+"from_source": 22,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"h-ghadab-sukut": {
+"words": 4,
+"from_source": 3,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-kazm": {
+"words": 25,
+"from_source": 25,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"h-rifq": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-rifq-zana": {
+"words": 14,
+"from_source": 14,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-muflis-tabbaan": {
+"words": 9,
+"from_source": 9,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-afw-izz": {
+"words": 19,
+"from_source": 19,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-zulm-zulumat": {
+"words": 15,
+"from_source": 15,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-dawat-mazlum": {
+"words": 9,
+"from_source": 9,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-unsur": {
+"words": 19,
+"from_source": 19,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-muflis": {
+"words": 34,
+"from_source": 34,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-la-darar": {
+"words": 4,
+"from_source": 4,
+"books": [
+"Maliks_Muwataa"
+]
+},
+"h-la-yuldagh": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-yuhibbu": {
+"words": 9,
+"from_source": 9,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-la-tahasadu": {
+"words": 18,
+"from_source": 18,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-hasad-ithnatayn": {
+"words": 22,
+"from_source": 22,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-hajr-thalath": {
+"words": 18,
+"from_source": 18,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-istalaha": {
+"words": 26,
+"from_source": 26,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-islah": {
+"words": 20,
+"from_source": 20,
+"books": [
+"Maliks_Muwataa",
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-mira": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"h-afshu-salam": {
+"words": 19,
+"from_source": 19,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-akhbirhu": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"h-tahadu": {
+"words": 2,
+"from_source": 0,
+"books": []
+},
+"h-khalil": {
+"words": 8,
+"from_source": 8,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-jalis": {
+"words": 8,
+"from_source": 8,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-maa-man-ahabb": {
+"words": 4,
+"from_source": 4,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-yashkur-nas": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-kafiuhu": {
+"words": 17,
+"from_source": 16,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"h-ghiba": {
+"words": 34,
+"from_source": 34,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-yaqul-khayran": {
+"words": 10,
+"from_source": 10,
+"books": [
+"Maliks_Muwataa"
+]
+},
+"h-kalima": {
+"words": 30,
+"from_source": 30,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-muslim-salima": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-zann": {
+"words": 10,
+"from_source": 10,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-kalima-tayyiba": {
+"words": 3,
+"from_source": 3,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-sitr": {
+"words": 44,
+"from_source": 44,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-mujahirin": {
+"words": 5,
+"from_source": 5,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-munafiq": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-da-ma-yaribuk": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-birr-ithm": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-mustashar": {
+"words": 2,
+"from_source": 2,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-atqan": {
+"words": 9,
+"from_source": 3,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-ajir": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Sunan_Ibn-Maja"
+]
+},
+"h-kullukum-rai": {
+"words": 6,
+"from_source": 6,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-ada-dayn": {
+"words": 15,
+"from_source": 15,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-matl": {
+"words": 3,
+"from_source": 3,
+"books": [
+"Maliks_Muwataa"
+]
+},
+"h-samh": {
+"words": 10,
+"from_source": 10,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-inzar": {
+"words": 10,
+"from_source": 10,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-ghina-nafs": {
+"words": 9,
+"from_source": 9,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-kafaf": {
+"words": 10,
+"from_source": 10,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-amin-sirbih": {
+"words": 16,
+"from_source": 16,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-unzuru-asfal": {
+"words": 19,
+"from_source": 18,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-tawakkul-tayr": {
+"words": 16,
+"from_source": 16,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-iqilha": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-hatab": {
+"words": 23,
+"from_source": 23,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-kafil-yatim": {
+"words": 9,
+"from_source": 9,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"h-armala": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-la-tahqiranna": {
+"words": 11,
+"from_source": 11,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-anfauhum": {
+"words": 6,
+"from_source": 4,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-khayrukum-ahlih": {
+"words": 6,
+"from_source": 6,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-akmal-iman": {
+"words": 8,
+"from_source": 8,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-la-yafrak": {
+"words": 11,
+"from_source": 11,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-istawsu": {
+"words": 3,
+"from_source": 3,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-radiya-ghadba": {
+"words": 36,
+"from_source": 36,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"h-mataa": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-dhat-din": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-tardawna": {
+"words": 16,
+"from_source": 16,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-shabab": {
+"words": 21,
+"from_source": 21,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-thalatha-awn": {
+"words": 17,
+"from_source": 17,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-rughm": {
+"words": 25,
+"from_source": 25,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-rida-walid": {
+"words": 10,
+"from_source": 6,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-asma-umm": {
+"words": 22,
+"from_source": 20,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sunan_Abu-Dawud"
+]
+},
+"h-sila-rizq": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-mal": {
+"words": 38,
+"from_source": 37,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Muslim"
+]
+},
+"h-adl-awlad": {
+"words": 5,
+"from_source": 3,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-yarham-saghir": {
+"words": 9,
+"from_source": 9,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-rahimun": {
+"words": 11,
+"from_source": 11,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-walad-salih": {
+"words": 22,
+"from_source": 22,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-kalima-lil-ahl": {
+"words": 17,
+"from_source": 17,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari"
+]
+},
+"h-ajaban": {
+"words": 26,
+"from_source": 26,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-nasab": {
+"words": 24,
+"from_source": 24,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-ashadd-bala": {
+"words": 15,
+"from_source": 15,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-azam-jaza": {
+"words": 20,
+"from_source": 20,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-maradh-kutib": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-dawa": {
+"words": 8,
+"from_source": 8,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-tadawaw": {
+"words": 14,
+"from_source": 14,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-habibatayn": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-la-yatamanna": {
+"words": 26,
+"from_source": 26,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-yurid-khayran": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Maliks_Muwataa"
+]
+},
+"h-sabr-diya": {
+"words": 6,
+"from_source": 6,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-yatasabbar": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-hamm": {
+"words": 15,
+"from_source": 15,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-karb": {
+"words": 24,
+"from_source": 24,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-dhunnun": {
+"words": 31,
+"from_source": 31,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-abduk": {
+"words": 47,
+"from_source": 47,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-rahmataka": {
+"words": 19,
+"from_source": 19,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"h-hasbuna": {
+"words": 22,
+"from_source": 22,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-bismillah-yadurr": {
+"words": 26,
+"from_source": 26,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"h-ruqya-alam": {
+"words": 22,
+"from_source": 22,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-adhhib-bas": {
+"words": 16,
+"from_source": 16,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"h-la-bas": {
+"words": 14,
+"from_source": 12,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-ayn-haqq": {
+"words": 2,
+"from_source": 2,
+"books": [
+"Maliks_Muwataa"
+]
+},
+"h-barrakt": {
+"words": 10,
+"from_source": 10,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-muawwidhat": {
+"words": 17,
+"from_source": 17,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-uidhukuma": {
+"words": 17,
+"from_source": 15,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"h-khattaun": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Sunan_Al-Darimi"
+]
+},
+"h-farah-tawba": {
+"words": 46,
+"from_source": 46,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-yabsut-yadah": {
+"words": 21,
+"from_source": 21,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-ma-daawtani": {
+"words": 33,
+"from_source": 33,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-sayyid-istighfar": {
+"words": 40,
+"from_source": 40,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-atbi-sayyia": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-qatil-mia": {
+"words": 36,
+"from_source": 34,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-waswasa-sarih": {
+"words": 25,
+"from_source": 25,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-tajawaz": {
+"words": 14,
+"from_source": 14,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-waswasa-intahi": {
+"words": 20,
+"from_source": 20,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-muqallib": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-ahdini": {
+"words": 4,
+"from_source": 4,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-taqwaha": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-kfini-halal": {
+"words": 9,
+"from_source": 9,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-la-sahl": {
+"words": 13,
+"from_source": 0,
+"books": []
+},
+"h-zawal-nima": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-istijaba-ajal": {
+"words": 10,
+"from_source": 10,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-nuzul": {
+"words": 26,
+"from_source": 26,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-sujud": {
+"words": 10,
+"from_source": 10,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-hazabahu": {
+"words": 6,
+"from_source": 4,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-arihna": {
+"words": 6,
+"from_source": 6,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"h-din-yusr": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-adwamuha": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-haqq-nafs": {
+"words": 15,
+"from_source": 15,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-nimatan": {
+"words": 8,
+"from_source": 8,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-ightanim": {
+"words": 19,
+"from_source": 0,
+"books": []
+},
+"h-muamin-qawi": {
+"words": 43,
+"from_source": 43,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-ihfadh": {
+"words": 55,
+"from_source": 55,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-yassiru": {
+"words": 6,
+"from_source": 6,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"h-ihsan": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-makarim": {
+"words": 5,
+"from_source": 5,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-ahsanukum-khuluqan": {
+"words": 11,
+"from_source": 11,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"h-kibr": {
+"words": 33,
+"from_source": 33,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-tawadau": {
+"words": 17,
+"from_source": 17,
+"books": [
+"Sahih_Muslim",
+"Sunan_Abu-Dawud"
+]
+},
+"h-nasiha": {
+"words": 11,
+"from_source": 11,
+"books": [
+"Sahih_Muslim"
+]
+},
+"h-munkar": {
+"words": 17,
+"from_source": 17,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-sabaa-yuzilluhum": {
+"words": 25,
+"from_source": 25,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari"
+]
+},
+"h-man-taraka": {
+"words": 16,
+"from_source": 16,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-man-la-yarham": {
+"words": 5,
+"from_source": 5,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"h-hayaa": {
+"words": 5,
+"from_source": 5,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"taif#0": {
+"words": 106,
+"from_source": 98,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"jabdha-arabi#0": {
+"words": 59,
+"from_source": 55,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"bawl-arabi#0": {
+"words": 34,
+"from_source": 34,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"tifl-hijr#0": {
+"words": 32,
+"from_source": 32,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari"
+]
+},
+"khidmat-anas#0": {
+"words": 29,
+"from_source": 27,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"la-taghdab#0": {
+"words": 19,
+"from_source": 19,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"laysa-shadid#0": {
+"words": 20,
+"from_source": 20,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari"
+]
+},
+"adl-fatima#0": {
+"words": 48,
+"from_source": 46,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"hudaybiyyah#0": {
+"words": 35,
+"from_source": 9,
+"books": [
+"Maliks_Muwataa"
+]
+},
+"zayd-ibn-sana#0": {
+"words": 40,
+"from_source": 6,
+"books": [
+"Sahih_Al-Bukhari",
+"Sunan_Al-Darimi"
+]
+},
+"hatib-baltaa#0": {
+"words": 68,
+"from_source": 60,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim",
+"Sunan_Abu-Dawud"
+]
+},
+"wafat-ibrahim#0": {
+"words": 58,
+"from_source": 57,
+"books": [
+"Sahih_Al-Bukhari",
+"Sunan_Abu-Dawud"
+]
+},
+"mihnat-ahlih#0": {
+"words": 31,
+"from_source": 29,
+"books": [
+"Sahih_Al-Bukhari",
+"Sunan_Al-Nasai"
+]
+},
+"mihnat-ahlih#1": {
+"words": 28,
+"from_source": 28,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"kaab-ibn-malik#0": {
+"words": 35,
+"from_source": 17,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sunan_Abu-Dawud",
+"Sunan_Al-Tirmidhi"
+]
+},
+"istikhara#0": {
+"words": 56,
+"from_source": 52,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari"
+]
+},
+"neighbors#0": {
+"words": 17,
+"from_source": 17,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"sighar-kibar#0": {
+"words": 19,
+"from_source": 19,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sunan_Al-Tirmidhi"
+]
+},
+"husn-dhann#0": {
+"words": 32,
+"from_source": 32,
+"books": [
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"thumama#0": {
+"words": 70,
+"from_source": 66,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"hunayn-ansar#0": {
+"words": 72,
+"from_source": 70,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"khutbat-wadaa#0": {
+"words": 44,
+"from_source": 42,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"numan-bashir#0": {
+"words": 28,
+"from_source": 27,
+"books": [
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"dog-water#0": {
+"words": 76,
+"from_source": 76,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"hospitality#0": {
+"words": 36,
+"from_source": 36,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"sila-rahim#0": {
+"words": 23,
+"from_source": 21,
+"books": [
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"jewish-boy-sick#0": {
+"words": 44,
+"from_source": 44,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"zuhd-food#0": {
+"words": 21,
+"from_source": 21,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"tanattu#0": {
+"words": 57,
+"from_source": 54,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari"
+]
+},
+"muadh-taweel#0": {
+"words": 64,
+"from_source": 52,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"bayyian-khiyar#0": {
+"words": 28,
+"from_source": 28,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"tabassum-sadaqa#0": {
+"words": 51,
+"from_source": 51,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sunan_Al-Tirmidhi"
+]
+},
+"umm-salama-dua#0": {
+"words": 56,
+"from_source": 56,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"jasad-wahid#0": {
+"words": 29,
+"from_source": 29,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"birr-walidayn#0": {
+"words": 38,
+"from_source": 37,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari",
+"Sunan_Ibn-Maja"
+]
+},
+"ghirah-aisha#0": {
+"words": 31,
+"from_source": 31,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"khullah-abu-bakr#0": {
+"words": 27,
+"from_source": 25,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Muslim"
+]
+},
+"gharib-dunya#0": {
+"words": 45,
+"from_source": 43,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"fasila-hope#0": {
+"words": 26,
+"from_source": 20,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"rifq-adam-intiqam#0": {
+"words": 41,
+"from_source": 40,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"rahma-atfal-aqraa#0": {
+"words": 26,
+"from_source": 25,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"jud-ramadan#0": {
+"words": 37,
+"from_source": 37,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"sabr-sadma-oula#0": {
+"words": 47,
+"from_source": 47,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"sidq-yahdi#0": {
+"words": 57,
+"from_source": 55,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Muslim"
+]
+},
+"uhud-injury#0": {
+"words": 23,
+"from_source": 21,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"al-ifk#0": {
+"words": 24,
+"from_source": 5,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"anas-taakhkhur#0": {
+"words": 66,
+"from_source": 66,
+"books": [
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"sirr-anas#0": {
+"words": 57,
+"from_source": 57,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"ghawrath-sword#0": {
+"words": 59,
+"from_source": 55,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"da'in-jamal-afdal#0": {
+"words": 42,
+"from_source": 42,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"usama-shahada#0": {
+"words": 59,
+"from_source": 56,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"bukaa-tifl-salat#0": {
+"words": 30,
+"from_source": 30,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"janazat-yahudi#0": {
+"words": 26,
+"from_source": 24,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"yunus-hut#0": {
+"words": 31,
+"from_source": 31,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"ayyub-sabr#0": {
+"words": 24,
+"from_source": 24,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"ibrahim-abihi#0": {
+"words": 21,
+"from_source": 19,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"abubakr-mistah#0": {
+"words": 56,
+"from_source": 56,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"khadija-wahy#0": {
+"words": 46,
+"from_source": 46,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"umm-salama-hudaybiyyah#0": {
+"words": 59,
+"from_source": 59,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"aisha-sibaq#0": {
+"words": 55,
+"from_source": 55,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"ghart-ummukum#0": {
+"words": 63,
+"from_source": 61,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"muawiya-hakam#0": {
+"words": 40,
+"from_source": 40,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Muslim"
+]
+},
+"shab-zina#0": {
+"words": 58,
+"from_source": 58,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"farah-tawba#0": {
+"words": 55,
+"from_source": 55,
+"books": [
+"Sahih_Muslim"
+]
+},
+"qatil-mia#0": {
+"words": 45,
+"from_source": 44,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Muslim"
+]
+},
+"abubakr-umar-khilaf#0": {
+"words": 49,
+"from_source": 46,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"sam-alaykum#0": {
+"words": 44,
+"from_source": 44,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"abuhurayra-juu#0": {
+"words": 42,
+"from_source": 12,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"umm-sulaym#0": {
+"words": 49,
+"from_source": 27,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari",
+"Sahih_Muslim"
+]
+},
+"jabir-dayn#0": {
+"words": 54,
+"from_source": 52,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"jurayj#0": {
+"words": 34,
+"from_source": 14,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Muslim"
+]
+},
+"ashab-ghar#0": {
+"words": 35,
+"from_source": 13,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"salman-abuddarda#0": {
+"words": 27,
+"from_source": 25,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"hanzala#0": {
+"words": 25,
+"from_source": 25,
+"books": [
+"Sahih_Muslim"
+]
+},
+"abudhar-jahiliyya#0": {
+"words": 33,
+"from_source": 33,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"mughith-barira#0": {
+"words": 33,
+"from_source": 31,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"fatima-khadim#0": {
+"words": 22,
+"from_source": 15,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"iqilha-tawakkul#0": {
+"words": 13,
+"from_source": 13,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"iqilha-tawakkul#1": {
+"words": 16,
+"from_source": 16,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"hatab-karama#0": {
+"words": 23,
+"from_source": 23,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"hatab-karama#1": {
+"words": 23,
+"from_source": 23,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"jar-mataa#0": {
+"words": 42,
+"from_source": 42,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sunan_Abu-Dawud"
+]
+},
+"saad-wasiyya#0": {
+"words": 32,
+"from_source": 32,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari"
+]
+},
+"qabil-habil#0": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Maliks_Muwataa",
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"qarun#0": {
+"words": 18,
+"from_source": 17,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Muslim"
+]
+},
+"sulayman-naml#0": {
+"words": 26,
+"from_source": 26,
+"books": [
+"Sahih_Muslim"
+]
+},
+"sahib-jannatayn#0": {
+"words": 2,
+"from_source": 2,
+"books": [
+"Maliks_Muwataa"
+]
+},
+"yusuf-muraawada#0": {
+"words": 20,
+"from_source": 20,
+"books": [
+"Maliks_Muwataa",
+"Sahih_Al-Bukhari"
+]
+},
+"luqman-wasaya#0": {
+"words": 22,
+"from_source": 22,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal",
+"Sahih_Al-Bukhari"
+]
+},
+"adam-iblis#0": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"zakariya-dua#0": {
+"words": 10,
+"from_source": 10,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"musa-khidr#0": {
+"words": 34,
+"from_source": 34,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"abasa#0": {
+"words": 24,
+"from_source": 24,
+"books": [
+"Maliks_Muwataa",
+"Sunan_Al-Tirmidhi"
+]
+},
+"hajar-zamzam#0": {
+"words": 31,
+"from_source": 28,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"himar-khamr#0": {
+"words": 9,
+"from_source": 9,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"himar-khamr#1": {
+"words": 6,
+"from_source": 6,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"sadaqa-sariq#0": {
+"words": 36,
+"from_source": 36,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"wahshi#0": {
+"words": 26,
+"from_source": 25,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"waswasa-sarih#0": {
+"words": 25,
+"from_source": 25,
+"books": [
+"Sahih_Muslim"
+]
+},
+"waswasa-sarih#1": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"waswasa-sarih#2": {
+"words": 20,
+"from_source": 20,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"safiyya-ghiba#0": {
+"words": 8,
+"from_source": 8,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"safiyya-ghiba#1": {
+"words": 12,
+"from_source": 12,
+"books": [
+"Sahih_Muslim"
+]
+},
+"fatima-qays#0": {
+"words": 29,
+"from_source": 29,
+"books": [
+"Sahih_Muslim"
+]
+},
+"thabit-khul#0": {
+"words": 33,
+"from_source": 33,
+"books": [
+"Sahih_Al-Bukhari",
+"Sunan_Al-Nasai"
+]
+},
+"sahl-ayn#0": {
+"words": 14,
+"from_source": 14,
+"books": [
+"Sunan_Ibn-Maja"
+]
+},
+"sahl-ayn#1": {
+"words": 2,
+"from_source": 2,
+"books": [
+"Maliks_Muwataa"
+]
+},
+"hummara#0": {
+"words": 7,
+"from_source": 7,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"hummara#1": {
+"words": 16,
+"from_source": 16,
+"books": [
+"Sunan_Abu-Dawud"
+]
+},
+"ibn-abbas-ihfadh#0": {
+"words": 50,
+"from_source": 50,
+"books": [
+"Sunan_Al-Tirmidhi"
+]
+},
+"liqa-allah#0": {
+"words": 37,
+"from_source": 37,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"abusufyan-heraclius#0": {
+"words": 37,
+"from_source": 35,
+"books": [
+"Sahih_Al-Bukhari"
+]
+},
+"mumin-qawi#0": {
+"words": 43,
+"from_source": 43,
+"books": [
+"Sahih_Muslim"
+]
+},
+"mumin-qawi#1": {
+"words": 15,
+"from_source": 15,
+"books": [
+"Musnad_Ahmad_Ibn-Hanbal"
+]
+},
+"hubb-fillah#0": {
+"words": 42,
+"from_source": 42,
+"books": [
+"Sahih_Muslim"
+]
+}
+}

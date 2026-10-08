@@ -1,0 +1,34 @@
+{"lexicon":{
+ "emotion":{
+  "anger":{"label":"woede","words":["boos","woedend","kwaad","razend","geïrriteerd","geergerd","geërgerd","gefrustreerd","woede","ik haat","haat hem","haat haar","wrok","pissig","het bloed onder mijn nagels"]},
+  "sadness":{"label":"verdriet","words":["verdrietig","verdriet","ongelukkig","huilen","huil","huilde","gebroken","gekwetst","pijn","depressief","ellendig","kapot","overstuur","rouw","treurig","somber","neerslachtig"]},
+  "fear":{"label":"angst en zorgen","words":["bang","angst","angstig","bezorgd","zorgen","ongerust","nerveus","gestrest","stress","paniek","doodsbang","onder druk","piekeren","pieker"]},
+  "guilt":{"label":"schuld en spijt","words":["schuldig","schuldgevoel","spijt","berouw","ik schaam me","schaamte","mijn schuld","geweten","voel me slecht over"]},
+  "shame":{"label":"vernedering en schaamte","words":["vernederd","beschaamd","beledigd","gekleineerd","respectloos","te schande","voor schut","waardeloos","neergekeken","uitgelachen"]},
+  "loneliness":{"label":"eenzaamheid","words":["eenzaam","alleen","geïsoleerd","geisoleerd","niemand","buitengesloten","afgewezen","buitenstaander","onzichtbaar","in de steek gelaten"]},
+  "despair":{"label":"wanhoop","words":["hopeloos","wanhoop","wanhopig","opgeven","opgegeven","geen hoop","zinloos","het heeft geen zin","moe van alles","kan niet meer"]},
+  "confusion":{"label":"verwarring","words":["verward","in de war","twijfel","twijfel","onzeker","weet niet","weet het niet","besluiteloos","gemengde gevoelens","verscheurd"]},
+  "exhaustion":{"label":"uitputting","words":["uitgeput","moe","doodmoe","leeg","opgebrand","burn-out","burnout","overweldigd","geen energie","op","oververmoeid"]},
+  "jealousy":{"label":"jaloezie","words":["jaloers","jaloezie","afgunstig","afgunst","benijd","benijden"]},
+  "betrayal":{"label":"teleurstelling","words":["verraden","in de steek gelaten","teleurgesteld","bedrogen","belogen","mes in de rug","laten vallen"]},
+  "love":{"label":"gehechtheid en liefde","words":["hou van hem","hou van haar","houd van","ik mis","mis hem","mis haar","verlangen","gehecht","kan niet stoppen met denken aan","verliefd"]},
+  "joy":{"label":"vreugde en dankbaarheid","words":["blij","dankbaar","alhamdulillah","gelukkig","vreugde","opgelucht","geslaagd","gelukt"]}
+ },
+ "relation":{
+  "spouse":{"label":"je partner","words":["mijn man","mijn vrouw","mijn echtgenoot","mijn echtgenote","echtgenoot","echtgenote","mijn partner"]},
+  "fiance":{"label":"je verloofde","words":["verloofde","mijn verloofde","aanstaande","huwelijkskandidaat"]},
+  "parent":{"label":"je ouders","words":["mijn moeder","mijn vader","mijn ma","mijn pa","mijn mama","mijn papa","mijn ouders","moeder","vader","mama","papa","ouders"]},
+  "child":{"label":"je kinderen","words":["mijn zoon","mijn dochter","mijn kind","mijn kinderen","mijn baby","zoon","dochter","kinderen","kind"]},
+  "sibling":{"label":"je broers en zussen","words":["mijn broer","mijn zus","mijn zuster","broer","zus","broers","zussen"]},
+  "relative":{"label":"je familie","words":["mijn oom","mijn tante","mijn neef","mijn nicht","schoonmoeder","schoonvader","schoonfamilie","familie","neef","nicht"]},
+  "boss":{"label":"je leidinggevende","words":["mijn baas","baas","mijn manager","manager","leidinggevende","chef","mijn leidinggevende"]},
+  "colleague":{"label":"je collega's","words":["mijn collega","collega","collega's","collegas"]},
+  "friend":{"label":"je vrienden","words":["mijn vriend","mijn vriendin","mijn beste vriend","mijn beste vriendin","vriend","vriendin","vrienden"]},
+  "neighbor":{"label":"je buren","words":["mijn buurman","mijn buurvrouw","buurman","buurvrouw","buren","mijn buren"]},
+  "employee":{"label":"wie onder jouw verantwoordelijkheid valt","words":["mijn werknemer","mijn werknemers","mijn team","mijn personeel","mijn medewerker"]},
+  "teacher":{"label":"je docenten","words":["mijn leraar","mijn lerares","leraar","docent","mijn docent","juf","meester"]},
+  "self":{"label":"jezelf","words":["mezelf","mijzelf"]}
+ },
+ "intensifiers":["heel","erg","zo erg","enorm","echt","altijd","elke dag","al jaren","al maanden","ik kan het niet meer aan","ik kan niet meer","ondraaglijk","te veel","meer dan ooit","nooit"],
+ "selfFault":["mijn schuld","ik had ongelijk","ik heb een fout gemaakt","ik heb het verpest","ik heb gekwetst","ik heb gelogen","ik ben vreemdgegaan","ik heb beledigd","ik heb geslagen","ik heb geschreeuwd","ik heb verraden","ik heb onrecht gedaan","ik wil sorry zeggen","ik wil me verontschuldigen","ik heb gezondigd","spijt van wat ik deed","het is mijn schuld"]
+}}

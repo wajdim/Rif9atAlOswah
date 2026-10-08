@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/pine</item>
+        <item name="android:navigationBarColor">@color/pine</item>
+        <item name="android:colorPrimary">@color/pine</item>
+        <item name="android:colorAccent">@color/gold</item>
+    </style>
+    <color name="bg">#F7F2E4</color>
+    <color name="pine">#2F4C3E</color>
+    <color name="gold">#A9822F</color>
+</resources>
