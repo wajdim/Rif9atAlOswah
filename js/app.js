@@ -9,7 +9,7 @@
 function qs(id){ return document.getElementById(id); }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
 function toast(msg,ms){ var t=qs("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("show");},ms||2200); }
-var APP_VERSION="2.3.0";
+var APP_VERSION="2.5.0";
 var EN=I18N.en;
 function store(key, val){ try{ if(val===undefined) return JSON.parse(localStorage.getItem(key)||"null"); localStorage.setItem(key, JSON.stringify(val)); }catch(e){ return null; } }
 function iconSvg(k){ return '<svg viewBox="0 0 24 24">'+(ICONS[k]||ICONS.star)+'</svg>'; }
@@ -389,7 +389,10 @@ function runAIStream(target, onFinish){
       if(raf){ cancelAnimationFrame(raf); raf=null; }
       if(info.stopReason==="refusal" && !text) text=T("تعذّر على النموذج إكمال هذا الطلب. التحليل الموثق أعلاه يبقى متاحًا.");
       if(info.stopReason==="max_tokens") text+="\n\n"+T("(انتهى الحد الأقصى للطول.)");
-      paint(true); aiSession.messages.push({role:"assistant",content:text||"…"}); aiSession.busy=false; onFinish&&onFinish(true);
+      paint(true); aiSession.messages.push({role:"assistant",content:text||"…"}); aiSession.busy=false;
+      // سياسة Google Play للمحتوى المولَّد: وسيلة للإبلاغ عن أي إجابة مسيئة أو خاطئة من داخل التطبيق
+      if(text) target.insertAdjacentHTML("beforeend",'<div class="ai-report"><button class="mini-btn" data-act="ai-report" data-turn="'+(aiSession.messages.length-1)+'"><svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>'+T("الإبلاغ عن هذه الإجابة")+'</button></div>');
+      onFinish&&onFinish(true);
     },
     onError:function(msg){ if(raf){ cancelAnimationFrame(raf); raf=null; } target.innerHTML=mdToHTML(text)+'<p class="ai-err">'+esc(msg)+'</p>'; aiSession.busy=false; aiSession.messages.pop(); onFinish&&onFinish(false); }
   });
@@ -689,7 +692,20 @@ function stopReading(){ if(TTS.state()!=="idle") TTS.stop(); }
 
 /* ---------------- التقييم والتعليقات ---------------- */
 // لتصلك الملاحظات على بريدك مباشرة ضع عنوانه هنا (يُترك فارغًا ليختار المستخدم المستلم)
-var FEEDBACK_EMAIL="";
+var FEEDBACK_EMAIL="wajdi.chaouche@gmail.com";
+/** يفتح رسالة بريد جاهزة يراجعها المستخدم ويرسلها بنفسه (لا يُرسل شيء تلقائيًا) */
+function composeEmail(subject, body){
+  body=body.slice(0,1800);
+  if(IS_ANDROID_APP && window.AndroidBridge.email){ window.AndroidBridge.email(FEEDBACK_EMAIL, subject, body); return; }
+  location.href="mailto:"+encodeURIComponent(FEEDBACK_EMAIL)+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+}
+function reportAI(turn){
+  if(!aiSession || !aiSession.messages[turn]) return;
+  var q=turn>1 ? String(aiSession.messages[turn-1].content).split("\n\n")[0] : (lastAnalysis?lastAnalysis.input:"");
+  var L=[T("سبب البلاغ (اكتبه هنا):"),"","","— "+T("سؤالي:"),q,"","— "+T("إجابة النموذج:"),String(aiSession.messages[turn].content),"",
+    T("رِفقة الأُسوة {0} · {1}",APP_VERSION,I18N.lang)];
+  composeEmail(T("بلاغ عن إجابة الذكاء الاصطناعي في رِفقة الأُسوة"), L.join("\n"));
+}
 var feedback=store("rifqa.feedback")||[];
 var STAR_LABELS=["اختر تقييمك","ضعيفة","مقبولة","جيدة","جيدة جدًا","ممتازة"];
 function fbFind(key){ for(var i=0;i<feedback.length;i++) if(feedback[i].key===key) return feedback[i]; return null; }
@@ -748,9 +764,8 @@ function feedbackText(list){
 function sendFeedback(list){
   if(!list.length){ toast(T("لا توجد تقييمات بعد")); return; }
   var text=feedbackText(list);
-  if(IS_ANDROID_APP){ window.AndroidBridge.share(text); return; }
-  if(navigator.share && !FEEDBACK_EMAIL){ navigator.share({title:T("ملاحظات رِفقة الأُسوة"),text:text}).catch(function(){}); return; }
-  location.href="mailto:"+encodeURIComponent(FEEDBACK_EMAIL)+"?subject="+encodeURIComponent(T("ملاحظات على تطبيق رِفقة الأُسوة"))+"&body="+encodeURIComponent(text.slice(0,1800));
+  if(!FEEDBACK_EMAIL){ if(IS_ANDROID_APP) window.AndroidBridge.share(text); else if(navigator.share) navigator.share({title:T("ملاحظات رِفقة الأُسوة"),text:text}).catch(function(){}); return; }
+  composeEmail(T("ملاحظات على تطبيق رِفقة الأُسوة"), text);
 }
 function feedbackListHTML(){
   if(!feedback.length) return "";
@@ -895,6 +910,7 @@ document.addEventListener("click",function(e){
   else if(act==="preview-reciter"){ if(TTS.previewRecitation()===false) toast(T("اخترت القراءة بدون تلاوة")); }
   else if(act==="start-ai") startAI();
   else if(act==="ai-follow") followUpAI();
+  else if(act==="ai-report") reportAI(+el.getAttribute("data-turn"));
   else if(act==="open-settings") openSettings();
   else if(act==="copy-result") copyText(resultSummaryText());
   else if(act==="share-result"){
@@ -945,7 +961,7 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 
 /* ---------------- PWA ---------------- */
-if("serviceWorker" in navigator && /^https?:/.test(location.protocol)){
+if("serviceWorker" in navigator && /^https?:/.test(location.protocol) && !IS_ANDROID_APP){
   window.addEventListener("load",function(){ navigator.serviceWorker.register("service-worker.js").catch(function(){}); });
 }
 function initInstallPrompt(){

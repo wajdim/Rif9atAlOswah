@@ -1,0 +1,7 @@
+# Keep LF everywhere (shell scripts break with CRLF); mark binaries
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.woff2 binary
+*.zip binary
+*.bundle binary

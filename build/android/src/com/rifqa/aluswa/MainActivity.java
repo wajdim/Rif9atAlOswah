@@ -6,7 +6,14 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.view.WindowInsets;
+import android.webkit.WebResourceResponse;
+import android.widget.FrameLayout;
+import android.window.OnBackInvokedCallback;
+import android.window.OnBackInvokedDispatcher;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.speech.tts.Voice;
@@ -17,15 +24,34 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Set;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-/** رِفقة الأُسوة — واجهة أندرويد: WebView يحمّل التطبيق من أصول الحزمة ويعمل بلا إنترنت. */
+/**
+ * رِفقة الأُسوة — واجهة أندرويد: WebView يحمّل التطبيق من أصول الحزمة ويعمل بلا إنترنت.
+ * تُخدم الملفات من أصل https خاص (appassets.androidplatform.net) بدل file:// ، فلا يحتاج
+ * WebView إلى صلاحية الوصول إلى الملفات.
+ */
 public class MainActivity extends Activity {
+    /** الأصل الخاص الذي تُخدم منه أصول التطبيق (نطاق محجوز لا يصل إلى الشبكة). */
+    static final String ASSET_HOST = "appassets.androidplatform.net";
+    static final String START_URL = "https://" + ASSET_HOST + "/assets/www/index.html";
+    private static final Map<String, String> MIME = new HashMap<String, String>();
+    static {
+        MIME.put("html", "text/html"); MIME.put("js", "text/javascript"); MIME.put("css", "text/css");
+        MIME.put("json", "application/json"); MIME.put("svg", "image/svg+xml"); MIME.put("png", "image/png");
+        MIME.put("jpg", "image/jpeg"); MIME.put("webp", "image/webp"); MIME.put("ico", "image/x-icon");
+        MIME.put("woff2", "font/woff2"); MIME.put("woff", "font/woff"); MIME.put("ttf", "font/ttf");
+        MIME.put("mp3", "audio/mpeg"); MIME.put("txt", "text/plain");
+    }
     private WebView web;
+    private OnBackInvokedCallback backCallback;
     private TextToSpeech tts;
     /** init | ok | missing | none */
     private volatile String ttsState = "init";
@@ -41,6 +67,19 @@ public class MainActivity extends Activity {
                 i.setType("text/plain");
                 i.putExtra(Intent.EXTRA_TEXT, text);
                 startActivity(Intent.createChooser(i, "en".equals(ttsLang) ? "Share" : "nl".equals(ttsLang) ? "Delen" : "مشاركة"));
+            }});
+        }
+        /** رسالة بريد جاهزة (ملاحظات، أو الإبلاغ عن إجابة الذكاء الاصطناعي) يراجعها المستخدم ويرسلها بنفسه. */
+        @JavascriptInterface
+        public void email(final String to, final String subject, final String body) {
+            if (to == null || !to.matches("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")) return;
+            runOnUiThread(new Runnable() { public void run() {
+                Intent i = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"));
+                i.putExtra(Intent.EXTRA_EMAIL, new String[]{to});
+                i.putExtra(Intent.EXTRA_SUBJECT, subject);
+                i.putExtra(Intent.EXTRA_TEXT, body);
+                try { startActivity(i); }
+                catch (Exception e) { share(to + "\n\n" + subject + "\n\n" + body); }   // لا يوجد تطبيق بريد
             }});
         }
         @JavascriptInterface
@@ -166,37 +205,50 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         web = new WebView(this);
         web.setBackgroundColor(0xFFF7F2E4);
-        setContentView(web);
+        FrameLayout root = new FrameLayout(this);
+        root.setBackgroundColor(0xFF2F4C3E);     // لون شريطي النظام في وضع «من الحافة إلى الحافة»
+        root.addView(web, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+        setContentView(root);
+        applyEdgeToEdgeInsets(root);
+        registerBack();
 
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);
         s.setDomStorageEnabled(true);          // localStorage: المحفوظات والإعدادات
         s.setDatabaseEnabled(true);
-        s.setAllowFileAccess(true);            // تحميل الملفات من assets
+        s.setAllowFileAccess(false);           // الأصول تُخدم عبر shouldInterceptRequest، لا عبر file://
         s.setAllowContentAccess(false);
+        s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+        if (Build.VERSION.SDK_INT >= 26) s.setSafeBrowsingEnabled(true);
         s.setMediaPlaybackRequiresUserGesture(false);   // تلاوة الآية التالية تبدأ تلقائيًا بعد التمهيد
         s.setTextZoom(100);
-        s.setUserAgentString(s.getUserAgentString() + " RifqaAndroid/2.1");
+        s.setUserAgentString(s.getUserAgentString() + " RifqaAndroid/2.5");
 
         initTts();
         web.addJavascriptInterface(new Bridge(), "AndroidBridge");
         web.setWebChromeClient(new WebChromeClient());
         web.setWebViewClient(new WebViewClient() {
             @Override
+            public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest req) {
+                return serveAsset(req.getUrl());
+            }
+            @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest req) {
                 Uri u = req.getUrl();
-                if ("file".equals(u.getScheme())) return false;
+                if (ASSET_HOST.equals(u.getHost())) return false;
                 try { startActivity(new Intent(Intent.ACTION_VIEW, u)); } catch (Exception ignored) {}
                 return true;   // الروابط الخارجية تفتح في المتصفح
             }
         });
 
         if (savedInstanceState != null) web.restoreState(savedInstanceState);
-        else web.loadUrl("file:///android_asset/www/index.html");
+        else web.loadUrl(START_URL);
     }
 
     @Override
     protected void onDestroy() {
+        if (Build.VERSION.SDK_INT >= 33 && backCallback != null) getOnBackInvokedDispatcher().unregisterOnBackInvokedCallback(backCallback);
+        if (web != null) { web.removeJavascriptInterface("AndroidBridge"); web.destroy(); web = null; }
         if (tts != null) { tts.stop(); tts.shutdown(); tts = null; }
         super.onDestroy();
     }
@@ -208,9 +260,64 @@ public class MainActivity extends Activity {
     }
 
     /** زر الرجوع يتنقل داخل التطبيق (يغلق لوحة التفاصيل ويعود للشاشة السابقة) قبل الخروج. */
-    @Override
-    public void onBackPressed() {
+    private void handleBack() {
         if (web != null && web.canGoBack()) web.goBack();
-        else super.onBackPressed();
+        else finish();
+    }
+
+    /** أندرويد 13+: الرجوع التنبؤي (onBackPressed لا يُستدعى عند استهداف API 36). */
+    private void registerBack() {
+        if (Build.VERSION.SDK_INT >= 33) {
+            backCallback = new OnBackInvokedCallback() { @Override public void onBackInvoked() { handleBack(); } };
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(OnBackInvokedDispatcher.PRIORITY_DEFAULT, backCallback);
+        }
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public void onBackPressed() { handleBack(); }   // أندرويد 7–12
+
+    /**
+     * أندرويد 15+ يفرض العرض من الحافة إلى الحافة: نحجز مساحة شريطي النظام والقَطع ولوحة المفاتيح
+     * كي لا يختفي الشريط العلوي أو حقل الكتابة خلفها.
+     */
+    private void applyEdgeToEdgeInsets(final View root) {
+        if (Build.VERSION.SDK_INT < 35) return;   // قبل أندرويد 15 يتولى النظام ذلك (adjustResize)
+        root.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
+            @Override public WindowInsets onApplyWindowInsets(View v, WindowInsets in) {
+                android.graphics.Insets bars = in.getInsets(WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout());
+                android.graphics.Insets ime = in.getInsets(WindowInsets.Type.ime());
+                v.setPadding(bars.left, bars.top, bars.right, Math.max(bars.bottom, ime.bottom));
+                return WindowInsets.CONSUMED;
+            }
+        });
+    }
+
+    /** يخدم ملفات assets/ للأصل الخاص فقط؛ ما عداه (تلاوات القراء، واجهة Claude) يمر إلى الشبكة. */
+    private WebResourceResponse serveAsset(Uri u) {
+        if (u == null || !ASSET_HOST.equals(u.getHost())) return null;
+        String path = u.getPath() == null ? "" : u.getPath();
+        if (!path.startsWith("/assets/") || path.contains("..")) return notFound();
+        String rel = path.substring("/assets/".length());
+        String ext = rel.lastIndexOf('.') >= 0 ? rel.substring(rel.lastIndexOf('.') + 1).toLowerCase(Locale.ROOT) : "";
+        String mime = MIME.containsKey(ext) ? MIME.get(ext) : "application/octet-stream";
+        try {
+            InputStream in = getAssets().open(rel);
+            boolean text = mime.startsWith("text/") || mime.endsWith("json") || mime.endsWith("javascript") || mime.endsWith("svg+xml");
+            WebResourceResponse r = new WebResourceResponse(mime, text ? "UTF-8" : null, in);
+            Map<String, String> h = new HashMap<String, String>();
+            h.put("Cache-Control", "no-cache");
+            h.put("X-Content-Type-Options", "nosniff");
+            r.setResponseHeaders(h);
+            return r;
+        } catch (Exception e) {
+            return notFound();
+        }
+    }
+
+    private static WebResourceResponse notFound() {
+        WebResourceResponse r = new WebResourceResponse("text/plain", "UTF-8", null);
+        r.setStatusCodeAndReasonPhrase(404, "Not Found");
+        return r;
     }
 }

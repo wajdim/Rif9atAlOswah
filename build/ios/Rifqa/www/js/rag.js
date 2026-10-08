@@ -15,7 +15,9 @@ var RAG = (function(){
 
   /* ---------------- 1. معالجة النص العربي ---------------- */
   function normalize(str){
-    return (str||"")
+    var t=String(str||"");
+    if(t.normalize) t=t.normalize("NFD").replace(/[\u0300-\u036f]/g,"");   // é ë ï ← e e i (الهولندية)؛ همزات العربية تُوحَّد بعدها كما كانت
+    return t
       .toLowerCase()
       .replace(/[ً-ٰٟـ]/g,"")      // تشكيل وتطويل
       .replace(/[إأآٱا]/g,"ا")
@@ -35,7 +37,11 @@ var RAG = (function(){
     "the a an and or of to in is i my me it this that am are was were be been being have has had do does did so but if then than " +
     "he she they them his her their we us our you your yours im ive dont didnt doesnt cant wont isnt its at on for with from by as about " +
     "into over after before when what who whom which why how just very really also too much many more most some any all no not " +
-    "can could would should will shall may might must there here up down out off again still even ever").split(" "));
+    "can could would should will shall may might must there here up down out off again still even ever " +
+    "de het een en of van te in is ik mijn me mij het dit dat die deze ben zijn was waren wordt werd worden heb heeft had hebben " +
+    "hij zij ze hem haar hun wij we ons onze jij je jou jouw u uw er hier daar op voor met uit door als aan om tot bij naar over " +
+    "na toen wanneer wat wie welke waarom hoe maar dan al ook nog wel niet geen nooit zo zeer erg heel veel meer meest alle alles " +
+    "iets niets kan kon zou zouden moet moeten mag mogen wil willen zal zullen gaat gaan doe doet deed").split(" "));
 
   var PREFIXES = ["وبال","وال","بال","كال","فال","لل","ال","وب","ول","وس","فس","و","ف","ب","ك","ل","س"];
   var SUFFIXES = ["تموها","كموها","هما","كما","تما","تان","تين","ونا","ون","ين","ان","ات","ها","هم","هن","كم","كن","نا","ني","وا","يه","يا","ته","تي","ه","ي","ك","ت"];
@@ -54,9 +60,24 @@ var RAG = (function(){
     if(/e$/.test(w) && w.length>4) w=w.slice(0,-1);
     return w;
   }
+  /* تجذيع هولندي خفيف: الجمع (-en, -s)، والنهايات الشائعة، وتوحيد الحرف المضاعف (vrienden ← vriend، zorgen ← zorg) */
+  function stemNl(w){
+    if(w.length<=3 || /[0-9]/.test(w)) return w;
+    if(/heden$/.test(w)) return w.slice(0,-5)+"heid";
+    if(/(ingen|ing)$/.test(w) && w.length>6) w=w.replace(/(ingen|ing)$/,"");
+    else if(/(lijk|lijke|baar|bare)$/.test(w) && w.length>7) w=w.replace(/(lijke|lijk|bare|baar)$/,"");
+    else if(/en$/.test(w) && w.length>5) w=w.slice(0,-2);
+    else if(/(te|de)$/.test(w) && w.length>5) w=w.slice(0,-2);
+    else if(/[^aeiou]e$/.test(w) && w.length>4) w=w.slice(0,-1);
+    else if(/s$/.test(w) && !/(ss|is|us)$/.test(w) && w.length>4) w=w.slice(0,-1);
+    else if(/t$/.test(w) && w.length>5 && !/(st|cht|ft)$/.test(w)) w=w.slice(0,-1);
+    if(/([bcdfgklmnprst])\1$/.test(w)) w=w.slice(0,-1);
+    return w.replace(/v$/,"f").replace(/z$/,"s");
+  }
+  var NL_STEM=!!(window.I18N && I18N.nl);
   function stem(w){
     if(!w) return w;
-    if(/[a-z]/.test(w)) return stemEn(w);
+    if(/[a-z]/.test(w)) return NL_STEM?stemNl(w):stemEn(w);
     if(w.length<=3 || /[0-9]/.test(w)) return w;
     var s=w, i;
     for(i=0;i<PREFIXES.length;i++){
@@ -210,7 +231,7 @@ var RAG = (function(){
     var norm=normalize(raw), userWords=words(norm), qStems=stems(raw);
     var themes=detectThemes(norm, userWords, qStems);
     // عند إشارات إيذاء النفس: موضوع «اليأس» أولًا دائمًا، ويُستبعد «الخوف من الموت» حتى لا يُساء الفهم
-    var crisis=/(اموت|الموت ارحم|انتحار|انتحر|انهي حياتي|اقتل نفسي|نقتل روحي|ان اعيش|اذي نفسي|اؤذي نفسي|suicid|kill myself|end my life|want to die|wish i (was|were) dead|hurt myself|harm myself|self harm|no reason to live)/.test(norm);
+    var crisis=/(اموت|الموت ارحم|انتحار|انتحر|انهي حياتي|اقتل نفسي|نقتل روحي|ان اعيش|اذي نفسي|اؤذي نفسي|suicid|kill myself|end my life|want to die|wish i (was|were) dead|hurt myself|harm myself|self harm|no reason to live|zelfmoord|mezelf (van kant|iets aan)|dood wil|wil (dood|sterven)|niet meer (leven|verder)|wou dat ik dood|mezelf pijn|zelfbeschadiging|een eind aan mijn leven)/.test(norm);
     if(crisis){
       themes=themes.filter(function(t){ return t.id!=="death_fear" && t.id!=="despair"; });
       themes.unshift({id:"despair", theme:BY.theme.despair, score:9, conf:1, hits:[T("إشارات ألم شديد")]});
@@ -326,7 +347,7 @@ var RAG = (function(){
     } else if(rel){
       parts.push(T("يدور ما كتبته حول علاقتك بـ{0}.",rel.label));
     }
-    if(emo.length) parts.push(T("تظهر في كلماتك مشاعر {0}، وهي مشاعر مفهومة لا تُلام عليها في ذاتها؛ المهم ما نفعله بها.",emo.slice(0,3).join(T(" و"))));
+    if(emo.length) parts.push(T("تظهر في كلماتك مشاعر {0}، وهي مشاعر مفهومة لا تُلام عليها في ذاتها؛ المهم ما نفعله بها.",(function(l){return (I18N.en&&l.length>1)?l.slice(0,-1).join(T("، "))+T(" و")+l[l.length-1]:l.join(T(" و"));})(emo.slice(0,3))));
     else if(emoImp.length) parts.push(T("قد يصاحب موقفًا كهذا شعور بـ{0}، حتى لو لم تذكره صراحة.",emoImp.slice(0,2).join(T(" أو "))));
     if(u.intensity>=2.5) parts.push(T("يبدو أن الموقف ثقيل عليك ومستمر منذ مدة، لذلك سنبدأ بما يخفف الضغط الآن قبل الخطط البعيدة."));
     if(u.selfFault) parts.push(T("ولاحظت أنك تتحدث عن خطأ وقع منك؛ والاعتراف بالخطأ نصف الطريق، فالهدي النبوي يفتح لك باب الإصلاح لا باب جلد الذات."));

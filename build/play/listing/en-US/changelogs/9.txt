@@ -1,0 +1,5 @@
+• Now in three languages: Arabic, English and Dutch
+• Male and female voice options for reading aloud
+• Redesigned settings with Cancel and Save
+• Report any AI answer from inside the app
+• Built for Android 16, with edge-to-edge display and predictive back

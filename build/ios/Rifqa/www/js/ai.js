@@ -68,7 +68,20 @@ var AI = (function(){
     "Always end with the line: \"This is a guiding reflection, not a fatwa.\"",
   ].join("\n");
 
+  // الهولندية: القواعد نفسها، مع لغة الإجابة وعناوينها بالهولندية
+  var SYSTEM_NL=SYSTEM_EN
+    .replace("(the Arabic text and the English meaning given)","(the Arabic text and the Dutch meaning given)")
+    .replace("Style: clear, warm English,","Style: clear, warm Dutch (Nederlands),")
+    .replace("## A deeper understanding of your situation","## Een dieper begrip van je situatie")
+    .replace("## What revelation says about a situation like this","## Wat de openbaring zegt over zo'n situatie")
+    .replace("## The fine balances","## Het fijne evenwicht")
+    .replace("## Practical steps for you","## Praktische stappen voor jou")
+    .replace("## A final word","## Een laatste woord")
+    .replace("Always end with the line: \"This is a guiding reflection, not a fatwa.\"","Always end with the line: \"Dit is een begeleidende overdenking, geen fatwa.\" Write everything in Dutch.");
+
   function buildUserTurn(analysis){
+    if(window.I18N && I18N.nl) return "## The user's situation (in their own words)\n«"+analysis.input+"»\n\n# Passages retrieved from the verified library\n"+RAG.contextFor(analysis)+
+      "\n\nAnalyse their situation in depth according to the rules and structure above, citing the codes. Answer in Dutch (Nederlands).";
     if(window.I18N && I18N.en) return "## The user's situation (in their own words)\n«"+analysis.input+"»\n\n# Passages retrieved from the verified library\n"+RAG.contextFor(analysis)+
       "\n\nAnalyse their situation in depth according to the rules and structure above, citing the codes. Answer in English.";
     return "## موقف المستخدم (بكلماته)\n«"+analysis.input+"»\n\n# المقاطع المسترجعة من المكتبة الموثقة\n"+RAG.contextFor(analysis)+
@@ -86,7 +99,7 @@ var AI = (function(){
       "anthropic-version":"2023-06-01",
       "anthropic-dangerous-direct-browser-access":"true"
     };
-    var body={model:s.model, max_tokens:8000, stream:true, system:(window.I18N && I18N.en)?SYSTEM_EN:SYSTEM, messages:messages};
+    var body={model:s.model, max_tokens:8000, stream:true, system:(window.I18N && I18N.nl)?SYSTEM_NL:(window.I18N && I18N.en)?SYSTEM_EN:SYSTEM, messages:messages};
     if(s.model==="claude-opus-5"){
       // إعادة توجيه تلقائية لنموذج بديل إن رُفض الطلب لأسباب تتعلق بالسياسة
       headers["anthropic-beta"]="server-side-fallback-2026-07-01";

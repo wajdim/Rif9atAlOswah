@@ -18,7 +18,7 @@ with zipfile.ZipFile("dist/RifqaAlUswa-web.zip","w",zipfile.ZIP_DEFLATED) as z:
             for f in fs: z.write(os.path.join(r,f))
 PY
 )
-echo "== 4) APK";  TOOLS="$TOOLS" bash "$ROOT/build/android/build-apk.sh" | tail -1 && cp "$ROOT/build/android/out/"*.apk "$DIST/"
+echo "== 4) Android (AAB لمتجر Play + APK)"; TOOLS="$TOOLS" bash "$ROOT/build/android/build-android.sh" | tail -2 && cp "$ROOT/build/android/out/"*.aab "$ROOT/build/android/out/"*.apk "$DIST/"
 echo "== 5) EXE"
 W="${TMP:-/tmp}/rifqa-exe"; rm -rf "$W"; mkdir -p "$W/www"
 cp "$ROOT/build/electron/main.js" "$ROOT/build/electron/package.json" "$W/"

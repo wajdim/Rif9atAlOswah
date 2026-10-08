@@ -1,7 +1,7 @@
 {
   "name": "rifqa-aluswa",
   "productName": "Rifqa Al-Uswa",
-  "version": "2.3.0",
+  "version": "2.5.0",
   "description": "رفقة الأسوة — تحليل تأملي لمواقف الحياة في ضوء القرآن والسنة",
   "author": "Wajdi Chaouch",
   "main": "main.js",
@@ -11,8 +11,8 @@
     "directories": { "output": "out" },
     "files": ["main.js", "www/**/*", "package.json"],
     "win": { "target": [{ "target": "portable", "arch": ["x64"] }, { "target": "nsis", "arch": ["x64"] }], "icon": "www/icons/icon-512.png" },
-    "portable": { "artifactName": "RifqaAlUswa-2.3.0-portable.exe" },
-    "nsis": { "artifactName": "RifqaAlUswa-2.3.0-setup.exe", "oneClick": false, "allowToChangeInstallationDirectory": true, "shortcutName": "رفقة الأسوة", "createDesktopShortcut": true },
+    "portable": { "artifactName": "RifqaAlUswa-2.5.0-portable.exe" },
+    "nsis": { "artifactName": "RifqaAlUswa-2.5.0-setup.exe", "oneClick": false, "allowToChangeInstallationDirectory": true, "shortcutName": "رفقة الأسوة", "createDesktopShortcut": true },
     "compression": "normal"
   }
 }

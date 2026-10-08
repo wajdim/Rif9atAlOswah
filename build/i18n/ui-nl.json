@@ -417,5 +417,11 @@
  "مفتاح Claude API": "Claude API-sleutel",
  "إلغاء": "Annuleren",
  "اللغة · Language · Taal": "Taal · Language · اللغة",
- "إغلاق دون حفظ": "Sluiten zonder bewaren"
+ "إغلاق دون حفظ": "Sluiten zonder bewaren",
+ "الإبلاغ عن هذه الإجابة": "Deze reactie melden",
+ "سبب البلاغ (اكتبه هنا):": "Reden van de melding (schrijf hier):",
+ "سؤالي:": "Mijn vraag:",
+ "إجابة النموذج:": "Het antwoord van het model:",
+ "رِفقة الأُسوة {0} · {1}": "Rifqat al-Uswa {0} · {1}",
+ "بلاغ عن إجابة الذكاء الاصطناعي في رِفقة الأُسوة": "Melding over een AI-antwoord in Rifqat al-Uswa"
 }

@@ -14,8 +14,14 @@
 var TTS = (function(){
   "use strict";
   var NATIVE = !!(window.AndroidBridge && typeof window.AndroidBridge.ttsSpeak === "function");
-  var EN = !!(window.I18N && I18N.en);                 // الواجهة الإنجليزية: أصوات إنجليزية للشرح والمعاني
-  var LANG_RE = EN ? /^en([-_]|$)/i : /^ar([-_]|$)/i;
+  var LANG = (window.I18N && I18N.lang) || "ar";       // لغة النطق = لغة الواجهة (ar | en | nl)
+  var EN = LANG !== "ar";
+  var LANG_RE = new RegExp("^" + LANG + "([-_]|$)", "i");
+  var SAY = {   // ما يُنطق بدل الرموز في كل لغة
+    ar: {pbuh:" صلى الله عليه وسلم ", to:"$1 إلى $2", num:" رقم $1 ", tag:"ar-SA"},
+    en: {pbuh:", peace be upon him, ", to:"$1 to $2", num:" number $1 ", tag:"en-US"},
+    nl: {pbuh:", vrede zij met hem, ", to:"$1 tot $2", num:" nummer $1 ", tag:"nl-NL"}
+  }[LANG];
   var synth = window.speechSynthesis || null;
   var MAX_CHUNK = 220;
   var IOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
@@ -60,11 +66,11 @@ var TTS = (function(){
   /* ---------- تهيئة النص للنطق ---------- */
   function clean(t){
     return String(t||"")
-      .replace(/ﷺ/g, EN ? ", peace be upon him, " : " صلى الله عليه وسلم ")
+      .replace(/ﷺ/g, SAY.pbuh)
       .replace(/…|\.\.\./g, "، ")
       .replace(/[﴿﴾«»"“”*_#‹›↔✕]/g, " ")
-      .replace(/(\d+)\s*[-–]\s*(\d+)/g, EN ? "$1 to $2" : "$1 إلى $2")
-      .replace(/\((\d+)\)/g, EN ? " number $1 " : " رقم $1 ")
+      .replace(/(\d+)\s*[-–]\s*(\d+)/g, SAY.to)
+      .replace(/\((\d+)\)/g, SAY.num)
       .replace(/https?:\/\/\S+/g, " ")
       .replace(/\s+([،,.؛:!؟])/g, "$1")
       .replace(/\s+/g, " ").trim();
@@ -85,8 +91,9 @@ var TTS = (function(){
   }
 
   /* ---------- الأصوات ---------- */
-  var MALE = /maged|naayf|hamed|shakir|omar|bassel|taim|fahed|moaz|rami|hamdan|jamal|\bali\b|saleh|hedi|ismael|abdulla|majed|tarik|laith|kareem|\bmale|-ard-|-are-|david|mark|james|guy|ryan|eric|brian|christopher|andrew|george|daniel|thomas|alex|fred|arthur|liam|william|aaron|gordon|oliver|-iom-|-iol-|-rjs-|-gbd-/i;
-  var FEMALE = /hoda|zariyah|salma|amany|laila|layla|fatima|reem|amina|mouna|sana|iman|noura|rana|aysha|amal|mariam|maryam|yasmin|dalia|female|-arc-|-arz-|zira|hazel|susan|samantha|karen|moira|tessa|victoria|aria|jenny|libby|sonia|emma|michelle|ava|allison|serena|kate|catherine|olivia|-sfg-|-tpc-|-tpf-/i;
+  // تقدير جنس الصوت من اسمه: Windows / Edge / Apple / Google (رموز الأصوات) / Samsung (SMTm و SMTf)
+  var MALE = /maged|naayf|hamed|shakir|omar|bassel|taim|fahed|moaz|rami|hamdan|jamal|\bali\b|saleh|hedi|ismael|abdulla|majed|tarik|laith|kareem|\bmale|-ard-|-are-|david|mark|james|guy|ryan|eric|brian|christopher|andrew|george|daniel|thomas|alex|fred|arthur|liam|william|aaron|gordon|oliver|-iom-|-iol-|-rjs-|-gbd-|frank|maarten|arnaud|xander|willem|bart|daan|-bmh-|-dma-|-bed-|smtm\d/i;
+  var FEMALE = /hoda|zariyah|salma|amany|laila|layla|fatima|reem|amina|mouna|sana|iman|noura|rana|aysha|amal|mariam|maryam|yasmin|dalia|female|-arc-|-arz-|zira|hazel|susan|samantha|karen|moira|tessa|victoria|aria|jenny|libby|sonia|emma|michelle|ava|allison|serena|kate|catherine|olivia|-sfg-|-tpc-|-tpf-|colette|fenna|claire|ellen|dena|lotte|anouk|-lfc-|-tfb-|-yfr-|-bec-|smtf\d/i;
   function gender(v){ var n = v.name + " " + (v.voiceURI||""); return MALE.test(n) ? "m" : FEMALE.test(n) ? "f" : "?"; }
   function quality(v){ var n = v.name + " " + (v.voiceURI||""); return (/natural|online|neural|wavenet|network/i.test(n) ? 3 : 0) + (/google/i.test(n) ? 1 : 0) + (v.localService ? 1 : 0); }
   var voices = [];   // [{id, name, lang, g, q, raw}]
@@ -104,6 +111,12 @@ var TTS = (function(){
     loadVoices();
     if (synth.addEventListener) synth.addEventListener("voiceschanged", loadVoices); else synth.onvoiceschanged = loadVoices;
   }
+  /** أفضل صوت من جنس معيّن، أو أفضل صوت متاح إن لم يوجد (يُعوَّض الجنس بالنبرة) */
+  function bestOf(g, except){
+    var list = voices.filter(function(v){ return !except || v.id !== except; });
+    if (!list.length) list = voices.slice();
+    return list.sort(function(a,b){ return (b.g===g) - (a.g===g) || b.q - a.q; })[0] || null;
+  }
   /** الصوت 1: رجالي بأعلى جودة. الصوت 2: صوت مختلف (رجالي آخر ثم أي صوت). */
   function autoVoice(role){
     if (!voices.length) return null;
@@ -114,9 +127,21 @@ var TTS = (function(){
     return others[0] || v1;
   }
   function byId(id){ for (var i = 0; i < voices.length; i++) if (voices[i].id === id) return voices[i]; return null; }
-  function voiceFor(role){ return byId(role === 1 ? cfg.voice1 : cfg.voice2) || autoVoice(role); }
+  /** الاختيار: "" تلقائي، "~m" رجالي، "~f" نسائي، أو معرّف صوت بعينه */
+  function want(role){ return role === 1 ? cfg.voice1 : cfg.voice2; }
+  function voiceFor(role){
+    var w = want(role);
+    if (w === "~m" || w === "~f") {
+      var other = role === 2 ? voiceFor(1) : null;      // الصوت 2 يُفضَّل أن يختلف عن الأول
+      return bestOf(w.slice(1), other && voices.length > 1 ? other.id : "");
+    }
+    return byId(w) || autoVoice(role);
+  }
   function styleFor(role){
-    var s = {pitch:STYLE[role].pitch, rate:STYLE[role].rate * rate};
+    var s = {pitch:STYLE[role].pitch, rate:STYLE[role].rate * rate}, w = want(role), v = voiceFor(role);
+    // طُلب صوت رجالي ولا يوجد إلا صوت نسائي/غير معروف: نخفض النبرة ليقترب من الصوت الرجالي
+    if (v && v.g !== "m" && (w === "~m" || (role === 1 && !w))) s.pitch = Math.min(s.pitch, 0.72);
+    if (v && v.g !== "f" && w === "~f") s.pitch = 1.18;
     // صوت واحد فقط على الجهاز؟ نميّز الدورين بالنبرة
     var v1 = voiceFor(1), v2 = voiceFor(2);
     if (role === 2 && v1 && v2 && v1.id === v2.id) s.pitch = 1.12;
@@ -129,7 +154,7 @@ var TTS = (function(){
     var st = styleFor(role), v = voiceFor(role);
     if (NATIVE) { window.AndroidBridge.ttsSpeak(String(my), text, st.rate, st.pitch, v ? v.id : ""); return; }
     var u = new SpeechSynthesisUtterance(text);
-    if (v && v.raw) { u.voice = v.raw; u.lang = v.lang; } else u.lang = EN ? "en-US" : "ar-SA";
+    if (v && v.raw) { u.voice = v.raw; u.lang = v.lang; } else u.lang = SAY.tag;
     u.rate = st.rate; u.pitch = st.pitch;
     u.onend = function(){ next(my); };
     u.onerror = function(e){ if (e && (e.error === "interrupted" || e.error === "canceled")) return; next(my); };
@@ -182,7 +207,7 @@ var TTS = (function(){
     if (String(token) !== String(id) || state !== "playing") return;
     if (ev === "done" || ev === "error") { idx++; speakCurrent(); }
   };
-  if (NATIVE && EN && window.AndroidBridge.ttsSetLang) { try { window.AndroidBridge.ttsSetLang("en"); } catch (e) {} }
+  if (NATIVE && EN && window.AndroidBridge.ttsSetLang) { try { window.AndroidBridge.ttsSetLang(LANG); } catch (e) {} }
   if (NATIVE) setTimeout(loadVoices, 1500);
 
   return {
@@ -205,8 +230,11 @@ var TTS = (function(){
       } catch (e) {}
     },
     installVoice: function(){ if (NATIVE && window.AndroidBridge.ttsInstall) window.AndroidBridge.ttsInstall(); },
-    /** قائمة الأصوات العربية مع تقدير الجنس: g = m | f | ? */
-    voices: function(){ if (NATIVE && !voices.length) loadVoices(); return voices.map(function(v){ return {id:v.id, name:v.name, lang:v.lang, g:v.g}; }); },
+    lang: LANG,
+    /** أصوات لغة النطق مع تقدير الجنس (g = m | f | ?)، الرجالية أولًا ثم الأعلى جودة */
+    voices: function(){ if (NATIVE && !voices.length) loadVoices(); return voices.slice().sort(function(a,b){ return (b.g==="m") - (a.g==="m") || b.q - a.q; }).map(function(v){ return {id:v.id, name:v.name, lang:v.lang, g:v.g}; }); },
+    /** الصوت الفعلي لدور معيّن مع الإعداد الحالي، وهل الجنس مُحاكى بالنبرة */
+    resolved: function(role){ var v = voiceFor(role), w = want(role); return v ? {id:v.id, name:v.name, g:v.g, simulated:(w === "~m" && v.g !== "m") || (w === "~f" && v.g !== "f")} : null; },
     autoVoiceId: function(role){ var v = autoVoice(role); return v ? v.id : ""; },
     configure: function(o){ for (var k in o) if (o[k] !== undefined) cfg[k] = o[k]; },
     setRate: function(r){
@@ -218,8 +246,12 @@ var TTS = (function(){
     preview: function(role){
       hardStop(); chunks = []; state = "idle"; emit();
       var my = ++token;
-      speakText(my, EN ? (role === 1 ? "The Messenger of Allah, peace be upon him, said: Actions are judged only by intentions, and every person will have only what he intended." : "This is the narrator's voice: it reads the headings and explanations, and the second voice answers with the verses and hadith.")
-                       : (role === 1 ? "قال رسول الله صلى الله عليه وسلم: إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى." : "هذا صوت المحاور: يقرأ العناوين والشرح، ثم يجيبه صوت الشيخ بالآيات والأحاديث."), role);
+      var P = {
+        ar: ["قال رسول الله صلى الله عليه وسلم: إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى.", "هذا صوت المحاور: يقرأ العناوين والشرح، ثم يجيبه صوت الشيخ بالآيات والأحاديث."],
+        en: ["The Messenger of Allah, peace be upon him, said: Actions are judged only by intentions, and every person will have only what he intended.", "This is the narrator's voice: it reads the headings and explanations, and the second voice answers with the verses and hadith."],
+        nl: ["De Boodschapper van Allah, vrede zij met hem, zei: Daden worden slechts beoordeeld naar de intenties, en ieder mens krijgt slechts wat hij beoogde.", "Dit is de stem van de verteller: hij leest de titels en de uitleg, en de tweede stem antwoordt met de verzen en de hadith."]
+      }[LANG];
+      speakText(my, P[role === 1 ? 0 : 1], role);
     },
     previewRecitation: function(){
       hardStop(); var my = ++token, urls = recitationUrls("البقرة", "153", cfg.reciter);

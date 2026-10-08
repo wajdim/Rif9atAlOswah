@@ -9,7 +9,7 @@
 function qs(id){ return document.getElementById(id); }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
 function toast(msg,ms){ var t=qs("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("show");},ms||2200); }
-var APP_VERSION="2.3.0";
+var APP_VERSION="2.5.0";
 var EN=I18N.en;
 function store(key, val){ try{ if(val===undefined) return JSON.parse(localStorage.getItem(key)||"null"); localStorage.setItem(key, JSON.stringify(val)); }catch(e){ return null; } }
 function iconSvg(k){ return '<svg viewBox="0 0 24 24">'+(ICONS[k]||ICONS.star)+'</svg>'; }
@@ -62,11 +62,12 @@ RAG.build();
 var prefs=store("rifqa.prefs")||{theme:"auto",fs:"1"};
 TTS.setRate(prefs.rate||1);
 setTimeout(function(){ TTS.configure(TTS_CFG()); },0);
-function applyPrefs(){
+function applyPrefs(p){
+  p=p||prefs;
   var r=document.documentElement;
-  if(prefs.theme==="auto") r.removeAttribute("data-theme"); else r.setAttribute("data-theme",prefs.theme);
-  r.style.setProperty("--fs",prefs.fs||"1");
-  var dark = prefs.theme==="dark" || (prefs.theme==="auto" && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches);
+  if(p.theme==="auto") r.removeAttribute("data-theme"); else r.setAttribute("data-theme",p.theme);
+  r.style.setProperty("--fs",p.fs||"1");
+  var dark = p.theme==="dark" || (p.theme==="auto" && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches);
   var m=document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content", dark?"#141B17":"#2F4C3E");
 }
 applyPrefs();
@@ -129,9 +130,9 @@ function renderHome(){
 }
 
 /* ---------------- التنبيهات الحساسة ---------------- */
-var SELF_HARM=["افكار انتحاريه","انتحار","انتحر","اذي نفسي","اؤذي نفسي","اريد ان اموت","اريد الموت","لا اريد ان اعيش","اقتل نفسي","انهي حياتي","ان انهي حياتي","نقتل روحي","نحب نموت","ما نحبش نعيش","حابب اموت","بدي موت","الموت ارحم","جرح نفسي","اجرح نفسي","suicide","suicidal","kill myself","end my life","want to die","wish i was dead","wish i were dead","hurt myself","harm myself","self harm","cut myself","no reason to live","me suicider"];
-var LEGAL=["طلاق","ميراث","ارث","الورث","حد شرعي","ربا","محامي","قضيه","محكمه","نفقه","خلع","حضانه","فتوي","عقد","divorce","inheritance","custody","lawyer","court case","lawsuit","alimony","fatwa","khula","riba","usury"];
-var VIOLENCE=["عنف","يضربني","تضربني","ضربني","ضربتني","تعنيف","اعتداء","اغتصاب","تحرش","يهددني بالقتل","abuse","abusive","hits me","beats me","beat me","hit me","violence","violent","rape","assault","harass","threatens to kill","threatened to kill"];
+var SELF_HARM=["افكار انتحاريه","انتحار","انتحر","اذي نفسي","اؤذي نفسي","اريد ان اموت","اريد الموت","لا اريد ان اعيش","اقتل نفسي","انهي حياتي","ان انهي حياتي","نقتل روحي","نحب نموت","ما نحبش نعيش","حابب اموت","بدي موت","الموت ارحم","جرح نفسي","اجرح نفسي","suicide","suicidal","kill myself","end my life","want to die","wish i was dead","wish i were dead","hurt myself","harm myself","self harm","cut myself","no reason to live","me suicider","zelfmoord","suicidaal","mezelf van kant maken","mezelf iets aandoen","ik wil dood","ik wil sterven","wil niet meer leven","een eind aan mijn leven","mezelf pijn doen","zelfbeschadiging","mezelf snijden"];
+var LEGAL=["طلاق","ميراث","ارث","الورث","حد شرعي","ربا","محامي","قضيه","محكمه","نفقه","خلع","حضانه","فتوي","عقد","divorce","inheritance","custody","lawyer","court case","lawsuit","alimony","fatwa","khula","riba","usury","scheiding","echtscheiding","erfenis","voogdij","advocaat","rechtszaak","rechtbank","alimentatie","rente"];
+var VIOLENCE=["عنف","يضربني","تضربني","ضربني","ضربتني","تعنيف","اعتداء","اغتصاب","تحرش","يهددني بالقتل","abuse","abusive","hits me","beats me","beat me","hit me","violence","violent","rape","assault","harass","threatens to kill","threatened to kill","mishandeling","mishandelt","slaat me","sloeg me","geweld","verkrachting","aanranding","intimidatie","bedreigt me","dreigt me te vermoorden"];
 function checkFlags(text){
   var n=" "+RAG.normalize(text)+" ";
   function hit(list){ return list.some(function(k){ var nk=RAG.normalize(k); return /[a-z]/.test(nk) ? n.indexOf(" "+nk)>-1 : n.indexOf(nk)>-1; }); }
@@ -388,7 +389,10 @@ function runAIStream(target, onFinish){
       if(raf){ cancelAnimationFrame(raf); raf=null; }
       if(info.stopReason==="refusal" && !text) text=T("تعذّر على النموذج إكمال هذا الطلب. التحليل الموثق أعلاه يبقى متاحًا.");
       if(info.stopReason==="max_tokens") text+="\n\n"+T("(انتهى الحد الأقصى للطول.)");
-      paint(true); aiSession.messages.push({role:"assistant",content:text||"…"}); aiSession.busy=false; onFinish&&onFinish(true);
+      paint(true); aiSession.messages.push({role:"assistant",content:text||"…"}); aiSession.busy=false;
+      // سياسة Google Play للمحتوى المولَّد: وسيلة للإبلاغ عن أي إجابة مسيئة أو خاطئة من داخل التطبيق
+      if(text) target.insertAdjacentHTML("beforeend",'<div class="ai-report"><button class="mini-btn" data-act="ai-report" data-turn="'+(aiSession.messages.length-1)+'"><svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>'+T("الإبلاغ عن هذه الإجابة")+'</button></div>');
+      onFinish&&onFinish(true);
     },
     onError:function(msg){ if(raf){ cancelAnimationFrame(raf); raf=null; } target.innerHTML=mdToHTML(text)+'<p class="ai-err">'+esc(msg)+'</p>'; aiSession.busy=false; aiSession.messages.pop(); onFinish&&onFinish(false); }
   });
@@ -643,6 +647,7 @@ function revealForReading(el){
 }
 var ICON_PLAY='<svg viewBox="0 0 24 24"><path d="M17 12L8 6v12z"/></svg>', ICON_PAUSE='<svg viewBox="0 0 24 24"><rect x="7" y="6" width="3.5" height="12" rx="1"/><rect x="13.5" y="6" width="3.5" height="12" rx="1"/></svg>';
 TTS.on(function(st){
+  if(draft && !qs("settingsModal").hidden && TTS.voices().length!==draftVoiceCount) renderVoiceSettings();   // اكتمل تحميل الأصوات
   if(st.notice==="recitation-offline"){ toast(EN?T("تعذّر تحميل التلاوة (لا يوجد اتصال)"):T("تعذّر تحميل التلاوة (لا يوجد اتصال)؛ سيقرأ صوت الشيخ نص الآيات المشكول"),5000); return; }
   if(ttsEl && ttsEl!==st.el){ ttsEl.classList.remove("tts-reading"); ttsEl=null; }
   var bar=qs("ttsBar"); if(!bar) return;
@@ -687,12 +692,25 @@ function stopReading(){ if(TTS.state()!=="idle") TTS.stop(); }
 
 /* ---------------- التقييم والتعليقات ---------------- */
 // لتصلك الملاحظات على بريدك مباشرة ضع عنوانه هنا (يُترك فارغًا ليختار المستخدم المستلم)
-var FEEDBACK_EMAIL="";
+var FEEDBACK_EMAIL="wajdi.chaouche@gmail.com";
+/** يفتح رسالة بريد جاهزة يراجعها المستخدم ويرسلها بنفسه (لا يُرسل شيء تلقائيًا) */
+function composeEmail(subject, body){
+  body=body.slice(0,1800);
+  if(IS_ANDROID_APP && window.AndroidBridge.email){ window.AndroidBridge.email(FEEDBACK_EMAIL, subject, body); return; }
+  location.href="mailto:"+encodeURIComponent(FEEDBACK_EMAIL)+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+}
+function reportAI(turn){
+  if(!aiSession || !aiSession.messages[turn]) return;
+  var q=turn>1 ? String(aiSession.messages[turn-1].content).split("\n\n")[0] : (lastAnalysis?lastAnalysis.input:"");
+  var L=[T("سبب البلاغ (اكتبه هنا):"),"","","— "+T("سؤالي:"),q,"","— "+T("إجابة النموذج:"),String(aiSession.messages[turn].content),"",
+    T("رِفقة الأُسوة {0} · {1}",APP_VERSION,I18N.lang)];
+  composeEmail(T("بلاغ عن إجابة الذكاء الاصطناعي في رِفقة الأُسوة"), L.join("\n"));
+}
 var feedback=store("rifqa.feedback")||[];
 var STAR_LABELS=["اختر تقييمك","ضعيفة","مقبولة","جيدة","جيدة جدًا","ممتازة"];
 function fbFind(key){ for(var i=0;i<feedback.length;i++) if(feedback[i].key===key) return feedback[i]; return null; }
 function starsText(n){ return "★★★★★".slice(0,n)+"☆☆☆☆☆".slice(0,5-n); }
-function fmtDate(ts){ return new Date(ts).toLocaleDateString(EN?"en":"ar"); }
+function fmtDate(ts){ return new Date(ts).toLocaleDateString(I18N.lang); }
 function rateBoxHTML(key, meta){
   var ex=fbFind(key), n=ex?ex.stars:0;
   return '<div class="rate-box'+(ex?" is-done":"")+'" data-rate-key="'+esc(key)+'" data-kind="'+esc(meta.kind)+'" data-title="'+esc(meta.title)+'" data-sit="'+esc(meta.sitId||"")+'" data-stars="'+n+'">'+
@@ -746,9 +764,8 @@ function feedbackText(list){
 function sendFeedback(list){
   if(!list.length){ toast(T("لا توجد تقييمات بعد")); return; }
   var text=feedbackText(list);
-  if(IS_ANDROID_APP){ window.AndroidBridge.share(text); return; }
-  if(navigator.share && !FEEDBACK_EMAIL){ navigator.share({title:T("ملاحظات رِفقة الأُسوة"),text:text}).catch(function(){}); return; }
-  location.href="mailto:"+encodeURIComponent(FEEDBACK_EMAIL)+"?subject="+encodeURIComponent(T("ملاحظات على تطبيق رِفقة الأُسوة"))+"&body="+encodeURIComponent(text.slice(0,1800));
+  if(!FEEDBACK_EMAIL){ if(IS_ANDROID_APP) window.AndroidBridge.share(text); else if(navigator.share) navigator.share({title:T("ملاحظات رِفقة الأُسوة"),text:text}).catch(function(){}); return; }
+  composeEmail(T("ملاحظات على تطبيق رِفقة الأُسوة"), text);
 }
 function feedbackListHTML(){
   if(!feedback.length) return "";
@@ -765,39 +782,91 @@ function feedbackListHTML(){
 }
 
 /* ---------------- الإعدادات ---------------- */
+// تُعدَّل نسخة مؤقتة (draft) ما دامت النافذة مفتوحة، وتُعايَن التغييرات فورًا (المظهر، الخط، التشكيل، السرعة، الأصوات).
+// «حفظ» يثبّتها؛ و«إلغاء» أو ✕ أو Esc أو النقر خارج النافذة يُرجع كل شيء كما كان دون حفظ.
+var draft=null, draftVoiceCount=-1;
+function draftCfg(){ return {voice1:draft.voice1, voice2:draft.voice2, reciter:draft.reciter}; }
+function previewDraft(){
+  applyPrefs(draft); TTS.setRate(draft.rate); TTS.configure(draftCfg());
+  if(!EN && TashkeelView.available() && TashkeelView.enabled()!==draft.tk) TashkeelView.set(draft.tk);
+}
+// اسم اللغة والصوت الرجالي في ويندوز لكل لغة (لتلميح تثبيت الأصوات)
+var VOICE_HELP={ar:["عربي","العربية","نايف"], en:["English","English","David"], nl:["Nederlandse","Nederlands","Frank"]}[I18N.lang];
 function renderVoiceSettings(){
-  var c=TTS_CFG();
+  var c=draftCfg();
   qs("ttsReciter").innerHTML=TTS.RECITERS.map(function(r){ return '<option value="'+esc(r.id)+'"'+(r.id===c.reciter?" selected":"")+'>'+esc(T(r.name))+'</option>'; }).join("");
   var vs=TTS.voices(), g={m:T("رجالي"),f:T("نسائي"),"?":""};
+  var hasM=vs.some(function(v){return v.g==="m";}), hasF=vs.some(function(v){return v.g==="f";});
+  draftVoiceCount=vs.length;
   function opts(role,cur){
     var auto=TTS.autoVoiceId(role), av=vs.filter(function(v){return v.id===auto;})[0];
-    return '<option value="">'+T("تلقائي")+(av?" — "+esc(av.name):"")+'</option>'+vs.map(function(v){ return '<option value="'+esc(v.id)+'"'+(v.id===cur?" selected":"")+'>'+esc(v.name)+(g[v.g]?" ("+g[v.g]+")":"")+'</option>'; }).join("");
+    var o='<option value="">'+T("تلقائي")+(av?" — "+esc(av.name):"")+'</option>'+
+      '<option value="~m"'+(cur==="~m"?" selected":"")+'>'+T("صوت رجالي")+(vs.length&&!hasM?" ("+T("بخفض النبرة")+")":"")+'</option>'+
+      '<option value="~f"'+(cur==="~f"?" selected":"")+'>'+T("صوت نسائي")+(vs.length&&!hasF?" ("+T("برفع النبرة")+")":"")+'</option>';
+    if(vs.length) o+='<optgroup label="'+esc(T("الأصوات المثبتة على الجهاز"))+'">'+vs.map(function(v){ return '<option value="'+esc(v.id)+'"'+(v.id===cur?" selected":"")+'>'+esc(v.name)+(g[v.g]?" ("+g[v.g]+")":"")+'</option>'; }).join("")+'</optgroup>';
+    return o;
   }
   qs("ttsVoice1").innerHTML=opts(1,c.voice1); qs("ttsVoice2").innerHTML=opts(2,c.voice2);
+  var install=TTS.native?' <button class="mini-btn" data-act="tts-install">'+T("تثبيت أصوات إضافية")+'</button>':"";
   var hint="";
-  if(!vs.length) hint=TTS.native?esc(T("لم تُعثر على أصوات عربية بعد."))+' <button class="mini-btn" data-act="tts-install">'+T("تثبيت الصوت العربي")+'</button>'
-    :esc(T("لا يوجد صوت عربي مثبّت. في ويندوز: الإعدادات ← الوقت واللغة ← اللغة والمنطقة ← أضف «العربية» مع ميزة «الكلام» ثم أعد تشغيل التطبيق (يوفّر ويندوز صوت «نايف» الرجالي)."));
-  else if(!vs.some(function(v){return v.g==="m";})) hint=esc(T("لم يُعثر على صوت رجالي مؤكد؛ جرّب الأصوات المتاحة واختر الأنسب، ويُخفض التطبيق نبرة صوت الشيخ تلقائيًا."));
-  else if(vs.length===1) hint=esc(T("يوجد صوت عربي واحد فقط؛ سيُميّز التطبيق بين الصوتين بالنبرة."));
+  if(!vs.length) hint=TTS.native?esc(T("لم يُعثر على أصوات لهذه اللغة بعد."))+install
+    :esc(T("لا يوجد صوت {0} مثبّت. في ويندوز: الإعدادات ← الوقت واللغة ← اللغة والمنطقة ← أضف «{1}» مع ميزة «الكلام» ثم أعد تشغيل التطبيق (يوفّر ويندوز صوت «{2}» الرجالي).",VOICE_HELP[0],VOICE_HELP[1],VOICE_HELP[2]));
+  else if(!hasM) hint=esc(T("لا يوجد صوت رجالي مثبّت لهذه اللغة؛ اختيار «صوت رجالي» يخفض نبرة الصوت المتاح. لصوت رجالي حقيقي ثبّت صوتًا إضافيًا من إعدادات النطق في الجهاز."))+install;
+  else hint=esc(T("الأصوات الرجالية في أول القائمة."))+install;
   qs("voiceHint").innerHTML=hint;
 }
+function renderSettingsSegs(){
+  function mark(id,val){ document.querySelectorAll("#"+id+" button").forEach(function(b){ b.classList.toggle("active", String(b.getAttribute("data-v"))===String(val)); }); }
+  mark("segLang",draft.lang); mark("segTheme",draft.theme); mark("segFs",draft.fs); mark("segRate",draft.rate); mark("segTk",draft.tk?"1":"0");
+}
 function openSettings(){
-  var s=AI.load();
-  qs("aiKey").value=s.key;
-  qs("aiModel").innerHTML=AI.MODELS.map(function(m){return '<option value="'+m.id+'"'+(m.id===s.model?" selected":"")+'>'+esc(T(m.label))+'</option>';}).join("");
-  document.querySelectorAll("#segLang button").forEach(function(b){ b.classList.toggle("active", b.getAttribute("data-v")===I18N.lang); });
-  document.querySelectorAll("#segTheme button").forEach(function(b){ b.classList.toggle("active", b.getAttribute("data-v")===(prefs.theme||"auto")); });
-  document.querySelectorAll("#segFs button").forEach(function(b){ b.classList.toggle("active", b.getAttribute("data-v")===(prefs.fs||"1")); });
-  document.querySelectorAll("#segRate button").forEach(function(b){ b.classList.toggle("active", +b.getAttribute("data-v")===(+prefs.rate||1)); });
-  renderVoiceSettings();
-  var tkOn=prefs.tk!==false; qs("tkGroup").hidden=EN || !TashkeelView.available();
-  document.querySelectorAll("#segTk button").forEach(function(b){ b.classList.toggle("active", (b.getAttribute("data-v")==="1")===tkOn); });
+  var ai=AI.load();
+  draft={lang:I18N.lang, theme:prefs.theme||"auto", fs:prefs.fs||"1", rate:+prefs.rate||1, tk:prefs.tk!==false,
+         voice1:prefs.voice1||"", voice2:prefs.voice2||"", reciter:TTS_CFG().reciter, key:ai.key||"", model:ai.model};
+  qs("aiKey").value=draft.key;
+  qs("aiModel").innerHTML=AI.MODELS.map(function(m){return '<option value="'+m.id+'"'+(m.id===draft.model?" selected":"")+'>'+esc(T(m.label))+'</option>';}).join("");
+  qs("tkGroup").hidden=EN || !TashkeelView.available();
+  renderSettingsSegs(); renderVoiceSettings();
   qs("settingsModal").hidden=false;
+  var body=document.querySelector("#settingsModal .set-body"); if(body) body.scrollTop=0;
+}
+/** إغلاق دون حفظ: يُرجع المعاينة إلى الإعدادات المحفوظة */
+function cancelSettings(){
+  if(qs("settingsModal").hidden) return;
+  if(TTS.state()==="idle") TTS.stop();
+  draft=null; qs("settingsModal").hidden=true;
+  applyPrefs(); TTS.setRate(prefs.rate||1); TTS.configure(TTS_CFG());
+  if(!EN && TashkeelView.available() && TashkeelView.enabled()!==(prefs.tk!==false)) TashkeelView.set(prefs.tk!==false);
+}
+function saveSettings(){
+  var key=qs("aiKey").value.trim();
+  if(key && !/^sk-ant-/.test(key)){ toast(T("صيغة المفتاح غير صحيحة (يبدأ بـ sk-ant-)")); return; }
+  var d=draft; if(!d) return;
+  prefs.theme=d.theme; prefs.fs=d.fs; prefs.rate=d.rate; prefs.tk=d.tk; prefs.voice1=d.voice1; prefs.voice2=d.voice2; prefs.reciter=d.reciter;
+  store("rifqa.prefs",prefs);
+  var cur=AI.load(); AI.save({key:key, model:qs("aiModel").value, auto:key?cur.auto:false});
+  draft=null; qs("settingsModal").hidden=true;
+  applyPrefs(); TTS.setRate(prefs.rate); TTS.configure(TTS_CFG());
+  if(d.lang!==I18N.lang){ setLang(d.lang); return; }      // تغيير اللغة يعيد تحميل التطبيق
+  renderHome(); toast(T("حُفظت الإعدادات"));
+  if(currentScreen==="result" && lastAnalysis){ var p=document.querySelector(".ai-panel"); if(p) p.outerHTML=aiPanelHTML(); }
+}
+/** قائمة اللغات في الشريط العلوي */
+function toggleLangMenu(force){
+  var m=qs("langMenu"), btn=qs("btnLang"), open=force!==undefined?force:m.hidden;
+  if(open){
+    var r=btn.getBoundingClientRect();
+    m.style.top=(r.bottom+6)+"px";
+    if(document.documentElement.dir==="rtl"){ m.style.left=Math.max(8,r.left)+"px"; m.style.right="auto"; }
+    else { m.style.right=Math.max(8,document.documentElement.clientWidth-r.right)+"px"; m.style.left="auto"; }
+    m.querySelectorAll("[data-setlang]").forEach(function(b){ b.classList.toggle("active", b.getAttribute("data-setlang")===I18N.lang); });
+  }
+  m.hidden=!open; btn.setAttribute("aria-expanded", open?"true":"false");
 }
 
 /* ---------------- مفوّض الأحداث العام ---------------- */
 document.addEventListener("click",function(e){
-  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-star],[data-theme-open],[data-nav],[data-sit],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],#segTheme button,#segFs button,#segRate button,#segTk button,#segLang button,ol.steps li");
+  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-star],[data-theme-open],[data-nav],[data-sit],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],#segTheme button,#segFs button,#segRate button,#segTk button,#segLang button,[data-setlang],ol.steps li");
   if(!el) return;
   if(el.matches("ol.steps li")){ el.classList.toggle("done"); return; }
   if(el.matches(".section.collapsible > .section-title")){ toggleSection(el.parentElement); return; }
@@ -818,15 +887,19 @@ document.addEventListener("click",function(e){
   if(el.hasAttribute("data-libkind")){ libKind=el.getAttribute("data-libkind"); libLimit=40; renderLibrary(); return; }
   if(el.hasAttribute("data-libtheme")){ libTheme=el.getAttribute("data-libtheme")||null; libLimit=40; renderLibrary(); window.scrollTo(0,0); return; }
   if(el.hasAttribute("data-close")){ qs(el.getAttribute("data-close")).hidden=true; return; }
-  if(el.closest("#segLang")){ setLang(el.getAttribute("data-v")); return; }
-  if(el.closest("#segTheme")){ prefs.theme=el.getAttribute("data-v"); store("rifqa.prefs",prefs); applyPrefs(); openSettings(); return; }
-  if(el.closest("#segTk")){ prefs.tk=el.getAttribute("data-v")==="1"; store("rifqa.prefs",prefs); TashkeelView.set(prefs.tk); openSettings(); return; }
-  if(el.closest("#segRate")){ prefs.rate=+el.getAttribute("data-v"); store("rifqa.prefs",prefs); TTS.setRate(prefs.rate); openSettings(); return; }
-  if(el.closest("#segFs")){ prefs.fs=el.getAttribute("data-v"); store("rifqa.prefs",prefs); applyPrefs(); openSettings(); return; }
+  if(el.hasAttribute("data-setlang")){ toggleLangMenu(false); setLang(el.getAttribute("data-setlang")); return; }
+  if(el.closest("#segLang,#segTheme,#segTk,#segRate,#segFs")){
+    if(!draft) return;
+    var v=el.getAttribute("data-v"), seg=el.closest(".seg").id;
+    if(seg==="segLang") draft.lang=v; else if(seg==="segTheme") draft.theme=v; else if(seg==="segFs") draft.fs=v;
+    else if(seg==="segRate") draft.rate=+v; else if(seg==="segTk") draft.tk=v==="1";
+    renderSettingsSegs(); previewDraft(); return;
+  }
   var act=el.getAttribute("data-act");
   if(act==="fold-open"||act==="fold-close"){ foldAll(el.closest("#detailPanel,#themePage,#resultWrap"), act==="fold-open"); return; }
   if(act==="close-detail") closeDetail();
-  else if(act==="toggle-lang") setLang(EN?"ar":"en");
+  else if(act==="lang-menu") toggleLangMenu();
+  else if(act==="settings-cancel") cancelSettings();
   else if(act==="rate-submit") submitRating(el.closest(".rate-box"));
   else if(act==="rate-edit") el.closest(".rate-box").classList.remove("is-done");
   else if(act==="fb-send") sendFeedback(feedback);
@@ -837,6 +910,7 @@ document.addEventListener("click",function(e){
   else if(act==="preview-reciter"){ if(TTS.previewRecitation()===false) toast(T("اخترت القراءة بدون تلاوة")); }
   else if(act==="start-ai") startAI();
   else if(act==="ai-follow") followUpAI();
+  else if(act==="ai-report") reportAI(+el.getAttribute("data-turn"));
   else if(act==="open-settings") openSettings();
   else if(act==="copy-result") copyText(resultSummaryText());
   else if(act==="share-result"){
@@ -852,7 +926,7 @@ document.addEventListener("keydown",function(e){
   if((e.key==="Enter"||e.key===" ") && e.target && e.target.matches && e.target.matches(".section.collapsible > .section-title")){ e.preventDefault(); toggleSection(e.target.parentElement); }
   if(e.key==="Enter" && e.target && e.target.matches && e.target.matches(".sit-item")){ openDetail(e.target.getAttribute("data-sit")); }
   if(e.key==="Escape" && TTS.state()!=="idle" && !qs("detailPanel").classList.contains("open")){ TTS.stop(); return; }
-  if(e.key==="Escape"){ if(qs("detailPanel").classList.contains("open")) closeDetail(); document.querySelectorAll(".modal-overlay").forEach(function(m){m.hidden=true;}); }
+  if(e.key==="Escape"){ toggleLangMenu(false); if(!qs("settingsModal").hidden){ cancelSettings(); return; } if(qs("detailPanel").classList.contains("open")) closeDetail(); document.querySelectorAll(".modal-overlay").forEach(function(m){m.hidden=true;}); }
 });
 
 /* ---------------- التهيئة ---------------- */
@@ -866,17 +940,13 @@ document.addEventListener("DOMContentLoaded",function(){
   qs("btnHome").addEventListener("click",function(){ closeDetail(true); showScreen("home"); });
   qs("btnSettings").addEventListener("click",openSettings);
   qs("btnPrivacy").addEventListener("click",function(){ qs("privacyModal").hidden=false; });
-  document.querySelectorAll(".modal-overlay").forEach(function(m){ m.addEventListener("click",function(e){ if(e.target===m) m.hidden=true; }); });
-  qs("btnSaveSettings").addEventListener("click",function(){
-    var key=qs("aiKey").value.trim();
-    if(key && !/^sk-ant-/.test(key)){ toast(T("صيغة المفتاح غير صحيحة (يبدأ بـ sk-ant-)")); return; }
-    var cur=AI.load(); AI.save({key:key, model:qs("aiModel").value, auto:cur.auto});
-    qs("settingsModal").hidden=true; renderHome(); toast(T("حُفظت الإعدادات"));
-    if(currentScreen==="result" && lastAnalysis){ var p=document.querySelector(".ai-panel"); if(p) p.outerHTML=aiPanelHTML(); }
-  });
-  qs("btnClearKey").addEventListener("click",function(){ var cur=AI.load(); AI.save({key:"",model:cur.model,auto:false}); qs("aiKey").value=""; renderHome(); toast(T("حُذف المفتاح")); });
+  document.querySelectorAll(".modal-overlay").forEach(function(m){ m.addEventListener("click",function(e){ if(e.target!==m) return; if(m.id==="settingsModal") cancelSettings(); else m.hidden=true; }); });
+  document.addEventListener("click",function(e){ if(!qs("langMenu").hidden && !e.target.closest("#langMenu,#btnLang")) toggleLangMenu(false); });
+  window.addEventListener("resize",function(){ toggleLangMenu(false); });
+  qs("btnSaveSettings").addEventListener("click",saveSettings);
+  qs("btnClearKey").addEventListener("click",function(){ qs("aiKey").value=""; toast(T("سيُحذف المفتاح عند الحفظ")); });
   [["ttsVoice1","voice1"],["ttsVoice2","voice2"],["ttsReciter","reciter"]].forEach(function(p){
-    qs(p[0]).addEventListener("change",function(e){ prefs[p[1]]=e.target.value; store("rifqa.prefs",prefs); TTS.configure(TTS_CFG()); renderVoiceSettings(); toast(T("حُفظ الاختيار")); });
+    qs(p[0]).addEventListener("change",function(e){ if(!draft) return; draft[p[1]]=e.target.value; TTS.configure(draftCfg()); renderVoiceSettings(); });
   });
   qs("aiAuto").addEventListener("change",function(){ var cur=AI.load(); cur.auto=qs("aiAuto").checked; AI.save(cur); });
   qs("exploreSearch").addEventListener("input",function(e){ renderExploreBody(e.target.value); });
@@ -884,14 +954,14 @@ document.addEventListener("DOMContentLoaded",function(){
   qs("tabAllSit").addEventListener("click",function(){ exploreTab="all"; qs("tabAllSit").classList.add("active"); qs("tabByTopic").classList.remove("active"); renderExploreBody(qs("exploreSearch").value); });
   qs("libSearch").addEventListener("input",function(){ libLimit=40; renderLibrary(); });
   document.addEventListener("click",function(e){ if(e.target && e.target.id==="btnNewSearch"){ qs("userInput").value=""; qs("charCount").textContent=T("لن يُحفظ ما تكتبه"); showScreen("home"); qs("userInput").focus(); } });
-  if(window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListener && matchMedia("(prefers-color-scheme: dark)").addEventListener("change",applyPrefs);
+  if(window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListener && matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){ applyPrefs(draft||prefs); });
   initInstallPrompt();
   TashkeelView.onChange=function(){ rerenderCurrent(); };
   TashkeelView.set(!EN && prefs.tk!==false);                  // التشكيل مفعّل افتراضيًا (للواجهة العربية)
 });
 
 /* ---------------- PWA ---------------- */
-if("serviceWorker" in navigator && /^https?:/.test(location.protocol)){
+if("serviceWorker" in navigator && /^https?:/.test(location.protocol) && !IS_ANDROID_APP){
   window.addEventListener("load",function(){ navigator.serviceWorker.register("service-worker.js").catch(function(){}); });
 }
 function initInstallPrompt(){

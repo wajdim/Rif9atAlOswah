@@ -1,0 +1,29 @@
+Rifqat al-Uswa ("in het gezelschap van het beste voorbeeld") is een rustige metgezel voor bezinning. Beschrijf in je eigen woorden wat je doormaakt — een conflict, een verlies, zorgen, schuldgevoel, een moeilijke beslissing — en de app leest het samen met je in het licht van de Edele Koran, de Profetische Soenna en de Sira.
+
+HOE HET WERKT
+• Schrijf vrij, in het Nederlands, Engels of Arabisch, zo uitgebreid als je wilt.
+• De app herkent de onderwerpen, gevoelens en relaties in wat je schreef.
+• Je krijgt de meest verwante situatie uit het leven van de Profeet ﷺ en de profeten vóór hem: wat er gebeurde, hoe hij reageerde, de principes erachter en hoe die vandaag gelden.
+• Met de bijbehorende verzen, hadith en smeekbeden, elk met bron en graad, plus praktische stappen en wat je beter kunt vermijden.
+
+WAT ER IN ZIT
+• 115 Profetische situaties en verhalen, 57 levensonderwerpen.
+• 201 verzen en passages en 149 hadith en smeekbeden, met bronnen en betrouwbaarheidsgraad.
+• Een doorzoekbare bibliotheek met elke tekst waarop de analyse steunt.
+• Voorlezen met Nederlandse, Engelse en Arabische stemmen (mannen- of vrouwenstem), en recitatie van de verzen door bekende recitatoren (internet nodig voor recitaties).
+• Lichte en donkere weergave en instelbare lettergrootte.
+
+BETROUWBAAR
+• De app verzint nooit verzen of hadith: elke tekst komt ongewijzigd uit de samengestelde bibliotheek.
+• De Arabische tekst wordt altijd getoond. Nederlandse betekenissen van de Koran: Sofian S. Siregar (via Tanzil.net). De Nederlandse vertalingen van de hadith zijn voor deze app gemaakt op basis van de Engelse vertalingen van sunnah.com en zijn als zodanig gemarkeerd; het Arabisch blijft de maatstaf.
+• Zwakke of historische overleveringen zijn duidelijk aangegeven.
+
+PRIVÉ EN OFFLINE
+• Geen account, geen advertenties, geen analyse, geen tracking.
+• Alles werkt offline; wat je schrijft blijft op je apparaat.
+• Optioneel: voeg je eigen Claude (Anthropic) API-sleutel toe voor een extra bezinning door AI, beperkt tot de opgehaalde teksten. Alleen dan wordt je tekst verstuurd — rechtstreeks naar Anthropic, nooit naar de ontwikkelaar. Elk AI-antwoord kun je vanuit de app melden.
+
+BELANGRIJK
+Rifqat al-Uswa is een gids voor bezinning. De app geeft geen fatwa's en vervangt geen bekwame geleerde, arts, therapeut of advocaat. Beschrijf je een situatie met gevaar, geweld of gedachten aan zelfbeschadiging, dan wijst de app je eerst op dringende hulp (zoals 113 Zelfmoordpreventie).
+
+Beschikbaar in het Nederlands, Engels en Arabisch. Feedback is welkom: wajdi.chaouche@gmail.com

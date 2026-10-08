@@ -355,3 +355,49 @@ html[lang="en"] .lang-btn{font-family:'Amiri',serif; font-size:1.05rem;}
 /* English: keep the brand on one line so the top bar stays compact */
 html[dir="ltr"] .brand-mini{white-space:nowrap; font-size:1.05rem; flex:none;}
 @media (max-width:420px){ html[dir="ltr"] .brand-mini{font-size:.95rem;} }
+
+/* ---------- الإعدادات: رأس ثابت فيه ✕، أقسام مرتبة، وتذييل ثابت (إلغاء / حفظ) ---------- */
+.settings-box{display:flex; flex-direction:column; padding:0; overflow:hidden; max-width:500px; max-height:min(88vh, 860px);}
+.set-head{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 20px 12px; border-bottom:1px solid var(--border);}
+.set-head h3{margin:0; font-size:1.15rem;}
+.set-x{flex:none; width:36px; height:36px; border-radius:50%; border:1px solid var(--border); background:var(--surface-2); color:var(--ink-soft); display:grid; place-items:center; cursor:pointer;}
+.set-x svg{width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round;}
+.set-x:hover,.set-x:focus-visible{color:var(--ink); border-color:var(--pine);}
+.set-body{flex:1; min-height:0; overflow-y:auto; padding:14px 20px 6px; overscroll-behavior:contain;}
+.set-sec{border:1px solid var(--border); border-radius:14px; padding:14px 14px 2px; margin-bottom:14px; background:var(--surface);}
+.set-sec h4{display:flex; align-items:center; gap:8px; margin:0 0 12px; font-size:.9rem; color:var(--pine-strong, var(--pine));}
+.set-sec h4 svg{width:18px; height:18px; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round;}
+.set-sec .set-group:last-child{margin-bottom:12px;}
+.set-foot{display:flex; justify-content:flex-end; gap:10px; padding:12px 20px calc(12px + env(safe-area-inset-bottom, 0px)); border-top:1px solid var(--border); background:var(--surface);}
+.set-foot .btn-ghost,.set-foot .btn-primary{min-width:96px;}
+.seg{flex-wrap:wrap;}
+.seg button{min-width:0;}
+#voiceHint .mini-btn{margin-top:6px;}
+.row-pick input{flex:1; min-width:0;}
+@media (max-width:480px){
+  .settings-box{max-height:92vh;}
+  .set-head,.set-body,.set-foot{padding-left:14px; padding-right:14px;}
+}
+
+/* ---------- قائمة اللغات ---------- */
+.lang-menu{position:fixed; z-index:60; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:6px; display:flex; flex-direction:column; min-width:150px; box-shadow:0 10px 30px rgba(0,0,0,.18);}
+.lang-menu button{border:0; background:none; color:var(--ink); font-family:inherit; font-size:.92rem; text-align:start; padding:9px 12px; border-radius:8px; cursor:pointer;}
+.lang-menu button:hover,.lang-menu button:focus-visible{background:var(--surface-2);}
+.lang-menu button.active{background:var(--pine); color:var(--surface);}
+/* v2.4: ستة أزرار في الشريط العلوي — تصغيرها قليلًا على الشاشات الضيقة حتى لا يُقصّ آخرها */
+@media (max-width:420px){
+  .topbar{padding-left:max(14px, env(safe-area-inset-left)); padding-right:max(14px, env(safe-area-inset-right));}
+  .topnav{gap:4px;}
+  .icon-btn{width:34px;height:34px;}
+  .icon-btn svg{width:16px;height:16px;}
+}
+@media (max-width:360px){
+  .topnav{gap:3px;}
+  .icon-btn{width:31px;height:31px;}
+  .icon-btn svg{width:15px;height:15px;}
+  html[dir="ltr"] .brand-mini{font-size:.85rem;}
+}
+/* v2.5: الإبلاغ عن إجابة الذكاء الاصطناعي (سياسة Google Play للمحتوى المولَّد) */
+.ai-report{margin-top:10px; display:flex; justify-content:flex-end;}
+.ai-report .mini-btn{display:inline-flex; align-items:center; gap:6px; opacity:.85;}
+.ai-report svg{width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linejoin:round;}

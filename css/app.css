@@ -384,3 +384,20 @@ html[dir="ltr"] .brand-mini{white-space:nowrap; font-size:1.05rem; flex:none;}
 .lang-menu button{border:0; background:none; color:var(--ink); font-family:inherit; font-size:.92rem; text-align:start; padding:9px 12px; border-radius:8px; cursor:pointer;}
 .lang-menu button:hover,.lang-menu button:focus-visible{background:var(--surface-2);}
 .lang-menu button.active{background:var(--pine); color:var(--surface);}
+/* v2.4: ستة أزرار في الشريط العلوي — تصغيرها قليلًا على الشاشات الضيقة حتى لا يُقصّ آخرها */
+@media (max-width:420px){
+  .topbar{padding-left:max(14px, env(safe-area-inset-left)); padding-right:max(14px, env(safe-area-inset-right));}
+  .topnav{gap:4px;}
+  .icon-btn{width:34px;height:34px;}
+  .icon-btn svg{width:16px;height:16px;}
+}
+@media (max-width:360px){
+  .topnav{gap:3px;}
+  .icon-btn{width:31px;height:31px;}
+  .icon-btn svg{width:15px;height:15px;}
+  html[dir="ltr"] .brand-mini{font-size:.85rem;}
+}
+/* v2.5: الإبلاغ عن إجابة الذكاء الاصطناعي (سياسة Google Play للمحتوى المولَّد) */
+.ai-report{margin-top:10px; display:flex; justify-content:flex-end;}
+.ai-report .mini-btn{display:inline-flex; align-items:center; gap:6px; opacity:.85;}
+.ai-report svg{width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linejoin:round;}

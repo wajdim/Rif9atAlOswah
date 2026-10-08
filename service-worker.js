@@ -3,7 +3,7 @@
   cache-first لملفات التطبيق مع تحديث في الخلفية، حتى يعمل كاملًا بلا إنترنت.
   لا يتدخل أبدًا في طلبات api.anthropic.com (وضع الذكاء الاصطناعي الاختياري).
 */
-const CACHE_NAME = "rifqa-aluswa-v2.4.0";
+const CACHE_NAME = "rifqa-aluswa-v2.5.0";
 const APP_SHELL = [
   "./", "./index.html", "./manifest.json",
   "./css/base.css", "./css/app.css", "./fonts/fonts.css",

@@ -1,0 +1,31 @@
+# ── Signing secrets: NEVER commit (they live in ~/.rifqa-signing/) ──
+*.jks
+*.keystore
+*.p12
+*.pem
+signing.env
+KEYSTORE-SECRET*
+
+# ── Build outputs (publish them as GitHub Releases / Play uploads instead) ──
+dist/
+build/android/out/
+*.apk
+*.aab
+*.exe
+
+# ── Tooling caches ──
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ── OS / editor noise ──
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.bak
+*.tmp
+*~

@@ -1,0 +1,29 @@
+Rifqat al-Uswa ("in the company of the best example") is a quiet, reflective companion. Describe in your own words what you are going through — a conflict, a loss, worry, guilt, a hard decision — and the app reads it with you in the light of the Noble Quran, the Prophetic Sunnah and the Seerah.
+
+HOW IT WORKS
+• Write freely, in Arabic, English or Dutch, in as much detail as you like.
+• The app recognises the themes, feelings and relationships in what you wrote.
+• It brings you the closest situation from the life of the Prophet ﷺ and the prophets before him — what happened, how he responded, the principles behind it, and how they apply today.
+• You get the relevant verses, hadith and supplications, each with its source and grade, plus practical steps and what to avoid.
+
+WHAT'S INSIDE
+• 115 Prophetic situations and stories, 57 life topics.
+• 201 verses and passages and 149 hadith and supplications, with sources and authenticity grades.
+• A searchable library of every text the analysis relies on.
+• Read-aloud with Arabic, English and Dutch voices, and recitations of the verses by well-known reciters (internet needed for recitations).
+• Light and dark themes, adjustable font size, optional Arabic diacritics for the explanations.
+
+TRUSTWORTHY BY DESIGN
+• The app never invents verses or hadith: every text comes unchanged from its curated library.
+• The Arabic text is always shown. English meanings of the Quran: Saheeh International. Dutch meanings: Sofian S. Siregar (both via Tanzil.net). English hadith: sunnah.com translations. The Dutch hadith translations were prepared for this app from the sunnah.com English and are marked as such; the Arabic remains the reference.
+• Weak or historical reports are labelled clearly.
+
+PRIVATE AND OFFLINE
+• No account, no ads, no analytics, no tracking.
+• Everything works offline; what you write stays on your device.
+• Optional: add your own Claude (Anthropic) API key to get an extra AI-written reflection that is restricted to the retrieved texts. Only then is your text sent — directly to Anthropic, never to the developer. Every AI answer can be reported from inside the app.
+
+IMPORTANT
+Rifqat al-Uswa is a reflective guide. It does not issue fatwas and is not a substitute for a qualified scholar, doctor, therapist or lawyer. If you describe a situation involving danger, violence or thoughts of self-harm, the app points you to urgent help first.
+
+Available in العربية, English and Nederlands. Feedback is welcome: wajdi.chaouche@gmail.com

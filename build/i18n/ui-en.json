@@ -417,5 +417,11 @@
  "مفتاح Claude API": "Claude API key",
  "إلغاء": "Cancel",
  "اللغة · Language · Taal": "Language · Taal · اللغة",
- "إغلاق دون حفظ": "Close without saving"
+ "إغلاق دون حفظ": "Close without saving",
+ "الإبلاغ عن هذه الإجابة": "Report this answer",
+ "سبب البلاغ (اكتبه هنا):": "Reason for the report (write it here):",
+ "سؤالي:": "My question:",
+ "إجابة النموذج:": "The model's answer:",
+ "رِفقة الأُسوة {0} · {1}": "Rifqat al-Uswa {0} · {1}",
+ "بلاغ عن إجابة الذكاء الاصطناعي في رِفقة الأُسوة": "Report about an AI answer in Rifqat al-Uswa"
 }
