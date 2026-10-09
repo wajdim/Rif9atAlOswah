@@ -24,6 +24,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Locale;
@@ -66,7 +68,8 @@ public class MainActivity extends Activity {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
                 i.putExtra(Intent.EXTRA_TEXT, text);
-                startActivity(Intent.createChooser(i, "en".equals(ttsLang) ? "Share" : "nl".equals(ttsLang) ? "Delen" : "مشاركة"));
+                String title = "en".equals(ttsLang) ? "Share" : "nl".equals(ttsLang) ? "Delen" : "es".equals(ttsLang) ? "Compartir" : "pt".equals(ttsLang) ? "Partilhar" : "مشاركة";
+                startActivity(Intent.createChooser(i, title));
             }});
         }
         /** رسالة بريد جاهزة (ملاحظات، أو الإبلاغ عن إجابة الذكاء الاصطناعي) يراجعها المستخدم ويرسلها بنفسه. */
@@ -96,7 +99,7 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void ttsSetLang(final String lang) {
             runOnUiThread(new Runnable() { public void run() {
-                ttsLang = ("en".equals(lang) || "nl".equals(lang)) ? lang : "ar";
+                ttsLang = ("en".equals(lang) || "nl".equals(lang) || "es".equals(lang) || "pt".equals(lang)) ? lang : "ar";
                 if (tts != null && !"none".equals(ttsState) && !"init".equals(ttsState)) {
                     int r = tts.setLanguage(new Locale(ttsLang));
                     ttsState = (r == TextToSpeech.LANG_MISSING_DATA || r == TextToSpeech.LANG_NOT_SUPPORTED) ? "missing" : "ok";
@@ -146,15 +149,141 @@ public class MainActivity extends Activity {
             }});
         }
 
+        /**
+         * تنزيل أصوات النطق: شاشة تنزيل بيانات المحرك الحالي، ثم إعدادات النطق في النظام،
+         * ثم صفحة «خدمات Google للنطق» في المتجر إن لم يوجد محرك. تُحدَّث قائمة الأصوات عند العودة (onResume).
+         */
         @JavascriptInterface
         public void ttsInstall() {
             runOnUiThread(new Runnable() { public void run() {
-                try { startActivity(new Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA)); }
-                catch (Exception e) {
-                    try { startActivity(new Intent("com.android.settings.TTS_SETTINGS")); } catch (Exception ignored) {}
-                }
+                // لا يوجد محرك نطق أصلًا: صفحة «خدمات Google للنطق» في المتجر أولًا
+                if ("none".equals(ttsState) && (tryStart(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.google.android.tts"))))) return;
+                Intent i = new Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+                try { String eng = tts == null ? null : tts.getDefaultEngine(); if (eng != null) i.setPackage(eng); } catch (Exception ignored) {}
+                if (tryStart(i) || tryStart(new Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA)) || tryStart(new Intent("com.android.settings.TTS_SETTINGS"))) return;
+                if (!tryStart(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.google.android.tts"))))
+                    tryStart(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.tts")));
             }});
         }
+        /** يفتح إعدادات النطق في النظام (اختيار المحرك واللغة) */
+        @JavascriptInterface
+        public void ttsSettings() {
+            runOnUiThread(new Runnable() { public void run() { tryStart(new Intent("com.android.settings.TTS_SETTINGS")); }});
+        }
+
+        /* ---- تلاوات القراء دون إنترنت: تُنزَّل آيات التطبيق فقط إلى مساحة التطبيق الخاصة ---- */
+        /** {id: {n: عدد الملفات, b: الحجم بالبايت}} ، و"_busy" للقارئ الجاري تنزيله */
+        @JavascriptInterface
+        public String recStatus() {
+            JSONObject out = new JSONObject();
+            try {
+                File[] dirs = recRoot().listFiles();
+                if (dirs != null) for (File d : dirs) {
+                    if (!d.isDirectory()) continue;
+                    int n = 0; long b = 0; File[] fs = d.listFiles();
+                    if (fs != null) for (File f : fs) if (f.getName().endsWith(".mp3")) { n++; b += f.length(); }
+                    JSONObject o = new JSONObject(); o.put("n", n); o.put("b", b); o.put("c", new File(d, COMPLETE).exists()); out.put(d.getName(), o);
+                }
+                if (recBusy != null) out.put("_busy", recBusy);
+            } catch (Exception ignored) {}
+            return out.toString();
+        }
+        /** يبدأ تنزيل ملفات قارئ في الخلفية؛ التقدم عبر window.__rifqaRec(id, تم, الكل, الحالة) */
+        @JavascriptInterface
+        public boolean recDownload(final String id, final String filesJson) {
+            if (id == null || !id.matches(RECITER_ID) || recBusy != null) return false;
+            final java.util.List<String> files = new java.util.ArrayList<String>();
+            try { JSONArray a = new JSONArray(filesJson); for (int k = 0; k < a.length(); k++) { String f = a.getString(k); if (f.matches("\\d{6}\\.mp3")) files.add(f); } }
+            catch (Exception e) { return false; }
+            if (files.isEmpty() || files.size() > 7000) return false;
+            recBusy = id; recCancel = false;
+            new Thread(new Runnable() { public void run() { downloadReciter(id, files); } }, "rifqa-rec").start();
+            return true;
+        }
+        @JavascriptInterface
+        public void recCancel() { recCancel = true; }
+        @JavascriptInterface
+        public boolean recDelete(String id) {
+            if (id == null || !id.matches(RECITER_ID) || id.equals(recBusy)) return false;
+            File d = new File(recRoot(), id); File[] fs = d.listFiles();
+            if (fs != null) for (File f : fs) f.delete();
+            return d.delete() || !d.exists();
+        }
+        /** المساحة الحرة بالبايت */
+        @JavascriptInterface
+        public String recFree() { return String.valueOf(getFilesDir().getUsableSpace()); }
+    }
+
+    /** معرّفات مجلدات everyayah.com: حروف وأرقام و _ - . فقط */
+    static final String RECITER_ID = "[A-Za-z0-9][A-Za-z0-9_.-]{1,80}";
+    private volatile String recBusy = null;
+    private volatile boolean recCancel = false;
+
+    private File recRoot() { File r = new File(getFilesDir(), "reciters"); if (!r.exists()) r.mkdirs(); return r; }
+
+    private boolean tryStart(Intent i) {
+        try { i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); startActivity(i); return true; } catch (Exception e) { return false; }
+    }
+
+    /** ملف علامة: اكتمل التنزيل (الآيات غير الموجودة على الخادم تُتلى من الشبكة كالمعتاد) */
+    static final String COMPLETE = ".complete";
+
+    private void downloadReciter(String id, java.util.List<String> files) {
+        File dir = new File(recRoot(), id); dir.mkdirs();
+        new File(dir, COMPLETE).delete();
+        int done = 0, failed = 0, absent = 0, total = files.size(); long last = 0;
+        String state = "done";
+        for (String f : files) {
+            if (recCancel) { state = "cancelled"; break; }
+            File out = new File(dir, f);
+            if (!(out.exists() && out.length() > 0)) {
+                String url = "https://everyayah.com/data/" + id + "/" + f;
+                int r = fetchTo(url, out);
+                if (r == 0 && !recCancel) r = fetchTo(url, out);   // محاولة ثانية للأخطاء العابرة
+                if (r == -1) absent++;
+                else if (r == 0) { failed++; if (failed >= 8 && done - absent == 0) { state = "error"; break; } }
+            }
+            done++;
+            long now = System.currentTimeMillis();
+            if (now - last > 400 || done == total) { last = now; notifyRec(id, done, total, "progress"); }
+        }
+        if ("done".equals(state) && failed > 0) state = "partial";
+        if ("done".equals(state)) { try { new File(dir, COMPLETE).createNewFile(); } catch (Exception ignored) {} }
+        recBusy = null;
+        notifyRec(id, done - failed - absent, total, state);
+    }
+
+    /** 1 تم، 0 خطأ عابر (يُعاد)، -1 الملف غير موجود على الخادم (404) */
+    private int fetchTo(String url, File out) {
+        File part = new File(out.getPath() + ".part");
+        java.net.HttpURLConnection c = null;
+        try {
+            c = (java.net.HttpURLConnection) new java.net.URL(url).openConnection();
+            c.setConnectTimeout(15000); c.setReadTimeout(20000);
+            c.setRequestProperty("User-Agent", "RifqaAndroid/2.6");
+            int code = c.getResponseCode();
+            if (code == 404) return -1;
+            if (code != 200) return 0;
+            String ct = c.getContentType();
+            if (ct != null && !ct.startsWith("audio/")) return 0;
+            InputStream in = c.getInputStream(); java.io.FileOutputStream o = new java.io.FileOutputStream(part);
+            byte[] buf = new byte[16384]; int r; long n = 0;
+            try { while ((r = in.read(buf)) > 0) { if (recCancel) return 0; o.write(buf, 0, r); n += r; } }
+            finally { o.close(); in.close(); }
+            return n > 512 && part.renameTo(out) ? 1 : 0;
+        } catch (Exception e) {
+            return 0;
+        } finally {
+            if (c != null) c.disconnect();
+            if (part.exists()) part.delete();
+        }
+    }
+
+    private void notifyRec(final String id, final int done, final int total, final String state) {
+        final String safe = id.replaceAll("[^A-Za-z0-9_.-]", "");
+        runOnUiThread(new Runnable() { public void run() {
+            if (web != null) web.evaluateJavascript("window.__rifqaRec&&window.__rifqaRec('" + safe + "'," + done + "," + total + ",'" + state + "')", null);
+        }});
     }
 
     private void speakNow(String id, String text, float rate, float pitch, String voiceName) {
@@ -203,6 +332,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // نسخة الاختبار فقط (RIFQA_DEBUG=1 تجعل الحزمة debuggable): فحص الصفحة عبر chrome://inspect
+        if ((getApplicationInfo().flags & android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0) WebView.setWebContentsDebuggingEnabled(true);
         web = new WebView(this);
         web.setBackgroundColor(0xFFF7F2E4);
         FrameLayout root = new FrameLayout(this);
@@ -222,7 +353,7 @@ public class MainActivity extends Activity {
         if (Build.VERSION.SDK_INT >= 26) s.setSafeBrowsingEnabled(true);
         s.setMediaPlaybackRequiresUserGesture(false);   // تلاوة الآية التالية تبدأ تلقائيًا بعد التمهيد
         s.setTextZoom(100);
-        s.setUserAgentString(s.getUserAgentString() + " RifqaAndroid/2.5");
+        s.setUserAgentString(s.getUserAgentString() + " RifqaAndroid/2.6");
 
         initTts();
         web.addJavascriptInterface(new Bridge(), "AndroidBridge");
@@ -297,6 +428,7 @@ public class MainActivity extends Activity {
     private WebResourceResponse serveAsset(Uri u) {
         if (u == null || !ASSET_HOST.equals(u.getHost())) return null;
         String path = u.getPath() == null ? "" : u.getPath();
+        if (path.startsWith("/rec/")) return serveRecitation(path);
         if (!path.startsWith("/assets/") || path.contains("..")) return notFound();
         String rel = path.substring("/assets/".length());
         String ext = rel.lastIndexOf('.') >= 0 ? rel.substring(rel.lastIndexOf('.') + 1).toLowerCase(Locale.ROOT) : "";
@@ -312,6 +444,39 @@ public class MainActivity extends Activity {
             return r;
         } catch (Exception e) {
             return notFound();
+        }
+    }
+
+    /** /rec/<قارئ>/<ملف>.mp3 من مساحة التطبيق الخاصة (تلاوات نُزّلت مسبقًا) */
+    private WebResourceResponse serveRecitation(String path) {
+        String[] p = path.split("/");   // "", "rec", id, file
+        if (p.length != 4 || !p[2].matches(RECITER_ID) || !p[3].matches("\\d{6}\\.mp3")) return notFound();
+        File f = new File(new File(recRoot(), p[2]), p[3]);
+        if (!f.isFile()) return notFound();
+        try {
+            WebResourceResponse r = new WebResourceResponse("audio/mpeg", null, new FileInputStream(f));
+            Map<String, String> h = new HashMap<String, String>();
+            h.put("Content-Length", String.valueOf(f.length()));
+            h.put("Cache-Control", "no-cache");
+            r.setResponseHeaders(h);
+            return r;
+        } catch (Exception e) { return notFound(); }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // عائد من تنزيل الأصوات أو من إعدادات النطق: نعيد ضبط اللغة ونحدّث قائمة الأصوات
+        if ("none".equals(ttsState)) {   // ربما ثُبّت محرك نطق للتو
+            try { if (tts != null) tts.shutdown(); } catch (Exception ignored) {}
+            ttsState = "init"; initTts(); return;
+        }
+        if (tts != null && !"none".equals(ttsState) && !"init".equals(ttsState)) {
+            try {
+                int r = tts.setLanguage(new Locale(ttsLang));
+                ttsState = (r == TextToSpeech.LANG_MISSING_DATA || r == TextToSpeech.LANG_NOT_SUPPORTED) ? "missing" : "ok";
+            } catch (Exception ignored) {}
+            notifyJs("0", "voices");
         }
     }
 

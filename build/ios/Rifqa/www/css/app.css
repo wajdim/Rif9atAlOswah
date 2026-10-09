@@ -195,6 +195,12 @@ details.why code{font-family:inherit; background:var(--surface); border:1px soli
 .set-group input,.set-group select{width:100%; border:1px solid var(--border); background:var(--surface-2); color:var(--ink); border-radius:10px; padding:10px 12px; font-family:inherit; font-size:.88rem; outline:none; direction:ltr; text-align:left;}
 .set-group select{direction:rtl; text-align:right;}
 .set-hint{font-size:.74rem; color:var(--muted); margin-top:5px; line-height:1.8;}
+.rec-off{margin-top:10px; padding:10px 12px; border:1px solid var(--border); border-radius:12px; background:var(--gold-wash);}
+.rec-off-t{font-weight:700; font-size:.8rem; color:var(--pine); margin-bottom:4px;}
+.rec-row{display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; font-size:.78rem; margin-top:6px;}
+.rec-bar{height:6px; border-radius:99px; background:var(--border); overflow:hidden; margin-top:6px;}
+.rec-bar span{display:block; height:100%; background:var(--gold); transition:width .3s;}
+.rec-off button[disabled]{opacity:.5; cursor:default;}
 .seg{display:flex; gap:6px;}
 .seg button{flex:1; border:1px solid var(--border); background:var(--surface); color:var(--ink-soft); border-radius:10px; padding:8px; font-family:inherit; font-size:.82rem; cursor:pointer;}
 .seg button.active{background:var(--pine); color:var(--surface); border-color:var(--pine);}

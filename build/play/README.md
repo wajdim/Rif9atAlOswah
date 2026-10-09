@@ -5,9 +5,9 @@ Everything needed for the Play Console is in this folder. This guide walks throu
 | | |
 |---|---|
 | Package name | `com.rifqa.aluswa` (permanent; cannot change after the first upload) |
-| Version | 2.5.0 (version code 9) |
+| Version | 2.6.0 (version code 10) |
 | Target / min SDK | 36 (Android 16) / 24 (Android 7.0) |
-| Upload file | `build/android/out/RifqaAlUswa-2.5.0.aab` |
+| Upload file | `build/android/out/RifqaAlUswa-2.6.0.aab` |
 | Privacy policy | https://wajdim.github.io/Rif9atAlOswah/privacy.html |
 | Support email | wajdi.chaouche@gmail.com |
 
@@ -33,8 +33,8 @@ TOOLS=/path/to/tools bash build/android/build-android.sh
 ```
 
 This produces two files:
-- **`RifqaAlUswa-2.5.0.aab`**, which you upload to Play.
-- **`RifqaAlUswa-2.5.0.apk`**, for installing directly (sideloading).
+- **`RifqaAlUswa-2.6.0.aab`**, which you upload to Play.
+- **`RifqaAlUswa-2.6.0.apk`**, for installing directly (sideloading).
 
 Before every release, bump `VERSION_NAME`/`VERSION_CODE` in `build-android.sh`, and `APP_VERSION` in `js/app.js`.
 
@@ -42,8 +42,8 @@ To regenerate the store graphics, run `npm i -D playwright`, then serve the proj
 
 ```bash
 node build/play/gen-icons.js            # launcher icons (all densities, adaptive, themed) + 512px store icon
-node build/play/gen-feature-graphic.js  # 1024×500 feature graphic ×3 languages
-node build/play/gen-screenshots.js      # 7 phone screenshots ×3 languages (1080×1920)
+node build/play/gen-feature-graphic.js  # 1024×500 feature graphic ×5 languages
+node build/play/gen-screenshots.js      # 7 phone screenshots ×5 languages (1080×1920)
 python build/play/listing-text.py       # listing texts + length check
 ```
 
@@ -58,7 +58,7 @@ In Play Console, choose **Create app**:
 
 ## 4. Store listing (Grow → Store presence → Main store listing)
 
-Add translations for **ar**, **en-US** and **nl-NL**, then copy each one from `listing/<locale>/`:
+Add translations for **ar**, **en-US**, **nl-NL**, **es-ES** and **pt-PT**, then copy each one from `listing/<locale>/`:
 
 | Field | File |
 |---|---|
@@ -68,7 +68,7 @@ Add translations for **ar**, **en-US** and **nl-NL**, then copy each one from `l
 | App icon 512×512 | `images/icon.png` |
 | Feature graphic 1024×500 | `images/featureGraphic.png` |
 | Phone screenshots (2–8) | `images/phoneScreenshots/*.png` |
-| Release notes | `changelogs/9.txt` |
+| Release notes | `changelogs/10.txt` |
 
 - **Category:** Books & Reference. Alternatives are Education or Lifestyle.
 - **Tags:** Religion, Reference, Self-help.

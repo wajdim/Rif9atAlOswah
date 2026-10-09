@@ -9,7 +9,7 @@
 function qs(id){ return document.getElementById(id); }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
 function toast(msg,ms){ var t=qs("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("show");},ms||2200); }
-var APP_VERSION="2.5.0";
+var APP_VERSION="2.6.0";
 var EN=I18N.en;
 function store(key, val){ try{ if(val===undefined) return JSON.parse(localStorage.getItem(key)||"null"); localStorage.setItem(key, JSON.stringify(val)); }catch(e){ return null; } }
 function iconSvg(k){ return '<svg viewBox="0 0 24 24">'+(ICONS[k]||ICONS.star)+'</svg>'; }
@@ -130,9 +130,9 @@ function renderHome(){
 }
 
 /* ---------------- التنبيهات الحساسة ---------------- */
-var SELF_HARM=["افكار انتحاريه","انتحار","انتحر","اذي نفسي","اؤذي نفسي","اريد ان اموت","اريد الموت","لا اريد ان اعيش","اقتل نفسي","انهي حياتي","ان انهي حياتي","نقتل روحي","نحب نموت","ما نحبش نعيش","حابب اموت","بدي موت","الموت ارحم","جرح نفسي","اجرح نفسي","suicide","suicidal","kill myself","end my life","want to die","wish i was dead","wish i were dead","hurt myself","harm myself","self harm","cut myself","no reason to live","me suicider","zelfmoord","suicidaal","mezelf van kant maken","mezelf iets aandoen","ik wil dood","ik wil sterven","wil niet meer leven","een eind aan mijn leven","mezelf pijn doen","zelfbeschadiging","mezelf snijden"];
-var LEGAL=["طلاق","ميراث","ارث","الورث","حد شرعي","ربا","محامي","قضيه","محكمه","نفقه","خلع","حضانه","فتوي","عقد","divorce","inheritance","custody","lawyer","court case","lawsuit","alimony","fatwa","khula","riba","usury","scheiding","echtscheiding","erfenis","voogdij","advocaat","rechtszaak","rechtbank","alimentatie","rente"];
-var VIOLENCE=["عنف","يضربني","تضربني","ضربني","ضربتني","تعنيف","اعتداء","اغتصاب","تحرش","يهددني بالقتل","abuse","abusive","hits me","beats me","beat me","hit me","violence","violent","rape","assault","harass","threatens to kill","threatened to kill","mishandeling","mishandelt","slaat me","sloeg me","geweld","verkrachting","aanranding","intimidatie","bedreigt me","dreigt me te vermoorden"];
+var SELF_HARM=["افكار انتحاريه","انتحار","انتحر","اذي نفسي","اؤذي نفسي","اريد ان اموت","اريد الموت","لا اريد ان اعيش","اقتل نفسي","انهي حياتي","ان انهي حياتي","نقتل روحي","نحب نموت","ما نحبش نعيش","حابب اموت","بدي موت","الموت ارحم","جرح نفسي","اجرح نفسي","suicide","suicidal","kill myself","end my life","want to die","wish i was dead","wish i were dead","hurt myself","harm myself","self harm","cut myself","no reason to live","me suicider","zelfmoord","suicidaal","mezelf van kant maken","mezelf iets aandoen","ik wil dood","ik wil sterven","wil niet meer leven","een eind aan mijn leven","mezelf pijn doen","zelfbeschadiging","mezelf snijden","suicidio","suicidarme","quiero morir","matarme","quitarme la vida","acabar con mi vida","no quiero vivir","hacerme daño","autolesión","cortarme","suicídio","suicidar-me","quero morrer","matar-me","tirar a minha vida","acabar com a minha vida","não quero viver","magoar-me","automutilação","cortar-me"];
+var LEGAL=["طلاق","ميراث","ارث","الورث","حد شرعي","ربا","محامي","قضيه","محكمه","نفقه","خلع","حضانه","فتوي","عقد","divorce","inheritance","custody","lawyer","court case","lawsuit","alimony","fatwa","khula","riba","usury","scheiding","echtscheiding","erfenis","voogdij","advocaat","rechtszaak","rechtbank","alimentatie","rente","divorcio","herencia","custodia","abogado","juicio","pensión alimenticia","usura","herança","guarda dos filhos","advogado","tribunal","processo judicial","pensão de alimentos"];
+var VIOLENCE=["عنف","يضربني","تضربني","ضربني","ضربتني","تعنيف","اعتداء","اغتصاب","تحرش","يهددني بالقتل","abuse","abusive","hits me","beats me","beat me","hit me","violence","violent","rape","assault","harass","threatens to kill","threatened to kill","mishandeling","mishandelt","slaat me","sloeg me","geweld","verkrachting","aanranding","intimidatie","bedreigt me","dreigt me te vermoorden","maltrato","me pega","me golpea","violencia","violación","agresión","acoso","amenaza con matarme","violência","me bate","bate-me","agressão","violação","assédio","ameaça matar-me","ameaça me matar"];
 function checkFlags(text){
   var n=" "+RAG.normalize(text)+" ";
   function hit(list){ return list.some(function(k){ var nk=RAG.normalize(k); return /[a-z]/.test(nk) ? n.indexOf(" "+nk)>-1 : n.indexOf(nk)>-1; }); }
@@ -679,7 +679,7 @@ function ttsControl(cmd){
     var s=TTS.status(); if(s.state!=="idle") qs("ttsRate").textContent=prefs.rate+"×";
   }
 }
-function reciterName(){ var r=TTS.RECITERS.filter(function(x){return x.id===TTS_CFG().reciter;})[0]; return r?T(r.name):""; }
+function reciterName(){ return TTS.reciterLabel(TTS_CFG().reciter); }
 function TTS_CFG(){ return {voice1:prefs.voice1||"", voice2:prefs.voice2||"", reciter:prefs.reciter===undefined?"Husary_128kbps":prefs.reciter}; }
 /** إعادة رسم الشاشة الحالية (بعد تغيير التشكيل) */
 var lastThemeId=null;
@@ -791,10 +791,12 @@ function previewDraft(){
   if(!EN && TashkeelView.available() && TashkeelView.enabled()!==draft.tk) TashkeelView.set(draft.tk);
 }
 // اسم اللغة والصوت الرجالي في ويندوز لكل لغة (لتلميح تثبيت الأصوات)
-var VOICE_HELP={ar:["عربي","العربية","نايف"], en:["English","English","David"], nl:["Nederlandse","Nederlands","Frank"]}[I18N.lang];
+var VOICE_HELP={ar:["عربي","العربية","نايف"], en:["English","English","David"], nl:["Nederlandse","Nederlands","Frank"], es:["español","Español","Pablo"], pt:["português","Português","Duarte"]}[I18N.lang];
 function renderVoiceSettings(){
   var c=draftCfg();
-  qs("ttsReciter").innerHTML=TTS.RECITERS.map(function(r){ return '<option value="'+esc(r.id)+'"'+(r.id===c.reciter?" selected":"")+'>'+esc(T(r.name))+'</option>'; }).join("");
+  var offOk=TTS.offline.supported, have=offOk?TTS.offline.downloaded():[];
+  qs("ttsReciter").innerHTML=TTS.RECITERS.map(function(r){ return '<option value="'+esc(r.id)+'"'+(r.id===c.reciter?" selected":"")+'>'+esc(r.id?TTS.reciterLabel(r.id):T(r.name))+(have.indexOf(r.id)>-1?" ✓":"")+'</option>'; }).join("");
+  renderRecOffline();
   var vs=TTS.voices(), g={m:T("رجالي"),f:T("نسائي"),"?":""};
   var hasM=vs.some(function(v){return v.g==="m";}), hasF=vs.some(function(v){return v.g==="f";});
   draftVoiceCount=vs.length;
@@ -807,7 +809,7 @@ function renderVoiceSettings(){
     return o;
   }
   qs("ttsVoice1").innerHTML=opts(1,c.voice1); qs("ttsVoice2").innerHTML=opts(2,c.voice2);
-  var install=TTS.native?' <button class="mini-btn" data-act="tts-install">'+T("تثبيت أصوات إضافية")+'</button>':"";
+  var install=TTS.native?' <button class="mini-btn" data-act="tts-install">'+T("تثبيت أصوات إضافية")+'</button> <button class="mini-btn" data-act="tts-settings">'+T("إعدادات النطق في الجهاز")+'</button>':"";
   var hint="";
   if(!vs.length) hint=TTS.native?esc(T("لم يُعثر على أصوات لهذه اللغة بعد."))+install
     :esc(T("لا يوجد صوت {0} مثبّت. في ويندوز: الإعدادات ← الوقت واللغة ← اللغة والمنطقة ← أضف «{1}» مع ميزة «الكلام» ثم أعد تشغيل التطبيق (يوفّر ويندوز صوت «{2}» الرجالي).",VOICE_HELP[0],VOICE_HELP[1],VOICE_HELP[2]));
@@ -815,6 +817,39 @@ function renderVoiceSettings(){
   else hint=esc(T("الأصوات الرجالية في أول القائمة."))+install;
   qs("voiceHint").innerHTML=hint;
 }
+/* تنزيل تلاوات القارئ المختار للاستماع دون إنترنت (تطبيق أندرويد) */
+function fmtMB(b){ return Math.max(1,Math.round(b/1048576)); }
+function renderRecOffline(){
+  var box=qs("recOffline"); if(!box) return;
+  var id=draft?draft.reciter:TTS_CFG().reciter;
+  if(!TTS.offline.supported || !id){ box.hidden=true; return; }
+  var st=TTS.offline.status(id), total=TTS.offline.files(), h='<div class="rec-off-t">'+T("الاستماع دون إنترنت")+'</div>';
+  if(st.busy){
+    var pr=st.progress||{done:st.n,total:total}, pc=pr.total?Math.round(100*pr.done/pr.total):0;
+    h+='<div class="rec-bar"><span style="width:'+pc+'%"></span></div><div class="rec-row"><span>'+esc(T("جارٍ التنزيل… {0} من {1}",pr.done,pr.total))+'</span><button class="mini-btn" data-act="rec-cancel">'+T("إيقاف")+'</button></div>';
+  } else if(st.ready){
+    h+='<div class="rec-row"><span>✓ '+esc(T("منزَّل للاستماع دون إنترنت ({0} ميغابايت)",fmtMB(st.b)))+'</span><button class="mini-btn" data-act="rec-delete">'+T("حذف")+'</button></div>';
+  } else {
+    var other=st.any && !st.busy;
+    h+='<div class="set-hint">'+esc(st.n>0?T("منزَّل جزئيًا ({0} من {1}).",st.n,total):T("نزّل تلاوات هذا القارئ ({0} آية، نحو {1} ميغابايت) لتسمعها دون اتصال.",total,TTS.offline.estimateMB(id)))+'</div>'+
+       '<div class="rec-row"><button class="btn-ghost sm" data-act="rec-download"'+(other?" disabled":"")+'>'+T(st.n>0?"إكمال التنزيل":"تنزيل")+'</button>'+(st.n>0?'<button class="mini-btn" data-act="rec-delete">'+T("حذف")+'</button>':"")+'</div>';
+    if(other) h+='<div class="set-hint">'+esc(T("يجري تنزيل قارئ آخر؛ انتظر حتى ينتهي."))+'</div>';
+  }
+  box.innerHTML=h; box.hidden=false;
+}
+function recDownload(){
+  var id=draft?draft.reciter:TTS_CFG().reciter; if(!id){ toast(T("اختر قارئًا أولًا")); return; }
+  var free=TTS.offline.freeMB();
+  if(free>=0 && free<TTS.offline.estimateMB(id)+50){ toast(T("مساحة التخزين غير كافية")); return; }
+  if(!TTS.offline.download(id)) toast(T("تعذّر بدء التنزيل"));
+  renderRecOffline();
+}
+if(TTS.offline.supported) TTS.offline.onChange(function(ev){
+  if(ev.state==="done") toast(T("اكتمل التنزيل: {0}",TTS.reciterLabel(ev.id)));
+  else if(ev.state==="partial"||ev.state==="error") toast(T("تعذّر تنزيل بعض الآيات؛ تحقق من الاتصال ثم أعد المحاولة"));
+  else if(ev.state==="cancelled") toast(T("أُوقف التنزيل"));
+  if(draft && !qs("settingsModal").hidden){ if(ev.state==="progress") renderRecOffline(); else renderVoiceSettings(); }
+});
 function renderSettingsSegs(){
   function mark(id,val){ document.querySelectorAll("#"+id+" button").forEach(function(b){ b.classList.toggle("active", String(b.getAttribute("data-v"))===String(val)); }); }
   mark("segLang",draft.lang); mark("segTheme",draft.theme); mark("segFs",draft.fs); mark("segRate",draft.rate); mark("segTk",draft.tk?"1":"0");
@@ -906,6 +941,10 @@ document.addEventListener("click",function(e){
   else if(act==="fb-copy") copyText(feedbackText(feedback));
   else if(act==="fb-del"){ var k2=el.getAttribute("data-key"); feedback=feedback.filter(function(f){return f.key!==k2;}); store("rifqa.feedback",feedback); renderSaved(); toast(T("حُذف التقييم")); }
   else if(act==="tts-install") TTS.installVoice();
+  else if(act==="tts-settings") TTS.voiceSettings();
+  else if(act==="rec-download") recDownload();
+  else if(act==="rec-cancel") TTS.offline.cancel();
+  else if(act==="rec-delete"){ var rid=draft?draft.reciter:TTS_CFG().reciter; if(TTS.offline.remove(rid)){ toast(T("حُذفت تلاوات القارئ من الجهاز")); renderVoiceSettings(); } }
   else if(act==="preview-voice"){ TTS.unlock(); TTS.preview(+el.getAttribute("data-role")); }
   else if(act==="preview-reciter"){ if(TTS.previewRecitation()===false) toast(T("اخترت القراءة بدون تلاوة")); }
   else if(act==="start-ai") startAI();

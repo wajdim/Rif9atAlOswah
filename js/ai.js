@@ -68,22 +68,28 @@ var AI = (function(){
     "Always end with the line: \"This is a guiding reflection, not a fatwa.\"",
   ].join("\n");
 
-  // الهولندية: القواعد نفسها، مع لغة الإجابة وعناوينها بالهولندية
-  var SYSTEM_NL=SYSTEM_EN
-    .replace("(the Arabic text and the English meaning given)","(the Arabic text and the Dutch meaning given)")
-    .replace("Style: clear, warm English,","Style: clear, warm Dutch (Nederlands),")
-    .replace("## A deeper understanding of your situation","## Een dieper begrip van je situatie")
-    .replace("## What revelation says about a situation like this","## Wat de openbaring zegt over zo'n situatie")
-    .replace("## The fine balances","## Het fijne evenwicht")
-    .replace("## Practical steps for you","## Praktische stappen voor jou")
-    .replace("## A final word","## Een laatste woord")
-    .replace("Always end with the line: \"This is a guiding reflection, not a fatwa.\"","Always end with the line: \"Dit is een begeleidende overdenking, geen fatwa.\" Write everything in Dutch.");
+  // اللغات الأوروبية الأخرى: القواعد نفسها، مع لغة الإجابة وعناوين أقسامها وسطر الختام بلغة المستخدم
+  var LOC={
+    nl:{name:"Dutch (Nederlands)", short:"Dutch", h:["Een dieper begrip van je situatie","Wat de openbaring zegt over zo'n situatie","Het fijne evenwicht","Praktische stappen voor jou","Een laatste woord"], end:"Dit is een begeleidende overdenking, geen fatwa."},
+    es:{name:"Spanish (español)", short:"Spanish", h:["Una comprensión más profunda de tu situación","Lo que dice la revelación sobre una situación así","Los equilibrios sutiles","Pasos prácticos para ti","Una última palabra"], end:"Esta es una reflexión orientativa, no una fetua."},
+    pt:{name:"European Portuguese (português de Portugal)", short:"Portuguese", h:["Uma compreensão mais profunda da tua situação","O que a revelação diz sobre uma situação assim","Os equilíbrios subtis","Passos práticos para ti","Uma última palavra"], end:"Esta é uma reflexão orientadora, não uma fatwa."}
+  };
+  function systemFor(l){
+    var c=LOC[l]; if(!c) return SYSTEM_EN;
+    return SYSTEM_EN
+      .replace("(the Arabic text and the English meaning given)","(the Arabic text and the "+c.short+" meaning given)")
+      .replace("Style: clear, warm English,","Style: clear, warm "+c.name+",")
+      .replace("## A deeper understanding of your situation","## "+c.h[0])
+      .replace("## What revelation says about a situation like this","## "+c.h[1])
+      .replace("## The fine balances","## "+c.h[2])
+      .replace("## Practical steps for you","## "+c.h[3])
+      .replace("## A final word","## "+c.h[4])
+      .replace("Always end with the line: \"This is a guiding reflection, not a fatwa.\"","Always end with the line: \""+c.end+"\" Write everything in "+c.short+".");
+  }
 
   function buildUserTurn(analysis){
-    if(window.I18N && I18N.nl) return "## The user's situation (in their own words)\n«"+analysis.input+"»\n\n# Passages retrieved from the verified library\n"+RAG.contextFor(analysis)+
-      "\n\nAnalyse their situation in depth according to the rules and structure above, citing the codes. Answer in Dutch (Nederlands).";
     if(window.I18N && I18N.en) return "## The user's situation (in their own words)\n«"+analysis.input+"»\n\n# Passages retrieved from the verified library\n"+RAG.contextFor(analysis)+
-      "\n\nAnalyse their situation in depth according to the rules and structure above, citing the codes. Answer in English.";
+      "\n\nAnalyse their situation in depth according to the rules and structure above, citing the codes. Answer in "+(LOC[I18N.lang]?LOC[I18N.lang].name:"English")+".";
     return "## موقف المستخدم (بكلماته)\n«"+analysis.input+"»\n\n# المقاطع المسترجعة من المكتبة الموثقة\n"+RAG.contextFor(analysis)+
       "\n\nحلّل موقفه تحليلًا عميقًا وفق القواعد والبنية المحددة، مستشهدًا بالرموز.";
   }
@@ -99,7 +105,7 @@ var AI = (function(){
       "anthropic-version":"2023-06-01",
       "anthropic-dangerous-direct-browser-access":"true"
     };
-    var body={model:s.model, max_tokens:8000, stream:true, system:(window.I18N && I18N.nl)?SYSTEM_NL:(window.I18N && I18N.en)?SYSTEM_EN:SYSTEM, messages:messages};
+    var body={model:s.model, max_tokens:8000, stream:true, system:(window.I18N && I18N.en)?systemFor(I18N.lang):SYSTEM, messages:messages};
     if(s.model==="claude-opus-5"){
       // إعادة توجيه تلقائية لنموذج بديل إن رُفض الطلب لأسباب تتعلق بالسياسة
       headers["anthropic-beta"]="server-side-fallback-2026-07-01";

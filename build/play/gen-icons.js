@@ -36,7 +36,7 @@ const BG = [31, 46, 40], GOLD = [201, 161, 92];
     save(path.join(dir, "ic_launcher_monochrome.png"), await render(square, Math.round(108 * k), "mono"));    // 13+
   }
   const storeIcon = await render(square, 512);                                                               // متجر Play
-  for (const loc of ["ar", "en-US", "nl-NL"]) save(path.join(__dirname, "listing", loc, "images/icon.png"), storeIcon);
+  for (const loc of ["ar", "en-US", "nl-NL", "es-ES", "pt-PT"]) save(path.join(__dirname, "listing", loc, "images/icon.png"), storeIcon);
   console.log("✓ icons");
   await b.close();
 })().catch(e => { console.error(e); process.exit(1); });

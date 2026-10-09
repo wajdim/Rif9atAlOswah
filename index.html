@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self' https://api.anthropic.com; media-src 'self' data: https://everyayah.com; manifest-src 'self'; worker-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self' https://api.anthropic.com; media-src 'self' data: blob: https://everyayah.com; manifest-src 'self'; worker-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>رِفقة الأُسوة</title>
 <meta name="description" content="تطبيق تأملي يحلل موقفك ويربطه بالقرآن الكريم والسنة النبوية والسيرة بمصادر موثقة ودرجات أحاديث واضحة.">
@@ -20,7 +20,7 @@
 <script>
 /* تطبيق اللغة والوضع وحجم الخط قبل الرسم لتجنب الوميض */
 (function(){try{var p=JSON.parse(localStorage.getItem("rifqa.prefs")||"{}"),d=document.documentElement;
-if(p.lang==="en"||p.lang==="nl"){d.setAttribute("lang",p.lang);d.setAttribute("dir","ltr");}
+if(/^(en|nl|es|pt)$/.test(p.lang)){d.setAttribute("lang",p.lang);d.setAttribute("dir","ltr");}
 if(p.theme&&p.theme!=="auto")d.setAttribute("data-theme",p.theme);
 if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
 </script>
@@ -31,7 +31,7 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
   <header class="topbar">
     <button class="brand-mini" id="btnHome" aria-label="الصفحة الرئيسية">رِفقة الأُسوة</button>
     <nav class="topnav" aria-label="التنقل">
-      <button class="icon-btn" data-act="lang-menu" id="btnLang" title="اللغة · Language · Taal" aria-label="اللغة · Language · Taal" aria-haspopup="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></button>
+      <button class="icon-btn" data-act="lang-menu" id="btnLang" title="اللغة · Language · Taal · Idioma" aria-label="اللغة · Language · Taal · Idioma" aria-haspopup="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></button>
       <button class="icon-btn" data-nav="explore" title="الموضوعات" aria-label="الموضوعات">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M14.5 9.5l-2 5-5 2 2-5z"></path></svg>
       </button>
@@ -149,6 +149,8 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
     <button data-setlang="ar" lang="ar" role="menuitem">العربية</button>
     <button data-setlang="en" lang="en" role="menuitem">English</button>
     <button data-setlang="nl" lang="nl" role="menuitem">Nederlands</button>
+    <button data-setlang="es" lang="es" role="menuitem">Español</button>
+    <button data-setlang="pt" lang="pt" role="menuitem">Português</button>
   </div>
 
   <div class="detail-panel" id="detailPanel" role="dialog" aria-modal="true"></div>
@@ -177,8 +179,8 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
         <section class="set-sec">
           <h4><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg><span>اللغة والعرض</span></h4>
           <div class="set-group">
-            <label>اللغة / Language / Taal</label>
-            <div class="seg" id="segLang"><button data-v="ar" lang="ar">العربية</button><button data-v="en" lang="en">English</button><button data-v="nl" lang="nl">Nederlands</button></div>
+            <label>اللغة / Language / Taal / Idioma</label>
+            <div class="seg" id="segLang"><button data-v="ar" lang="ar">العربية</button><button data-v="en" lang="en">English</button><button data-v="nl" lang="nl">Nederlands</button><button data-v="es" lang="es">Español</button><button data-v="pt" lang="pt">Português</button></div>
           </div>
           <div class="set-group">
             <label>المظهر</label>
@@ -212,6 +214,7 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
             <label>تلاوة الآيات بصوت القارئ</label>
             <div class="row-pick"><select id="ttsReciter"></select><button class="btn-ghost sm" data-act="preview-reciter">استماع</button></div>
             <div class="set-hint">تُتلى الآيات بتسجيلات حقيقية لكبار القراء ضبطًا وتجويدًا (تحتاج اتصالًا بالإنترنت). بدون اتصال يقرؤها صوت الشيخ من النص.</div>
+            <div class="rec-off" id="recOffline" hidden></div>
           </div>
         </section>
 
@@ -261,8 +264,9 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
 <script src="js/data-themes.js"></script>
 <script src="js/data-tashkeel.js"></script>
 <script src="js/data-tashkeel-prose.js"></script>
-<script src="js/data-en.js"></script>
-<script src="js/data-nl.js"></script>
+<!-- i18n-data: ملف ترجمة اللغة الحالية فقط (bundle-html.js يضمّن كل اللغات ويشغّل الحالية) -->
+<script>(function(){var l=document.documentElement.lang;if(/^(en|nl|es|pt)$/.test(l))document.write('<script src="js/data-'+l+'.js"><\/script>');})();</script>
+<!-- /i18n-data -->
 <script src="js/i18n.js"></script>
 <script src="js/icons.js"></script>
 <script src="js/rag.js"></script>

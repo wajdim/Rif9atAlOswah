@@ -42,6 +42,18 @@ var RAG = (function(){
     "hij zij ze hem haar hun wij we ons onze jij je jou jouw u uw er hier daar op voor met uit door als aan om tot bij naar over " +
     "na toen wanneer wat wie welke waarom hoe maar dan al ook nog wel niet geen nooit zo zeer erg heel veel meer meest alle alles " +
     "iets niets kan kon zou zouden moet moeten mag mogen wil willen zal zullen gaat gaan doe doet deed").split(" "));
+  // الإسبانية والبرتغالية: تُضاف فقط في تلك الواجهتين («sin» و«son» كلمتان مهمتان في الإنجليزية)
+  if(window.I18N && (I18N.lang==="es" || I18N.lang==="pt")) (
+    // español (sin tildes: normalize las quita)
+    "el la los las un una unos unas y o u de del al a en con por para sin sobre entre que como cuando donde quien cual cuales porque pero si " +
+    "no ni ya muy mas menos tan tambien solo yo tu el ella nosotros nosotras ellos ellas usted ustedes me te se nos os le les lo mi mis tu tus su sus " +
+    "nuestro nuestra este esta esto estos estas ese esa eso esos esas aquel es son era eran fue fueron ser estar estoy estas esta estamos estan " +
+    "he ha han hemos habia hay tengo tiene tienen tenia hace hago puedo puede pueden quiero quiere todo toda todos todas algo nada mucho mucha muchos " +
+    // português (sem acentos)
+    "o os as um uma uns umas e ou do da dos das ao aos na nas no nos em com por pelo pela para sem sobre entre que como quando onde quem qual quais " +
+    "porque mas se nao ja muito mais menos tao tambem so eu ele ela nos eles elas voce voces me te lhe lhes meu minha meus minhas teu tua seu sua " +
+    "seus suas nosso nossa isto isso aquilo este esse aquele sou somos sao era eram foi foram ser estar estou estamos estao tenho tem temos tinha " +
+    "posso pode podem quero quer tudo toda todos todas algo nada muita muitos muitas").split(" ").forEach(function(w){ STOP.add(w); });
 
   var PREFIXES = ["وبال","وال","بال","كال","فال","لل","ال","وب","ول","وس","فس","و","ف","ب","ك","ل","س"];
   var SUFFIXES = ["تموها","كموها","هما","كما","تما","تان","تين","ونا","ون","ين","ان","ات","ها","هم","هن","كم","كن","نا","ني","وا","يه","يا","ته","تي","ه","ي","ك","ت"];
@@ -74,10 +86,18 @@ var RAG = (function(){
     if(/([bcdfgklmnprst])\1$/.test(w)) w=w.slice(0,-1);
     return w.replace(/v$/,"f").replace(/z$/,"s");
   }
-  var NL_STEM=!!(window.I18N && I18N.nl);
+  /* تجذيع إسباني/برتغالي خفيف (بلا حركات): الجمع والتأنيث والنهايات الشائعة (amigas ← amig، tristeza ← trist) */
+  function stemRom(w){
+    if(w.length<=4 || /[0-9]/.test(w)) return w;
+    var S=["amente","mente","aciones","acoes","acion","acao","idades","idade","idad","ismos","ismo","ezas","eza","encias","encia","ancias","ancia",
+           "ndose","ndo","aram","eram","aban","avam","ados","adas","idos","idas","ado","ada","ido","ida","ar","er","ir","es","as","os","s","a","o","e"];
+    for(var i=0;i<S.length;i++){ var x=S[i]; if(w.length-x.length>=3 && w.slice(-x.length)===x){ w=w.slice(0,-x.length); break; } }
+    return w.replace(/(qu|gu)$/,function(m){ return m.charAt(0)==="q"?"c":"g"; });
+  }
+  var STEM_LANG=(window.I18N && I18N.lang) || "en";
   function stem(w){
     if(!w) return w;
-    if(/[a-z]/.test(w)) return NL_STEM?stemNl(w):stemEn(w);
+    if(/[a-z]/.test(w)) return STEM_LANG==="nl"?stemNl(w):(STEM_LANG==="es"||STEM_LANG==="pt")?stemRom(w):stemEn(w);
     if(w.length<=3 || /[0-9]/.test(w)) return w;
     var s=w, i;
     for(i=0;i<PREFIXES.length;i++){
@@ -231,7 +251,7 @@ var RAG = (function(){
     var norm=normalize(raw), userWords=words(norm), qStems=stems(raw);
     var themes=detectThemes(norm, userWords, qStems);
     // عند إشارات إيذاء النفس: موضوع «اليأس» أولًا دائمًا، ويُستبعد «الخوف من الموت» حتى لا يُساء الفهم
-    var crisis=/(اموت|الموت ارحم|انتحار|انتحر|انهي حياتي|اقتل نفسي|نقتل روحي|ان اعيش|اذي نفسي|اؤذي نفسي|suicid|kill myself|end my life|want to die|wish i (was|were) dead|hurt myself|harm myself|self harm|no reason to live|zelfmoord|mezelf (van kant|iets aan)|dood wil|wil (dood|sterven)|niet meer (leven|verder)|wou dat ik dood|mezelf pijn|zelfbeschadiging|een eind aan mijn leven)/.test(norm);
+    var crisis=/(اموت|الموت ارحم|انتحار|انتحر|انهي حياتي|اقتل نفسي|نقتل روحي|ان اعيش|اذي نفسي|اؤذي نفسي|suicid|kill myself|end my life|want to die|wish i (was|were) dead|hurt myself|harm myself|self harm|no reason to live|zelfmoord|mezelf (van kant|iets aan)|dood wil|wil (dood|sterven)|niet meer (leven|verder)|wou dat ik dood|mezelf pijn|zelfbeschadiging|een eind aan mijn leven|quiero morir|matarme|quitarme la vida|acabar con mi vida|no quiero (vivir|seguir viviendo)|hacerme dano|autolesion|ojala estuviera muert|quero morrer|matar me|me matar|tirar a minha (propria )?vida|acabar com a minha vida|nao quero (viver|continuar a viver)|magoar me|me magoar|automutila|autolesao|quem me dera estar mort)/.test(norm);
     if(crisis){
       themes=themes.filter(function(t){ return t.id!=="death_fear" && t.id!=="despair"; });
       themes.unshift({id:"despair", theme:BY.theme.despair, score:9, conf:1, hits:[T("إشارات ألم شديد")]});

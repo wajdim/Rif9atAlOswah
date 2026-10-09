@@ -1,0 +1,425 @@
+0	O Profeta ﷺ
+1	Copiado
+2	Removido dos guardados
+3	Adicionado aos guardados
+4	Guardar
+5	Ou começa por um tema
+6	Todos os temas ›
+7	{0} situações e histórias
+8	{0} versículos e passagens
+9	{0} hadiths e súplicas
+10	{0} temas da vida
+11	Versículo do dia
+12	Hadith do dia
+13	Por favor, descreve a tua situação com um pouco mais de pormenor
+14	O Nobre Alcorão
+15	Copiar
+16	Hadith profético
+17	Narrador:
+18	Súplica do Alcorão
+19	Súplica autêntica
+20	Resumo do relato
+21	Texto do hadith
+22	sentido, não literal
+23	Dos livros da Sira
+24	Os pormenores deste acontecimento estão registados nas fontes reconhecidas da Sira ({0}), e parte da sua redação é discutida pelos críticos do hadith. É um relato histórico em que a Sira se apoia, não um hadith de grau sahih.
+25	Fontes:
+26	Abrir todas as secções
+27	Fechar todas as secções
+28	Agora
+29	Esta semana
+30	A longo prazo
+31	Ouvir a resposta completa
+32	Antes de mais nada
+33	O que escreveste mostra uma dor profunda, e levamo-lo a sério. A tua vida é preciosa para Allah e para quem te ama: «E não vos mateis. Allah é Misericordioso para convosco». Esta aplicação serve para a reflexão e não chega, por si só, numa crise como esta. Por favor, contacta agora alguém em quem confies, uma linha de apoio em crise do teu país (em Portugal: SNS 24, 808 24 24 24, ou SOS Voz Amiga, 213 544 545; no Brasil: CVV, 188) ou as urgências mais próximas. Pedir ajuda é força, não fraqueza, e não estás sozinho.
+34	A tua segurança está em primeiro lugar
+35	A tua situação parece envolver violência ou maus-tratos. O islão não te pede que permaneças sob o dano em nome da paciência: «Não se deve causar dano nem responder ao dano com dano». Se estiveres em perigo, vai para um lugar seguro e contacta um serviço de proteção, a polícia (112) ou uma pessoa de confiança (em Portugal: linha de apoio à vítima 116 006), e depois um especialista em família e direito.
+36	Um assunto religioso ou jurídico delicado
+37	A tua situação envolve um assunto (como o divórcio, a herança ou direitos) com normas pormenorizadas. O que se segue são princípios gerais e orientação para a reflexão, não uma fatwa; consulta um sábio qualificado ou um especialista jurídico para um parecer sobre o teu caso.
+38	Não encontrei uma correspondência suficientemente próxima da tua situação na biblioteca atual. Experimenta acrescentar pormenores: quem é a outra pessoa? O que aconteceu? Como te sentes? O que queres fazer? Ou
+39	explora os temas
+40	Correspondência forte
+41	Correspondência média
+42	Correspondência fraca
+43	Uma primeira leitura da tua situação
+44	Temas detetados
+45	Geral
+46	Sentimentos
+47	(provável)
+48	Não expresso de forma explícita
+49	Pessoas envolvidas
+50	Não especificado
+51	Descreves um erro teu
+52	Peso da situação
+53	A perspetiva corânica e profética sobre a tua situação
+54	As provas
+55	O que observamos na forma como {0} agiu?
+56	Princípios que daí se tiram
+57	Como podes tirar proveito disto?
+58	Outras situações que iluminam a tua
+59	Relacionado com: {0}
+60	Alcorão
+61	Do Nobre Alcorão
+62	Da Sunna profética
+63	Um plano prático para a tua situação
+64	Toca em qualquer passo para o marcar como feito.
+65	Súplicas autênticas adequadas à tua situação
+66	Perguntas para te compreenderes melhor
+67	O que evitar
+68	Limites deste exemplo: quando é que não se aplica?
+69	Reflexão
+70	Análise pessoal aprofundada (opcional)
+71	O Nobre Alcorão, {0}
+72	Fontes
+73	Muito autêntico
+74	Alcorão, ou um hadith dos dois Sahih ou classificado como sahih
+75	Autêntico
+76	um hadith sahih ou hasan das coleções de Sunan e Musnad
+77	Relato histórico
+78	dos livros da Sira, sem grau de hadith sahih.
+79	Os versículos são apresentados em ortografia padrão; consulta o Mushaf ao recitar.
+80	Porque apareceram estes resultados? (transparência da análise)
+81	Palavras detetadas no que escreveste:
+82	Pontuação das situações:
+83	Método: normalização do texto e extração de radicais → deteção de temas e sentimentos → ampliação da pesquisa → ordenação BM25 com reforço semântico → construção da análise apenas a partir dos textos recuperados.
+84	Avalia esta resposta
+85	Esta leitura foi-te útil? A tua avaliação ajuda-nos a melhorar a aplicação
+86	Nova situação
+87	Copiar resumo
+88	Partilhar
+89	Imprimir / PDF
+90	Explorar temas
+91	Rifqat al-Uswa — resumo da reflexão
+92	Situação:
+93	Situação mais próxima:
+94	Plano para agora:
+95	Esta é uma reflexão orientadora, não uma fatwa.
+96	Aprofundar a análise com IA
+97	Limitado apenas aos textos recuperados acima, e cita os seus códigos
+98	Opcional: precisa de uma chave da API do Claude e de ligação à internet
+99	O modelo vai ler a tua situação juntamente com as passagens verificadas recuperadas, escrever uma análise pessoal que as relacione e propor-te passos concretos para o teu caso. O teu texto será enviado à Anthropic apenas para este fim.
+100	Iniciar a análise aprofundada
+101	Faz uma pergunta de seguimento sobre a tua situação…
+102	Enviar
+103	A análise verificada acima está completa e funciona sem ligação. Se quiseres uma camada adicional em que um modelo de linguagem escreve uma análise pessoal que relaciona estes mesmos textos (e nenhum texto fora deles), adiciona uma chave da API do Claude nas Definições.
+104	Abrir definições
+105	O modelo não conseguiu concluir este pedido. A análise verificada acima continua disponível.
+106	(Atingido o comprimento máximo.)
+107	(Mantém as mesmas regras: nenhum texto exceto as passagens recuperadas, e indica os códigos. Responde em português.)
+108	{0} situações · {1} versículos · {2} hadiths
+109	Não há temas correspondentes. Experimenta «Todas as situações» ou descreve a tua situação na página inicial.
+110	Nenhum resultado corresponde à tua pesquisa.
+111	A tua avaliação
+112	Ouvir este tema
+113	A leitura corânica e profética
+114	Descreve a tua situação sobre este tema
+115	Situações relacionadas
+116	Um plano prático
+117	Do Nobre Alcorão ({0})
+118	Da Sunna profética ({0})
+119	Súplicas
+120	Perguntas para refletir
+121	Tudo
+122	Versículos
+123	Hadiths
+124	{0} textos
+125	Mostrar mais
+126	Não há textos correspondentes.
+127	Situações
+128	Hadiths e súplicas
+129	Ainda não guardaste nada.
+130	Toca em «Guardar» junto de qualquer situação, versículo ou hadith para o veres aqui, e avalia situações para veres também aqui as tuas avaliações.
+131	‹ Voltar
+132	Ouvir
+133	Do Alcorão
+134	O que aconteceu
+135	Contexto
+136	Pessoas envolvidas:
+137	Os textos
+138	Princípios
+139	O que aprendemos hoje?
+140	Limites deste exemplo
+141	↔ Comparar com uma situação diferente
+142	Situações relacionadas
+143	Avalia esta situação
+144	Avalia esta situação e deixa um comentário
+145	Diz Allah, o Altíssimo, em {0}:
+146	A leitura em voz alta não é suportada neste navegador
+147	Não há motor de voz neste dispositivo. Instala os «Serviços de voz da Google» a partir da loja.
+148	O motor de voz não tem voz em português; o seu instalador vai abrir-se
+149	Não está instalada nenhuma voz em português. No Windows: Definições → Hora e idioma → Idioma → adiciona «Português» com a funcionalidade «Voz» e volta a abrir a aplicação.
+150	A ler a situação
+151	A ler o tema
+152	A ler a resposta completa
+153	Não há texto para ler
+154	Não foi possível carregar a recitação (sem ligação)
+155	Não foi possível carregar a recitação (sem ligação); será lido o significado
+156	Pausa
+157	Retomar
+158	Recitação do xeque {0}
+159	Voz 1
+160	Narrador
+161	Em pausa
+162	{0} de {1}
+163	Velocidade de leitura: {0}×
+164	O que achas desta resposta?
+165	Avaliação
+166	{0} de 5
+167	Deixa um comentário ou sugestão (opcional): o que te ajudou? O que falta?
+168	Anexar o texto da minha situação à avaliação (fica no teu dispositivo, a não ser que o envies)
+169	Guardado apenas no teu dispositivo; encontra-lo em «Guardados»
+170	Guardar avaliação
+171	Jazak Allahu khayran pela tua avaliação
+172	Editar
+173	Todas as minhas avaliações
+174	Escolhe primeiro o número de estrelas
+175	A tua avaliação foi guardada, obrigado
+176	Rifqat al-Uswa — avaliações e comentários do utilizador (versão {0})
+177	Análise de uma situação
+178	Situação
+179	Data:
+180	Temas:
+181	Correspondência:
+182	Texto da situação:
+183	Comentário:
+184	Ainda não há avaliações
+185	Comentários sobre a Rifqat al-Uswa
+186	Comentários sobre a aplicação Rifqat al-Uswa
+187	As minhas avaliações e comentários
+188	{0} avaliações
+189	Enviar comentários ao programador
+190	Análise:
+191	Abrir situação
+192	Eliminar
+193	masculina
+194	feminina
+195	Automática
+196	Ainda não foram encontradas vozes em português.
+197	Instalar a voz em português
+198	Não está instalada nenhuma voz em português. No Windows: Definições → Hora e idioma → Idioma e região → adiciona «Português» com a funcionalidade «Voz» e reinicia a aplicação.
+199	Não foi encontrada nenhuma voz masculina confirmada; experimenta as vozes disponíveis e escolhe a melhor. A aplicação baixa automaticamente o tom da voz 1.
+200	Só há uma voz em português disponível; a aplicação vai distinguir as duas vozes pelo tom.
+201	Avaliação eliminada
+202	Escolheste a leitura sem recitação
+203	Rifqat al-Uswa
+204	Descreve em pormenor a tua situação sobre «{0}»…
+205	O que escreves não é guardado
+206	Formato de chave inválido (começa por sk-ant-)
+207	Definições guardadas
+208	Chave eliminada
+209	Escolha guardada
+210	Instalar a aplicação
+211	sinais de uma dor intensa
+212	O que escreveste trata sobretudo de «{0}»
+213	, e cruza-se com «{0}»
+214	, no contexto da tua relação com {0}
+215	O que escreveste trata da tua relação com {0}.
+216	As tuas palavras mostram sentimentos de {0}. Estes sentimentos são compreensíveis e não tens culpa de os sentir; o que importa é o que fazemos com eles.
+217	e
+218	Uma situação como esta pode vir acompanhada de um sentimento de {0}, mesmo que não o tenhas dito de forma explícita.
+219	ou
+220	Esta situação parece pesar-te e já dura há algum tempo, por isso vamos começar pelo que alivia a pressão agora, antes dos planos a longo prazo.
+221	Reparei também que falas de um erro teu; reconhecer um erro é metade do caminho, e a orientação profética abre-te a porta da reparação, não a da autopunição.
+222	Aqui és tu quem sofreu o dano; o caminho profético reconhece primeiro o teu direito e depois oferece-te escolhas mais elevadas, sem tas impor.
+223	O exemplo mais próximo que encontrei para a tua situação: «{0}».
+224	## Temas detetados
+225	confiança
+226	Sentimentos:
+227	Relação:
+228	A pessoa reconhece um erro seu:
+229	sim
+230	não
+231	## Situações da Sira e do Alcorão (recuperadas)
+232	O que aconteceu:
+233	Princípios:
+234	Limites de aplicação:
+235	Texto:
+236	[resumo do sentido]
+237	Versículo:
+238	## Versículos (recuperados)
+239	Lição:
+240	## Hadiths (recuperados)
+241	Grau:
+242	## Súplicas autênticas (recuperadas)
+243	## A leitura corânica e profética dos temas
+244	Ainda não foi definida nenhuma chave de API.
+245	A chave de API é inválida ou expirou.
+246	Esta chave não tem acesso a este modelo.
+247	O limite de pedidos foi excedido temporariamente. Tenta novamente daqui a pouco.
+248	O serviço do Claude está ocupado neste momento. Tenta novamente daqui a pouco.
+249	O pedido falhou ({0}).
+250	Erro durante a transmissão
+251	Não há ligação à internet, ou o pedido foi bloqueado. A análise verificada acima funciona sem ligação.
+252	A ler o que escreveste e a compreender o seu contexto…
+253	A detetar os temas, os sentimentos e a relação envolvida…
+254	A recuperar situações próximas da Sira e das histórias dos profetas…
+255	A procurar os versículos e os hadiths relacionados…
+256	A verificar os graus e as fontes dos textos…
+257	A construir a leitura e o plano prático…
+258	Escolhe a tua avaliação
+259	Fraco
+260	Razoável
+261	Bom
+262	Muito bom
+263	Excelente
+264	Descreve por palavras tuas o que estás a viver, e vamos lê-lo contigo à luz do Nobre Alcorão, da Sunna profética e da Sira.
+265	Analisar a minha situação
+266	Uma aplicação de reflexão e orientação: não é uma fatwa nem substitui os sábios ou os especialistas. Cada versículo e cada hadith vem de uma biblioteca verificada com a sua fonte e o seu grau, e nenhum texto é alguma vez inventado.
+267	Explora conforme a tua situação
+268	Temas da vida, cada um com uma leitura corânica e profética, situações, versículos, hadiths e súplicas
+269	Por tema
+270	Todas as situações (
+271	‹ Voltar aos temas
+272	A biblioteca verificada
+273	Os versículos, os hadiths e as súplicas em que a análise se baseia, com a sua fonte e o seu grau
+274	Guardados
+275	Situações, versículos e hadiths que guardaste (armazenados apenas neste dispositivo)
+276	Sobre a Rifqat al-Uswa
+277	Como funciona?
+278	A aplicação analisa o que escreves localmente no teu dispositivo: deteta os temas, os sentimentos e a relação envolvida, depois recupera de uma biblioteca verificada (situações da Sira e das histórias dos profetas, versículos e hadiths com o seu grau) os textos mais próximos da tua situação, e constrói a partir deles uma leitura e um plano prático.
+279	Privacidade:
+280	O que escreves nunca é enviado para nenhum servidor nem é guardado. A única exceção: se ativares «Aprofundar com IA» com a tua própria chave, o teu texto e as passagens recuperadas são enviados diretamente ao Claude (Anthropic) para gerar a análise.
+281	Integridade académica:
+282	A aplicação nunca gera versículos nem hadiths; cada texto é retirado da biblioteca tal como está. Os significados do Alcorão em português são de Samir El-Hayek (via Tanzil.net). As traduções dos hadiths para português são uma tradução própria da aplicação a partir das traduções inglesas publicadas no sunnah.com; o texto árabe continua a ser a referência. Os versículos são apresentados em ortografia padrão; consulta o Mushaf ao recitar.
+283	Esta é uma aplicação de reflexão e orientação; não substitui a fatwa de um sábio qualificado nem a consulta de um profissional de saúde mental ou de direito quando for necessário.
+284	OK
+285	Definições
+286	Idioma / اللغة
+287	العربية
+288	Aspeto
+289	Claro
+290	Escuro
+291	Tamanho da letra
+292	Pequeno
+293	Normal
+294	Grande
+295	Maior
+296	Vogais nas explicações
+297	Com vogais
+298	Sem vogais
+299	Os versículos e os hadiths mostram sempre as vogais completas.
+300	Velocidade da leitura em voz alta
+301	Lenta
+302	Normal
+303	Rápida
+304	Mais rápida
+305	Versículos recitados por um recitador do Alcorão
+306	Ouvir
+307	Os versículos são recitados em árabe a partir de gravações reais de recitadores reconhecidos (precisa de ligação à internet), seguidos do seu significado em português. Sem ligação, só é lido o significado.
+308	Voz 1: os hadiths, as súplicas e os significados dos versículos
+309	Experimentar
+310	Voz 2: o narrador (títulos e explicações)
+311	Aprofundar com IA (opcional): chave da API do Claude
+312	A análise verificada funciona totalmente sem chave e sem internet. Uma chave acrescenta uma camada de análise generativa limitada apenas aos textos recuperados. A chave fica guardada apenas neste dispositivo e é enviada diretamente para api.anthropic.com. Obtém-na em console.anthropic.com
+313	Modelo
+314	Eliminar chave
+315	Leitura em voz alta
+316	Uma aplicação de reflexão que analisa a tua situação e a relaciona com o Nobre Alcorão, a Sunna profética e a Sira, com fontes verificadas e graus claros dos hadiths.
+317	Rifqat al-Uswa
+318	Início
+319	Navegação
+320	Temas
+321	Biblioteca de versículos e hadiths
+322	Biblioteca
+323	Sobre a aplicação e privacidade
+324	Sobre a aplicação
+325	Escreve o que aconteceu, à tua maneira e com todo o pormenor que quiseres… Quem? O que aconteceu? Como te sentes? (em português ou em árabe)
+326	Procura um tema ou uma situação… p. ex. raiva, dívidas, pais
+327	Procura nos textos… p. ex. paciência, sustento, raiva
+328	Segmento anterior
+329	Reproduzir ou pausar
+330	Segmento seguinte
+331	Velocidade de leitura
+332	Parar
+333	Parar a leitura
+334	Maus-tratos e agressão
+335	Ibn Hisham, al-Sira al-Nabawiyya
+336	Erros
+337	Família
+338	Sociedade
+339	Sentimentos e provações
+340	Liderança
+341	Sucesso e força
+342	Ibn Kathir, al-Bidaya wa al-Nihaya
+343	Decisões difíceis
+344	Relações
+345	Yusuf (José), que a paz esteja com ele
+346	Tafsir de Ibn Kathir sobre a surata Yusuf
+347	Yaqub (Jacob), que a paz esteja com ele
+348	Yunus (Jonas), que a paz esteja com ele
+349	Ayyub (Job), que a paz esteja com ele
+350	Tafsir de Ibn Kathir (com cautela quanto aos relatos isra'iliyyat)
+351	Musa (Moisés), que a paz esteja com ele
+352	Ibrahim (Abraão), que a paz esteja com ele
+353	Maryam (Maria), que a paz esteja com ela
+354	A mãe de Musa
+355	Abu Bakr al-Siddiq, que Allah esteja satisfeito com ele
+356	Khadija, que Allah esteja satisfeito com ela
+357	Umm Salama, que Allah esteja satisfeito com ela
+358	Abu Hurayra, que Allah esteja satisfeito com ele
+359	Umm Sulaym, que Allah esteja satisfeito com ela
+360	Jurayj, o adorador
+361	Salman al-Farisi, que Allah esteja satisfeito com ele
+362	Hanzala, que Allah esteja satisfeito com ele
+363	Abu Dharr al-Ghifari, que Allah esteja satisfeito com ele
+364	Fátima, que Allah esteja satisfeito com ela
+365	Os dois filhos de Adão
+366	Tafsir de Ibn Kathir sobre a surata al-Ma'ida
+367	Qarun e o seu povo
+368	Sulayman (Salomão), que a paz esteja com ele
+369	O dono dos dois jardins e o seu companheiro
+370	Tafsir de Ibn Kathir sobre a surata al-Kahf
+371	Nuh (Noé), que a paz esteja com ele
+372	Tafsir de Ibn Kathir sobre a surata Hud
+373	Luqman, o Sábio
+374	Adão, que a paz esteja com ele
+375	Zakariyya (Zacarias), que a paz esteja com ele
+376	Hajar (Agar), que a paz esteja com ela
+377	Um homem das nações anteriores
+378	Abu Sufyan perante Heráclio
+379	Um homem que visitou o seu irmão
+380	Sentimentos e o eu
+381	Relações e família
+382	Trabalho e dinheiro
+383	Saúde e estudos
+384	Sociedade e justiça
+385	Liderança e decisões
+386	Mahmoud Khalil Al-Husary
+387	Muhammad Siddiq Al-Minshawi
+388	Abdul Basit Abdul Samad
+389	Mishary Rashid Alafasy
+390	Maher Al-Muaiqly
+391	Saad Al-Ghamdi
+392	Fares Abbad
+393	Sem recitação (só é lido o significado)
+394	Claude Opus 5: a análise mais profunda (predefinição)
+395	Claude Sonnet 5: equilibrado e mais rápido
+396	Claude Haiku 4.5: o mais rápido e económico
+397	A situação mais próxima da tua, do Alcorão
+398	A situação mais próxima da tua, da vida do Profeta
+399	,
+400	;
+401	Voz masculina
+402	baixando o tom
+403	Voz feminina
+404	subindo o tom
+405	Vozes instaladas neste dispositivo
+406	Instalar mais vozes
+407	Ainda não foram encontradas vozes para este idioma.
+408	Não está instalada nenhuma voz em {0}. No Windows: Definições → Hora e idioma → Idioma e região → adiciona «{1}» com a funcionalidade «Voz» e reinicia a aplicação (o Windows disponibiliza a voz masculina «{2}»).
+409	Não está instalada nenhuma voz masculina para este idioma; ao escolher «Voz masculina», o tom da voz disponível é baixado. Para uma voz masculina real, instala uma voz adicional a partir das definições de texto para voz do teu dispositivo.
+410	As vozes masculinas aparecem primeiro.
+411	A chave será removida ao guardar
+412	Idioma e apresentação
+413	Idioma / Language / Taal / اللغة
+414	Análise mais profunda com IA (opcional)
+415	Chave da API do Claude
+416	Cancelar
+417	Idioma · Language · Taal · اللغة
+418	Fechar sem guardar
+419	Denunciar esta resposta
+420	Motivo da denúncia (escreve-o aqui):
+421	A minha pergunta:
+422	A resposta do modelo:
+423	Rifqat al-Uswa {0} · {1}
+424	Denúncia sobre uma resposta de IA na Rifqat al-Uswa

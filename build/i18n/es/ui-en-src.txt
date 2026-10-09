@@ -1,0 +1,425 @@
+0	The Prophet ﷺ
+1	Copied
+2	Removed from saved
+3	Added to saved
+4	Save
+5	Or start from a topic
+6	All topics ›
+7	{0} situations & stories
+8	{0} verses & passages
+9	{0} hadith & supplications
+10	{0} life topics
+11	Verse of the day
+12	Hadith of the day
+13	Please describe your situation in a little more detail
+14	The Noble Quran
+15	Copy
+16	Prophetic hadith
+17	Narrator:
+18	Supplication from the Quran
+19	Authentic supplication
+20	Summary of the report
+21	Text of the hadith
+22	meaning, not exact wording
+23	From the books of Seerah
+24	The details of this event are reported in the recognised Seerah sources ({0}), and some of its wording is discussed by hadith critics. It is a historical report relied upon in the Seerah, not a hadith of sahih grade.
+25	Sources:
+26	Expand all sections
+27	Collapse all sections
+28	Now
+29	This week
+30	In the long run
+31	Listen to the full answer
+32	Before anything else
+33	What you wrote shows deep pain, and we take it seriously. Your life is precious to Allah and to those who love you: “And do not kill yourselves. Indeed, Allah is to you ever Merciful.” This app is for reflection and is not enough on its own for a crisis like this. Please reach out now to someone you trust, to a mental-health crisis line in your country, or to the nearest emergency department. Asking for help is strength, not weakness, and you are not alone.
+34	Your safety comes first
+35	Your situation seems to involve violence or abuse. Islam does not ask you to stay under harm in the name of patience: “There should be neither harm nor reciprocating harm.” If you are in danger, move to a safe place and contact a protection service, the police or a trusted person, and then a family and legal specialist.
+36	A sensitive religious or legal matter
+37	Your situation involves a matter (such as divorce, inheritance or rights) that has detailed rulings. What follows is general principles and guidance for reflection, not a fatwa; refer to a qualified scholar or a legal specialist for a ruling on your case.
+38	I could not find a close enough match for your situation in the current library. Try adding details: who is the other person? What happened? How do you feel? What do you want to do? Or
+39	browse the topics
+40	Strong match
+41	Moderate match
+42	Weak match
+43	A first reading of your situation
+44	Detected topics
+45	General
+46	Feelings
+47	(likely)
+48	Not stated explicitly
+49	People involved
+50	Not specified
+51	You describe a mistake of your own
+52	Weight of the situation
+53	The Quranic and Prophetic perspective on your situation
+54	The evidence
+55	What do we notice in how {0} acted?
+56	Principles drawn from it
+57	How can you benefit from it?
+58	Other situations that shed light on yours
+59	Related to: {0}
+60	Quran
+61	From the Noble Quran
+62	From the Prophetic Sunnah
+63	A practical plan for your situation
+64	Tap any step to mark it as done.
+65	Authentic supplications suited to your situation
+66	Questions to help you understand yourself
+67	What to avoid
+68	Limits of this example — when does it not apply?
+69	Reflection
+70	In-depth personal analysis (optional)
+71	The Noble Quran, {0}
+72	Sources
+73	Highly authenticated
+74	Quran, or a hadith in the two Sahihs or graded sahih
+75	Authenticated
+76	a sahih or hasan hadith in the Sunan and Musnad collections
+77	Historical report
+78	from the books of Seerah, not of sahih hadith grade.
+79	Verses are shown in standard spelling; refer to the Mushaf when reciting.
+80	Why did these results appear? (analysis transparency)
+81	Words picked up from what you wrote:
+82	Situation scores:
+83	Method: text normalisation and stemming → topic and feeling detection → query expansion → BM25 ranking with semantic boosting → building the analysis from the retrieved texts only.
+84	Rate this answer
+85	Was this reading helpful? Your rating helps us improve the app
+86	New situation
+87	Copy summary
+88	Share
+89	Print / PDF
+90	Explore topics
+91	Rifqat al-Uswa — reflection summary
+92	Situation:
+93	Closest situation:
+94	Plan for now:
+95	This is a guiding reflection, not a fatwa.
+96	Deepen the analysis with AI
+97	Limited to the texts retrieved above only, and cites their codes
+98	Optional — needs a Claude API key and an internet connection
+99	The model will read your situation together with the verified passages retrieved, write a personal analysis connecting them, and suggest precise steps for your case. Your text will be sent to Anthropic for this purpose only.
+100	Start the in-depth analysis
+101	Ask a follow-up question about your situation…
+102	Send
+103	The verified analysis above is complete and works offline. If you would like an extra layer in which a language model writes a personal analysis connecting these same texts (and no text from outside them), add a Claude API key in Settings.
+104	Open settings
+105	The model could not complete this request. The verified analysis above remains available.
+106	(Maximum length reached.)
+107	(Keep to the same rules: no text except from the retrieved passages, and give the codes. Answer in English.)
+108	{0} situations · {1} verses · {2} hadith
+109	No matching topics. Try “All situations”, or describe your situation on the home page.
+110	No results match your search.
+111	Your rating
+112	Listen to this topic
+113	The Quranic and Prophetic reading
+114	Describe your situation on this topic
+115	Related situations
+116	A practical plan
+117	From the Noble Quran ({0})
+118	From the Prophetic Sunnah ({0})
+119	Supplications
+120	Questions for reflection
+121	All
+122	Verses
+123	Hadith
+124	{0} texts
+125	Show more
+126	No matching texts.
+127	Situations
+128	Hadith & supplications
+129	You have not saved anything yet.
+130	Tap “Save” next to any situation, verse or hadith to see it here, and rate situations to see your ratings here too.
+131	‹ Back
+132	Listen
+133	From the Quran
+134	What happened
+135	Context
+136	People involved:
+137	The texts
+138	Principles
+139	What do we learn today?
+140	Limits of this example
+141	↔ Compare with a different situation
+142	Related situations
+143	Rate this situation
+144	Rate this situation and leave a comment
+145	Allah the Exalted says, in {0}:
+146	Reading aloud is not supported in this browser
+147	There is no speech engine on this device. Install “Speech Services by Google” from the store.
+148	The speech engine has no English voice; its installer will open
+149	No English voice is installed. On Windows: Settings → Time & language → Language → add “English” with the “Speech” feature, then reopen the app.
+150	Reading the situation
+151	Reading the topic
+152	Reading the full answer
+153	There is no text to read
+154	Could not load the recitation (no connection)
+155	Could not load the recitation (no connection); the meaning will be read instead
+156	Pause
+157	Resume
+158	Recitation by Sheikh {0}
+159	Voice 1
+160	Narrator
+161	Paused
+162	{0} of {1}
+163	Reading speed: {0}×
+164	What do you think of this answer?
+165	Rating
+166	{0} of 5
+167	Leave a comment or suggestion (optional): what helped you? What is missing?
+168	Attach my situation text to the rating (it stays on your device unless you send it)
+169	Saved on your device only; you will find it under “Saved”
+170	Save rating
+171	Jazak Allahu khayran for your rating
+172	Edit
+173	All my ratings
+174	Choose the number of stars first
+175	Your rating was saved, thank you
+176	Rifqat al-Uswa — user ratings and feedback (version {0})
+177	Situation analysis
+178	Situation
+179	Date:
+180	Topics:
+181	Match:
+182	Situation text:
+183	Comment:
+184	No ratings yet
+185	Rifqat al-Uswa feedback
+186	Feedback on the Rifqat al-Uswa app
+187	My ratings and feedback
+188	{0} ratings
+189	Send feedback to the developer
+190	Analysis:
+191	Open situation
+192	Delete
+193	male
+194	female
+195	Automatic
+196	No English voices found yet.
+197	Install the English voice
+198	No English voice is installed. On Windows: Settings → Time & language → Language & region → add “English” with the “Speech” feature, then restart the app.
+199	No confirmed male voice was found; try the available voices and choose the best one. The app lowers the pitch of voice 1 automatically.
+200	Only one English voice is available; the app will tell the two voices apart by pitch.
+201	Rating deleted
+202	You chose reading without recitation
+203	Rifqat al-Uswa
+204	Describe your situation about “{0}” in detail…
+205	What you write is not saved
+206	Invalid key format (it starts with sk-ant-)
+207	Settings saved
+208	Key deleted
+209	Choice saved
+210	Install the app
+211	signs of severe pain
+212	What you wrote is mainly about “{0}”
+213	, and overlaps with “{0}”
+214	, in the context of your relationship with {0}
+215	What you wrote is about your relationship with {0}.
+216	Your words show feelings of {0}. These feelings are understandable and you are not to blame for having them; what matters is what we do with them.
+217	and
+218	A situation like this may come with a feeling of {0}, even if you did not say so explicitly.
+219	or
+220	This situation seems heavy on you and has lasted a while, so we will start with what eases the pressure now before longer-term plans.
+221	I also noticed you are speaking about a mistake of your own; admitting a mistake is half the way, and the Prophetic guidance opens for you the door of making amends, not the door of self-punishment.
+222	Here you are the one who was harmed; the Prophetic way first recognises your right, then offers you higher choices without forcing them on you.
+223	The closest example I found to your situation: “{0}”.
+224	## Detected topics
+225	confidence
+226	Feelings:
+227	Relationship:
+228	The speaker admits a mistake of their own:
+229	yes
+230	no
+231	## Situations from the Seerah and the Quran (retrieved)
+232	What happened:
+233	Principles:
+234	Limits of application:
+235	Text:
+236	[summary of meaning]
+237	Verse:
+238	## Verses (retrieved)
+239	Lesson:
+240	## Hadith (retrieved)
+241	Grade:
+242	## Authentic supplications (retrieved)
+243	## The Quranic and Prophetic reading of the topics
+244	No API key has been set yet.
+245	The API key is invalid or has expired.
+246	This key does not have access to this model.
+247	The request limit was temporarily exceeded. Please try again shortly.
+248	The Claude service is busy right now. Please try again shortly.
+249	The request failed ({0}).
+250	Error while streaming
+251	There is no internet connection, or the request was blocked. The verified analysis above works offline.
+252	Reading what you wrote and understanding its context…
+253	Detecting the topics, feelings and the relationship involved…
+254	Retrieving close situations from the Seerah and the stories of the Prophets…
+255	Searching the related verses and hadith…
+256	Checking the grades and sources of the texts…
+257	Building the reading and the practical plan…
+258	Choose your rating
+259	Poor
+260	Fair
+261	Good
+262	Very good
+263	Excellent
+264	Describe what you are going through in your own words, and we will read it with you in the light of the Noble Quran, the Prophetic Sunnah and the Seerah.
+265	Analyse my situation
+266	A reflective, guiding app — not a fatwa, and not a substitute for scholars or specialists. Every verse and hadith in it comes from a verified library with its source and grade, and no text is ever invented.
+267	Explore by your situation
+268	Life topics, each with a Quranic and Prophetic reading, situations, verses, hadith and supplications
+269	By topic
+270	All situations (
+271	‹ Back to topics
+272	The verified library
+273	The verses, hadith and supplications the analysis relies on, with source and grade
+274	Saved
+275	Situations, verses and hadith you saved (stored on this device only)
+276	About Rifqat al-Uswa
+277	How does it work?
+278	The app analyses what you write locally on your device: it detects the topics, feelings and the relationship involved, then retrieves from a verified library (situations from the Seerah and the stories of the Prophets, verses, and hadith with their grades) the texts closest to your situation, and builds a reading and a practical plan from them.
+279	Privacy:
+280	What you write is never sent to any server and is not saved. The only exception: if you enable “Deepen with AI” with your own key, your text and the retrieved passages are sent directly to Claude (Anthropic) to generate the analysis.
+281	Scholarly integrity:
+282	The app never generates verses or hadith; every text is taken from the library as it is. English meanings of the Quran are from Saheeh International (via Tanzil.net), and English hadith translations follow the published sunnah.com translations. Verses are shown in standard spelling; refer to the Mushaf when reciting.
+283	This is a reflective, guiding app; it is not a substitute for the fatwa of a qualified scholar, or for consulting a mental-health or legal professional when needed.
+284	OK
+285	Settings
+286	Language / اللغة
+287	العربية
+288	Appearance
+289	Light
+290	Dark
+291	Font size
+292	Small
+293	Normal
+294	Large
+295	Larger
+296	Vowel marks on explanations
+297	With marks
+298	Without marks
+299	Verses and hadith always show full vowel marks.
+300	Reading-aloud speed
+301	Slow
+302	Normal
+303	Fast
+304	Faster
+305	Verses recited by a Quran reciter
+306	Listen
+307	Verses are recited in Arabic from real recordings of renowned reciters (needs an internet connection), followed by their English meaning. Offline, only the meaning is read.
+308	Voice 1 — the hadith, supplications and verse meanings
+309	Try
+310	Voice 2 — the narrator (headings and explanations)
+311	Deepen with AI (optional) — Claude API key
+312	The verified analysis works fully without a key and without internet. A key adds a generative analysis layer restricted to the retrieved texts only. The key is stored on this device only and sent directly to api.anthropic.com. Get one from console.anthropic.com
+313	Model
+314	Delete key
+315	Reading aloud
+316	A reflective app that analyses your situation and connects it to the Noble Quran, the Prophetic Sunnah and the Seerah, with verified sources and clear hadith grades.
+317	Rifqat al-Uswa
+318	Home
+319	Navigation
+320	Topics
+321	Library of verses and hadith
+322	Library
+323	About the app and privacy
+324	About the app
+325	Write what happened, in your own way and in as much detail as you like… Who? What happened? How do you feel? (English or Arabic)
+326	Search for a topic or situation… e.g. anger, debt, parents
+327	Search the texts… e.g. patience, provision, anger
+328	Previous segment
+329	Play or pause
+330	Next segment
+331	Reading speed
+332	Stop
+333	Stop reading
+334	Mistreatment and aggression
+335	Ibn Hisham, al-Sirah al-Nabawiyyah
+336	Mistakes
+337	Family
+338	Society
+339	Feelings and trials
+340	Leadership
+341	Success and strength
+342	Ibn Kathir, al-Bidayah wa al-Nihayah
+343	Hard decisions
+344	Relationships
+345	Yusuf (Joseph), peace be upon him
+346	Tafsir Ibn Kathir on Surah Yusuf
+347	Ya'qub (Jacob), peace be upon him
+348	Yunus (Jonah), peace be upon him
+349	Ayyub (Job), peace be upon him
+350	Tafsir Ibn Kathir (with caution about Isra'iliyyat reports)
+351	Musa (Moses), peace be upon him
+352	Ibrahim (Abraham), peace be upon him
+353	Maryam (Mary), peace be upon her
+354	The mother of Musa
+355	Abu Bakr al-Siddiq, may Allah be pleased with him
+356	Khadijah, may Allah be pleased with her
+357	Umm Salamah, may Allah be pleased with her
+358	Abu Hurayrah, may Allah be pleased with him
+359	Umm Sulaym, may Allah be pleased with her
+360	Jurayj the worshipper
+361	Salman al-Farisi, may Allah be pleased with him
+362	Hanzalah, may Allah be pleased with him
+363	Abu Dharr al-Ghifari, may Allah be pleased with him
+364	Fatimah, may Allah be pleased with her
+365	The two sons of Adam
+366	Tafsir Ibn Kathir on Surah Al-Ma'idah
+367	Qarun and his people
+368	Sulayman (Solomon), peace be upon him
+369	The owner of the two gardens and his companion
+370	Tafsir Ibn Kathir on Surah Al-Kahf
+371	Nuh (Noah), peace be upon him
+372	Tafsir Ibn Kathir on Surah Hud
+373	Luqman the Wise
+374	Adam, peace be upon him
+375	Zakariyya (Zechariah), peace be upon him
+376	Hajar (Hagar), peace be upon her
+377	A man from the earlier nations
+378	Abu Sufyan before Heraclius
+379	A man who visited his brother
+380	Feelings and the self
+381	Relationships and family
+382	Work and money
+383	Health and study
+384	Society and justice
+385	Leadership and decisions
+386	Mahmoud Khalil Al-Husary
+387	Muhammad Siddiq Al-Minshawi
+388	Abdul Basit Abdul Samad
+389	Mishary Rashid Alafasy
+390	Maher Al-Muaiqly
+391	Saad Al-Ghamdi
+392	Fares Abbad
+393	No recitation (only the meaning is read)
+394	Claude Opus 5 — the deepest analysis (default)
+395	Claude Sonnet 5 — balanced and faster
+396	Claude Haiku 4.5 — the fastest and cheapest
+397	The closest situation to yours, from the Quran
+398	The closest situation to yours, from the Prophet's life
+399	,
+400	;
+401	Male voice
+402	by lowering the pitch
+403	Female voice
+404	by raising the pitch
+405	Voices installed on this device
+406	Install more voices
+407	No voices for this language were found yet.
+408	No {0} voice is installed. On Windows: Settings → Time & language → Language & region → add “{1}” with the “Speech” feature, then restart the app (Windows provides the male voice “{2}”).
+409	No male voice is installed for this language; choosing “Male voice” lowers the pitch of the available voice. For a real male voice, install an extra voice from your device's text-to-speech settings.
+410	Male voices are listed first.
+411	The key will be removed when you save
+412	Language & display
+413	Language / Taal / Idioma / اللغة
+414	Deeper analysis with AI (optional)
+415	Claude API key
+416	Cancel
+417	Language · Taal · Idioma · اللغة
+418	Close without saving
+419	Report this answer
+420	Reason for the report (write it here):
+421	My question:
+422	The model's answer:
+423	Rifqat al-Uswa {0} · {1}
+424	Report about an AI answer in Rifqat al-Uswa

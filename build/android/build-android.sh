@@ -10,7 +10,7 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"; ROOT="$(cd "$HERE/../.." && pwd)"
 
-VERSION_NAME="2.5.0"; VERSION_CODE=9
+VERSION_NAME="2.6.0"; VERSION_CODE=10
 MIN_SDK=24; TARGET_SDK=36; BT_VER=36.0.0
 
 : "${TOOLS:?TOOLS غير محدد}"
@@ -41,6 +41,8 @@ echo "• aapt2 compile"
 LINK=(-I "$JAR" --manifest "$OUT/src/AndroidManifest.xml" -A "$OUT/assets"
       --min-sdk-version $MIN_SDK --target-sdk-version $TARGET_SDK
       --version-code $VERSION_CODE --version-name "$VERSION_NAME" --auto-add-overlay)
+# RIFQA_DEBUG=1: نسخة اختبار قابلة للتصحيح (تفعّل أدوات مطوّري WebView) — لا تُرفع إلى المتجر
+[ "${RIFQA_DEBUG:-0}" = "1" ] && LINK+=(--debug-mode)
 
 echo "• aapt2 link (APK + صيغة proto للحزمة)"
 "$BT/aapt2.exe" link -o "$OUT/base.apk" --java "$OUT/gen" "${LINK[@]}" "$OUT/res.zip"

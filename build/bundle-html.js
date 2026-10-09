@@ -16,6 +16,16 @@ function inlineCss(href) {
   });
   return css;
 }
+// ملفات الترجمة: تُضمَّن كلها مغلّفة بدوال، ولا تُشغَّل إلا دالة اللغة الحالية (يغيّر المستخدم اللغة فتُعاد الصفحة)
+const LANGS = ["en", "nl", "es", "pt"];
+html = html.replace(/<!-- i18n-data[\s\S]*?<!-- \/i18n-data -->/, () => {
+  const fns = LANGS.map(l => {
+    const v = l.toUpperCase() + "_DATA";
+    return `__RD.${l}=function(){\n${read("js/data-" + l + ".js").replace(/<\/script/gi, "<\\/script")}\nwindow.${v}=${v};};`;
+  }).join("\n");
+  return `<script>\nvar __RD={};\n${fns}\n(function(){var l=document.documentElement.lang;if(__RD[l])__RD[l]();__RD=null;})();\n</script>`;
+});
+if (/data-' ?\+ ?l/.test(html)) throw new Error("i18n-data loader was not replaced");
 html = html.replace(/<link rel="stylesheet" href="([^"]+)">/g, (m, href) => `<style>\n${inlineCss(href)}\n</style>`);
 html = html.replace(/<script src="([^"]+)"><\/script>/g, (m, src) => `<script>\n${read(src).replace(/<\/script/gi, "<\/script")}\n</script>`);
 const icon = "data:image/png;base64," + fs.readFileSync(path.join(ROOT, "icons/icon-192.png")).toString("base64");

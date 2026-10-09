@@ -1,8 +1,8 @@
 /* ======================================================================
-   رِفقة الأُسوة — اللغات (العربية / English / Nederlands)
+   رِفقة الأُسوة — اللغات (العربية / English / Nederlands / Español / Português)
    ----------------------------------------------------------------------
-   - اللغة تُحفظ في rifqa.prefs.lang ("ar" افتراضيًا، أو "en" أو "nl"). تبديلها يعيد تحميل التطبيق.
-   - I18N.en (ومتغير EN في بقية الملفات) يعني «واجهة مترجمة من اليسار لليمين» (إنجليزية أو هولندية)؛
+   - اللغة تُحفظ في rifqa.prefs.lang ("ar" افتراضيًا، أو en / nl / es / pt). تبديلها يعيد تحميل التطبيق.
+   - I18N.en (ومتغير EN في بقية الملفات) يعني «واجهة مترجمة من اليسار لليمين» (أي لغة غير العربية)؛
      وما يخص لغة بعينها يُقرأ من I18N.lang.
    - T(نص_عربي, ...قيم): بالعربية يعيد النص كما هو (مع تعويض {0} {1})،
      وبالإنجليزية يعيد ترجمته من القاموس EN_UI (js/i18n-dict.js) أو النص العربي إن لم يوجد.
@@ -13,14 +13,18 @@
        الحديث: ترجمات sunnah.com المنشورة في مجموعة hadith-json
      والهولندية (js/data-nl.js): القرآن: Sofian S. Siregar (Tanzil.net)؛
        الحديث: ترجمة خاصة بالتطبيق عن النص الإنجليزي لـ sunnah.com (لا توجد ترجمة هولندية منشورة متاحة)
+     والإسبانية (js/data-es.js): القرآن: Julio Cortés؛ والبرتغالية (js/data-pt.js): القرآن: Samir El-Hayek
+       (كلاهما عبر Tanzil.net)؛ والحديث فيهما ترجمة خاصة بالتطبيق عن النص الإنجليزي لـ sunnah.com
    ====================================================================== */
 var I18N = (function(){
   "use strict";
+  var LANGS = ["ar", "en", "nl", "es", "pt"];
   var lang = "ar";
-  try { var p = JSON.parse(localStorage.getItem("rifqa.prefs") || "{}"); if (p.lang === "en" || p.lang === "nl") lang = p.lang; } catch (e) {}
-  var EN = lang !== "ar";                                  // واجهة مترجمة (en | nl)
+  try { var p = JSON.parse(localStorage.getItem("rifqa.prefs") || "{}"); if (LANGS.indexOf(p.lang) > 0) lang = p.lang; } catch (e) {}
+  var EN = lang !== "ar";                                  // واجهة مترجمة (أي لغة غير العربية)
   var NL = lang === "nl";
-  var D = (NL ? window.NL_DATA : lang === "en" ? window.EN_DATA : null) || {};
+  var COL = Math.max(1, LANGS.indexOf(lang));              // عمود اللغة في جداول المصادر والدرجات (1 = الإنجليزية)
+  var D = (EN ? window[lang.toUpperCase() + "_DATA"] : null) || {};
   var DICT = D.ui || {};
 
   function fill(s, args){
@@ -58,10 +62,10 @@ var I18N = (function(){
   function refSpoken(s, a){
     if (!EN) return "سورة " + s + "، الآية " + a;
     var x = ayahNums(a), multi = /-/.test(x);
-    if (NL) return "Soera " + surahEn(s) + ", " + (multi ? "verzen " + x.replace("-", " tot ") : "vers " + x);
-    return "Surah " + surahEn(s) + ", " + (multi ? "verses " + x.replace("-", " to ") : "verse " + x);
+    var W = {en:["Surah","verse","verses","to"], nl:["Soera","vers","verzen","tot"], es:["Sura","aleya","aleyas","a"], pt:["Surata","versículo","versículos","a"]}[lang] || ["Surah","verse","verses","to"];
+    return W[0] + " " + surahEn(s) + ", " + (multi ? W[2] + " " + x.replace("-", " " + W[3] + " ") : W[1] + " " + x);
   }
-  /** معنى الآية بلغة الواجهة (الإنجليزية: Saheeh International؛ الهولندية: Siregar) */
+  /** معنى الآية بلغة الواجهة (en: Saheeh International؛ nl: Siregar؛ es: Cortés؛ pt: El-Hayek) */
   function quranEn(s, a){
     var Q = D.quran || {}, n = surahNo(s), x = ayahNums(a), m = x.match(/^(\d+)(?:-(\d+))?/);
     if (!n || !m) return "";
@@ -72,54 +76,54 @@ var I18N = (function(){
 
   /* ---------- المصادر والدرجات ---------- */
   var SRC = [
-    ["متفق عليه: صحيح البخاري وصحيح مسلم","Agreed upon: Sahih al-Bukhari and Sahih Muslim","Overeengekomen (muttafaq ʿalayh): Sahih al-Bukhari en Sahih Muslim"],
-    ["متفق عليه: صحيح البخاري","Agreed upon: Sahih al-Bukhari","Overeengekomen (muttafaq ʿalayh): Sahih al-Bukhari"],
-    ["متفق عليه","Agreed upon","Overeengekomen (muttafaq ʿalayh)"],
-    ["وأصل قصة الإصابة في صحيح مسلم","and the core of the story is in Sahih Muslim","en de kern van het verhaal staat in Sahih Muslim"],
-    ["والبخاري في الأدب المفرد","and al-Bukhari in al-Adab al-Mufrad","en al-Bukhari in al-Adab al-Mufrad"],
-    ["البخاري في الأدب المفرد","al-Bukhari in al-Adab al-Mufrad","al-Bukhari in al-Adab al-Mufrad"],
-    ["وصحح إسناده الألباني والأرناؤوط","its chain was graded sahih by al-Albani and al-Arna'ut","de keten werd als sahih beoordeeld door al-Albani en al-Arna'ut"],
-    ["وصححه ابن حبان والألباني","graded sahih by Ibn Hibban and al-Albani","als sahih beoordeeld door Ibn Hibban en al-Albani"],
-    ["وقال الترمذي: حديث حسن صحيح","and al-Tirmidhi said: a hasan sahih hadith","en al-Tirmidhi zei: een hasan sahih hadith"],
-    ["رواه الترمذي وأبو داود وأحمد","Narrated by al-Tirmidhi, Abu Dawud and Ahmad","Overgeleverd door al-Tirmidhi, Abu Dawud en Ahmad"],
-    ["رواه الطبراني وابن حبان والحاكم","Narrated by al-Tabarani, Ibn Hibban and al-Hakim","Overgeleverd door al-Tabarani, Ibn Hibban en al-Hakim"],
-    ["أبو يعلى والطبراني في الأوسط","Abu Ya'la and al-Tabarani in al-Awsat","Abu Ya'la en al-Tabarani in al-Awsat"],
-    ["وصححه محققو المسند","graded sahih by the editors of the Musnad","als sahih beoordeeld door de redacteuren van de Musnad"],
-    ["الطبراني في الكبير","al-Tabarani in al-Kabir","al-Tabarani in al-Kabir"],
-    ["ومالك في الموطأ","and Malik in al-Muwatta","en Malik in al-Muwatta"],
-    ["المستدرك للحاكم","al-Mustadrak of al-Hakim","al-Mustadrak van al-Hakim"],
-    ["السلسلة الصحيحة","al-Silsilah al-Sahihah","al-Silsilah al-Sahihah"],
-    ["وروى مسلم بعضه","and Muslim narrated part of it","en Muslim heeft een deel ervan overgeleverd"],
-    ["رواه الإمام أحمد","Narrated by Imam Ahmad","Overgeleverd door imam Ahmad"],
-    ["معلقًا وموصولاً","(mu'allaq and mawsul)","(mu'allaq en mawsul)"],
-    ["وحسّنه الألباني","graded hasan by al-Albani","als hasan beoordeeld door al-Albani"],
-    ["وصححه الألباني","graded sahih by al-Albani","als sahih beoordeeld door al-Albani"],
-    ["صحيح ابن حبان","Sahih Ibn Hibban","Sahih Ibn Hibban"],
-    ["صحيح الجامع","Sahih al-Jami'","Sahih al-Jami'"],
-    ["صحيح البخاري","Sahih al-Bukhari","Sahih al-Bukhari"],
-    ["صحيح مسلم","Sahih Muslim","Sahih Muslim"],
-    ["في بعض طرقه","in some of its chains","in sommige van zijn ketens"],
-    ["رواه البخاري","Narrated by al-Bukhari","Overgeleverd door al-Bukhari"],
-    ["رواه الترمذي","Narrated by al-Tirmidhi","Overgeleverd door al-Tirmidhi"],
-    ["رواه أحمد","Narrated by Ahmad","Overgeleverd door Ahmad"],
-    ["موطأ مالك","Muwatta Malik","Muwatta Malik"],
-    ["مسند أحمد","Musnad Ahmad","Musnad Ahmad"],
-    ["والبخاري","and al-Bukhari","en al-Bukhari"],
-    ["وابن حبان","and Ibn Hibban","en Ibn Hibban"],
-    ["مختصرًا","abridged","verkort"],
-    ["ابن ماجه","Ibn Majah","Ibn Majah"],
-    ["أبو داود","Abu Dawud","Abu Dawud"],
-    ["الترمذي","al-Tirmidhi","al-Tirmidhi"],
-    ["النسائي","al-Nasa'i","al-Nasa'i"],
-    ["البخاري","al-Bukhari","al-Bukhari"],
-    ["وأحمد","and Ahmad","en Ahmad"],
-    ["مسلم","Muslim","Muslim"],
-    ["أحمد","Ahmad","Ahmad"]
+    ["متفق عليه: صحيح البخاري وصحيح مسلم","Agreed upon: Sahih al-Bukhari and Sahih Muslim","Overeengekomen (muttafaq ʿalayh): Sahih al-Bukhari en Sahih Muslim","Acordado (muttafaq ʿalayh): Sahih al-Bukhari y Sahih Muslim","Acordado (muttafaq ʿalayh): Sahih al-Bukhari e Sahih Muslim"],
+    ["متفق عليه: صحيح البخاري","Agreed upon: Sahih al-Bukhari","Overeengekomen (muttafaq ʿalayh): Sahih al-Bukhari","Acordado (muttafaq ʿalayh): Sahih al-Bukhari","Acordado (muttafaq ʿalayh): Sahih al-Bukhari"],
+    ["متفق عليه","Agreed upon","Overeengekomen (muttafaq ʿalayh)","Acordado (muttafaq ʿalayh)","Acordado (muttafaq ʿalayh)"],
+    ["وأصل قصة الإصابة في صحيح مسلم","and the core of the story is in Sahih Muslim","en de kern van het verhaal staat in Sahih Muslim","y el núcleo de la historia está en Sahih Muslim","e o núcleo da história está em Sahih Muslim"],
+    ["والبخاري في الأدب المفرد","and al-Bukhari in al-Adab al-Mufrad","en al-Bukhari in al-Adab al-Mufrad","y al-Bukhari en al-Adab al-Mufrad","e al-Bukhari em al-Adab al-Mufrad"],
+    ["البخاري في الأدب المفرد","al-Bukhari in al-Adab al-Mufrad","al-Bukhari in al-Adab al-Mufrad","al-Bukhari en al-Adab al-Mufrad","al-Bukhari em al-Adab al-Mufrad"],
+    ["وصحح إسناده الألباني والأرناؤوط","its chain was graded sahih by al-Albani and al-Arna'ut","de keten werd als sahih beoordeeld door al-Albani en al-Arna'ut","su cadena fue calificada de sahih por al-Albani y al-Arna'ut","a sua cadeia foi classificada como sahih por al-Albani e al-Arna'ut"],
+    ["وصححه ابن حبان والألباني","graded sahih by Ibn Hibban and al-Albani","als sahih beoordeeld door Ibn Hibban en al-Albani","calificado de sahih por Ibn Hibban y al-Albani","classificado como sahih por Ibn Hibban e al-Albani"],
+    ["وقال الترمذي: حديث حسن صحيح","and al-Tirmidhi said: a hasan sahih hadith","en al-Tirmidhi zei: een hasan sahih hadith","y al-Tirmidhi dijo: un hadiz hasan sahih","e al-Tirmidhi disse: um hadith hasan sahih"],
+    ["رواه الترمذي وأبو داود وأحمد","Narrated by al-Tirmidhi, Abu Dawud and Ahmad","Overgeleverd door al-Tirmidhi, Abu Dawud en Ahmad","Narrado por al-Tirmidhi, Abu Dawud y Ahmad","Narrado por al-Tirmidhi, Abu Dawud e Ahmad"],
+    ["رواه الطبراني وابن حبان والحاكم","Narrated by al-Tabarani, Ibn Hibban and al-Hakim","Overgeleverd door al-Tabarani, Ibn Hibban en al-Hakim","Narrado por al-Tabarani, Ibn Hibban y al-Hakim","Narrado por al-Tabarani, Ibn Hibban e al-Hakim"],
+    ["أبو يعلى والطبراني في الأوسط","Abu Ya'la and al-Tabarani in al-Awsat","Abu Ya'la en al-Tabarani in al-Awsat","Abu Ya'la y al-Tabarani en al-Awsat","Abu Ya'la e al-Tabarani em al-Awsat"],
+    ["وصححه محققو المسند","graded sahih by the editors of the Musnad","als sahih beoordeeld door de redacteuren van de Musnad","calificado de sahih por los editores del Musnad","classificado como sahih pelos editores do Musnad"],
+    ["الطبراني في الكبير","al-Tabarani in al-Kabir","al-Tabarani in al-Kabir","al-Tabarani en al-Kabir","al-Tabarani em al-Kabir"],
+    ["ومالك في الموطأ","and Malik in al-Muwatta","en Malik in al-Muwatta","y Malik en al-Muwatta","e Malik em al-Muwatta"],
+    ["المستدرك للحاكم","al-Mustadrak of al-Hakim","al-Mustadrak van al-Hakim","al-Mustadrak de al-Hakim","al-Mustadrak de al-Hakim"],
+    ["السلسلة الصحيحة","al-Silsilah al-Sahihah","al-Silsilah al-Sahihah","al-Silsilah al-Sahihah","al-Silsilah al-Sahihah"],
+    ["وروى مسلم بعضه","and Muslim narrated part of it","en Muslim heeft een deel ervan overgeleverd","y Muslim narró una parte","e Muslim narrou parte dele"],
+    ["رواه الإمام أحمد","Narrated by Imam Ahmad","Overgeleverd door imam Ahmad","Narrado por el imam Ahmad","Narrado pelo imam Ahmad"],
+    ["معلقًا وموصولاً","(mu'allaq and mawsul)","(mu'allaq en mawsul)","(mu'allaq y mawsul)","(mu'allaq e mawsul)"],
+    ["وحسّنه الألباني","graded hasan by al-Albani","als hasan beoordeeld door al-Albani","calificado de hasan por al-Albani","classificado como hasan por al-Albani"],
+    ["وصححه الألباني","graded sahih by al-Albani","als sahih beoordeeld door al-Albani","calificado de sahih por al-Albani","classificado como sahih por al-Albani"],
+    ["صحيح ابن حبان","Sahih Ibn Hibban","Sahih Ibn Hibban","Sahih Ibn Hibban","Sahih Ibn Hibban"],
+    ["صحيح الجامع","Sahih al-Jami'","Sahih al-Jami'","Sahih al-Jami'","Sahih al-Jami'"],
+    ["صحيح البخاري","Sahih al-Bukhari","Sahih al-Bukhari","Sahih al-Bukhari","Sahih al-Bukhari"],
+    ["صحيح مسلم","Sahih Muslim","Sahih Muslim","Sahih Muslim","Sahih Muslim"],
+    ["في بعض طرقه","in some of its chains","in sommige van zijn ketens","en algunas de sus cadenas","em algumas das suas cadeias"],
+    ["رواه البخاري","Narrated by al-Bukhari","Overgeleverd door al-Bukhari","Narrado por al-Bukhari","Narrado por al-Bukhari"],
+    ["رواه الترمذي","Narrated by al-Tirmidhi","Overgeleverd door al-Tirmidhi","Narrado por al-Tirmidhi","Narrado por al-Tirmidhi"],
+    ["رواه أحمد","Narrated by Ahmad","Overgeleverd door Ahmad","Narrado por Ahmad","Narrado por Ahmad"],
+    ["موطأ مالك","Muwatta Malik","Muwatta Malik","Muwatta Malik","Muwatta Malik"],
+    ["مسند أحمد","Musnad Ahmad","Musnad Ahmad","Musnad Ahmad","Musnad Ahmad"],
+    ["والبخاري","and al-Bukhari","en al-Bukhari","y al-Bukhari","e al-Bukhari"],
+    ["وابن حبان","and Ibn Hibban","en Ibn Hibban","e Ibn Hibban","e Ibn Hibban"],
+    ["مختصرًا","abridged","verkort","abreviado","abreviado"],
+    ["ابن ماجه","Ibn Majah","Ibn Majah","Ibn Majah","Ibn Majah"],
+    ["أبو داود","Abu Dawud","Abu Dawud","Abu Dawud","Abu Dawud"],
+    ["الترمذي","al-Tirmidhi","al-Tirmidhi","al-Tirmidhi","al-Tirmidhi"],
+    ["النسائي","al-Nasa'i","al-Nasa'i","al-Nasa'i","al-Nasa'i"],
+    ["البخاري","al-Bukhari","al-Bukhari","al-Bukhari","al-Bukhari"],
+    ["وأحمد","and Ahmad","en Ahmad","y Ahmad","e Ahmad"],
+    ["مسلم","Muslim","Muslim","Muslim","Muslim"],
+    ["أحمد","Ahmad","Ahmad","Ahmad","Ahmad"]
   ];
   function src(s){
     if (!EN || !s) return s || "";
     var o = String(s);
-    SRC.forEach(function(p){ o = o.split(p[0]).join(NL ? p[2] : p[1]); });
+    SRC.forEach(function(p){ o = o.split(p[0]).join(p[COL] || p[1]); });
     return o.replace(/،\s*/g, ", ").replace(/؛\s*/g, "; ").replace(/\s+/g, " ").trim();
   }
   var GRADES = {"صحيح":"Sahih","حسن":"Hasan","حسن بمجموع طرقه":"Hasan (by its combined chains)","صحيح لغيره":"Sahih li-ghayrihi","حسن صحيح":"Hasan sahih",
@@ -128,7 +132,13 @@ var I18N = (function(){
   var GRADES_NL = {"صحيح":"Sahih (authentiek)","حسن":"Hasan (goed)","حسن بمجموع طرقه":"Hasan (door zijn gezamenlijke ketens)","صحيح لغيره":"Sahih li-ghayrihi","حسن صحيح":"Hasan sahih",
     "صحيح (حديث قدسي)":"Sahih (Hadith Qudsi)","حسن (حديث قدسي)":"Hasan (Hadith Qudsi)","صحيح (في أصل القصة)":"Sahih (in de kern van het verhaal)",
     "حسن (صححه بعض المحدثين وتوقف فيه الذهبي)":"Hasan (door sommige geleerden als sahih beoordeeld; al-Dhahabi hield zijn oordeel aan)"};
-  function grade(g){ var G = NL ? GRADES_NL : GRADES; return EN && G[g] ? G[g] : (g || ""); }
+  var GRADES_ES = {"صحيح":"Sahih (auténtico)","حسن":"Hasan (bueno)","حسن بمجموع طرقه":"Hasan (por el conjunto de sus cadenas)","صحيح لغيره":"Sahih li-ghayrihi","حسن صحيح":"Hasan sahih",
+    "صحيح (حديث قدسي)":"Sahih (hadiz qudsi)","حسن (حديث قدسي)":"Hasan (hadiz qudsi)","صحيح (في أصل القصة)":"Sahih (en el núcleo de la historia)",
+    "حسن (صححه بعض المحدثين وتوقف فيه الذهبي)":"Hasan (algunos sabios lo calificaron de sahih; al-Dhahabi se reservó el juicio)"};
+  var GRADES_PT = {"صحيح":"Sahih (autêntico)","حسن":"Hasan (bom)","حسن بمجموع طرقه":"Hasan (pelo conjunto das suas cadeias)","صحيح لغيره":"Sahih li-ghayrihi","حسن صحيح":"Hasan sahih",
+    "صحيح (حديث قدسي)":"Sahih (hadith qudsi)","حسن (حديث قدسي)":"Hasan (hadith qudsi)","صحيح (في أصل القصة)":"Sahih (no núcleo da história)",
+    "حسن (صححه بعض المحدثين وتوقف فيه الذهبي)":"Hasan (alguns sábios classificaram-no como sahih; al-Dhahabi reservou o seu juízo)"};
+  function grade(g){ var G = {en:GRADES, nl:GRADES_NL, es:GRADES_ES, pt:GRADES_PT}[lang] || GRADES; return EN && G[g] ? G[g] : (g || ""); }
 
   /* ---------- ترجمة النصوص الثابتة في الصفحة ---------- */
   var ATTRS = ["placeholder", "title", "aria-label"];
@@ -178,6 +188,6 @@ var I18N = (function(){
   }
   overlay();
 
-  return {lang:lang, en:EN, nl:NL, T:T, ref:ref, refSpoken:refSpoken, quranEn:quranEn, surahEn:surahEn, src:src, grade:grade, applyStatic:applyStatic, _dict:DICT};
+  return {lang:lang, langs:LANGS, en:EN, nl:NL, T:T, ref:ref, refSpoken:refSpoken, quranEn:quranEn, surahEn:surahEn, src:src, grade:grade, applyStatic:applyStatic, _dict:DICT};
 })();
 var T = I18N.T;

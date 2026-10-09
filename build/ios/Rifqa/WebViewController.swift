@@ -16,8 +16,8 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKScriptM
     // والباقي رسائل غير متزامنة إلى Swift.
     private static let bridgeJS = """
     (function(){
-      var st = {status: "init", voices: "[]", statusEn: "init", voicesEn: "[]", statusNl: "init", voicesNl: "[]", lang: "ar"};
-      var SUF = {ar: "", en: "En", nl: "Nl"};
+      var st = {status: "init", voices: "[]", statusEn: "init", voicesEn: "[]", statusNl: "init", voicesNl: "[]", statusEs: "init", voicesEs: "[]", statusPt: "init", voicesPt: "[]", lang: "ar"};
+      var SUF = {ar: "", en: "En", nl: "Nl", es: "Es", pt: "Pt"};
       window.__rifqaIOS = function(k, v){ st[k] = v; if (/^voices/.test(k) && window.__rifqaTTS) window.__rifqaTTS("0", "voices"); };
       function post(m){ try { window.webkit.messageHandlers.rifqa.postMessage(m); } catch (e) {} }
       window.AndroidBridge = {
@@ -28,7 +28,8 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKScriptM
         ttsSetLang: function(l){ st.lang = SUF[l] !== undefined ? l : "ar"; post({cmd: "lang", lang: st.lang}); },
         ttsSpeak: function(id, text, rate, pitch, voice){ post({cmd: "speak", id: String(id), text: String(text), rate: +rate || 1, pitch: +pitch || 1, voice: voice || ""}); },
         ttsStop: function(){ post({cmd: "stop"}); },
-        ttsInstall: function(){ post({cmd: "install"}); }
+        ttsInstall: function(){ post({cmd: "install"}); },
+        ttsSettings: function(){ post({cmd: "install"}); }
       };
       window.RifqaIOS = true;
     })();
@@ -73,14 +74,15 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKScriptM
 
     private func voicesScript() -> String {
         voicesScript("ar", key: "voices", statusKey: "status") + voicesScript("en", key: "voicesEn", statusKey: "statusEn")
-            + voicesScript("nl", key: "voicesNl", statusKey: "statusNl")
+            + voicesScript("nl", key: "voicesNl", statusKey: "statusNl") + voicesScript("es", key: "voicesEs", statusKey: "statusEs")
+            + voicesScript("pt", key: "voicesPt", statusKey: "statusPt")
     }
     private func voicesScript(_ l: String, key: String, statusKey: String) -> String {
         let vs = voices(l)
         let list: [[String: Any]] = vs.map { v in
             var g = "?"
             if #available(iOS 13.0, *) { g = v.gender == .male ? "m" : (v.gender == .female ? "f" : "?") }
-            let q = v.quality == .enhanced ? (l == "en" ? " — enhanced" : l == "nl" ? " — verbeterd" : " — محسّن") : ""
+            let q = v.quality == .enhanced ? (l == "en" ? " — enhanced" : l == "nl" ? " — verbeterd" : l == "es" ? " — mejorada" : l == "pt" ? " — melhorada" : " — محسّن") : ""
             return ["name": v.identifier, "label": v.name + q, "lang": v.language, "gender": g,
                     "network": false, "quality": v.quality == .enhanced ? 400 : 300]
         }
@@ -105,7 +107,7 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKScriptM
                   voice: m["voice"] as? String ?? "")
         case "lang":
             let l = m["lang"] as? String ?? "ar"
-            lang = ["en", "nl"].contains(l) ? l : "ar"
+            lang = ["en", "nl", "es", "pt"].contains(l) ? l : "ar"
         case "stop":
             utteranceIds.removeAll()
             synth.stopSpeaking(at: .immediate)
@@ -129,7 +131,7 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKScriptM
         u.voice = AVSpeechSynthesisVoice(identifier: voice) ?? arabicVoices().first(where: { v in
             if #available(iOS 13.0, *) { return v.gender == .male }
             return true
-        }) ?? AVSpeechSynthesisVoice(language: ["en": "en-US", "nl": "nl-NL"][lang] ?? "ar-SA")
+        }) ?? AVSpeechSynthesisVoice(language: ["en": "en-US", "nl": "nl-NL", "es": "es-ES", "pt": "pt-PT"][lang] ?? "ar-SA")
         // سرعة الصفحة 1.0 = السرعة الطبيعية في iOS (0.5)
         u.rate = max(AVSpeechUtteranceMinimumSpeechRate, min(AVSpeechUtteranceMaximumSpeechRate, AVSpeechUtteranceDefaultSpeechRate * rate))
         u.pitchMultiplier = max(0.5, min(2.0, pitch))

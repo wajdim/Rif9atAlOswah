@@ -1,0 +1,475 @@
+{
+ "lexicon": {
+  "emotion": {
+   "anger": {
+    "label": "raiva",
+    "words": [
+     "zangado",
+     "zangada",
+     "irritado",
+     "irritada",
+     "furioso",
+     "furiosa",
+     "raiva",
+     "ira",
+     "fúria",
+     "chateado",
+     "chateada",
+     "frustrado",
+     "frustrada",
+     "odeio-o",
+     "odeio-a",
+     "odeio",
+     "rancor",
+     "ressentimento",
+     "farto",
+     "farta",
+     "fico fora de mim"
+    ]
+   },
+   "sadness": {
+    "label": "tristeza",
+    "words": [
+     "triste",
+     "tristeza",
+     "infeliz",
+     "a chorar",
+     "chorar",
+     "choro",
+     "chorei",
+     "coração partido",
+     "magoado",
+     "magoada",
+     "ferido",
+     "ferida",
+     "destroçado",
+     "destroçada",
+     "deprimido",
+     "deprimida",
+     "em baixo",
+     "de luto",
+     "abatido",
+     "abatida",
+     "desgostoso",
+     "desgostosa"
+    ]
+   },
+   "fear": {
+    "label": "medo e ansiedade",
+    "words": [
+     "medo",
+     "assustado",
+     "assustada",
+     "receio",
+     "ansioso",
+     "ansiosa",
+     "ansiedade",
+     "preocupado",
+     "preocupada",
+     "preocupação",
+     "nervoso",
+     "nervosa",
+     "stressado",
+     "stressada",
+     "stress",
+     "estresse",
+     "pânico",
+     "aterrorizado",
+     "aterrorizada",
+     "angústia",
+     "angustiado",
+     "angustiada",
+     "sob pressão",
+     "aflito",
+     "aflita"
+    ]
+   },
+   "guilt": {
+    "label": "culpa e arrependimento",
+    "words": [
+     "culpado",
+     "culpada",
+     "culpa",
+     "arrependido",
+     "arrependida",
+     "arrependimento",
+     "arrependo-me",
+     "é culpa minha",
+     "a culpa é minha",
+     "consciência",
+     "remorso",
+     "sinto-me mal por"
+    ]
+   },
+   "shame": {
+    "label": "vergonha e humilhação",
+    "words": [
+     "humilhado",
+     "humilhada",
+     "envergonhado",
+     "envergonhada",
+     "vergonha",
+     "insultado",
+     "insultada",
+     "desrespeitado",
+     "desrespeitada",
+     "menosprezado",
+     "menosprezada",
+     "ridicularizado",
+     "expôs-me",
+     "olham-me de cima",
+     "não valho nada",
+     "desprezado",
+     "desprezada"
+    ]
+   },
+   "loneliness": {
+    "label": "solidão",
+    "words": [
+     "sozinho",
+     "sozinha",
+     "só",
+     "solidão",
+     "isolado",
+     "isolada",
+     "ninguém",
+     "excluído",
+     "excluída",
+     "rejeitado",
+     "rejeitada",
+     "posto de parte",
+     "invisível",
+     "abandonado",
+     "abandonada"
+    ]
+   },
+   "despair": {
+    "label": "desespero",
+    "words": [
+     "sem esperança",
+     "desesperado",
+     "desesperada",
+     "desespero",
+     "desisto",
+     "desistir",
+     "já não há esperança",
+     "não faz sentido",
+     "cansado de tudo",
+     "cansada de tudo",
+     "não aguento mais",
+     "não consigo continuar"
+    ]
+   },
+   "confusion": {
+    "label": "confusão",
+    "words": [
+     "confuso",
+     "confusa",
+     "perdido",
+     "perdida",
+     "dividido",
+     "dividida",
+     "indeciso",
+     "indecisa",
+     "não sei",
+     "não sei o que fazer",
+     "dúvidas",
+     "hesitante",
+     "sentimentos contraditórios"
+    ]
+   },
+   "exhaustion": {
+    "label": "exaustão",
+    "words": [
+     "exausto",
+     "exausta",
+     "cansado",
+     "cansada",
+     "sem forças",
+     "esgotado",
+     "esgotada",
+     "burnout",
+     "sobrecarregado",
+     "sobrecarregada",
+     "sem energia",
+     "estoirado",
+     "estoirada"
+    ]
+   },
+   "jealousy": {
+    "label": "ciúme",
+    "words": [
+     "ciumento",
+     "ciumenta",
+     "ciúme",
+     "ciúmes",
+     "inveja",
+     "invejoso",
+     "invejosa"
+    ]
+   },
+   "betrayal": {
+    "label": "desilusão",
+    "words": [
+     "traído",
+     "traída",
+     "traição",
+     "falhou-me",
+     "apunhalou-me pelas costas",
+     "desiludido",
+     "desiludida",
+     "dececionado",
+     "dececionada",
+     "enganado",
+     "enganada",
+     "mentiu-me"
+    ]
+   },
+   "love": {
+    "label": "apego e amor",
+    "words": [
+     "amo-o",
+     "amo-a",
+     "gosto dele",
+     "gosto dela",
+     "tenho saudades",
+     "saudades",
+     "sinto falta",
+     "apegado",
+     "apegada",
+     "não paro de pensar em"
+    ]
+   },
+   "joy": {
+    "label": "alegria e gratidão",
+    "words": [
+     "feliz",
+     "contente",
+     "grato",
+     "grata",
+     "agradecido",
+     "agradecida",
+     "graças a deus",
+     "alhamdulillah",
+     "alegria",
+     "entusiasmado",
+     "entusiasmada",
+     "passei",
+     "consegui"
+    ]
+   }
+  },
+  "relation": {
+   "spouse": {
+    "label": "o teu cônjuge",
+    "words": [
+     "o meu marido",
+     "a minha mulher",
+     "a minha esposa",
+     "meu marido",
+     "minha mulher",
+     "minha esposa",
+     "marido",
+     "esposa",
+     "cônjuge",
+     "o meu companheiro",
+     "a minha companheira"
+    ]
+   },
+   "fiance": {
+    "label": "o teu noivo ou noiva",
+    "words": [
+     "o meu noivo",
+     "a minha noiva",
+     "noivo",
+     "noiva",
+     "o meu namorado",
+     "a minha namorada",
+     "pretendente"
+    ]
+   },
+   "parent": {
+    "label": "os teus pais",
+    "words": [
+     "a minha mãe",
+     "o meu pai",
+     "minha mãe",
+     "meu pai",
+     "os meus pais",
+     "mãe",
+     "pai",
+     "pais"
+    ]
+   },
+   "child": {
+    "label": "os teus filhos",
+    "words": [
+     "o meu filho",
+     "a minha filha",
+     "os meus filhos",
+     "meu filho",
+     "minha filha",
+     "o meu bebé",
+     "filho",
+     "filha",
+     "filhos",
+     "crianças",
+     "os miúdos"
+    ]
+   },
+   "sibling": {
+    "label": "os teus irmãos",
+    "words": [
+     "o meu irmão",
+     "a minha irmã",
+     "os meus irmãos",
+     "meu irmão",
+     "minha irmã",
+     "irmão",
+     "irmã",
+     "irmãos"
+    ]
+   },
+   "relative": {
+    "label": "os teus familiares",
+    "words": [
+     "o meu tio",
+     "a minha tia",
+     "o meu primo",
+     "a minha prima",
+     "os meus familiares",
+     "a minha sogra",
+     "o meu sogro",
+     "sogra",
+     "sogro",
+     "os meus sogros",
+     "familiares",
+     "primo",
+     "prima",
+     "cunhado",
+     "cunhada"
+    ]
+   },
+   "boss": {
+    "label": "o teu chefe",
+    "words": [
+     "o meu chefe",
+     "a minha chefe",
+     "chefe",
+     "o meu supervisor",
+     "supervisor",
+     "o meu responsável",
+     "o meu patrão"
+    ]
+   },
+   "colleague": {
+    "label": "os teus colegas",
+    "words": [
+     "o meu colega",
+     "a minha colega",
+     "colega",
+     "colegas",
+     "colega de trabalho",
+     "colegas de trabalho"
+    ]
+   },
+   "friend": {
+    "label": "os teus amigos",
+    "words": [
+     "o meu amigo",
+     "a minha amiga",
+     "o meu melhor amigo",
+     "a minha melhor amiga",
+     "amigo",
+     "amiga",
+     "amigos",
+     "amigas"
+    ]
+   },
+   "neighbor": {
+    "label": "os teus vizinhos",
+    "words": [
+     "o meu vizinho",
+     "a minha vizinha",
+     "vizinho",
+     "vizinha",
+     "vizinhos"
+    ]
+   },
+   "employee": {
+    "label": "quem está sob a tua responsabilidade",
+    "words": [
+     "o meu funcionário",
+     "a minha funcionária",
+     "os meus funcionários",
+     "a minha equipa",
+     "o meu pessoal",
+     "o meu trabalhador",
+     "a minha empregada"
+    ]
+   },
+   "teacher": {
+    "label": "os teus professores",
+    "words": [
+     "o meu professor",
+     "a minha professora",
+     "professor",
+     "professora",
+     "o meu orientador"
+    ]
+   },
+   "self": {
+    "label": "ti próprio",
+    "words": [
+     "eu próprio",
+     "eu própria",
+     "a mim mesmo",
+     "a mim mesma",
+     "comigo mesmo"
+    ]
+   }
+  },
+  "intensifiers": [
+   "muito",
+   "imenso",
+   "demais",
+   "extremamente",
+   "sempre",
+   "todos os dias",
+   "há anos",
+   "há meses",
+   "já não aguento",
+   "não suporto",
+   "não consigo suportar",
+   "nunca",
+   "mais do que nunca",
+   "insuportável"
+  ],
+  "selfFault": [
+   "é culpa minha",
+   "a culpa foi minha",
+   "enganei-me",
+   "cometi um erro",
+   "estraguei tudo",
+   "magoei",
+   "eu menti",
+   "menti-lhe",
+   "menti lhes",
+   "tenho mentido",
+   "eu traí",
+   "traí a",
+   "traí o",
+   "insultei",
+   "eu bati",
+   "bati-lhe",
+   "bati nele",
+   "bati nela",
+   "gritei",
+   "fui injusto",
+   "fui injusta",
+   "quero pedir desculpa",
+   "pequei",
+   "arrependo-me do que fiz"
+  ]
+ }
+}
