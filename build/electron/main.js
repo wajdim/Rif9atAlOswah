@@ -8,7 +8,7 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 1100, height: 860, minWidth: 380, minHeight: 560,
     title: "رفقة الأسوة",
-    backgroundColor: "#F7F2E4",
+    backgroundColor: "#141B17",
     icon: path.join(__dirname, "www", "icons", "icon-512.png"),
     autoHideMenuBar: true,
     webPreferences: { contextIsolation: true, nodeIntegration: false, sandbox: true, spellcheck: false }

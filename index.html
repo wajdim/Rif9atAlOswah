@@ -7,7 +7,7 @@
 <title>رِفقة الأُسوة</title>
 <meta name="description" content="تطبيق تأملي يحلل موقفك ويربطه بالقرآن الكريم والسنة النبوية والسيرة بمصادر موثقة ودرجات أحاديث واضحة.">
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#2F4C3E">
+<meta name="theme-color" content="#141B17">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -20,8 +20,8 @@
 <script>
 /* تطبيق اللغة والوضع وحجم الخط قبل الرسم لتجنب الوميض */
 (function(){try{var p=JSON.parse(localStorage.getItem("rifqa.prefs")||"{}"),d=document.documentElement;
-if(/^(en|nl|es|pt)$/.test(p.lang)){d.setAttribute("lang",p.lang);d.setAttribute("dir","ltr");}
-if(p.theme&&p.theme!=="auto")d.setAttribute("data-theme",p.theme);
+if(/^(en|nl|es|pt|fr)$/.test(p.lang)){d.setAttribute("lang",p.lang);d.setAttribute("dir","ltr");}
+var t=p.theme||"dark";if(t!=="auto")d.setAttribute("data-theme",t);   /* الوضع الداكن افتراضي */
 if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
 </script>
 </head>
@@ -151,6 +151,7 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
     <button data-setlang="nl" lang="nl" role="menuitem">Nederlands</button>
     <button data-setlang="es" lang="es" role="menuitem">Español</button>
     <button data-setlang="pt" lang="pt" role="menuitem">Português</button>
+    <button data-setlang="fr" lang="fr" role="menuitem">Français</button>
   </div>
 
   <div class="detail-panel" id="detailPanel" role="dialog" aria-modal="true"></div>
@@ -180,7 +181,7 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
           <h4><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg><span>اللغة والعرض</span></h4>
           <div class="set-group">
             <label>اللغة / Language / Taal / Idioma</label>
-            <div class="seg" id="segLang"><button data-v="ar" lang="ar">العربية</button><button data-v="en" lang="en">English</button><button data-v="nl" lang="nl">Nederlands</button><button data-v="es" lang="es">Español</button><button data-v="pt" lang="pt">Português</button></div>
+            <div class="seg" id="segLang"><button data-v="ar" lang="ar">العربية</button><button data-v="en" lang="en">English</button><button data-v="nl" lang="nl">Nederlands</button><button data-v="es" lang="es">Español</button><button data-v="pt" lang="pt">Português</button><button data-v="fr" lang="fr">Français</button></div>
           </div>
           <div class="set-group">
             <label>المظهر</label>
@@ -265,7 +266,7 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
 <script src="js/data-tashkeel.js"></script>
 <script src="js/data-tashkeel-prose.js"></script>
 <!-- i18n-data: ملف ترجمة اللغة الحالية فقط (bundle-html.js يضمّن كل اللغات ويشغّل الحالية) -->
-<script>(function(){var l=document.documentElement.lang;if(/^(en|nl|es|pt)$/.test(l))document.write('<script src="js/data-'+l+'.js"><\/script>');})();</script>
+<script>(function(){var l=document.documentElement.lang;if(/^(en|nl|es|pt|fr)$/.test(l))document.write('<script src="js/data-'+l+'.js"><\/script>');})();</script>
 <!-- /i18n-data -->
 <script src="js/i18n.js"></script>
 <script src="js/icons.js"></script>

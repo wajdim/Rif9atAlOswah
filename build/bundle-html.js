@@ -17,7 +17,7 @@ function inlineCss(href) {
   return css;
 }
 // ملفات الترجمة: تُضمَّن كلها مغلّفة بدوال، ولا تُشغَّل إلا دالة اللغة الحالية (يغيّر المستخدم اللغة فتُعاد الصفحة)
-const LANGS = ["en", "nl", "es", "pt"];
+const LANGS = ["en", "nl", "es", "pt", "fr"];
 html = html.replace(/<!-- i18n-data[\s\S]*?<!-- \/i18n-data -->/, () => {
   const fns = LANGS.map(l => {
     const v = l.toUpperCase() + "_DATA";

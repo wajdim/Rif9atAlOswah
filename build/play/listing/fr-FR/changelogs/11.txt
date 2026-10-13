@@ -1,0 +1,4 @@
+• Nouvelle langue : français
+• Le mode sombre est désormais le mode par défaut (modifiable dans les Réglages)
+• Un nouveau guide illustré de chaque bouton et de chaque écran
+• Corrections et améliorations

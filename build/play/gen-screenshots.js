@@ -3,7 +3,7 @@
 const { chromium } = require("playwright");
 const fs = require("fs"), path = require("path");
 const URL = process.env.RIFQA_URL || "http://localhost:8765/";
-const LOC = { ar: "ar", en: "en-US", nl: "nl-NL", es: "es-ES", pt: "pt-PT" };   // مجلدات fastlane supply
+const LOC = { ar: "ar", en: "en-US", nl: "nl-NL", es: "es-ES", pt: "pt-PT", fr: "fr-FR" };   // مجلدات fastlane supply
 
 const Q = {
   ar: "أخي خانني ونشر عني كلامًا كاذبًا أمام العائلة، أشعر بالغضب ولا أعرف هل أسامحه",
@@ -15,7 +15,7 @@ const Q = {
 
 (async () => {
   const b = await chromium.launch();
-  for (const lang of (process.env.RIFQA_LANGS || "ar,en,nl,es,pt").split(",")) {
+  for (const lang of (process.env.RIFQA_LANGS || "ar,en,nl,es,pt,fr").split(",")) {
     const dir = path.join(__dirname, "listing", LOC[lang], "images/phoneScreenshots"); fs.mkdirSync(dir, { recursive: true });
     const c = await b.newContext({ viewport: { width: 360, height: 640 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true, locale: lang });
     await c.addInitScript(l => { try { if (!sessionStorage.getItem("i")) { sessionStorage.setItem("i", 1); localStorage.clear(); localStorage.setItem("rifqa.prefs", JSON.stringify({ lang: l, theme: "light", fs: "1" })); } } catch (e) {} }, lang);

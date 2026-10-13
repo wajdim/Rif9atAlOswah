@@ -4,7 +4,7 @@
 
 <p align="center">
 Describe what you are going through, and read it in the light of the Quran, the Sunnah and the Seerah.<br>
-Arabic · English · Nederlands · Español · Português · offline · no account · no ads
+Arabic · English · Français · Nederlands · Español · Português · offline · no account · no ads
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@ Arabic · English · Nederlands · Español · Português · offline · no accou
 
 The user writes freely about a situation, such as a conflict, a loss, guilt or a decision. An on-device engine then:
 
-1. **Understands the text.** It works out the themes, feelings, relationships and safety signals, in Arabic (formal or dialect), English, Dutch, Spanish or Portuguese.
+1. **Understands the text.** It works out the themes, feelings, relationships and safety signals, in Arabic (formal or dialect), English, French, Dutch, Spanish or Portuguese.
 2. **Retrieves material** from a curated library:
    - 115 Prophetic situations
    - 57 life topics
@@ -41,14 +41,14 @@ js/
   ai.js         optional Claude layer   data-*.js  content (situations, Quran, hadith, themes, translations)
 build/
   android/      Android wrapper (WebView), build-android.sh → signed AAB + APK, no Gradle needed
-  play/         Google Play listing (5 languages, graphics, generators) + publishing guide
+  play/         Google Play listing (6 languages, graphics, generators) + publishing guide
   ios/          Xcode project (XcodeGen) + GitHub Actions workflow
   electron/     Windows desktop build
   i18n/         translation sources and build-en.js (→ js/data-en.js, data-nl.js, data-es.js, data-pt.js)
   tashkeel/     Arabic diacritisation pipeline
   tests/        engine regression test
   build-all.sh  rebuilds everything into dist/
-docs/           GitHub Pages: landing page + privacy policy
+docs/           GitHub Pages: landing page, interactive user guide (guide.html), privacy policy
 ```
 
 ## Build
@@ -72,8 +72,8 @@ Android signing reads `~/.rifqa-signing/signing.env`, which lives **outside the 
 
 ## Sources and licences
 
-- **Quran.** The Arabic text and the meanings come from [Tanzil.net](https://tanzil.net): Saheeh International (English), Sofian S. Siregar (Dutch), Julio Cortés (Spanish) and Samir El-Hayek (Portuguese). Tanzil allows them to be used unchanged, with attribution, for non-commercial purposes.
-- **Hadith.** The Arabic comes from the classical collections; the English translations are from sunnah.com. The Dutch, Spanish and Portuguese hadith translations were made for this app from the English and are labelled as such.
+- **Quran.** The Arabic text and the meanings come from [Tanzil.net](https://tanzil.net): Saheeh International (English), Sofian S. Siregar (Dutch), Julio Cortés (Spanish), Samir El-Hayek (Portuguese) and Muhammad Hamidullah (French). Tanzil allows them to be used unchanged, with attribution, for non-commercial purposes.
+- **Hadith.** The Arabic comes from the classical collections; the English translations are from sunnah.com. The French, Dutch, Spanish and Portuguese hadith translations were made for this app from the English and are labelled as such.
 - **Recitations.** Streamed from [everyayah.com](https://everyayah.com). In the Android app a reciter can be downloaded for offline listening: only the ~300 verses the app recites are fetched, into the app's private storage.
 - **Fonts.** Amiri and Tajawal (SIL Open Font License), bundled locally.
 

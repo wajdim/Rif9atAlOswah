@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Interactive guide to every screen and button of Rifqat al-Uswa.">
+<link rel="icon" href="icon-192.png">
+<title>Rifqat al-Uswa Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+/* Layout: guide header, 3-step quick start, then a two-column tour (phone mockup with numbered hotspots | explanation list), FAQ.
+   Dark-first, using the app's own palette (pine, gold, parchment) and fonts (Amiri display, Tajawal body). */
+:root{
+  --bg:#141B17; --surface:#1B2520; --surface-2:#1F2A24; --ink:#E9E4D6; --ink-soft:#C8C1AE; --muted:#9A937F;
+  --border:#2E3B34; --gold:#D2AE5C; --gold-wash:#2B2718; --pine:#7FB59A; --pine-soft:#22332A; --pine-strong:#BFE0CD;
+  --clay:#E0A08F; --on-gold:#10170F; --phone:#0E1411;
+  --display:"Amiri","Noto Naskh Arabic",Georgia,serif; --body:"Tajawal","Segoe UI",system-ui,sans-serif;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#F7F2E4; --surface:#FFFDF6; --surface-2:#FBF6E9; --ink:#22312A; --ink-soft:#4A5850; --muted:#7A7362;
+  --border:#E6DCBF; --gold:#A9822F; --gold-wash:#F3E7C9; --pine:#2F4C3E; --pine-soft:#E4EBE2; --pine-strong:#233A2F;
+  --clay:#8C4A3B; --on-gold:#FFFDF6; --phone:#2A2620; color-scheme:light; } }
+:root[data-theme="light"]{
+  --bg:#F7F2E4; --surface:#FFFDF6; --surface-2:#FBF6E9; --ink:#22312A; --ink-soft:#4A5850; --muted:#7A7362;
+  --border:#E6DCBF; --gold:#A9822F; --gold-wash:#F3E7C9; --pine:#2F4C3E; --pine-soft:#E4EBE2; --pine-strong:#233A2F;
+  --clay:#8C4A3B; --on-gold:#FFFDF6; --phone:#2A2620; color-scheme:light; }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:20px 48px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* header */
+.head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.brand{font-family:var(--display);font-weight:700;font-size:1.35rem;color:var(--pine-strong)}
+.brand small{display:block;font-family:var(--body);font-weight:500;font-size:.78rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.ctrls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.langs{display:flex;flex-wrap:wrap;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:3px}
+.langs button{border:0;background:none;border-radius:999px;padding:4px 10px;font-size:.85rem;color:var(--ink-soft);cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--gold);color:var(--on-gold);font-weight:700}
+.themeb{border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:.85rem;cursor:pointer;display:flex;gap:6px;align-items:center}
+
+/* intro */
+.intro{padding-block:28px 8px;max-width:720px}
+h1{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.3;margin:0 0 8px;color:var(--pine-strong);text-wrap:balance}
+.lead{color:var(--ink-soft);margin:0;font-size:1.05rem}
+.ornament{display:flex;align-items:center;gap:8px;margin:18px 0 0;color:var(--gold)}
+.ornament i{height:1px;flex:0 0 60px;background:linear-gradient(90deg,transparent,var(--gold))}
+.ornament i:last-child{transform:scaleX(-1)}
+.ornament b{width:8px;height:8px;transform:rotate(45deg);border:1px solid var(--gold)}
+h2{font-family:var(--display);font-size:1.5rem;margin:40px 0 12px;color:var(--pine-strong)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px;display:grid;gap:4px}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;color:var(--gold);font-size:1.4rem;line-height:1}
+.steps b{font-size:1.02rem}
+.steps span{color:var(--ink-soft);font-size:.93rem}
+
+/* tour */
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.tabs button{flex:0 0 auto;border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:6px 14px;cursor:pointer;font-size:.92rem;color:var(--ink-soft)}
+.tabs button[aria-selected="true"]{background:var(--pine-soft);border-color:var(--pine);color:var(--pine-strong);font-weight:700}
+.hint{color:var(--muted);font-size:.88rem;margin:6px 0 14px}
+.tour{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:760px){.tour{grid-template-columns:minmax(0,1fr)}}
+.phone-col{position:sticky;top:12px}
+@media (max-width:760px){.phone-col{position:static}}
+.phone{background:var(--phone);border-radius:34px;padding:10px;max-width:360px;margin-inline:auto;box-shadow:0 10px 40px rgba(0,0,0,.25)}
+.screen{background:var(--bg);border-radius:26px;overflow:hidden;min-height:540px;max-height:640px;overflow-y:auto;position:relative;font-size:13px;line-height:1.6;scroll-behavior:smooth}
+.m-top{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:10px 10px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:2}
+.m-brand{font-family:var(--display);font-weight:700;color:var(--pine);font-size:14px;white-space:nowrap}
+.m-icons{display:flex;gap:3px}
+.m-ic{width:26px;height:26px;border-radius:50%;border:1px solid var(--border);display:grid;place-items:center;color:var(--ink-soft)}
+.m-ic svg{width:14px;height:14px}
+.m-body{padding:12px;display:grid;gap:10px}
+.m-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:10px}
+.m-h{font-family:var(--display);font-weight:700;color:var(--pine-strong);font-size:15px;line-height:1.4}
+.m-muted{color:var(--muted);font-size:12px}
+.m-ta{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:10px;min-height:92px;color:var(--muted)}
+.m-search{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:6px 12px;color:var(--muted)}
+.m-btn{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 12px;font-weight:700;font-size:12px}
+.m-btn svg{width:14px;height:14px}
+.m-pri{background:var(--gold);color:var(--on-gold)}
+.m-gh{border:1px solid var(--border);color:var(--ink-soft);font-weight:500}
+.m-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.m-chip{border:1px solid var(--border);border-radius:999px;padding:3px 10px;font-size:12px;background:var(--surface)}
+.m-ar{font-family:var(--display);font-size:17px;color:var(--pine-strong);direction:rtl;text-align:right}
+.m-badge{background:var(--pine-soft);color:var(--pine);border-radius:999px;padding:2px 8px;font-size:11px;font-weight:700}
+.m-sec{display:flex;gap:8px;align-items:center;font-weight:700}
+.m-num{width:20px;height:20px;border-radius:50%;background:var(--gold-wash);color:var(--gold);display:grid;place-items:center;font-size:11px;flex:0 0 auto}
+.m-seg{display:flex;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.m-seg span{flex:1;text-align:center;padding:4px 2px;font-size:11px;color:var(--ink-soft)}
+.m-seg span.on{background:var(--pine-soft);color:var(--pine-strong);font-weight:700}
+.m-label{font-size:11px;color:var(--muted);margin-bottom:3px}
+.m-sel{border:1px solid var(--border);border-radius:8px;padding:4px 8px;font-size:12px;flex:1;min-width:0}
+.m-stars{color:var(--gold);letter-spacing:2px}
+.m-bar{position:absolute;inset-inline:0;bottom:0;background:var(--surface);border-top:1px solid var(--border);padding:8px 10px 12px}
+.m-prog{height:3px;background:var(--border);border-radius:3px;margin-bottom:8px}
+.m-prog i{display:block;height:100%;width:38%;background:var(--gold);border-radius:3px}
+.m-play{display:flex;align-items:center;gap:6px}
+.m-pb{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--border)}
+.m-pb.main{background:var(--gold);color:var(--on-gold);border-color:var(--gold)}
+.m-pb svg{width:14px;height:14px}
+.dim{opacity:.35}
+
+/* hotspots */
+.hs{position:relative;cursor:pointer;border-radius:12px;transition:box-shadow .2s}
+.hs::after{content:attr(data-n);position:absolute;top:-7px;inset-inline-end:-7px;min-width:18px;height:18px;border-radius:9px;background:var(--gold);color:var(--on-gold);font:700 11px/18px var(--body);text-align:center;padding:0 4px;z-index:3;box-shadow:0 0 0 2px var(--bg)}
+.hs.on{box-shadow:0 0 0 2px var(--gold),0 0 0 6px color-mix(in srgb,var(--gold) 25%,transparent)}
+@media (prefers-reduced-motion:no-preference){.hs.on{animation:pulse 1.6s ease-out 1}}
+@keyframes pulse{from{box-shadow:0 0 0 2px var(--gold),0 0 0 14px color-mix(in srgb,var(--gold) 0%,transparent)}}
+
+/* list */
+.list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.item{border:1px solid var(--border);background:var(--surface);border-radius:14px;padding:12px 14px;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;text-align:start;width:100%}
+.item .n{width:26px;height:26px;border-radius:50%;background:var(--gold-wash);color:var(--gold);display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.item b{display:block;font-size:1rem}
+.item span{color:var(--ink-soft);font-size:.93rem}
+.item[aria-current="true"]{border-color:var(--gold);background:var(--surface-2)}
+.item[aria-current="true"] .n{background:var(--gold);color:var(--on-gold)}
+.stepper{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:12px}
+.stepper button{border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:6px 14px;cursor:pointer}
+.stepper .count{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+
+/* faq */
+.faq{display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 16px}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 0;color:var(--ink-soft)}
+.note{margin-top:28px;border:1px solid var(--clay);border-radius:14px;padding:14px 16px;color:var(--ink-soft);font-size:.93rem}
+.note b{color:var(--clay)}
+.foot{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem;display:flex;flex-wrap:wrap;gap:6px 18px}
+.foot a{color:var(--pine)}
+[dir="rtl"] .ornament i{transform:scaleX(-1)} [dir="rtl"] .ornament i:last-child{transform:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="head">
+    <div class="brand" id="brand"></div>
+    <div class="ctrls">
+      <div class="langs" id="langs" role="group" aria-label="Language"></div>
+      <button class="themeb" id="themeBtn" type="button"></button>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h1 id="h1"></h1>
+    <p class="lead" id="lead"></p>
+    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+  </section>
+
+  <h2 id="quickH"></h2>
+  <ol class="steps" id="steps"></ol>
+
+  <h2 id="tourH"></h2>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <p class="hint" id="hint"></p>
+  <div class="tour">
+    <div class="phone-col"><div class="phone"><div class="screen" id="screen"></div></div></div>
+    <div>
+      <ol class="list" id="list"></ol>
+      <div class="stepper">
+        <button type="button" id="prev"></button>
+        <span class="count" id="count"></span>
+        <button type="button" id="next"></button>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="faqH"></h2>
+  <div class="faq" id="faq"></div>
+  <p class="note" id="note"></p>
+  <footer class="foot" id="foot"></footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+var IC = {
+  globe:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>',
+  compass:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5l-2 5-5 2 2-5z"/></svg>',
+  book:'<svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10v16H5.5A1.5 1.5 0 0 1 4 18.5z"/><path d="M14 4h4.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H14z"/></svg>',
+  mark:'<svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg>',
+  gear:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>',
+  info:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg>',
+  speak:'<svg viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6"/><path d="M18 6.5a8 8 0 0 1 0 11"/></svg>',
+  prev:'<svg viewBox="0 0 24 24"><path d="M16 6l-8 6 8 6z"/></svg>',
+  next:'<svg viewBox="0 0 24 24"><path d="M8 6l8 6-8 6z"/></svg>',
+  pause:'<svg viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></svg>',
+  stop:'<svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.5"/></svg>',
+  down:'<svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>',
+  moon:'<svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>',
+  sun:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>'
+};
+var TABS = ["top","home","result","explore","library","saved","settings","player"];
+
+/* ------------------------------------------------------------------ texts */
+var G = {};
+G.en = {
+  name:"English", dir:"ltr",
+  ui:{brand:"Rifqat al-Uswa", sub:"User guide · version 2.7", h1:"How to use Rifqat al-Uswa",
+    lead:"Describe what you are going through, and the app reads it with you in the light of the Quran, the Sunnah and the Seerah. This guide shows every screen and every button.",
+    quickH:"Start in three steps",
+    quick:[["Write","Describe what happened, who was involved and how you feel. Any of the six languages, or Arabic dialect."],["Analyse","Tap “Analyse my situation”. It runs on your phone, offline, in about a second."],["Read and listen","Open the sections, save what helps you, or tap “Listen to the full answer”."]],
+    tourH:"Every screen, button by button", hint:"Tap a number on the phone or an item in the list. Use the arrows to go step by step.",
+    tabs:["Top bar","Home","Result","Explore","Library","Saved","Settings","Audio player"],
+    prev:"Previous", next:"Next", of:"{0} of {1}", faqH:"Questions people ask",
+    dark:"Dark", light:"Light",
+    note:"<b>Important.</b> The app is a guide for reflection. It does not give fatwas and does not replace a qualified scholar, doctor, therapist or lawyer. If you write about danger, violence or self-harm, the app first shows where to get urgent help.",
+    foot:["Privacy policy","Contact: wajdi.chaouche@gmail.com"]},
+  items:{
+    top:[["Name of the app","Tap it from anywhere to go back to the home screen."],["Language","Choose العربية, English, Français, Nederlands, Español or Português. The app reloads in that language and keeps your settings."],["Explore","Browse the 57 life topics and all 115 Prophetic situations."],["Library","Every verse, hadith and supplication the app uses, with its source and grade."],["Saved","Everything you saved. It is kept on this device only."],["Settings","Language, appearance, text size, voices, reciter and the optional AI key."],["About","How the app works, what stays private, and its limits."]],
+    home:[["Your text","Write freely and in detail, up to 3,000 characters. Nothing you write is stored or sent."],["Analyse my situation","Finds the themes, feelings and relationships in your words and brings the closest situation and texts."],["AI deepening","Appears only after you add your own Claude key in Settings. It adds a written reflection limited to the texts found."],["Topic shortcuts","One tap opens a topic page directly, without writing."],["Text of the day","A verse or hadith to start your day."]],
+    result:[["Listen to the full answer","Reads the whole answer aloud. Verses are recited by the reciter you chose."],["Open or close all sections","Each section can also be folded by tapping its title."],["Your words","What you wrote, shown at the top so you can check the reading matches."],["First reading","The main theme, your feelings, and how close the match is (strong or partial)."],["Closest situation","A situation from the life of the Prophet ﷺ or the Quran. Tap it to read the full story."],["Verses and hadith","Arabic text, meaning, source and grade. Use “Save” to keep it and the speaker to hear it."],["Practical plan","Steps for now, this week and the long term. Switch with the three tabs."],["Rate this answer","Give stars and a comment, or report a problem. It helps improve the app."],["Result actions","New situation, Copy summary, Share, Print or PDF (on the web), and Explore."]],
+    explore:[["Search","Find a topic or a situation by a word, such as anger, debt or parents."],["Two views","By topic, or the list of all 115 situations."],["Topic card","Opens the topic page: reading, situations, plan, verses, hadith, supplications and reflection questions."],["Write about this topic","Takes you to the home screen with a prompt for that topic."]],
+    library:[["Search the texts","Search inside every verse, hadith and supplication, in Arabic or your language."],["Filters","Show only verses, hadith or supplications, or texts linked to one topic."],["Text card","Arabic, meaning, source and grade of authenticity."],["Card buttons","Save it, listen to it, or copy it with its source."],["Show more","Loads the next texts in the list."]],
+    saved:[["Saved item","Tap to open the situation, verse or hadith again."],["Remove","Tap the bookmark again to remove it from Saved."],["On this device only","Saved items are not synced. Clearing the app data removes them."]],
+    settings:[["Language","The same six languages as the globe button."],["Appearance","Auto follows your phone. Dark is the default since version 2.7."],["Text size","Small, normal, large or larger."],["Two voices","Voice 1 reads hadith and supplications, voice 2 reads titles and explanations. Tap “Try” to hear each."],["Reading speed","Slow, normal, fast or faster."],["Reciter","Choose one of 26 reciters for the verses, and tap “Listen” for a sample."],["Download for offline (Android)","Downloads the recitations the app uses (15 to 65 MB). Cancel or delete at any time. A ✓ marks downloaded reciters."],["AI key (optional)","Your own Claude API key and model. Without a key, everything works offline."],["Save or Cancel","Changes apply only after you tap Save."]],
+    player:[["Progress","How far the reading has gone."],["Previous","Goes back one part."],["Play or pause","Pauses and resumes where you stopped."],["Next","Skips to the next part."],["What is playing","The title and the current part."],["Speed","Tap to switch between 1×, 1.2×, 1.45× and 0.8×."],["Stop","Ends the reading and closes the player."]]
+  },
+  faq:[["Does it need internet?","No. The analysis, library and all translations work offline. Internet is only used to stream a reciter's audio, to download a reciter, and for the optional AI."],["Is what I write saved or sent?","No. Your text stays on your phone and is not stored unless you save a result yourself. With an AI key, it goes directly to Anthropic, never to the developer."],["How do I listen without internet?","In the Android app: Settings → Reciter → Download. After that, verses play even in airplane mode."],["How do I switch back to light mode?","Settings → Appearance → Light (or Auto to follow your phone), then tap Save."],["Where do the translations come from?","Quran meanings from Tanzil.net (Saheeh International, Hamidullah, Siregar, Cortés, El-Hayek). Hadith translations other than English were prepared for the app from sunnah.com's English and are labelled. The Arabic is always the reference."]],
+  m:{ph:"Write what happened in your own words… Who? What happened? How do you feel?",analyse:"Analyse my situation",ai:"AI deepening",chips:["Anger","Anxiety","Family"],daily:"Text of the day",dailyT:"For indeed, with hardship comes ease.",listenAll:"Listen to the full answer",openAll:"Open all",closeAll:"Close all",quote:"“My brother betrayed my trust and I don't know whether to forgive him.”",first:"A first reading of your situation",strong:"Strong match",firstTxt:"Your words are mostly about anger, within your relationship with your siblings…",closest:"The closest situation",sitT:"Yusuf and his brothers: “No blame upon you today”",src:"Al-Sharh 94:5",save:"Save",listen:"Listen",plan:"Practical plan",now:"Now",week:"This week",long:"Long term",planTxt:"Wait until you are calm before you reply.",rate:"Rate this answer",newSit:"New situation",copy:"Copy summary",share:"Share",exSearch:"Search a topic or situation…",byTopic:"By topic",allSit:"All situations (115)",topics:["Anger","Patience","Family"],topicSub:"8 situations · 6 verses",write:"Write about this topic",libSearch:"Search the texts…",filters:["All","Verses","Hadith","Supplications"],more:"Show more",savedH:"Saved",savedNote:"Kept on this device only",setH:"Settings",lang:"Language",theme:"Appearance",auto:"Auto",lightL:"Light",darkL:"Dark",size:"Text size",sizes:["S","M","L","XL"],v1:"Voice 1 — hadith",v2:"Voice 2 — narrator",tryL:"Try",speed:"Speed",speeds:["Slow","Normal","Fast"],reciter:"Reciter",reciterN:"Mahmoud Khalil Al-Husary",down:"Download (≈ 40 MB)",key:"Claude API key",cancel:"Cancel",saveB:"Save",playT:"Listen to the full answer",playS:"Part 3 of 14 · The closest situation"}
+};
+G.fr = {
+  name:"Français", dir:"ltr",
+  ui:{brand:"Rifqat al-Uswa", sub:"Guide d'utilisation · version 2.7", h1:"Comment utiliser Rifqat al-Uswa",
+    lead:"Décrivez ce que vous vivez, et l'application le lit avec vous à la lumière du Coran, de la Sunna et de la Sîra. Ce guide présente chaque écran et chaque bouton.",
+    quickH:"Commencer en trois étapes",
+    quick:[["Écrire","Décrivez ce qui s'est passé, qui était concerné et ce que vous ressentez. Dans l'une des six langues, ou en arabe dialectal."],["Analyser","Appuyez sur « Analyser ma situation ». Tout se fait sur votre téléphone, hors ligne, en une seconde environ."],["Lire et écouter","Ouvrez les sections, enregistrez ce qui vous aide, ou appuyez sur « Écouter la réponse complète »."]],
+    tourH:"Chaque écran, bouton par bouton", hint:"Touchez un numéro sur le téléphone ou un élément de la liste. Utilisez les flèches pour avancer pas à pas.",
+    tabs:["Barre du haut","Accueil","Résultat","Explorer","Bibliothèque","Enregistrés","Réglages","Lecteur audio"],
+    prev:"Précédent", next:"Suivant", of:"{0} sur {1}", faqH:"Questions fréquentes",
+    dark:"Sombre", light:"Clair",
+    note:"<b>Important.</b> L'application est un guide pour la réflexion. Elle ne donne pas de fatwas et ne remplace pas un savant qualifié, un médecin, un thérapeute ou un avocat. Si vous écrivez au sujet d'un danger, de violence ou d'automutilation, l'application indique d'abord où trouver une aide urgente (3114 en France).",
+    foot:["Politique de confidentialité","Contact : wajdi.chaouche@gmail.com"]},
+  items:{
+    top:[["Nom de l'application","Touchez-le depuis n'importe où pour revenir à l'accueil."],["Langue","Choisissez العربية, English, Français, Nederlands, Español ou Português. L'application se recharge dans cette langue et garde vos réglages."],["Explorer","Parcourez les 57 thèmes de vie et les 115 situations prophétiques."],["Bibliothèque","Chaque verset, hadith et invocation utilisés par l'application, avec leur source et leur degré."],["Enregistrés","Tout ce que vous avez enregistré. Gardé uniquement sur cet appareil."],["Réglages","Langue, apparence, taille du texte, voix, récitateur et clé IA facultative."],["À propos","Comment l'application fonctionne, ce qui reste privé, et ses limites."]],
+    home:[["Votre texte","Écrivez librement et en détail, jusqu'à 3 000 caractères. Rien de ce que vous écrivez n'est enregistré ni envoyé."],["Analyser ma situation","Repère les thèmes, les sentiments et les relations dans vos mots, puis propose la situation et les textes les plus proches."],["Approfondissement par IA","N'apparaît qu'après l'ajout de votre propre clé Claude dans les Réglages. Ajoute une réflexion écrite limitée aux textes trouvés."],["Raccourcis de thèmes","Un toucher ouvre directement la page d'un thème, sans écrire."],["Texte du jour","Un verset ou un hadith pour commencer la journée."]],
+    result:[["Écouter la réponse complète","Lit toute la réponse à voix haute. Les versets sont récités par le récitateur choisi."],["Ouvrir ou fermer toutes les sections","Chaque section se replie aussi en touchant son titre."],["Vos mots","Ce que vous avez écrit, rappelé en haut pour vérifier que la lecture correspond."],["Première lecture","Le thème principal, vos sentiments, et la force de la correspondance (forte ou partielle)."],["Situation la plus proche","Une situation de la vie du Prophète ﷺ ou du Coran. Touchez-la pour lire tout le récit."],["Versets et hadiths","Texte arabe, sens, source et degré. « Enregistrer » pour le garder, le haut-parleur pour l'écouter."],["Plan pratique","Des étapes pour maintenant, cette semaine et le long terme. Changez avec les trois onglets."],["Évaluer cette réponse","Donnez des étoiles et un commentaire, ou signalez un problème. Cela aide à améliorer l'application."],["Actions du résultat","Nouvelle situation, Copier le résumé, Partager, Imprimer ou PDF (sur le web), et Explorer."]],
+    explore:[["Recherche","Trouvez un thème ou une situation par un mot : colère, dettes, parents…"],["Deux vues","Par thème, ou la liste des 115 situations."],["Carte de thème","Ouvre la page du thème : lecture, situations, plan, versets, hadiths, invocations et questions de réflexion."],["Écrire sur ce thème","Vous ramène à l'accueil avec une invitation pour ce thème."]],
+    library:[["Rechercher dans les textes","Cherchez dans chaque verset, hadith et invocation, en arabe ou dans votre langue."],["Filtres","N'afficher que les versets, les hadiths ou les invocations, ou les textes liés à un thème."],["Carte de texte","Arabe, sens, source et degré d'authenticité."],["Boutons de la carte","L'enregistrer, l'écouter, ou le copier avec sa source."],["Afficher plus","Charge les textes suivants de la liste."]],
+    saved:[["Élément enregistré","Touchez-le pour rouvrir la situation, le verset ou le hadith."],["Retirer","Touchez de nouveau le signet pour le retirer des Enregistrés."],["Sur cet appareil uniquement","Les éléments ne sont pas synchronisés. Effacer les données de l'application les supprime."]],
+    settings:[["Langue","Les mêmes six langues que le bouton globe."],["Apparence","Automatique suit votre téléphone. Le mode sombre est le mode par défaut depuis la version 2.7."],["Taille du texte","Petite, normale, grande ou plus grande."],["Deux voix","La voix 1 lit les hadiths et les invocations, la voix 2 les titres et les explications. « Essayer » pour entendre chacune."],["Vitesse de lecture","Lente, normale, rapide ou plus rapide."],["Récitateur","Choisissez l'un des 26 récitateurs pour les versets, et « Écouter » pour un extrait."],["Télécharger hors ligne (Android)","Télécharge les récitations utilisées par l'application (15 à 65 Mo). Annulez ou supprimez à tout moment. Un ✓ marque les récitateurs téléchargés."],["Clé IA (facultative)","Votre propre clé API Claude et le modèle. Sans clé, tout fonctionne hors ligne."],["Enregistrer ou Annuler","Les changements ne s'appliquent qu'après « Enregistrer »."]],
+    player:[["Progression","Où en est la lecture."],["Précédent","Revient d'une partie."],["Lecture ou pause","Met en pause et reprend là où vous vous êtes arrêté."],["Suivant","Passe à la partie suivante."],["En cours","Le titre et la partie en cours."],["Vitesse","Touchez pour passer entre 1×, 1,2×, 1,45× et 0,8×."],["Arrêter","Termine la lecture et ferme le lecteur."]]
+  },
+  faq:[["Faut-il internet ?","Non. L'analyse, la bibliothèque et toutes les traductions fonctionnent hors ligne. Internet sert seulement à diffuser la voix d'un récitateur, à télécharger un récitateur, et pour l'IA facultative."],["Ce que j'écris est-il enregistré ou envoyé ?","Non. Votre texte reste sur votre téléphone et n'est enregistré que si vous enregistrez vous-même un résultat. Avec une clé IA, il va directement à Anthropic, jamais au développeur."],["Comment écouter sans internet ?","Dans l'application Android : Réglages → Récitateur → Télécharger. Ensuite, les versets se jouent même en mode avion."],["Comment revenir au mode clair ?","Réglages → Apparence → Clair (ou Automatique pour suivre le téléphone), puis Enregistrer."],["D'où viennent les traductions ?","Sens du Coran via Tanzil.net (Hamidullah en français). Les hadiths en français ont été traduits pour l'application à partir de l'anglais de sunnah.com, et c'est indiqué. L'arabe reste toujours la référence."]],
+  m:{ph:"Écrivez ce qui s'est passé avec vos mots… Qui ? Quoi ? Que ressentez-vous ?",analyse:"Analyser ma situation",ai:"Approfondir par l'IA",chips:["Colère","Anxiété","Famille"],daily:"Texte du jour",dailyT:"À côté de la difficulté, est, certes, une facilité !",listenAll:"Écouter la réponse complète",openAll:"Tout ouvrir",closeAll:"Tout fermer",quote:"« Mon frère a trahi ma confiance et je ne sais pas si je dois lui pardonner. »",first:"Une première lecture de votre situation",strong:"Correspondance forte",firstTxt:"Vos mots concernent surtout la colère, dans votre relation avec vos frères et sœurs…",closest:"La situation la plus proche",sitT:"Yûsuf et ses frères : « Pas de reproche contre vous aujourd'hui »",src:"Ash-Sharh 94:5",save:"Enregistrer",listen:"Écouter",plan:"Plan pratique",now:"Maintenant",week:"Cette semaine",long:"Long terme",planTxt:"Attendez d'être calme avant de répondre.",rate:"Évaluer cette réponse",newSit:"Nouvelle situation",copy:"Copier le résumé",share:"Partager",exSearch:"Chercher un thème ou une situation…",byTopic:"Par thème",allSit:"Toutes les situations (115)",topics:["Colère","Patience","Famille"],topicSub:"8 situations · 6 versets",write:"Écrire sur ce thème",libSearch:"Chercher dans les textes…",filters:["Tout","Versets","Hadiths","Invocations"],more:"Afficher plus",savedH:"Enregistrés",savedNote:"Gardé sur cet appareil uniquement",setH:"Réglages",lang:"Langue",theme:"Apparence",auto:"Auto",lightL:"Clair",darkL:"Sombre",size:"Taille du texte",sizes:["P","N","G","TG"],v1:"Voix 1 — hadiths",v2:"Voix 2 — narrateur",tryL:"Essayer",speed:"Vitesse",speeds:["Lente","Normale","Rapide"],reciter:"Récitateur",reciterN:"Mahmoud Khalil Al-Husary",down:"Télécharger (≈ 40 Mo)",key:"Clé API Claude",cancel:"Annuler",saveB:"Enregistrer",playT:"Écouter la réponse complète",playS:"Partie 3 sur 14 · La situation la plus proche"}
+};
+G.ar = {
+  name:"العربية", dir:"rtl",
+  ui:{brand:"رِفقة الأُسوة", sub:"دليل الاستخدام · الإصدار 2.7", h1:"كيف تستخدم رِفقة الأُسوة",
+    lead:"صف ما تمرّ به بكلماتك، ويقرؤه التطبيق معك في ضوء القرآن الكريم والسنة النبوية والسيرة. يعرض هذا الدليل كل شاشة وكل زر.",
+    quickH:"ابدأ في ثلاث خطوات",
+    quick:[["اكتب","صف ما حدث، ومن المعنيّ، وبماذا تشعر. بالفصحى أو العامية أو بإحدى اللغات الست."],["حلّل","اضغط «حلّل موقفي». يعمل التحليل على هاتفك دون إنترنت في نحو ثانية."],["اقرأ واستمع","افتح الأقسام، واحفظ ما ينفعك، أو اضغط «استمع إلى الإجابة كاملة»."]],
+    tourH:"كل شاشة، زرًّا زرًّا", hint:"اضغط رقمًا على الهاتف أو عنصرًا في القائمة، واستعمل السهمين للتنقل خطوة خطوة.",
+    tabs:["الشريط العلوي","الرئيسية","النتيجة","الموضوعات","المكتبة","المحفوظات","الإعدادات","مشغّل الصوت"],
+    prev:"السابق", next:"التالي", of:"{0} من {1}", faqH:"أسئلة شائعة",
+    dark:"داكن", light:"فاتح",
+    note:"<b>تنبيه مهم.</b> التطبيق إرشادي تأملي، وليس فتوى ولا بديلًا عن عالم مؤهل أو طبيب أو مختص نفسي أو محامٍ. إذا كتبت عن خطر أو عنف أو إيذاء للنفس، يعرض لك التطبيق أولًا أين تجد المساعدة العاجلة.",
+    foot:["سياسة الخصوصية","للتواصل: wajdi.chaouche@gmail.com"]},
+  items:{
+    top:[["اسم التطبيق","اضغطه من أي مكان للعودة إلى الصفحة الرئيسية."],["اللغة","اختر العربية أو English أو Français أو Nederlands أو Español أو Português. يُعاد تحميل التطبيق بها مع بقاء إعداداتك."],["الموضوعات","تصفّح 57 موضوعًا حياتيًا و115 موقفًا نبويًا."],["المكتبة","كل آية وحديث ودعاء يعتمد عليه التطبيق، مع المصدر والدرجة."],["المحفوظات","كل ما حفظته، ويبقى على هذا الجهاز فقط."],["الإعدادات","اللغة والمظهر وحجم الخط والأصوات والقارئ ومفتاح الذكاء الاصطناعي الاختياري."],["عن التطبيق","كيف يعمل التطبيق، وما يبقى خاصًا، وحدوده."]],
+    home:[["نصّك","اكتب بحرية وبالتفصيل حتى 3000 حرف. ما تكتبه لا يُحفظ ولا يُرسل."],["حلّل موقفي","يستخرج الموضوعات والمشاعر والعلاقات من كلامك، ويأتيك بأقرب موقف ونصوص."],["التعميق بالذكاء الاصطناعي","يظهر فقط بعد إضافة مفتاح Claude الخاص بك في الإعدادات، ويضيف تأملًا مكتوبًا مقيّدًا بالنصوص المسترجعة."],["اختصارات الموضوعات","ضغطة واحدة تفتح صفحة الموضوع مباشرة دون كتابة."],["نص اليوم","آية أو حديث تبدأ به يومك."]],
+    result:[["استمع إلى الإجابة كاملة","يقرأ الإجابة كلها بصوت مسموع، وتُتلى الآيات بصوت القارئ الذي اخترته."],["فتح الأقسام أو طيّها","ويمكن طيّ كل قسم بالضغط على عنوانه."],["كلماتك","ما كتبته معروضًا في الأعلى لتتأكد أن القراءة تطابق قصدك."],["القراءة الأولى","الموضوع الأساسي ومشاعرك ودرجة التطابق (قوي أو جزئي)."],["الموقف الأقرب","موقف من السيرة أو من القرآن. اضغطه لقراءة القصة كاملة."],["الآيات والأحاديث","النص العربي والمعنى والمصدر والدرجة. «حفظ» للاحتفاظ به، ومكبّر الصوت للاستماع."],["الخطة العملية","خطوات للآن ولهذا الأسبوع وللمدى الطويل، تتنقل بينها بالألسنة الثلاثة."],["قيّم هذه الإجابة","نجوم وتعليق، أو إبلاغ عن مشكلة. يساعد ذلك على تحسين التطبيق."],["أزرار النتيجة","موقف جديد، نسخ الخلاصة، مشاركة، طباعة أو PDF (على الويب)، واستكشاف."]],
+    explore:[["البحث","ابحث عن موضوع أو موقف بكلمة، مثل: الغضب، الديون، الوالدين."],["طريقتا عرض","حسب الموضوع، أو قائمة المواقف الـ115 كلها."],["بطاقة الموضوع","تفتح صفحة الموضوع: قراءة ومواقف وخطة وآيات وأحاديث وأدعية وأسئلة للتأمل."],["اكتب موقفك في هذا الموضوع","يعيدك إلى الرئيسية مع دعوة للكتابة في هذا الموضوع."]],
+    library:[["البحث في النصوص","ابحث في كل آية وحديث ودعاء، بالعربية أو بلغتك."],["التصفية","اعرض الآيات أو الأحاديث أو الأدعية فقط، أو النصوص المرتبطة بموضوع."],["بطاقة النص","النص العربي والمعنى والمصدر ودرجة الصحة."],["أزرار البطاقة","احفظه، أو استمع إليه، أو انسخه مع مصدره."],["عرض المزيد","يحمّل النصوص التالية في القائمة."]],
+    saved:[["عنصر محفوظ","اضغطه لفتح الموقف أو الآية أو الحديث من جديد."],["الإزالة","اضغط علامة الحفظ مرة أخرى لإزالته."],["على هذا الجهاز فقط","المحفوظات لا تُزامَن، وتُحذف عند مسح بيانات التطبيق."]],
+    settings:[["اللغة","اللغات الست نفسها التي في زر الكرة الأرضية."],["المظهر","«تلقائي» يتبع هاتفك. الوضع الداكن هو الافتراضي منذ الإصدار 2.7."],["حجم الخط","صغير أو عادي أو كبير أو أكبر."],["صوتان","الصوت 1 (الشيخ) للأحاديث والأدعية، والصوت 2 (المحاور) للعناوين والشرح. اضغط «تجربة» لسماع كل منهما."],["سرعة القراءة","بطيئة أو عادية أو سريعة أو أسرع."],["القارئ","اختر أحد 26 قارئًا لتلاوة الآيات، واضغط «استماع» لعيّنة."],["التنزيل دون إنترنت (أندرويد)","يُنزّل التلاوات التي يستعملها التطبيق (15 إلى 65 ميغابايت). يمكن الإلغاء أو الحذف في أي وقت، وتظهر علامة ✓ بجانب القارئ المنزّل."],["مفتاح الذكاء الاصطناعي (اختياري)","مفتاح Claude API الخاص بك والنموذج. بدون مفتاح يعمل كل شيء دون إنترنت."],["حفظ أو إلغاء","لا تُطبَّق التغييرات إلا بعد الضغط على «حفظ»."]],
+    player:[["التقدّم","إلى أين وصلت القراءة."],["السابق","يعود مقطعًا إلى الوراء."],["تشغيل أو إيقاف مؤقت","يوقف القراءة ويستأنفها من حيث توقفت."],["التالي","ينتقل إلى المقطع التالي."],["ما يُقرأ الآن","العنوان والمقطع الحالي."],["السرعة","اضغط للتبديل بين 1× و1.2× و1.45× و0.8×."],["إيقاف","ينهي القراءة ويغلق المشغّل."]]
+  },
+  faq:[["هل يحتاج التطبيق إلى إنترنت؟","لا. التحليل والمكتبة وكل الترجمات تعمل دون إنترنت. يُستعمل الإنترنت فقط لبثّ تلاوة القارئ، أو لتنزيل قارئ، أو للذكاء الاصطناعي الاختياري."],["هل يُحفظ ما أكتبه أو يُرسل؟","لا. يبقى نصك على هاتفك ولا يُحفظ إلا إذا حفظت نتيجة بنفسك. ومع مفتاح الذكاء الاصطناعي يُرسل مباشرة إلى Anthropic، ولا يصل إلى المطوّر أبدًا."],["كيف أستمع دون إنترنت؟","في تطبيق أندرويد: الإعدادات ← القارئ ← «تنزيل». بعد ذلك تُتلى الآيات حتى في وضع الطيران."],["كيف أعود إلى الوضع الفاتح؟","الإعدادات ← المظهر ← فاتح (أو تلقائي ليتبع هاتفك)، ثم «حفظ»."],["من أين الترجمات؟","معاني القرآن من Tanzil.net، وترجمات الأحاديث بغير الإنجليزية أُعدّت للتطبيق عن ترجمة sunnah.com الإنجليزية ومذكور ذلك فيه. والنص العربي هو المرجع دائمًا."]],
+  m:{ph:"اكتب ما حدث معك بطريقتك… من؟ ماذا حدث؟ بماذا تشعر؟",analyse:"حلّل موقفي",ai:"تعميق التحليل بالذكاء الاصطناعي",chips:["الغضب","القلق","الأسرة"],daily:"نص اليوم",dailyT:"",listenAll:"استمع إلى الإجابة كاملة",openAll:"فتح الكل",closeAll:"طيّ الكل",quote:"«أخي خانني ولا أعرف هل أسامحه»",first:"قراءة أولى لموقفك",strong:"تطابق قوي",firstTxt:"ما كتبته يتعلق أساسًا بالغضب، في إطار علاقتك بإخوتك…",closest:"الموقف الأقرب لحالتك",sitT:"يوسف وإخوته: «لا تثريب عليكم اليوم»",src:"سورة الشرح، الآية 5",save:"حفظ",listen:"استماع",plan:"خطة عملية لحالتك",now:"الآن",week:"هذا الأسبوع",long:"على المدى البعيد",planTxt:"انتظر حتى تهدأ قبل أن ترد.",rate:"قيّم هذه الإجابة",newSit:"موقف جديد",copy:"نسخ الخلاصة",share:"مشاركة",exSearch:"ابحث عن موضوع أو موقف…",byTopic:"حسب الموضوع",allSit:"كل المواقف (115)",topics:["الغضب","الصبر","الأسرة"],topicSub:"8 مواقف · 6 آيات",write:"اكتب موقفك في هذا الموضوع",libSearch:"ابحث في النصوص…",filters:["الكل","آيات","أحاديث","أدعية"],more:"عرض المزيد",savedH:"المحفوظات",savedNote:"يُحفظ على هذا الجهاز فقط",setH:"الإعدادات",lang:"اللغة",theme:"المظهر",auto:"تلقائي",lightL:"فاتح",darkL:"داكن",size:"حجم الخط",sizes:["صغير","عادي","كبير","أكبر"],v1:"الصوت 1 — الشيخ",v2:"الصوت 2 — المحاور",tryL:"تجربة",speed:"السرعة",speeds:["بطيئة","عادية","سريعة"],reciter:"القارئ",reciterN:"محمود خليل الحصري",down:"تنزيل (≈ 40 ميغابايت)",key:"مفتاح Claude API",cancel:"إلغاء",saveB:"حفظ",playT:"استمع إلى الإجابة كاملة",playS:"المقطع 3 من 14 · الموقف الأقرب"}
+};
+G.nl = {
+  name:"Nederlands", dir:"ltr",
+  ui:{brand:"Rifqat al-Uswa", sub:"Handleiding · versie 2.7", h1:"Zo gebruik je Rifqat al-Uswa",
+    lead:"Beschrijf wat je doormaakt, en de app leest het met je in het licht van de Koran, de Soenna en de Sira. Deze gids laat elk scherm en elke knop zien.",
+    quickH:"Begin in drie stappen",
+    quick:[["Schrijf","Beschrijf wat er gebeurde, wie erbij betrokken was en hoe je je voelt. In een van de zes talen, of in Arabisch dialect."],["Analyseer","Tik op ‘Analyseer mijn situatie’. Het werkt op je telefoon, offline, in ongeveer een seconde."],["Lees en luister","Open de onderdelen, bewaar wat je helpt, of tik op ‘Luister naar het hele antwoord’."]],
+    tourH:"Elk scherm, knop voor knop", hint:"Tik op een nummer op de telefoon of op een item in de lijst. Gebruik de pijlen om stap voor stap te gaan.",
+    tabs:["Bovenbalk","Start","Resultaat","Verkennen","Bibliotheek","Bewaard","Instellingen","Audiospeler"],
+    prev:"Vorige", next:"Volgende", of:"{0} van {1}", faqH:"Veelgestelde vragen",
+    dark:"Donker", light:"Licht",
+    note:"<b>Belangrijk.</b> De app is een gids voor bezinning. Ze geeft geen fatwa's en vervangt geen bevoegde geleerde, arts, therapeut of advocaat. Als je schrijft over gevaar, geweld of zelfbeschadiging, toont de app eerst waar je dringend hulp krijgt (113 in Nederland).",
+    foot:["Privacybeleid","Contact: wajdi.chaouche@gmail.com"]},
+  items:{
+    top:[["Naam van de app","Tik erop om vanaf elke plek terug te gaan naar het startscherm."],["Taal","Kies العربية, English, Français, Nederlands, Español of Português. De app laadt opnieuw in die taal en houdt je instellingen."],["Verkennen","Blader door de 57 levensthema's en alle 115 profetische situaties."],["Bibliotheek","Elk vers, elke hadith en elk smeekgebed dat de app gebruikt, met bron en graad."],["Bewaard","Alles wat je bewaarde. Het blijft alleen op dit apparaat."],["Instellingen","Taal, weergave, tekstgrootte, stemmen, recitator en de optionele AI-sleutel."],["Over","Hoe de app werkt, wat privé blijft, en de grenzen ervan."]],
+    home:[["Je tekst","Schrijf vrij en uitgebreid, tot 3000 tekens. Niets wat je schrijft wordt opgeslagen of verstuurd."],["Analyseer mijn situatie","Vindt de thema's, gevoelens en relaties in je woorden en geeft de dichtstbijzijnde situatie en teksten."],["Verdieping met AI","Verschijnt pas nadat je je eigen Claude-sleutel in Instellingen hebt toegevoegd. Voegt een geschreven bezinning toe, beperkt tot de gevonden teksten."],["Thema-snelkoppelingen","Eén tik opent direct een themapagina, zonder te schrijven."],["Tekst van de dag","Een vers of hadith om je dag mee te beginnen."]],
+    result:[["Luister naar het hele antwoord","Leest het hele antwoord voor. Verzen worden gereciteerd door de recitator die je koos."],["Alles openen of sluiten","Elk onderdeel klap je ook in door op de titel te tikken."],["Jouw woorden","Wat je schreef, bovenaan getoond zodat je kunt nagaan of de lezing klopt."],["Eerste lezing","Het hoofdthema, je gevoelens, en hoe sterk de overeenkomst is (sterk of gedeeltelijk)."],["Dichtstbijzijnde situatie","Een situatie uit het leven van de Profeet ﷺ of uit de Koran. Tik erop voor het hele verhaal."],["Verzen en hadith","Arabische tekst, betekenis, bron en graad. ‘Bewaren’ om het te houden, de luidspreker om te luisteren."],["Praktisch plan","Stappen voor nu, deze week en de lange termijn. Wissel met de drie tabbladen."],["Beoordeel dit antwoord","Geef sterren en een opmerking, of meld een probleem. Zo verbetert de app."],["Resultaatknoppen","Nieuwe situatie, Samenvatting kopiëren, Delen, Afdrukken of PDF (op het web), en Verkennen."]],
+    explore:[["Zoeken","Vind een thema of situatie met een woord, zoals woede, schulden of ouders."],["Twee weergaven","Per thema, of de lijst van alle 115 situaties."],["Themakaart","Opent de themapagina: lezing, situaties, plan, verzen, hadith, smeekgebeden en vragen om over na te denken."],["Schrijf over dit thema","Brengt je naar het startscherm met een uitnodiging voor dit thema."]],
+    library:[["Zoek in de teksten","Zoek in elk vers, elke hadith en elk smeekgebed, in het Arabisch of in je taal."],["Filters","Toon alleen verzen, hadith of smeekgebeden, of teksten bij één thema."],["Tekstkaart","Arabisch, betekenis, bron en graad van betrouwbaarheid."],["Knoppen op de kaart","Bewaar het, luister ernaar, of kopieer het met de bron."],["Meer tonen","Laadt de volgende teksten in de lijst."]],
+    saved:[["Bewaard item","Tik om de situatie, het vers of de hadith weer te openen."],["Verwijderen","Tik nogmaals op de bladwijzer om het te verwijderen."],["Alleen op dit apparaat","Bewaarde items worden niet gesynchroniseerd. App-gegevens wissen verwijdert ze."]],
+    settings:[["Taal","Dezelfde zes talen als de wereldbol-knop."],["Weergave","Automatisch volgt je telefoon. Donker is de standaard sinds versie 2.7."],["Tekstgrootte","Klein, normaal, groot of groter."],["Twee stemmen","Stem 1 leest hadith en smeekgebeden, stem 2 titels en uitleg. Tik op ‘Probeer’ om elk te horen."],["Voorleessnelheid","Langzaam, normaal, snel of sneller."],["Recitator","Kies een van de 26 recitatoren voor de verzen, en tik op ‘Luister’ voor een voorbeeld."],["Offline downloaden (Android)","Downloadt de recitaties die de app gebruikt (15 tot 65 MB). Annuleer of verwijder wanneer je wilt. Een ✓ toont gedownloade recitatoren."],["AI-sleutel (optioneel)","Je eigen Claude API-sleutel en model. Zonder sleutel werkt alles offline."],["Opslaan of Annuleren","Wijzigingen gelden pas na ‘Opslaan’."]],
+    player:[["Voortgang","Hoe ver het voorlezen is."],["Vorige","Gaat één deel terug."],["Afspelen of pauzeren","Pauzeert en gaat verder waar je stopte."],["Volgende","Gaat naar het volgende deel."],["Wat speelt er","De titel en het huidige deel."],["Snelheid","Tik om te wisselen tussen 1×, 1,2×, 1,45× en 0,8×."],["Stoppen","Beëindigt het voorlezen en sluit de speler."]]
+  },
+  faq:[["Heb ik internet nodig?","Nee. De analyse, bibliotheek en alle vertalingen werken offline. Internet wordt alleen gebruikt om een recitatie te streamen, een recitator te downloaden en voor de optionele AI."],["Wordt wat ik schrijf opgeslagen of verstuurd?","Nee. Je tekst blijft op je telefoon en wordt niet opgeslagen, tenzij je zelf een resultaat bewaart. Met een AI-sleutel gaat hij rechtstreeks naar Anthropic, nooit naar de ontwikkelaar."],["Hoe luister ik zonder internet?","In de Android-app: Instellingen → Recitator → Downloaden. Daarna spelen de verzen ook in vliegtuigmodus."],["Hoe ga ik terug naar licht?","Instellingen → Weergave → Licht (of Automatisch om je telefoon te volgen), en dan Opslaan."],["Waar komen de vertalingen vandaan?","Koranbetekenissen via Tanzil.net (Siregar in het Nederlands). De Nederlandse hadithvertalingen zijn voor de app gemaakt vanuit het Engels van sunnah.com en zo gemarkeerd. Het Arabisch blijft altijd de maatstaf."]],
+  m:{ph:"Schrijf in je eigen woorden wat er gebeurde… Wie? Wat? Hoe voel je je?",analyse:"Analyseer mijn situatie",ai:"Verdieping met AI",chips:["Woede","Zorgen","Familie"],daily:"Tekst van de dag",dailyT:"Voorwaar, met de moeilijkheid komt verlichting.",listenAll:"Luister naar het hele antwoord",openAll:"Alles openen",closeAll:"Alles sluiten",quote:"‘Mijn broer heeft mijn vertrouwen beschaamd en ik weet niet of ik hem moet vergeven.’",first:"Een eerste lezing van je situatie",strong:"Sterke overeenkomst",firstTxt:"Je woorden gaan vooral over woede, binnen je relatie met je broers en zussen…",closest:"De dichtstbijzijnde situatie",sitT:"Yusuf en zijn broers: ‘Geen verwijt treft jullie vandaag’",src:"Ash-Sharh 94:5",save:"Bewaren",listen:"Luister",plan:"Praktisch plan",now:"Nu",week:"Deze week",long:"Lange termijn",planTxt:"Wacht tot je kalm bent voordat je reageert.",rate:"Beoordeel dit antwoord",newSit:"Nieuwe situatie",copy:"Samenvatting kopiëren",share:"Delen",exSearch:"Zoek een thema of situatie…",byTopic:"Per thema",allSit:"Alle situaties (115)",topics:["Woede","Geduld","Familie"],topicSub:"8 situaties · 6 verzen",write:"Schrijf over dit thema",libSearch:"Zoek in de teksten…",filters:["Alles","Verzen","Hadith","Smeekgebeden"],more:"Meer tonen",savedH:"Bewaard",savedNote:"Alleen op dit apparaat",setH:"Instellingen",lang:"Taal",theme:"Weergave",auto:"Auto",lightL:"Licht",darkL:"Donker",size:"Tekstgrootte",sizes:["S","M","L","XL"],v1:"Stem 1 — hadith",v2:"Stem 2 — verteller",tryL:"Probeer",speed:"Snelheid",speeds:["Langzaam","Normaal","Snel"],reciter:"Recitator",reciterN:"Mahmoud Khalil Al-Husary",down:"Downloaden (≈ 40 MB)",key:"Claude API-sleutel",cancel:"Annuleren",saveB:"Opslaan",playT:"Luister naar het hele antwoord",playS:"Deel 3 van 14 · De dichtstbijzijnde situatie"}
+};
+G.es = {
+  name:"Español", dir:"ltr",
+  ui:{brand:"Rifqat al-Uswa", sub:"Guía de uso · versión 2.7", h1:"Cómo usar Rifqat al-Uswa",
+    lead:"Describe lo que estás viviendo y la app lo lee contigo a la luz del Corán, la Sunna y la Sira. Esta guía muestra cada pantalla y cada botón.",
+    quickH:"Empieza en tres pasos",
+    quick:[["Escribe","Describe qué pasó, quién estaba implicado y cómo te sientes. En cualquiera de los seis idiomas, o en árabe dialectal."],["Analiza","Toca «Analizar mi situación». Funciona en tu teléfono, sin conexión, en un segundo aproximadamente."],["Lee y escucha","Abre las secciones, guarda lo que te ayude o toca «Escuchar la respuesta completa»."]],
+    tourH:"Cada pantalla, botón por botón", hint:"Toca un número en el teléfono o un elemento de la lista. Usa las flechas para ir paso a paso.",
+    tabs:["Barra superior","Inicio","Resultado","Explorar","Biblioteca","Guardados","Ajustes","Reproductor"],
+    prev:"Anterior", next:"Siguiente", of:"{0} de {1}", faqH:"Preguntas frecuentes",
+    dark:"Oscuro", light:"Claro",
+    note:"<b>Importante.</b> La app es una guía para la reflexión. No emite fetuas y no sustituye a un sabio cualificado, un médico, un terapeuta ni un abogado. Si escribes sobre peligro, violencia o autolesión, la app te muestra primero dónde pedir ayuda urgente (024 en España).",
+    foot:["Política de privacidad","Contacto: wajdi.chaouche@gmail.com"]},
+  items:{
+    top:[["Nombre de la app","Tócalo desde cualquier lugar para volver al inicio."],["Idioma","Elige العربية, English, Français, Nederlands, Español o Português. La app se recarga en ese idioma y conserva tus ajustes."],["Explorar","Recorre los 57 temas de la vida y las 115 situaciones proféticas."],["Biblioteca","Cada aleya, hadiz y súplica que usa la app, con su fuente y su grado."],["Guardados","Todo lo que guardaste. Se queda solo en este dispositivo."],["Ajustes","Idioma, aspecto, tamaño de letra, voces, recitador y la clave de IA opcional."],["Acerca de","Cómo funciona la app, qué permanece privado y sus límites."]],
+    home:[["Tu texto","Escribe libremente y con detalle, hasta 3000 caracteres. Nada de lo que escribes se guarda ni se envía."],["Analizar mi situación","Encuentra los temas, sentimientos y relaciones en tus palabras y trae la situación y los textos más cercanos."],["Profundizar con IA","Aparece solo después de añadir tu propia clave de Claude en Ajustes. Añade una reflexión escrita limitada a los textos encontrados."],["Atajos de temas","Un toque abre directamente la página de un tema, sin escribir."],["Texto del día","Una aleya o un hadiz para empezar el día."]],
+    result:[["Escuchar la respuesta completa","Lee toda la respuesta en voz alta. Las aleyas las recita el recitador que elegiste."],["Abrir o cerrar todas las secciones","Cada sección también se pliega tocando su título."],["Tus palabras","Lo que escribiste, arriba, para comprobar que la lectura coincide."],["Primera lectura","El tema principal, tus sentimientos y lo cercana que es la coincidencia (fuerte o parcial)."],["Situación más cercana","Una situación de la vida del Profeta ﷺ o del Corán. Tócala para leer la historia completa."],["Aleyas y hadices","Texto árabe, significado, fuente y grado. «Guardar» para conservarlo y el altavoz para escucharlo."],["Plan práctico","Pasos para ahora, esta semana y el largo plazo. Cambia con las tres pestañas."],["Valora esta respuesta","Da estrellas y un comentario, o informa de un problema. Ayuda a mejorar la app."],["Acciones del resultado","Nueva situación, Copiar resumen, Compartir, Imprimir o PDF (en la web) y Explorar."]],
+    explore:[["Buscar","Encuentra un tema o una situación con una palabra: ira, deudas, padres…"],["Dos vistas","Por tema, o la lista de las 115 situaciones."],["Tarjeta de tema","Abre la página del tema: lectura, situaciones, plan, aleyas, hadices, súplicas y preguntas para reflexionar."],["Escribe sobre este tema","Te lleva al inicio con una invitación para ese tema."]],
+    library:[["Buscar en los textos","Busca en cada aleya, hadiz y súplica, en árabe o en tu idioma."],["Filtros","Muestra solo aleyas, hadices o súplicas, o los textos de un tema."],["Tarjeta de texto","Árabe, significado, fuente y grado de autenticidad."],["Botones de la tarjeta","Guárdalo, escúchalo o cópialo con su fuente."],["Mostrar más","Carga los siguientes textos de la lista."]],
+    saved:[["Elemento guardado","Tócalo para volver a abrir la situación, la aleya o el hadiz."],["Quitar","Toca de nuevo el marcador para quitarlo de Guardados."],["Solo en este dispositivo","No se sincroniza. Borrar los datos de la app lo elimina."]],
+    settings:[["Idioma","Los mismos seis idiomas que el botón del globo."],["Aspecto","Automático sigue a tu teléfono. El oscuro es el predeterminado desde la versión 2.7."],["Tamaño de letra","Pequeño, normal, grande o más grande."],["Dos voces","La voz 1 lee hadices y súplicas; la voz 2, títulos y explicaciones. Toca «Probar» para oír cada una."],["Velocidad de lectura","Lenta, normal, rápida o más rápida."],["Recitador","Elige uno de los 26 recitadores para las aleyas y toca «Escuchar» para una muestra."],["Descargar sin conexión (Android)","Descarga las recitaciones que usa la app (de 15 a 65 MB). Cancela o borra cuando quieras. Un ✓ marca los recitadores descargados."],["Clave de IA (opcional)","Tu propia clave de la API de Claude y el modelo. Sin clave, todo funciona sin conexión."],["Guardar o Cancelar","Los cambios solo se aplican al tocar Guardar."]],
+    player:[["Progreso","Hasta dónde ha llegado la lectura."],["Anterior","Retrocede una parte."],["Reproducir o pausar","Pausa y continúa donde lo dejaste."],["Siguiente","Pasa a la parte siguiente."],["Qué suena","El título y la parte actual."],["Velocidad","Toca para cambiar entre 1×, 1,2×, 1,45× y 0,8×."],["Detener","Termina la lectura y cierra el reproductor."]]
+  },
+  faq:[["¿Necesita internet?","No. El análisis, la biblioteca y todas las traducciones funcionan sin conexión. Internet solo se usa para reproducir la voz de un recitador, descargar un recitador y para la IA opcional."],["¿Se guarda o se envía lo que escribo?","No. Tu texto se queda en tu teléfono y no se guarda salvo que guardes tú un resultado. Con una clave de IA va directamente a Anthropic, nunca al desarrollador."],["¿Cómo escucho sin internet?","En la app de Android: Ajustes → Recitador → Descargar. Después, las aleyas suenan incluso en modo avión."],["¿Cómo vuelvo al modo claro?","Ajustes → Aspecto → Claro (o Automático para seguir al teléfono) y luego Guardar."],["¿De dónde vienen las traducciones?","Significados del Corán vía Tanzil.net (Julio Cortés en español). Los hadices en español se tradujeron para la app desde el inglés de sunnah.com y así se indica. El árabe es siempre la referencia."]],
+  m:{ph:"Escribe con tus palabras lo que pasó… ¿Quién? ¿Qué? ¿Cómo te sientes?",analyse:"Analizar mi situación",ai:"Profundizar con IA",chips:["Ira","Ansiedad","Familia"],daily:"Texto del día",dailyT:"Sí, junto a la dificultad, facilidad.",listenAll:"Escuchar la respuesta completa",openAll:"Abrir todo",closeAll:"Cerrar todo",quote:"«Mi hermano traicionó mi confianza y no sé si perdonarle.»",first:"Una primera lectura de tu situación",strong:"Coincidencia fuerte",firstTxt:"Tus palabras tratan sobre todo de la ira, en tu relación con tus hermanos…",closest:"La situación más cercana",sitT:"Yusuf y sus hermanos: «Hoy no hay reproche contra vosotros»",src:"Ash-Sharh 94:5",save:"Guardar",listen:"Escuchar",plan:"Plan práctico",now:"Ahora",week:"Esta semana",long:"Largo plazo",planTxt:"Espera a estar en calma antes de responder.",rate:"Valora esta respuesta",newSit:"Nueva situación",copy:"Copiar resumen",share:"Compartir",exSearch:"Busca un tema o situación…",byTopic:"Por tema",allSit:"Todas las situaciones (115)",topics:["Ira","Paciencia","Familia"],topicSub:"8 situaciones · 6 aleyas",write:"Escribe sobre este tema",libSearch:"Busca en los textos…",filters:["Todo","Aleyas","Hadices","Súplicas"],more:"Mostrar más",savedH:"Guardados",savedNote:"Solo en este dispositivo",setH:"Ajustes",lang:"Idioma",theme:"Aspecto",auto:"Auto",lightL:"Claro",darkL:"Oscuro",size:"Tamaño de letra",sizes:["S","M","L","XL"],v1:"Voz 1 — hadices",v2:"Voz 2 — narrador",tryL:"Probar",speed:"Velocidad",speeds:["Lenta","Normal","Rápida"],reciter:"Recitador",reciterN:"Mahmoud Khalil Al-Husary",down:"Descargar (≈ 40 MB)",key:"Clave de la API de Claude",cancel:"Cancelar",saveB:"Guardar",playT:"Escuchar la respuesta completa",playS:"Parte 3 de 14 · La situación más cercana"}
+};
+G.pt = {
+  name:"Português", dir:"ltr",
+  ui:{brand:"Rifqat al-Uswa", sub:"Guia de utilização · versão 2.7", h1:"Como usar a Rifqat al-Uswa",
+    lead:"Descreve o que estás a viver e a aplicação lê-o contigo à luz do Alcorão, da Sunna e da Sira. Este guia mostra cada ecrã e cada botão.",
+    quickH:"Começa em três passos",
+    quick:[["Escreve","Descreve o que aconteceu, quem estava envolvido e como te sentes. Em qualquer um dos seis idiomas, ou em árabe dialetal."],["Analisa","Toca em «Analisar a minha situação». Funciona no teu telemóvel, sem internet, em cerca de um segundo."],["Lê e ouve","Abre as secções, guarda o que te ajuda ou toca em «Ouvir a resposta completa»."]],
+    tourH:"Cada ecrã, botão a botão", hint:"Toca num número no telemóvel ou num item da lista. Usa as setas para avançar passo a passo.",
+    tabs:["Barra superior","Início","Resultado","Explorar","Biblioteca","Guardados","Definições","Leitor de áudio"],
+    prev:"Anterior", next:"Seguinte", of:"{0} de {1}", faqH:"Perguntas frequentes",
+    dark:"Escuro", light:"Claro",
+    note:"<b>Importante.</b> A aplicação é um guia para a reflexão. Não emite fatwas e não substitui um sábio qualificado, um médico, um terapeuta nem um advogado. Se escreveres sobre perigo, violência ou autolesão, a aplicação mostra primeiro onde pedir ajuda urgente (SNS 24: 808 24 24 24).",
+    foot:["Política de privacidade","Contacto: wajdi.chaouche@gmail.com"]},
+  items:{
+    top:[["Nome da aplicação","Toca nele em qualquer lado para voltar ao início."],["Idioma","Escolhe العربية, English, Français, Nederlands, Español ou Português. A aplicação recarrega nesse idioma e mantém as tuas definições."],["Explorar","Percorre os 57 temas da vida e as 115 situações proféticas."],["Biblioteca","Cada versículo, hadith e súplica que a aplicação usa, com fonte e grau."],["Guardados","Tudo o que guardaste. Fica apenas neste dispositivo."],["Definições","Idioma, aspeto, tamanho de letra, vozes, recitador e a chave de IA opcional."],["Sobre","Como a aplicação funciona, o que fica privado e os seus limites."]],
+    home:[["O teu texto","Escreve livremente e em pormenor, até 3000 caracteres. Nada do que escreves é guardado ou enviado."],["Analisar a minha situação","Encontra os temas, sentimentos e relações nas tuas palavras e traz a situação e os textos mais próximos."],["Aprofundar com IA","Só aparece depois de adicionares a tua própria chave do Claude nas Definições. Acrescenta uma reflexão escrita limitada aos textos encontrados."],["Atalhos de temas","Um toque abre diretamente a página de um tema, sem escrever."],["Texto do dia","Um versículo ou hadith para começar o dia."]],
+    result:[["Ouvir a resposta completa","Lê toda a resposta em voz alta. Os versículos são recitados pelo recitador que escolheste."],["Abrir ou fechar todas as secções","Cada secção também se fecha tocando no título."],["As tuas palavras","O que escreveste, no topo, para confirmares que a leitura corresponde."],["Primeira leitura","O tema principal, os teus sentimentos e a força da correspondência (forte ou parcial)."],["Situação mais próxima","Uma situação da vida do Profeta ﷺ ou do Alcorão. Toca para ler a história completa."],["Versículos e hadiths","Texto árabe, significado, fonte e grau. «Guardar» para o manter e o altifalante para o ouvir."],["Plano prático","Passos para agora, esta semana e o longo prazo. Muda com os três separadores."],["Avalia esta resposta","Dá estrelas e um comentário, ou denuncia um problema. Ajuda a melhorar a aplicação."],["Ações do resultado","Nova situação, Copiar resumo, Partilhar, Imprimir ou PDF (na web) e Explorar."]],
+    explore:[["Pesquisa","Encontra um tema ou situação com uma palavra: raiva, dívidas, pais…"],["Duas vistas","Por tema, ou a lista das 115 situações."],["Cartão de tema","Abre a página do tema: leitura, situações, plano, versículos, hadiths, súplicas e perguntas para refletir."],["Escreve sobre este tema","Leva-te ao início com um convite para esse tema."]],
+    library:[["Pesquisar nos textos","Pesquisa em cada versículo, hadith e súplica, em árabe ou no teu idioma."],["Filtros","Mostra só versículos, hadiths ou súplicas, ou os textos de um tema."],["Cartão de texto","Árabe, significado, fonte e grau de autenticidade."],["Botões do cartão","Guarda-o, ouve-o ou copia-o com a fonte."],["Mostrar mais","Carrega os textos seguintes da lista."]],
+    saved:[["Item guardado","Toca para voltar a abrir a situação, o versículo ou o hadith."],["Remover","Toca de novo no marcador para o remover dos Guardados."],["Só neste dispositivo","Não é sincronizado. Limpar os dados da aplicação apaga-o."]],
+    settings:[["Idioma","Os mesmos seis idiomas do botão do globo."],["Aspeto","Automático segue o telemóvel. O escuro é o predefinido desde a versão 2.7."],["Tamanho de letra","Pequeno, normal, grande ou maior."],["Duas vozes","A voz 1 lê hadiths e súplicas; a voz 2, títulos e explicações. Toca em «Experimentar» para ouvir cada uma."],["Velocidade de leitura","Lenta, normal, rápida ou mais rápida."],["Recitador","Escolhe um dos 26 recitadores para os versículos e toca em «Ouvir» para uma amostra."],["Transferir para ouvir sem internet (Android)","Transfere as recitações que a aplicação usa (15 a 65 MB). Cancela ou apaga quando quiseres. Um ✓ marca os recitadores transferidos."],["Chave de IA (opcional)","A tua própria chave da API do Claude e o modelo. Sem chave, tudo funciona sem internet."],["Guardar ou Cancelar","As alterações só se aplicam depois de tocares em Guardar."]],
+    player:[["Progresso","Até onde chegou a leitura."],["Anterior","Recua uma parte."],["Reproduzir ou pausar","Pausa e continua onde paraste."],["Seguinte","Avança para a parte seguinte."],["O que está a tocar","O título e a parte atual."],["Velocidade","Toca para alternar entre 1×, 1,2×, 1,45× e 0,8×."],["Parar","Termina a leitura e fecha o leitor."]]
+  },
+  faq:[["Precisa de internet?","Não. A análise, a biblioteca e todas as traduções funcionam sem internet. A internet só é usada para ouvir a voz de um recitador, transferir um recitador e para a IA opcional."],["O que escrevo é guardado ou enviado?","Não. O teu texto fica no telemóvel e só é guardado se guardares tu um resultado. Com uma chave de IA vai diretamente para a Anthropic, nunca para o programador."],["Como ouço sem internet?","Na aplicação Android: Definições → Recitador → Transferir. Depois, os versículos tocam mesmo em modo de avião."],["Como volto ao modo claro?","Definições → Aspeto → Claro (ou Automático para seguir o telemóvel) e depois Guardar."],["De onde vêm as traduções?","Significados do Alcorão via Tanzil.net (Samir El-Hayek em português). Os hadiths em português foram traduzidos para a aplicação a partir do inglês do sunnah.com, e isso está indicado. O árabe é sempre a referência."]],
+  m:{ph:"Escreve com as tuas palavras o que aconteceu… Quem? O quê? Como te sentes?",analyse:"Analisar a minha situação",ai:"Aprofundar com IA",chips:["Raiva","Ansiedade","Família"],daily:"Texto do dia",dailyT:"Por certo que, com a adversidade, há alívio.",listenAll:"Ouvir a resposta completa",openAll:"Abrir tudo",closeAll:"Fechar tudo",quote:"«O meu irmão traiu a minha confiança e não sei se lhe devo perdoar.»",first:"Uma primeira leitura da tua situação",strong:"Correspondência forte",firstTxt:"As tuas palavras falam sobretudo de raiva, na tua relação com os teus irmãos…",closest:"A situação mais próxima",sitT:"Yusuf e os seus irmãos: «Hoje não há censura contra vós»",src:"Ash-Sharh 94:5",save:"Guardar",listen:"Ouvir",plan:"Plano prático",now:"Agora",week:"Esta semana",long:"Longo prazo",planTxt:"Espera até estares calmo antes de responder.",rate:"Avalia esta resposta",newSit:"Nova situação",copy:"Copiar resumo",share:"Partilhar",exSearch:"Pesquisa um tema ou situação…",byTopic:"Por tema",allSit:"Todas as situações (115)",topics:["Raiva","Paciência","Família"],topicSub:"8 situações · 6 versículos",write:"Escreve sobre este tema",libSearch:"Pesquisa nos textos…",filters:["Tudo","Versículos","Hadiths","Súplicas"],more:"Mostrar mais",savedH:"Guardados",savedNote:"Só neste dispositivo",setH:"Definições",lang:"Idioma",theme:"Aspeto",auto:"Auto",lightL:"Claro",darkL:"Escuro",size:"Tamanho de letra",sizes:["P","N","G","MG"],v1:"Voz 1 — hadiths",v2:"Voz 2 — narrador",tryL:"Experimentar",speed:"Velocidade",speeds:["Lenta","Normal","Rápida"],reciter:"Recitador",reciterN:"Mahmoud Khalil Al-Husary",down:"Transferir (≈ 40 MB)",key:"Chave da API do Claude",cancel:"Cancelar",saveB:"Guardar",playT:"Ouvir a resposta completa",playS:"Parte 3 de 14 · A situação mais próxima"}
+};
+var ORDER = ["ar","en","fr","nl","es","pt"];
+var AYAH = "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا";
+
+/* ------------------------------------------------------------------ mockup screens */
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+function hs(n, cls, inner, tag){ tag = tag || "div"; return "<" + tag + ' class="hs ' + (cls || "") + '" data-n="' + n + '" tabindex="0" role="button">' + inner + "</" + tag + ">"; }
+function top(L, M, mark){
+  var ic = ["globe","compass","book","mark","gear","info"];
+  var icons = ic.map(function(k, i){ var h = '<span class="m-ic">' + IC[k] + "</span>"; return mark ? hs(i + 2, "", h, "span") : h; }).join("");
+  var brand = '<span class="m-brand">' + esc(L.ui.brand) + "</span>";
+  return '<div class="m-top">' + (mark ? hs(1, "", brand, "span") : brand) + '<span class="m-icons">' + icons + "</span></div>";
+}
+function seg(list, on){ return '<div class="m-seg">' + list.map(function(x, i){ return '<span class="' + (i === on ? "on" : "") + '">' + esc(x) + "</span>"; }).join("") + "</div>"; }
+function verseCard(M, n){
+  var inner = '<div class="m-ar">' + AYAH + "</div>" + (M.dailyT ? '<div style="margin-top:4px">' + esc(M.dailyT) + "</div>" : "") +
+    '<div class="m-muted" style="margin-top:4px">' + esc(M.src) + "</div>";
+  return inner;
+}
+var SCREENS = {
+  top: function(L, M){ return top(L, M, true) + '<div class="m-body dim"><div class="m-h" style="text-align:center;font-size:20px">' + esc(L.ui.brand) + '</div><div class="m-ta">' + esc(M.ph) + '</div><div><span class="m-btn m-pri">' + esc(M.analyse) + "</span></div></div>"; },
+  home: function(L, M){
+    return top(L, M) + '<div class="m-body"><div class="m-h" style="text-align:center;font-size:20px">' + esc(L.ui.brand) + "</div>" +
+      hs(1, "m-ta", esc(M.ph)) +
+      '<div class="m-row" style="justify-content:space-between">' + hs(3, "m-row", '<span class="m-chip">⏺</span><span class="m-muted">' + esc(M.ai) + "</span>") + hs(2, "m-btn m-pri", esc(M.analyse), "span") + "</div>" +
+      hs(4, "m-row", M.chips.map(function(c){ return '<span class="m-chip">' + esc(c) + "</span>"; }).join("")) +
+      hs(5, "m-card", '<div class="m-muted">' + esc(M.daily) + "</div>" + verseCard(M)) + "</div>";
+  },
+  result: function(L, M){
+    return top(L, M) + '<div class="m-body">' +
+      hs(1, "m-btn m-pri", IC.speak + esc(M.listenAll), "span") +
+      hs(2, "m-row", '<span class="m-btn m-gh">' + esc(M.openAll) + '</span><span class="m-btn m-gh">' + esc(M.closeAll) + "</span>") +
+      hs(3, "m-card", '<em class="m-muted" style="font-style:normal">' + esc(M.quote) + "</em>") +
+      hs(4, "m-card", '<div class="m-row" style="justify-content:space-between"><b>' + esc(M.first) + '</b><span class="m-badge">' + esc(M.strong) + '</span></div><div class="m-muted">' + esc(M.firstTxt) + "</div>") +
+      hs(5, "m-card", '<div class="m-sec"><span class="m-num">2</span>' + esc(M.closest) + '</div><div class="m-h" style="margin-top:6px">' + esc(M.sitT) + "</div>") +
+      hs(6, "m-card", verseCard(M) + '<div class="m-row" style="margin-top:6px"><span class="m-btn m-gh">' + IC.mark + esc(M.save) + '</span><span class="m-btn m-gh">' + IC.speak + esc(M.listen) + "</span></div>") +
+      hs(7, "m-card", '<div class="m-sec" style="margin-bottom:6px"><span class="m-num">8</span>' + esc(M.plan) + "</div>" + seg([M.now, M.week, M.long], 0) + '<div class="m-muted" style="margin-top:6px">✓ ' + esc(M.planTxt) + "</div>") +
+      hs(8, "m-card", "<b>" + esc(M.rate) + '</b><div class="m-stars">★★★★☆</div>') +
+      hs(9, "m-row", '<span class="m-btn m-gh">' + esc(M.newSit) + '</span><span class="m-btn m-gh">' + esc(M.copy) + '</span><span class="m-btn m-gh">' + esc(M.share) + "</span>") + "</div>";
+  },
+  explore: function(L, M){
+    return top(L, M) + '<div class="m-body">' + hs(1, "m-search", esc(M.exSearch)) +
+      hs(2, "m-row", '<span class="m-chip" style="background:var(--pine-soft);color:var(--pine-strong)">' + esc(M.byTopic) + '</span><span class="m-chip">' + esc(M.allSit) + "</span>") +
+      hs(3, "m-card", '<div class="m-h">' + esc(M.topics[0]) + '</div><div class="m-muted">' + esc(M.topicSub) + "</div>") +
+      '<div class="m-card"><div class="m-h">' + esc(M.topics[1]) + '</div><div class="m-muted">' + esc(M.topicSub) + "</div></div>" +
+      "<div>" + hs(4, "m-btn m-pri", esc(M.write), "span") + "</div></div>";
+  },
+  library: function(L, M){
+    var card = '<div class="m-ar">' + AYAH + '</div><div class="m-muted">' + esc(M.src) + "</div>";
+    return top(L, M) + '<div class="m-body">' + hs(1, "m-search", esc(M.libSearch)) +
+      hs(2, "m-row", M.filters.map(function(f, i){ return '<span class="m-chip"' + (i ? "" : ' style="background:var(--pine-soft);color:var(--pine-strong)"') + ">" + esc(f) + "</span>"; }).join("")) +
+      hs(3, "m-card", card + (M.dailyT ? '<div style="margin-top:4px">' + esc(M.dailyT) + "</div>" : "")) +
+      hs(4, "m-row", '<span class="m-btn m-gh">' + IC.mark + esc(M.save) + '</span><span class="m-btn m-gh">' + IC.speak + esc(M.listen) + '</span><span class="m-btn m-gh">' + esc(M.copy) + "</span>") +
+      '<div class="m-card dim">' + card + "</div>" +
+      "<div>" + hs(5, "m-btn m-gh", esc(M.more), "span") + "</div></div>";
+  },
+  saved: function(L, M){
+    return top(L, M) + '<div class="m-body"><div class="m-h">' + esc(M.savedH) + "</div>" +
+      hs(1, "m-card", '<div class="m-h">' + esc(M.sitT) + '</div><div class="m-muted">' + esc(M.closest) + "</div>") +
+      '<div class="m-card m-row" style="justify-content:space-between"><div style="min-width:0">' + verseCard(M) + "</div>" + hs(2, "m-ic", IC.mark, "span") + "</div>" +
+      hs(3, "m-muted", "🔒 " + esc(M.savedNote)) + "</div>";
+  },
+  settings: function(L, M){
+    function grp(lbl, body){ return '<div class="m-label">' + esc(lbl) + "</div>" + body; }
+    return top(L, M) + '<div class="m-body"><div class="m-h">' + esc(M.setH) + "</div>" +
+      hs(1, "", grp(M.lang, seg(["ع","EN","FR","NL","ES","PT"], Math.max(0, ORDER.indexOf(cur))))) +
+      hs(2, "", grp(M.theme, seg([M.auto, M.lightL, M.darkL], 2))) +
+      hs(3, "", grp(M.size, seg(M.sizes, 1))) +
+      hs(4, "", grp(M.v1, '<div class="m-row"><span class="m-sel">—</span><span class="m-btn m-gh">' + esc(M.tryL) + "</span></div>") + '<div style="height:6px"></div>' + grp(M.v2, '<div class="m-row"><span class="m-sel">—</span><span class="m-btn m-gh">' + esc(M.tryL) + "</span></div>")) +
+      hs(5, "", grp(M.speed, seg(M.speeds, 1))) +
+      hs(6, "", grp(M.reciter, '<div class="m-row"><span class="m-sel">' + esc(M.reciterN) + '</span><span class="m-btn m-gh">' + esc(M.listen) + "</span></div>")) +
+      hs(7, "m-btn m-gh", IC.down + esc(M.down), "span") +
+      hs(8, "", grp(M.key, '<div class="m-sel">sk-ant-…</div>')) +
+      hs(9, "m-row", '<span class="m-btn m-gh">' + esc(M.cancel) + '</span><span class="m-btn m-pri">' + esc(M.saveB) + "</span>") + "</div>";
+  },
+  player: function(L, M){
+    return top(L, M) + '<div class="m-body dim" style="padding-bottom:120px"><div class="m-card">' + verseCard(M) + '</div><div class="m-card"><div class="m-h">' + esc(M.sitT) + "</div></div></div>" +
+      '<div class="m-bar">' + hs(1, "m-prog", "<i></i>") +
+      '<div class="m-play">' + hs(2, "m-pb", IC.prev, "span") + hs(3, "m-pb main", IC.pause, "span") + hs(4, "m-pb", IC.next, "span") +
+      hs(5, "", '<div style="font-weight:700;font-size:12px">' + esc(M.playT) + '</div><div class="m-muted" style="font-size:11px">' + esc(M.playS) + "</div>") +
+      hs(6, "m-pb", '<span style="font-size:11px;font-weight:700">1×</span>', "span") + hs(7, "m-pb", IC.stop, "span") + "</div></div>";
+  }
+};
+
+/* ------------------------------------------------------------------ state + render */
+var cur = "fr", tab = "top", idx = 0;
+function load(k, d){ try { return localStorage.getItem(k) || d; } catch (e) { return d; } }
+function store(k, v){ try { localStorage.setItem(k, v); } catch (e) {} }
+var nav = (navigator.language || "en").slice(0, 2);
+cur = load("rg.lang", ORDER.indexOf(nav) > -1 ? nav : "en");
+var theme = load("rg.theme", "dark");
+var h = (location.hash || "").slice(1); if (TABS.indexOf(h) > -1) tab = h;
+var $ = function(id){ return document.getElementById(id); };
+function fmt(s){ var a = arguments; return s.replace(/\{(\d)\}/g, function(m, i){ return a[+i + 1]; }); }
+
+function applyTheme(){
+  document.documentElement.setAttribute("data-theme", theme);
+  var L = G[cur];
+  $("themeBtn").innerHTML = (theme === "dark" ? IC.sun + esc(L.ui.light) : IC.moon + esc(L.ui.dark));
+}
+function renderAll(){
+  var L = G[cur];
+  document.documentElement.lang = cur; document.documentElement.dir = L.dir;
+  $("brand").innerHTML = esc(L.ui.brand) + "<small>" + esc(L.ui.sub) + "</small>";
+  $("langs").innerHTML = ORDER.map(function(k){ return '<button type="button" lang="' + k + '" data-l="' + k + '" aria-pressed="' + (k === cur) + '">' + esc(G[k].name) + "</button>"; }).join("");
+  $("h1").textContent = L.ui.h1; $("lead").textContent = L.ui.lead;
+  $("quickH").textContent = L.ui.quickH;
+  $("steps").innerHTML = L.ui.quick.map(function(q){ return "<li><b>" + esc(q[0]) + "</b><span>" + esc(q[1]) + "</span></li>"; }).join("");
+  $("tourH").textContent = L.ui.tourH; $("hint").textContent = L.ui.hint;
+  $("tabs").innerHTML = TABS.map(function(t, i){ return '<button type="button" role="tab" data-t="' + t + '" aria-selected="' + (t === tab) + '">' + esc(L.ui.tabs[i]) + "</button>"; }).join("");
+  $("prev").textContent = (L.dir === "rtl" ? "→ " : "← ") + L.ui.prev; $("next").textContent = L.ui.next + (L.dir === "rtl" ? " ←" : " →");
+  $("faqH").textContent = L.ui.faqH;
+  $("faq").innerHTML = L.faq.map(function(f){ return "<details><summary>" + esc(f[0]) + "</summary><p>" + esc(f[1]) + "</p></details>"; }).join("");
+  $("note").innerHTML = L.ui.note;
+  $("foot").innerHTML = '<a href="https://wajdim.github.io/Rif9atAlOswah/privacy.html' + (cur === "en" ? "" : "#" + cur) + '" target="_blank" rel="noopener">' + esc(L.ui.foot[0]) + "</a><span>" + esc(L.ui.foot[1]) + "</span><span>Rifqat al-Uswa 2.7</span>";
+  document.title = L.ui.brand + " · " + L.ui.sub.split("·")[0].trim();
+  applyTheme(); renderTour();
+}
+function renderTour(){
+  var L = G[cur], M = L.m, items = L.items[tab];
+  $("screen").innerHTML = SCREENS[tab](L, M);
+  $("screen").scrollTop = 0;
+  $("list").innerHTML = items.map(function(it, i){ return '<li><button type="button" class="item" data-i="' + i + '"><span class="n">' + (i + 1) + "</span><span><b>" + esc(it[0]) + "</b><span>" + esc(it[1]) + "</span></span></button></li>"; }).join("");
+  Array.prototype.forEach.call($("tabs").children, function(b){ b.setAttribute("aria-selected", b.getAttribute("data-t") === tab); });
+  select(Math.min(idx, items.length - 1), false);
+}
+function select(i, scroll){
+  var items = G[cur].items[tab]; idx = Math.max(0, Math.min(items.length - 1, i));
+  $("screen").querySelectorAll(".hs").forEach(function(el){ el.classList.toggle("on", +el.getAttribute("data-n") === idx + 1); });
+  $("list").querySelectorAll(".item").forEach(function(el){ el.setAttribute("aria-current", +el.getAttribute("data-i") === idx); });
+  $("count").textContent = fmt(G[cur].ui.of, idx + 1, items.length);
+  if (scroll) {
+    var el = $("screen").querySelector('.hs[data-n="' + (idx + 1) + '"]'); var sc = $("screen");
+    if (el) { var r = el.getBoundingClientRect(), s = sc.getBoundingClientRect(); if (r.top < s.top + 50 || r.bottom > s.bottom) sc.scrollTop += r.top - s.top - 70; }
+  }
+}
+function goTab(t){ tab = t; idx = 0; try { history.replaceState(null, "", "#" + t); } catch (e) {} renderTour(); }
+
+document.addEventListener("click", function(e){
+  var b = e.target.closest("[data-l]"); if (b) { cur = b.getAttribute("data-l"); store("rg.lang", cur); renderAll(); return; }
+  b = e.target.closest("[data-t]"); if (b) { goTab(b.getAttribute("data-t")); return; }
+  b = e.target.closest(".item"); if (b) { select(+b.getAttribute("data-i"), true); return; }
+  b = e.target.closest(".hs"); if (b) { select(+b.getAttribute("data-n") - 1, false); var li = $("list").querySelector('[data-i="' + idx + '"]'); if (li && window.innerWidth <= 760) li.scrollIntoView({block:"nearest", behavior:"smooth"}); return; }
+  if (e.target.closest("#themeBtn")) { theme = theme === "dark" ? "light" : "dark"; store("rg.theme", theme); applyTheme(); return; }
+  if (e.target.closest("#prev")) { stepBy(-1); return; }
+  if (e.target.closest("#next")) { stepBy(1); return; }
+});
+function stepBy(d){
+  var n = G[cur].items[tab].length, ti = TABS.indexOf(tab);
+  if (idx + d >= n && ti < TABS.length - 1) { goTab(TABS[ti + 1]); return; }
+  if (idx + d < 0 && ti > 0) { tab = TABS[ti - 1]; idx = G[cur].items[tab].length - 1; renderTour(); return; }
+  select(idx + d, true);
+}
+document.addEventListener("keydown", function(e){
+  if (e.target.closest && e.target.closest(".hs") && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); e.target.click(); return; }
+  if (/input|textarea/i.test(e.target.tagName)) return;
+  var rtl = G[cur].dir === "rtl";
+  if (e.key === "ArrowRight") stepBy(rtl ? -1 : 1); else if (e.key === "ArrowLeft") stepBy(rtl ? 1 : -1);
+});
+renderAll();
+})();
+</script>
+</body>
+</html>

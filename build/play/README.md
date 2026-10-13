@@ -5,9 +5,9 @@ Everything needed for the Play Console is in this folder. This guide walks throu
 | | |
 |---|---|
 | Package name | `com.rifqa.aluswa` (permanent; cannot change after the first upload) |
-| Version | 2.6.0 (version code 10) |
+| Version | 2.7.0 (version code 11) |
 | Target / min SDK | 36 (Android 16) / 24 (Android 7.0) |
-| Upload file | `build/android/out/RifqaAlUswa-2.6.0.aab` |
+| Upload file | `build/android/out/RifqaAlUswa-2.7.0.aab` |
 | Privacy policy | https://wajdim.github.io/Rif9atAlOswah/privacy.html |
 | Support email | wajdi.chaouche@gmail.com |
 
@@ -33,8 +33,8 @@ TOOLS=/path/to/tools bash build/android/build-android.sh
 ```
 
 This produces two files:
-- **`RifqaAlUswa-2.6.0.aab`**, which you upload to Play.
-- **`RifqaAlUswa-2.6.0.apk`**, for installing directly (sideloading).
+- **`RifqaAlUswa-2.7.0.aab`**, which you upload to Play.
+- **`RifqaAlUswa-2.7.0.apk`**, for installing directly (sideloading).
 
 Before every release, bump `VERSION_NAME`/`VERSION_CODE` in `build-android.sh`, and `APP_VERSION` in `js/app.js`.
 

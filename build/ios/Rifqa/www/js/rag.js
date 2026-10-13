@@ -54,6 +54,12 @@ var RAG = (function(){
     "porque mas se nao ja muito mais menos tao tambem so eu ele ela nos eles elas voce voces me te lhe lhes meu minha meus minhas teu tua seu sua " +
     "seus suas nosso nossa isto isso aquilo este esse aquele sou somos sao era eram foi foram ser estar estou estamos estao tenho tem temos tinha " +
     "posso pode podem quero quer tudo toda todos todas algo nada muita muitos muitas").split(" ").forEach(function(w){ STOP.add(w); });
+  // الفرنسية: تُضاف فقط في الواجهة الفرنسية (بلا حركات؛ والفاصلة العليا تصير مسافة: j'ai ← j ai)
+  if(window.I18N && I18N.lang==="fr") (
+    "le la les l un une des du de d et ou en au aux a dans par pour sur sous avec sans entre chez vers que qu qui quoi quand comme dont " +
+    "ce cet cette ces c se s sa son ses mon ma mes ton ta tes notre nos votre vos leur leurs je j tu il elle on nous vous ils elles me m te t lui y " +
+    "ne n pas plus moins tres trop aussi est sont etait etaient ete etre suis es sommes etes ai as avons avez ont avait avaient avoir " +
+    "fait faire peux peut veux veut tout toute tous toutes rien chose mais donc car si alors deja encore bien cela ca ceci celui celle ceux").split(" ").forEach(function(w){ STOP.add(w); });
 
   var PREFIXES = ["وبال","وال","بال","كال","فال","لل","ال","وب","ول","وس","فس","و","ف","ب","ك","ل","س"];
   var SUFFIXES = ["تموها","كموها","هما","كما","تما","تان","تين","ونا","ون","ين","ان","ات","ها","هم","هن","كم","كن","نا","ني","وا","يه","يا","ته","تي","ه","ي","ك","ت"];
@@ -94,10 +100,18 @@ var RAG = (function(){
     for(var i=0;i<S.length;i++){ var x=S[i]; if(w.length-x.length>=3 && w.slice(-x.length)===x){ w=w.slice(0,-x.length); break; } }
     return w.replace(/(qu|gu)$/,function(m){ return m.charAt(0)==="q"?"c":"g"; });
   }
+  /* تجذيع فرنسي خفيف (بلا حركات): الجمع والتأنيث والنهايات الشائعة (tristesse ← trist، amies ← ami) */
+  function stemFr(w){
+    if(w.length<=4 || /[0-9]/.test(w)) return w;
+    var S=["issements","issement","ements","ement","ations","ation","atrices","atrice","ateurs","ateur","ances","ance","ences","ence","esses","esse",
+           "ites","ite","ives","ive","ifs","euses","euse","eux","ees","ee","ais","ait","ant","er","ez","es","s","x","e"];
+    for(var i=0;i<S.length;i++){ var x=S[i]; if(w.length-x.length>=3 && w.slice(-x.length)===x){ w=w.slice(0,-x.length); break; } }
+    return w;
+  }
   var STEM_LANG=(window.I18N && I18N.lang) || "en";
   function stem(w){
     if(!w) return w;
-    if(/[a-z]/.test(w)) return STEM_LANG==="nl"?stemNl(w):(STEM_LANG==="es"||STEM_LANG==="pt")?stemRom(w):stemEn(w);
+    if(/[a-z]/.test(w)) return STEM_LANG==="nl"?stemNl(w):(STEM_LANG==="es"||STEM_LANG==="pt")?stemRom(w):STEM_LANG==="fr"?stemFr(w):stemEn(w);
     if(w.length<=3 || /[0-9]/.test(w)) return w;
     var s=w, i;
     for(i=0;i<PREFIXES.length;i++){
@@ -251,7 +265,7 @@ var RAG = (function(){
     var norm=normalize(raw), userWords=words(norm), qStems=stems(raw);
     var themes=detectThemes(norm, userWords, qStems);
     // عند إشارات إيذاء النفس: موضوع «اليأس» أولًا دائمًا، ويُستبعد «الخوف من الموت» حتى لا يُساء الفهم
-    var crisis=/(اموت|الموت ارحم|انتحار|انتحر|انهي حياتي|اقتل نفسي|نقتل روحي|ان اعيش|اذي نفسي|اؤذي نفسي|suicid|kill myself|end my life|want to die|wish i (was|were) dead|hurt myself|harm myself|self harm|no reason to live|zelfmoord|mezelf (van kant|iets aan)|dood wil|wil (dood|sterven)|niet meer (leven|verder)|wou dat ik dood|mezelf pijn|zelfbeschadiging|een eind aan mijn leven|quiero morir|matarme|quitarme la vida|acabar con mi vida|no quiero (vivir|seguir viviendo)|hacerme dano|autolesion|ojala estuviera muert|quero morrer|matar me|me matar|tirar a minha (propria )?vida|acabar com a minha vida|nao quero (viver|continuar a viver)|magoar me|me magoar|automutila|autolesao|quem me dera estar mort)/.test(norm);
+    var crisis=/(اموت|الموت ارحم|انتحار|انتحر|انهي حياتي|اقتل نفسي|نقتل روحي|ان اعيش|اذي نفسي|اؤذي نفسي|suicid|kill myself|end my life|want to die|wish i (was|were) dead|hurt myself|harm myself|self harm|no reason to live|zelfmoord|mezelf (van kant|iets aan)|dood wil|wil (dood|sterven)|niet meer (leven|verder)|wou dat ik dood|mezelf pijn|zelfbeschadiging|een eind aan mijn leven|quiero morir|matarme|quitarme la vida|acabar con mi vida|no quiero (vivir|seguir viviendo)|hacerme dano|autolesion|ojala estuviera muert|quero morrer|matar me|me matar|tirar a minha (propria )?vida|acabar com a minha vida|nao quero (viver|continuar a viver)|magoar me|me magoar|automutila|autolesao|quem me dera estar mort|je veux mourir|envie de mourir|me suicider|suicidaire|(veux|vais|envie de) me tuer|en finir avec (la|ma) vie|mettre fin a (mes jours|ma vie)|(ne )?veux plus vivre|plus envie de vivre|me faire du mal|me mutiler|scarifi|j aimerais etre mort|je voudrais etre mort)/.test(norm);
     if(crisis){
       themes=themes.filter(function(t){ return t.id!=="death_fear" && t.id!=="despair"; });
       themes.unshift({id:"despair", theme:BY.theme.despair, score:9, conf:1, hits:[T("إشارات ألم شديد")]});

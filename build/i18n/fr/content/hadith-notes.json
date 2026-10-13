@@ -1,0 +1,621 @@
+{
+"hadith": {
+"h-niyya": {
+"r": "'Umar ibn al-Khattâb",
+"n": "L'intention transforme l'habitude en adoration : le travail, les études et la dépense pour sa famille sont tous récompensés par l'intention."
+},
+"h-qulub": {
+"r": "Abû Hurayra",
+"n": "La mesure de la valeur auprès d'Allah est le cœur et les œuvres, non l'apparence, la richesse ou le rang social."
+},
+"h-ridallah": {
+"r": "'Â'icha",
+"n": "Un remède au fait de plaire aux gens aux dépens des principes : quiconque place l'agrément d'Allah en premier, Allah lui suffit face aux gens."
+},
+"h-khafi": {
+"r": "Sa'd ibn Abî Waqqâs",
+"n": "Rester discret et ne pas chercher à être vu est une qualité aimée, à une époque où les gens se mesurent à leur nombre d'abonnés."
+},
+"h-ghadab-julus": {
+"r": "Abû Dharr",
+"n": "Un remède pratique et physique : changer la position du corps brise l'élan de la colère et vous empêche d'agir de façon irréfléchie."
+},
+"h-ghadab-istiadha": {
+"r": "Sulaymân ibn Surad",
+"n": "Chercher refuge auprès d'Allah est la première chose à dire quand on est en colère.",
+"w": "Quand la colère s'intensifie"
+},
+"h-ghadab-sukut": {
+"r": "Ibn 'Abbâs",
+"n": "Ce que les gens regrettent le plus dans la colère, ce sont leurs paroles ; un silence temporaire protège la relation."
+},
+"h-kazm": {
+"r": "Mu'âdh ibn Anas",
+"n": "Retenir sa colère vaut le plus quand on a le pouvoir de se venger."
+},
+"h-rifq": {
+"r": "'Â'icha",
+"n": "La douceur n'est pas une faiblesse mais une manière plus efficace d'atteindre le résultat."
+},
+"h-rifq-zana": {
+"r": "'Â'icha",
+"n": "Le Prophète ﷺ le dit à 'Â'icha quand elle monta un chameau difficile et ne cessait de le tirer en avant et en arrière ; la douceur même envers les animaux."
+},
+"h-muflis-tabbaan": {
+"r": "'Abdullah ibn Mas'ûd",
+"n": "Même dans un conflit, la langue du croyant reste propre."
+},
+"h-afw-izz": {
+"r": "Abû Hurayra",
+"n": "Les gens craignent que leur pardon soit vu comme une faiblesse ; la promesse est donc venue : le pardon augmente l'honneur, il ne le diminue pas."
+},
+"h-zulm-zulumat": {
+"r": "Jâbir ibn 'Abdullah",
+"n": "Un avertissement à l'injuste et une consolation pour l'opprimé."
+},
+"h-dawat-mazlum": {
+"r": "Ibn 'Abbâs (d'après le conseil du Prophète ﷺ à Mu'âdh)",
+"n": "L'opprimé a une arme qui n'est jamais bloquée, et les puissants ont un sévère avertissement."
+},
+"h-unsur": {
+"r": "Anas ibn Mâlik",
+"n": "Aider un ami qui commet une injustice, c'est l'en empêcher, non le soutenir."
+},
+"h-muflis": {
+"r": "Abû Hurayra",
+"n": "Les droits des gens ne sont pas annulés par les actes d'adoration, et l'opprimé ne perd jamais son droit."
+},
+"h-la-darar": {
+"r": "Ibn 'Abbâs et 'Ubâda ibn as-Sâmit",
+"n": "Une grande règle juridique : il est interdit d'initier un préjudice ou d'y répondre par un préjudice plus grand — un fondement pour refuser un abus continu."
+},
+"h-la-yuldagh": {
+"r": "Abû Hurayra",
+"n": "Le pardon ne signifie pas la naïveté ; le croyant tire les leçons de l'expérience et pose des limites qui le protègent d'être blessé de nouveau."
+},
+"h-yuhibbu": {
+"r": "Anas ibn Mâlik",
+"n": "Le remède le plus profond à l'envie : souhaiter aux autres ce que l'on souhaite pour soi-même."
+},
+"h-la-tahasadu": {
+"r": "Abû Hurayra",
+"n": "Une liste de ce qui ruine la fraternité : l'envie, la haine, le fait de se tourner le dos et la concurrence déloyale."
+},
+"h-hasad-ithnatayn": {
+"r": "'Abdullah ibn Mas'ûd",
+"n": "« L'envie » désigne ici une saine émulation : souhaiter un bienfait semblable à celui d'autrui sans vouloir qu'il le perde, et seulement dans le bien."
+},
+"h-hajr-thalath": {
+"r": "Abû Ayyûb al-Ansârî",
+"n": "La brouille a une limite dans le temps, et le meilleur est celui qui salue le premier, non celui qui attend."
+},
+"h-istalaha": {
+"r": "Abû Hurayra",
+"n": "La rancune retarde le pardon ; la réconciliation n'est pas une politesse sociale mais un acte d'adoration."
+},
+"h-islah": {
+"r": "Abû ad-Dardâ'",
+"n": "« Celle qui rase » : elle rase la religion comme le rasoir rase les cheveux ; réparer les relations fait donc partie des plus hautes adorations."
+},
+"h-mira": {
+"r": "Abû Umâma al-Bâhilî",
+"n": "Renoncez à la dispute stérile même quand vous avez raison : gagner un débat n'est pas toujours une victoire pour la relation."
+},
+"h-afshu-salam": {
+"r": "Abû Hurayra",
+"n": "Le salut de paix est la clé la plus simple pour briser la glace et construire l'affection."
+},
+"h-akhbirhu": {
+"r": "al-Miqdâm ibn Ma'dîkarib",
+"n": "Exprimer ses sentiments positifs est une Sunna, non une faiblesse."
+},
+"h-tahadu": {
+"r": "Abû Hurayra",
+"n": "Un petit cadeau fait fondre la froideur."
+},
+"h-khalil": {
+"r": "Abû Hurayra",
+"n": "Un ami vous façonne sans que vous le remarquiez ; choisir sa compagnie est donc une décision déterminante."
+},
+"h-jalis": {
+"r": "Abû Mûsâ al-Ash'arî",
+"n": "On profite d'un bon compagnon en tout cas, et un mauvais compagnon nuit en tout cas, même si l'on n'agit pas comme lui."
+},
+"h-maa-man-ahabb": {
+"r": "Anas ibn Mâlik et Ibn Mas'ûd",
+"n": "Aimer les vertueux vous élève jusqu'à eux, même si vos œuvres sont insuffisantes."
+},
+"h-yashkur-nas": {
+"r": "Abû Hurayra",
+"n": "Remercier les gens fait partie du remerciement d'Allah."
+},
+"h-kafiuhu": {
+"r": "'Abdullah ibn 'Umar",
+"n": "L'invocation est le remboursement de celui qui n'a rien d'autre à donner."
+},
+"h-ghiba": {
+"r": "Abû Hurayra",
+"n": "La médisance consiste à mentionner un défaut réel, et la calomnie un défaut qui n'existe pas ; les deux sont interdites."
+},
+"h-yaqul-khayran": {
+"r": "Abû Hurayra",
+"n": "Un test simple avant de parler : est-ce du bien ? Sinon, le silence."
+},
+"h-kalima": {
+"r": "Abû Hurayra",
+"n": "Une parole prononcée en passant peut être la plus lourde dans la balance."
+},
+"h-muslim-salima": {
+"r": "'Abdullah ibn 'Amr",
+"n": "Une définition pratique de l'islam : que les gens soient à l'abri de votre mal."
+},
+"h-zann": {
+"r": "Abû Hurayra",
+"n": "Le mauvais soupçon se présente comme de « l'intuition », et le Prophète ﷺ l'a appelé la plus mensongère des paroles."
+},
+"h-kalima-tayyiba": {
+"r": "Abû Hurayra",
+"n": "Celui qui n'a pas d'argent a toujours une bonne parole à donner en aumône."
+},
+"h-sitr": {
+"r": "Abû Hurayra",
+"n": "Des portes qui se multiplient : soulager, faciliter et couvrir — et la récompense est de même nature que l'acte."
+},
+"h-mujahirin": {
+"r": "Abû Hurayra",
+"n": "Celui qui tombe dans le péché doit rester sous le voile d'Allah et ne pas s'exposer, et se repentir entre lui et son Seigneur."
+},
+"h-munafiq": {
+"r": "Abû Hurayra",
+"n": "Trois signes pratiques pour éprouver la fiabilité — chez les autres et en soi-même."
+},
+"h-da-ma-yaribuk": {
+"r": "al-Hasan ibn 'Alî",
+"n": "Dans le doute, choisissez ce qui apaise le cœur ; la véracité est la tranquillité de l'âme avant d'être un devoir."
+},
+"h-birr-ithm": {
+"r": "an-Nawwâs ibn Sam'ân",
+"n": "Une boussole intérieure : ce que vous détesteriez que les gens découvrent contient généralement quelque chose de mal."
+},
+"h-mustashar": {
+"r": "Abû Hurayra",
+"n": "Celui que l'on consulte doit conseiller honnêtement, et celui qui demande conseil doit choisir quelqu'un de fiable."
+},
+"h-atqan": {
+"r": "'Â'icha",
+"n": "Bien faire son travail est une adoration, même si personne ne vous regarde."
+},
+"h-ajir": {
+"r": "'Abdullah ibn 'Umar",
+"n": "Le droit du travailleur à son salaire tout de suite, sans retard."
+},
+"h-kullukum-rai": {
+"r": "'Abdullah ibn 'Umar",
+"n": "Chacun est responsable dans son cercle : le père, la mère, le responsable et l'employé."
+},
+"h-ada-dayn": {
+"r": "Abû Hurayra",
+"n": "L'intention sincère de rembourser attire l'aide d'Allah pour régler la dette."
+},
+"h-matl": {
+"r": "Abû Hurayra",
+"n": "Retarder le dû de quelqu'un quand on peut payer est une injustice évidente."
+},
+"h-samh": {
+"r": "Jâbir ibn 'Abdullah",
+"n": "La générosité facile, même quand on réclame ce qui nous est dû."
+},
+"h-inzar": {
+"r": "Abû al-Yasar",
+"n": "Accorder un délai à un débiteur en difficulté, ou lui remettre la dette, est une œuvre de grande récompense."
+},
+"h-ghina-nafs": {
+"r": "Abû Hurayra",
+"n": "La vraie richesse est un sentiment de suffisance, non un chiffre sur un compte."
+},
+"h-kafaf": {
+"r": "'Abdullah ibn 'Amr",
+"n": "La réussite n'exige pas la richesse : l'islam, la suffisance et le contentement."
+},
+"h-amin-sirbih": {
+"r": "'Ubaydullah ibn Mihsan",
+"n": "Redéfinir le bienfait : la sécurité, la bonne santé et la nourriture du jour, c'est « ce monde » tout entier."
+},
+"h-unzuru-asfal": {
+"r": "Abû Hurayra",
+"n": "Une règle psychologique précise : la direction de la comparaison décide du bienfait que vous ressentez ; en matière de religion, regardez ceux qui sont au-dessus de vous."
+},
+"h-tawakkul-tayr": {
+"r": "'Umar ibn al-Khattâb",
+"n": "Les oiseaux « partent le matin » — ils sortent et cherchent ; la vraie confiance en Allah inclut l'effort avec un cœur serein."
+},
+"h-iqilha": {
+"r": "Anas ibn Mâlik",
+"n": "Se confier à Allah ne signifie pas abandonner les moyens ; prenez tous les moyens, puis laissez le résultat à Allah."
+},
+"h-hatab": {
+"r": "az-Zubayr ibn al-'Awwâm",
+"n": "Il n'y a aucune honte dans un travail humble ; la dignité est dans le gain licite, aussi modeste soit-il."
+},
+"h-kafil-yatim": {
+"r": "Sahl ibn Sa'd",
+"n": "Prendre en charge un orphelin élève une personne aux côtés du Prophète ﷺ."
+},
+"h-armala": {
+"r": "Abû Hurayra",
+"n": "Servir les faibles équivaut aux plus grandes adorations."
+},
+"h-la-tahqiranna": {
+"r": "Abû Dharr",
+"n": "La plus petite bonté a de la valeur — une porte pratique pour quiconque se sent incapable de faire le bien."
+},
+"h-anfauhum": {
+"r": "'Abdullah ibn 'Umar",
+"n": "Pour qui sent qu'il a perdu le sens, être utile aux gens est une large porte pour le retrouver."
+},
+"h-khayrukum-ahlih": {
+"r": "'Â'icha",
+"n": "Le vrai caractère se mesure à l'intérieur du foyer, non à l'extérieur."
+},
+"h-akmal-iman": {
+"r": "Abû Hurayra",
+"n": "La perfection de la foi est liée au bon traitement de son épouse."
+},
+"h-la-yafrak": {
+"r": "Abû Hurayra",
+"n": "Un regard équilibré : ne jugez pas votre conjoint sur un défaut en oubliant le bien. Cela vaut pour les deux époux."
+},
+"h-istawsu": {
+"r": "Abû Hurayra",
+"n": "Une recommandation prophétique répétée de bien traiter les femmes."
+},
+"h-radiya-ghadba": {
+"r": "'Â'icha",
+"n": "L'attention du Prophète ﷺ aux signes les plus subtils des sentiments de son épouse, et sa manière calme d'accueillir sa colère sans escalade."
+},
+"h-mataa": {
+"r": "'Abdullah ibn 'Amr",
+"n": "Une épouse vertueuse est le plus grand bienfait de ce monde."
+},
+"h-dhat-din": {
+"r": "Abû Hurayra",
+"n": "Le critère du choix : la religion et le caractère sont le fondement, sans négliger les autres considérations."
+},
+"h-tardawna": {
+"r": "Abû Hurayra",
+"n": "Une orientation pour les familles : ne rendez pas le mariage difficile par des exigences matérielles exagérées."
+},
+"h-shabab": {
+"r": "'Abdullah ibn Mas'ûd",
+"n": "Des solutions pratiques pour le désir : le mariage quand on en a les moyens, et le jeûne sinon."
+},
+"h-thalatha-awn": {
+"r": "Abû Hurayra",
+"n": "Celui qui cherche le mariage avec l'intention de rester chaste, Allah l'aidera."
+},
+"h-rughm": {
+"r": "Abû Hurayra",
+"n": "La vieillesse des parents est une occasion en or pour le Paradis, pas seulement un fardeau."
+},
+"h-rida-walid": {
+"r": "'Abdullah ibn 'Amr",
+"n": "La bonté envers les parents est un chemin direct vers l'agrément d'Allah, en dehors de la désobéissance à Lui."
+},
+"h-asma-umm": {
+"r": "Asmâ' bint Abî Bakr",
+"n": "Une différence de religion ou de pratique n'annule pas le devoir de bonté et de maintien des liens."
+},
+"h-sila-rizq": {
+"r": "Anas ibn Mâlik",
+"n": "Maintenir les liens de parenté apporte la bénédiction dans la subsistance et dans la vie."
+},
+"h-mal": {
+"r": "Abû Hurayra",
+"n": "Celui qui garde le lien avec des proches froids envers lui a un soutien d'Allah, et le péché est sur eux, non sur lui."
+},
+"h-adl-awlad": {
+"r": "an-Nu'mân ibn Bachîr",
+"n": "Favoriser un enfant au détriment d'un autre dans les dons sème l'inimitié entre eux."
+},
+"h-yarham-saghir": {
+"r": "'Abdullah ibn 'Amr",
+"n": "La miséricorde envers les petits et le respect des aînés, ensemble."
+},
+"h-rahimun": {
+"r": "'Abdullah ibn 'Amr",
+"n": "La miséricorde envers la création est un chemin vers la miséricorde du Créateur."
+},
+"h-walad-salih": {
+"r": "Abû Hurayra",
+"n": "La bonté envers les parents ne s'arrête pas avec la mort : votre invocation et votre aumône en leur nom leur parviennent."
+},
+"h-kalima-lil-ahl": {
+"r": "Sa'd ibn Abî Waqqâs",
+"n": "Même une bouchée donnée à votre épouse est une aumône avec la bonne intention ; dépenser pour sa famille est une adoration."
+},
+"h-ajaban": {
+"r": "Suhayb ar-Rûmî",
+"n": "Le croyant gagne en toute situation : par la gratitude dans le bienfait et la patience dans la difficulté."
+},
+"h-nasab": {
+"r": "Abû Sa'îd al-Khudrî et Abû Hurayra",
+"n": "Même le souci et la tristesse intérieure — pas seulement la douleur physique — portent une récompense et une expiation."
+},
+"h-ashadd-bala": {
+"r": "Sa'd ibn Abî Waqqâs",
+"n": "Une épreuve sévère n'est pas un signe de colère ; elle peut même être un signe de rang."
+},
+"h-azam-jaza": {
+"r": "Anas ibn Mâlik",
+"n": "Votre attitude face à l'épreuve (acceptation ou ressentiment) est ce qui décide de son fruit."
+},
+"h-maradh-kutib": {
+"r": "Abû Mûsâ al-Ash'arî",
+"n": "La maladie n'interrompt pas la récompense de vos adorations habituelles ; ne vous attristez donc pas de ce dont la maladie vous prive."
+},
+"h-dawa": {
+"r": "Abû Hurayra",
+"n": "L'espoir de la guérison fait partie de la foi, et la rechercher, c'est prendre les moyens."
+},
+"h-tadawaw": {
+"r": "Usâma ibn Charîk",
+"n": "Se soigner est ordonné, y compris pour la santé mentale ; consulter un médecin ne contredit pas la confiance en Allah."
+},
+"h-habibatayn": {
+"r": "Anas ibn Mâlik",
+"n": "La perte d'un sens précieux, accueillie avec patience, est compensée par le Paradis."
+},
+"h-la-yatamanna": {
+"r": "Anas ibn Mâlik",
+"n": "Une interdiction claire de souhaiter la mort à cause de la douleur, qui oriente les sentiments lourds vers une invocation remettant l'affaire à Allah.",
+"w": "Dans la détresse sévère et le désespoir"
+},
+"h-yurid-khayran": {
+"r": "Abû Hurayra",
+"n": "Un malheur peut être une porte vers un bien qu'Allah vous a destiné."
+},
+"h-sabr-diya": {
+"r": "Abû Mâlik al-Ash'arî",
+"n": "La patience est « clarté » — une lumière qui porte de la chaleur et de la peine — à la différence de la prière, qui est une pure « lumière »."
+},
+"h-yatasabbar": {
+"r": "Abû Sa'îd al-Khudrî",
+"n": "La patience est une compétence qui s'acquiert par la pratique : quiconque s'y efforce, Allah l'y aide."
+},
+"h-hamm": {
+"r": "Anas ibn Mâlik",
+"n": "Le souci porte sur l'avenir et la tristesse sur le passé ; cette invocation couvre huit portes de la faiblesse humaine.",
+"w": "Matin, soir et dans les moments de souci"
+},
+"h-karb": {
+"r": "Ibn 'Abbâs",
+"n": "L'invocation de l'angoisse : le Prophète ﷺ la disait dans les moments difficiles.",
+"w": "Dans l'angoisse et la grande difficulté"
+},
+"h-dhunnun": {
+"r": "Sa'd ibn Abî Waqqâs",
+"n": "Proclamer l'unicité d'Allah, Le glorifier et reconnaître sa faute : trois clés du soulagement.",
+"w": "Dans toute détresse"
+},
+"h-abduk": {
+"r": "'Abdullah ibn Mas'ûd",
+"n": "Une invocation qui unit la soumission au décret d'Allah et la demande que le Coran soit le remède de la tristesse.",
+"w": "Dans le souci et la tristesse"
+},
+"h-rahmataka": {
+"r": "Abû Bakra",
+"n": "Demander à Allah de ne pas vous abandonner à vous-même ne serait-ce qu'un instant, et d'arranger « toutes » vos affaires.",
+"w": "Dans la difficulté et quand les affaires sont dispersées"
+},
+"h-hasbuna": {
+"r": "Ibn 'Abbâs",
+"n": "Les grandes paroles de remise à Allah quand on a peur des gens ou de l'avenir.",
+"w": "Dans la peur, la menace et l'injustice"
+},
+"h-bismillah-yadurr": {
+"r": "'Uthmân ibn 'Affân",
+"n": "Une invocation de protection quotidienne qui apaise un cœur anxieux.",
+"w": "Trois fois matin et soir"
+},
+"h-ruqya-alam": {
+"r": "'Uthmân ibn Abî al-'Âs",
+"n": "Une ruqya prophétique que le malade récite sur lui-même.",
+"w": "Dans la douleur et la maladie"
+},
+"h-adhhib-bas": {
+"r": "'Â'icha",
+"n": "Le Prophète ﷺ en usait pour protéger des membres de sa famille.",
+"w": "Pour le malade et ceux qui lui rendent visite"
+},
+"h-la-bas": {
+"r": "Ibn 'Abbâs",
+"n": "Une parole prophétique de réconfort qui fait de la maladie une purification, non une punition.",
+"w": "En rendant visite au malade"
+},
+"h-ayn-haqq": {
+"r": "Abû Hurayra",
+"n": "Une affirmation du mauvais œil, tout en interdisant de trop le craindre ou de tout expliquer par lui."
+},
+"h-barrakt": {
+"r": "Abû Umâma ibn Sahl ibn Hunayf",
+"n": "Prévenir le mauvais œil du côté de celui qui regarde : dire « Qu'Allah te le bénisse » quand quelque chose l'impressionne."
+},
+"h-muawwidhat": {
+"r": "'Uqba ibn 'Âmir",
+"n": "Les deux dernières sourates sont la plus grande protection.",
+"w": "Matin, soir et avant de dormir"
+},
+"h-uidhukuma": {
+"r": "Ibn 'Abbâs",
+"n": "Protéger les enfants par le rappel d'Allah.",
+"w": "Pour protéger les enfants"
+},
+"h-khattaun": {
+"r": "Anas ibn Mâlik",
+"n": "Se tromper fait partie de la nature humaine ; l'excellence est de revenir vite."
+},
+"h-farah-tawba": {
+"r": "Anas ibn Mâlik",
+"n": "Allah n'accepte pas seulement votre repentir ; Il s'en réjouit — une image qui brise le désespoir face au péché."
+},
+"h-yabsut-yadah": {
+"r": "Abû Mûsâ al-Ash'arî",
+"n": "La porte du repentir est ouverte à toute heure."
+},
+"h-ma-daawtani": {
+"r": "Anas ibn Mâlik",
+"n": "Aucun péché n'est plus grand que le pardon d'Allah pour celui qui L'invoque et espère en Lui."
+},
+"h-sayyid-istighfar": {
+"r": "Chaddâd ibn Aws",
+"n": "Celui qui la dit dans la journée avec conviction et meurt ce jour-là fait partie des gens du Paradis.",
+"w": "Matin, soir et après un péché"
+},
+"h-atbi-sayyia": {
+"r": "Abû Dharr et Mu'âdh ibn Jabal",
+"n": "Une méthode pratique : n'attendez pas la perfection ; faites suivre chaque mauvaise action d'une bonne."
+},
+"h-qatil-mia": {
+"r": "Abû Sa'îd al-Khudrî",
+"n": "Aucun péché ne ferme la porte du repentir, et changer d'environnement est une clé essentielle du changement."
+},
+"h-waswasa-sarih": {
+"r": "Abû Hurayra",
+"n": "Détester les insufflations et les trouver monstrueuses est un signe de foi, non de mécréance."
+},
+"h-tajawaz": {
+"r": "Abû Hurayra",
+"n": "Les pensées qui traversent l'esprit sans acte ni parole ne vous sont pas reprochées par Allah."
+},
+"h-waswasa-intahi": {
+"r": "Abû Hurayra",
+"n": "Le remède aux insufflations : chercher refuge, puis cesser de suivre la pensée — ne pas discuter avec elle."
+},
+"h-muqallib": {
+"r": "Anas ibn Mâlik",
+"n": "Même le Prophète ﷺ demandait la constance ; la fluctuation du cœur est naturelle, et l'invocation en est le remède.",
+"w": "Toujours, et quand la foi semble faible"
+},
+"h-ahdini": {
+"r": "'Alî ibn Abî Tâlib",
+"n": "Une invocation courte et complète pour chaque décision ou tâche.",
+"w": "Avant les décisions et les tâches"
+},
+"h-taqwaha": {
+"r": "Zayd ibn Arqam",
+"n": "Purifier l'âme en demandant l'aide d'Allah, et non par ses seules forces.",
+"w": "Pour purifier l'âme"
+},
+"h-kfini-halal": {
+"r": "'Alî ibn Abî Tâlib",
+"n": "Le Prophète ﷺ l'enseigna à un homme incapable de payer ce qu'il devait, et dit : même si tu avais une dette grande comme une montagne, Allah la paierait pour toi.",
+"w": "Pour rembourser une dette et élargir la subsistance"
+},
+"h-la-sahl": {
+"r": "Anas ibn Mâlik",
+"n": "Une invocation pour faciliter le difficile : examens et tâches lourdes.",
+"w": "Avant un examen ou une tâche difficile"
+},
+"h-zawal-nima": {
+"r": "'Abdullah ibn 'Umar",
+"n": "Chercher refuge pour préserver les bienfaits que l'on a.",
+"w": "Quand on craint de perdre un bienfait"
+},
+"h-istijaba-ajal": {
+"r": "Abû Hurayra",
+"n": "L'impatience et l'abandon de l'invocation sont les plus grands obstacles à la réponse."
+},
+"h-nuzul": {
+"r": "Abû Hurayra",
+"n": "Un rendez-vous quotidien ouvert avec Allah dans la dernière partie de la nuit."
+},
+"h-sujud": {
+"r": "Abû Hurayra",
+"n": "La prosternation est le moment le plus proche ; déposez-y donc vos soucis."
+},
+"h-hazabahu": {
+"r": "Hudhayfa ibn al-Yamân",
+"n": "La prière est le premier refuge du croyant quand survient une chose importante."
+},
+"h-arihna": {
+"r": "Un homme des Khuzâ'a",
+"n": "La prière est un repos de la fatigue, non une fatigue dont il faut se reposer."
+},
+"h-din-yusr": {
+"r": "Abû Hurayra",
+"n": "Être trop dur avec soi-même finit par l'abandon ; « visez le juste, et si vous ne l'atteignez pas, approchez-vous-en »."
+},
+"h-adwamuha": {
+"r": "'Â'icha",
+"n": "Persévérer dans le peu est plus utile qu'un enthousiasme passager pour le beaucoup — le principe de la construction des habitudes."
+},
+"h-haqq-nafs": {
+"r": "Abû Juhayfa (Salmân le dit à Abû ad-Dardâ', et le Prophète ﷺ le confirma)",
+"n": "L'équilibre entre l'adoration, soi-même, la famille et le travail."
+},
+"h-nimatan": {
+"r": "Ibn 'Abbâs",
+"n": "La plupart des gens sont lésés dans la façon dont ils investissent leur santé et leur temps libre."
+},
+"h-ightanim": {
+"r": "Ibn 'Abbâs",
+"n": "Un projet de vie en bref : chaque bienfait présent est une occasion avant qu'il ne change."
+},
+"h-muamin-qawi": {
+"r": "Abû Hurayra",
+"n": "Une méthode complète : ardeur + demande d'aide + aucune impuissance avant l'événement, puis acceptation et abandon du « si seulement » après."
+},
+"h-ihfadh": {
+"r": "Ibn 'Abbâs",
+"n": "Dans la version d'Ahmad : « Sache que la victoire vient avec la patience, le soulagement avec l'angoisse, et qu'avec la difficulté vient la facilité. » Un remède à la racine de la peur des gens."
+},
+"h-yassiru": {
+"r": "Anas ibn Mâlik",
+"n": "Une règle pour l'éducation, le commandement et l'appel au bien."
+},
+"h-ihsan": {
+"r": "Chaddâd ibn Aws",
+"n": "L'excellence est requise dans chaque acte, même dans les situations les plus dures."
+},
+"h-makarim": {
+"r": "Abû Hurayra",
+"n": "Le bon caractère est le but du message, non sa marge."
+},
+"h-ahsanukum-khuluqan": {
+"r": "Jâbir ibn 'Abdullah",
+"n": "Le bon caractère est le chemin vers la proximité du Prophète ﷺ dans l'au-delà."
+},
+"h-kibr": {
+"r": "'Abdullah ibn Mas'ûd",
+"n": "Une définition précise de l'orgueil : rejeter la vérité et mépriser les gens ; il n'a rien à voir avec une belle apparence."
+},
+"h-tawadau": {
+"r": "'Iyâd ibn Himâr",
+"n": "L'humilité empêche deux choses : la vantardise et l'oppression."
+},
+"h-nasiha": {
+"r": "Tamîm ad-Dârî",
+"n": "Le conseil sincère, c'est vouloir le bien de celui que l'on conseille, et il se donne avec douceur et en privé."
+},
+"h-munkar": {
+"r": "Abû Sa'îd al-Khudrî",
+"n": "Les degrés de l'opposition au mal selon la capacité, en veillant à ce que s'y opposer ne mène pas à un mal plus grand."
+},
+"h-sabaa-yuzilluhum": {
+"r": "Abû Hurayra",
+"n": "Résister au désir au sommet de la tentation élève une personne jusqu'à l'ombre du Trône."
+},
+"h-man-taraka": {
+"r": "Un homme du désert, d'après le Prophète ﷺ",
+"n": "Laisser une chose interdite, ou une relation interdite, n'est pas une perte : le remplacement d'Allah est plus grand."
+},
+"h-man-la-yarham": {
+"r": "Abû Hurayra et Jarîr",
+"n": "La miséricorde s'obtient par la miséricorde."
+},
+"h-hayaa": {
+"r": "'Imrân ibn Husayn",
+"n": "La pudeur est une qualité qui protège celui qui la possède, et ne signifie pas une timidité qui retient de la vérité."
+}
+}
+}

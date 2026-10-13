@@ -1,0 +1,415 @@
+{
+"theme": {
+"anger": {
+"label": "Colère",
+"insight": "Dans la voie prophétique, la colère est une énergie naturelle que l'on maîtrise, et non que l'on efface : le Coran ne fait pas l'éloge de ceux qui ne se mettent jamais en colère, mais de ceux qui « lorsqu'ils sont en colère, pardonnent ». Le Prophète ﷺ a placé la vraie force chez « celui qui se maîtrise quand il est en colère », et a donné un remède progressif : chercher refuge auprès d'Allah (remède du cœur), se taire (remède de la langue), et changer de position en s'asseyant puis en s'allongeant (remède du corps). Le but est que la colère ne se transforme jamais en une décision ou une parole que vous regretterez.",
+"plan": {
+"now": [
+"Dites : « Je cherche refuge auprès d'Allah contre Satan le maudit », taisez-vous maintenant et n'envoyez aucun message",
+"Changez de position : si vous êtes debout, asseyez-vous ; si vous êtes assis, allongez-vous ou quittez les lieux",
+"Faites les ablutions (wudû') ; l'eau apaise la chaleur du moment"
+],
+"week": [
+"Revenez sur la situation une fois calme et notez : qu'est-ce qui m'a mis en colère exactement ? Quel droit est-ce que je réclame ?",
+"Si vous avez blessé quelqu'un par une parole ou un acte sous la colère, excusez-vous vite ; c'est une force",
+"Repérez contre qui et quand vous vous mettez en colère d'habitude, et préparez-vous : une phrase que vous direz avant de vous éloigner"
+],
+"long": [
+"Entraînez-vous à retenir votre colère dans les petites situations pour y parvenir dans les grandes",
+"Observez le stress qui s'accumule (sommeil, pression au travail, faim) ; c'est le carburant de la colère",
+"Invoquez : « Ô Allah, je Te demande la parole de vérité dans la satisfaction comme dans la colère »"
+]
+},
+"questions": [
+"Si ce que vous avez dit sous la colère avait été enregistré, aimeriez-vous l'écouter demain ?",
+"Quel est le vrai besoin derrière votre colère : du respect ? De la justice ? De la reconnaissance ?",
+"Votre réaction correspond-elle vraiment à l'ampleur de la situation ?"
+],
+"avoid": [
+"Prendre des décisions qui changent une vie (divorce, démission, rupture des liens) dans un moment de colère",
+"Confondre retenir sa colère avec enfouir ses sentiments pour toujours sans les traiter",
+"Excuser le mal fait en disant « j'étais en colère »"
+],
+"triggers": [
+"colère",
+"en colère",
+"furieux",
+"furieuse",
+"rage",
+"énervé",
+"énervée",
+"je me suis emporté",
+"je me suis emportée",
+"m'emporter",
+"irrité",
+"agacé",
+"j'ai crié",
+"crier",
+"engueulé",
+"explosé",
+"frustré",
+"frustrée",
+"soupe au lait",
+"je pète les plombs"
+]
+},
+"sadness": {
+"label": "Tristesse, soucis et détresse",
+"insight": "Dans le Coran et la Sunna, la tristesse n'est ni un péché ni une faiblesse de foi : Ya'qûb fut si triste que ses yeux blanchirent, et le Prophète ﷺ pleura et dit : « L'œil verse des larmes et le cœur s'attriste. » Mais la voie prophétique empêche la tristesse de devenir désespoir ou ressentiment : elle oriente la plainte vers Allah (« Je ne me plains qu'à Allah de mon déchirement et de mon chagrin »), cherche chaque jour refuge contre le souci et la tristesse, fait des soucis une source de récompense et d'expiation, et ordonne de se soigner, car Allah n'a fait descendre aucune maladie sans faire descendre son remède.",
+"plan": {
+"now": [
+"Récitez l'invocation contre le souci : « Ô Allah, je suis Ton serviteur, fils de Ton serviteur… fais du Coran le printemps de mon cœur, ce qui dissipe ma tristesse et chasse mon souci »",
+"Faites quelque chose de simple pour votre corps : de l'eau, de l'air frais, dix minutes de marche, ou du sommeil",
+"Écrivez sur une feuille ce qui pèse sur votre cœur, comme si vous le confiiez à Allah"
+],
+"week": [
+"Parlez à une personne de confiance ; cacher sa tristesse la double",
+"Accomplissez vos prières à l'heure et faites-y une longue prosternation pour épancher votre cœur",
+"Retrouvez une habitude qui vous rendait heureux, même à petite dose"
+],
+"long": [
+"Si la tristesse dure des semaines avec des troubles du sommeil ou de l'appétit, ou une perte d'intérêt pour tout, consulter un professionnel de santé mentale fait partie des moyens à prendre",
+"Construisez une petite portion quotidienne et régulière de Coran et de rappel",
+"Cherchez un moyen d'être utile aux gens ; le sens chasse le vide"
+]
+},
+"questions": [
+"Ma tristesse est-elle liée à un événement précis, ou est-ce un sentiment général sans cause claire ?",
+"Quand ai-je ressenti un peu de soulagement pour la dernière fois ? Que faisais-je ?",
+"Qui est la personne à qui je peux m'ouvrir aujourd'hui ?"
+],
+"avoid": [
+"Considérer la tristesse comme la preuve d'une foi faible",
+"Vous couper complètement des gens",
+"Compter sur la seule réflexion sans chercher d'aide si la dépression dure"
+],
+"help": "Si la tristesse dure plus de deux semaines avec une perte d'intérêt pour tout, ou des troubles du sommeil et de l'appétit, consultez un professionnel de santé mentale ; se soigner est une Sunna prophétique.",
+"triggers": [
+"triste",
+"tristesse",
+"déprimé",
+"déprimée",
+"dépression",
+"malheureux",
+"malheureuse",
+"le moral à zéro",
+"pas le moral",
+"cœur brisé",
+"je pleure",
+"pleurer",
+"larmes",
+"vide à l'intérieur",
+"inquiet",
+"soucis",
+"détresse",
+"chagrin",
+"peine",
+"lourd sur le cœur",
+"accablé",
+"accablée"
+]
+},
+"anxiety": {
+"label": "Anxiété et pensées envahissantes",
+"insight": "L'anxiété vient souvent de la volonté de maîtriser l'avenir, et le Coran la traite à la racine : « Dis : Rien ne nous atteindra, en dehors de ce qu'Allah a prescrit pour nous », et « Sache que si la communauté entière se réunissait pour te faire du bien, elle ne te ferait du bien que par ce qu'Allah t'a déjà prescrit. » Mais la voie prophétique n'appelle pas à la passivité : « Attache-la, et place ta confiance en Allah » — prenez tous les moyens, puis laissez votre cœur se reposer. Et la sérénité est le fruit du rappel : « N'est-ce point par l'évocation d'Allah que se tranquillisent les cœurs ? »",
+"plan": {
+"now": [
+"Respirez lentement et dites : « Allah me suffit ; il n'y a de divinité que Lui ; en Lui je place ma confiance »",
+"Écrivez ce qui vous inquiète en deux listes : ce que je peux faire, et ce qui m'échappe",
+"Dites : « Ô Allah, c'est Ta miséricorde que j'espère ; ne m'abandonne pas à moi-même le temps d'un clin d'œil, et arrange toutes mes affaires »"
+],
+"week": [
+"Accomplissez chaque jour une étape de la liste « ce que je peux faire »",
+"Fixez un moment pour penser au problème (15 minutes) et remettez les inquiétudes à plus tard en dehors de ce moment",
+"Tenez-vous aux invocations du matin et du soir, surtout « Au nom d'Allah, avec le nom de Qui rien ne peut nuire »"
+],
+"long": [
+"Réduisez les excitants (café, veilles tardives, actualités) ; ils alimentent l'anxiété",
+"Si les crises de panique ou d'angoisse perturbent votre vie, un traitement psychologique est efficace et légitime",
+"Renforcez votre certitude dans le décret d'Allah en méditant les versets sur la confiance en Lui"
+]
+},
+"questions": [
+"Quel est le pire qui puisse arriver, et que ferais-je si cela arrivait ?",
+"Ai-je pris tous les moyens possibles ? Que reste-t-il ?",
+"Combien de fois me suis-je inquiété pour quelque chose qui n'est jamais arrivé ?"
+],
+"avoid": [
+"Abandonner les moyens au nom de la confiance en Allah",
+"Tourner en rond avec les mêmes pensées sans aucune étape concrète",
+"Chercher sans cesse à être rassuré par les gens plutôt que par Allah"
+],
+"help": "Si l'anxiété s'accompagne de crises de panique ou de symptômes physiques répétés, consulter un médecin ou un professionnel de santé mentale fait partie des moyens à prendre.",
+"triggers": [
+"anxiété",
+"anxieux",
+"anxieuse",
+"angoisse",
+"angoissé",
+"angoissée",
+"inquiet",
+"inquiète",
+"inquiétude",
+"nerveux",
+"stress",
+"stressé",
+"stressée",
+"panique",
+"crise de panique",
+"je cogite",
+"je rumine",
+"trop réfléchir",
+"je n'arrive pas à dormir",
+"insomnie",
+"peur de l'avenir",
+"avenir incertain",
+"tendu",
+"tendue",
+"et si"
+]
+},
+"fear": {
+"label": "Peur",
+"insight": "La peur naturelle n'est pas un défaut : Mûsâ eut peur et dit « Nous craignons qu'il ne se hâte de nous punir », et la réponse vint : « Ne craignez rien. Je suis avec vous : J'entends et Je vois. » La voie prophétique traite la peur en rappelant qu'Allah est avec vous, par les invocations de protection, et en prenant les moyens (Mûsâ quitta la ville, craintif et sur ses gardes, et le Prophète ﷺ se cacha dans la grotte). La règle est : « Allah nous suffit ; Il est notre meilleur garant » — dite par Ibrâhîm dans le feu et par Muhammad ﷺ face aux armées rassemblées.",
+"plan": {
+"now": [
+"Dites : « Allah nous suffit ; Il est notre meilleur garant »",
+"Si le danger est réel et immédiat, éloignez-vous et contactez aussitôt les services compétents",
+"Rappelez-vous : ne craignez rien, Allah est avec vous, Il entend et Il voit"
+],
+"week": [
+"Tenez-vous aux invocations de protection matin et soir",
+"Identifiez la source de la peur : est-elle réelle ou imaginaire ? Quels moyens permettent de la réduire ?",
+"Confiez votre peur à quelqu'un qui peut vous aider"
+],
+"long": [
+"Affrontez progressivement, par petites étapes, les peurs irréalistes",
+"Renforcez votre certitude en lisant les récits des prophètes face à la peur"
+]
+},
+"questions": [
+"Ai-je peur d'un danger présent ou d'une possibilité future ?",
+"Que puis-je maîtriser dans cette situation ?"
+],
+"avoid": [
+"Nier un danger réel au nom de la confiance en Allah",
+"Laisser la peur vous empêcher d'accomplir vos devoirs"
+],
+"triggers": [
+"peur",
+"j'ai peur",
+"effrayé",
+"effrayée",
+"terrifié",
+"terrifiée",
+"menace",
+"menacé",
+"menacée",
+"danger",
+"dangereux",
+"pas en sécurité",
+"phobie",
+"terreur"
+]
+},
+"loneliness": {
+"label": "Solitude et isolement",
+"insight": "La solitude est une douleur humaine que les prophètes ont connue : Mûsâ étranger à Madyan, Maryam seule près du tronc du palmier, et le Prophète ﷺ dans l'Année de la tristesse. Le Coran rappelle une proximité qui ne quitte jamais : « Et quand Mes serviteurs t'interrogent sur Moi, alors Je suis tout proche », « et Nous sommes plus près de lui que sa veine jugulaire ». La Sunna traite la solitude de façon pratique : répandre le salut crée l'amour, l'échange de cadeaux fait fondre la froideur, et la bonne compagnie demande de « patienter avec ceux qui invoquent leur Seigneur ».",
+"plan": {
+"now": [
+"Prenez quelques minutes d'entretien intime : dites à Allah ce que vous avez sur le cœur avec vos propres mots simples",
+"Envoyez un message de salut à une personne que vous avez perdue de vue"
+],
+"week": [
+"Assistez à une prière en commun, à un cercle d'étude ou à une activité bénévole",
+"Faites le premier pas par une petite gentillesse envers un voisin ou un collègue (un cadeau, une question, un coup de main)"
+],
+"long": [
+"Cherchez une compagnie stable et vertueuse, même d'une seule personne",
+"Engagez-vous dans une action utile aux gens ; donner brise la solitude"
+]
+},
+"questions": [
+"Suis-je seul parce qu'il n'y a personne autour de moi, ou parce que je ne me sens pas proche de ceux qui m'entourent ?",
+"Qui est la personne dont j'étais proche et vers qui je pourrais revenir ?"
+],
+"avoid": [
+"Attendre toujours que les autres fassent le premier pas",
+"Compenser la solitude par une compagnie nuisible ou par le seul monde virtuel"
+],
+"triggers": [
+"solitude",
+"je suis seul",
+"je suis seule",
+"je me sens seul",
+"je me sens seule",
+"isolé",
+"isolée",
+"isolement",
+"pas d'amis",
+"personne ne me comprend",
+"personne ne s'intéresse à moi",
+"tout seul",
+"toute seule",
+"mis à l'écart",
+"exclu",
+"exclue",
+"abandonné",
+"abandonnée"
+]
+},
+"despair": {
+"label": "Désespoir et perte d'espoir",
+"insight": "Dans le Coran, le désespoir va de pair avec la mécréance : « Ce sont seulement les gens mécréants qui désespèrent de la miséricorde d'Allah », car celui qui désespère juge Allah d'une manière indigne de Sa miséricorde. Pourtant le Coran reconnaît les moments de brisure humaine : même les messagers dirent « Quand viendra le secours d'Allah ? », et la réponse vint : « Certes, le secours d'Allah est proche. » Et le Prophète ﷺ a enseigné que l'espoir est action : « Si l'Heure arrive alors que l'un de vous tient une jeune pousse de palmier, qu'il la plante. »",
+"plan": {
+"now": [
+"Lisez : « À côté de la difficulté est, certes, une facilité ! À côté de la difficulté, est certes, une facilité ! » — et rappelez-vous que la difficulté est une et la facilité deux",
+"Faites une petite chose qui peut être achevée aujourd'hui ; une petite réussite brise le sentiment d'impuissance",
+"Parlez maintenant à une personne de confiance"
+],
+"week": [
+"Écrivez trois fois où vous avez traversé une difficulté puis avez été soulagé",
+"Répétez l'invocation de Dhû an-Nûn dans chaque difficulté",
+"Choisissez dans votre vie une étape « planter la pousse » : une petite chose que vous construisez pour l'avenir"
+],
+"long": [
+"Construisez une routine simple et régulière (sommeil, prière, mouvement) qui rend la stabilité",
+"Lisez les récits des prophètes face aux impasses (Yûnus, Ayyûb, Ya'qûb)"
+]
+},
+"questions": [
+"Mon désespoir porte-t-il sur toute la situation, ou sur une seule approche qui n'a pas fonctionné ?",
+"Si mon ami était à ma place, que lui dirais-je ?"
+],
+"avoid": [
+"Prendre de grandes décisions au fond du désespoir",
+"Vous couper complètement des autres"
+],
+"help": "Si le désespoir s'accompagne de pensées d'autodestruction ou du souhait de mourir, c'est une urgence : contactez immédiatement une personne de confiance, une ligne d'écoute (en France : 3114) ou un médecin.",
+"triggers": [
+"sans espoir",
+"désespoir",
+"désespéré",
+"désespérée",
+"abandonner",
+"j'abandonne",
+"j'ai abandonné",
+"plus d'espoir",
+"perdu espoir",
+"ça ne sert à rien",
+"aucun sens",
+"plus rien n'a d'importance",
+"je ne peux plus continuer",
+"bloqué",
+"bloquée",
+"pas d'issue",
+"fatigué de tout",
+"à quoi bon"
+]
+},
+"grief": {
+"label": "Perte et décès",
+"insight": "La perte est ce qu'une personne traverse de plus dur, et le Prophète ﷺ l'a vécue encore et encore : il perdit sa mère, son grand-père, son oncle, son épouse Khadîja et ses enfants. Quand son fils Ibrâhîm mourut, il pleura et dit : « L'œil verse des larmes et le cœur s'attriste, mais nous ne disons que ce qui agrée notre Seigneur. » La tristesse est légitime ; c'est la protestation désespérée qui est interdite. Il a enseigné l'invocation du malheur : « Nous sommes à Allah et c'est à Lui que nous retournerons ; ô Allah, récompense-moi dans mon malheur et remplace-le-moi par mieux », et il a montré que la bonté envers le défunt ne s'arrête pas : une aumône continue, et l'invocation d'un enfant vertueux.",
+"plan": {
+"now": [
+"Dites : « Nous sommes à Allah et c'est à Lui que nous retournerons ; ô Allah, récompense-moi dans mon malheur et remplace-le-moi par mieux »",
+"Autorisez-vous à pleurer ; le Prophète ﷺ a pleuré",
+"Ne restez pas seul les premiers jours"
+],
+"week": [
+"Invoquez chaque jour pour le défunt, et donnez une aumône en son nom, même petite",
+"Prenez soin de l'essentiel : manger, dormir et prier",
+"Laissez votre entourage vous aider pour les questions pratiques"
+],
+"long": [
+"Mettez en place une aumône continue pour le défunt (un puits, un exemplaire du Coran, une science utile)",
+"Si un chagrin intense dure des mois sans aucun apaisement, cherchez un soutien spécialisé",
+"Gardez le lien avec les proches et les amis du défunt ; cela fait partie de la bonté envers lui"
+]
+},
+"questions": [
+"Que puis-je faire maintenant pour que la récompense parvienne à celui que j'ai perdu ?",
+"Qu'aurait-il aimé me voir faire ?"
+],
+"avoid": [
+"La protestation désespérée par des paroles qui contestent le décret d'Allah",
+"Étouffer complètement le chagrin au nom de la patience",
+"Vous sentir coupable parce que vous recommencez à sourire"
+],
+"triggers": [
+"décédé",
+"décédée",
+"décès",
+"mort",
+"morte",
+"il est mort",
+"elle est morte",
+"deuil",
+"endeuillé",
+"enterrement",
+"funérailles",
+"chagrin",
+"fausse couche",
+"veuve",
+"veuf",
+"mon père est mort",
+"ma mère est morte",
+"j'ai perdu ma mère",
+"j'ai perdu mon père",
+"j'ai perdu mon fils",
+"j'ai perdu ma fille",
+"j'ai perdu mon mari",
+"j'ai perdu ma femme",
+"j'ai perdu mon frère",
+"j'ai perdu ma sœur",
+"j'ai perdu mon enfant",
+"perdu un proche"
+]
+},
+"patience": {
+"label": "La patience dans l'épreuve",
+"insight": "Les épreuves sont une loi de la vie et ne signifient pas qu'Allah est en colère : « Les gens les plus durement éprouvés sont les prophètes, puis les plus proches d'eux, puis les plus proches d'eux. » Dans le Coran, la patience n'est pas de la passivité mais de la résolution (« voilà une des meilleures dispositions à prendre »), et sa récompense est sans compte. Le croyant gagne en tout état : « S'il lui arrive un bien, il est reconnaissant, et c'est un bien pour lui ; s'il lui arrive un mal, il est patient, et c'est un bien pour lui. » Et la patience s'acquiert : « Quiconque s'efforce d'être patient, Allah le rend patient. »",
+"plan": {
+"now": [
+"Dites : « Nous sommes à Allah et c'est à Lui que nous retournerons », et cherchez secours dans la patience et la prière",
+"Rappelez-vous que le souci et la fatigue eux-mêmes expient les péchés"
+],
+"week": [
+"Distinguez ce qui peut changer, pour y travailler, de ce qui ne le peut pas, pour le supporter avec patience",
+"Lisez le récit d'un prophète qui a patienté dans une épreuve semblable à la vôtre"
+],
+"long": [
+"Invoquez : « Seigneur, déverse sur nous l'endurance »",
+"Cherchez le sens de cette épreuve dans votre vie : que vous a-t-elle appris ?"
+]
+},
+"questions": [
+"Ma patience est-elle celle de l'acceptation, ou celle de la répression et du ressentiment ?",
+"Qu'est-ce qui a changé en moi en mieux grâce à cette épreuve ?"
+],
+"avoid": [
+"Confondre la patience avec la soumission à une injustice qui pourrait être levée",
+"Interpréter toujours une épreuve comme une punition"
+],
+"triggers": [
+"patience",
+"patient",
+"patiente",
+"épreuve",
+"éprouvé",
+"éprouvée",
+"difficulté",
+"période difficile",
+"malheur",
+"calamité",
+"je galère",
+"souffrance",
+"je souffre",
+"je traverse beaucoup",
+"tout va mal",
+"pas de chance",
+"pourquoi moi"
+]
+}
+}
+}

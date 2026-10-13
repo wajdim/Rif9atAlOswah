@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
                 i.putExtra(Intent.EXTRA_TEXT, text);
-                String title = "en".equals(ttsLang) ? "Share" : "nl".equals(ttsLang) ? "Delen" : "es".equals(ttsLang) ? "Compartir" : "pt".equals(ttsLang) ? "Partilhar" : "مشاركة";
+                String title = "en".equals(ttsLang) ? "Share" : "nl".equals(ttsLang) ? "Delen" : "es".equals(ttsLang) ? "Compartir" : "pt".equals(ttsLang) ? "Partilhar" : "fr".equals(ttsLang) ? "Partager" : "مشاركة";
                 startActivity(Intent.createChooser(i, title));
             }});
         }
@@ -99,7 +99,7 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void ttsSetLang(final String lang) {
             runOnUiThread(new Runnable() { public void run() {
-                ttsLang = ("en".equals(lang) || "nl".equals(lang) || "es".equals(lang) || "pt".equals(lang)) ? lang : "ar";
+                ttsLang = ("en".equals(lang) || "nl".equals(lang) || "es".equals(lang) || "pt".equals(lang) || "fr".equals(lang)) ? lang : "ar";
                 if (tts != null && !"none".equals(ttsState) && !"init".equals(ttsState)) {
                     int r = tts.setLanguage(new Locale(ttsLang));
                     ttsState = (r == TextToSpeech.LANG_MISSING_DATA || r == TextToSpeech.LANG_NOT_SUPPORTED) ? "missing" : "ok";
@@ -335,7 +335,7 @@ public class MainActivity extends Activity {
         // نسخة الاختبار فقط (RIFQA_DEBUG=1 تجعل الحزمة debuggable): فحص الصفحة عبر chrome://inspect
         if ((getApplicationInfo().flags & android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0) WebView.setWebContentsDebuggingEnabled(true);
         web = new WebView(this);
-        web.setBackgroundColor(0xFFF7F2E4);
+        web.setBackgroundColor(0xFF141B17);   // الوضع الداكن افتراضي: لا وميض فاتح عند الفتح
         FrameLayout root = new FrameLayout(this);
         root.setBackgroundColor(0xFF2F4C3E);     // لون شريطي النظام في وضع «من الحافة إلى الحافة»
         root.addView(web, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));

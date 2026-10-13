@@ -9,7 +9,7 @@
 function qs(id){ return document.getElementById(id); }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
 function toast(msg,ms){ var t=qs("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("show");},ms||2200); }
-var APP_VERSION="2.6.0";
+var APP_VERSION="2.7.0";
 var EN=I18N.en;
 function store(key, val){ try{ if(val===undefined) return JSON.parse(localStorage.getItem(key)||"null"); localStorage.setItem(key, JSON.stringify(val)); }catch(e){ return null; } }
 function iconSvg(k){ return '<svg viewBox="0 0 24 24">'+(ICONS[k]||ICONS.star)+'</svg>'; }
@@ -59,7 +59,8 @@ function copyText(text){
 RAG.build();
 
 /* ---------------- التفضيلات والمحفوظات ---------------- */
-var prefs=store("rifqa.prefs")||{theme:"auto",fs:"1"};
+var prefs=store("rifqa.prefs")||{fs:"1"};
+if(!prefs.theme) prefs.theme="dark";                       // الوضع الداكن افتراضي ما لم يختر المستخدم غيره
 TTS.setRate(prefs.rate||1);
 setTimeout(function(){ TTS.configure(TTS_CFG()); },0);
 function applyPrefs(p){
@@ -130,9 +131,9 @@ function renderHome(){
 }
 
 /* ---------------- التنبيهات الحساسة ---------------- */
-var SELF_HARM=["افكار انتحاريه","انتحار","انتحر","اذي نفسي","اؤذي نفسي","اريد ان اموت","اريد الموت","لا اريد ان اعيش","اقتل نفسي","انهي حياتي","ان انهي حياتي","نقتل روحي","نحب نموت","ما نحبش نعيش","حابب اموت","بدي موت","الموت ارحم","جرح نفسي","اجرح نفسي","suicide","suicidal","kill myself","end my life","want to die","wish i was dead","wish i were dead","hurt myself","harm myself","self harm","cut myself","no reason to live","me suicider","zelfmoord","suicidaal","mezelf van kant maken","mezelf iets aandoen","ik wil dood","ik wil sterven","wil niet meer leven","een eind aan mijn leven","mezelf pijn doen","zelfbeschadiging","mezelf snijden","suicidio","suicidarme","quiero morir","matarme","quitarme la vida","acabar con mi vida","no quiero vivir","hacerme daño","autolesión","cortarme","suicídio","suicidar-me","quero morrer","matar-me","tirar a minha vida","acabar com a minha vida","não quero viver","magoar-me","automutilação","cortar-me"];
-var LEGAL=["طلاق","ميراث","ارث","الورث","حد شرعي","ربا","محامي","قضيه","محكمه","نفقه","خلع","حضانه","فتوي","عقد","divorce","inheritance","custody","lawyer","court case","lawsuit","alimony","fatwa","khula","riba","usury","scheiding","echtscheiding","erfenis","voogdij","advocaat","rechtszaak","rechtbank","alimentatie","rente","divorcio","herencia","custodia","abogado","juicio","pensión alimenticia","usura","herança","guarda dos filhos","advogado","tribunal","processo judicial","pensão de alimentos"];
-var VIOLENCE=["عنف","يضربني","تضربني","ضربني","ضربتني","تعنيف","اعتداء","اغتصاب","تحرش","يهددني بالقتل","abuse","abusive","hits me","beats me","beat me","hit me","violence","violent","rape","assault","harass","threatens to kill","threatened to kill","mishandeling","mishandelt","slaat me","sloeg me","geweld","verkrachting","aanranding","intimidatie","bedreigt me","dreigt me te vermoorden","maltrato","me pega","me golpea","violencia","violación","agresión","acoso","amenaza con matarme","violência","me bate","bate-me","agressão","violação","assédio","ameaça matar-me","ameaça me matar"];
+var SELF_HARM=["افكار انتحاريه","انتحار","انتحر","اذي نفسي","اؤذي نفسي","اريد ان اموت","اريد الموت","لا اريد ان اعيش","اقتل نفسي","انهي حياتي","ان انهي حياتي","نقتل روحي","نحب نموت","ما نحبش نعيش","حابب اموت","بدي موت","الموت ارحم","جرح نفسي","اجرح نفسي","suicide","suicidal","kill myself","end my life","want to die","wish i was dead","wish i were dead","hurt myself","harm myself","self harm","cut myself","no reason to live","me suicider","zelfmoord","suicidaal","mezelf van kant maken","mezelf iets aandoen","ik wil dood","ik wil sterven","wil niet meer leven","een eind aan mijn leven","mezelf pijn doen","zelfbeschadiging","mezelf snijden","suicidio","suicidarme","quiero morir","matarme","quitarme la vida","acabar con mi vida","no quiero vivir","hacerme daño","autolesión","cortarme","suicídio","suicidar-me","quero morrer","matar-me","tirar a minha vida","acabar com a minha vida","não quero viver","magoar-me","automutilação","cortar-me","suicide","suicidaire","je veux mourir","envie de mourir","en finir avec la vie","mettre fin à mes jours","mettre fin à ma vie","je ne veux plus vivre","plus envie de vivre","je veux me tuer","je vais me tuer","envie de me tuer","me faire du mal","me scarifier","automutilation","j'aimerais être mort","je voudrais être morte"];
+var LEGAL=["طلاق","ميراث","ارث","الورث","حد شرعي","ربا","محامي","قضيه","محكمه","نفقه","خلع","حضانه","فتوي","عقد","divorce","inheritance","custody","lawyer","court case","lawsuit","alimony","fatwa","khula","riba","usury","scheiding","echtscheiding","erfenis","voogdij","advocaat","rechtszaak","rechtbank","alimentatie","rente","divorcio","herencia","custodia","abogado","juicio","pensión alimenticia","usura","herança","guarda dos filhos","advogado","tribunal","processo judicial","pensão de alimentos","héritage","succession","garde des enfants","avocat","procès","pension alimentaire","usure","fatwa","khul"];
+var VIOLENCE=["عنف","يضربني","تضربني","ضربني","ضربتني","تعنيف","اعتداء","اغتصاب","تحرش","يهددني بالقتل","abuse","abusive","hits me","beats me","beat me","hit me","violence","violent","rape","assault","harass","threatens to kill","threatened to kill","mishandeling","mishandelt","slaat me","sloeg me","geweld","verkrachting","aanranding","intimidatie","bedreigt me","dreigt me te vermoorden","maltrato","me pega","me golpea","violencia","violación","agresión","acoso","amenaza con matarme","violência","me bate","bate-me","agressão","violação","assédio","ameaça matar-me","ameaça me matar","maltraitance","me frappe","me frappent","me tape dessus","me cogne","il m'a frappé","il m'a frappée","me bat","violence conjugale","viol","agression","harcèlement","menace de me tuer","m'a menacé de mort"];
 function checkFlags(text){
   var n=" "+RAG.normalize(text)+" ";
   function hit(list){ return list.some(function(k){ var nk=RAG.normalize(k); return /[a-z]/.test(nk) ? n.indexOf(" "+nk)>-1 : n.indexOf(nk)>-1; }); }
@@ -791,7 +792,7 @@ function previewDraft(){
   if(!EN && TashkeelView.available() && TashkeelView.enabled()!==draft.tk) TashkeelView.set(draft.tk);
 }
 // اسم اللغة والصوت الرجالي في ويندوز لكل لغة (لتلميح تثبيت الأصوات)
-var VOICE_HELP={ar:["عربي","العربية","نايف"], en:["English","English","David"], nl:["Nederlandse","Nederlands","Frank"], es:["español","Español","Pablo"], pt:["português","Português","Duarte"]}[I18N.lang];
+var VOICE_HELP={ar:["عربي","العربية","نايف"], en:["English","English","David"], nl:["Nederlandse","Nederlands","Frank"], es:["español","Español","Pablo"], pt:["português","Português","Duarte"], fr:["français","Français","Paul"]}[I18N.lang];
 function renderVoiceSettings(){
   var c=draftCfg();
   var offOk=TTS.offline.supported, have=offOk?TTS.offline.downloaded():[];
@@ -856,7 +857,7 @@ function renderSettingsSegs(){
 }
 function openSettings(){
   var ai=AI.load();
-  draft={lang:I18N.lang, theme:prefs.theme||"auto", fs:prefs.fs||"1", rate:+prefs.rate||1, tk:prefs.tk!==false,
+  draft={lang:I18N.lang, theme:prefs.theme||"dark", fs:prefs.fs||"1", rate:+prefs.rate||1, tk:prefs.tk!==false,
          voice1:prefs.voice1||"", voice2:prefs.voice2||"", reciter:TTS_CFG().reciter, key:ai.key||"", model:ai.model};
   qs("aiKey").value=draft.key;
   qs("aiModel").innerHTML=AI.MODELS.map(function(m){return '<option value="'+m.id+'"'+(m.id===draft.model?" selected":"")+'>'+esc(T(m.label))+'</option>';}).join("");

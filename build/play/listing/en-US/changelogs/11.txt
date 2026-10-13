@@ -1,0 +1,4 @@
+• New language: French
+• Dark mode is now the default (you can switch in Settings)
+• A new illustrated guide to every button and screen
+• Fixes and improvements

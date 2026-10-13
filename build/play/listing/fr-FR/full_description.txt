@@ -1,0 +1,30 @@
+Rifqat al-Uswa (« en compagnie du meilleur exemple ») est un compagnon calme pour la réflexion. Décrivez avec vos propres mots ce que vous vivez — un conflit, une perte, une inquiétude, la culpabilité, une décision difficile — et l'application le lit avec vous à la lumière du Noble Coran, de la Sunna prophétique et de la Sîra.
+
+COMMENT ÇA MARCHE
+• Écrivez librement, en français, anglais, néerlandais, espagnol, portugais ou arabe, avec autant de détails que vous voulez.
+• L'application reconnaît les thèmes, les sentiments et les relations dans ce que vous avez écrit.
+• Elle vous montre la situation la plus proche dans la vie du Prophète ﷺ et des prophètes avant lui : ce qui s'est passé, comment il a répondu, les principes en jeu et comment ils s'appliquent aujourd'hui.
+• Avec les versets, les hadiths et les invocations liés, chacun avec sa source et son degré, ainsi que des pas concrets et ce qu'il faut éviter.
+
+CE QU'ELLE CONTIENT
+• 115 situations et récits prophétiques et 57 thèmes de vie.
+• 201 versets et passages et 149 hadiths et invocations, avec sources et degrés d'authenticité.
+• Une bibliothèque consultable avec tous les textes sur lesquels repose l'analyse.
+• Lecture à voix haute en six langues avec voix masculine ou féminine, et récitation des versets par 26 récitateurs connus.
+• Téléchargez une fois votre récitateur préféré et écoutez les récitations sans internet.
+• Thème sombre par défaut, thème clair au choix, et taille de texte réglable.
+
+FIABLE PAR CONCEPTION
+• L'application n'invente jamais de versets ni de hadiths : chaque texte vient sans modification de sa bibliothèque.
+• Le texte arabe est toujours affiché. Sens du Coran en français : Muhammad Hamidullah (via Tanzil.net). Les traductions françaises des hadiths ont été préparées pour cette application à partir de l'anglais de sunnah.com et sont signalées comme telles ; l'arabe reste la référence.
+• Les récits faibles ou historiques sont clairement signalés.
+
+PRIVÉE ET HORS LIGNE
+• Pas de compte, pas de publicité, pas d'analyse, pas de pistage.
+• Tout fonctionne sans internet ; ce que vous écrivez reste sur votre appareil.
+• En option : ajoutez votre propre clé API Claude (Anthropic) pour une réflexion supplémentaire rédigée par IA, limitée aux textes trouvés. C'est seulement alors que votre texte est envoyé, directement à Anthropic et jamais au développeur. Vous pouvez signaler toute réponse de l'IA depuis l'application.
+
+IMPORTANT
+Rifqat al-Uswa est un guide pour la réflexion. Elle ne donne pas de fatwas et ne remplace pas un savant qualifié, un médecin, un thérapeute ou un avocat. Si vous décrivez une situation de danger, de violence ou des pensées d'automutilation, l'application vous indique d'abord où trouver une aide urgente (3114 en France).
+
+Disponible en français, English, Nederlands, español, português et العربية. Vos retours sont les bienvenus : wajdi.chaouche@gmail.com

@@ -1,7 +1,7 @@
 Rifqat al-Uswa («en compañía del mejor ejemplo») es un compañero tranquilo para la reflexión. Describe con tus propias palabras lo que estás viviendo —un conflicto, una pérdida, una preocupación, la culpa, una decisión difícil— y la app lo lee contigo a la luz del Noble Corán, la Sunna profética y la Sira.
 
 CÓMO FUNCIONA
-• Escribe con libertad, en español, portugués, inglés, neerlandés o árabe, con todo el detalle que quieras.
+• Escribe con libertad, en español, portugués, francés, inglés, neerlandés o árabe, con todo el detalle que quieras.
 • La app reconoce los temas, los sentimientos y las relaciones de lo que escribiste.
 • Te muestra la situación más cercana de la vida del Profeta ﷺ y de los profetas anteriores: qué ocurrió, cómo respondió, los principios que hay detrás y cómo se aplican hoy.
 • Con las aleyas, los hadices y las súplicas relacionadas, cada una con su fuente y su grado, además de pasos prácticos y qué evitar.
@@ -10,7 +10,7 @@ QUÉ CONTIENE
 • 115 situaciones e historias proféticas y 57 temas de la vida.
 • 201 aleyas y pasajes y 149 hadices y súplicas, con fuentes y grados de autenticidad.
 • Una biblioteca con buscador de todos los textos en los que se basa el análisis.
-• Lectura en voz alta en cinco idiomas con voz masculina o femenina, y recitación de las aleyas por 26 recitadores reconocidos.
+• Lectura en voz alta en seis idiomas con voz masculina o femenina, y recitación de las aleyas por 26 recitadores reconocidos.
 • Descarga una vez a tu recitador favorito y escucha las recitaciones sin internet.
 • Tema claro y oscuro y tamaño de letra ajustable.
 
@@ -27,4 +27,4 @@ PRIVADA Y SIN CONEXIÓN
 IMPORTANTE
 Rifqat al-Uswa es una guía para la reflexión. No emite fetuas y no sustituye a un sabio cualificado, a un médico, a un terapeuta ni a un abogado. Si describes una situación con peligro, violencia o pensamientos de autolesión, la app te indica primero dónde pedir ayuda urgente (en España, 024).
 
-Disponible en español, português, English, Nederlands y العربية. Tus comentarios son bienvenidos: wajdi.chaouche@gmail.com
+Disponible en español, português, français, English, Nederlands y العربية. Tus comentarios son bienvenidos: wajdi.chaouche@gmail.com

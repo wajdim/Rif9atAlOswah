@@ -9,7 +9,8 @@ const T = {
   en: { dir: "ltr", name: "Rifqat al-Uswa", line: "Describe what you're going through — read it in the light of the Quran and Sunnah", sub: "115 Prophetic situations · Sourced verses & graded hadith · Works offline" },
   nl: { dir: "ltr", name: "Rifqat al-Uswa", line: "Beschrijf wat je doormaakt — lees het in het licht van de Koran en de Soenna", sub: "115 Profetische situaties · Gestaafde verzen & hadith · Werkt offline" },
   es: { dir: "ltr", name: "Rifqat al-Uswa", line: "Describe lo que estás viviendo — léelo a la luz del Corán y la Sunna", sub: "115 situaciones proféticas · Aleyas y hadices con fuentes · Funciona sin conexión" },
-  pt: { dir: "ltr", name: "Rifqat al-Uswa", line: "Descreve o que estás a viver — lê-o à luz do Alcorão e da Sunna", sub: "115 situações proféticas · Versículos e hadiths com fontes · Funciona sem internet" }
+  pt: { dir: "ltr", name: "Rifqat al-Uswa", line: "Descreve o que estás a viver — lê-o à luz do Alcorão e da Sunna", sub: "115 situações proféticas · Versículos e hadiths com fontes · Funciona sem internet" },
+  fr: { dir: "ltr", name: "Rifqat al-Uswa", line: "Décrivez ce que vous vivez — lisez-le à la lumière du Coran et de la Sunna", sub: "115 situations prophétiques · Versets et hadiths sourcés · Fonctionne hors ligne" }
 };
 const BOOK = '<svg viewBox="0 0 24 24" fill="none" stroke="#C9A15C" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10 5 7 4.6 3.5 5.2v12.6C7 17.2 10 17.6 12 19c2-1.4 5-1.8 8.5-1.2V5.2C17 4.6 14 5 12 6.5z"/><path d="M12 6.5V19"/></svg>';
 
@@ -34,7 +35,7 @@ const BOOK = '<svg viewBox="0 0 24 24" fill="none" stroke="#C9A15C" stroke-width
       </style></head><body><div class="icon">${BOOK}</div><div class="txt"><h1>${t.name}</h1><div class="rule"></div><p>${t.line}</p><small>${t.sub}</small></div></body></html>`,
       { waitUntil: "networkidle" });
     await p.evaluate(() => document.fonts.ready);
-    await p.screenshot({ path: path.join(__dirname, "listing", { ar: "ar", en: "en-US", nl: "nl-NL", es: "es-ES", pt: "pt-PT" }[lang], "images/featureGraphic.png") });
+    await p.screenshot({ path: path.join(__dirname, "listing", { ar: "ar", en: "en-US", nl: "nl-NL", es: "es-ES", pt: "pt-PT", fr: "fr-FR" }[lang], "images/featureGraphic.png") });
     console.log("✓ feature graphic", lang);
   }
   await b.close();

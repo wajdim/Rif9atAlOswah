@@ -1,0 +1,4 @@
+• Nuevo idioma: francés
+• El modo oscuro es ahora el predeterminado (se puede cambiar en Ajustes)
+• Una nueva guía ilustrada de cada botón y pantalla
+• Correcciones y mejoras

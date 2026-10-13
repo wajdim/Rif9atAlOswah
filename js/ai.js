@@ -72,7 +72,8 @@ var AI = (function(){
   var LOC={
     nl:{name:"Dutch (Nederlands)", short:"Dutch", h:["Een dieper begrip van je situatie","Wat de openbaring zegt over zo'n situatie","Het fijne evenwicht","Praktische stappen voor jou","Een laatste woord"], end:"Dit is een begeleidende overdenking, geen fatwa."},
     es:{name:"Spanish (español)", short:"Spanish", h:["Una comprensión más profunda de tu situación","Lo que dice la revelación sobre una situación así","Los equilibrios sutiles","Pasos prácticos para ti","Una última palabra"], end:"Esta es una reflexión orientativa, no una fetua."},
-    pt:{name:"European Portuguese (português de Portugal)", short:"Portuguese", h:["Uma compreensão mais profunda da tua situação","O que a revelação diz sobre uma situação assim","Os equilíbrios subtis","Passos práticos para ti","Uma última palavra"], end:"Esta é uma reflexão orientadora, não uma fatwa."}
+    pt:{name:"European Portuguese (português de Portugal)", short:"Portuguese", h:["Uma compreensão mais profunda da tua situação","O que a revelação diz sobre uma situação assim","Os equilíbrios subtis","Passos práticos para ti","Uma última palavra"], end:"Esta é uma reflexão orientadora, não uma fatwa."},
+    fr:{name:"French (français)", short:"French", h:["Une compréhension plus profonde de ta situation","Ce que dit la révélation d'une telle situation","Les équilibres subtils","Des pas concrets pour toi","Un dernier mot"], end:"Ceci est une réflexion d'orientation, non une fatwa."}
   };
   function systemFor(l){
     var c=LOC[l]; if(!c) return SYSTEM_EN;

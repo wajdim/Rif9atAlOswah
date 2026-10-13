@@ -1,0 +1,485 @@
+{
+ "lexicon": {
+  "emotion": {
+   "anger": {
+    "label": "colère",
+    "words": [
+     "en colère",
+     "énervé",
+     "énervée",
+     "furieux",
+     "furieuse",
+     "colère",
+     "rage",
+     "fâché",
+     "fâchée",
+     "agacé",
+     "agacée",
+     "irrité",
+     "irritée",
+     "frustré",
+     "frustrée",
+     "je le déteste",
+     "je la déteste",
+     "je déteste",
+     "haine",
+     "rancune",
+     "ressentiment",
+     "j'en ai marre",
+     "ras le bol",
+     "hors de moi"
+    ]
+   },
+   "sadness": {
+    "label": "tristesse",
+    "words": [
+     "triste",
+     "tristesse",
+     "malheureux",
+     "malheureuse",
+     "je pleure",
+     "pleurer",
+     "j'ai pleuré",
+     "cœur brisé",
+     "blessé",
+     "blessée",
+     "brisé",
+     "brisée",
+     "déprimé",
+     "déprimée",
+     "abattu",
+     "abattue",
+     "effondré",
+     "effondrée",
+     "anéanti",
+     "anéantie",
+     "en deuil",
+     "peiné",
+     "peinée",
+     "chagrin"
+    ]
+   },
+   "fear": {
+    "label": "peur et anxiété",
+    "words": [
+     "peur",
+     "effrayé",
+     "effrayée",
+     "crainte",
+     "anxieux",
+     "anxieuse",
+     "anxiété",
+     "inquiet",
+     "inquiète",
+     "inquiétude",
+     "nerveux",
+     "nerveuse",
+     "stressé",
+     "stressée",
+     "stress",
+     "panique",
+     "terrifié",
+     "terrifiée",
+     "angoisse",
+     "angoissé",
+     "angoissée",
+     "sous pression",
+     "dépassé",
+     "dépassée"
+    ]
+   },
+   "guilt": {
+    "label": "culpabilité et regret",
+    "words": [
+     "coupable",
+     "culpabilité",
+     "je regrette",
+     "regret",
+     "remords",
+     "honte de moi",
+     "c'est ma faute",
+     "conscience",
+     "je m'en veux",
+     "je me sens mal d'avoir"
+    ]
+   },
+   "shame": {
+    "label": "honte et humiliation",
+    "words": [
+     "humilié",
+     "humiliée",
+     "honteux",
+     "honteuse",
+     "honte",
+     "insulté",
+     "insultée",
+     "manqué de respect",
+     "rabaissé",
+     "rabaissée",
+     "ridiculisé",
+     "ridiculisée",
+     "il m'a exposé",
+     "on me regarde de haut",
+     "je ne vaux rien",
+     "méprisé",
+     "méprisée"
+    ]
+   },
+   "loneliness": {
+    "label": "solitude",
+    "words": [
+     "je suis seul",
+     "je suis seule",
+     "je me sens seul",
+     "je me sens seule",
+     "tout seul",
+     "toute seule",
+     "solitude",
+     "isolé",
+     "isolée",
+     "personne ne",
+     "je n'ai personne",
+     "exclu",
+     "exclue",
+     "rejeté",
+     "rejetée",
+     "mis à l'écart",
+     "invisible",
+     "abandonné",
+     "abandonnée"
+    ]
+   },
+   "despair": {
+    "label": "désespoir",
+    "words": [
+     "sans espoir",
+     "désespéré",
+     "désespérée",
+     "désespoir",
+     "j'abandonne",
+     "abandonner",
+     "plus aucun espoir",
+     "ça n'a plus de sens",
+     "fatigué de tout",
+     "fatiguée de tout",
+     "je n'en peux plus",
+     "je ne peux plus continuer"
+    ]
+   },
+   "confusion": {
+    "label": "confusion",
+    "words": [
+     "confus",
+     "confuse",
+     "perdu",
+     "perdue",
+     "partagé",
+     "partagée",
+     "indécis",
+     "indécise",
+     "je ne sais pas",
+     "je ne sais pas quoi faire",
+     "doutes",
+     "j'hésite",
+     "sentiments mitigés"
+    ]
+   },
+   "exhaustion": {
+    "label": "épuisement",
+    "words": [
+     "épuisé",
+     "épuisée",
+     "fatigué",
+     "fatiguée",
+     "à bout",
+     "à bout de forces",
+     "burn-out",
+     "burnout",
+     "débordé",
+     "débordée",
+     "sans énergie",
+     "vidé",
+     "vidée",
+     "crevé",
+     "crevée"
+    ]
+   },
+   "jealousy": {
+    "label": "jalousie",
+    "words": [
+     "jaloux",
+     "jalouse",
+     "jalousie",
+     "envieux",
+     "envieuse",
+     "je l'envie"
+    ]
+   },
+   "betrayal": {
+    "label": "déception",
+    "words": [
+     "trahi",
+     "trahie",
+     "trahison",
+     "il m'a laissé tomber",
+     "elle m'a laissé tomber",
+     "poignardé dans le dos",
+     "déçu",
+     "déçue",
+     "trompé",
+     "trompée",
+     "il m'a menti",
+     "elle m'a menti"
+    ]
+   },
+   "love": {
+    "label": "attachement et amour",
+    "words": [
+     "je l'aime",
+     "je t'aime",
+     "il me manque",
+     "elle me manque",
+     "me manque",
+     "attaché",
+     "attachée",
+     "nostalgie",
+     "je n'arrête pas de penser à"
+    ]
+   },
+   "joy": {
+    "label": "joie et gratitude",
+    "words": [
+     "heureux",
+     "heureuse",
+     "content",
+     "contente",
+     "reconnaissant",
+     "reconnaissante",
+     "dieu merci",
+     "alhamdulillah",
+     "joie",
+     "ravi",
+     "ravie",
+     "j'ai réussi",
+     "j'ai eu mon examen"
+    ]
+   }
+  },
+  "relation": {
+   "spouse": {
+    "label": "votre conjoint",
+    "words": [
+     "mon mari",
+     "mon époux",
+     "ma femme",
+     "mon épouse",
+     "mari",
+     "époux",
+     "épouse",
+     "conjoint",
+     "conjointe",
+     "mon conjoint",
+     "ma conjointe"
+    ]
+   },
+   "fiance": {
+    "label": "votre fiancé ou fiancée",
+    "words": [
+     "mon fiancé",
+     "ma fiancée",
+     "fiancé",
+     "fiancée",
+     "mon copain",
+     "ma copine",
+     "prétendant"
+    ]
+   },
+   "parent": {
+    "label": "vos parents",
+    "words": [
+     "ma mère",
+     "mon père",
+     "ma maman",
+     "mon papa",
+     "mes parents",
+     "mère",
+     "père",
+     "maman",
+     "papa",
+     "parents"
+    ]
+   },
+   "child": {
+    "label": "vos enfants",
+    "words": [
+     "mon fils",
+     "ma fille",
+     "mes enfants",
+     "mes fils",
+     "mes filles",
+     "mon bébé",
+     "fils",
+     "fille",
+     "enfants",
+     "enfant"
+    ]
+   },
+   "sibling": {
+    "label": "vos frères et sœurs",
+    "words": [
+     "mon frère",
+     "ma sœur",
+     "mes frères",
+     "mes sœurs",
+     "frère",
+     "sœur",
+     "frères"
+    ]
+   },
+   "relative": {
+    "label": "votre famille",
+    "words": [
+     "mon oncle",
+     "ma tante",
+     "mon cousin",
+     "ma cousine",
+     "ma famille",
+     "ma belle-mère",
+     "mon beau-père",
+     "belle-mère",
+     "beau-père",
+     "ma belle-famille",
+     "belle-famille",
+     "cousin",
+     "cousine",
+     "beau-frère",
+     "belle-sœur"
+    ]
+   },
+   "boss": {
+    "label": "votre supérieur",
+    "words": [
+     "mon patron",
+     "ma patronne",
+     "patron",
+     "patronne",
+     "mon chef",
+     "ma cheffe",
+     "mon supérieur",
+     "mon responsable",
+     "ma responsable",
+     "mon manager"
+    ]
+   },
+   "colleague": {
+    "label": "vos collègues",
+    "words": [
+     "mon collègue",
+     "ma collègue",
+     "collègue",
+     "collègues",
+     "mes collègues"
+    ]
+   },
+   "friend": {
+    "label": "vos amis",
+    "words": [
+     "mon ami",
+     "mon amie",
+     "mon meilleur ami",
+     "ma meilleure amie",
+     "ami",
+     "amie",
+     "amis",
+     "amies",
+     "mon pote"
+    ]
+   },
+   "neighbor": {
+    "label": "vos voisins",
+    "words": [
+     "mon voisin",
+     "ma voisine",
+     "voisin",
+     "voisine",
+     "voisins"
+    ]
+   },
+   "employee": {
+    "label": "les personnes sous votre responsabilité",
+    "words": [
+     "mon employé",
+     "mon employée",
+     "mes employés",
+     "mon équipe",
+     "mon personnel",
+     "mon salarié",
+     "ma femme de ménage"
+    ]
+   },
+   "teacher": {
+    "label": "vos enseignants",
+    "words": [
+     "mon professeur",
+     "ma professeure",
+     "mon prof",
+     "ma prof",
+     "professeur",
+     "enseignant",
+     "enseignante",
+     "maître",
+     "maîtresse"
+    ]
+   },
+   "self": {
+    "label": "vous-même",
+    "words": [
+     "moi-même",
+     "à moi-même",
+     "avec moi-même"
+    ]
+   }
+  },
+  "intensifiers": [
+   "très",
+   "énormément",
+   "trop",
+   "extrêmement",
+   "toujours",
+   "chaque jour",
+   "tous les jours",
+   "depuis des années",
+   "depuis des mois",
+   "je n'en peux plus",
+   "je ne supporte plus",
+   "insupportable",
+   "jamais",
+   "plus que jamais"
+  ],
+  "selfFault": [
+   "c'est ma faute",
+   "c'était ma faute",
+   "je me suis trompé",
+   "je me suis trompée",
+   "j'ai fait une erreur",
+   "j'ai tout gâché",
+   "je lui ai fait du mal",
+   "j'ai menti",
+   "je lui ai menti",
+   "je les ai trompés",
+   "je l'ai trompé",
+   "je l'ai trompée",
+   "je l'ai insulté",
+   "je l'ai insultée",
+   "je l'ai frappé",
+   "je l'ai frappée",
+   "j'ai crié",
+   "je lui ai crié dessus",
+   "j'ai trahi",
+   "j'ai été injuste",
+   "je veux demander pardon",
+   "j'ai péché",
+   "je regrette ce que j'ai fait"
+  ]
+ }
+}

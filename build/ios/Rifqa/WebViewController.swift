@@ -16,8 +16,8 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKScriptM
     // والباقي رسائل غير متزامنة إلى Swift.
     private static let bridgeJS = """
     (function(){
-      var st = {status: "init", voices: "[]", statusEn: "init", voicesEn: "[]", statusNl: "init", voicesNl: "[]", statusEs: "init", voicesEs: "[]", statusPt: "init", voicesPt: "[]", lang: "ar"};
-      var SUF = {ar: "", en: "En", nl: "Nl", es: "Es", pt: "Pt"};
+      var st = {status: "init", voices: "[]", statusEn: "init", voicesEn: "[]", statusNl: "init", voicesNl: "[]", statusEs: "init", voicesEs: "[]", statusPt: "init", voicesPt: "[]", statusFr: "init", voicesFr: "[]", lang: "ar"};
+      var SUF = {ar: "", en: "En", nl: "Nl", es: "Es", pt: "Pt", fr: "Fr"};
       window.__rifqaIOS = function(k, v){ st[k] = v; if (/^voices/.test(k) && window.__rifqaTTS) window.__rifqaTTS("0", "voices"); };
       function post(m){ try { window.webkit.messageHandlers.rifqa.postMessage(m); } catch (e) {} }
       window.AndroidBridge = {
@@ -51,7 +51,7 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKScriptM
         webView.allowsBackForwardNavigationGestures = true           // السحب للرجوع = زر الرجوع في التطبيق
         webView.scrollView.contentInsetAdjustmentBehavior = .never     // الصفحة تتعامل مع الشق بنفسها (safe-area)
         webView.isOpaque = false
-        webView.backgroundColor = UIColor(red: 0.969, green: 0.949, blue: 0.894, alpha: 1)
+        webView.backgroundColor = UIColor(red: 0.078, green: 0.106, blue: 0.090, alpha: 1)   // الوضع الداكن افتراضي
         if #available(iOS 16.4, *) { webView.isInspectable = true }
         view = webView
     }
@@ -75,14 +75,14 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKScriptM
     private func voicesScript() -> String {
         voicesScript("ar", key: "voices", statusKey: "status") + voicesScript("en", key: "voicesEn", statusKey: "statusEn")
             + voicesScript("nl", key: "voicesNl", statusKey: "statusNl") + voicesScript("es", key: "voicesEs", statusKey: "statusEs")
-            + voicesScript("pt", key: "voicesPt", statusKey: "statusPt")
+            + voicesScript("pt", key: "voicesPt", statusKey: "statusPt") + voicesScript("fr", key: "voicesFr", statusKey: "statusFr")
     }
     private func voicesScript(_ l: String, key: String, statusKey: String) -> String {
         let vs = voices(l)
         let list: [[String: Any]] = vs.map { v in
             var g = "?"
             if #available(iOS 13.0, *) { g = v.gender == .male ? "m" : (v.gender == .female ? "f" : "?") }
-            let q = v.quality == .enhanced ? (l == "en" ? " — enhanced" : l == "nl" ? " — verbeterd" : l == "es" ? " — mejorada" : l == "pt" ? " — melhorada" : " — محسّن") : ""
+            let q = v.quality == .enhanced ? (l == "en" ? " — enhanced" : l == "nl" ? " — verbeterd" : l == "es" ? " — mejorada" : l == "pt" ? " — melhorada" : l == "fr" ? " — améliorée" : " — محسّن") : ""
             return ["name": v.identifier, "label": v.name + q, "lang": v.language, "gender": g,
                     "network": false, "quality": v.quality == .enhanced ? 400 : 300]
         }
@@ -107,7 +107,7 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKScriptM
                   voice: m["voice"] as? String ?? "")
         case "lang":
             let l = m["lang"] as? String ?? "ar"
-            lang = ["en", "nl", "es", "pt"].contains(l) ? l : "ar"
+            lang = ["en", "nl", "es", "pt", "fr"].contains(l) ? l : "ar"
         case "stop":
             utteranceIds.removeAll()
             synth.stopSpeaking(at: .immediate)
@@ -131,7 +131,7 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKScriptM
         u.voice = AVSpeechSynthesisVoice(identifier: voice) ?? arabicVoices().first(where: { v in
             if #available(iOS 13.0, *) { return v.gender == .male }
             return true
-        }) ?? AVSpeechSynthesisVoice(language: ["en": "en-US", "nl": "nl-NL", "es": "es-ES", "pt": "pt-PT"][lang] ?? "ar-SA")
+        }) ?? AVSpeechSynthesisVoice(language: ["en": "en-US", "nl": "nl-NL", "es": "es-ES", "pt": "pt-PT", "fr": "fr-FR"][lang] ?? "ar-SA")
         // سرعة الصفحة 1.0 = السرعة الطبيعية في iOS (0.5)
         u.rate = max(AVSpeechUtteranceMinimumSpeechRate, min(AVSpeechUtteranceMaximumSpeechRate, AVSpeechUtteranceDefaultSpeechRate * rate))
         u.pitchMultiplier = max(0.5, min(2.0, pitch))
