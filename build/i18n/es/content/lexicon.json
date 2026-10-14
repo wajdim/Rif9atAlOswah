@@ -481,6 +481,109 @@
    "yo pequé",
    "he pecado",
    "me arrepiento de lo que hice"
-  ]
+  ],
+  "negators": [
+   "no",
+   "nunca",
+   "jamas",
+   "sin",
+   "ni",
+   "tampoco"
+  ],
+  "negatorsPost": [],
+  "need": {
+   "safety": [
+    "me amenaza",
+    "estoy en peligro",
+    "le tengo miedo",
+    "me pega",
+    "me golpea",
+    "quiero huir",
+    "no estoy segura",
+    "no estoy seguro"
+   ],
+   "decision": [
+    "debo",
+    "deberia",
+    "no se si",
+    "no puedo decidir",
+    "dudo entre",
+    "elegir entre",
+    "tengo que decidir",
+    "tomar una decision",
+    "perdonar o"
+   ],
+   "repair": [
+    "pedir perdon",
+    "disculparme",
+    "arreglar",
+    "reparar",
+    "reconciliarme",
+    "arrepentirme",
+    "enmendar"
+   ],
+   "howto": [
+    "como puedo",
+    "como hago",
+    "que hago",
+    "que debo hacer",
+    "que puedo hacer",
+    "consejo",
+    "ayudame",
+    "aconsejame",
+    "que pasos"
+   ],
+   "why": [
+    "por que yo",
+    "por que",
+    "cual es la sabiduria",
+    "que sentido tiene"
+   ],
+   "comfort": [
+    "nadie me entiende",
+    "nadie me escucha",
+    "necesito hablar",
+    "necesito desahogarme",
+    "ya no puedo mas",
+    "no aguanto"
+   ]
+  },
+  "time": {
+   "ongoing": [
+    "desde hace años",
+    "desde hace meses",
+    "hace mucho",
+    "todos los dias",
+    "cada dia",
+    "cada noche",
+    "siempre",
+    "constantemente",
+    "otra vez"
+   ],
+   "future": [
+    "mañana",
+    "la proxima semana",
+    "el proximo mes",
+    "pronto",
+    "tengo miedo de que",
+    "temo que",
+    "y si",
+    "examen",
+    "entrevista",
+    "va a pasar"
+   ],
+   "past": [
+    "ayer",
+    "la semana pasada",
+    "el mes pasado",
+    "el año pasado",
+    "hace unos dias",
+    "hace años",
+    "fallecio",
+    "murio",
+    "se acabo",
+    "paso"
+   ]
+  }
  }
 }

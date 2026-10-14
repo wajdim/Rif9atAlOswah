@@ -3,19 +3,23 @@
 const { chromium } = require("playwright");
 const fs = require("fs"), path = require("path");
 const URL = process.env.RIFQA_URL || "http://localhost:8765/";
-const LOC = { ar: "ar", en: "en-US", nl: "nl-NL", es: "es-ES", pt: "pt-PT", fr: "fr-FR" };   // مجلدات fastlane supply
+const LOC = { ar: "ar", en: "en-US", nl: "nl-NL", es: "es-ES", pt: "pt-PT", fr: "fr-FR", ur: "ur", id: "id", tr: "tr-TR" };   // مجلدات fastlane supply
 
 const Q = {
   ar: "أخي خانني ونشر عني كلامًا كاذبًا أمام العائلة، أشعر بالغضب ولا أعرف هل أسامحه",
   en: "My brother betrayed my trust and spread lies about me to the family. I feel angry and I don't know whether to forgive him.",
   nl: "Mijn broer heeft mijn vertrouwen beschaamd en leugens over mij verspreid in de familie. Ik ben boos en weet niet of ik hem moet vergeven.",
   es: "Mi hermano traicionó mi confianza y difundió mentiras sobre mí en la familia. Estoy enfadado y no sé si perdonarle.",
-  pt: "O meu irmão traiu a minha confiança e espalhou mentiras sobre mim na família. Estou zangado e não sei se lhe devo perdoar."
+  pt: "O meu irmão traiu a minha confiança e espalhou mentiras sobre mim na família. Estou zangado e não sei se lhe devo perdoar.",
+  fr: "Mon frère a trahi ma confiance et a répandu des mensonges sur moi dans la famille. Je suis en colère et je ne sais pas si je dois lui pardonner.",
+  ur: "میرے بھائی نے میرا اعتماد توڑا اور خاندان میں میرے بارے میں جھوٹ پھیلایا۔ مجھے غصہ ہے اور سمجھ نہیں آتا کہ اسے معاف کروں یا نہیں۔",
+  id: "Kakakku mengkhianati kepercayaanku dan menyebarkan kebohongan tentangku di keluarga. Aku marah dan tidak tahu apakah harus memaafkannya.",
+  tr: "Kardeşim güvenime ihanet etti ve ailede hakkımda yalanlar yaydı. Öfkeliyim ve onu affetmeli miyim bilmiyorum."
 };
 
 (async () => {
   const b = await chromium.launch();
-  for (const lang of (process.env.RIFQA_LANGS || "ar,en,nl,es,pt,fr").split(",")) {
+  for (const lang of (process.env.RIFQA_LANGS || "ar,en,nl,es,pt,fr,ur,id,tr").split(",")) {
     const dir = path.join(__dirname, "listing", LOC[lang], "images/phoneScreenshots"); fs.mkdirSync(dir, { recursive: true });
     const c = await b.newContext({ viewport: { width: 360, height: 640 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true, locale: lang });
     await c.addInitScript(l => { try { if (!sessionStorage.getItem("i")) { sessionStorage.setItem("i", 1); localStorage.clear(); localStorage.setItem("rifqa.prefs", JSON.stringify({ lang: l, theme: "light", fs: "1" })); } } catch (e) {} }, lang);
@@ -38,7 +42,7 @@ const Q = {
     await p.evaluate(() => { const x = document.querySelector("[data-act=close-detail]"); if (x) x.click(); RifqaApp.showScreen("explore"); }); await top();
     await shot("5-topics");
 
-    await p.evaluate(() => RifqaApp.showScreen("library")); await p.fill("#libSearch", { ar: "الصبر", en: "patience", nl: "geduld", es: "paciencia", pt: "paciência" }[lang]); await p.waitForTimeout(600); await top();
+    await p.evaluate(() => RifqaApp.showScreen("library")); await p.fill("#libSearch", { ar: "الصبر", en: "patience", nl: "geduld", es: "paciencia", pt: "paciência", fr: "patience", ur: "صبر", id: "sabar", tr: "sabır" }[lang]); await p.waitForTimeout(600); await top();
     await shot("6-library");
 
     await p.evaluate(() => RifqaApp.showScreen("home")); await top(); await p.click("#btnSettings");

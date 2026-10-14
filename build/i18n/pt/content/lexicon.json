@@ -470,6 +470,113 @@
    "quero pedir desculpa",
    "pequei",
    "arrependo-me do que fiz"
-  ]
+  ],
+  "negators": [
+   "nao",
+   "nunca",
+   "jamais",
+   "sem",
+   "nem"
+  ],
+  "negatorsPost": [],
+  "need": {
+   "safety": [
+    "ameaça-me",
+    "me ameaça",
+    "estou em perigo",
+    "tenho medo dele",
+    "tenho medo dela",
+    "bate-me",
+    "me bate",
+    "quero fugir",
+    "não estou segura",
+    "não estou seguro"
+   ],
+   "decision": [
+    "devo",
+    "deveria",
+    "não sei se",
+    "não consigo decidir",
+    "dividido entre",
+    "dividida entre",
+    "escolher entre",
+    "tenho de decidir",
+    "tomar uma decisão",
+    "perdoar ou"
+   ],
+   "repair": [
+    "pedir desculpa",
+    "pedir perdão",
+    "reparar",
+    "emendar",
+    "reconciliar-me",
+    "arrepender-me",
+    "corrigir"
+   ],
+   "howto": [
+    "como posso",
+    "como faço",
+    "o que faço",
+    "o que devo fazer",
+    "o que posso fazer",
+    "conselho",
+    "ajuda-me",
+    "aconselha-me",
+    "que passos"
+   ],
+   "why": [
+    "porquê eu",
+    "porque eu",
+    "porquê",
+    "por que",
+    "qual é a sabedoria",
+    "que sentido"
+   ],
+   "comfort": [
+    "ninguém me entende",
+    "ninguém me ouve",
+    "preciso de falar",
+    "preciso de desabafar",
+    "já não aguento",
+    "não aguento mais"
+   ]
+  },
+  "time": {
+   "ongoing": [
+    "há anos",
+    "há meses",
+    "há muito tempo",
+    "todos os dias",
+    "cada dia",
+    "todas as noites",
+    "sempre",
+    "constantemente",
+    "outra vez"
+   ],
+   "future": [
+    "amanhã",
+    "na próxima semana",
+    "no próximo mês",
+    "em breve",
+    "tenho medo de que",
+    "receio que",
+    "e se",
+    "exame",
+    "entrevista",
+    "vai acontecer"
+   ],
+   "past": [
+    "ontem",
+    "na semana passada",
+    "no mês passado",
+    "no ano passado",
+    "há uns dias",
+    "há anos",
+    "faleceu",
+    "morreu",
+    "acabou",
+    "aconteceu"
+   ]
+  }
  }
 }

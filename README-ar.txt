@@ -159,14 +159,10 @@
 
 الملفات الجاهزة (مجلد dist)
 ----------------------------
-- RifqaAlUswa-2.7.0.aab            حزمة متجر Google Play
-- RifqaAlUswa-2.7.0.apk            تطبيق أندرويد موقّع للتثبيت المباشر (أندرويد 7 فما فوق)
-- RifqaAlUswa-2.7.0-setup.exe      برنامج تثبيت لويندوز (موصى به: يفتح بسرعة)
-- RifqaAlUswa-2.7.0-portable.exe   نسخة ويندوز محمولة بلا تثبيت (تستغرق 10-20 ثانية
-                                   لتفتح لأنها تفك نفسها في كل تشغيل)
+- RifqaAlUswa-2.8.0.aab            حزمة متجر Google Play
+- RifqaAlUswa-2.8.0.apk            تطبيق أندرويد موقّع للتثبيت المباشر (أندرويد 7 فما فوق)
 - RifqaAlUswa.html                 نسخة HTML في ملف واحد: افتحه بنقرة مزدوجة في أي متصفح
 - RifqaAlUswa-web.zip              نسخة PWA للاستضافة على الإنترنت (قابلة للتثبيت كتطبيق — وهي طريقة الآيفون)
-- RifqaAlUswa-iOS-Xcode.zip        مشروع تطبيق iOS أصلي (يُبنى على ماك أو GitHub Actions)
 
 
 التثبيت
@@ -175,10 +171,6 @@
   انسخ ملف .apk إلى الهاتف وافتحه. عند أول مرة سيطلب الهاتف السماح بـ«تثبيت تطبيقات
   من مصادر غير معروفة» للتطبيق الذي فتحت به الملف (مدير الملفات أو المتصفح). قد يظهر
   تحذير من Play Protect لأن التطبيق ليس من المتجر: اختر «التثبيت على أي حال».
-
-ويندوز:
-  شغّل setup.exe. لأن البرنامج غير موقّع بشهادة تجارية قد تظهر رسالة SmartScreen:
-  اضغط «مزيد من المعلومات» ثم «تشغيل على أي حال».
 
 HTML:
   افتح RifqaAlUswa.html في Chrome أو Edge أو Firefox أو Safari، على الحاسوب أو الهاتف.
@@ -190,26 +182,13 @@ PWA (اختياري):
 
 iPhone / iPad (iOS 15 فما فوق — مُختبر على محرك Safari بمقاس iPhone 13)
 ------------------------------------------------------------------------
-الطريقة 1 — بدون ماك (موصى بها للبدء): تطبيق ويب يُثبَّت على الشاشة الرئيسية
+تطبيق ويب يُثبَّت على الشاشة الرئيسية (بلا ماك ولا متجر)
   1) ارفع محتوى RifqaAlUswa-web.zip إلى استضافة HTTPS (مثل app.netlify.com/drop: اسحب
      المجلد بعد فك الضغط، أو GitHub Pages).
   2) افتح الرابط في Safari على الآيفون ← زر المشاركة ← «إضافة إلى الشاشة الرئيسية».
   3) يفتح كتطبيق بملء الشاشة، ويعمل بلا إنترنت بعد أول فتح (عدا تلاوة القراء).
   الصوت: يستخدم أصوات iOS العربية («ماجد» رجالي). لصوت أوضح: الإعدادات ← تسهيلات
   الاستخدام ← المحتوى المنطوق ← الأصوات ← العربية ← نزّل «ماجد (محسّن)».
-
-الطريقة 2 — تطبيق iOS أصلي (RifqaAlUswa-iOS-Xcode.zip):
-  WKWebView مع قراءة صوتية أصلية (AVSpeechSynthesizer) تعمل حتى مع زر الصامت وعند قفل
-  الشاشة، ومشاركة أصلية. يتطلب أحد الخيارين:
-  أ) جهاز ماك عليه Xcode 15+:
-       brew install xcodegen
-       (مجلد www جاهز داخل الحزمة؛ بعد تعديل التطبيق شغّل bash build/ios/sync-www.sh من جذر المشروع)
-       cd ios && xcodegen generate && open Rifqa.xcodeproj
-     ثم Signing & Capabilities ← اختر Apple ID (مجاني للتجربة) ← وصّل الآيفون ← Run.
-  ب) بلا ماك: ارفع المشروع إلى GitHub؛ ملف .github/workflows/ios.yml يبني على ماك سحابي
-     ويُخرج Rifqa-unsigned.ipa ولقطة شاشة من محاكي iPhone. وقّع الـ ipa وثبّته بـ
-     Sideloadly أو AltStore بحساب Apple ID (المجاني ينتهي كل 7 أيام).
-  النشر في App Store يتطلب عضوية Apple Developer (99$ سنويًا).
 
 
 وضع الذكاء الاصطناعي (اختياري)
@@ -238,7 +217,7 @@ js/rag.js               محرك الفهم والاسترجاع والتركي�
 js/tts.js               القراءة الصوتية (أندرويد أصلي / Web Speech)
 js/ai.js                طبقة Claude الاختيارية
 js/app.js               الواجهة
-build/                  سكربتات البناء (Electron / Android / HTML) والاختبارات
+build/                  سكربتات البناء (Android / HTML) والاختبارات
 build/play/              صفحة متجر Google Play (نصوص وصور) ودليل النشر
 docs/                   سياسة الخصوصية (GitHub Pages)
 
@@ -246,7 +225,7 @@ docs/                   سياسة الخصوصية (GitHub Pages)
 حقل sits في data-themes.js، ثم شغّل:  node build/tests/test-engine.js
 
 إعادة بناء كل النسخ:
-  TOOLS=<مجلد jdk وsdk> EBUILD=<مجلد electron وelectron-builder> bash build/build-all.sh
+  TOOLS=<مجلد jdk وsdk> bash build/build-all.sh
 
 مهم جدًا — مفتاح توقيع أندرويد:
   يوجد خارج المشروع في %USERPROFILE%\.rifqa-signing\ (upload.jks و signing.env).

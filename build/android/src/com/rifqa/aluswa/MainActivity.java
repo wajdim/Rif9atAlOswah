@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
                 i.putExtra(Intent.EXTRA_TEXT, text);
-                String title = "en".equals(ttsLang) ? "Share" : "nl".equals(ttsLang) ? "Delen" : "es".equals(ttsLang) ? "Compartir" : "pt".equals(ttsLang) ? "Partilhar" : "fr".equals(ttsLang) ? "Partager" : "مشاركة";
+                String title = "en".equals(ttsLang) ? "Share" : "nl".equals(ttsLang) ? "Delen" : "es".equals(ttsLang) ? "Compartir" : "pt".equals(ttsLang) ? "Partilhar" : "fr".equals(ttsLang) ? "Partager" : "ur".equals(ttsLang) ? "شیئر کریں" : "id".equals(ttsLang) ? "Bagikan" : "tr".equals(ttsLang) ? "Paylaş" : "مشاركة";
                 startActivity(Intent.createChooser(i, title));
             }});
         }
@@ -99,7 +99,7 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void ttsSetLang(final String lang) {
             runOnUiThread(new Runnable() { public void run() {
-                ttsLang = ("en".equals(lang) || "nl".equals(lang) || "es".equals(lang) || "pt".equals(lang) || "fr".equals(lang)) ? lang : "ar";
+                ttsLang = ("en".equals(lang) || "nl".equals(lang) || "es".equals(lang) || "pt".equals(lang) || "fr".equals(lang) || "ur".equals(lang) || "id".equals(lang) || "tr".equals(lang)) ? lang : "ar";
                 if (tts != null && !"none".equals(ttsState) && !"init".equals(ttsState)) {
                     int r = tts.setLanguage(new Locale(ttsLang));
                     ttsState = (r == TextToSpeech.LANG_MISSING_DATA || r == TextToSpeech.LANG_NOT_SUPPORTED) ? "missing" : "ok";

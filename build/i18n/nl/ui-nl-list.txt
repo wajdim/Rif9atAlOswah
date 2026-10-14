@@ -417,3 +417,57 @@
 416	Annuleren
 417	Taal · Language · اللغة
 418	Sluiten zonder bewaren
+460	In jouw woorden:
+461	Wat je voelt
+462	Wat je waarschijnlijk nodig hebt
+463	Omdat je schreef:
+464	(afgeleid uit de context van je woorden)
+465	Wat aan je trekt
+466	Tijd
+467	Betrokkenen en zwaarte van de situatie
+468	Waarom deze situatie?
+469	Gemeenschappelijk met jouw situatie:
+470	Het probleem daar:
+471	En de leiding daarin was:
+472	Een vraag om mee te nemen
+473	Voor een scherpere lezing, voeg toe:
+474	Wat je schreef draagt diepe pijn, en je veiligheid komt eerst
+475	Je spreekt als iemand die een fout maakte en het wil herstellen
+476	Je spreekt als iemand die een dierbare verloor
+477	Je spreekt als iemand die gekwetst is
+478	Je draagt de last van de zorg voor {0}
+479	Je maakt je zorgen om {0}
+480	Je staat voor een beslissing die je nog niet hebt genomen
+481	Je veiligheid eerst: veilig zijn vóór elke bezinning
+482	Een beslissing nemen met de rust dat die het dichtst bij het juiste ligt
+483	Herstellen wat brak en weten waar te beginnen
+484	Duidelijke praktische stappen: wat nu te doen
+485	De betekenis en wijsheid begrijpen van wat er gebeurde
+486	Dat je pijn gehoord en begrepen wordt vóór elk advies
+487	Tussen je liefde voor {0} en de pijn om wat er gebeurde
+488	Tussen je gehechtheid aan iemand van wie je houdt en de pijn om wat er gebeurde
+489	Tussen boosheid op anderen en jezelf de schuld geven
+490	Tussen je plicht tegenover {0} en je eigen behoefte aan rust
+491	Tussen willen beslissen en bang zijn voor de verkeerde keuze
+492	Verdriet dat uit liefde komt: hoe meer je liefhebt, hoe meer het pijn doet
+493	Tussen spijt om wat je deed en angst voor hoe mensen je zien
+494	Tussen de wanhoop die je voelt en een vraag die laat zien dat je nog een uitweg zoekt
+495	Iets wat al een tijd duurt, geen eenmalig voorval
+496	Iets wat gebeurd en voorbij is, maar je nog raakt
+497	Je zorg gaat meer over wat komt dan over wat gebeurd is
+498	Wie is de ander?
+499	De ander is
+500	Hoe voel je je?
+501	Ik voel me
+502	Wat wil je dat er gebeurt?
+503	Ik wil
+504	Wat gebeurde er precies?
+505	Wat er gebeurde is dat
+506	Sinds wanneer?
+507	Dit begon
+508	Wat je waarschijnlijk nodig hebt: {0}.
+509	Je wordt twee kanten op getrokken: {0}.
+510	Positie van de spreker:
+511	Wat hij of zij waarschijnlijk nodig heeft:
+512	Innerlijke spanning:
+513	Tijd:

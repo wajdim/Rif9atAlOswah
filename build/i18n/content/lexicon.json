@@ -1,392 +1,521 @@
 {
-"lexicon": {
-"emotion": {
-"anger": {
-"label": "anger",
-"words": [
-"angry",
-"anger",
-"furious",
-"mad",
-"rage",
-"annoyed",
-"irritated",
-"frustrated",
-"hate him",
-"hate her",
-"i hate",
-"resent",
-"resentment",
-"pissed"
-]
-},
-"sadness": {
-"label": "sadness",
-"words": [
-"sad",
-"sadness",
-"unhappy",
-"crying",
-"cry",
-"cried",
-"heartbroken",
-"hurt",
-"hurting",
-"broken",
-"depressed",
-"miserable",
-"in pain",
-"grieving",
-"devastated",
-"upset"
-]
-},
-"fear": {
-"label": "fear and anxiety",
-"words": [
-"afraid",
-"scared",
-"fear",
-"anxious",
-"anxiety",
-"worried",
-"worry",
-"nervous",
-"stressed",
-"panic",
-"terrified",
-"frightened",
-"under pressure"
-]
-},
-"guilt": {
-"label": "guilt and regret",
-"words": [
-"guilty",
-"guilt",
-"regret",
-"regretting",
-"ashamed",
-"my fault",
-"conscience",
-"remorse",
-"feel bad about"
-]
-},
-"shame": {
-"label": "embarrassment and humiliation",
-"words": [
-"humiliated",
-"embarrassed",
-"insulted",
-"disrespected",
-"belittled",
-"shamed",
-"exposed me",
-"looked down on",
-"worthless",
-"degraded"
-]
-},
-"loneliness": {
-"label": "loneliness",
-"words": [
-"lonely",
-"alone",
-"isolated",
-"no one",
-"nobody",
-"left out",
-"excluded",
-"rejected",
-"outsider",
-"invisible"
-]
-},
-"despair": {
-"label": "despair",
-"words": [
-"hopeless",
-"despair",
-"give up",
-"gave up",
-"no hope",
-"pointless",
-"tired of everything",
-"no point",
-"can't go on"
-]
-},
-"confusion": {
-"label": "confusion",
-"words": [
-"confused",
-"feel lost",
-"torn",
-"unsure",
-"don't know",
-"do not know",
-"undecided",
-"hesitant",
-"mixed feelings"
-]
-},
-"exhaustion": {
-"label": "exhaustion",
-"words": [
-"exhausted",
-"tired",
-"drained",
-"burned out",
-"burnt out",
-"worn out",
-"overwhelmed",
-"no energy",
-"fatigued"
-]
-},
-"jealousy": {
-"label": "jealousy",
-"words": [
-"jealous",
-"jealousy",
-"envious",
-"envy"
-]
-},
-"betrayal": {
-"label": "feeling let down",
-"words": [
-"betrayed",
-"let down",
-"let me down",
-"backstabbed",
-"stabbed in the back",
-"disappointed",
-"deceived",
-"lied to"
-]
-},
-"love": {
-"label": "attachment and love",
-"words": [
-"love him",
-"love her",
-"i love",
-"miss him",
-"miss her",
-"missing",
-"attached",
-"longing",
-"can't stop thinking about"
-]
-},
-"joy": {
-"label": "joy and gratitude",
-"words": [
-"happy",
-"grateful",
-"thankful",
-"alhamdulillah",
-"glad",
-"joy",
-"excited",
-"succeeded",
-"passed"
-]
-}
-},
-"relation": {
-"spouse": {
-"label": "your spouse",
-"words": [
-"my husband",
-"my wife",
-"husband",
-"wife",
-"spouse",
-"my partner"
-]
-},
-"fiance": {
-"label": "your fiancé(e)",
-"words": [
-"fiance",
-"fiancee",
-"my fiance",
-"my fiancee",
-"fiancé",
-"fiancée",
-"suitor"
-]
-},
-"parent": {
-"label": "your parents",
-"words": [
-"my mother",
-"my father",
-"my mom",
-"my mum",
-"my dad",
-"my parents",
-"mother",
-"father",
-"mom",
-"mum",
-"dad",
-"parents"
-]
-},
-"child": {
-"label": "your children",
-"words": [
-"my son",
-"my daughter",
-"my child",
-"my children",
-"my kids",
-"my baby",
-"son",
-"daughter",
-"kids",
-"children"
-]
-},
-"sibling": {
-"label": "your siblings",
-"words": [
-"my brother",
-"my sister",
-"my siblings",
-"brother",
-"sister",
-"siblings"
-]
-},
-"relative": {
-"label": "your relatives",
-"words": [
-"my uncle",
-"my aunt",
-"my cousin",
-"my relatives",
-"mother in law",
-"father in law",
-"in-laws",
-"my in laws",
-"relatives",
-"cousin"
-]
-},
-"boss": {
-"label": "your manager",
-"words": [
-"my boss",
-"boss",
-"my manager",
-"manager",
-"supervisor",
-"my supervisor"
-]
-},
-"colleague": {
-"label": "your colleagues",
-"words": [
-"my colleague",
-"colleague",
-"colleagues",
-"coworker",
-"coworkers",
-"co-worker"
-]
-},
-"friend": {
-"label": "your friends",
-"words": [
-"my friend",
-"my best friend",
-"friend",
-"friends",
-"best friend"
-]
-},
-"neighbor": {
-"label": "your neighbours",
-"words": [
-"my neighbor",
-"my neighbour",
-"neighbor",
-"neighbour",
-"neighbors",
-"neighbours"
-]
-},
-"employee": {
-"label": "those under your responsibility",
-"words": [
-"my employee",
-"my employees",
-"my team",
-"my staff",
-"my worker",
-"my maid"
-]
-},
-"teacher": {
-"label": "your teachers",
-"words": [
-"my teacher",
-"teacher",
-"my professor",
-"professor",
-"lecturer"
-]
-},
-"self": {
-"label": "yourself",
-"words": [
-"myself",
-"my self"
-]
-}
-},
-"intensifiers": [
-"very",
-"really",
-"so much",
-"extremely",
-"always",
-"every day",
-"for years",
-"for months",
-"can't take it anymore",
-"cannot take it anymore",
-"can't bear",
-"cannot bear",
-"never",
-"more than ever",
-"unbearable",
-"too much"
-],
-"selfFault": [
-"my fault",
-"i was wrong",
-"i made a mistake",
-"i messed up",
-"i hurt",
-"i lied",
-"i cheated",
-"i insulted",
-"i hit",
-"i shouted",
-"i yelled",
-"i betrayed",
-"i wronged",
-"i want to apologize",
-"i want to apologise",
-"i sinned",
-"i regret what i did",
-"it's my fault"
-]
-}
+ "lexicon": {
+  "emotion": {
+   "anger": {
+    "label": "anger",
+    "words": [
+     "angry",
+     "anger",
+     "furious",
+     "mad",
+     "rage",
+     "annoyed",
+     "irritated",
+     "frustrated",
+     "hate him",
+     "hate her",
+     "i hate",
+     "resent",
+     "resentment",
+     "pissed"
+    ]
+   },
+   "sadness": {
+    "label": "sadness",
+    "words": [
+     "sad",
+     "sadness",
+     "unhappy",
+     "crying",
+     "cry",
+     "cried",
+     "heartbroken",
+     "hurt",
+     "hurting",
+     "broken",
+     "depressed",
+     "miserable",
+     "in pain",
+     "grieving",
+     "devastated",
+     "upset"
+    ]
+   },
+   "fear": {
+    "label": "fear and anxiety",
+    "words": [
+     "afraid",
+     "scared",
+     "fear",
+     "anxious",
+     "anxiety",
+     "worried",
+     "worry",
+     "nervous",
+     "stressed",
+     "panic",
+     "terrified",
+     "frightened",
+     "under pressure"
+    ]
+   },
+   "guilt": {
+    "label": "guilt and regret",
+    "words": [
+     "guilty",
+     "guilt",
+     "regret",
+     "regretting",
+     "ashamed",
+     "my fault",
+     "conscience",
+     "remorse",
+     "feel bad about"
+    ]
+   },
+   "shame": {
+    "label": "embarrassment and humiliation",
+    "words": [
+     "humiliated",
+     "embarrassed",
+     "insulted",
+     "disrespected",
+     "belittled",
+     "shamed",
+     "exposed me",
+     "looked down on",
+     "worthless",
+     "degraded"
+    ]
+   },
+   "loneliness": {
+    "label": "loneliness",
+    "words": [
+     "lonely",
+     "alone",
+     "isolated",
+     "no one",
+     "nobody",
+     "left out",
+     "excluded",
+     "rejected",
+     "outsider",
+     "invisible"
+    ]
+   },
+   "despair": {
+    "label": "despair",
+    "words": [
+     "hopeless",
+     "despair",
+     "give up",
+     "gave up",
+     "no hope",
+     "pointless",
+     "tired of everything",
+     "no point",
+     "can't go on"
+    ]
+   },
+   "confusion": {
+    "label": "confusion",
+    "words": [
+     "confused",
+     "feel lost",
+     "torn",
+     "unsure",
+     "don't know",
+     "do not know",
+     "undecided",
+     "hesitant",
+     "mixed feelings"
+    ]
+   },
+   "exhaustion": {
+    "label": "exhaustion",
+    "words": [
+     "exhausted",
+     "tired",
+     "drained",
+     "burned out",
+     "burnt out",
+     "worn out",
+     "overwhelmed",
+     "no energy",
+     "fatigued"
+    ]
+   },
+   "jealousy": {
+    "label": "jealousy",
+    "words": [
+     "jealous",
+     "jealousy",
+     "envious",
+     "envy"
+    ]
+   },
+   "betrayal": {
+    "label": "feeling let down",
+    "words": [
+     "betrayed",
+     "let down",
+     "let me down",
+     "backstabbed",
+     "stabbed in the back",
+     "disappointed",
+     "deceived",
+     "lied to me",
+     "lied to us",
+     "was lied to"
+    ]
+   },
+   "love": {
+    "label": "attachment and love",
+    "words": [
+     "love him",
+     "love her",
+     "i love",
+     "miss him",
+     "miss her",
+     "missing",
+     "attached",
+     "longing",
+     "can't stop thinking about"
+    ]
+   },
+   "joy": {
+    "label": "joy and gratitude",
+    "words": [
+     "happy",
+     "grateful",
+     "thankful",
+     "alhamdulillah",
+     "glad",
+     "joy",
+     "excited",
+     "succeeded",
+     "passed"
+    ]
+   }
+  },
+  "relation": {
+   "spouse": {
+    "label": "your spouse",
+    "words": [
+     "my husband",
+     "my wife",
+     "husband",
+     "wife",
+     "spouse",
+     "my partner"
+    ]
+   },
+   "fiance": {
+    "label": "your fiancé(e)",
+    "words": [
+     "fiance",
+     "fiancee",
+     "my fiance",
+     "my fiancee",
+     "fiancé",
+     "fiancée",
+     "suitor"
+    ]
+   },
+   "parent": {
+    "label": "your parents",
+    "words": [
+     "my mother",
+     "my father",
+     "my mom",
+     "my mum",
+     "my dad",
+     "my parents",
+     "mother",
+     "father",
+     "mom",
+     "mum",
+     "dad",
+     "parents"
+    ]
+   },
+   "child": {
+    "label": "your children",
+    "words": [
+     "my son",
+     "my daughter",
+     "my child",
+     "my children",
+     "my kids",
+     "my baby",
+     "son",
+     "daughter",
+     "kids",
+     "children"
+    ]
+   },
+   "sibling": {
+    "label": "your siblings",
+    "words": [
+     "my brother",
+     "my sister",
+     "my siblings",
+     "brother",
+     "sister",
+     "siblings"
+    ]
+   },
+   "relative": {
+    "label": "your relatives",
+    "words": [
+     "my uncle",
+     "my aunt",
+     "my cousin",
+     "my relatives",
+     "mother in law",
+     "father in law",
+     "in-laws",
+     "my in laws",
+     "relatives",
+     "cousin"
+    ]
+   },
+   "boss": {
+    "label": "your manager",
+    "words": [
+     "my boss",
+     "boss",
+     "my manager",
+     "manager",
+     "supervisor",
+     "my supervisor"
+    ]
+   },
+   "colleague": {
+    "label": "your colleagues",
+    "words": [
+     "my colleague",
+     "colleague",
+     "colleagues",
+     "coworker",
+     "coworkers",
+     "co-worker"
+    ]
+   },
+   "friend": {
+    "label": "your friends",
+    "words": [
+     "my friend",
+     "my best friend",
+     "friend",
+     "friends",
+     "best friend"
+    ]
+   },
+   "neighbor": {
+    "label": "your neighbours",
+    "words": [
+     "my neighbor",
+     "my neighbour",
+     "neighbor",
+     "neighbour",
+     "neighbors",
+     "neighbours"
+    ]
+   },
+   "employee": {
+    "label": "those under your responsibility",
+    "words": [
+     "my employee",
+     "my employees",
+     "my team",
+     "my staff",
+     "my worker",
+     "my maid"
+    ]
+   },
+   "teacher": {
+    "label": "your teachers",
+    "words": [
+     "my teacher",
+     "teacher",
+     "my professor",
+     "professor",
+     "lecturer"
+    ]
+   },
+   "self": {
+    "label": "yourself",
+    "words": [
+     "myself",
+     "my self"
+    ]
+   }
+  },
+  "intensifiers": [
+   "very",
+   "really",
+   "so much",
+   "extremely",
+   "always",
+   "every day",
+   "for years",
+   "for months",
+   "can't take it anymore",
+   "cannot take it anymore",
+   "can't bear",
+   "cannot bear",
+   "never",
+   "more than ever",
+   "unbearable",
+   "too much"
+  ],
+  "selfFault": [
+   "my fault",
+   "i was wrong",
+   "i made a mistake",
+   "i messed up",
+   "i hurt",
+   "i lied",
+   "i cheated",
+   "i insulted",
+   "i hit",
+   "i shouted",
+   "i yelled",
+   "i betrayed",
+   "i wronged",
+   "i want to apologize",
+   "i want to apologise",
+   "i sinned",
+   "i regret what i did",
+   "it's my fault"
+  ],
+  "negators": [
+   "not",
+   "no",
+   "never",
+   "dont",
+   "didnt",
+   "doesnt",
+   "isnt",
+   "wasnt",
+   "arent",
+   "t",
+   "without",
+   "hardly"
+  ],
+  "negatorsPost": [],
+  "need": {
+   "safety": [
+    "threatens me",
+    "threatened me",
+    "i am in danger",
+    "i'm in danger",
+    "afraid of him",
+    "afraid of her",
+    "hits me",
+    "i want to escape",
+    "not safe"
+   ],
+   "decision": [
+    "should i",
+    "do i forgive",
+    "should i leave",
+    "should i stay",
+    "whether to",
+    "i can't decide",
+    "i cant decide",
+    "torn between",
+    "choose between",
+    "which one",
+    "i have to decide",
+    "make a decision"
+   ],
+   "repair": [
+    "apologise",
+    "apologize",
+    "make it right",
+    "fix things",
+    "repair",
+    "reconcile",
+    "make amends",
+    "win back",
+    "repent"
+   ],
+   "howto": [
+    "how do i",
+    "how can i",
+    "how to",
+    "what should i do",
+    "what do i do",
+    "what can i do",
+    "any advice",
+    "help me",
+    "advise me",
+    "what steps"
+   ],
+   "why": [
+    "why me",
+    "why did",
+    "why does",
+    "why is this",
+    "why would",
+    "what is the wisdom",
+    "what's the meaning",
+    "why"
+   ],
+   "comfort": [
+    "no one understands",
+    "nobody understands",
+    "nobody listens",
+    "i need someone",
+    "i just need to talk",
+    "vent",
+    "i can't take it anymore",
+    "i can't cope",
+    "overwhelmed"
+   ]
+  },
+  "time": {
+   "ongoing": [
+    "for years",
+    "for months",
+    "for a long time",
+    "every day",
+    "every night",
+    "always",
+    "constantly",
+    "keeps happening",
+    "again and again",
+    "all the time"
+   ],
+   "future": [
+    "tomorrow",
+    "next week",
+    "next month",
+    "soon",
+    "upcoming",
+    "i'm afraid that",
+    "i fear that",
+    "what if",
+    "exam",
+    "interview",
+    "going to happen",
+    "will happen"
+   ],
+   "past": [
+    "yesterday",
+    "last week",
+    "last month",
+    "last year",
+    "a few days ago",
+    "years ago",
+    "passed away",
+    "died",
+    "ended",
+    "it happened",
+    "divorced me"
+   ]
+  }
+ }
 }

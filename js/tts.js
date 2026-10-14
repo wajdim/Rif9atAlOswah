@@ -14,7 +14,7 @@
 var TTS = (function(){
   "use strict";
   var NATIVE = !!(window.AndroidBridge && typeof window.AndroidBridge.ttsSpeak === "function");
-  var LANG = (window.I18N && I18N.lang) || "ar";       // لغة النطق = لغة الواجهة (ar | en | nl | es | pt | fr)
+  var LANG = (window.I18N && I18N.lang) || "ar";       // لغة النطق = لغة الواجهة (ar | en | nl | es | pt | fr | ur | id | tr)
   var EN = LANG !== "ar";
   var LANG_RE = new RegExp("^" + LANG + "([-_]|$)", "i");
   var SAY = {   // ما يُنطق بدل الرموز في كل لغة
@@ -23,7 +23,10 @@ var TTS = (function(){
     nl: {pbuh:", vrede zij met hem, ", to:"$1 tot $2", num:" nummer $1 ", tag:"nl-NL"},
     es: {pbuh:", la paz sea con él, ", to:"$1 a $2", num:" número $1 ", tag:"es-ES"},
     pt: {pbuh:", que a paz esteja com ele, ", to:"$1 a $2", num:" número $1 ", tag:"pt-PT"},
-    fr: {pbuh:", que la paix soit sur lui, ", to:"$1 à $2", num:" numéro $1 ", tag:"fr-FR"}
+    fr: {pbuh:", que la paix soit sur lui, ", to:"$1 à $2", num:" numéro $1 ", tag:"fr-FR"},
+    ur: {pbuh:"، صلی اللہ علیہ وسلم، ", to:"$1 تا $2", num:" نمبر $1 ", tag:"ur-PK"},
+    id: {pbuh:", shallallahu 'alaihi wa sallam, ", to:"$1 sampai $2", num:" nomor $1 ", tag:"id-ID"},
+    tr: {pbuh:", sallallahu aleyhi ve sellem, ", to:"$1 ile $2", num:" $1 numara ", tag:"tr-TR"}
   }[LANG];
   var synth = window.speechSynthesis || null;
   var MAX_CHUNK = 220;
@@ -147,8 +150,8 @@ var TTS = (function(){
 
   /* ---------- الأصوات ---------- */
   // تقدير جنس الصوت من اسمه: Windows / Edge / Apple / Google (رموز الأصوات) / Samsung (SMTm و SMTf)
-  var MALE = /maged|naayf|hamed|shakir|omar|bassel|taim|fahed|moaz|rami|hamdan|jamal|\bali\b|saleh|hedi|ismael|abdulla|majed|tarik|laith|kareem|\bmale|-ard-|-are-|david|mark|james|guy|ryan|eric|brian|christopher|andrew|george|daniel|thomas|alex|fred|arthur|liam|william|aaron|gordon|oliver|-iom-|-iol-|-rjs-|-gbd-|frank|maarten|arnaud|xander|willem|bart|daan|-bmh-|-dma-|-bed-|jorge|pablo|alvaro|álvaro|diego|carlos|enrique|juan|raul|raúl|jose|josé|duarte|cristiano|antonio|antónio|ricardo|daniel|-eed-|-eef-|-ptd-|-pmj-|paul|henri|nicolas|thomas|mathieu|antoine|gerard|gérard|jacques|remy|rémy|-frd-|-frb-|-vlf-|smtm\d/i;
-  var FEMALE = /hoda|zariyah|salma|amany|laila|layla|fatima|reem|amina|mouna|sana|iman|noura|rana|aysha|amal|mariam|maryam|yasmin|dalia|female|-arc-|-arz-|zira|hazel|susan|samantha|karen|moira|tessa|victoria|aria|jenny|libby|sonia|emma|michelle|ava|allison|serena|kate|catherine|olivia|-sfg-|-tpc-|-tpf-|colette|fenna|claire|ellen|dena|lotte|anouk|-lfc-|-tfb-|-yfr-|-bec-|helena|laura|elvira|lucia|lucía|monica|mónica|paulina|sabina|elena|ximena|raquel|fernanda|ines|inês|joana|catarina|francisca|helia|hélia|-eea-|-eec-|-pte-|-jfb-|julie|hortense|denise|amelie|amélie|audrey|aurelie|aurélie|marie|virginie|chantal|sylvie|eloise|éloïse|-fra-|-frc-|smtf\d/i;
+  var MALE = /maged|naayf|hamed|shakir|omar|bassel|taim|fahed|moaz|rami|hamdan|jamal|\bali\b|saleh|hedi|ismael|abdulla|majed|tarik|laith|kareem|\bmale|-ard-|-are-|david|mark|james|guy|ryan|eric|brian|christopher|andrew|george|daniel|thomas|alex|fred|arthur|liam|william|aaron|gordon|oliver|-iom-|-iol-|-rjs-|-gbd-|frank|maarten|arnaud|xander|willem|bart|daan|-bmh-|-dma-|-bed-|jorge|pablo|alvaro|álvaro|diego|carlos|enrique|juan|raul|raúl|jose|josé|duarte|cristiano|antonio|antónio|ricardo|daniel|-eed-|-eef-|-ptd-|-pmj-|paul|henri|nicolas|thomas|mathieu|antoine|gerard|gérard|jacques|remy|rémy|-frd-|-frb-|-vlf-|asad|salman|uzair|ardi|tolga|ahmet|emre|-urb-|-idd-|-tra-|smtm\d/i;
+  var FEMALE = /hoda|zariyah|salma|amany|laila|layla|fatima|reem|amina|mouna|sana|iman|noura|rana|aysha|amal|mariam|maryam|yasmin|dalia|female|-arc-|-arz-|zira|hazel|susan|samantha|karen|moira|tessa|victoria|aria|jenny|libby|sonia|emma|michelle|ava|allison|serena|kate|catherine|olivia|-sfg-|-tpc-|-tpf-|colette|fenna|claire|ellen|dena|lotte|anouk|-lfc-|-tfb-|-yfr-|-bec-|helena|laura|elvira|lucia|lucía|monica|mónica|paulina|sabina|elena|ximena|raquel|fernanda|ines|inês|joana|catarina|francisca|helia|hélia|-eea-|-eec-|-pte-|-jfb-|julie|hortense|denise|amelie|amélie|audrey|aurelie|aurélie|marie|virginie|chantal|sylvie|eloise|éloïse|-fra-|-frc-|uzma|gul|damayanti|gadis|yelda|seda|emel|filiz|-ura-|-idc-|-trb-|smtf\d/i;
   function gender(v){ var n = v.name + " " + (v.voiceURI||""); return MALE.test(n) ? "m" : FEMALE.test(n) ? "f" : "?"; }
   function quality(v){ var n = v.name + " " + (v.voiceURI||""); return (/natural|online|neural|wavenet|network/i.test(n) ? 3 : 0) + (/google/i.test(n) ? 1 : 0) + (v.localService ? 1 : 0); }
   var voices = [];   // [{id, name, lang, g, q, raw}]
@@ -334,7 +337,10 @@ var TTS = (function(){
         nl: ["De Boodschapper van Allah, vrede zij met hem, zei: Daden worden slechts beoordeeld naar de intenties, en ieder mens krijgt slechts wat hij beoogde.", "Dit is de stem van de verteller: hij leest de titels en de uitleg, en de tweede stem antwoordt met de verzen en de hadith."],
         es: ["El Mensajero de Allah, la paz sea con él, dijo: Las obras dependen únicamente de las intenciones, y cada persona obtendrá solo lo que se propuso.", "Esta es la voz del narrador: lee los títulos y las explicaciones, y la segunda voz responde con las aleyas y los hadices."],
         pt: ["O Mensageiro de Allah, que a paz esteja com ele, disse: As ações valem apenas pelas intenções, e cada pessoa terá apenas aquilo que pretendeu.", "Esta é a voz do narrador: lê os títulos e as explicações, e a segunda voz responde com os versículos e os hadiths."],
-        fr: ["Le Messager d'Allah, que la paix soit sur lui, a dit : Les actions ne valent que par les intentions, et chacun n'aura que ce qu'il a eu l'intention de faire.", "Voici la voix du narrateur : elle lit les titres et les explications, et la seconde voix répond avec les versets et les hadiths."]
+        fr: ["Le Messager d'Allah, que la paix soit sur lui, a dit : Les actions ne valent que par les intentions, et chacun n'aura que ce qu'il a eu l'intention de faire.", "Voici la voix du narrateur : elle lit les titres et les explications, et la seconde voix répond avec les versets et les hadiths."],
+        ur: ["رسول اللہ صلی اللہ علیہ وسلم نے فرمایا: اعمال کا دارومدار نیتوں پر ہے، اور ہر شخص کو وہی ملے گا جس کی اس نے نیت کی۔", "یہ راوی کی آواز ہے: یہ عنوانات اور وضاحتیں پڑھتی ہے، اور دوسری آواز آیات اور احادیث سناتی ہے۔"],
+        id: ["Rasulullah shallallahu 'alaihi wa sallam bersabda: Sesungguhnya amal itu tergantung niatnya, dan setiap orang hanya mendapatkan apa yang ia niatkan.", "Ini adalah suara narator: membacakan judul dan penjelasan, dan suara kedua membacakan ayat dan hadits."],
+        tr: ["Allah Resulü sallallahu aleyhi ve sellem şöyle buyurdu: Ameller ancak niyetlere göredir ve herkese ancak niyet ettiği şey vardır.", "Bu anlatıcının sesidir: başlıkları ve açıklamaları okur, ikinci ses de ayetleri ve hadisleri okur."]
       }[LANG];
       speakText(my, P[role === 1 ? 0 : 1], role);
     },

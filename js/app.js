@@ -9,7 +9,7 @@
 function qs(id){ return document.getElementById(id); }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
 function toast(msg,ms){ var t=qs("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("show");},ms||2200); }
-var APP_VERSION="2.7.0";
+var APP_VERSION="2.8.0";
 var EN=I18N.en;
 function store(key, val){ try{ if(val===undefined) return JSON.parse(localStorage.getItem(key)||"null"); localStorage.setItem(key, JSON.stringify(val)); }catch(e){ return null; } }
 function iconSvg(k){ return '<svg viewBox="0 0 24 24">'+(ICONS[k]||ICONS.star)+'</svg>'; }
@@ -131,9 +131,9 @@ function renderHome(){
 }
 
 /* ---------------- التنبيهات الحساسة ---------------- */
-var SELF_HARM=["افكار انتحاريه","انتحار","انتحر","اذي نفسي","اؤذي نفسي","اريد ان اموت","اريد الموت","لا اريد ان اعيش","اقتل نفسي","انهي حياتي","ان انهي حياتي","نقتل روحي","نحب نموت","ما نحبش نعيش","حابب اموت","بدي موت","الموت ارحم","جرح نفسي","اجرح نفسي","suicide","suicidal","kill myself","end my life","want to die","wish i was dead","wish i were dead","hurt myself","harm myself","self harm","cut myself","no reason to live","me suicider","zelfmoord","suicidaal","mezelf van kant maken","mezelf iets aandoen","ik wil dood","ik wil sterven","wil niet meer leven","een eind aan mijn leven","mezelf pijn doen","zelfbeschadiging","mezelf snijden","suicidio","suicidarme","quiero morir","matarme","quitarme la vida","acabar con mi vida","no quiero vivir","hacerme daño","autolesión","cortarme","suicídio","suicidar-me","quero morrer","matar-me","tirar a minha vida","acabar com a minha vida","não quero viver","magoar-me","automutilação","cortar-me","suicide","suicidaire","je veux mourir","envie de mourir","en finir avec la vie","mettre fin à mes jours","mettre fin à ma vie","je ne veux plus vivre","plus envie de vivre","je veux me tuer","je vais me tuer","envie de me tuer","me faire du mal","me scarifier","automutilation","j'aimerais être mort","je voudrais être morte"];
-var LEGAL=["طلاق","ميراث","ارث","الورث","حد شرعي","ربا","محامي","قضيه","محكمه","نفقه","خلع","حضانه","فتوي","عقد","divorce","inheritance","custody","lawyer","court case","lawsuit","alimony","fatwa","khula","riba","usury","scheiding","echtscheiding","erfenis","voogdij","advocaat","rechtszaak","rechtbank","alimentatie","rente","divorcio","herencia","custodia","abogado","juicio","pensión alimenticia","usura","herança","guarda dos filhos","advogado","tribunal","processo judicial","pensão de alimentos","héritage","succession","garde des enfants","avocat","procès","pension alimentaire","usure","fatwa","khul"];
-var VIOLENCE=["عنف","يضربني","تضربني","ضربني","ضربتني","تعنيف","اعتداء","اغتصاب","تحرش","يهددني بالقتل","abuse","abusive","hits me","beats me","beat me","hit me","violence","violent","rape","assault","harass","threatens to kill","threatened to kill","mishandeling","mishandelt","slaat me","sloeg me","geweld","verkrachting","aanranding","intimidatie","bedreigt me","dreigt me te vermoorden","maltrato","me pega","me golpea","violencia","violación","agresión","acoso","amenaza con matarme","violência","me bate","bate-me","agressão","violação","assédio","ameaça matar-me","ameaça me matar","maltraitance","me frappe","me frappent","me tape dessus","me cogne","il m'a frappé","il m'a frappée","me bat","violence conjugale","viol","agression","harcèlement","menace de me tuer","m'a menacé de mort"];
+var SELF_HARM=["افكار انتحاريه","انتحار","انتحر","اذي نفسي","اؤذي نفسي","اريد ان اموت","اريد الموت","لا اريد ان اعيش","اقتل نفسي","انهي حياتي","ان انهي حياتي","نقتل روحي","نحب نموت","ما نحبش نعيش","حابب اموت","بدي موت","الموت ارحم","جرح نفسي","اجرح نفسي","suicide","suicidal","kill myself","end my life","want to die","wish i was dead","wish i were dead","hurt myself","harm myself","self harm","cut myself","no reason to live","me suicider","zelfmoord","suicidaal","mezelf van kant maken","mezelf iets aandoen","ik wil dood","ik wil sterven","wil niet meer leven","een eind aan mijn leven","mezelf pijn doen","zelfbeschadiging","mezelf snijden","suicidio","suicidarme","quiero morir","matarme","quitarme la vida","acabar con mi vida","no quiero vivir","hacerme daño","autolesión","cortarme","suicídio","suicidar-me","quero morrer","matar-me","tirar a minha vida","acabar com a minha vida","não quero viver","magoar-me","automutilação","cortar-me","suicide","suicidaire","je veux mourir","envie de mourir","en finir avec la vie","mettre fin à mes jours","mettre fin à ma vie","je ne veux plus vivre","plus envie de vivre","je veux me tuer","je vais me tuer","envie de me tuer","me faire du mal","me scarifier","automutilation","j'aimerais être mort","je voudrais être morte","خودکشی","مرنا چاہتا","مرنا چاہتی","جینا نہیں چاہتا","جینا نہیں چاہتی","اپنی جان لے","خود کو نقصان","bunuh diri","ingin mati","mau mati","mengakhiri hidup","menyakiti diri","tidak ingin hidup","intihar","ölmek istiyorum","kendimi öldür","hayatıma son","yaşamak istemiyorum","kendime zarar"];
+var LEGAL=["طلاق","ميراث","ارث","الورث","حد شرعي","ربا","محامي","قضيه","محكمه","نفقه","خلع","حضانه","فتوي","عقد","divorce","inheritance","custody","lawyer","court case","lawsuit","alimony","fatwa","khula","riba","usury","scheiding","echtscheiding","erfenis","voogdij","advocaat","rechtszaak","rechtbank","alimentatie","rente","divorcio","herencia","custodia","abogado","juicio","pensión alimenticia","usura","herança","guarda dos filhos","advogado","tribunal","processo judicial","pensão de alimentos","héritage","succession","garde des enfants","avocat","procès","pension alimentaire","usure","fatwa","khul","طلاق","وراثت","مقدمہ","عدالت","وکیل","خلع","perceraian","cerai","warisan","hak asuh","pengacara","pengadilan","gugatan","boşanma","miras","velayet","avukat","mahkeme","dava","nafaka"];
+var VIOLENCE=["عنف","يضربني","تضربني","ضربني","ضربتني","تعنيف","اعتداء","اغتصاب","تحرش","يهددني بالقتل","abuse","abusive","hits me","beats me","beat me","hit me","violence","violent","rape","assault","harass","threatens to kill","threatened to kill","mishandeling","mishandelt","slaat me","sloeg me","geweld","verkrachting","aanranding","intimidatie","bedreigt me","dreigt me te vermoorden","maltrato","me pega","me golpea","violencia","violación","agresión","acoso","amenaza con matarme","violência","me bate","bate-me","agressão","violação","assédio","ameaça matar-me","ameaça me matar","maltraitance","me frappe","me frappent","me tape dessus","me cogne","il m'a frappé","il m'a frappée","me bat","violence conjugale","viol","agression","harcèlement","menace de me tuer","m'a menacé de mort","مارتا ہے","مارتی ہے","مجھے مارا","تشدد","زیادتی","ہراساں","جان سے مارنے کی دھمکی","memukul saya","memukuliku","kekerasan","kdrt","pemerkosaan","pelecehan","mengancam membunuh","beni dövüyor","bana vuruyor","şiddet","tecavüz","taciz","öldürmekle tehdit"];
 function checkFlags(text){
   var n=" "+RAG.normalize(text)+" ";
   function hit(list){ return list.some(function(k){ var nk=RAG.normalize(k); return /[a-z]/.test(nk) ? n.indexOf(" "+nk)>-1 : n.indexOf(nk)>-1; }); }
@@ -227,11 +227,76 @@ function planTabsHTML(){
 }
 function strengthBadge(s){ return '<span class="badge '+badgeClass(s.sourceStrength)+'">'+esc(T(s.sourceStrength))+'</span>'; }
 
+/* ---------------- القراءة الأولى للموقف (بطاقة متعددة الطبقات) ---------------- */
+function lcFirst(x){ return /^[A-ZÀ-Ý]/.test(x) && !/^I/.test(x) ? x.charAt(0).toLowerCase()+x.slice(1) : x; }
+function readingCardHTML(a, themesShown, confLabel){
+  var u=a.understanding, D=a.deep||{}, q=function(x){ return I18N.q(esc(x)); };
+  function row(icon, label, body, cls){ return '<div class="rd-row'+(cls?" "+cls:"")+'"><div class="rd-ic" aria-hidden="true">'+icon+'</div><div class="rd-main"><div class="rd-label">'+label+'</div><div class="rd-body">'+body+'</div></div></div>'; }
+  var IC={eye:'<svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+    heart:'<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>',
+    need:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>',
+    pull:'<svg viewBox="0 0 24 24"><path d="M4 12h16M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg>',
+    time:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
+    people:'<svg viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9.5" r="2.4"/><path d="M15.5 14.2A4.6 4.6 0 0 1 21 18.5"/></svg>'};
+  var h='<div class="reading-card"><div class="rc-head"><div class="rc-title">'+T("قراءة أولية لموقفك")+'</div><span class="conf-pill conf-'+a.confidence+'">'+confLabel+'</span></div>';
+  // ما فهمته
+  var t0=u.themes[0], t1=u.themes[1], rel=u.relations[0], sum="";
+  if(t0) sum=T("يدور ما كتبته أساسًا حول «{0}»",esc(t0.theme.label))+(t1?T("، ويتقاطع مع «{0}»",esc(t1.theme.label)):"")+(rel?T("، في سياق علاقتك بـ{0}",rel.word?q(lcFirst(rel.word)):esc(rel.label)):"")+".";
+  else if(rel) sum=T("يدور ما كتبته حول علاقتك بـ{0}.",rel.word?q(lcFirst(rel.word)):esc(rel.label));
+  h+='<div class="rd-summary">'+sum+(D.role?'<div class="rd-role">'+esc(D.role.text)+'</div>':"")+'</div><div class="rd-rows">';
+  // المشاعر بالدليل
+  var fe=(D.feelings||[]).length ? D.feelings.map(function(f){
+      return '<span class="rd-feel"><span class="tag'+(f.implied?" soft":"")+'">'+esc(f.label)+(f.implied?" "+T("(محتمل)"):"")+'</span>'+
+        (f.ev&&f.ev.length?'<span class="rd-ev">'+T("من كلماتك:")+" "+f.ev.map(q).join(T("، "))+'</span>':"")+'</span>'; }).join("")
+    : '<span class="tag soft">'+T("لم تُذكر صراحة")+'</span>';
+  h+=row(IC.heart, T("ما تشعر به"), '<div class="rd-feels">'+fe+'</div>');
+  if(D.need) h+=row(IC.need, T("ما تحتاجه على الأرجح"), esc(D.need.text)+(D.need.cue?' <span class="rd-ev">'+T("لأنك كتبت:")+" "+q(D.need.cue)+'</span>':(D.need.inferred?' <span class="rd-ev">'+T("(استنتاج من سياق كلامك)")+'</span>':"")));
+  if(D.tension&&D.tension.length) h+=row(IC.pull, T("ما يتجاذبك"), D.tension.map(function(x){ return '<div class="rd-pull">'+esc(x)+'</div>'; }).join(""));
+  if(D.time) h+=row(IC.time, T("الزمن"), esc(D.time.text));
+  h+=row(IC.people, T("الأطراف وثقل الموقف"), '<div class="tag-row">'+(u.relations.length?u.relations.map(function(x){return '<span class="tag">'+esc(x.label)+'</span>';}).join(""):'<span class="tag soft">'+T("غير محدد")+'</span>')+(u.selfFault?'<span class="tag clay">'+T("تتحدث عن خطأ منك")+'</span>':"")+'</div>'+
+    '<div class="meter" title="'+T("ثقل الموقف")+'">'+[1,2,3].map(function(k){return '<i class="'+(u.intensity>=k?"on":"")+'"></i>';}).join("")+'</div>');
+  h+='</div>';
+  // الموضوعات
+  h+='<div class="rd-themes"><div class="dim-label">'+T("الموضوعات المكتشفة")+'</div>'+(themesShown.length?themesShown.map(function(t){
+      return '<div class="bar-row"><span class="bl">'+esc(t.theme.label)+'</span><span class="bt"><span class="bf" style="width:'+Math.round(t.conf*100)+'%"></span></span><span class="bp">'+Math.round(t.conf*100)+'%</span></div>'; }).join(""):'<span class="tag soft">'+T("عام")+'</span>')+'</div>';
+  // لماذا هذا الموقف؟
+  if(D.why){
+    var W=D.why;
+    h+='<div class="rd-why"><div class="rd-why-h">'+T("لماذا هذا الموقف؟")+'</div>'+
+      '<button class="rd-why-t" data-sit="'+esc(W.id)+'">'+esc(W.title)+' ›</button>'+
+      (W.shared.length?'<div class="rd-why-l">'+T("يشترك مع حالتك في:")+' '+W.shared.map(function(x){return '<span class="tag">'+esc(x)+'</span>';}).join("")+'</div>':"")+
+      (W.problem?'<div class="rd-why-l"><b>'+T("المشكلة هناك:")+'</b> '+esc(W.problem)+'</div>':"")+
+      (W.response?'<div class="rd-why-l"><b>'+T("وكان الهدي فيها:")+'</b> '+esc(W.response)+'</div>':"")+'</div>';
+  }
+  if(D.question) h+='<div class="rd-q"><span>'+T("سؤال تحمله معك")+'</span>'+esc(D.question)+'</div>';
+  if(D.gaps&&D.gaps.length) h+='<div class="rd-gaps tts-skip"><div class="dim-label">'+T("لتكون القراءة أدق، أضف:")+'</div><div class="tag-row">'+
+    D.gaps.map(function(g){ return '<button class="rd-gap" data-refine="'+esc(g.add)+'">+ '+esc(g.label)+'</button>'; }).join("")+'</div></div>';
+  return h+'</div>';
+}
+/* «لتكون القراءة أدق»: يعيدك إلى نصك مع بداية جملة جاهزة */
+function refineInput(add){
+  showScreen("home");
+  var ta=qs("userInput"), v=(lastAnalysis&&lastAnalysis.input)||ta.value||"";
+  ta.value=v.replace(/\s+$/,"")+(v?"\n":"")+add;
+  ta.dispatchEvent(new Event("input"));
+  ta.focus(); try{ ta.setSelectionRange(ta.value.length, ta.value.length); }catch(e){}
+  ta.scrollIntoView({block:"center"});
+}
+
 /* ---------------- عرض النتيجة ---------------- */
+/* اللفظ الملتقط كما كتبه المستخدم لا بصيغته المطبَّعة (مهم للأردية: ی ہ ھ لا تُعرض ي ه) */
+function rawHit(h, raw){
+  var want=RAG.normalize(h).split(" "), toks=String(raw||"").split(/\s+/).filter(Boolean), nt=toks.map(function(t){return RAG.normalize(t);});
+  for(var i=0;i+want.length<=toks.length;i++){
+    var ok=want.every(function(w,j){ var x=nt[i+j]; return x===w || (x.indexOf(w)===0 && x.length-w.length<=3); });
+    if(ok) return toks.slice(i,i+want.length).join(" ").replace(/^[.,!?؟،؛;:…"“”«»‹›()۔'’-]+|[.,!?؟،؛;:…"“”«»‹›()۔'’-]+$/g,"");
+  }
+  return h;
+}
 function renderResult(a, flags){
   var u=a.understanding, r=a.retrieval, top=r.sits[0], out="", n=0;
   out+='<div class="result-toolbar tts-skip">'+listenBtnHTML("result",T("استمع للإجابة كاملة"))+foldBarHTML()+'</div>';
-  out+='<div class="user-quote">'+(EN?"“"+esc(a.input)+"”":"«"+esc(a.input)+"»")+'</div>';
+  out+='<div class="user-quote">'+I18N.q(esc(a.input))+'</div>';
 
   if(flags.selfHarm){
     out+='<div class="notice crisis"><b>'+T("قبل أي شيء آخر")+'</b>'+T("ما كتبته يدل على ألم كبير، ونحن نأخذه بجدية. حياتك غالية عند الله وعند من يحبك: «ولا تقتلوا أنفسكم إن الله كان بكم رحيمًا». هذا التطبيق تأملي ولا يكفي وحده لأزمة كهذه. أرجوك تواصل الآن مع شخص تثق به، أو مع خط مساعدة الأزمات النفسية في بلدك، أو أقرب قسم طوارئ. طلب المساعدة قوة لا ضعف، وأنت لست وحدك.")+'</div>';
@@ -251,14 +316,7 @@ function renderResult(a, flags){
   // 1) قراءة الموقف
   var themesShown=u.themes.filter(function(t){return t.conf>=0.3;}).slice(0,4);
   var confLabel={high:T("مطابقة قوية"),mid:T("مطابقة متوسطة"),low:T("مطابقة ضعيفة")}[a.confidence];
-  out+='<div class="reading-card"><div class="rc-head"><div class="rc-title">'+T("قراءة أولية لموقفك")+'</div><span class="conf-pill conf-'+a.confidence+'">'+confLabel+'</span></div>'+
-    '<div class="rc-text">'+esc(a.reading)+'</div><div class="dims">'+
-    '<div><div class="dim-label">'+T("الموضوعات المكتشفة")+'</div>'+(themesShown.length?themesShown.map(function(t){
-      return '<div class="bar-row"><span class="bl">'+esc(t.theme.label)+'</span><span class="bt"><span class="bf" style="width:'+Math.round(t.conf*100)+'%"></span></span></div>'; }).join(""):'<span class="tag soft">'+T("عام")+'</span>')+'</div>'+
-    '<div><div class="dim-label">'+T("المشاعر")+'</div><div class="tag-row">'+(u.emotions.length?u.emotions.map(function(e){ return '<span class="tag'+(e.implied?" soft":"")+'">'+esc(e.label)+(e.implied?" "+T("(محتمل)"):"")+'</span>'; }).join(""):'<span class="tag soft">'+T("لم تُذكر صراحة")+'</span>')+'</div>'+
-      '<div class="dim-label" style="margin-top:12px;">'+T("الأطراف")+'</div><div class="tag-row">'+(u.relations.length?u.relations.map(function(x){return '<span class="tag">'+esc(x.label)+'</span>';}).join(""):'<span class="tag soft">'+T("غير محدد")+'</span>')+(u.selfFault?'<span class="tag clay">'+T("تتحدث عن خطأ منك")+'</span>':"")+'</div>'+
-      '<div class="dim-label" style="margin-top:12px;">'+T("ثقل الموقف")+'</div><div class="meter">'+[1,2,3].map(function(k){return '<i class="'+(u.intensity>=k?"on":"")+'"></i>';}).join("")+'</div></div>'+
-    '</div></div>';
+  out+=readingCardHTML(a, themesShown, confLabel);
 
   a.help.forEach(function(h){ out+='<div class="help-note">'+esc(h)+'</div>'; });
 
@@ -327,7 +385,7 @@ function renderResult(a, flags){
   out+=section(++n,T("المصادر"),'<div class="sources-box">'+srcs.map(esc).join("<br>")+
     '<div class="legend"><strong>'+T("موثق بدرجة عالية")+'</strong> = '+T("قرآن كريم أو حديث في الصحيحين أو صحيح")+' · <strong>'+T("موثق")+'</strong> = '+T("حديث صحيح أو حسن في السنن والمسانيد")+' · <strong>'+T("رواية تاريخية")+'</strong> = '+T("من كتب السيرة وليست بدرجة الحديث الصحيح.")+' '+T("الآيات بالرسم الإملائي؛ راجع المصحف عند التلاوة.")+'</div></div>'+
     '<details class="why"><summary>'+T("لماذا ظهرت هذه النتائج؟ (شفافية التحليل)")+'</summary><div class="why-body">'+
-      T("الألفاظ التي التُقطت من كلامك:")+' '+(u.themes.map(function(t){return t.hits.slice(0,4).map(function(h){return "<code>"+esc(h)+"</code>";}).join(" ");}).join(" ")||"—")+'<br>'+
+      T("الألفاظ التي التُقطت من كلامك:")+' '+(u.themes.map(function(t){return t.hits.slice(0,4).map(function(h){return "<code>"+esc(rawHit(h,u.raw))+"</code>";}).join(" ");}).join(" ")||"—")+'<br>'+
       T("درجات المواقف:")+' '+r.sits.map(function(x){return esc(x.s.title.split(":")[0])+" ("+x.score.toFixed(1)+")";}).join(T("، "))+'<br>'+
       T("المنهج: تطبيع النص العربي وتجذيعه ← كشف الموضوعات والمشاعر ← توسيع الاستعلام ← ترتيب BM25 مع تعزيز دلالي ← تركيب التحليل من النصوص المسترجعة فقط.")+'</div></details>');
 
@@ -723,7 +781,7 @@ function rateBoxHTML(key, meta){
       (meta.kind==="result"?'<label class="rb-attach"><input type="checkbox" class="rb-attach-cb"'+(ex&&ex.input?" checked":"")+'> '+T("أرفق نص موقفي مع التقييم (يبقى على جهازك ما لم ترسله)")+'</label>':"")+
       '<div class="rb-foot"><span class="rb-hint">'+T("يُحفظ على جهازك فقط، وتجده في «المحفوظات»")+'</span><button class="btn-primary rb-send" data-act="rate-submit">'+T("حفظ التقييم")+'</button></div></div>'+
     '<div class="rb-done"><div class="rb-thanks">'+T("جزاك الله خيرًا على تقييمك")+'</div><div class="rb-stars-static" aria-label="'+T("{0} من 5",n)+'">'+starsText(n)+'</div>'+
-      (ex&&ex.comment?'<div class="rb-quote">'+(EN?"“"+esc(ex.comment)+"”":"«"+esc(ex.comment)+"»")+'</div>':"")+
+      (ex&&ex.comment?'<div class="rb-quote">'+I18N.q(esc(ex.comment))+'</div>':"")+
       '<div class="rb-done-actions"><button class="mini-btn" data-act="rate-edit">'+T("تعديل")+'</button><button class="mini-btn" data-nav="saved">'+T("كل تقييماتي")+'</button></div></div>'+
   '</div>';
 }
@@ -792,7 +850,7 @@ function previewDraft(){
   if(!EN && TashkeelView.available() && TashkeelView.enabled()!==draft.tk) TashkeelView.set(draft.tk);
 }
 // اسم اللغة والصوت الرجالي في ويندوز لكل لغة (لتلميح تثبيت الأصوات)
-var VOICE_HELP={ar:["عربي","العربية","نايف"], en:["English","English","David"], nl:["Nederlandse","Nederlands","Frank"], es:["español","Español","Pablo"], pt:["português","Português","Duarte"], fr:["français","Français","Paul"]}[I18N.lang];
+var VOICE_HELP={ar:["عربي","العربية","نايف"], en:["English","English","David"], nl:["Nederlandse","Nederlands","Frank"], es:["español","Español","Pablo"], pt:["português","Português","Duarte"], fr:["français","Français","Paul"], ur:["اردو","اردو","Asad"], id:["Indonesia","Bahasa Indonesia","Ardi"], tr:["Türkçe","Türkçe","Tolga"]}[I18N.lang];
 function renderVoiceSettings(){
   var c=draftCfg();
   var offOk=TTS.offline.supported, have=offOk?TTS.offline.downloaded():[];
@@ -902,12 +960,13 @@ function toggleLangMenu(force){
 
 /* ---------------- مفوّض الأحداث العام ---------------- */
 document.addEventListener("click",function(e){
-  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-star],[data-theme-open],[data-nav],[data-sit],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],#segTheme button,#segFs button,#segRate button,#segTk button,#segLang button,[data-setlang],ol.steps li");
+  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-refine],[data-star],[data-theme-open],[data-nav],[data-sit],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],#segTheme button,#segFs button,#segRate button,#segTk button,#segLang button,[data-setlang],ol.steps li");
   if(!el) return;
   if(el.matches("ol.steps li")){ el.classList.toggle("done"); return; }
   if(el.matches(".section.collapsible > .section-title")){ toggleSection(el.parentElement); return; }
   if(el.hasAttribute("data-tts")){ ttsControl(el.getAttribute("data-tts")); return; }
   if(el.hasAttribute("data-listen")){ listen(el.getAttribute("data-listen")); return; }
+  if(el.hasAttribute("data-refine")){ refineInput(el.getAttribute("data-refine")); return; }
   if(el.hasAttribute("data-star")){ setStars(el.closest(".rate-box"), +el.getAttribute("data-star")); return; }
   if(el.hasAttribute("data-theme-open")){ closeDetail(true); openTheme(el.getAttribute("data-theme-open")); return; }
   if(el.hasAttribute("data-nav")){ var nv=el.getAttribute("data-nav"); closeDetail(true); if(nv==="library") renderLibrary(); if(nv==="saved") renderSaved(); showScreen(nv); return; }

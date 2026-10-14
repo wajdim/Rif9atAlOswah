@@ -1,0 +1,432 @@
+{
+ "lexicon": {
+  "emotion": {
+   "anger": {
+    "label": "öfke",
+    "words": [
+     "öfke",
+     "öfkeli",
+     "kızgın",
+     "kızdım",
+     "sinir",
+     "sinirli",
+     "sinirlendim",
+     "nefret",
+     "kin",
+     "hırs",
+     "çileden",
+     "bıktım"
+    ]
+   },
+   "sadness": {
+    "label": "hüzün",
+    "words": [
+     "üzgün",
+     "üzüldüm",
+     "üzüntü",
+     "hüzün",
+     "ağlıyorum",
+     "ağladım",
+     "kırgın",
+     "kırıldım",
+     "kalbim kırık",
+     "yaralı",
+     "depresyon",
+     "mutsuz",
+     "yas"
+    ]
+   },
+   "fear": {
+    "label": "korku ve kaygı",
+    "words": [
+     "korku",
+     "korkuyorum",
+     "korktum",
+     "kaygı",
+     "kaygılı",
+     "endişe",
+     "endişeli",
+     "panik",
+     "stres",
+     "gergin",
+     "tedirgin",
+     "huzursuz"
+    ]
+   },
+   "guilt": {
+    "label": "suçluluk ve pişmanlık",
+    "words": [
+     "suçlu hissediyorum",
+     "suçluluk",
+     "pişman",
+     "pişmanlık",
+     "vicdan",
+     "benim hatam",
+     "utanıyorum kendimden",
+     "pişmanım"
+    ]
+   },
+   "shame": {
+    "label": "utanç ve aşağılanma",
+    "words": [
+     "aşağılandım",
+     "rezil",
+     "utandım",
+     "hakaret",
+     "küçük düşürüldü",
+     "küçümsendim",
+     "onurum kırıldı"
+    ]
+   },
+   "loneliness": {
+    "label": "yalnızlık",
+    "words": [
+     "yalnız",
+     "yalnızım",
+     "yalnızlık",
+     "kimsesiz",
+     "kimse yok",
+     "dışlandım",
+     "görmezden"
+    ]
+   },
+   "despair": {
+    "label": "umutsuzluk",
+    "words": [
+     "umutsuz",
+     "umudum yok",
+     "pes ettim",
+     "boşuna",
+     "anlamı yok",
+     "her şeyden yoruldum",
+     "başarısız hissediyorum",
+     "kendimi başarısız",
+     "işe yaramaz",
+     "değersiz",
+     "beceriksizim"
+    ]
+   },
+   "confusion": {
+    "label": "kafa karışıklığı",
+    "words": [
+     "kararsız",
+     "kafam karışık",
+     "bilmiyorum",
+     "ikilemde",
+     "şaşkın"
+    ]
+   },
+   "exhaustion": {
+    "label": "tükenmişlik",
+    "words": [
+     "yorgun",
+     "yoruldum",
+     "bitkin",
+     "tükendim",
+     "tükenmiş",
+     "gücüm kalmadı"
+    ]
+   },
+   "jealousy": {
+    "label": "kıskançlık",
+    "words": [
+     "kıskanıyorum",
+     "kıskançlık",
+     "haset",
+     "kıskanç"
+    ]
+   },
+   "betrayal": {
+    "label": "hayal kırıklığı",
+    "words": [
+     "ihanet",
+     "aldattı",
+     "aldatıldım",
+     "kandırdı",
+     "sırtımdan vurdu",
+     "hayal kırıklığı",
+     "güvenimi boşa"
+    ]
+   },
+   "love": {
+    "label": "bağlılık ve sevgi",
+    "words": [
+     "seviyorum",
+     "sevgi",
+     "özlüyorum",
+     "özledim",
+     "bağlıyım",
+     "aşk"
+    ]
+   },
+   "joy": {
+    "label": "sevinç ve şükür",
+    "words": [
+     "mutlu",
+     "sevinçli",
+     "şükür",
+     "elhamdülillah",
+     "başardım",
+     "rahatladım"
+    ]
+   }
+  },
+  "relation": {
+   "spouse": {
+    "label": "eşin",
+    "words": [
+     "eşim",
+     "kocam",
+     "karım",
+     "hanımım",
+     "eşimle",
+     "kocamla",
+     "karımla"
+    ]
+   },
+   "fiance": {
+    "label": "nişanlın",
+    "words": [
+     "nişanlım",
+     "nişanlı"
+    ]
+   },
+   "parent": {
+    "label": "anne baban",
+    "words": [
+     "annem",
+     "babam",
+     "annemle",
+     "babamla",
+     "anne",
+     "baba",
+     "ebeveyn"
+    ]
+   },
+   "child": {
+    "label": "çocukların",
+    "words": [
+     "oğlum",
+     "kızım",
+     "çocuğum",
+     "çocuklarım",
+     "evladım"
+    ]
+   },
+   "sibling": {
+    "label": "kardeşlerin",
+    "words": [
+     "kardeşim",
+     "ağabeyim",
+     "abim",
+     "ablam",
+     "kız kardeşim",
+     "erkek kardeşim",
+     "kardeşlerim"
+    ]
+   },
+   "relative": {
+    "label": "akrabaların",
+    "words": [
+     "amcam",
+     "dayım",
+     "teyzem",
+     "halam",
+     "kayınvalidem",
+     "kayınpederim",
+     "kuzenim",
+     "akrabalarım",
+     "akraba"
+    ]
+   },
+   "boss": {
+    "label": "yöneticin",
+    "words": [
+     "patronum",
+     "müdürüm",
+     "yöneticim",
+     "amirim"
+    ]
+   },
+   "colleague": {
+    "label": "iş arkadaşların",
+    "words": [
+     "iş arkadaşım",
+     "meslektaşım",
+     "iş arkadaşlarım"
+    ]
+   },
+   "friend": {
+    "label": "arkadaşların",
+    "words": [
+     "arkadaşım",
+     "dostum",
+     "arkadaşlarım"
+    ]
+   },
+   "neighbor": {
+    "label": "komşuların",
+    "words": [
+     "komşum",
+     "komşularım",
+     "komşu"
+    ]
+   },
+   "employee": {
+    "label": "sorumluluğundakiler",
+    "words": [
+     "çalışanım",
+     "ekibim",
+     "personelim",
+     "yardımcım"
+    ]
+   },
+   "teacher": {
+    "label": "hocaların",
+    "words": [
+     "hocam",
+     "öğretmenim",
+     "öğretmen"
+    ]
+   },
+   "self": {
+    "label": "kendin",
+    "words": [
+     "kendim",
+     "kendimi"
+    ]
+   }
+  },
+  "intensifiers": [
+   "çok",
+   "aşırı",
+   "son derece",
+   "fazlasıyla",
+   "hep",
+   "her gün",
+   "yıllardır",
+   "aylardır",
+   "dayanamıyorum",
+   "artık"
+  ],
+  "selfFault": [
+   "benim hatam",
+   "ben hata yaptım",
+   "hata yaptım",
+   "yanlış yaptım",
+   "yalan söyledim",
+   "aldattım",
+   "kırdım",
+   "bağırdım",
+   "vurdum",
+   "özür dilemek istiyorum",
+   "suç bende",
+   "gıybet ettim",
+   "haksızlık ettim",
+   "incittim",
+   "hakaret ettim",
+   "çaldım",
+   "ihanet ettim"
+  ],
+  "negators": [
+   "hiç",
+   "asla"
+  ],
+  "negatorsPost": [
+   "değil",
+   "değilim",
+   "değiliz",
+   "değildim",
+   "yok"
+  ],
+  "need": {
+   "safety": [
+    "beni tehdit",
+    "tehlikedeyim",
+    "ondan korkuyorum",
+    "beni dövüyor",
+    "kaçmak istiyorum",
+    "güvende değilim"
+   ],
+   "decision": [
+    "mı yapmalıyım",
+    "affetmeli miyim",
+    "ayrılmalı mıyım",
+    "kalmalı mıyım",
+    "karar veremiyorum",
+    "arasında kaldım",
+    "seçmek zorundayım",
+    "karar vermem gerek",
+    "yoksa"
+   ],
+   "repair": [
+    "özür dilemek",
+    "özür dile",
+    "düzeltmek",
+    "barışmak",
+    "telafi",
+    "tövbe"
+   ],
+   "howto": [
+    "nasıl yapabilirim",
+    "nasıl",
+    "ne yapmalıyım",
+    "ne yapabilirim",
+    "tavsiye",
+    "yardım edin",
+    "bana yol göster",
+    "hangi adımlar"
+   ],
+   "why": [
+    "neden ben",
+    "neden",
+    "niçin",
+    "hikmeti ne",
+    "anlamı ne"
+   ],
+   "comfort": [
+    "kimse anlamıyor",
+    "kimse dinlemiyor",
+    "konuşmaya ihtiyacım",
+    "içimi dökmek",
+    "dayanamıyorum artık",
+    "çöktüm"
+   ]
+  },
+  "time": {
+   "ongoing": [
+    "yıllardır",
+    "aylardır",
+    "uzun zamandır",
+    "her gün",
+    "her gece",
+    "sürekli",
+    "tekrar tekrar",
+    "devamlı"
+   ],
+   "future": [
+    "yarın",
+    "gelecek hafta",
+    "gelecek ay",
+    "yakında",
+    "korkuyorum ki",
+    "ya olursa",
+    "sınav",
+    "mülakat",
+    "olacak"
+   ],
+   "past": [
+    "dün",
+    "geçen hafta",
+    "geçen ay",
+    "geçen yıl",
+    "birkaç gün önce",
+    "yıllar önce",
+    "vefat etti",
+    "öldü",
+    "bitti",
+    "oldu"
+   ]
+  }
+ }
+}

@@ -23,8 +23,12 @@ var RAG = (function(){
       .replace(/[إأآٱا]/g,"ا")
       .replace(/ى/g,"ي").replace(/ة/g,"ه")
       .replace(/ؤ/g,"و").replace(/ئ/g,"ي")
+      // الأردية: توحيد الحروف المشتركة مع العربية، والإبقاء على حروفها الخاصة (پ چ ٹ ڈ ڑ ژ گ ں)
+      .replace(/ک/g,"ك").replace(/[یےۓ]/g,"ي").replace(/[ہھۃۂ]/g,"ه")
+      .replace(/ı/g,"i")                                   // التركية: i بلا نقطة
       .replace(/[٠-٩]/g,d=>String("٠١٢٣٤٥٦٧٨٩".indexOf(d)))
-      .replace(/[^ء-ي0-9a-z\s]/g," ")
+      .replace(/[۰-۹]/g,d=>String("۰۱۲۳۴۵۶۷۸۹".indexOf(d)))
+      .replace(/[^ء-ي0-9a-z\s\u0679\u067E\u0686\u0688\u0691\u0698\u06AF\u06BA]/g," ")
       .replace(/\s+/g," ").trim();
   }
 
@@ -54,6 +58,13 @@ var RAG = (function(){
     "porque mas se nao ja muito mais menos tao tambem so eu ele ela nos eles elas voce voces me te lhe lhes meu minha meus minhas teu tua seu sua " +
     "seus suas nosso nossa isto isso aquilo este esse aquele sou somos sao era eram foi foram ser estar estou estamos estao tenho tem temos tinha " +
     "posso pode podem quero quer tudo toda todos todas algo nada muita muitos muitas").split(" ").forEach(function(w){ STOP.add(w); });
+  // الإندونيسية والتركية والأردية: كلمات وظيفية تُضاف في واجهاتها فقط
+  if(window.I18N && I18N.lang==="id") ("yang dan di ke dari ini itu untuk dengan pada adalah tidak ada saya aku kamu dia mereka kami kita akan sudah telah juga " +
+    "atau tapi tetapi karena jika kalau saat ketika agar supaya bisa dapat harus sangat lebih masih hanya sih kok ya nya pun lah kah").split(" ").forEach(function(w){ STOP.add(w); });
+  if(window.I18N && I18N.lang==="tr") ("ve ile bir bu su o da de ki mi mu ama fakat cunku icin gibi kadar daha cok en ben sen o biz siz onlar beni bana benim " +
+    "seni sana onu ona bunu buna var yok ise eger hem ya veya ne nasil neden niye ki diye olarak olan oldu olur sey").split(" ").forEach(function(w){ STOP.add(w); });
+  if(window.I18N && I18N.lang==="ur") ["کا","کی","کے","کو","سے","میں","پر","اور","یا","کہ","یہ","وہ","ہے","ہیں","تھا","تھی","تھے","ہوں","ہو","گا","گی","گے","نے","بھی","تو",
+    "میں","مجھے","میرا","میری","میرے","آپ","ہم","ان","اس","اپنے","اپنی","جو","کیا","لیے","لئے","ساتھ","بہت","اب","پھر","ایک","کر","کرنا","رہا","رہی","رہے"].forEach(function(w){ STOP.add(normalize(w)); });
   // الفرنسية: تُضاف فقط في الواجهة الفرنسية (بلا حركات؛ والفاصلة العليا تصير مسافة: j'ai ← j ai)
   if(window.I18N && I18N.lang==="fr") (
     "le la les l un une des du de d et ou en au aux a dans par pour sur sous avec sans entre chez vers que qu qui quoi quand comme dont " +
@@ -108,11 +119,28 @@ var RAG = (function(){
     for(var i=0;i<S.length;i++){ var x=S[i]; if(w.length-x.length>=3 && w.slice(-x.length)===x){ w=w.slice(0,-x.length); break; } }
     return w;
   }
+  /* تجذيع إندونيسي خفيف: اللواحق الشائعة (-nya -lah -kah -kan -an -i) والسوابق (me- ber- di- ter- ke- se- pe-) */
+  function stemId(w){
+    if(w.length<=4 || /[0-9]/.test(w)) return w;
+    w=w.replace(/(nya|lah|kah|pun)$/,""); if(w.length>5) w=w.replace(/(kan|an|i)$/,"");
+    var m=w.match(/^(mem|men|meng|meny|me|ber|be|di|ter|ke|se|pem|pen|peng|per|pe)(.{3,})$/); if(m) w=m[2];
+    return w;
+  }
+  /* تجذيع تركي خفيف (بعد التطبيع: ç→c ğ→g ı→i ö→o ş→s ü→u): لواحق الجمع والإضافة والحالة والزمن */
+  function stemTr(w){
+    if(w.length<=4 || /[0-9]/.test(w)) return w;
+    var S=["lerimiz","larimiz","leriniz","lariniz","lerim","larim","lerin","larin","leri","lari","ler","lar","imiz","umuz","iniz","unuz",
+           "yorum","iyorum","uyorum","yor","dim","dum","tim","tum","dik","duk","mis","mus","acak","ecek","mak","mek","dan","den","tan","ten",
+           "nin","nun","in","un","im","um","da","de","ta","te","yi","yu","i","u","a","e"];
+    for(var p=0;p<2;p++){ for(var i=0;i<S.length;i++){ var x=S[i]; if(w.length-x.length>=3 && w.slice(-x.length)===x){ w=w.slice(0,-x.length); break; } } }
+    return w;
+  }
   var STEM_LANG=(window.I18N && I18N.lang) || "en";
   function stem(w){
     if(!w) return w;
-    if(/[a-z]/.test(w)) return STEM_LANG==="nl"?stemNl(w):(STEM_LANG==="es"||STEM_LANG==="pt")?stemRom(w):STEM_LANG==="fr"?stemFr(w):stemEn(w);
+    if(/[a-z]/.test(w)) return STEM_LANG==="nl"?stemNl(w):(STEM_LANG==="es"||STEM_LANG==="pt")?stemRom(w):STEM_LANG==="fr"?stemFr(w):STEM_LANG==="id"?stemId(w):STEM_LANG==="tr"?stemTr(w):stemEn(w);
     if(w.length<=3 || /[0-9]/.test(w)) return w;
+    if(STEM_LANG==="ur") return w.indexOf("ال")===0 && w.length>4 ? w.slice(2) : w;   // الأردية: لا سوابق/لواحق عربية
     var s=w, i;
     for(i=0;i<PREFIXES.length;i++){
       var p=PREFIXES[i];
@@ -209,6 +237,7 @@ var RAG = (function(){
 
   /* ---------------- 3. الفهم ---------------- */
   function stripPrefix(w){
+    if(STEM_LANG==="ur") return w;
     for(var i=0;i<PREFIXES.length;i++){ var p=PREFIXES[i]; if(w.indexOf(p)===0 && w.length-p.length>=2) return w.slice(p.length); }
     return w;
   }
@@ -235,6 +264,59 @@ var RAG = (function(){
       var n=normalize(w); if(!n) return false;
       return n.indexOf(" ")>-1 ? phraseIn(norm,n) : wordHit(userWords,n);
     });
+  }
+  /* النفي: «لست غاضبًا» / «I'm not angry» / «kızgın değilim» لا تُحسب مشاعر.
+     يُفحص موضع كل ظهور: كلمتان قبله (أدوات نفي سابقة) وكلمتان بعده (أدوات نفي لاحقة كالتركية والأردية) */
+  var NEG_PRE=null, NEG_POST=null, RAW_WORDS=[], RAW_STOPS=[];
+  /* كلمات المستخدم كما كتبها، بمحاذاة الكلمات المطبَّعة (لعرض الدليل بحروفه هو) */
+  function rawAligned(raw){
+    var out=[];
+    String(raw||"").split(/\s+/).forEach(function(tok){
+      var n=normalize(tok); if(!n) return;
+      var clean=tok.replace(/^[^0-9A-Za-zÀ-ɏء-ي٠-٩ٱ-ۓ۰-۹]+|[^0-9A-Za-zÀ-ɏء-يً-ْ٠-٩ٱ-ۓ۰-۹]+$/g,"");
+      var stop=/[.!?؟،,;:…]$/.test(tok);
+      n.split(" ").forEach(function(x,i,a){ out.push(clean||tok); RAW_STOPS.push(stop && i===a.length-1); });
+    });
+    return out;
+  }
+  function negSets(){
+    if(!NEG_PRE){ NEG_PRE=new Set((window.NEGATORS||[]).map(normalize)); NEG_POST=new Set((window.NEGATORS_POST||[]).map(normalize)); }
+  }
+  function occurrences(userWords, n){
+    var parts=n.split(" "), out=[];
+    for(var i=0;i+parts.length<=userWords.length;i++){
+      var ok=true;
+      for(var j=0;j<parts.length;j++){
+        var u=userWords[i+j], t=parts[j], sp=stripPrefix(u);
+        if(!(u===t || sp===t || (t.length>=4 && (u.indexOf(t)===0 || sp.indexOf(t)===0)))){ ok=false; break; }
+      }
+      if(ok) out.push([i, i+parts.length-1]);
+    }
+    return out;
+  }
+  function negated(userWords, span){
+    negSets();
+    for(var k=1;k<=2;k++){ if(NEG_PRE.has(userWords[span[0]-k])) return true; if(NEG_POST.has(userWords[span[1]+k])) return true; }
+    return false;
+  }
+  /* مثل lexHits لكنها تتجاهل الظهور المنفي، وتعيد الكلمة كما وردت في نص المستخدم (دليلًا) */
+  function lexHitsNeg(norm, userWords, list, extend){
+    var out=[], seen=new Set();
+    list.forEach(function(w){
+      var n=normalize(w); if(!n) return;
+      if(n.indexOf(" ")<0 && n.length<3){ if(userWords.indexOf(n)<0) return; }
+      var occ=occurrences(userWords, n);
+      if(!occ.length){ if(n.indexOf(" ")>-1 ? phraseIn(norm,n) : wordHit(userWords,n)) out.push({w:w, ev:w}); return; }
+      var live=occ.filter(function(sp){ return !negated(userWords, sp); });
+      if(!live.length){ lexHitsNeg.negatedHit=true; return; }
+      var src=(RAW_WORDS.length===userWords.length)?RAW_WORDS:userWords;
+      var end=live[0][1]+1+(extend||0);
+      if(extend && RAW_WORDS.length===userWords.length){ for(var e=live[0][1]; e<Math.min(end, RAW_STOPS.length); e++){ if(RAW_STOPS[e]){ end=e+1; break; } } }
+      var ev=src.slice(live[0][0], end).filter(function(x,i,a){ return i===0 || x!==a[i-1]; }).join(" ");
+      if(seen.has(ev)) return; seen.add(ev);
+      out.push({w:w, ev:ev});
+    });
+    return out;
   }
 
   function detectThemes(norm, userWords, qStems){
@@ -263,33 +345,50 @@ var RAG = (function(){
   function understand(raw){
     build();
     var norm=normalize(raw), userWords=words(norm), qStems=stems(raw);
+    RAW_STOPS=[]; RAW_WORDS=rawAligned(raw);
     var themes=detectThemes(norm, userWords, qStems);
     // عند إشارات إيذاء النفس: موضوع «اليأس» أولًا دائمًا، ويُستبعد «الخوف من الموت» حتى لا يُساء الفهم
     var crisis=/(اموت|الموت ارحم|انتحار|انتحر|انهي حياتي|اقتل نفسي|نقتل روحي|ان اعيش|اذي نفسي|اؤذي نفسي|suicid|kill myself|end my life|want to die|wish i (was|were) dead|hurt myself|harm myself|self harm|no reason to live|zelfmoord|mezelf (van kant|iets aan)|dood wil|wil (dood|sterven)|niet meer (leven|verder)|wou dat ik dood|mezelf pijn|zelfbeschadiging|een eind aan mijn leven|quiero morir|matarme|quitarme la vida|acabar con mi vida|no quiero (vivir|seguir viviendo)|hacerme dano|autolesion|ojala estuviera muert|quero morrer|matar me|me matar|tirar a minha (propria )?vida|acabar com a minha vida|nao quero (viver|continuar a viver)|magoar me|me magoar|automutila|autolesao|quem me dera estar mort|je veux mourir|envie de mourir|me suicider|suicidaire|(veux|vais|envie de) me tuer|en finir avec (la|ma) vie|mettre fin a (mes jours|ma vie)|(ne )?veux plus vivre|plus envie de vivre|me faire du mal|me mutiler|scarifi|j aimerais etre mort|je voudrais etre mort)/.test(norm);
+    if(!crisis) crisis=CRISIS_EXTRA.some(function(t){ var n=normalize(t); return n && (" "+norm+" ").indexOf(" "+n)>-1; });
     if(crisis){
       themes=themes.filter(function(t){ return t.id!=="death_fear" && t.id!=="despair"; });
       themes.unshift({id:"despair", theme:BY.theme.despair, score:9, conf:1, hits:[T("إشارات ألم شديد")]});
     }
+    var negatedEmo=new Set();
     var emotions=EMOTION_LEXICON.map(function(e){
-      var h=lexHits(norm,userWords,e.words); return {id:e.id,label:e.label,count:h.length,hits:h};
+      lexHitsNeg.negatedHit=false;
+      var h=lexHitsNeg(norm,userWords,e.words);
+      if(!h.length && lexHitsNeg.negatedHit) negatedEmo.add(e.id);
+      // دليل بلا تكرار: «en colère» تُغني عن «colère»
+      var ev=h.map(function(x){return x.ev;}).filter(function(x,i,a){ var nx=normalize(x); return !a.some(function(y,j){ return j!==i && normalize(y).length>nx.length && normalize(y).indexOf(nx)>-1; }); });
+      return {id:e.id,label:e.label,count:h.length,hits:ev};
     }).filter(function(e){ return e.count>0; }).sort(function(a,b){ return b.count-a.count; });
     // استنتاج مشاعر من الموضوعات إن لم تُذكر صراحة
     var implied={anger:"anger",sadness:"sadness",grief:"sadness",anxiety:"fear",fear:"fear",loneliness:"loneliness",despair:"despair",sin:"guilt",betrayal:"betrayal",insult:"shame",burnout:"exhaustion",decision:"confusion",envy:"jealousy",jealousy_spouse:"jealousy",heartbreak:"love"};
     themes.slice(0,3).forEach(function(t){
-      var eid=implied[t.id]; if(!eid) return;
+      var eid=implied[t.id]; if(!eid || negatedEmo.has(eid)) return;
       if(!emotions.some(function(e){return e.id===eid;})){
         var def=EMOTION_LEXICON.find(function(e){return e.id===eid;});
         if(def) emotions.push({id:eid,label:def.label,count:0,implied:true,hits:[]});
       }
     });
     var relations=RELATION_LEXICON.map(function(r){
-      var h=lexHits(norm,userWords,r.words); return {id:r.id,label:r.label,count:h.length};
+      var h=lexHitsNeg(norm,userWords,r.words); return {id:r.id,label:r.label,count:h.length,word:h[0]?h[0].ev:""};
     }).filter(function(r){ return r.count>0; }).sort(function(a,b){ return b.count-a.count; });
     var intens=lexHits(norm,userWords,INTENSIFIERS).length + ((raw.match(/[!！؟?]{2,}/g)||[]).length);
     var intensity = Math.min(3, 1 + (intens>=1?1:0) + (intens>=3?1:0) + (userWords.length>60?0.5:0));
-    var selfFault = lexHits(norm,userWords,SELF_FAULT_CUES).length>0;
+    var selfFault = lexHitsNeg(norm,userWords,SELF_FAULT_CUES).length>0;
+    // ما يحتاجه المتكلم (من صيغة كلامه) والزمن (مستمر/مضى/قادم)
+    var NEED=window.NEED_CUES||{}, TIME=window.TIME_CUES||{};
+    var needs=["safety","decision","repair","howto","why","comfort"].map(function(id){
+      var h=lexHitsNeg(norm,userWords,NEED[id]||[],4); return {id:id, count:h.length, cue:h[0]?h[0].ev:""};
+    }).filter(function(x){ return x.count>0; });
+    var question=/[?؟]/.test(raw);
+    var times=["ongoing","future","past"].map(function(id){ return {id:id, count:lexHits(norm,userWords,TIME[id]||[]).length}; })
+      .filter(function(x){ return x.count>0; }).sort(function(a,b){ return b.count-a.count; });
     return {raw:raw, norm:norm, words:userWords, stems:qStems, themes:themes, emotions:emotions.slice(0,4),
-            relations:relations.slice(0,3), intensity:intensity, selfFault:selfFault, crisis:crisis};
+            relations:relations.slice(0,3), intensity:intensity, selfFault:selfFault, crisis:crisis,
+            needs:needs, question:question, time:times[0]?times[0].id:null};
   }
 
   /* ---------------- 4. الاسترجاع ---------------- */
@@ -371,6 +470,81 @@ var RAG = (function(){
   /* ---------------- 5. التركيب: بناء التحليل العميق ---------------- */
   function uniq(arr){ var seen=new Set(); return arr.filter(function(x){ var k=normalize(x).slice(0,60); if(seen.has(k)) return false; seen.add(k); return true; }); }
 
+  /* القراءة الأولى «الذكية»: من تكون في هذا الموقف؟ ماذا تشعر وبأي كلمات؟ ماذا تحتاج؟ ما الذي يتجاذبك؟
+     ولماذا اخترنا هذا الموقف بالذات؟ وما الذي ينقصنا لنفهم أدق؟ — كلها قواعد شفافة دون توليد */
+  /* إشارات أزمة بلغات أخرى (تُطبَّع وقت المقارنة، فتصلح للأردية بحروفها) */
+  var CRISIS_EXTRA=["خودکشی","مرنا چاہتا","مرنا چاہتی","مر جانا چاہتا","مر جانا چاہتی","جینا نہیں چاہتا","جینا نہیں چاہتی","اپنی جان لے","خود کو نقصان","خود کو مار",
+    "bunuh diri","ingin mati","mau mati","pengen mati","mengakhiri hidup","menyakiti diri","tidak ingin hidup","tak ingin hidup","lebih baik mati",
+    "intihar","olmek istiyorum","kendimi oldur","hayatima son","yasamak istemiyorum","kendime zarar","keske olsem","ölmek istiyorum","kendimi öldür","hayatıma son","yaşamak istemiyorum","keşke ölsem"];
+  var WRONGED=/injustice|insult|betrayal|slander|oppressor_power|ungrateful|gossip/;
+  var GRIEF=/(^| )grief/;
+  function deepRead(u, r){
+    var D={}, rel=u.relations[0], t0=u.themes[0];
+    var qw=I18N.q;
+    var lc=function(x){ return /^[A-ZÀ-Ý]/.test(x) && !/^I/.test(x) ? x.charAt(0).toLowerCase()+x.slice(1) : x; };
+    var relL=rel?(rel.word?qw(lc(rel.word)):rel.label):"";
+    var has=function(id){ return u.emotions.some(function(e){ return e.id===id && !e.implied; }); };
+    var hasAny=function(id){ return u.emotions.some(function(e){ return e.id===id; }); };
+    // الموضوعات التي التُقط لها لفظ صريح فقط تحدد الموقع (لا التي جاءت بالتوسيع وحده)
+    var tid=u.themes.slice(0,3).filter(function(t){ return t.hits && t.hits.length; }).map(function(t){ return t.id; }).join(" ");
+    // رعاية فعلية: لا يكفي «زوجي + تعبت» ليكون المتكلم راعيًا
+    var CARE=/رعايه|ارعي|اعتني|اهتم به|مريض|مرض|care|caring|look after|looking after|sick|ill |illness|disabled|verzorg|zorg voor|ziek|cuido|cuidar|cuidando|enferm|doente|cuidado de|m occupe|soigne|malade|handicap|دیكه بهال|ديكه بهال|خدمت|بيمار|merawat|mengurus|sakit|bakiyorum|bakim|hasta|engelli/;
+    var careCue=CARE.test(u.norm+" ");
+    // موقع المتكلم
+    if(u.crisis) D.role={id:"pain", text:T("ما كتبته يحمل ألمًا شديدًا، وأول ما يهمنا سلامتك")};
+    else if(u.selfFault) D.role={id:"erred", text:T("تتحدث من موقع من أخطأ ويريد الإصلاح")};
+    else if(has("guilt") && !has("betrayal") && t0 && /^(gossip|sin|honesty|addiction|argument|arrogance|anger|revenge|suspicion|ungrateful|trust_amanah)$/.test(t0.id)) D.role={id:"erred", text:T("تتحدث من موقع من أخطأ ويريد الإصلاح")};
+    else if(t0 && t0.hits && t0.hits.length && (t0.id==="grief" || (t0.id==="heartbreak" && has("sadness")))) D.role={id:"grieving", text:T("تتحدث من موقع من فقد عزيزًا")};
+    else if(t0 && WRONGED.test(t0.id) || has("betrayal") || has("shame")) D.role={id:"wronged", text:T("تتحدث من موقع من وقع عليه الأذى")};
+    else if(GRIEF.test(tid)) D.role={id:"grieving", text:T("تتحدث من موقع من فقد عزيزًا")};
+    else if(rel && hasAny("exhaustion") && (careCue ? /child|parent|spouse|sibling/.test(rel.id) : /child|parent/.test(rel.id) && !/marriage|kin/.test(tid))) D.role={id:"carer", text:T("تحمل عبء رعاية {0} أو مسؤوليته",relL)};
+    else if(rel && /child|parent|spouse|sibling|friend/.test(rel.id) && hasAny("fear")) D.role={id:"worried", text:T("يشغلك أمر {0} وتقلق عليه",relL)};
+    else if(/decision/.test(tid) || u.needs.some(function(n){return n.id==="decision";}) || hasAny("confusion")) D.role={id:"deciding", text:T("تقف أمام قرار لم تحسمه بعد")};
+    // المشاعر مع الدليل من كلماتك
+    D.feelings=u.emotions.map(function(e){ return {label:e.label, implied:!!e.implied, ev:(e.hits||[]).slice(0,3)}; });
+    // الحاجة: من صيغة الكلام، ثم من الموقع
+    var nd=u.needs[0]? u.needs[0].id : (D.role && {wronged:"comfort",grieving:"comfort",erred:"repair",deciding:"decision",carer:"howto",worried:"howto",pain:"safety"}[D.role.id]) || (u.question?"howto":null);
+    var NEEDTXT={safety:T("سلامتك أولًا: أن تكون في مأمن قبل أي تأمل"),decision:T("أن تحسم قرارًا وأنت مطمئن إلى أنه الأقرب للصواب"),
+      repair:T("أن تصلح ما انكسر وتعرف من أين تبدأ"),howto:T("خطوات عملية واضحة: ماذا تفعل الآن؟"),
+      why:T("أن تفهم معنى ما حدث وحكمته"),comfort:T("أن يُسمع ألمك ويُفهم قبل أي نصيحة")};
+    if(nd) D.need={id:nd, text:NEEDTXT[nd], cue:u.needs[0]?u.needs[0].cue:"", inferred:!u.needs[0]};
+    // ما يتجاذبك (توترات داخلية)
+    var ten=[];
+    if((hasAny("love")) && (has("anger")||has("betrayal")) && rel) ten.push(T("بين محبتك لـ{0} وألمك مما حدث منه",relL));
+    else if(hasAny("love") && (has("anger")||has("betrayal"))) ten.push(T("بين تعلقك بمن تحب وألمك مما حدث"));
+    if(has("anger") && (has("guilt")||u.selfFault)) ten.push(T("بين غضبك من غيرك ولومك لنفسك"));
+    if(hasAny("exhaustion") && rel && /parent|child|spouse/.test(rel.id) && (careCue || D.role && D.role.id==="carer")) ten.push(T("بين واجبك تجاه {0} وحاجتك أنت إلى الراحة",relL));
+    if(hasAny("fear") && D.need && D.need.id==="decision") ten.push(T("بين رغبتك في الحسم وخوفك من الاختيار الخاطئ"));
+    if(has("sadness") && hasAny("love") && !ten.length) ten.push(T("حزن مصدره المحبة؛ فبقدر ما تحب تتألم"));
+    if(u.selfFault && (has("shame")||hasAny("fear"))) ten.push(T("بين ندمك على ما فعلت وخوفك من نظرة الناس"));
+    if(has("despair") && u.question) ten.push(T("بين يأس تشعر به وسؤال يدل على أنك ما زلت تبحث عن مخرج"));
+    D.tension=ten.slice(0,2);
+    // الزمن
+    var TIMETXT={ongoing:T("موقف مستمر منذ مدة، لا حادثة عابرة"),past:T("أمر وقع وانتهى، وأثره ما زال فيك"),future:T("قلقك مما سيأتي أكثر مما وقع")};
+    if(u.time) D.time={id:u.time, text:TIMETXT[u.time]};
+    // لماذا هذا الموقف؟
+    var top=r.sits[0];
+    if(top){
+      var s=top.s, shared=(THEME_OF_SIT[s.id]||[]).filter(function(id){ return u.themes.some(function(t){ return t.id===id; }); }).map(themeLabel);
+      D.why={id:s.id, title:s.title, figure:s.sourceType==="quran", shared:shared.slice(0,3), problem:s.problemType, response:s.responseType};
+    }
+    // ما ينقص لتكون القراءة أدق (نقرة تضيف بداية جملة إلى نصك)
+    var gaps=[];
+    var RELATIONAL=/marriage|jealousy_spouse|heartbreak|marriage_seek|parenting|parents|siblings|kin|friends|betrayal|forgive|revenge|suspicion|gossip|slander|neighbors|work|leadership|injustice|insult|oppressor_power|argument|ungrateful|different_belief|anger/;
+    if(!u.relations.length && (!t0 || RELATIONAL.test(tid))) gaps.push({label:T("من الطرف الآخر؟"), add:T("الطرف الآخر هو ")});
+    if(!u.emotions.some(function(e){return !e.implied;})) gaps.push({label:T("بماذا تشعر؟"), add:T("أشعر ")});
+    if(!u.needs.length) gaps.push({label:T("ماذا تريد أن يحدث؟"), add:T("أريد ")});
+    if(u.words.length<14) gaps.push({label:T("ماذا حدث بالتفصيل؟"), add:T("ما حدث هو أن ")});
+    if(!u.time && u.words.length<40) gaps.push({label:T("منذ متى؟"), add:T("بدأ هذا منذ ")});
+    D.gaps=gaps.slice(0,4);
+    // سؤال تحمله معك
+    // السؤال من الموضوع المشترك بين حالتك والموقف المختار (أقرب لما تسأل عنه)، وإلا فمن الموضوع الأول
+    var shareT=top && u.themes.filter(function(t){ return (THEME_OF_SIT[top.s.id]||[]).indexOf(t.id)>-1 && t.theme.questions.length; })[0];
+    var qt=shareT || u.themes.filter(function(t){ return t.theme.questions.length; })[0];
+    D.question=qt ? qt.theme.questions[0] : "";
+    return D;
+  }
+
   function composeReading(u, r){
     var parts=[];
     var rel=u.relations[0], t0=u.themes[0], t1=u.themes[1];
@@ -386,6 +560,9 @@ var RAG = (function(){
     if(u.intensity>=2.5) parts.push(T("يبدو أن الموقف ثقيل عليك ومستمر منذ مدة، لذلك سنبدأ بما يخفف الضغط الآن قبل الخطط البعيدة."));
     if(u.selfFault) parts.push(T("ولاحظت أنك تتحدث عن خطأ وقع منك؛ والاعتراف بالخطأ نصف الطريق، فالهدي النبوي يفتح لك باب الإصلاح لا باب جلد الذات."));
     else if(t0 && /injustice|insult|betrayal|slander|oppressor_power/.test(t0.id)) parts.push(T("وموقعك هنا موقع من وقع عليه الأذى؛ والمنهج النبوي يعترف بحقك أولًا، ثم يعرض عليك خيارات أرفع دون أن يُلزمك بها."));
+    var D=deepRead(u, r);
+    if(D.need) parts.push(T("وما تحتاجه على الأرجح: {0}.",D.need.text.replace(/[.。]$/,"")));
+    if(D.tension.length) parts.push(T("ويتجاذبك أمران: {0}.",D.tension[0]));
     if(r.sits[0]) parts.push(T("وأقرب ما وجدته لحالتك: «{0}».",r.sits[0].s.title));
     return parts.join(" ");
   }
@@ -415,7 +592,7 @@ var RAG = (function(){
     var confidence = (topScore>=7 || themeScore>=3) ? "high" : (topScore>=3 || themeScore>=1.5) ? "mid" : "low";
 
     return {
-      input:raw, understanding:u, retrieval:r, reading:composeReading(u,r),
+      input:raw, understanding:u, retrieval:r, reading:composeReading(u,r), deep:deepRead(u,r),
       insights:topThemes.map(function(t){return {label:t.label, text:t.insight, id:t.id};}),
       plan:plan, questions:questions, avoid:avoid, help:help, confidence:confidence
     };
@@ -429,6 +606,11 @@ var RAG = (function(){
     if(a.understanding.emotions.length) L.push(T("المشاعر:")+" "+a.understanding.emotions.map(function(e){return e.label;}).join(T("، ")));
     if(a.understanding.relations.length) L.push(T("العلاقة:")+" "+a.understanding.relations.map(function(e){return e.label;}).join(T("، ")));
     L.push(T("المتكلم يعترف بخطأ منه:")+" "+(a.understanding.selfFault?T("نعم"):T("لا")));
+    var D=a.deep||{};
+    if(D.role) L.push(T("موقع المتكلم:")+" "+D.role.text);
+    if(D.need) L.push(T("ما يحتاجه على الأرجح:")+" "+D.need.text);
+    if(D.tension&&D.tension.length) L.push(T("ما يتجاذبه:")+" "+D.tension.join(T("؛ ")));
+    if(D.time) L.push(T("الزمن:")+" "+D.time.text);
     L.push("\n"+T("## مواقف من السيرة والقرآن (مسترجعة)"));
     r.sits.slice(0,4).forEach(function(x,i){
       var s=x.s;

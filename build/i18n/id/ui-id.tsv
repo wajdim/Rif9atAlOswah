@@ -1,0 +1,514 @@
+0	Nabi ﷺ
+1	Disalin
+2	Dihapus dari simpanan
+3	Ditambahkan ke simpanan
+4	Simpan
+5	Atau mulai dari sebuah topik
+6	Semua topik ›
+7	{0} peristiwa & kisah
+8	{0} ayat & kutipan
+9	{0} hadits & doa
+10	{0} topik kehidupan
+11	Ayat hari ini
+12	Hadits hari ini
+13	Mohon ceritakan keadaanmu sedikit lebih rinci
+14	Al-Qur'an al-Karim
+15	Salin
+16	Hadits Nabi
+17	Perawi:
+18	Doa dari Al-Qur'an
+19	Doa yang shahih
+20	Ringkasan riwayat
+21	Teks hadits
+22	makna, bukan lafal persis
+23	Dari kitab-kitab Sirah
+24	Rincian peristiwa ini diriwayatkan dalam sumber-sumber Sirah yang diakui ({0}), dan sebagian lafalnya dibahas oleh para kritikus hadits. Ini adalah riwayat sejarah yang dijadikan pegangan dalam Sirah, bukan hadits berderajat shahih.
+25	Sumber:
+26	Buka semua bagian
+27	Tutup semua bagian
+28	Sekarang
+29	Pekan ini
+30	Jangka panjang
+31	Dengarkan jawaban lengkap
+32	Sebelum yang lain
+33	Apa yang kamu tulis menunjukkan rasa sakit yang dalam, dan kami menanggapinya dengan serius. Hidupmu berharga di sisi Allah dan bagi orang-orang yang menyayangimu: “Dan janganlah kamu membunuh dirimu; sesungguhnya Allah Maha Penyayang kepadamu.” Aplikasi ini untuk perenungan dan tidak cukup sendirian untuk krisis seperti ini. Tolong hubungi sekarang orang yang kamu percaya, layanan krisis kesehatan jiwa di negaramu (di Indonesia: 119 ext. 8), atau IGD terdekat. Meminta bantuan adalah kekuatan, bukan kelemahan, dan kamu tidak sendirian.
+34	Keselamatanmu yang utama
+35	Keadaanmu tampaknya melibatkan kekerasan atau penganiayaan. Islam tidak memintamu bertahan di bawah bahaya atas nama sabar: “Tidak boleh membahayakan diri sendiri dan tidak boleh membahayakan orang lain.” Jika kamu dalam bahaya, pindahlah ke tempat aman dan hubungi layanan perlindungan, polisi, atau orang yang kamu percaya, lalu ahli keluarga dan hukum.
+36	Persoalan agama atau hukum yang sensitif
+37	Keadaanmu menyangkut persoalan (seperti perceraian, warisan, atau hak-hak) yang memiliki hukum terperinci. Yang berikut adalah prinsip dan arahan umum untuk perenungan, bukan fatwa; rujuklah kepada ulama yang berkompeten atau ahli hukum untuk hukum kasusmu.
+38	Saya tidak menemukan yang cukup dekat dengan keadaanmu di perpustakaan saat ini. Coba tambahkan rincian: siapa pihak lainnya? Apa yang terjadi? Apa yang kamu rasakan? Apa yang ingin kamu lakukan? Atau
+39	lihat topik-topik
+40	Kecocokan kuat
+41	Kecocokan sedang
+42	Kecocokan lemah
+43	Bacaan awal atas keadaanmu
+44	Topik yang terdeteksi
+45	Umum
+46	Perasaan
+47	(kemungkinan)
+48	Tidak disebutkan secara jelas
+49	Pihak yang terlibat
+50	Tidak jelas
+51	Kamu menceritakan kesalahanmu sendiri
+52	Beratnya keadaan
+53	Pandangan Al-Qur'an dan Nabi atas keadaanmu
+54	Dalil
+55	Apa yang kita perhatikan dari sikap {0}?
+56	Prinsip-prinsip yang diambil darinya
+57	Bagaimana kamu bisa mengambil manfaat darinya?
+58	Peristiwa lain yang menerangi keadaanmu
+59	Terkait dengan: {0}
+60	Al-Qur'an
+61	Dari Al-Qur'an al-Karim
+62	Dari Sunnah Nabi
+63	Rencana praktis untuk keadaanmu
+64	Ketuk sebuah langkah untuk menandainya selesai.
+65	Doa-doa shahih yang sesuai dengan keadaanmu
+66	Pertanyaan untuk membantumu memahami dirimu
+67	Yang perlu dihindari
+68	Batas contoh ini — kapan tidak berlaku?
+69	Renungan
+70	Analisis pribadi mendalam (opsional)
+71	Al-Qur'an al-Karim, {0}
+72	Sumber
+73	Sangat terpercaya
+74	Al-Qur'an, atau hadits dalam Shahihain atau berderajat shahih
+75	Terpercaya
+76	hadits shahih atau hasan dalam kitab Sunan dan Musnad
+77	Riwayat sejarah
+78	dari kitab-kitab Sirah, bukan berderajat hadits shahih.
+79	Ayat ditampilkan dengan ejaan umum; rujuklah ke Mushaf saat membaca.
+80	Mengapa hasil ini muncul? (transparansi analisis)
+81	Kata-kata yang diambil dari tulisanmu:
+82	Skor peristiwa:
+83	Metode: normalisasi teks dan pencarian kata dasar → deteksi topik dan perasaan → perluasan kueri → peringkat BM25 dengan penguatan makna → menyusun analisis hanya dari teks yang ditemukan.
+84	Nilai jawaban ini
+85	Apakah bacaan ini bermanfaat? Penilaianmu membantu kami memperbaiki aplikasi
+86	Keadaan baru
+87	Salin ringkasan
+88	Bagikan
+89	Cetak / PDF
+90	Jelajahi topik
+91	Rifqat al-Uswa — ringkasan renungan
+92	Keadaan:
+93	Peristiwa terdekat:
+94	Rencana sekarang:
+95	Ini adalah renungan sebagai panduan, bukan fatwa.
+96	Perdalam analisis dengan AI
+97	Hanya terbatas pada teks yang ditemukan di atas, dan menyebut kodenya
+98	Opsional — memerlukan kunci API Claude dan koneksi internet
+99	Model akan membaca keadaanmu bersama kutipan terverifikasi yang ditemukan, menulis analisis pribadi yang menghubungkannya, dan menyarankan langkah yang tepat untuk kasusmu. Teksmu akan dikirim ke Anthropic hanya untuk tujuan ini.
+100	Mulai analisis mendalam
+101	Ajukan pertanyaan lanjutan tentang keadaanmu…
+102	Kirim
+103	Analisis terverifikasi di atas sudah lengkap dan berfungsi tanpa internet. Jika kamu ingin lapisan tambahan di mana model bahasa menulis analisis pribadi yang menghubungkan teks-teks yang sama ini (dan tidak ada teks lain di luarnya), tambahkan kunci API Claude di Pengaturan.
+104	Buka pengaturan
+105	Model tidak dapat menyelesaikan permintaan ini. Analisis terverifikasi di atas tetap tersedia.
+106	(Panjang maksimum tercapai.)
+107	(Tetap pada aturan yang sama: tidak ada teks kecuali dari kutipan yang ditemukan, dan sebutkan kodenya. Jawab dalam bahasa Indonesia.)
+108	{0} peristiwa · {1} ayat · {2} hadits
+109	Tidak ada topik yang cocok. Coba “Semua peristiwa”, atau ceritakan keadaanmu di halaman utama.
+110	Tidak ada hasil yang cocok dengan pencarianmu.
+111	Penilaianmu
+112	Dengarkan topik ini
+113	Bacaan Al-Qur'an dan Nabi
+114	Ceritakan keadaanmu tentang topik ini
+115	Peristiwa terkait
+116	Rencana praktis
+117	Dari Al-Qur'an al-Karim ({0})
+118	Dari Sunnah Nabi ({0})
+119	Doa-doa
+120	Pertanyaan untuk direnungkan
+121	Semua
+122	Ayat
+123	Hadits
+124	{0} teks
+125	Tampilkan lebih banyak
+126	Tidak ada teks yang cocok.
+127	Peristiwa
+128	Hadits & doa
+129	Kamu belum menyimpan apa pun.
+130	Ketuk “Simpan” di samping peristiwa, ayat, atau hadits mana pun agar muncul di sini, dan beri nilai peristiwa agar penilaianmu juga muncul di sini.
+131	‹ Kembali
+132	Dengarkan
+133	Dari Al-Qur'an
+134	Apa yang terjadi
+135	Konteks
+136	Pihak yang terlibat:
+137	Teks-teks
+138	Prinsip
+139	Apa yang kita pelajari hari ini?
+140	Batas contoh ini
+141	↔ Bandingkan dengan peristiwa lain
+142	Peristiwa terkait
+143	Nilai peristiwa ini
+144	Nilai peristiwa ini dan tinggalkan komentar
+145	Allah Ta'ala berfirman dalam {0}:
+146	Membaca dengan suara tidak didukung di browser ini
+147	Tidak ada mesin suara di perangkat ini. Pasang “Speech Services by Google” dari toko aplikasi.
+148	Mesin suara tidak memiliki suara bahasa Indonesia; pemasangnya akan terbuka
+149	Tidak ada suara bahasa Indonesia yang terpasang. Di Windows: Settings → Time & language → Language → tambahkan “Indonesian” dengan fitur “Speech”, lalu buka kembali aplikasi.
+150	Membacakan peristiwa
+151	Membacakan topik
+152	Membacakan jawaban lengkap
+153	Tidak ada teks untuk dibaca
+154	Tidak dapat memuat tilawah (tidak ada koneksi)
+155	Tidak dapat memuat tilawah (tidak ada koneksi); maknanya akan dibacakan
+156	Jeda
+157	Lanjutkan
+158	Tilawah oleh Syaikh {0}
+159	Suara 1
+160	Narator
+161	Dijeda
+162	{0} dari {1}
+163	Kecepatan membaca: {0}×
+164	Apa pendapatmu tentang jawaban ini?
+165	Penilaian
+166	{0} dari 5
+167	Tinggalkan komentar atau saran (opsional): apa yang membantumu? Apa yang kurang?
+168	Lampirkan teks keadaanku pada penilaian (tetap di perangkatmu kecuali kamu mengirimnya)
+169	Disimpan hanya di perangkatmu; kamu akan menemukannya di “Simpanan”
+170	Simpan penilaian
+171	Jazakallahu khairan atas penilaianmu
+172	Ubah
+173	Semua penilaianku
+174	Pilih jumlah bintang terlebih dahulu
+175	Penilaianmu telah disimpan, terima kasih
+176	Rifqat al-Uswa — penilaian dan masukan pengguna (versi {0})
+177	Analisis keadaan
+178	Peristiwa
+179	Tanggal:
+180	Topik:
+181	Kecocokan:
+182	Teks keadaan:
+183	Komentar:
+184	Belum ada penilaian
+185	Masukan Rifqat al-Uswa
+186	Masukan tentang aplikasi Rifqat al-Uswa
+187	Penilaian dan masukanku
+188	{0} penilaian
+189	Kirim masukan ke pengembang
+190	Analisis:
+191	Buka peristiwa
+192	Hapus
+193	laki-laki
+194	perempuan
+195	Otomatis
+196	Belum ada suara bahasa Indonesia yang ditemukan.
+197	Pasang suara bahasa Indonesia
+198	Tidak ada suara bahasa Indonesia yang terpasang. Di Windows: Settings → Time & language → Language & region → tambahkan “Indonesian” dengan fitur “Speech”, lalu mulai ulang aplikasi.
+199	Tidak ditemukan suara laki-laki yang pasti; coba suara yang tersedia dan pilih yang terbaik. Aplikasi otomatis merendahkan nada suara 1.
+200	Hanya ada satu suara bahasa Indonesia; aplikasi akan membedakan kedua suara dengan nada.
+201	Penilaian dihapus
+202	Kamu memilih membaca tanpa tilawah
+203	Rifqat al-Uswa
+204	Ceritakan keadaanmu tentang “{0}” secara rinci…
+205	Apa yang kamu tulis tidak disimpan
+206	Format kunci tidak valid (diawali dengan sk-ant-)
+207	Pengaturan disimpan
+208	Kunci dihapus
+209	Pilihan disimpan
+210	Pasang aplikasi
+211	tanda-tanda rasa sakit yang berat
+212	Tulisanmu terutama tentang “{0}”
+213	, dan bersinggungan dengan “{0}”
+214	, dalam konteks hubunganmu dengan {0}
+215	Tulisanmu tentang hubunganmu dengan {0}.
+216	Kata-katamu menunjukkan perasaan {0}. Perasaan ini dapat dimengerti dan kamu tidak tercela karena merasakannya; yang penting adalah apa yang kita lakukan dengannya.
+217	dan
+218	Keadaan seperti ini bisa disertai perasaan {0}, meskipun kamu tidak menyebutkannya secara jelas.
+219	atau
+220	Keadaan ini tampaknya berat bagimu dan sudah berlangsung lama, jadi kita mulai dari yang meringankan tekanan sekarang sebelum rencana jangka panjang.
+221	Saya juga melihat kamu berbicara tentang kesalahanmu sendiri; mengakui kesalahan adalah setengah jalan, dan petunjuk Nabi membukakan bagimu pintu perbaikan, bukan pintu menghukum diri.
+222	Di sini kamu adalah pihak yang disakiti; jalan Nabi pertama-tama mengakui hakmu, lalu menawarkan pilihan yang lebih tinggi tanpa memaksakannya.
+223	Contoh terdekat dengan keadaanmu yang saya temukan: “{0}”.
+224	## Topik yang terdeteksi
+225	keyakinan
+226	Perasaan:
+227	Hubungan:
+228	Pembicara mengakui kesalahannya sendiri:
+229	ya
+230	tidak
+231	## Peristiwa dari Sirah dan Al-Qur'an (ditemukan)
+232	Apa yang terjadi:
+233	Prinsip:
+234	Batas penerapan:
+235	Teks:
+236	[ringkasan makna]
+237	Ayat:
+238	## Ayat (ditemukan)
+239	Pelajaran:
+240	## Hadits (ditemukan)
+241	Derajat:
+242	## Doa-doa shahih (ditemukan)
+243	## Bacaan Al-Qur'an dan Nabi atas topik-topik
+244	Belum ada kunci API yang diatur.
+245	Kunci API tidak valid atau sudah kedaluwarsa.
+246	Kunci ini tidak memiliki akses ke model ini.
+247	Batas permintaan terlampaui sementara. Silakan coba lagi sebentar lagi.
+248	Layanan Claude sedang sibuk. Silakan coba lagi sebentar lagi.
+249	Permintaan gagal ({0}).
+250	Kesalahan saat streaming
+251	Tidak ada koneksi internet, atau permintaan diblokir. Analisis terverifikasi di atas berfungsi tanpa internet.
+252	Membaca tulisanmu dan memahami konteksnya…
+253	Mendeteksi topik, perasaan, dan hubungan yang terlibat…
+254	Mencari peristiwa yang dekat dari Sirah dan kisah para nabi…
+255	Mencari ayat dan hadits yang terkait…
+256	Memeriksa derajat dan sumber teks…
+257	Menyusun bacaan dan rencana praktis…
+258	Pilih penilaianmu
+259	Kurang
+260	Cukup
+261	Baik
+262	Sangat baik
+263	Istimewa
+264	Ceritakan dengan kata-katamu sendiri apa yang sedang kamu alami, dan kami akan membacanya bersamamu dalam cahaya Al-Qur'an al-Karim, Sunnah Nabi, dan Sirah.
+265	Analisis keadaanku
+266	Aplikasi renungan dan panduan — bukan fatwa, dan bukan pengganti ulama atau para ahli. Setiap ayat dan hadits di dalamnya berasal dari perpustakaan terverifikasi lengkap dengan sumber dan derajatnya, dan tidak ada teks yang pernah dikarang.
+267	Jelajahi sesuai keadaanmu
+268	Topik kehidupan, masing-masing dengan bacaan Al-Qur'an dan Nabi, peristiwa, ayat, hadits, dan doa
+269	Berdasarkan topik
+270	Semua peristiwa (
+271	‹ Kembali ke topik
+272	Perpustakaan terverifikasi
+273	Ayat, hadits, dan doa yang menjadi dasar analisis, lengkap dengan sumber dan derajat
+274	Simpanan
+275	Peristiwa, ayat, dan hadits yang kamu simpan (hanya di perangkat ini)
+276	Tentang Rifqat al-Uswa
+277	Bagaimana cara kerjanya?
+278	Aplikasi menganalisis tulisanmu secara lokal di perangkatmu: mendeteksi topik, perasaan, dan hubungan yang terlibat, lalu mengambil dari perpustakaan terverifikasi (peristiwa dari Sirah dan kisah para nabi, ayat, serta hadits dengan derajatnya) teks-teks yang paling dekat dengan keadaanmu, dan menyusun bacaan serta rencana praktis darinya.
+279	Privasi:
+280	Tulisanmu tidak pernah dikirim ke server mana pun dan tidak disimpan. Satu-satunya pengecualian: jika kamu mengaktifkan “Perdalam dengan AI” dengan kuncimu sendiri, teksmu dan kutipan yang ditemukan dikirim langsung ke Claude (Anthropic) untuk menyusun analisis.
+281	Amanah ilmiah:
+282	Aplikasi tidak pernah membuat ayat atau hadits; setiap teks diambil dari perpustakaan apa adanya. Terjemahan makna Al-Qur'an dalam bahasa Indonesia berasal dari Kementerian Agama RI (melalui Tanzil.net), dan terjemahan hadits dalam bahasa Indonesia disiapkan untuk aplikasi ini dari terjemahan bahasa Inggris sunnah.com serta ditandai demikian. Ayat ditampilkan dengan ejaan umum; rujuklah ke Mushaf saat membaca.
+283	Ini adalah aplikasi renungan dan panduan; bukan pengganti fatwa ulama yang berkompeten, atau konsultasi dengan ahli kesehatan jiwa atau hukum bila diperlukan.
+284	Oke
+285	Pengaturan
+286	Bahasa / اللغة
+287	العربية
+288	Tampilan
+289	Terang
+290	Gelap
+291	Ukuran huruf
+292	Kecil
+293	Normal
+294	Besar
+295	Lebih besar
+296	Harakat pada penjelasan
+297	Dengan harakat
+298	Tanpa harakat
+299	Ayat dan hadits selalu ditampilkan dengan harakat lengkap.
+300	Kecepatan membaca
+301	Lambat
+302	Normal
+303	Cepat
+304	Lebih cepat
+305	Tilawah ayat oleh qari
+306	Dengarkan
+307	Ayat dibacakan dalam bahasa Arab dari rekaman asli para qari terkenal (memerlukan internet), diikuti terjemahan maknanya dalam bahasa Indonesia. Tanpa internet, hanya maknanya yang dibacakan.
+308	Suara 1 — hadits, doa, dan makna ayat
+309	Coba
+310	Suara 2 — narator (judul dan penjelasan)
+311	Perdalam dengan AI (opsional) — kunci API Claude
+312	Analisis terverifikasi berfungsi sepenuhnya tanpa kunci dan tanpa internet. Kunci menambahkan lapisan analisis generatif yang hanya terbatas pada teks yang ditemukan. Kunci disimpan hanya di perangkat ini dan dikirim langsung ke api.anthropic.com. Dapatkan di console.anthropic.com
+313	Model
+314	Hapus kunci
+315	Membaca dengan suara
+316	Aplikasi renungan yang menganalisis keadaanmu dan menghubungkannya dengan Al-Qur'an al-Karim, Sunnah Nabi, dan Sirah, dengan sumber terverifikasi dan derajat hadits yang jelas.
+317	Rifqat al-Uswa
+318	Beranda
+319	Navigasi
+320	Topik
+321	Perpustakaan ayat dan hadits
+322	Perpustakaan
+323	Tentang aplikasi dan privasi
+324	Tentang aplikasi
+325	Tulis apa yang terjadi dengan caramu sendiri dan serinci yang kamu mau… Siapa? Apa yang terjadi? Apa yang kamu rasakan? (bahasa Indonesia atau Arab)
+326	Cari topik atau peristiwa… mis. marah, utang, orang tua
+327	Cari dalam teks… mis. sabar, rezeki, marah
+328	Bagian sebelumnya
+329	Putar atau jeda
+330	Bagian berikutnya
+331	Kecepatan membaca
+332	Berhenti
+333	Hentikan pembacaan
+334	Perlakuan buruk dan agresi
+335	Ibnu Hisyam, as-Sirah an-Nabawiyyah
+336	Kesalahan
+337	Keluarga
+338	Masyarakat
+339	Perasaan dan ujian
+340	Kepemimpinan
+341	Keberhasilan dan kekuatan
+342	Ibnu Katsir, al-Bidayah wan-Nihayah
+343	Keputusan sulit
+344	Hubungan
+345	Yusuf 'alaihis salam
+346	Tafsir Ibnu Katsir atas Surah Yusuf
+347	Ya'qub 'alaihis salam
+348	Yunus 'alaihis salam
+349	Ayyub 'alaihis salam
+350	Tafsir Ibnu Katsir (dengan kehati-hatian terhadap riwayat Israiliyat)
+351	Musa 'alaihis salam
+352	Ibrahim 'alaihis salam
+353	Maryam 'alaihas salam
+354	Ibunda Musa
+355	Abu Bakar ash-Shiddiq radhiyallahu 'anhu
+356	Khadijah radhiyallahu 'anha
+357	Ummu Salamah radhiyallahu 'anha
+358	Abu Hurairah radhiyallahu 'anhu
+359	Ummu Sulaim radhiyallahu 'anha
+360	Juraij sang ahli ibadah
+361	Salman al-Farisi radhiyallahu 'anhu
+362	Hanzhalah radhiyallahu 'anhu
+363	Abu Dzar al-Ghifari radhiyallahu 'anhu
+364	Fathimah radhiyallahu 'anha
+365	Dua putra Adam
+366	Tafsir Ibnu Katsir atas Surah al-Ma'idah
+367	Qarun dan kaumnya
+368	Sulaiman 'alaihis salam
+369	Pemilik dua kebun dan sahabatnya
+370	Tafsir Ibnu Katsir atas Surah al-Kahfi
+371	Nuh 'alaihis salam
+372	Tafsir Ibnu Katsir atas Surah Hud
+373	Luqman al-Hakim
+374	Adam 'alaihis salam
+375	Zakariya 'alaihis salam
+376	Hajar 'alaihas salam
+377	Seorang laki-laki dari umat terdahulu
+378	Abu Sufyan di hadapan Heraklius
+379	Seorang laki-laki yang mengunjungi saudaranya
+380	Perasaan dan jiwa
+381	Hubungan dan keluarga
+382	Pekerjaan dan harta
+383	Kesehatan dan studi
+384	Masyarakat dan keadilan
+385	Kepemimpinan dan keputusan
+386	Mahmud Khalil al-Husari
+387	Muhammad Shiddiq al-Minsyawi
+388	Abdul Basith Abdush Shamad
+389	Misyari Rasyid al-Afasi
+390	Mahir al-Mu'aiqili
+391	Sa'd al-Ghamidi
+392	Faris Abbad
+393	Tanpa tilawah (hanya maknanya yang dibacakan)
+394	Claude Opus 5 — analisis paling mendalam (bawaan)
+395	Claude Sonnet 5 — seimbang dan lebih cepat
+396	Claude Haiku 4.5 — paling cepat dan paling hemat
+397	Peristiwa terdekat dengan keadaanmu, dari Al-Qur'an
+398	Peristiwa terdekat dengan keadaanmu, dari kehidupan Nabi
+399	,
+400	;
+401	Suara laki-laki
+402	dengan merendahkan nada
+403	Suara perempuan
+404	dengan meninggikan nada
+405	Suara yang terpasang di perangkat ini
+406	Pasang suara lainnya
+407	Belum ditemukan suara untuk bahasa ini.
+408	Tidak ada suara {0} yang terpasang. Di Windows: Settings → Time & language → Language & region → tambahkan “{1}” dengan fitur “Speech”, lalu mulai ulang aplikasi (Windows menyediakan suara laki-laki “{2}”).
+409	Tidak ada suara laki-laki yang terpasang untuk bahasa ini; memilih “Suara laki-laki” akan merendahkan nada suara yang tersedia. Untuk suara laki-laki asli, pasang suara tambahan dari pengaturan text-to-speech perangkatmu.
+410	Suara laki-laki ditampilkan lebih dulu.
+411	Kunci akan dihapus saat kamu menyimpan
+412	Bahasa & tampilan
+413	Bahasa / Language / اللغة
+414	Analisis lebih dalam dengan AI (opsional)
+415	Kunci API Claude
+416	Batal
+417	Bahasa · Language · اللغة
+418	Tutup tanpa menyimpan
+419	Laporkan jawaban ini
+420	Alasan laporan (tulis di sini):
+421	Pertanyaanku:
+422	Jawaban model:
+423	Rifqat al-Uswa {0} · {1}
+424	Laporan tentang jawaban AI di Rifqat al-Uswa
+425	Pengaturan suara perangkat
+426	Dengarkan tanpa internet
+427	Mengunduh… {0} dari {1}
+428	Diunduh untuk didengarkan tanpa internet ({0} MB)
+429	Sebagian terunduh ({0} dari {1}).
+430	Unduh tilawah qari ini ({0} ayat, sekitar {1} MB) untuk didengarkan tanpa koneksi.
+431	Qari lain sedang diunduh; mohon tunggu hingga selesai.
+432	Pilih qari terlebih dahulu
+433	Ruang penyimpanan tidak cukup
+434	Tidak dapat memulai unduhan
+435	Unduhan selesai: {0}
+436	Beberapa ayat tidak dapat diunduh; periksa koneksimu dan coba lagi
+437	Unduhan dihentikan
+438	Tilawah qari telah dihapus dari perangkat
+439	Unduh
+440	Selesaikan unduhan
+441	Al-Minsyawi (mujawwad)
+442	Abdul Basith (mujawwad)
+443	Muhammad ath-Thablawi
+444	Muhammad Jibril
+445	Abdurrahman as-Sudais
+446	Su'ud asy-Syuraim
+447	Yasir ad-Dausari
+448	Ali al-Hudzaifi
+449	Muhammad Ayyub
+450	Abdullah Basfar
+451	Abu Bakar asy-Syathiri
+452	Ahmad al-Ajmi
+453	Nashir al-Qathami
+454	Hani ar-Rifa'i
+455	Khalid al-Qahthani
+456	Shalah al-Budair
+457	Ali Jabir
+458	Akram al-Alaqimi
+459	Aiman Suwaid
+460	Dengan kata-katamu:
+461	Apa yang kamu rasakan
+462	Yang kemungkinan besar kamu butuhkan
+463	Karena kamu menulis:
+464	(disimpulkan dari konteks kata-katamu)
+465	Yang menarikmu ke dua arah
+466	Waktu
+467	Pihak yang terlibat dan beratnya keadaan
+468	Mengapa peristiwa ini?
+469	Kesamaannya dengan keadaanmu:
+470	Masalahnya di sana:
+471	Dan petunjuknya adalah:
+472	Pertanyaan untuk kamu bawa
+473	Agar bacaan lebih tajam, tambahkan:
+474	Tulisanmu membawa rasa sakit yang dalam, dan keselamatanmu yang utama
+475	Kamu berbicara sebagai orang yang berbuat salah dan ingin memperbaikinya
+476	Kamu berbicara sebagai orang yang kehilangan seseorang yang dicintai
+477	Kamu berbicara sebagai orang yang disakiti
+478	Kamu memikul beban merawat {0}
+479	Kamu mengkhawatirkan {0}
+480	Kamu menghadapi keputusan yang belum kamu ambil
+481	Keselamatanmu dulu: berada di tempat aman sebelum renungan apa pun
+482	Mengambil keputusan dengan tenang bahwa itulah yang paling mendekati kebenaran
+483	Memperbaiki yang retak dan tahu dari mana memulai
+484	Langkah praktis yang jelas: apa yang harus dilakukan sekarang
+485	Memahami makna dan hikmah dari apa yang terjadi
+486	Agar rasa sakitmu didengar dan dipahami sebelum nasihat apa pun
+487	Antara cintamu kepada {0} dan sakit atas apa yang dilakukannya
+488	Antara keterikatanmu pada orang yang kamu cintai dan sakit atas apa yang terjadi
+489	Antara marah kepada orang lain dan menyalahkan diri sendiri
+490	Antara kewajibanmu terhadap {0} dan kebutuhanmu sendiri untuk beristirahat
+491	Antara ingin memutuskan dan takut salah memilih
+492	Kesedihan yang lahir dari cinta: semakin kamu mencintai, semakin sakit rasanya
+493	Antara penyesalan atas perbuatanmu dan takut akan pandangan orang
+494	Antara keputusasaan yang kamu rasakan dan sebuah pertanyaan yang menunjukkan kamu masih mencari jalan keluar
+495	Sesuatu yang sudah berlangsung lama, bukan kejadian sesaat
+496	Sesuatu yang sudah terjadi dan berakhir, tetapi masih memengaruhimu
+497	Kekhawatiranmu lebih pada yang akan datang daripada yang sudah terjadi
+498	Siapa pihak lainnya?
+499	Pihak lainnya adalah
+500	Apa yang kamu rasakan?
+501	Aku merasa
+502	Apa yang kamu ingin terjadi?
+503	Aku ingin
+504	Apa yang terjadi, secara rinci?
+505	Yang terjadi adalah
+506	Sejak kapan?
+507	Ini dimulai sejak
+508	Yang kemungkinan besar kamu butuhkan: {0}.
+509	Kamu tertarik ke dua arah: {0}.
+510	Posisi pembicara:
+511	Yang kemungkinan besar ia butuhkan:
+512	Ketegangan batin:
+513	Waktu:

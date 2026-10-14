@@ -40,7 +40,8 @@ const li = process.argv.indexOf("--lang"), LANG = li > -1 ? process.argv[li + 1]
 const ictx = { window: {}, localStorage: { getItem: () => JSON.stringify({ lang: LANG }) }, document: { documentElement: { setAttribute() {} } }, navigator: {} }; ictx.window = ictx;
 vm.createContext(ictx); vm.runInContext((fs.existsSync(path.join(ROOT, "js", "data-" + LANG + ".js")) ? fs.readFileSync(path.join(ROOT, "js", "data-" + LANG + ".js"), "utf8") : "") + fs.readFileSync(path.join(ROOT, "js", "i18n.js"), "utf8"), ictx);
 const dict = ictx.I18N ? ictx.I18N._dict : {};
-const all = [...keys].filter(k => k && AR.test(k));
+const NATIVE = new Set(["اردو"]); // اسم لغة بحروف عربية — لا يُترجم
+const all = [...keys].filter(k => k && AR.test(k) && !NATIVE.has(k));
 const missing = all.filter(k => !(k in dict));
 const extra = Object.keys(dict).filter(k => !keys.has(k));
 const out = process.argv.indexOf("--json");

@@ -1,8 +1,8 @@
 // رِفقة الأُسوة — يتحقق من اكتمال ترجمة لغة مقارنةً بالإنجليزية (المرجع)
-// الاستخدام: node build/i18n/check-lang.js <nl|es|pt|fr> [--quiet]
+// الاستخدام: node build/i18n/check-lang.js <nl|es|pt|fr|ur|id|tr> [--quiet]
 const fs = require("fs"), path = require("path");
 const LANG = process.argv[2], QUIET = process.argv.includes("--quiet");
-if (!/^(nl|es|pt|fr)$/.test(LANG || "")) { console.error("usage: check-lang.js <nl|es|pt|fr>"); process.exit(2); }
+if (!/^(nl|es|pt|fr|ur|id|tr)$/.test(LANG || "")) { console.error("usage: check-lang.js <nl|es|pt|fr|ur|id|tr>"); process.exit(2); }
 const load = dir => { const out = {}; if (!fs.existsSync(dir)) return out;
   for (const f of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) { const d = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")); for (const k in d) Object.assign(out[k] = out[k] || {}, d[k]); }
   return out; };

@@ -1,0 +1,514 @@
+0	Peygamber ﷺ
+1	Kopyalandı
+2	Kaydedilenlerden çıkarıldı
+3	Kaydedilenlere eklendi
+4	Kaydet
+5	Ya da bir konudan başla
+6	Tüm konular ›
+7	{0} olay ve kıssa
+8	{0} ayet ve bölüm
+9	{0} hadis ve dua
+10	{0} hayat konusu
+11	Günün ayeti
+12	Günün hadisi
+13	Lütfen durumunu biraz daha ayrıntılı anlat
+14	Kur'an-ı Kerim
+15	Kopyala
+16	Hadis-i şerif
+17	Râvi:
+18	Kur'an'dan dua
+19	Sahih dua
+20	Rivayetin özeti
+21	Hadisin metni
+22	anlam, birebir lafız değil
+23	Siyer kitaplarından
+24	Bu olayın ayrıntıları kabul gören siyer kaynaklarında ({0}) rivayet edilmiştir ve bazı lafızları hadis eleştirmenlerince tartışılmıştır. Siyerde dayanılan tarihî bir rivayettir, sahih derecesinde bir hadis değildir.
+25	Kaynaklar:
+26	Tüm bölümleri aç
+27	Tüm bölümleri kapat
+28	Şimdi
+29	Bu hafta
+30	Uzun vadede
+31	Cevabın tamamını dinle
+32	Her şeyden önce
+33	Yazdıkların derin bir acıyı gösteriyor ve bunu ciddiye alıyoruz. Hayatın Allah katında ve seni sevenlerin yanında değerlidir: “Kendinizi öldürmeyin. Şüphesiz Allah size karşı çok merhametlidir.” Bu uygulama tefekkür içindir ve böyle bir kriz için tek başına yeterli değildir. Lütfen hemen güvendiğin biriyle, ülkendeki ruh sağlığı kriz hattıyla (Türkiye'de 112) ya da en yakın acil servisle iletişime geç. Yardım istemek güçtür, zayıflık değil; ve sen yalnız değilsin.
+34	Önce senin güvenliğin
+35	Durumun şiddet ya da istismar içeriyor gibi görünüyor. İslam senden sabır adına zarar altında kalmanı istemez: “Zarar vermek de zarara zararla karşılık vermek de yoktur.” Tehlikedeysen güvenli bir yere geç ve bir koruma birimiyle, polisle ya da güvendiğin biriyle, ardından bir aile ve hukuk uzmanıyla iletişime geç.
+36	Hassas bir dinî ya da hukuki konu
+37	Durumun ayrıntılı hükümleri olan bir meseleyi (boşanma, miras ya da haklar gibi) içeriyor. Aşağıdakiler tefekkür için genel ilkeler ve yönlendirmelerdir, fetva değildir; durumunun hükmü için ehil bir âlime ya da hukuk uzmanına başvur.
+38	Mevcut kütüphanede durumuna yeterince yakın bir şey bulamadım. Ayrıntı eklemeyi dene: karşı taraf kim? Ne oldu? Ne hissediyorsun? Ne yapmak istiyorsun? Ya da
+39	konulara göz at
+40	Güçlü eşleşme
+41	Orta eşleşme
+42	Zayıf eşleşme
+43	Durumunun ilk okuması
+44	Tespit edilen konular
+45	Genel
+46	Duygular
+47	(muhtemel)
+48	Açıkça belirtilmemiş
+49	İlgili kişiler
+50	Belirtilmemiş
+51	Kendi hatandan söz ediyorsun
+52	Durumun ağırlığı
+53	Durumuna Kur'anî ve nebevî bakış
+54	Delil
+55	{0} davranışında neyi fark ediyoruz?
+56	Ondan çıkan ilkeler
+57	Bundan nasıl yararlanabilirsin?
+58	Durumuna ışık tutan başka olaylar
+59	İlgili: {0}
+60	Kur'an
+61	Kur'an-ı Kerim'den
+62	Nebevî Sünnet'ten
+63	Durumun için pratik bir plan
+64	Tamamlandı olarak işaretlemek için bir adıma dokun.
+65	Durumuna uygun sahih dualar
+66	Kendini anlamana yardımcı sorular
+67	Nelerden kaçınmalı
+68	Bu örneğin sınırları — ne zaman geçerli değildir?
+69	Tefekkür
+70	Derinlemesine kişisel analiz (isteğe bağlı)
+71	Kur'an-ı Kerim, {0}
+72	Kaynaklar
+73	Son derece sağlam
+74	Kur'an ya da Sahihayn'daki veya sahih derecesindeki bir hadis
+75	Sağlam
+76	Sünen ve Müsned eserlerinde sahih veya hasen bir hadis
+77	Tarihî rivayet
+78	siyer kitaplarından, sahih hadis derecesinde değil.
+79	Ayetler yaygın imlayla gösterilir; okurken Mushaf'a başvur.
+80	Bu sonuçlar neden çıktı? (analiz şeffaflığı)
+81	Yazdıklarından alınan kelimeler:
+82	Olay puanları:
+83	Yöntem: metni normalleştirme ve kök bulma → konu ve duygu tespiti → sorgu genişletme → anlamsal güçlendirmeli BM25 sıralaması → analizi yalnızca bulunan metinlerden oluşturma.
+84	Bu cevabı değerlendir
+85	Bu okuma faydalı oldu mu? Değerlendirmen uygulamayı geliştirmemize yardım eder
+86	Yeni durum
+87	Özeti kopyala
+88	Paylaş
+89	Yazdır / PDF
+90	Konuları keşfet
+91	Rifqat al-Uswa — tefekkür özeti
+92	Durum:
+93	En yakın olay:
+94	Şimdilik plan:
+95	Bu bir yol gösterici tefekkürdür, fetva değildir.
+96	Analizi yapay zekâ ile derinleştir
+97	Yalnızca yukarıda bulunan metinlerle sınırlıdır ve kodlarını belirtir
+98	İsteğe bağlı — Claude API anahtarı ve internet bağlantısı gerekir
+99	Model, durumunu bulunan doğrulanmış metinlerle birlikte okuyacak, bunları bağlayan kişisel bir analiz yazacak ve durumun için net adımlar önerecek. Metnin yalnızca bu amaçla Anthropic'e gönderilecek.
+100	Derin analizi başlat
+101	Durumunla ilgili ek bir soru sor…
+102	Gönder
+103	Yukarıdaki doğrulanmış analiz eksiksizdir ve internetsiz çalışır. Bir dil modelinin aynı metinleri (ve dışında hiçbir metni) bağlayarak kişisel bir analiz yazdığı ek bir katman istersen, Ayarlar'a bir Claude API anahtarı ekle.
+104	Ayarları aç
+105	Model bu isteği tamamlayamadı. Yukarıdaki doğrulanmış analiz kullanılabilir durumda.
+106	(Azami uzunluğa ulaşıldı.)
+107	(Aynı kurallara bağlı kal: bulunan metinler dışında hiçbir metin yok ve kodları ver. Türkçe cevap ver.)
+108	{0} olay · {1} ayet · {2} hadis
+109	Eşleşen konu yok. “Tüm olaylar”ı dene ya da durumunu ana sayfada anlat.
+110	Aramanla eşleşen sonuç yok.
+111	Değerlendirmen
+112	Bu konuyu dinle
+113	Kur'anî ve nebevî okuma
+114	Bu konudaki durumunu anlat
+115	İlgili olaylar
+116	Pratik bir plan
+117	Kur'an-ı Kerim'den ({0})
+118	Nebevî Sünnet'ten ({0})
+119	Dualar
+120	Tefekkür soruları
+121	Tümü
+122	Ayetler
+123	Hadisler
+124	{0} metin
+125	Daha fazla göster
+126	Eşleşen metin yok.
+127	Olaylar
+128	Hadisler ve dualar
+129	Henüz hiçbir şey kaydetmedin.
+130	Burada görmek için herhangi bir olay, ayet ya da hadisin yanındaki “Kaydet”e dokun; olayları değerlendirirsen değerlendirmelerin de burada görünür.
+131	‹ Geri
+132	Dinle
+133	Kur'an'dan
+134	Ne oldu
+135	Bağlam
+136	İlgili kişiler:
+137	Metinler
+138	İlkeler
+139	Bugün ne öğreniyoruz?
+140	Bu örneğin sınırları
+141	↔ Başka bir olayla karşılaştır
+142	İlgili olaylar
+143	Bu olayı değerlendir
+144	Bu olayı değerlendir ve yorum bırak
+145	Allah Teâlâ {0} içinde şöyle buyurur:
+146	Bu tarayıcıda sesli okuma desteklenmiyor
+147	Bu cihazda konuşma motoru yok. Mağazadan “Speech Services by Google”ı yükle.
+148	Konuşma motorunda Türkçe ses yok; yükleyicisi açılacak
+149	Türkçe ses yüklü değil. Windows'ta: Settings → Time & language → Language → “Turkish”i “Speech” özelliğiyle ekle, ardından uygulamayı yeniden aç.
+150	Olay okunuyor
+151	Konu okunuyor
+152	Cevabın tamamı okunuyor
+153	Okunacak metin yok
+154	Tilavet yüklenemedi (bağlantı yok)
+155	Tilavet yüklenemedi (bağlantı yok); yerine anlamı okunacak
+156	Duraklat
+157	Devam et
+158	Şeyh {0} tilaveti
+159	Ses 1
+160	Anlatıcı
+161	Duraklatıldı
+162	{0} / {1}
+163	Okuma hızı: {0}×
+164	Bu cevap hakkında ne düşünüyorsun?
+165	Değerlendirme
+166	5 üzerinden {0}
+167	Yorum ya da öneri bırak (isteğe bağlı): ne yardımcı oldu? Ne eksik?
+168	Durum metnimi değerlendirmeye ekle (sen göndermedikçe cihazında kalır)
+169	Yalnızca cihazında kaydedilir; “Kaydedilenler”de bulursun
+170	Değerlendirmeyi kaydet
+171	Değerlendirmen için Allah razı olsun
+172	Düzenle
+173	Tüm değerlendirmelerim
+174	Önce yıldız sayısını seç
+175	Değerlendirmen kaydedildi, teşekkürler
+176	Rifqat al-Uswa — kullanıcı değerlendirmeleri ve geri bildirimleri (sürüm {0})
+177	Durum analizi
+178	Olay
+179	Tarih:
+180	Konular:
+181	Eşleşme:
+182	Durum metni:
+183	Yorum:
+184	Henüz değerlendirme yok
+185	Rifqat al-Uswa geri bildirimi
+186	Rifqat al-Uswa uygulaması hakkında geri bildirim
+187	Değerlendirmelerim ve geri bildirimlerim
+188	{0} değerlendirme
+189	Geliştiriciye geri bildirim gönder
+190	Analiz:
+191	Olayı aç
+192	Sil
+193	erkek
+194	kadın
+195	Otomatik
+196	Henüz Türkçe ses bulunamadı.
+197	Türkçe sesi yükle
+198	Türkçe ses yüklü değil. Windows'ta: Settings → Time & language → Language & region → “Turkish”i “Speech” özelliğiyle ekle, ardından uygulamayı yeniden başlat.
+199	Kesin bir erkek sesi bulunamadı; mevcut sesleri dene ve en iyisini seç. Uygulama ses 1'in perdesini otomatik olarak düşürür.
+200	Yalnızca bir Türkçe ses mevcut; uygulama iki sesi perdeyle ayırt edecek.
+201	Değerlendirme silindi
+202	Tilavetsiz okumayı seçtin
+203	Rifqat al-Uswa
+204	“{0}” hakkındaki durumunu ayrıntılı anlat…
+205	Yazdıkların kaydedilmez
+206	Geçersiz anahtar biçimi (sk-ant- ile başlar)
+207	Ayarlar kaydedildi
+208	Anahtar silindi
+209	Seçim kaydedildi
+210	Uygulamayı yükle
+211	şiddetli acı belirtileri
+212	Yazdıkların esas olarak “{0}” hakkında
+213	, ve “{0}” ile kesişiyor
+214	, {0} ile olan ilişkin bağlamında
+215	Yazdıkların {0} ile olan ilişkin hakkında.
+216	Sözlerinde {0} duyguları görünüyor. Bu duygular anlaşılırdır ve onları hissettiğin için kınanamazsın; önemli olan onlarla ne yaptığımızdır.
+217	ve
+218	Böyle bir durumla birlikte, açıkça söylemesen de {0} duygusu olabilir.
+219	ya da
+220	Bu durum sana ağır geliyor ve bir süredir devam ediyor gibi; bu yüzden uzun vadeli planlardan önce şimdi baskıyı hafifletecek şeyle başlayacağız.
+221	Kendi hatandan söz ettiğini de fark ettim; hatayı kabul etmek yolun yarısıdır ve nebevî rehberlik sana kendini cezalandırmanın değil, düzeltmenin kapısını açar.
+222	Burada zarar gören sensin; nebevî yol önce hakkını tanır, sonra seni zorlamadan daha yüce seçenekler sunar.
+223	Durumuna bulduğum en yakın örnek: “{0}”.
+224	## Tespit edilen konular
+225	güven
+226	Duygular:
+227	İlişki:
+228	Konuşan kendi hatasını kabul ediyor:
+229	evet
+230	hayır
+231	## Siyerden ve Kur'an'dan olaylar (bulunan)
+232	Ne oldu:
+233	İlkeler:
+234	Uygulama sınırları:
+235	Metin:
+236	[anlamın özeti]
+237	Ayet:
+238	## Ayetler (bulunan)
+239	Ders:
+240	## Hadisler (bulunan)
+241	Derece:
+242	## Sahih dualar (bulunan)
+243	## Konuların Kur'anî ve nebevî okuması
+244	Henüz API anahtarı ayarlanmadı.
+245	API anahtarı geçersiz ya da süresi dolmuş.
+246	Bu anahtarın bu modele erişimi yok.
+247	İstek sınırı geçici olarak aşıldı. Lütfen biraz sonra tekrar dene.
+248	Claude hizmeti şu anda yoğun. Lütfen biraz sonra tekrar dene.
+249	İstek başarısız oldu ({0}).
+250	Akış sırasında hata
+251	İnternet bağlantısı yok ya da istek engellendi. Yukarıdaki doğrulanmış analiz internetsiz çalışır.
+252	Yazdıkların okunuyor ve bağlamı anlaşılıyor…
+253	Konular, duygular ve ilgili ilişki tespit ediliyor…
+254	Siyerden ve peygamber kıssalarından yakın olaylar getiriliyor…
+255	İlgili ayet ve hadisler aranıyor…
+256	Metinlerin dereceleri ve kaynakları kontrol ediliyor…
+257	Okuma ve pratik plan hazırlanıyor…
+258	Değerlendirmeni seç
+259	Zayıf
+260	Fena değil
+261	İyi
+262	Çok iyi
+263	Mükemmel
+264	Yaşadığın şeyi kendi sözlerinle anlat; biz de onu seninle birlikte Kur'an-ı Kerim, nebevî Sünnet ve Siyer'in ışığında okuyalım.
+265	Durumumu analiz et
+266	Tefekkür ve rehberlik uygulaması — fetva değildir, âlimlerin ya da uzmanların yerini tutmaz. İçindeki her ayet ve hadis, kaynağı ve derecesiyle doğrulanmış bir kütüphaneden gelir ve hiçbir metin uydurulmaz.
+267	Durumuna göre keşfet
+268	Her biri Kur'anî ve nebevî bir okuma, olaylar, ayetler, hadisler ve dualarla hayat konuları
+269	Konuya göre
+270	Tüm olaylar (
+271	‹ Konulara dön
+272	Doğrulanmış kütüphane
+273	Analizin dayandığı ayetler, hadisler ve dualar; kaynak ve derecesiyle
+274	Kaydedilenler
+275	Kaydettiğin olaylar, ayetler ve hadisler (yalnızca bu cihazda)
+276	Rifqat al-Uswa hakkında
+277	Nasıl çalışır?
+278	Uygulama yazdıklarını cihazında yerel olarak analiz eder: konuları, duyguları ve ilgili ilişkiyi tespit eder, ardından doğrulanmış bir kütüphaneden (siyer ve peygamber kıssalarından olaylar, ayetler ve dereceleriyle hadisler) durumuna en yakın metinleri getirir ve bunlardan bir okuma ile pratik bir plan oluşturur.
+279	Gizlilik:
+280	Yazdıkların hiçbir sunucuya gönderilmez ve kaydedilmez. Tek istisna: kendi anahtarınla “Yapay zekâ ile derinleştir”i açarsan, metnin ve bulunan metinler analiz için doğrudan Claude'a (Anthropic) gönderilir.
+281	İlmî emanet:
+282	Uygulama asla ayet ya da hadis üretmez; her metin kütüphaneden olduğu gibi alınır. Kur'an'ın Türkçe meali Diyanet İşleri Başkanlığı'na aittir (Tanzil.net aracılığıyla); Türkçe hadis tercümeleri bu uygulama için sunnah.com'un İngilizce tercümesinden hazırlanmış ve bu belirtilmiştir. Ayetler yaygın imlayla gösterilir; okurken Mushaf'a başvur.
+283	Bu bir tefekkür ve rehberlik uygulamasıdır; ehil bir âlimin fetvasının ya da gerektiğinde bir ruh sağlığı veya hukuk uzmanına danışmanın yerini tutmaz.
+284	Tamam
+285	Ayarlar
+286	Dil / اللغة
+287	العربية
+288	Görünüm
+289	Açık
+290	Koyu
+291	Yazı boyutu
+292	Küçük
+293	Normal
+294	Büyük
+295	Daha büyük
+296	Açıklamalarda hareke
+297	Harekeli
+298	Harekesiz
+299	Ayetler ve hadisler her zaman tam harekeyle gösterilir.
+300	Sesli okuma hızı
+301	Yavaş
+302	Normal
+303	Hızlı
+304	Daha hızlı
+305	Ayetlerin bir kurra tarafından tilaveti
+306	Dinle
+307	Ayetler, tanınmış kurraların gerçek kayıtlarından Arapça olarak okunur (internet gerekir), ardından Türkçe meali okunur. İnternetsiz yalnızca meal okunur.
+308	Ses 1 — hadisler, dualar ve ayet mealleri
+309	Dene
+310	Ses 2 — anlatıcı (başlıklar ve açıklamalar)
+311	Yapay zekâ ile derinleştir (isteğe bağlı) — Claude API anahtarı
+312	Doğrulanmış analiz anahtarsız ve internetsiz tam olarak çalışır. Anahtar, yalnızca bulunan metinlerle sınırlı üretken bir analiz katmanı ekler. Anahtar yalnızca bu cihazda saklanır ve doğrudan api.anthropic.com'a gönderilir. console.anthropic.com adresinden alabilirsin
+313	Model
+314	Anahtarı sil
+315	Sesli okuma
+316	Durumunu analiz edip Kur'an-ı Kerim, nebevî Sünnet ve Siyer'le ilişkilendiren; doğrulanmış kaynaklar ve açık hadis dereceleri sunan bir tefekkür uygulaması.
+317	Rifqat al-Uswa
+318	Ana sayfa
+319	Gezinme
+320	Konular
+321	Ayet ve hadis kütüphanesi
+322	Kütüphane
+323	Uygulama ve gizlilik hakkında
+324	Uygulama hakkında
+325	Ne olduğunu kendi tarzında, istediğin kadar ayrıntılı yaz… Kim? Ne oldu? Ne hissediyorsun? (Türkçe ya da Arapça)
+326	Bir konu ya da olay ara… örn. öfke, borç, anne baba
+327	Metinlerde ara… örn. sabır, rızık, öfke
+328	Önceki bölüm
+329	Oynat ya da duraklat
+330	Sonraki bölüm
+331	Okuma hızı
+332	Durdur
+333	Okumayı durdur
+334	Kötü muamele ve saldırganlık
+335	İbn Hişâm, es-Sîretü'n-Nebeviyye
+336	Hatalar
+337	Aile
+338	Toplum
+339	Duygular ve imtihanlar
+340	Liderlik
+341	Başarı ve güç
+342	İbn Kesîr, el-Bidâye ve'n-Nihâye
+343	Zor kararlar
+344	İlişkiler
+345	Yusuf aleyhisselam
+346	İbn Kesîr tefsiri, Yusuf suresi
+347	Yakup aleyhisselam
+348	Yunus aleyhisselam
+349	Eyyûb aleyhisselam
+350	İbn Kesîr tefsiri (İsrâiliyat rivayetlerine karşı ihtiyatla)
+351	Musa aleyhisselam
+352	İbrahim aleyhisselam
+353	Meryem aleyhasselam
+354	Musa'nın annesi
+355	Ebû Bekir es-Sıddîk radıyallahu anh
+356	Hatice radıyallahu anhâ
+357	Ümmü Seleme radıyallahu anhâ
+358	Ebû Hüreyre radıyallahu anh
+359	Ümmü Süleym radıyallahu anhâ
+360	Âbid Cüreyc
+361	Selmân-ı Fârisî radıyallahu anh
+362	Hanzala radıyallahu anh
+363	Ebû Zer el-Gıfârî radıyallahu anh
+364	Fâtıma radıyallahu anhâ
+365	Âdem'in iki oğlu
+366	İbn Kesîr tefsiri, Mâide suresi
+367	Kârûn ve kavmi
+368	Süleyman aleyhisselam
+369	İki bahçe sahibi ve arkadaşı
+370	İbn Kesîr tefsiri, Kehf suresi
+371	Nuh aleyhisselam
+372	İbn Kesîr tefsiri, Hûd suresi
+373	Hakîm Lokman
+374	Âdem aleyhisselam
+375	Zekeriya aleyhisselam
+376	Hâcer aleyhasselam
+377	Önceki ümmetlerden bir adam
+378	Ebû Süfyân Herakleios'un huzurunda
+379	Kardeşini ziyarete giden bir adam
+380	Duygular ve nefis
+381	İlişkiler ve aile
+382	İş ve para
+383	Sağlık ve eğitim
+384	Toplum ve adalet
+385	Liderlik ve kararlar
+386	Mahmûd Halîl el-Husarî
+387	Muhammed Sıddîk el-Minşâvî
+388	Abdülbâsıt Abdüssamed
+389	Mişârî Râşid el-Afâsî
+390	Mâhir el-Muaykılî
+391	Sa'd el-Gâmidî
+392	Fâris Abbâd
+393	Tilavetsiz (yalnızca meal okunur)
+394	Claude Opus 5 — en derin analiz (varsayılan)
+395	Claude Sonnet 5 — dengeli ve daha hızlı
+396	Claude Haiku 4.5 — en hızlı ve en ekonomik
+397	Durumuna en yakın olay, Kur'an'dan
+398	Durumuna en yakın olay, Peygamber'in hayatından
+399	,
+400	;
+401	Erkek sesi
+402	perdeyi düşürerek
+403	Kadın sesi
+404	perdeyi yükselterek
+405	Bu cihazda yüklü sesler
+406	Daha fazla ses yükle
+407	Bu dil için henüz ses bulunamadı.
+408	{0} ses yüklü değil. Windows'ta: Settings → Time & language → Language & region → “{1}”i “Speech” özelliğiyle ekle, ardından uygulamayı yeniden başlat (Windows “{2}” erkek sesini sağlar).
+409	Bu dil için erkek sesi yüklü değil; “Erkek sesi”ni seçmek mevcut sesin perdesini düşürür. Gerçek bir erkek sesi için cihazının metin okuma ayarlarından ek bir ses yükle.
+410	Erkek sesleri önce listelenir.
+411	Kaydettiğinde anahtar kaldırılacak
+412	Dil ve görünüm
+413	Dil / Language / اللغة
+414	Yapay zekâ ile daha derin analiz (isteğe bağlı)
+415	Claude API anahtarı
+416	İptal
+417	Dil · Language · اللغة
+418	Kaydetmeden kapat
+419	Bu cevabı bildir
+420	Bildirim nedeni (buraya yaz):
+421	Sorum:
+422	Modelin cevabı:
+423	Rifqat al-Uswa {0} · {1}
+424	Rifqat al-Uswa'da bir yapay zekâ cevabı hakkında bildirim
+425	Cihazın konuşma ayarları
+426	İnternetsiz dinle
+427	İndiriliyor… {0} / {1}
+428	İnternetsiz dinlemek için indirildi ({0} MB)
+429	Kısmen indirildi ({0} / {1}).
+430	Bağlantısız dinlemek için bu kurranın tilavetlerini indir ({0} ayet, yaklaşık {1} MB).
+431	Başka bir kurra indiriliyor; lütfen bitmesini bekle.
+432	Önce bir kurra seç
+433	Yeterli depolama alanı yok
+434	İndirme başlatılamadı
+435	İndirme tamamlandı: {0}
+436	Bazı ayetler indirilemedi; bağlantını kontrol edip tekrar dene
+437	İndirme durduruldu
+438	Kurranın tilavetleri cihazdan kaldırıldı
+439	İndir
+440	İndirmeyi tamamla
+441	el-Minşâvî (mücevved)
+442	Abdülbâsıt (mücevved)
+443	Muhammed et-Tablâvî
+444	Muhammed Cibrîl
+445	Abdurrahman es-Südeys
+446	Suûd eş-Şüreym
+447	Yâsir ed-Devserî
+448	Ali el-Huzeyfî
+449	Muhammed Eyyûb
+450	Abdullah Basfer
+451	Ebû Bekir eş-Şâtırî
+452	Ahmed el-Acemî
+453	Nâsır el-Katâmî
+454	Hânî er-Rifâî
+455	Hâlid el-Kahtânî
+456	Salâh el-Büdeyr
+457	Ali Câbir
+458	Ekrem el-Alâkımî
+459	Eymen Süveyd
+460	Senin sözlerinle:
+461	Ne hissediyorsun
+462	Büyük ihtimalle neye ihtiyacın var
+463	Çünkü şunu yazdın:
+464	(sözlerinin bağlamından çıkarıldı)
+465	Seni iki yöne çeken şey
+466	Zaman
+467	İlgili kişiler ve durumun ağırlığı
+468	Neden bu olay?
+469	Durumunla ortak yönleri:
+470	Oradaki sorun:
+471	Ve oradaki rehberlik şuydu:
+472	Yanında taşıyacağın bir soru
+473	Daha isabetli bir okuma için ekle:
+474	Yazdıklarında derin bir acı var ve önce senin güvenliğin gelir
+475	Hata yapmış ve bunu düzeltmek isteyen biri olarak konuşuyorsun
+476	Sevdiği birini kaybetmiş biri olarak konuşuyorsun
+477	Zarar görmüş biri olarak konuşuyorsun
+478	{0} konusunda bakım ve sorumluluk yükünü taşıyorsun
+479	{0} için endişeleniyorsun
+480	Henüz vermediğin bir kararla karşı karşıyasın
+481	Önce güvenliğin: her tefekkürden önce güvenli bir yerde olmak
+482	Doğruya en yakın olduğundan içinin rahat olduğu bir karar vermek
+483	Kırılanı onarmak ve nereden başlayacağını bilmek
+484	Net pratik adımlar: şimdi ne yapmalı
+485	Olanın anlamını ve hikmetini kavramak
+486	Her nasihatten önce acının duyulması ve anlaşılması
+487	{0} için duyduğun sevgi ile ondan gördüğün acı arasında
+488	Sevdiğin birine bağlılığın ile olanın acısı arasında
+489	Başkalarına öfken ile kendini suçlaman arasında
+490	{0} için görevin ile kendi dinlenme ihtiyacın arasında
+491	Karar verme isteğin ile yanlış seçim yapma korkun arasında
+492	Sevgiden doğan bir hüzün: ne kadar seversen o kadar acıtır
+493	Yaptığına pişmanlığın ile insanların bakışından korkman arasında
+494	Hissettiğin umutsuzluk ile hâlâ bir çıkış aradığını gösteren bir soru arasında
+495	Bir süredir devam eden bir şey, tek seferlik bir olay değil
+496	Olup bitmiş ama hâlâ seni etkileyen bir şey
+497	Endişen olandan çok gelecek olanla ilgili
+498	Karşı taraf kim?
+499	Karşı taraf
+500	Ne hissediyorsun?
+501	Kendimi
+502	Ne olmasını istiyorsun?
+503	İstiyorum ki
+504	Ayrıntılı olarak ne oldu?
+505	Olan şu:
+506	Ne zamandan beri?
+507	Bu şu zamandan beri sürüyor:
+508	Büyük ihtimalle ihtiyacın olan: {0}.
+509	İki yöne çekiliyorsun: {0}.
+510	Konuşanın konumu:
+511	Büyük ihtimalle ihtiyacı olan:
+512	İç çatışma:
+513	Zaman:

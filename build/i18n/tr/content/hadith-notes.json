@@ -1,0 +1,621 @@
+{
+"hadith": {
+"h-niyya": {
+"r": "Ömer b. Hattâb",
+"n": "Niyet alışkanlığı ibadete çevirir: iş, eğitim ve aileye harcama, hepsi niyetle sevap kazanır."
+},
+"h-qulub": {
+"r": "Ebû Hüreyre",
+"n": "Allah katında değerin ölçüsü kalp ve amellerdir, görünüş, mal ya da toplumsal konum değil."
+},
+"h-ridallah": {
+"r": "Aişe",
+"n": "İlkelerden ödün vererek insanları memnun etmenin ilacı: Allah'ın rızasını önceleyene Allah insanlara karşı yeter."
+},
+"h-khafi": {
+"r": "Sa'd b. Ebî Vakkâs",
+"n": "İnsanların kendilerini takipçi sayısıyla ölçtüğü bir çağda gizli kalmak ve görünmek istememek sevilen bir özelliktir."
+},
+"h-ghadab-julus": {
+"r": "Ebû Zer",
+"n": "Pratik, bedensel bir çare: bedenin duruşunu değiştirmek öfkenin dalgasını kırar ve aceleci davranmaktan korur."
+},
+"h-ghadab-istiadha": {
+"r": "Süleyman b. Surad",
+"n": "Öfkelenince söylenecek ilk şey Allah'a sığınmaktır.",
+"w": "Öfke şiddetlendiğinde"
+},
+"h-ghadab-sukut": {
+"r": "İbn Abbas",
+"n": "İnsanların öfkedeyken en çok pişman olduğu şey söyledikleridir; geçici sessizlik ilişkiyi korur."
+},
+"h-kazm": {
+"r": "Muâz b. Enes",
+"n": "Öfkeyi yutmak en çok intikam alabilecek güçteyken değerlidir."
+},
+"h-rifq": {
+"r": "Aişe",
+"n": "Yumuşaklık zayıflık değil, sonuca ulaşmanın daha başarılı bir yoludur."
+},
+"h-rifq-zana": {
+"r": "Aişe",
+"n": "Peygamber ﷺ bunu, huysuz bir deveye binip onu ileri geri çeken Aişe'ye söyledi; hayvanlara karşı bile yumuşaklık."
+},
+"h-muflis-tabbaan": {
+"r": "Abdullah b. Mes'ûd",
+"n": "Bir anlaşmazlıkta bile müminin dili temiz kalır."
+},
+"h-afw-izz": {
+"r": "Ebû Hüreyre",
+"n": "İnsanlar affetmelerinin zayıflık sayılmasından korkar; bu yüzden vaat geldi: af izzeti azaltmaz, artırır."
+},
+"h-zulm-zulumat": {
+"r": "Câbir b. Abdullah",
+"n": "Zalime bir uyarı, mazluma bir teselli."
+},
+"h-dawat-mazlum": {
+"r": "İbn Abbas (Peygamber'in ﷺ Muâz'a tavsiyesinden)",
+"n": "Mazlumun asla engellenmeyen bir silahı vardır; güç sahiplerine de sert bir uyarı."
+},
+"h-unsur": {
+"r": "Enes b. Mâlik",
+"n": "Zulmeden bir arkadaşa yardım etmek onu zulümden alıkoymaktır, desteklemek değil."
+},
+"h-muflis": {
+"r": "Ebû Hüreyre",
+"n": "İnsanların hakları ibadetlerle düşmez ve mazlum hakkını asla kaybetmez."
+},
+"h-la-darar": {
+"r": "İbn Abbas ve Ubâde b. Sâmit",
+"n": "Büyük bir fıkıh kaidesi: zarar vermeye başlamak da zarara daha büyük zararla karşılık vermek de yoktur — süregelen eziyeti reddetmenin temeli."
+},
+"h-la-yuldagh": {
+"r": "Ebû Hüreyre",
+"n": "Affetmek saflık demek değildir; mümin tecrübeden ders alır ve yeniden incinmekten koruyan sınırlar koyar."
+},
+"h-yuhibbu": {
+"r": "Enes b. Mâlik",
+"n": "Hasedin en derin ilacı: kendin için istediğini başkaları için de istemek."
+},
+"h-la-tahasadu": {
+"r": "Ebû Hüreyre",
+"n": "Kardeşliği bozanların listesi: haset, kin, sırt çevirmek ve haksız rekabet."
+},
+"h-hasad-ithnatayn": {
+"r": "Abdullah b. Mes'ûd",
+"n": "Buradaki “haset” sağlıklı gıptadır: bir başkasındaki nimetin benzerini, ondan gitmesini istemeden dilemek ve yalnızca hayırda."
+},
+"h-hajr-thalath": {
+"r": "Ebû Eyyûb el-Ensârî",
+"n": "Küsmenin bir süresi vardır; daha hayırlı olan bekleyen değil, önce selam verendir."
+},
+"h-istalaha": {
+"r": "Ebû Hüreyre",
+"n": "Kin bağışlanmayı geciktirir; barışmak toplumsal bir nezaket değil, ibadettir."
+},
+"h-islah": {
+"r": "Ebû'd-Derdâ",
+"n": "“Kazıyıcı”: dini, ustura saçı kazır gibi kazır; bu yüzden ilişkileri düzeltmek en yüce ibadetlerdendir."
+},
+"h-mira": {
+"r": "Ebû Ümâme el-Bâhilî",
+"n": "Haklı olsan bile faydasız münakaşayı bırak: tartışmayı kazanmak her zaman ilişki için kazanç değildir."
+},
+"h-afshu-salam": {
+"r": "Ebû Hüreyre",
+"n": "Selam buzları eritmenin ve sevgi kurmanın en basit anahtarıdır."
+},
+"h-akhbirhu": {
+"r": "Mikdâm b. Ma'dîkerib",
+"n": "Olumlu duyguları ifade etmek bir sünnettir, zayıflık değil."
+},
+"h-tahadu": {
+"r": "Ebû Hüreyre",
+"n": "Küçük bir hediye soğukluğu eritir."
+},
+"h-khalil": {
+"r": "Ebû Hüreyre",
+"n": "Dost seni fark ettirmeden şekillendirir; bu yüzden arkadaş seçimi belirleyici bir karardır."
+},
+"h-jalis": {
+"r": "Ebû Mûsâ el-Eş'arî",
+"n": "İyi arkadaştan her durumda fayda görürsün, kötü arkadaştan da onun gibi davranmasan bile her durumda zarar görürsün."
+},
+"h-maa-man-ahabb": {
+"r": "Enes b. Mâlik ve İbn Mes'ûd",
+"n": "Salihleri sevmek, amellerin eksik kalsa bile seni onlara yükseltir."
+},
+"h-yashkur-nas": {
+"r": "Ebû Hüreyre",
+"n": "İnsanlara teşekkür etmek Allah'a şükretmenin parçasıdır."
+},
+"h-kafiuhu": {
+"r": "Abdullah b. Ömer",
+"n": "Dua, verecek başka bir şeyi olmayanın karşılığıdır."
+},
+"h-ghiba": {
+"r": "Ebû Hüreyre",
+"n": "Gıybet gerçek bir kusuru anmaktır, iftira ise var olmayan bir kusuru; ikisi de haramdır."
+},
+"h-yaqul-khayran": {
+"r": "Ebû Hüreyre",
+"n": "Konuşmadan önce basit bir test: bu hayırlı mı? Değilse, sükût."
+},
+"h-kalima": {
+"r": "Ebû Hüreyre",
+"n": "Geçerken söylenen bir söz terazideki en ağır şey olabilir."
+},
+"h-muslim-salima": {
+"r": "Abdullah b. Amr",
+"n": "İslam'ın pratik tanımı: insanların senin zararından emin olması."
+},
+"h-zann": {
+"r": "Ebû Hüreyre",
+"n": "Suizan kendini “sezgi” olarak sunar ve Peygamber ﷺ onu sözlerin en yalanı olarak adlandırdı."
+},
+"h-kalima-tayyiba": {
+"r": "Ebû Hüreyre",
+"n": "Malı olmayanın bile sadaka olarak verebileceği güzel bir sözü vardır."
+},
+"h-sitr": {
+"r": "Ebû Hüreyre",
+"n": "Çoğalan kapılar: sıkıntıyı gidermek, kolaylaştırmak ve örtmek — ve karşılık amelin cinsindendir."
+},
+"h-mujahirin": {
+"r": "Ebû Hüreyre",
+"n": "Günaha düşen Allah'ın örtüsü altında kalsın, kendini ifşa etmesin ve Rabbiyle kendi arasında tövbe etsin."
+},
+"h-munafiq": {
+"r": "Ebû Hüreyre",
+"n": "Güveni sınamak için üç pratik işaret — başkalarında ve kendinde."
+},
+"h-da-ma-yaribuk": {
+"r": "Hasan b. Ali",
+"n": "Şüphede kaldığında kalbin huzur bulduğunu seç; doğruluk bir görev olmadan önce gönül huzurudur."
+},
+"h-birr-ithm": {
+"r": "Nevvâs b. Sem'ân",
+"n": "İçsel bir pusula: insanların öğrenmesinden hoşlanmayacağın şeyde genellikle yanlış bir şey vardır."
+},
+"h-mustashar": {
+"r": "Ebû Hüreyre",
+"n": "Kendisine danışılan dürüstçe öğüt vermelidir; danışan da güvenilir birini seçmelidir."
+},
+"h-atqan": {
+"r": "Aişe",
+"n": "İşi iyi yapmak, kimse izlemese bile ibadettir."
+},
+"h-ajir": {
+"r": "Abdullah b. Ömer",
+"n": "İşçinin ücretini gecikmeden, hemen alma hakkı."
+},
+"h-kullukum-rai": {
+"r": "Abdullah b. Ömer",
+"n": "Herkes kendi alanında sorumludur: baba, anne, yönetici ve çalışan."
+},
+"h-ada-dayn": {
+"r": "Ebû Hüreyre",
+"n": "Ödemeye samimi niyet, borcun ödenmesinde Allah'ın yardımını getirir."
+},
+"h-matl": {
+"r": "Ebû Hüreyre",
+"n": "Ödeyebilecek durumdayken birinin hakkını geciktirmek açık bir zulümdür."
+},
+"h-samh": {
+"r": "Câbir b. Abdullah",
+"n": "Hakkını isterken bile kolaylık gösteren cömertlik."
+},
+"h-inzar": {
+"r": "Ebû'l-Yeser",
+"n": "Darlıktaki borçluya mühlet vermek ya da borcu bağışlamak büyük sevaplı bir ameldir."
+},
+"h-ghina-nafs": {
+"r": "Ebû Hüreyre",
+"n": "Gerçek zenginlik yeterlilik hissidir, hesaptaki bir rakam değil."
+},
+"h-kafaf": {
+"r": "Abdullah b. Amr",
+"n": "Başarı zenginlik gerektirmez: İslam, yetecek kadarı ve kanaat."
+},
+"h-amin-sirbih": {
+"r": "Ubeydullah b. Mihsan",
+"n": "Nimetin yeniden tanımı: güvenlik, sağlık ve bugünün yiyeceği bütün “dünya”dır."
+},
+"h-unzuru-asfal": {
+"r": "Ebû Hüreyre",
+"n": "İsabetli bir psikolojik kural: kıyaslamanın yönü kendini ne kadar nimet içinde hissedeceğini belirler; din işlerinde ise senden yukarıdakilere bak."
+},
+"h-tawakkul-tayr": {
+"r": "Ömer b. Hattâb",
+"n": "Kuşlar “sabah çıkar” — çıkar ve ararlar; gerçek tevekkül huzurlu bir kalple birlikte çabayı da içerir."
+},
+"h-iqilha": {
+"r": "Enes b. Mâlik",
+"n": "Allah'a tevekkül sebepleri terk etmek değildir; her sebebe sarıl, sonra sonucu Allah'a bırak."
+},
+"h-hatab": {
+"r": "Zübeyr b. Avvâm",
+"n": "Basit işte utanılacak bir şey yoktur; onur, mütevazı da olsa helal kazançtadır."
+},
+"h-kafil-yatim": {
+"r": "Sehl b. Sa'd",
+"n": "Yetime bakmak kişiyi Peygamber'in ﷺ yanına yükseltir."
+},
+"h-armala": {
+"r": "Ebû Hüreyre",
+"n": "Zayıflara hizmet en büyük ibadetlere denktir."
+},
+"h-la-tahqiranna": {
+"r": "Ebû Zer",
+"n": "En küçük iyiliğin bile değeri vardır — iyilik yapamayacağını düşünen için pratik bir giriş kapısı."
+},
+"h-anfauhum": {
+"r": "Abdullah b. Ömer",
+"n": "Anlamı kaybettiğini hissedene, insanlara fayda sağlamak onu yeniden bulmanın geniş bir kapısıdır."
+},
+"h-khayrukum-ahlih": {
+"r": "Aişe",
+"n": "Gerçek ahlak evin dışında değil, içinde ölçülür."
+},
+"h-akmal-iman": {
+"r": "Ebû Hüreyre",
+"n": "İmanın kemali eşe iyi davranmakla ilişkilidir."
+},
+"h-la-yafrak": {
+"r": "Ebû Hüreyre",
+"n": "Dengeli bakış: eşini tek bir kusurla yargılayıp iyiliğini unutma. Bu iki eş için de geçerlidir."
+},
+"h-istawsu": {
+"r": "Ebû Hüreyre",
+"n": "Kadınlara iyi davranmaya dair tekrarlanan nebevî tavsiye."
+},
+"h-radiya-ghadba": {
+"r": "Aişe",
+"n": "Peygamber'in ﷺ eşinin duygularının en ince işaretlerine dikkati ve onun öfkesini tırmandırmadan sakince karşılaması."
+},
+"h-mataa": {
+"r": "Abdullah b. Amr",
+"n": "Salih bir eş dünyanın en büyük nimetidir."
+},
+"h-dhat-din": {
+"r": "Ebû Hüreyre",
+"n": "Seçimin ölçüsü: din ve ahlak temeldir, diğer hususları ihmal etmeden."
+},
+"h-tardawna": {
+"r": "Ebû Hüreyre",
+"n": "Ailelere rehberlik: abartılı maddi ölçülerle evliliği zorlaştırmayın."
+},
+"h-shabab": {
+"r": "Abdullah b. Mes'ûd",
+"n": "Şehvete pratik çözümler: gücü yetiyorsa evlilik, yetmiyorsa oruç."
+},
+"h-thalatha-awn": {
+"r": "Ebû Hüreyre",
+"n": "İffet niyetiyle evlenmek isteyene Allah yardım eder."
+},
+"h-rughm": {
+"r": "Ebû Hüreyre",
+"n": "Anne babanın yaşlılığı sadece bir yük değil, cennet için altın bir fırsattır."
+},
+"h-rida-walid": {
+"r": "Abdullah b. Amr",
+"n": "Anne babaya iyilik, O'na isyan dışındaki her şeyde Allah'ın rızasına giden doğrudan bir yoldur."
+},
+"h-asma-umm": {
+"r": "Esmâ bint Ebî Bekir",
+"n": "Din ya da uygulama farkı iyilik ve sıla-i rahim görevini kaldırmaz."
+},
+"h-sila-rizq": {
+"r": "Enes b. Mâlik",
+"n": "Sıla-i rahim rızka ve ömre bereket getirir."
+},
+"h-mal": {
+"r": "Ebû Hüreyre",
+"n": "Kendisine soğuk davranan akrabalarıyla bağını sürdürene Allah'tan bir yardımcı vardır; günah ona değil, onlaradır."
+},
+"h-adl-awlad": {
+"r": "Nu'mân b. Beşîr",
+"n": "Vermede bir çocuğu diğerine üstün tutmak aralarına düşmanlık eker."
+},
+"h-yarham-saghir": {
+"r": "Abdullah b. Amr",
+"n": "Küçüklere merhamet ve büyüklere saygı, birlikte."
+},
+"h-rahimun": {
+"r": "Abdullah b. Amr",
+"n": "Yaratılmışlara merhamet Yaratan'ın rahmetine giden yoldur."
+},
+"h-walad-salih": {
+"r": "Ebû Hüreyre",
+"n": "Anne babaya iyilik ölümle bitmez: onlar adına duan ve sadakan onlara ulaşır."
+},
+"h-kalima-lil-ahl": {
+"r": "Sa'd b. Ebî Vakkâs",
+"n": "Doğru niyetle eşine verdiğin bir lokma bile sadakadır; aileye harcamak ibadettir."
+},
+"h-ajaban": {
+"r": "Süheyb er-Rûmî",
+"n": "Mümin her durumda kazançlıdır: nimette şükürle, zorlukta sabırla."
+},
+"h-nasab": {
+"r": "Ebû Saîd el-Hudrî ve Ebû Hüreyre",
+"n": "Sadece bedensel acı değil, kaygı ve duygusal hüzün de sevap ve kefaret taşır."
+},
+"h-ashadd-bala": {
+"r": "Sa'd b. Ebî Vakkâs",
+"n": "Şiddetli imtihan gazap işareti değildir; hatta bir derece işareti olabilir."
+},
+"h-azam-jaza": {
+"r": "Enes b. Mâlik",
+"n": "İmtihana karşı tutumun (rıza ya da öfke) onun meyvesini belirler."
+},
+"h-maradh-kutib": {
+"r": "Ebû Mûsâ el-Eş'arî",
+"n": "Hastalık alışkanlık edindiğin ibadetlerin sevabını kesmez; hastalığın seni alıkoyduğu şeye üzülme."
+},
+"h-dawa": {
+"r": "Ebû Hüreyre",
+"n": "Şifa ümidi imandandır, onu aramak sebebe sarılmaktır."
+},
+"h-tadawaw": {
+"r": "Üsâme b. Şerîk",
+"n": "Ruh sağlığı bakımı dahil tedavi olmak emredilmiştir; doktora gitmek tevekküle aykırı değildir."
+},
+"h-habibatayn": {
+"r": "Enes b. Mâlik",
+"n": "Sabırla karşılanan değerli bir duyunun kaybı cennetle karşılanır."
+},
+"h-la-yatamanna": {
+"r": "Enes b. Mâlik",
+"n": "Acı yüzünden ölümü temenni etmenin açık yasağı; ağır duyguları işi Allah'a bırakan bir duaya yönlendirmek.",
+"w": "Şiddetli darlıkta ve ümitsizlikte"
+},
+"h-yurid-khayran": {
+"r": "Ebû Hüreyre",
+"n": "Bir musibet Allah'ın senin için dilediği bir hayrın kapısı olabilir."
+},
+"h-sabr-diya": {
+"r": "Ebû Mâlik el-Eş'arî",
+"n": "Sabır “ziyâ”dır — ısı ve zahmet taşıyan bir ışık — saf “nûr” olan namazın aksine."
+},
+"h-yatasabbar": {
+"r": "Ebû Saîd el-Hudrî",
+"n": "Sabır pratikle kazanılan bir beceridir: onun için çabalayana Allah yardım eder."
+},
+"h-hamm": {
+"r": "Enes b. Mâlik",
+"n": "Kaygı gelecek, hüzün geçmiş içindir; bu dua insan zayıflığının sekiz kapısını kapsar.",
+"w": "Sabah, akşam ve kaygı zamanlarında"
+},
+"h-karb": {
+"r": "İbn Abbas",
+"n": "Sıkıntı duası: Peygamber ﷺ zor zamanlarda bunu söylerdi.",
+"w": "Sıkıntıda ve şiddetli darlıkta"
+},
+"h-dhunnun": {
+"r": "Sa'd b. Ebî Vakkâs",
+"n": "Tevhid, tesbih ve hatayı itiraf: ferahlığın üç anahtarı.",
+"w": "Her darlıkta"
+},
+"h-abduk": {
+"r": "Abdullah b. Mes'ûd",
+"n": "Allah'ın hükmüne teslimiyeti Kur'an'ın hüznün ilacı olması dileğiyle birleştiren bir dua.",
+"w": "Kaygı ve hüzünde"
+},
+"h-rahmataka": {
+"r": "Ebû Bekre",
+"n": "Allah'tan seni bir an bile nefsine bırakmamasını ve “bütün” işlerini düzeltmesini istemek.",
+"w": "Zorlukta ve işler dağıldığında"
+},
+"h-hasbuna": {
+"r": "İbn Abbas",
+"n": "İnsanlardan ya da gelecekten korkulduğunda büyük teslimiyet sözü.",
+"w": "Korku, tehdit ve zulümde"
+},
+"h-bismillah-yadurr": {
+"r": "Osman b. Affân",
+"n": "Kaygılı kalbi yatıştıran günlük bir koruma zikri.",
+"w": "Sabah akşam üç kez"
+},
+"h-ruqya-alam": {
+"r": "Osman b. Ebî'l-Âs",
+"n": "Hastanın kendine okuduğu nebevî bir rukye.",
+"w": "Ağrı ve hastalıkta"
+},
+"h-adhhib-bas": {
+"r": "Aişe",
+"n": "Peygamber ﷺ ailesinden biri için bununla korunma isterdi.",
+"w": "Hasta ve onu ziyaret edenler için"
+},
+"h-la-bas": {
+"r": "İbn Abbas",
+"n": "Hastalığı ceza değil arınma kılan nebevî bir teselli sözü.",
+"w": "Hasta ziyaretinde"
+},
+"h-ayn-haqq": {
+"r": "Ebû Hüreyre",
+"n": "Nazarın hak olduğunun teyidi; ondan aşırı korkmayı ya da her şeyi onunla açıklamayı yasaklayarak."
+},
+"h-barrakt": {
+"r": "Ebû Ümâme b. Sehl b. Huneyf",
+"n": "Bakan tarafında nazarı önlemek: bir şey hoşuna gittiğinde “Allah sana bereket versin” demek."
+},
+"h-muawwidhat": {
+"r": "Ukbe b. Âmir",
+"n": "Son iki sure en büyük korunmadır.",
+"w": "Sabah, akşam ve uyumadan önce"
+},
+"h-uidhukuma": {
+"r": "İbn Abbas",
+"n": "Çocukları Allah'ın zikriyle korumak.",
+"w": "Çocukları korumak için"
+},
+"h-khattaun": {
+"r": "Enes b. Mâlik",
+"n": "Hata yapmak insan fıtratıdır; üstünlük çabuk dönmektedir."
+},
+"h-farah-tawba": {
+"r": "Enes b. Mâlik",
+"n": "Allah tövbeni sadece kabul etmez; ona sevinir — günah yüzünden ümitsizliği kıran bir tasvir."
+},
+"h-yabsut-yadah": {
+"r": "Ebû Mûsâ el-Eş'arî",
+"n": "Tövbe kapısı her saat açıktır."
+},
+"h-ma-daawtani": {
+"r": "Enes b. Mâlik",
+"n": "O'na dua eden ve O'ndan uman için hiçbir günah Allah'ın bağışlamasından büyük değildir."
+},
+"h-sayyid-istighfar": {
+"r": "Şeddâd b. Evs",
+"n": "Kim onu gündüz yakînle söyler ve o gün ölürse cennet ehlindendir.",
+"w": "Sabah, akşam ve bir günahtan sonra"
+},
+"h-atbi-sayyia": {
+"r": "Ebû Zer ve Muâz b. Cebel",
+"n": "Pratik bir yöntem: mükemmelliği bekleme; her kötülüğün ardından bir iyilik yap."
+},
+"h-qatil-mia": {
+"r": "Ebû Saîd el-Hudrî",
+"n": "Hiçbir günah tövbe kapısını kapatmaz ve çevreyi değiştirmek değişimin önemli bir parçasıdır."
+},
+"h-waswasa-sarih": {
+"r": "Ebû Hüreyre",
+"n": "Vesveselerden nefret etmek ve onları dehşet verici bulmak küfrün değil, imanın işaretidir."
+},
+"h-tajawaz": {
+"r": "Ebû Hüreyre",
+"n": "Amel ya da söze dönüşmeden zihinden geçen düşünceler için Allah hesap sormaz."
+},
+"h-waswasa-intahi": {
+"r": "Ebû Hüreyre",
+"n": "Vesvesenin ilacı: sığın, sonra düşüncenin peşinden gitmeyi bırak — onunla tartışma."
+},
+"h-muqallib": {
+"r": "Enes b. Mâlik",
+"n": "Peygamber ﷺ bile sebat istedi; kalbin dönüp dolaşması doğaldır, duası ise ilacıdır.",
+"w": "Her zaman ve iman zayıf hissedildiğinde"
+},
+"h-ahdini": {
+"r": "Ali b. Ebî Tâlib",
+"n": "Her karar ya da iş için kısa ve kapsamlı bir dua.",
+"w": "Kararlardan ve işlerden önce"
+},
+"h-taqwaha": {
+"r": "Zeyd b. Erkam",
+"n": "Nefsi yalnızca kendi gücüyle değil, Allah'tan yardım isteyerek arındırmak.",
+"w": "Nefsi arındırmak için"
+},
+"h-kfini-halal": {
+"r": "Ali b. Ebî Tâlib",
+"n": "Peygamber ﷺ bunu borcunu ödeyemeyen bir adama öğretti ve şöyle dedi: dağ kadar borcun olsa bile Allah onu senin yerine öder.",
+"w": "Borç ödemek ve rızkın genişlemesi için"
+},
+"h-la-sahl": {
+"r": "Enes b. Mâlik",
+"n": "Zoru kolaylaştırma duası: sınavlar ve ağır işler.",
+"w": "Sınavdan ya da zor bir işten önce"
+},
+"h-zawal-nima": {
+"r": "Abdullah b. Ömer",
+"n": "Sahip olduğun nimetleri korumak için sığınmak.",
+"w": "Bir nimeti kaybetmekten korkulduğunda"
+},
+"h-istijaba-ajal": {
+"r": "Ebû Hüreyre",
+"n": "Sabırsızlık ve duayı bırakmak icabetin en büyük engelleridir."
+},
+"h-nuzul": {
+"r": "Ebû Hüreyre",
+"n": "Gecenin son kısmında Allah ile her gün açık bir randevu."
+},
+"h-sujud": {
+"r": "Ebû Hüreyre",
+"n": "Secde en yakın andır; kaygılarını oraya bırak."
+},
+"h-hazabahu": {
+"r": "Huzeyfe b. Yemân",
+"n": "Namaz, önemli bir şey olduğunda müminin başvurduğu ilk sığınaktır."
+},
+"h-arihna": {
+"r": "Huzâa'dan bir adam",
+"n": "Namaz yorgunluktan dinlenmedir, dinlenilmesi gereken bir yorgunluk değil."
+},
+"h-din-yusr": {
+"r": "Ebû Hüreyre",
+"n": "Kendine aşırı sertlik bırakmakla sonuçlanır; “doğruyu hedefleyin, ulaşamazsanız yaklaşın”."
+},
+"h-adwamuha": {
+"r": "Aişe",
+"n": "Azı sürdürmek çoğa duyulan geçici hevesten daha faydalıdır — alışkanlık inşa etmenin ilkesi."
+},
+"h-haqq-nafs": {
+"r": "Ebû Cuhayfe (Selmân, Ebû'd-Derdâ'ya söyledi ve Peygamber ﷺ onayladı)",
+"n": "İbadet, nefis, aile ve iş arasında denge."
+},
+"h-nimatan": {
+"r": "İbn Abbas",
+"n": "İnsanların çoğu sağlıklarını ve boş vakitlerini değerlendirmede aldanmıştır."
+},
+"h-ightanim": {
+"r": "İbn Abbas",
+"n": "Kısaca bir hayat planı: mevcut her nimet değişmeden önce bir fırsattır."
+},
+"h-muamin-qawi": {
+"r": "Ebû Hüreyre",
+"n": "Eksiksiz bir yöntem: olaydan önce hırs + yardım istemek + acizliğe düşmemek; sonrasında rıza ve “keşke”yi bırakmak."
+},
+"h-ihfadh": {
+"r": "İbn Abbas",
+"n": "Ahmed'in rivayetinde: “Bil ki zafer sabırla, ferahlık sıkıntıyla, kolaylık da zorlukla beraberdir.” İnsan korkusunun kökten ilacı."
+},
+"h-yassiru": {
+"r": "Enes b. Mâlik",
+"n": "Terbiye, liderlik ve hayra davet için bir kural."
+},
+"h-ihsan": {
+"r": "Şeddâd b. Evs",
+"n": "Her amelde, en zor durumlarda bile ihsan istenir."
+},
+"h-makarim": {
+"r": "Ebû Hüreyre",
+"n": "Güzel ahlak risaletin kenarı değil, amacıdır."
+},
+"h-ahsanukum-khuluqan": {
+"r": "Câbir b. Abdullah",
+"n": "Güzel ahlak ahirette Peygamber'e ﷺ yakın olmanın yoludur."
+},
+"h-kibr": {
+"r": "Abdullah b. Mes'ûd",
+"n": "Kibrin isabetli tanımı: hakkı reddetmek ve insanları küçümsemek; güzel görünüşle ilgisi yoktur."
+},
+"h-tawadau": {
+"r": "İyâz b. Himâr",
+"n": "Tevazu iki şeyi engeller: övünmeyi ve haddi aşmayı."
+},
+"h-nasiha": {
+"r": "Temîm ed-Dârî",
+"n": "Nasihat, öğüt verilenin iyiliğini istemektir; yumuşaklıkla ve baş başa verilir."
+},
+"h-munkar": {
+"r": "Ebû Saîd el-Hudrî",
+"n": "Güce göre kötülüğü değiştirmenin dereceleri; onu değiştirmenin daha büyük bir kötülüğe yol açmamasına dikkat ederek."
+},
+"h-sabaa-yuzilluhum": {
+"r": "Ebû Hüreyre",
+"n": "Fitnenin doruğunda arzuya direnmek kişiyi Arş'ın gölgesine yükseltir."
+},
+"h-man-taraka": {
+"r": "Çölden bir adam, Peygamber'den ﷺ",
+"n": "Haram bir şeyi ya da haram bir ilişkiyi bırakmak kayıp değildir: Allah'ın karşılığı daha büyüktür."
+},
+"h-man-la-yarham": {
+"r": "Ebû Hüreyre ve Cerîr",
+"n": "Merhamet merhametle kazanılır."
+},
+"h-hayaa": {
+"r": "İmrân b. Husayn",
+"n": "Hayâ sahibini koruyan bir özelliktir ve haktan alıkoyan bir çekingenlik demek değildir."
+}
+}
+}

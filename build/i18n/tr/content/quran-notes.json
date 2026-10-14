@@ -1,0 +1,607 @@
+{
+"quran": {
+"q2-153": {
+"n": "Allah sabrı ve namazı her zorlukta dayanılacak iki yardımcı kıldı ve sabredenlere özel beraberliğini vaat etti: yardım, destek ve sebat beraberliği."
+},
+"q2-155": {
+"n": "İmtihan korku, rızık ve canda yerleşik bir kanundur; çıkış yolu acıyı inkâr etmek değil, onu Allah'a döndürmektir: “Biz Allah'a aitiz ve O'na döneceğiz” — mükâfatı da Allah'tan salâvat, rahmet ve hidayettir."
+},
+"q2-286": {
+"n": "Allah'ın sana yüklediği gücün dahilindedir; gücünü aşan senden istenmez — kendini suçlamayı ve eksiklik kaygısını hafifleten bir ilke."
+},
+"q2-216": {
+"n": "İnsanın sonuçlara dair bilgisi sınırlıdır; acı veren bir olayı katıksız kötülük sayma. Ayet çabayı iptal etmeden rızanın kapısını açar."
+},
+"q94-5": {
+"n": "Müfessirler dedi ki: “zorluk” harf-i tarifle, “kolaylık” onsuz gelmiştir; zorluk tek, kolaylık çoktur — bir zorluk iki kolaylığa galip gelemez. Kolaylık zorlukla “beraber”dir, sadece ondan sonra değil."
+},
+"q65-2": {
+"n": "Takva çıkış yollarının ve rızkın anahtarıdır, tevekkül de yeterliliktir. Ayet “Allah her şey için bir ölçü koymuştur” diye biter; ferahlığın belirli bir vakti olduğunu öğretir, öyleyse acele etme."
+},
+"q65-7": {
+"n": "Zorluğun yolun sonu olmadığına dair açık bir vaat; harcama ve maddi sıkıntı bağlamında indi."
+},
+"q39-10": {
+"n": "Her amelin ölçülü bir mükâfatı vardır, sabır hariç; onun mükâfatı hesapsızdır — bu, uzun acıya anlam ve değer kazandırır."
+},
+"q29-2": {
+"n": "İmtihan ne gazap işaretidir ne de terk edilmenin delili; doğruları ayırt etmek için bir kanundur. Senden öncekiler de aynısından geçti."
+},
+"q57-22": {
+"n": "Kadere iman iki uçtan korur: kaybedilene karşı felç eden hüzün ve kazanılana karşı kibirli sevinç."
+},
+"q64-11": {
+"n": "Alkame dedi ki: Bu, başına bir musibet gelip onun Allah'tan olduğunu bilen, razı olup teslim olan kişidir. Zikredilen mükâfat kalbin hidayetidir: huzur ve anlayış."
+},
+"q12-18": {
+"n": "Güzel sabır, insanlara şikâyet etmeden Allah'tan yardım isteyerek yapılan sabırdır; Yakup oğulları ona yalan söylediğinde bunu söyledi."
+},
+"q12-86": {
+"n": "Allah'a şikâyet sabra, ağlamak rızaya aykırı değildir; Yakup'un gözleri hüzünden ağardı ama umudu canlı kaldı."
+},
+"q12-87": {
+"n": "Yakup çaba emrini — “gidin, araştırın” — ümitsizlik yasağıyla birleştirdi; gerçek umut pasif beklemeye değil, amele iter."
+},
+"q12-90": {
+"n": "Yusuf kıssasının özü, kendisinin özetlediği gibi: takva ve sabır; yol ne kadar uzun olursa olsun güzel sonuç ihsan edenlerindir."
+},
+"q12-92": {
+"n": "Yusuf tam güç anında kardeşlerini affetti, onları kınamadan ve geçmişi hatırlatmadan; Peygamber ﷺ de Mekke'nin fethinde bunu tekrarladı."
+},
+"q12-100": {
+"n": "Yusuf'un inceliği: kardeşlerini mahcup etmemek için kuyuyu değil zindanı andı ve ayrılığı onların kötülüğüne değil şeytanın müdahalesine bağladı."
+},
+"q21-83": {
+"n": "Eyyûb'un duası şikâyetin nasıl yapılacağının örneğidir: hâlini anlatmak — “bana dert dokundu” — ve Allah'ın rahmetini anmak, itiraz etmeden ya da dikte etmeden."
+},
+"q21-87": {
+"n": "Üç karanlık — gece, deniz ve balığın karnı — yine de tevhid ve hatayı itirafla kurtuldu. “Biz müminleri işte böyle kurtarırız” vaadi darlıktaki herkese genişletir."
+},
+"q38-44": {
+"n": "Allah, Eyyûb'u Allah'a şikâyet etmesine rağmen sabrı ve dönüşü için övdü; Yaradan'a şikâyet sabrı bozmaz."
+},
+"q19-23": {
+"n": "Sadık bir kadının samimi bir insani zayıflık anı; Allah ona teselliyle, sonra basit bir sebebe sarılma emriyle — “gövdeyi silkele” — ve sonra bedenine özenle — “ye ve iç” — karşılık verdi."
+},
+"q9-40": {
+"n": "Allah'ın seninle olduğu yakîniyle sekîne iner; gerçek dostluk da sebatın parçasıdır."
+},
+"q3-139": {
+"n": "Uhud yenilgisinden sonra indi: geçici bir kaybın moralini ve onurunu kırmasına izin verme."
+},
+"q3-173": {
+"n": "“Allah bize yeter, O ne güzel vekildir” — İbrahim ateşe atılırken söyledi; Peygamber ﷺ ve ashabı tehdit edildiklerinde söylediler; sonuç nimet ve lütuf oldu."
+},
+"q13-28": {
+"n": "Huzur sorunların yokluğu değil, onların ortasında kalbin Allah'ta karar kılmasıdır; zikir onun doğrudan yoludur."
+},
+"q20-25": {
+"n": "Musa'nın hayatının en zor görevinden önceki duası: işinin kolaylaştırılmasından önce göğsünün açılmasını ve ifadesinde yardım istedi."
+},
+"q20-46": {
+"n": "Musa ve Harun “onun bize karşı aşırı gitmesinden korkuyoruz” dediklerinde Allah'ın cevabı: doğal korku kınanmaz, ilacı da Allah'ın seninle olduğunu hatırlamaktır."
+},
+"q26-61": {
+"n": "Önde deniz, arkada düşman ve bütün hesaplar “yakalandık” diyordu — ama yakîn “Asla!” dedi. Sonra ferahlık kimsenin beklemediği yerden geldi."
+},
+"q28-7": {
+"n": "Anne sebebe sarılır, sonra çocuğunu Allah'a emanet eder; Allah ona hem korkuyu (gelecek için) hem hüznü (ayrılık için) yasakladı."
+},
+"q27-62": {
+"n": "Çaresizlik cevabı yaklaştırır; şiddetli darlık anları en samimi dua anlarıdır."
+},
+"q2-186": {
+"n": "Allah “de ki: ben yakınım” demedi, doğrudan “ben yakınım” diye cevap verdi; duada kul ile Rabbi arasında aracı olmadığının işareti."
+},
+"q40-60": {
+"n": "Dua, icabet vaadiyle emredilmiş bir ibadettir — icabet vererek, kötülüğü uzaklaştırarak ya da sevabı saklayarak olabilir."
+},
+"q93-3": {
+"n": "Vahiy kesilip müşrikler “Rabbi onu terk etti” deyince indi; terk edilmişlik hissinin ilacıdır: Allah seni bırakmadı."
+},
+"q15-97": {
+"n": "Allah insanların sözlerinden göğsünün nasıl daraldığını bilir; sunulan çare cevap vermekle uğraşmak değil, tesbih, secde ve ibadete devam etmektir."
+},
+"q16-127": {
+"n": "Sabır bizzat Allah'tan istenen bir lütuftur; bununla birlikte insanların tuzaklarıyla aşırı meşgul olmaya karşı bir uyarı."
+},
+"q10-62": {
+"n": "Allah'ın dostu olmak doğaüstü bir mertebe değil, iman ve takvadır; meyvesi korku ve hüzünden emniyettir."
+},
+"q11-115": {
+"n": "İnsanlar çabanı görmese de Allah onu zayi etmez."
+},
+"q2-214": {
+"n": "Peygamber ve beraberindeki müminler bile öyle sarsıldılar ki “Allah'ın yardımı ne zaman?” dediler — soru zayıf iman değildir, cevap da: o yakındır."
+},
+"q9-51": {
+"n": "Senin için yazılanın sana mutlaka ulaşacağına dair yakîn, kalbi gelecek hakkındaki süregen kaygıdan kurtarır."
+},
+"q3-200": {
+"n": "Üç mertebe: nefse karşı sabır, uzun yolda ve hasım karşısında direnerek sabır ve nöbette durmak — konumunda sebat etmek."
+},
+"q39-53": {
+"n": "Selefin birçoğuna göre Allah'ın Kitabı'ndaki en ümit verici ayet: Haddi aşanlara “Ey kullarım” diye hitap etti, onları kendine aidiyetten asla çıkarmadı."
+},
+"q3-135": {
+"n": "Muttakilerin özelliklerinden biri günaha düşebilmeleridir, ama fark çabuk dönmeleri ve ısrar etmemeleridir."
+},
+"q25-70": {
+"n": "Samimi tövbe geçmişi sadece silmez; onu iyiliklere çevirir, böylece geçmiş bir zincir olarak kalmaz."
+},
+"q11-114": {
+"n": "Bir kadını öpüp pişmanlıkla gelen bir adam hakkında indi (Buhârî 526): iyilikler kötülükleri giderir; çare sadece pişmanlık değil, olumlu ameldir."
+},
+"q4-110": {
+"n": "Samimi istiğfarla her günah için bağışlanma kapısı açıktır."
+},
+"q66-8": {
+"n": "Samimi tövbe: geçmişe pişmanlık, şimdi bırakmak, dönmemeye azmetmek ve söz konusuysa insanların haklarını iade etmek."
+},
+"q20-82": {
+"n": "Mübalağa kalıbındaki “Gaffâr” tövbesi tekrarlanana çok ve tekrar tekrar bağışlamayı ifade eder."
+},
+"q7-23": {
+"n": "İnsanlık tarihinin ilk tövbesi: gerekçesiz itiraf — isyanını gerekçelendiren İblis'in aksine."
+},
+"q71-10": {
+"n": "Kur'an istiğfarı bol rızık ve evlatla ilişkilendirir; Hasan-ı Basrî kuraklıktan, yoksulluktan ya da az evlattan yakınanlara istiğfarı tavsiye ederdi."
+},
+"q15-49": {
+"n": "Ümit ile korku arasında denge: önce bağışlama ve rahmet, sonra azabın hatırlatılması, ki ümit gaflete dönüşmesin."
+},
+"q7-156": {
+"n": "Allah'ın rahmeti her günahtan ve her durumdan daha geniştir."
+},
+"q6-54": {
+"n": "Allah'a isyan eden, selefin dediği gibi, (sonuçlarından) cehaletle eder; tövbeden sonra ıslah da tövbenin tamamlanmasının şartıdır."
+},
+"q42-40": {
+"n": "Üç mertebe: adalet (denk karşılık), fazilet (ıslahla birlikte af) ve Allah'ın sevmediği zulüm (haddi aşmak). Övülen af, ıslahla birlikte olandır."
+},
+"q42-43": {
+"n": "Eziyete sabır ve affetmek “azim gerektiren işlerdendir”: zayıflık değil, irade gücü ister."
+},
+"q42-37": {
+"n": "Allah onları hiç öfkelenmedikleri için değil, öfkelendiklerinde affettikleri için övdü; öfke fıtrattır, af bir seçimdir."
+},
+"q41-34": {
+"n": "Düşmanı dosta çevirmenin Kur'anî stratejisi: aynısıyla değil daha güzeliyle karşılık vermek — zor olduğunu ve ancak sabredenlerin yapabileceğini kabul ederek."
+},
+"q24-22": {
+"n": "Ebû Bekir, iftiraya katılan akrabası Mistah'a harcamamaya yemin ettiğinde indi; “Evet, vallahi Allah'ın beni bağışlamasını isterim” dedi ve harcamaya yeniden başladı."
+},
+"q7-199": {
+"n": "İnsanlarla ilişkinin kapsamlı kuralı: ahlaklarından kolay geleni kabul et, iyiliği emret, cahillerden yüz çevir ve öfke kabardığında Allah'a sığın."
+},
+"q25-63": {
+"n": "“Selam” onları günahtan uzak tutan söz demektir; beyinsizlere beyinsizlikleriyle karşılık vermezler."
+},
+"q16-126": {
+"n": "Kur'an adalet olarak denk karşılığa izin verir, sonra daha hayırlı olduğu için sabrı teşvik eder; hakkın ile daha hayırlı olan arasında seçmekte özgürsün."
+},
+"q64-14": {
+"n": "Aile içinde bile eziyet gelebilir; istenen, koparmak değil, ihtiyatla birlikte af, hoşgörü ve bağışlamadır."
+},
+"q15-85": {
+"n": "Güzel af: kınama, eziyet ya da başa kakma olmadan af."
+},
+"q59-10": {
+"n": "Kalbi kin ve hasetten arındırmak için bir dua; selim bir kalbe yalnızca iradeyle değil, duayla da ulaşılır."
+},
+"q5-8": {
+"n": "Bir kişiden ya da topluluktan hoşlanmaman sana onlara zulmetme izni vermez; hasma karşı adalet takvanın gerçek sınavıdır."
+},
+"q16-90": {
+"n": "İbn Mes'ûd dedi ki: Bu, hayır ve şer konusunda Kur'an'ın en kapsamlı ayetidir. Adalet temeldir, ihsan onun üstündedir."
+},
+"q14-42": {
+"n": "Cezanın ertelenmesi gaflet ya da ihmal değildir; mazlum için teselli, zalim için uyarıdır."
+},
+"q42-41": {
+"n": "Zulme uğradıktan sonra hakkını istemek meşru ve kınanmazdır; af bir fazilettir, zorunluluk değil."
+},
+"q4-148": {
+"n": "Mazlum zulmü şikâyet edebilir ve zalimin yaptığını adalet sağlayabilecek birine anlatabilir; bu yasak gıybet değildir."
+},
+"q6-164": {
+"n": "Kimse başkasının günahını yüklenmez: oğlu babasının günahı yüzünden, aileyi bir ferdinin hatası yüzünden cezalandırma."
+},
+"q6-152": {
+"n": "Sözde ve şahitlikte adalet, akrabalara karşı bile."
+},
+"q4-58": {
+"n": "Her sorumluluk bir emanettir: mal, makam, sırlar ve sözler."
+},
+"q17-34": {
+"n": "Sözler ve akitler, Allah huzurunda sorulacak bir sorumluluktur."
+},
+"q28-26": {
+"n": "İşe alma ve seçimin Kur'anî ölçüsü: yetkinlik (“güçlü”) ve güvenilirlik bir arada."
+},
+"q66-11": {
+"n": "Firavun'un hanımı bir zorbanın evinde yaşıyordu; evden önce komşuyu istedi — “senin katında” — ve kurtulmayı istedi; zulüm ortamından çıkmak için dua meşrudur."
+},
+"q28-21": {
+"n": "Tehlikeli bir ortamdan ayrılmak sebebe sarılmaktır ve tevekküle aykırı değildir; Musa korkarak çıktı ve dua etti."
+},
+"q49-6": {
+"n": "Hükmetmeden önce araştırma yöntemi: güvenilmez bir haber üzerine karar kurma, yoksa pişmanlık gelir."
+},
+"q49-10": {
+"n": "Çekişenlerin arasını düzeltmek en büyük ibadetlerdendir; rahmet, çekişmelerde Allah'tan korkmanın meyvesidir."
+},
+"q49-11": {
+"n": "Alay, kusur arama ve incitici lakaplar haramdır; “kendinizi ayıplamayın” kardeşinin kendin gibi olduğu anlamına gelir: ona hakaret eden kendine hakaret eder."
+},
+"q49-12": {
+"n": "Bir zincirin üç halkası: zan casusluğa götürür, casusluk kusurları açar, sonra gıybet gelir; Kur'an zinciri başında keser."
+},
+"q49-13": {
+"n": "Allah katında şerefin ölçüsü takvadır, soy, renk ya da mal değil — ırkçılığı ve övünmeyi reddetmenin temeli."
+},
+"q17-53": {
+"n": "Allah “güzel olanı” değil “en güzel olanı” dedi: mümkün olan en iyi sözleri seç, çünkü şeytan sert sözleri düşmanlık ekmek için kullanır."
+},
+"q2-83": {
+"n": "Güzel söz emri müminler ve diğerleri, bütün insanlar için geneldir."
+},
+"q24-15": {
+"n": "“Onu dillerinizle aktarıyordunuz” — kulaklarınızla değil: söylentinin akıldan geçmeden önce yayılma hızının tasviri."
+},
+"q24-12": {
+"n": "Bir itham duyulduğunda ilk görev: itham edilene kendine olduğu gibi hüsnüzan etmek ve sözü yaymamak."
+},
+"q24-11": {
+"n": "Asılsız bir itham bile mazlum için hayır taşır: sevap, doğru ile münafığın ayrışması ve daha büyük bir beraat."
+},
+"q50-18": {
+"n": "Her söz kaydedilir; konuşmadan önce bunu hatırlamak gıybetin ve dil sürçmelerinin ilacıdır."
+},
+"q4-114": {
+"n": "Gizli konuşmalarda sadaka, iyilik ya da barıştırmayla ilgili olanlar dışında hayır yoktur — öyleyse özel konuşmanı ıslah üzerine yap."
+},
+"q16-125": {
+"n": "Farklı düşünenlerle diyalog hikmet, güzel öğüt ve en güzel şekilde tartışmayla olur — sertlik ve yaralayıcı sözlerle değil."
+},
+"q20-44": {
+"n": "Musa'ya zorba Firavun'a yumuşak davranması emredildiyse, anne babaya, eşe ya da arkadaşa yumuşaklık daha da yerindedir."
+},
+"q31-18": {
+"n": "Lokman'ın oğluna tevazu ve sesi alçaltma öğüdü; tartışmada sesini yükseltmek delilini güçlendirmez."
+},
+"q33-70": {
+"n": "Sağlam söz: doğru, dosdoğru ve isabetli; meyvesi amellerin düzelmesidir."
+},
+"q61-2": {
+"n": "Söz ile fiil arasındaki çelişki sözlerin etkisini yok eder, özellikle anne baba, öğretmen ya da lider için."
+},
+"q4-86": {
+"n": "Bir davranış ilkesi: selama ya da güzel bir jeste daha güzeliyle karşılık ver."
+},
+"q2-263": {
+"n": "Güzel söz ve bağışlama, ardından başa kakma ya da eziyet gelen sadakadan daha hayırlıdır."
+},
+"q17-23": {
+"n": "Anne babaya iyilik yalnızca Allah'a ibadetle birlikte anıldı; yaşlılık zayıflık ve sabırsızlık dönemi olduğu için özellikle zikredildi; “öf” demek bile yasaklandı."
+},
+"q31-14": {
+"n": "Çocuğuna en büyük mesele (şirk) hakkında baskı yapan anne babayla bile iyilikle geçinilir; itaat iyilikte olur ve onlara iyilik asla düşmez."
+},
+"q46-15": {
+"n": "Kırk yaşına varanın duası: kendisine ve anne babasına verilen nimetlere şükür, salih evlat istemek ve tövbeyi yenilemek."
+},
+"q19-43": {
+"n": "İbrahim yumuşaklıkla “babacığım” demeye devam etti ve babası onu taşlamakla tehdit edince “selam sana” dedi; en büyük meselelerde ayrılık bile edebi kaldırmaz."
+},
+"q30-21": {
+"n": "Evliliğin amaçları: huzur, sevgi (meveddet) ve merhamet. Bazı müfessirler dedi ki: meveddet gençlikte, merhamet yaşlılıktadır; meveddet zayıflayınca merhamet kalır."
+},
+"q4-19": {
+"n": "Hoşnutsuzluk olsa bile iyilikle birlikte yaşamak gereklidir; geçici hoşnutsuzluk bir evliliği yıkmak için gerekçe değildir."
+},
+"q4-35": {
+"n": "Evlilik anlaşmazlığını çözmek için Kur'anî bir mekanizma: iki taraftan hikmetli hakemler ve başarının şartı barışmaya samimi niyet."
+},
+"q4-128": {
+"n": "“Sulh daha hayırlıdır” genel bir kuraldır: uzlaşma ve karşılıklı fedakârlık ayrılıktan iyidir."
+},
+"q2-237": {
+"n": "Boşanma bağlamında indi: ayrılık anında bile aranızdaki iyiliği ve fazileti unutmayın."
+},
+"q2-187": {
+"n": "Eşler birbirleri için örtü, sığınak ve yakınlıktır; her biri diğerinin kusurlarını örter ve onu korur."
+},
+"q2-229": {
+"n": "Evlilik sürerse iyilikle; biterse güzellikle — iki durumda da zarar vermeye yer yoktur."
+},
+"q25-74": {
+"n": "Rahmân'ın kullarının ailesi için duası: gözlerin aydınlığı olmaları — huzur ve sevinç kaynağı."
+},
+"q66-6": {
+"n": "Terbiye sorumluluğu aileden önce insanın kendisinden — “kendinizi” — başlar: talimattan önce örnek olmak."
+},
+"q31-13": {
+"n": "Çocuklara öğüt vermenin Kur'anî örneği: sevgiyle “yavrum” diye seslenmek, temellerden başlamak, emirlerin gerekçesini vermek ve hepsini sabırla bağlamak."
+},
+"q20-132": {
+"n": "Mübalağa kalıbındaki “ve onda sabırlı ol”: terbiye tek bir emir değil, uzun ve tekrarlanan sabır ister."
+},
+"q18-46": {
+"n": "Mal ve evlat süstür, amaç değil; kalıcı olan salih amellerdir."
+},
+"q4-1": {
+"n": "Akrabalık bağı, takva emrinde Allah'ın adıyla birlikte anıldı; bu bağın büyüklüğünü gösterir."
+},
+"q47-22": {
+"n": "Akrabalık bağını koparmak yeryüzünde fesat çıkarmakla birlikte anıldı."
+},
+"q13-21": {
+"n": "Akıl sahiplerinin özelliklerinden biri, Allah'ın birleştirilmesini emrettiğini birleştirmektir; başta akrabalık bağı."
+},
+"q4-36": {
+"n": "İyiliğin on halkası: anne babadan uzak komşuya ve yolculuk ve iş arkadaşına kadar."
+},
+"q28-56": {
+"n": "Ebû Tâlib hakkında indi: Peygamber ﷺ bile en çok sevdiğini hidayete erdiremedi. Senin payın tebliğ etmek ve iyilik yapmaktır; hidayet Allah'ındır."
+},
+"q88-21": {
+"n": "Senin rolün hatırlatmaktır, başkalarının kalplerine hükmetmek değil."
+},
+"q18-6": {
+"n": "Karşılık vermeyenlere bu kadar derin üzüldüğü için Peygamber'e ﷺ şefkatli bir sitem; başkalarının seçimleri yüzünden kendini hüzünle tüketme."
+},
+"q2-256": {
+"n": "İman zorla dayatılamaz; açıklık yoldur."
+},
+"q60-8": {
+"n": "Barış içinde yaşayan gayrimüslimlere iyilik ve adalet meşrudur ve Allah onu sever."
+},
+"q11-6": {
+"n": "Her canlının rızkı Allah'ın teminatındadır; bu çabayı iptal etmez, kaygıyı ondan kaldırır."
+},
+"q51-22": {
+"n": "Allah rızık üzerine, konuştuğunuzdan emin olduğunuz kadar kesin bir yemin etti — yoksulluk vesvesesini kesen bir teminat."
+},
+"q2-280": {
+"n": "Darlıktaki borçluya mühlet vermek vaciptir; borcu bağışlamak ise daha hayırlı bir sadakadır."
+},
+"q2-268": {
+"n": "Aşırı yoksulluk korkusu, cimriliğe ya da harama iten şeytani bir vesvesedir; Allah ise bağışlama ve lütuf vaat eder."
+},
+"q34-39": {
+"n": "Hayra harcamak malı azaltmaz; yerine konur."
+},
+"q14-7": {
+"n": "Şükür artış getirir ve eksik olanı istemeden önce mevcut nimeti fark etmekle başlar."
+},
+"q67-15": {
+"n": "Rızık aramak için yeryüzünde yürüme emri: çaba ibadettir, tevekkül oturup beklemek demek değildir."
+},
+"q62-10": {
+"n": "İbadet ile iş arasında denge: namaz, sonra Allah'ı anarak rızık aramak için dağılmak."
+},
+"q4-32": {
+"n": "Hasedin ilacı: başkalarında olanı temenni etmek yerine kendi payın için çalış ve Allah'tan geniş lütfunu iste."
+},
+"q20-131": {
+"n": "Başkalarında olana sürekli bakmak kanaati bozar; onlarda olan bir “çiçektir”, güzel ama çabuk solar."
+},
+"q113-5": {
+"n": "Haset de dahil dış kötülüklerden sığınma suresi; Peygamber ﷺ son iki sureyi okur ve onlarla korunurdu."
+},
+"q17-29": {
+"n": "Mali denge: ne cimrilik ne de pişmanlığa ve borca götüren israf."
+},
+"q25-67": {
+"n": "Rahmân'ın kullarının özelliklerinden biri harcamada dengedir."
+},
+"q28-24": {
+"n": "Musa aç, garip ve işsizdi, yine de önce başkalarına yardım etti, sonra dua etti; iş, evlilik ve güven ona bundan sonra geldi."
+},
+"q59-9": {
+"n": "İhtiyaç anında başkalarını kendine tercih etmek cömertliğin zirvesidir; kurtuluş nefsin cimriliğinden korunmaktadır."
+},
+"q76-8": {
+"n": "Allah için çalışan, teşekkür edilmediğinde ezilmez; çünkü baştan teşekkür beklemedi."
+},
+"q93-9": {
+"n": "Yetimliği ve muhtaçlığı tatmış olan (Peygamber ﷺ gibi), yetimlere ve muhtaçlara yumuşak davranmaya en layık olandır."
+},
+"q5-2": {
+"n": "İşte ve dostlukta yardımlaşmanın ölçüsü: iyilikte yardımlaşın, günahta değil."
+},
+"q83-1": {
+"n": "Ölçüde eksiltmek, kendi hakkını tam isteyip başkalarının hakkını eksik veren herkesi kapsar — ticarette, işte ve değerlendirmede."
+},
+"q53-39": {
+"n": "Sonuçlar çabaya bağlıdır ve çabanın kendisi, sonuç tamamlanmasa da Allah katında korunur ve görülür."
+},
+"q9-105": {
+"n": "Yöneticin ya da insanlar görmese de işini Allah görür."
+},
+"q13-11": {
+"n": "Değişim içeriden başlar: inançlar, alışkanlıklar ve niyet."
+},
+"q29-69": {
+"n": "Mücadele yollara hidayetin şartıdır; her samimi adım açılan bir yolla karşılanır."
+},
+"q3-159": {
+"n": "Eksiksiz bir liderlik yöntemi: yumuşaklık, sonra af, sonra başkaları için istiğfar, sonra istişare, sonra azim, sonra Allah'a tevekkül."
+},
+"q42-38": {
+"n": "İstişare mümin toplumun bir özelliğidir; ev işlerinde eşler arasındaki istişare de buna dahildir."
+},
+"q18-23": {
+"n": "Planlama gereklidir; ancak yalnızca Allah'ın elinde olan geleceğe karşı tevazuyla."
+},
+"q17-36": {
+"n": "Kesin bilmediğin şeyin peşine düşme ve onun üzerine hüküm kurma; kulak, göz ve kalp hepsi sorguya çekilecektir."
+},
+"q39-36": {
+"n": "İnsan korkusunu kesen bir soru: Allah sana yeter."
+},
+"q40-44": {
+"n": "Firavun ailesinden mümin, hakkı söyleyip sonuçlarından korktuktan sonra söyledi: görevini yaptıktan sonra işi Allah'a havale etmek."
+},
+"q6-17": {
+"n": "Zarar ve fayda yalnızca Allah'ın elindedir; öyleyse kalbi köleleştirecek şekilde insanlara bağlanma."
+},
+"q35-2": {
+"n": "Allah'ın sana ayırdığını kimse engelleyemez, O'nun tuttuğunu da kimse veremez — haset ve rakip kaygısının ilacı."
+},
+"q3-26": {
+"n": "Makamlar ve izzet Allah'ın elindedir; verir ve alır. Öyleyse makamdaki aldanmasın, kaybeden de ümitsizliğe düşmesin."
+},
+"q11-88": {
+"n": "Şuayb söyledi: ıslahçının hedefi “gücümün yettiği kadar”dır, sonuç ise Allah'ın yardımıyladır."
+},
+"q91-9": {
+"n": "Kurtuluş nefsi arındırmaya, hüsran ise onu ihmal edip günahlara gömmeye bağlıdır."
+},
+"q79-40": {
+"n": "Nefsin heveslerine karşı koymak Allah'tan korkmanın işaretidir; mükâfatı cennettir."
+},
+"q12-53": {
+"n": "Nefsin zayıflığını itiraf etmek yenilgi değil, kibirden koruyan ve Allah'tan yardım istemeye iten bir gerçekçiliktir."
+},
+"q53-32": {
+"n": "Kendini övme ve kendini mükemmel sayma; kalplerin hakikatini Allah daha iyi bilir."
+},
+"q57-20": {
+"n": "Dünyaya bağlanmanın aşamalarının isabetli tasviri; hepsi çer çöp olarak biter — kıyaslama yarışının ilacı."
+},
+"q3-185": {
+"n": "Ölüm ortak bir gerçektir ve gerçek başarı dünya ölçüleriyle değil, ahiretle ölçülür."
+},
+"q16-97": {
+"n": "Güzel bir hayat ahiretten önce dünyada vaat edilmiştir; selef onu kanaat, rıza ve itaatin tadı olarak açıkladı."
+},
+"q20-124": {
+"n": "İç daralması, maddi imkânlar bol olsa bile Allah'tan uzaklığın bir eseri olabilir."
+},
+"q2-152": {
+"n": "En büyük beraberlik: senin Allah'ı anman ve O'nun seni anması."
+},
+"q4-28": {
+"n": "Allah insanın zayıflığını bilir ve hafifletmek ister; şeriat bir yük değil, rahmettir."
+},
+"q2-185": {
+"n": "Evrensel bir ilke: kolaylık şeriatın amacıdır ve kendine sert davranmak Allah'ın istediğine aykırıdır."
+},
+"q22-78": {
+"n": "Zorluğu kaldırmak şeriatın temelidir — vesveselerin ve aşırı katılığın ilacı."
+},
+"q24-30": {
+"n": "Gözü haramdan sakınmak kalbi ve bedeni korumanın ilk adımıdır ve “daha temizdir” — nefis için daha arı ve daha hayırlı."
+},
+"q24-33": {
+"n": "Allah'ın evlilikle ferahlık vermesini beklerken bilinçli bir çabayla iffeti korumak."
+},
+"q17-32": {
+"n": "Yasak sadece fiil değil “yaklaşmaktır”: ona götüren yolları kes; halvet, bakış ve gizli konuşmalar gibi."
+},
+"q24-21": {
+"n": "Sapma bir anda değil adım adım olur; ilk adıma dikkat etmek son adıma direnmekten kolaydır."
+},
+"q29-45": {
+"n": "Huzurlu bir kalple kılınan namaz hayâsızlığa karşı içsel bir engel kurar."
+},
+"q5-90": {
+"n": "Kaçınma emri yalın bir yasaktan daha güçlüdür: bütün ortamdan uzak dur."
+},
+"q114-1": {
+"n": "“Sinsi” vesvesçi Allah anıldığında geri çekilir; ilacı onunla tartışmak değil, sığınmak ve yüz çevirmektir."
+},
+"q23-97": {
+"n": "Öfkeyi, şehveti ve vesveseleri kışkırtan şeytan dürtülerinden sığınmak."
+},
+"q59-18": {
+"n": "Günlük muhasebe: yarın için ne gönderdin?"
+},
+"q103-1": {
+"n": "Şâfiî dedi ki: Allah yarattıklarına bu sureden başka bir delil indirmeseydi, bu onlara yeterdi. Zaman sermayendir ve kurtuluş dört şeyledir."
+},
+"q23-115": {
+"n": "Hayatının bir anlamı ve amacı var; boşuna yaratılmadın ve yaşadığın her şeyin bir ağırlığı var."
+},
+"q6-162": {
+"n": "Tek bir yön: bütün hayatın Allah için olduğunda insanların rızasının ağırlığı hafifler."
+},
+"q4-29": {
+"n": "Canın bir emanettir ve Allah sana karşı merhametlidir; ayetin rahmetle bitmesi, hata edenden önce acı çekene hitap eder."
+},
+"q2-195": {
+"n": "Kendini helakten korumak vaciptir; buna tedavi olmak ve dinlenmek de dahildir."
+},
+"q17-82": {
+"n": "Kur'an kalpleri şüphelerden ve kaygılardan iyileştirir; bu, tıbbi sebeplere sarılmakla çelişmez."
+},
+"q10-57": {
+"n": "Göğüslerdekine şifa: kaygıdan, şaşkınlıktan ve vesveselerden."
+},
+"q26-80": {
+"n": "İbrahim'in edebi: hastalığı kendine — “hastalandığımda” — şifayı Allah'a nispet etti."
+},
+"q50-16": {
+"n": "Allah sana herkesten daha yakındır; bu yakınlıkla yalnızlık olmaz."
+},
+"q2-45": {
+"n": "Namaz huşu duymayana ağırdır, ama huşu duyanlar için dinlenme ve sığınaktır: “Ey Bilal, bizi onunla rahatlat.”"
+},
+"q7-56": {
+"n": "Dua korku ile ümit arasındadır ve rahmet iyilik edenlere yakındır."
+},
+"q33-21": {
+"n": "Bu uygulamanın üzerine kurulduğu ayet: Allah'ı uman ve O'nu anan için Peygamber ﷺ her insani durumda pratik bir örnektir."
+},
+"q68-4": {
+"n": "Aişe'ye onun ahlakı soruldu, şöyle dedi: Onun ahlakı Kur'an'dı (Müslim 746)."
+},
+"q9-128": {
+"n": "Merhametli bir liderin özellikleri: takipçilerinin sıkıntıya düşmesi ona ağır gelir ve onların iyiliğine düşkündür."
+},
+"q21-107": {
+"n": "Rahmet bütün âlemler içindir: insanlar ve hayvanlar, müminler ve diğerleri."
+},
+"q18-28": {
+"n": "İyi arkadaşlık “sabır” ve bilinçli bir seçim ister; sebatın en güçlü sebeplerindendir."
+},
+"q43-67": {
+"n": "Takva üzerine kurulmayan her dostluk kıyamet günü düşmanlığa dönüşecektir."
+},
+"q25-27": {
+"n": "Seni Allah'tan uzaklaştıran arkadaşa karşı uyarı, sana ne kadar aziz olsa da."
+},
+"q8-46": {
+"n": "İç çekişme her ekibi, aileyi ya da ortaklığı zayıflatır ve gücünü giderir."
+},
+"q3-103": {
+"n": "Düşmanlıktan sonra ülfet Allah'tan bir nimettir; O'ndan istenir ve birlikte sımsıkı tutunarak korunur."
+},
+"q3-8": {
+"n": "Sebat için dua: hidayet sürekli korunması gereken bir nimettir."
+},
+"q2-201": {
+"n": "Enes'in dediği gibi Peygamber'in ﷺ en çok yaptığı dua (Buhârî 6389); dünya ve ahiretin hayrını toplar."
+},
+"q2-250": {
+"n": "“Üzerimize yağdır”, sabrın kalbi doldurana kadar dökülmesini tasvir eder."
+},
+"q21-89": {
+"n": "Zekeriya'nın yaşlılığında evlat isteyerek yaptığı dua; isterken Allah'ı “mirasçıların en hayırlısı” diye övdü, takdirine razı olarak."
+},
+"q3-38": {
+"n": "Zekeriya'nın Meryem'e Allah'ın lütfunu gördüğünde yaptığı dua: sadece evlat değil, “temiz” bir nesil istedi."
+},
+"q18-10": {
+"n": "Açık bir plan olmadan mağaraya sığınan gençlerin duası: rahmet ve doğru yol istediler."
+},
+"q14-40": {
+"n": "İbrahim kendisi ve soyu için namazı ikame etmeyi diler; terbiye talimattan önce duadır."
+},
+"q7-126": {
+"n": "Firavun onları tehdit ettiğinde iman eden sihirbazların duası: ölünceye kadar sabır ve sebat istediler."
+}
+}
+}

@@ -1,0 +1,30 @@
+Rifqat al-Uswa (“bersama teladan terbaik”) adalah teman perenungan yang tenang. Ceritakan dengan kata-katamu sendiri apa yang sedang kamu alami — konflik, kehilangan, kecemasan, rasa bersalah, keputusan sulit — dan aplikasi membacanya bersamamu dalam cahaya Al-Qur'an, Sunnah Nabi, dan Sirah.
+
+CARA KERJANYA
+• Tulis dengan bebas, dalam bahasa Indonesia, Arab, Inggris, Prancis, Belanda, Spanyol, Portugis, Urdu, atau Turki, sedetail yang kamu mau.
+• Aplikasi mengenali tema, perasaan, dan hubungan dalam tulisanmu, serta posisimu dalam cerita.
+• Aplikasi menampilkan kisah yang paling dekat dari kehidupan Nabi ﷺ dan para nabi sebelumnya: apa yang terjadi, bagaimana beliau menyikapinya, prinsip di baliknya, dan penerapannya hari ini.
+• Disertai ayat, hadits, dan doa yang relevan, masing-masing dengan sumber dan derajatnya, ditambah langkah praktis dan hal yang perlu dihindari.
+
+ISINYA
+• 115 kisah dan peristiwa kenabian, 57 tema kehidupan.
+• 201 ayat dan bagian serta 149 hadits dan doa, dengan sumber dan derajat keshahihan.
+• Pustaka yang dapat dicari berisi semua teks yang menjadi dasar analisis.
+• Pembacaan suara dalam sembilan bahasa dengan suara pria atau wanita, serta tilawah ayat oleh 26 qari terkenal.
+• Unduh qari favoritmu sekali dan dengarkan tilawah tanpa internet.
+• Tema gelap secara bawaan, tema terang sebagai pilihan, dan ukuran huruf yang dapat diatur.
+
+TEPERCAYA SEJAK RANCANGAN
+• Aplikasi tidak pernah mengarang ayat atau hadits: setiap teks berasal tanpa perubahan dari pustakanya.
+• Teks Arab selalu ditampilkan. Terjemahan Al-Qur'an: Kementerian Agama RI (melalui Tanzil.net). Terjemahan hadits berbahasa Indonesia disiapkan untuk aplikasi ini dari terjemahan Inggris sunnah.com dan ditandai demikian; teks Arab tetap menjadi rujukan.
+• Riwayat yang lemah atau bersifat sejarah ditandai dengan jelas.
+
+PRIVAT DAN OFFLINE
+• Tanpa akun, tanpa iklan, tanpa analitik, tanpa pelacakan.
+• Semuanya berjalan tanpa internet; apa yang kamu tulis tetap di perangkatmu.
+• Opsional: tambahkan kunci API Claude (Anthropic) milikmu untuk perenungan tambahan yang ditulis AI, terbatas pada teks yang ditemukan. Hanya saat itulah teksmu dikirim — langsung ke Anthropic, tidak pernah ke pengembang. Setiap jawaban AI dapat dilaporkan dari dalam aplikasi.
+
+PENTING
+Rifqat al-Uswa adalah panduan perenungan. Aplikasi ini tidak mengeluarkan fatwa dan bukan pengganti ulama yang kompeten, dokter, terapis, atau pengacara. Jika kamu menggambarkan situasi yang melibatkan bahaya, kekerasan, atau pikiran untuk menyakiti diri, aplikasi terlebih dahulu menunjukkan tempat meminta bantuan darurat.
+
+Tersedia dalam Bahasa Indonesia, العربية, English, Français, Nederlands, Español, Português, اردو, dan Türkçe. Masukanmu sangat kami harapkan: wajdi.chaouche@gmail.com

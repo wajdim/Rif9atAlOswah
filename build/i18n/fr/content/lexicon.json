@@ -480,6 +480,123 @@
    "je veux demander pardon",
    "j'ai péché",
    "je regrette ce que j'ai fait"
-  ]
+  ],
+  "negators": [
+   "ne",
+   "n",
+   "pas",
+   "plus",
+   "jamais",
+   "sans",
+   "aucun",
+   "aucune",
+   "non"
+  ],
+  "negatorsPost": [
+   "pas",
+   "plus",
+   "jamais"
+  ],
+  "need": {
+   "safety": [
+    "me menace",
+    "je suis en danger",
+    "j'ai peur de lui",
+    "j'ai peur d'elle",
+    "me frappe",
+    "je veux fuir",
+    "pas en sécurité"
+   ],
+   "decision": [
+    "dois-je",
+    "est-ce que je dois",
+    "faut-il que je",
+    "je ne sais pas si",
+    "je n'arrive pas à décider",
+    "partagé entre",
+    "partagée entre",
+    "choisir entre",
+    "je dois décider",
+    "prendre une décision",
+    "pardonner ou"
+   ],
+   "repair": [
+    "m'excuser",
+    "demander pardon",
+    "réparer",
+    "me réconcilier",
+    "renouer",
+    "me repentir",
+    "me rattraper"
+   ],
+   "howto": [
+    "comment faire",
+    "comment je peux",
+    "comment puis-je",
+    "que faire",
+    "qu'est-ce que je dois faire",
+    "que dois-je faire",
+    "des conseils",
+    "aidez-moi",
+    "aide-moi",
+    "conseillez-moi"
+   ],
+   "why": [
+    "pourquoi moi",
+    "pourquoi",
+    "quelle est la sagesse",
+    "quel est le sens",
+    "pour quelle raison"
+   ],
+   "comfort": [
+    "personne ne me comprend",
+    "personne ne m'écoute",
+    "j'ai besoin de parler",
+    "besoin qu'on m'écoute",
+    "je n'en peux plus",
+    "je craque",
+    "je suis à bout"
+   ]
+  },
+  "time": {
+   "ongoing": [
+    "depuis des années",
+    "depuis des mois",
+    "depuis longtemps",
+    "tous les jours",
+    "chaque jour",
+    "chaque soir",
+    "toujours",
+    "sans arrêt",
+    "encore et encore"
+   ],
+   "future": [
+    "demain",
+    "la semaine prochaine",
+    "le mois prochain",
+    "bientôt",
+    "j'ai peur que",
+    "je crains que",
+    "et si",
+    "examen",
+    "entretien",
+    "va arriver",
+    "à venir"
+   ],
+   "past": [
+    "hier",
+    "la semaine dernière",
+    "le mois dernier",
+    "l'année dernière",
+    "il y a quelques jours",
+    "il y a des années",
+    "est décédé",
+    "est décédée",
+    "est mort",
+    "est morte",
+    "c'est fini",
+    "s'est passé"
+   ]
+  }
  }
 }

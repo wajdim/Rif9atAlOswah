@@ -1,0 +1,3 @@
+• New languages: Urdu, Indonesian and Turkish
+• A smarter first reading of your situation: it recognises your place in the story (carer, the one who was hurt, the one who wants to make amends), quotes your own words and avoids misreadings
+• Fixes and improvements

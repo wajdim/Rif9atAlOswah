@@ -1,0 +1,621 @@
+{
+"hadith": {
+"h-niyya": {
+"r": "Umar bin al-Khaththab",
+"n": "Niat mengubah kebiasaan menjadi ibadah: bekerja, belajar, dan menafkahi keluarga semuanya berpahala karena niat."
+},
+"h-qulub": {
+"r": "Abu Hurairah",
+"n": "Ukuran nilai di sisi Allah adalah hati dan amal, bukan rupa, harta, atau kedudukan sosial."
+},
+"h-ridallah": {
+"r": "Aisyah",
+"n": "Obat bagi kebiasaan menyenangkan orang dengan mengorbankan prinsip: siapa yang mendahulukan ridha Allah, Allah mencukupkannya dari manusia."
+},
+"h-khafi": {
+"r": "Sa'd bin Abi Waqqash",
+"n": "Tersembunyi dan tidak mencari sorotan adalah sifat yang dicintai, di zaman orang mengukur diri dengan jumlah pengikut."
+},
+"h-ghadab-julus": {
+"r": "Abu Dzar",
+"n": "Obat praktis dan fisik: mengubah posisi tubuh mematahkan gelombang marah dan mencegah tindakan gegabah."
+},
+"h-ghadab-istiadha": {
+"r": "Sulaiman bin Shurad",
+"n": "Berlindung kepada Allah adalah ucapan pertama saat marah.",
+"w": "Ketika marah memuncak"
+},
+"h-ghadab-sukut": {
+"r": "Ibnu Abbas",
+"n": "Yang paling disesali orang saat marah adalah ucapannya; diam sejenak menjaga hubungan."
+},
+"h-kazm": {
+"r": "Mu'adz bin Anas",
+"n": "Menahan marah paling bernilai ketika kamu mampu membalas."
+},
+"h-rifq": {
+"r": "Aisyah",
+"n": "Kelembutan bukan kelemahan, melainkan cara yang lebih berhasil untuk mencapai tujuan."
+},
+"h-rifq-zana": {
+"r": "Aisyah",
+"n": "Nabi ﷺ mengatakannya kepada Aisyah ketika ia menunggang unta yang sulit dan terus menariknya ke sana kemari; lembut bahkan kepada hewan."
+},
+"h-muflis-tabbaan": {
+"r": "Abdullah bin Mas'ud",
+"n": "Bahkan dalam perselisihan, lisan orang beriman tetap bersih."
+},
+"h-afw-izz": {
+"r": "Abu Hurairah",
+"n": "Orang khawatir maafnya dianggap lemah, maka datang janji: memaafkan menambah kemuliaan, bukan menguranginya."
+},
+"h-zulm-zulumat": {
+"r": "Jabir bin Abdullah",
+"n": "Peringatan bagi yang zalim dan penghibur bagi yang dizalimi."
+},
+"h-dawat-mazlum": {
+"r": "Ibnu Abbas (dari wasiat Nabi ﷺ kepada Mu'adz)",
+"n": "Orang yang dizalimi punya senjata yang tidak pernah terhalang, dan bagi yang berkuasa ada peringatan keras."
+},
+"h-unsur": {
+"r": "Anas bin Malik",
+"n": "Menolong teman yang berbuat zalim berarti mencegahnya, bukan mendukungnya."
+},
+"h-muflis": {
+"r": "Abu Hurairah",
+"n": "Hak manusia tidak gugur karena ibadah, dan orang yang dizalimi tidak pernah kehilangan haknya."
+},
+"h-la-darar": {
+"r": "Ibnu Abbas dan Ubadah bin ash-Shamit",
+"n": "Kaidah fikih besar: tidak boleh memulai mudarat, dan tidak boleh membalas mudarat dengan yang lebih besar — dasar menolak gangguan yang terus-menerus."
+},
+"h-la-yuldagh": {
+"r": "Abu Hurairah",
+"n": "Memaafkan bukan berarti lugu; orang beriman belajar dari pengalaman dan memasang batas yang melindunginya dari disakiti lagi."
+},
+"h-yuhibbu": {
+"r": "Anas bin Malik",
+"n": "Obat iri yang terdalam: menginginkan untuk orang lain apa yang kamu inginkan untuk dirimu."
+},
+"h-la-tahasadu": {
+"r": "Abu Hurairah",
+"n": "Daftar perusak persaudaraan: iri, benci, saling membelakangi, dan persaingan tidak sehat."
+},
+"h-hasad-ithnatayn": {
+"r": "Abdullah bin Mas'ud",
+"n": "“Iri” di sini berarti ghibthah yang sehat: menginginkan nikmat seperti milik orang lain tanpa ingin nikmat itu hilang darinya, dan hanya dalam kebaikan."
+},
+"h-hajr-thalath": {
+"r": "Abu Ayyub al-Anshari",
+"n": "Mendiamkan ada batas waktunya, dan yang lebih baik adalah yang memulai salam, bukan yang menunggu."
+},
+"h-istalaha": {
+"r": "Abu Hurairah",
+"n": "Dendam menunda ampunan; berdamai bukan basa-basi sosial melainkan ibadah."
+},
+"h-islah": {
+"r": "Abu ad-Darda'",
+"n": "“Pencukur”: ia mencukur agama seperti pisau cukur mencukur rambut, maka memperbaiki hubungan termasuk ibadah tertinggi."
+},
+"h-mira": {
+"r": "Abu Umamah al-Bahili",
+"n": "Tinggalkan debat yang sia-sia meski kamu benar: menang debat tidak selalu kemenangan bagi hubungan."
+},
+"h-afshu-salam": {
+"r": "Abu Hurairah",
+"n": "Salam adalah kunci paling sederhana untuk mencairkan suasana dan membangun kasih sayang."
+},
+"h-akhbirhu": {
+"r": "al-Miqdam bin Ma'dikarib",
+"n": "Mengungkapkan perasaan positif adalah sunnah, bukan kelemahan."
+},
+"h-tahadu": {
+"r": "Abu Hurairah",
+"n": "Hadiah kecil mencairkan kebekuan."
+},
+"h-khalil": {
+"r": "Abu Hurairah",
+"n": "Teman membentukmu tanpa kamu sadari, maka memilih pergaulan adalah keputusan yang menentukan."
+},
+"h-jalis": {
+"r": "Abu Musa al-Asy'ari",
+"n": "Kamu mendapat manfaat dari teman yang baik dalam segala keadaan, dan dirugikan oleh teman yang buruk dalam segala keadaan, walau kamu tidak berbuat seperti dia."
+},
+"h-maa-man-ahabb": {
+"r": "Anas bin Malik dan Ibnu Mas'ud",
+"n": "Mencintai orang shalih mengangkatmu bersama mereka, walau amalmu kurang."
+},
+"h-yashkur-nas": {
+"r": "Abu Hurairah",
+"n": "Berterima kasih kepada manusia adalah bagian dari bersyukur kepada Allah."
+},
+"h-kafiuhu": {
+"r": "Abdullah bin Umar",
+"n": "Doa adalah balasan bagi orang yang tidak punya apa-apa lagi untuk diberikan."
+},
+"h-ghiba": {
+"r": "Abu Hurairah",
+"n": "Ghibah adalah menyebut aib yang nyata, dan buhtan adalah menyebut aib yang tidak ada; keduanya haram."
+},
+"h-yaqul-khayran": {
+"r": "Abu Hurairah",
+"n": "Ujian sederhana sebelum berbicara: apakah ini baik? Jika tidak, diam."
+},
+"h-kalima": {
+"r": "Abu Hurairah",
+"n": "Satu kata yang terucap sambil lalu bisa menjadi yang terberat di timbangan."
+},
+"h-muslim-salima": {
+"r": "Abdullah bin Amr",
+"n": "Definisi praktis Islam: orang lain selamat dari gangguanmu."
+},
+"h-zann": {
+"r": "Abu Hurairah",
+"n": "Prasangka buruk menampilkan diri sebagai “firasat”, dan Nabi ﷺ menyebutnya ucapan yang paling dusta."
+},
+"h-kalima-tayyiba": {
+"r": "Abu Hurairah",
+"n": "Siapa yang tidak punya harta tetap punya kata yang baik untuk disedekahkan."
+},
+"h-sitr": {
+"r": "Abu Hurairah",
+"n": "Pintu-pintu yang berlipat: melapangkan, memudahkan, dan menutupi — dan balasan sesuai jenis amalnya."
+},
+"h-mujahirin": {
+"r": "Abu Hurairah",
+"n": "Siapa yang terjatuh dalam dosa hendaklah tetap dalam tutupan Allah dan tidak membuka aibnya, lalu bertaubat antara dia dan Tuhannya."
+},
+"h-munafiq": {
+"r": "Abu Hurairah",
+"n": "Tiga tanda praktis untuk menguji kepercayaan — pada orang lain dan diri sendiri."
+},
+"h-da-ma-yaribuk": {
+"r": "al-Hasan bin Ali",
+"n": "Saat ragu, pilihlah yang membuat hati tenang; kejujuran adalah ketenangan hati sebelum menjadi kewajiban."
+},
+"h-birr-ithm": {
+"r": "an-Nawwas bin Sam'an",
+"n": "Kompas batin: apa yang kamu tidak suka diketahui orang biasanya mengandung sesuatu yang salah."
+},
+"h-mustashar": {
+"r": "Abu Hurairah",
+"n": "Orang yang dimintai pendapat wajib menasihati dengan jujur, dan orang yang meminta pendapat hendaknya memilih orang yang amanah."
+},
+"h-atqan": {
+"r": "Aisyah",
+"n": "Mengerjakan pekerjaan dengan baik adalah ibadah, walau tidak ada yang mengawasi."
+},
+"h-ajir": {
+"r": "Abdullah bin Umar",
+"n": "Hak pekerja atas upahnya segera, tanpa ditunda."
+},
+"h-kullukum-rai": {
+"r": "Abdullah bin Umar",
+"n": "Setiap orang bertanggung jawab dalam lingkungannya: ayah, ibu, manajer, dan karyawan."
+},
+"h-ada-dayn": {
+"r": "Abu Hurairah",
+"n": "Niat tulus untuk melunasi mendatangkan pertolongan Allah dalam melunasi utang."
+},
+"h-matl": {
+"r": "Abu Hurairah",
+"n": "Menunda hak orang padahal mampu membayar adalah kezaliman yang nyata."
+},
+"h-samh": {
+"r": "Jabir bin Abdullah",
+"n": "Kemurahan yang lapang, bahkan saat menagih hakmu."
+},
+"h-inzar": {
+"r": "Abu al-Yasar",
+"n": "Memberi tenggang waktu kepada orang yang kesulitan membayar utang, atau membebaskannya, adalah amal yang besar pahalanya."
+},
+"h-ghina-nafs": {
+"r": "Abu Hurairah",
+"n": "Kekayaan sejati adalah rasa cukup, bukan angka di rekening."
+},
+"h-kafaf": {
+"r": "Abdullah bin Amr",
+"n": "Keberhasilan tidak menuntut kekayaan: Islam, kecukupan, dan qana'ah."
+},
+"h-amin-sirbih": {
+"r": "Ubaidullah bin Mihshan",
+"n": "Mendefinisikan ulang nikmat: rasa aman, kesehatan, dan makanan hari ini adalah seluruh “dunia”."
+},
+"h-unzuru-asfal": {
+"r": "Abu Hurairah",
+"n": "Kaidah psikologis yang tepat: arah perbandingan menentukan seberapa besar kamu merasa diberi nikmat; dalam urusan agama, lihatlah yang di atasmu."
+},
+"h-tawakkul-tayr": {
+"r": "Umar bin al-Khaththab",
+"n": "Burung “pergi di pagi hari” — mereka keluar dan mencari; tawakal yang sejati mencakup usaha bersama hati yang tenang."
+},
+"h-iqilha": {
+"r": "Anas bin Malik",
+"n": "Bertawakal kepada Allah bukan berarti meninggalkan sebab; tempuhlah semua sebab, lalu serahkan hasilnya kepada Allah."
+},
+"h-hatab": {
+"r": "az-Zubair bin al-Awwam",
+"n": "Tidak ada aib dalam pekerjaan sederhana; kemuliaan ada pada penghasilan halal, betapa pun kecil."
+},
+"h-kafil-yatim": {
+"r": "Sahl bin Sa'd",
+"n": "Menanggung anak yatim mengangkat seseorang hingga berada di samping Nabi ﷺ."
+},
+"h-armala": {
+"r": "Abu Hurairah",
+"n": "Melayani orang lemah setara dengan ibadah-ibadah terbesar."
+},
+"h-la-tahqiranna": {
+"r": "Abu Dzar",
+"n": "Kebaikan terkecil pun bernilai — pintu masuk praktis bagi yang merasa tidak mampu berbuat baik."
+},
+"h-anfauhum": {
+"r": "Abdullah bin Umar",
+"n": "Bagi yang merasa kehilangan makna, memberi manfaat kepada orang adalah pintu lebar untuk menemukannya kembali."
+},
+"h-khayrukum-ahlih": {
+"r": "Aisyah",
+"n": "Akhlak sejati diukur di dalam rumah, bukan di luarnya."
+},
+"h-akmal-iman": {
+"r": "Abu Hurairah",
+"n": "Kesempurnaan iman terkait dengan berbuat baik kepada istri."
+},
+"h-la-yafrak": {
+"r": "Abu Hurairah",
+"n": "Pandangan seimbang: jangan menilai pasanganmu dari satu kekurangan dan melupakan kebaikannya. Ini berlaku bagi keduanya."
+},
+"h-istawsu": {
+"r": "Abu Hurairah",
+"n": "Pesan Nabi yang berulang untuk berbuat baik kepada perempuan."
+},
+"h-radiya-ghadba": {
+"r": "Aisyah",
+"n": "Perhatian Nabi ﷺ pada tanda paling halus perasaan istrinya, dan sikap tenang beliau menghadapi marahnya tanpa memperbesar masalah."
+},
+"h-mataa": {
+"r": "Abdullah bin Amr",
+"n": "Istri yang shalihah adalah nikmat dunia yang terbesar."
+},
+"h-dhat-din": {
+"r": "Abu Hurairah",
+"n": "Kriteria memilih: agama dan akhlak adalah dasar, tanpa mengabaikan pertimbangan lain."
+},
+"h-tardawna": {
+"r": "Abu Hurairah",
+"n": "Arahan bagi keluarga: jangan mempersulit pernikahan dengan standar materi yang berlebihan."
+},
+"h-shabab": {
+"r": "Abdullah bin Mas'ud",
+"n": "Solusi praktis bagi syahwat: menikah jika mampu, dan berpuasa jika belum."
+},
+"h-thalatha-awn": {
+"r": "Abu Hurairah",
+"n": "Siapa yang menikah dengan niat menjaga kesucian, Allah menolongnya."
+},
+"h-rughm": {
+"r": "Abu Hurairah",
+"n": "Masa tua orang tua adalah peluang emas menuju surga, bukan sekadar beban."
+},
+"h-rida-walid": {
+"r": "Abdullah bin Amr",
+"n": "Berbakti kepada orang tua adalah jalan langsung menuju ridha Allah, dalam segala hal selain maksiat kepada-Nya."
+},
+"h-asma-umm": {
+"r": "Asma' binti Abi Bakar",
+"n": "Perbedaan agama atau pengamalan tidak menggugurkan kewajiban berbuat baik dan menyambung hubungan."
+},
+"h-sila-rizq": {
+"r": "Anas bin Malik",
+"n": "Silaturahmi membawa keberkahan dalam rezeki dan umur."
+},
+"h-mal": {
+"r": "Abu Hurairah",
+"n": "Siapa yang menyambung kerabat yang dingin kepadanya, baginya ada penolong dari Allah, dan dosanya atas mereka, bukan atasnya."
+},
+"h-adl-awlad": {
+"r": "an-Nu'man bin Basyir",
+"n": "Mengutamakan satu anak atas anak lain dalam pemberian menanam permusuhan di antara mereka."
+},
+"h-yarham-saghir": {
+"r": "Abdullah bin Amr",
+"n": "Menyayangi yang muda dan menghormati yang tua, sekaligus."
+},
+"h-rahimun": {
+"r": "Abdullah bin Amr",
+"n": "Kasih sayang kepada makhluk adalah jalan menuju rahmat Sang Pencipta."
+},
+"h-walad-salih": {
+"r": "Abu Hurairah",
+"n": "Berbakti kepada orang tua tidak berakhir dengan kematian: doa dan sedekahmu atas nama mereka sampai kepada mereka."
+},
+"h-kalima-lil-ahl": {
+"r": "Sa'd bin Abi Waqqash",
+"n": "Bahkan sesuap makanan yang kamu berikan kepada istrimu adalah sedekah dengan niat yang benar; menafkahi keluarga adalah ibadah."
+},
+"h-ajaban": {
+"r": "Shuhaib ar-Rumi",
+"n": "Orang beriman beruntung dalam setiap keadaan: dengan syukur saat nikmat dan sabar saat kesulitan."
+},
+"h-nasab": {
+"r": "Abu Sa'id al-Khudri dan Abu Hurairah",
+"n": "Bahkan gundah dan sedih secara emosional — bukan hanya sakit fisik — membawa pahala dan penghapus dosa."
+},
+"h-ashadd-bala": {
+"r": "Sa'd bin Abi Waqqash",
+"n": "Ujian berat bukan tanda murka; bahkan bisa menjadi tanda kedudukan."
+},
+"h-azam-jaza": {
+"r": "Anas bin Malik",
+"n": "Sikapmu terhadap ujian (ridha atau tidak rela) itulah yang menentukan buahnya."
+},
+"h-maradh-kutib": {
+"r": "Abu Musa al-Asy'ari",
+"n": "Sakit tidak memutus pahala ibadah rutinmu, maka jangan bersedih atas apa yang terhalang karena sakit."
+},
+"h-dawa": {
+"r": "Abu Hurairah",
+"n": "Harapan sembuh adalah bagian dari iman, dan mencarinya adalah ikhtiar."
+},
+"h-tadawaw": {
+"r": "Usamah bin Syarik",
+"n": "Berobat diperintahkan, termasuk perawatan kesehatan jiwa; menemui dokter tidak bertentangan dengan tawakal."
+},
+"h-habibatayn": {
+"r": "Anas bin Malik",
+"n": "Kehilangan indra yang berharga, jika dihadapi dengan sabar, diganti dengan surga."
+},
+"h-la-yatamanna": {
+"r": "Anas bin Malik",
+"n": "Larangan yang jelas mengharapkan kematian karena sakit, dengan mengarahkan perasaan berat menjadi doa yang menyerahkan urusan kepada Allah.",
+"w": "Dalam kesempitan berat dan putus asa"
+},
+"h-yurid-khayran": {
+"r": "Abu Hurairah",
+"n": "Musibah bisa menjadi pintu kebaikan yang Allah kehendaki untukmu."
+},
+"h-sabr-diya": {
+"r": "Abu Malik al-Asy'ari",
+"n": "Sabar adalah “dhiya'” — cahaya yang membawa panas dan kesulitan — berbeda dengan shalat yang merupakan “nur” murni."
+},
+"h-yatasabbar": {
+"r": "Abu Sa'id al-Khudri",
+"n": "Sabar adalah keterampilan yang diperoleh dengan latihan: siapa yang berusaha, Allah menolongnya."
+},
+"h-hamm": {
+"r": "Anas bin Malik",
+"n": "Gundah tentang masa depan dan sedih tentang masa lalu; doa ini mencakup delapan pintu kelemahan manusia.",
+"w": "Pagi, petang, dan saat gundah"
+},
+"h-karb": {
+"r": "Ibnu Abbas",
+"n": "Doa saat kesusahan: Nabi ﷺ membacanya ketika menghadapi kesulitan.",
+"w": "Saat kesusahan dan kesulitan berat"
+},
+"h-dhunnun": {
+"r": "Sa'd bin Abi Waqqash",
+"n": "Tauhid, tasbih, dan mengakui kesalahan: tiga kunci kelapangan.",
+"w": "Dalam setiap kesempitan"
+},
+"h-abduk": {
+"r": "Abdullah bin Mas'ud",
+"n": "Doa yang memadukan pasrah pada ketetapan Allah dengan memohon agar Al-Qur'an menjadi obat kesedihan.",
+"w": "Saat gundah dan sedih"
+},
+"h-rahmataka": {
+"r": "Abu Bakrah",
+"n": "Memohon kepada Allah agar tidak menyerahkanmu kepada dirimu walau sesaat, dan memperbaiki “seluruh” urusanmu.",
+"w": "Dalam kesulitan dan saat urusan berantakan"
+},
+"h-hasbuna": {
+"r": "Ibnu Abbas",
+"n": "Kalimat agung penyerahan diri saat takut kepada manusia atau masa depan.",
+"w": "Saat takut, terancam, dan dizalimi"
+},
+"h-bismillah-yadurr": {
+"r": "Utsman bin Affan",
+"n": "Dzikir perlindungan harian yang menenangkan hati yang cemas.",
+"w": "Tiga kali pagi dan petang"
+},
+"h-ruqya-alam": {
+"r": "Utsman bin Abi al-Ash",
+"n": "Ruqyah dari Nabi yang dibaca orang sakit untuk dirinya sendiri.",
+"w": "Saat sakit dan nyeri"
+},
+"h-adhhib-bas": {
+"r": "Aisyah",
+"n": "Nabi ﷺ biasa memohonkan perlindungan dengannya untuk keluarganya.",
+"w": "Untuk orang sakit dan yang menjenguknya"
+},
+"h-la-bas": {
+"r": "Ibnu Abbas",
+"n": "Kata penghibur dari Nabi yang menjadikan sakit sebagai penyucian, bukan hukuman.",
+"w": "Saat menjenguk orang sakit"
+},
+"h-ayn-haqq": {
+"r": "Abu Hurairah",
+"n": "Penegasan tentang ain, sambil melarang takut berlebihan atau menafsirkan segalanya dengannya."
+},
+"h-barrakt": {
+"r": "Abu Umamah bin Sahl bin Hunaif",
+"n": "Mencegah ain dari sisi orang yang melihat: mengucapkan “semoga Allah memberkahimu” ketika ia mengagumi sesuatu."
+},
+"h-muawwidhat": {
+"r": "Uqbah bin Amir",
+"n": "Dua surat terakhir adalah perlindungan terbesar.",
+"w": "Pagi, petang, dan sebelum tidur"
+},
+"h-uidhukuma": {
+"r": "Ibnu Abbas",
+"n": "Melindungi anak-anak dengan dzikir kepada Allah.",
+"w": "Untuk melindungi anak-anak"
+},
+"h-khattaun": {
+"r": "Anas bin Malik",
+"n": "Berbuat salah adalah fitrah manusia; keunggulan ada pada segera kembali."
+},
+"h-farah-tawba": {
+"r": "Anas bin Malik",
+"n": "Allah tidak hanya menerima taubatmu; Dia bergembira karenanya — gambaran yang mematahkan putus asa karena dosa."
+},
+"h-yabsut-yadah": {
+"r": "Abu Musa al-Asy'ari",
+"n": "Pintu taubat terbuka setiap saat."
+},
+"h-ma-daawtani": {
+"r": "Anas bin Malik",
+"n": "Tidak ada dosa yang lebih besar dari ampunan Allah bagi orang yang berdoa kepada-Nya dan berharap kepada-Nya."
+},
+"h-sayyid-istighfar": {
+"r": "Syaddad bin Aus",
+"n": "Siapa yang membacanya di siang hari dengan yakin lalu wafat pada hari itu, ia termasuk penghuni surga.",
+"w": "Pagi, petang, dan setelah berbuat dosa"
+},
+"h-atbi-sayyia": {
+"r": "Abu Dzar dan Mu'adz bin Jabal",
+"n": "Metode praktis: jangan menunggu sempurna; iringi setiap keburukan dengan kebaikan."
+},
+"h-qatil-mia": {
+"r": "Abu Sa'id al-Khudri",
+"n": "Tidak ada dosa yang menutup pintu taubat, dan mengubah lingkungan adalah bagian penting dari perubahan."
+},
+"h-waswasa-sarih": {
+"r": "Abu Hurairah",
+"n": "Membenci bisikan dan menganggapnya mengerikan adalah tanda iman, bukan kekafiran."
+},
+"h-tajawaz": {
+"r": "Abu Hurairah",
+"n": "Pikiran yang terlintas tanpa dikerjakan atau diucapkan tidak dihisab oleh Allah."
+},
+"h-waswasa-intahi": {
+"r": "Abu Hurairah",
+"n": "Obat was-was: berlindung, lalu berhenti mengikuti pikiran itu — jangan berdebat dengannya."
+},
+"h-muqallib": {
+"r": "Anas bin Malik",
+"n": "Bahkan Nabi ﷺ memohon keteguhan; berbolak-baliknya hati itu wajar, dan doa adalah obatnya.",
+"w": "Selalu, dan ketika iman terasa lemah"
+},
+"h-ahdini": {
+"r": "Ali bin Abi Thalib",
+"n": "Doa singkat dan menyeluruh untuk setiap keputusan atau tugas.",
+"w": "Sebelum keputusan dan pekerjaan"
+},
+"h-taqwaha": {
+"r": "Zaid bin Arqam",
+"n": "Menyucikan jiwa dengan memohon pertolongan Allah, bukan dengan kekuatan sendiri saja.",
+"w": "Untuk menyucikan jiwa"
+},
+"h-kfini-halal": {
+"r": "Ali bin Abi Thalib",
+"n": "Nabi ﷺ mengajarkannya kepada seseorang yang tidak mampu membayar kewajibannya, dan bersabda: walau utangmu sebesar gunung, Allah akan melunasinya untukmu.",
+"w": "Untuk melunasi utang dan melapangkan rezeki"
+},
+"h-la-sahl": {
+"r": "Anas bin Malik",
+"n": "Doa memudahkan yang sulit: ujian dan pekerjaan berat.",
+"w": "Sebelum ujian atau tugas sulit"
+},
+"h-zawal-nima": {
+"r": "Abdullah bin Umar",
+"n": "Berlindung untuk menjaga nikmat yang kamu miliki.",
+"w": "Saat takut kehilangan nikmat"
+},
+"h-istijaba-ajal": {
+"r": "Abu Hurairah",
+"n": "Tergesa-gesa dan berhenti berdoa adalah penghalang terbesar terkabulnya doa."
+},
+"h-nuzul": {
+"r": "Abu Hurairah",
+"n": "Janji temu harian yang terbuka dengan Allah di sepertiga malam terakhir."
+},
+"h-sujud": {
+"r": "Abu Hurairah",
+"n": "Sujud adalah saat paling dekat, maka letakkan kegundahanmu di sana."
+},
+"h-hazabahu": {
+"r": "Hudzaifah bin al-Yaman",
+"n": "Shalat adalah tempat berlindung pertama bagi orang beriman ketika ada urusan penting."
+},
+"h-arihna": {
+"r": "Seorang laki-laki dari Khuza'ah",
+"n": "Shalat adalah istirahat dari lelah, bukan lelah yang ingin diistirahatkan darinya."
+},
+"h-din-yusr": {
+"r": "Abu Hurairah",
+"n": "Terlalu keras pada diri sendiri berakhir dengan berhenti; “tepatilah kebenaran, dan jika tidak mampu, dekatilah”."
+},
+"h-adwamuha": {
+"r": "Aisyah",
+"n": "Konsisten pada yang sedikit lebih bermanfaat daripada semangat sesaat pada yang banyak — prinsip membangun kebiasaan."
+},
+"h-haqq-nafs": {
+"r": "Abu Juhaifah (Salman mengatakannya kepada Abu ad-Darda', dan Nabi ﷺ membenarkannya)",
+"n": "Keseimbangan antara ibadah, diri sendiri, keluarga, dan pekerjaan."
+},
+"h-nimatan": {
+"r": "Ibnu Abbas",
+"n": "Kebanyakan orang merugi dalam menginvestasikan kesehatan dan waktu luangnya."
+},
+"h-ightanim": {
+"r": "Ibnu Abbas",
+"n": "Rencana hidup secara ringkas: setiap nikmat yang ada adalah peluang sebelum berubah."
+},
+"h-muamin-qawi": {
+"r": "Abu Hurairah",
+"n": "Metode lengkap: semangat + memohon pertolongan + tidak lemah sebelum kejadian, serta ridha dan meninggalkan “seandainya” setelahnya."
+},
+"h-ihfadh": {
+"r": "Ibnu Abbas",
+"n": "Dalam riwayat Ahmad: “Ketahuilah bahwa kemenangan bersama kesabaran, kelapangan bersama kesempitan, dan bersama kesulitan ada kemudahan.” Obat akar bagi takut kepada manusia."
+},
+"h-yassiru": {
+"r": "Anas bin Malik",
+"n": "Kaidah dalam pendidikan, kepemimpinan, dan dakwah."
+},
+"h-ihsan": {
+"r": "Syaddad bin Aus",
+"n": "Ihsan dituntut dalam setiap amal, bahkan dalam situasi tersulit."
+},
+"h-makarim": {
+"r": "Abu Hurairah",
+"n": "Akhlak mulia adalah tujuan risalah, bukan pinggirannya."
+},
+"h-ahsanukum-khuluqan": {
+"r": "Jabir bin Abdullah",
+"n": "Akhlak yang baik adalah jalan menuju kedekatan dengan Nabi ﷺ di akhirat."
+},
+"h-kibr": {
+"r": "Abdullah bin Mas'ud",
+"n": "Definisi sombong yang tepat: menolak kebenaran dan meremehkan manusia; tidak ada hubungannya dengan penampilan yang baik."
+},
+"h-tawadau": {
+"r": "Iyadh bin Himar",
+"n": "Tawadhu mencegah dua hal: membanggakan diri dan melampaui batas."
+},
+"h-nasiha": {
+"r": "Tamim ad-Dari",
+"n": "Nasihat berarti menginginkan kebaikan bagi yang dinasihati, dan disampaikan dengan lembut dan secara pribadi."
+},
+"h-munkar": {
+"r": "Abu Sa'id al-Khudri",
+"n": "Tingkatan mengubah kemungkaran sesuai kemampuan, dengan menjaga agar mengubahnya tidak menimbulkan kemungkaran yang lebih besar."
+},
+"h-sabaa-yuzilluhum": {
+"r": "Abu Hurairah",
+"n": "Menahan syahwat di puncak godaan mengangkat seseorang hingga ke naungan Arsy."
+},
+"h-man-taraka": {
+"r": "Seorang laki-laki dari pedalaman, dari Nabi ﷺ",
+"n": "Meninggalkan sesuatu yang haram atau hubungan yang haram bukan kerugian: ganti dari Allah lebih besar."
+},
+"h-man-la-yarham": {
+"r": "Abu Hurairah dan Jarir",
+"n": "Kasih sayang diraih dengan kasih sayang."
+},
+"h-hayaa": {
+"r": "Imran bin Hushain",
+"n": "Rasa malu adalah sifat yang melindungi pemiliknya, dan bukan berarti segan yang menghalangi dari kebenaran."
+}
+}
+}
