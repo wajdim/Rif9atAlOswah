@@ -1,0 +1,16 @@
+{
+ "date": "2026-10-18",
+ "messages": 347,
+ "scores": {
+  "top1": 0.6806,
+  "top3": 0.729,
+  "none": 0.2635,
+  "emotion": 0.6934,
+  "crisis": 0.4615,
+  "soft": 0,
+  "falseCrisis": 0.1429,
+  "vague": 0.0833,
+  "evidence": 0.8867,
+  "citations": 1
+ }
+}

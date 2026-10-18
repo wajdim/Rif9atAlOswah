@@ -1,0 +1,375 @@
+# رِفقة الأُسوة — benchmark of natural user messages (build/tests/bench.js)
+# Columns (tab-separated): kind	lang	themes	emotions	flags	text
+#   kind     obvious | vague | dialect-tn | dialect-eg | dialect-lev | dialect-gulf | dialect-ma | arabizi | typo | mixed | emotional | indirect | multi | distinction | faith | safety
+#   themes   acceptable top themes (comma-separated theme ids from js/data-themes.js); the first listed is the most expected
+#   emotions emotions that should be detected (ids from EMOTION_LEXICON), "-" if none required
+#   flags    crisis = must be detected as crisis · soft = hopelessness without stated intent (soft risk or crisis both pass)
+#            vague  = ambiguous on purpose (passes if top theme is acceptable OR the engine offers interpretations)
+#            safe   = contains death/kill words but is NOT a crisis (must not trigger crisis)
+#            "-" if none
+# ---------------------------------------------------------------- obvious (EN)
+obvious	en	anger	anger	-	I am angry with someone.
+obvious	en	betrayal,forgive	betrayal	-	Someone betrayed me.
+obvious	en	study,work,self_worth,patience	-	-	I failed at something important.
+obvious	en	self_worth,insult,people_pleasing	-	-	I feel that people don't respect me.
+obvious	en	work,fear,rizq,anxiety	fear	-	I am scared of losing my job.
+obvious	en	parenting	-	-	My child is not listening to me.
+obvious	en	envy,comparison	jealousy	-	I feel jealous.
+obvious	en	insult,anger	-	-	Someone insulted me.
+obvious	en	sin	guilt	-	I made a serious mistake.
+obvious	en	grief	sadness	-	I lost someone I love.
+obvious	en	loneliness	loneliness	-	I feel alone.
+obvious	en	forgive,decision	-	-	I don't know if I should forgive someone.
+obvious	en	ungrateful,betrayal,charity	betrayal	-	I feel disappointed after helping someone.
+obvious	en	marriage	-	-	I have problems with my wife.
+obvious	en	marriage	-	-	I have problems with my husband.
+obvious	en	faith_weak,patience,hope,despair	-	-	I feel that Allah is not answering my dua.
+obvious	en	work,burnout,anxiety	-	-	I am under pressure at work.
+obvious	en	leadership,work	-	-	My team made a serious mistake.
+obvious	en	injustice	-	-	Someone treated me unfairly.
+obvious	en	anger	anger	-	I have difficulty controlling my anger.
+obvious	en	fear,anxiety	fear	-	I am afraid of the future.
+obvious	en	insult,work,oppressor_power	-	-	My manager insulted me in front of everyone.
+obvious	en	debt,rizq	-	-	I'm drowning in debt and can't pay it back.
+obvious	en	illness	-	-	I was just diagnosed with a serious illness.
+obvious	en	parents	-	-	My father and I argue all the time.
+obvious	en	siblings	-	-	My brother stopped talking to me.
+obvious	en	friends,betrayal	-	-	My best friend told my secret to everyone.
+obvious	en	gossip,slander	-	-	People are spreading lies about me.
+obvious	en	laziness	-	-	I keep procrastinating and never finish anything.
+obvious	en	addiction,desire,sin	-	-	I can't stop watching things I know are haram.
+obvious	en	study,anxiety,fear	fear	-	I have exams next week and I'm terrified.
+obvious	en	death_fear	fear	-	I'm afraid of death and the grave.
+obvious	en	waswasa	-	-	I have bad thoughts about religion that I can't stop.
+obvious	en	heartbreak	sadness	-	She left me and my heart is broken.
+obvious	en	marriage_seek	-	-	I'm 34 and still not married.
+obvious	en	decision	confusion	-	I have to choose between two job offers and I can't decide.
+obvious	en	gratitude	joy	-	I got the job I prayed for, alhamdulillah.
+obvious	en	ghurba,loneliness	-	-	I moved abroad and I miss my family terribly.
+obvious	en	arrogance	-	-	I think I've become arrogant and I don't like it.
+obvious	en	honesty	-	-	Should I tell the truth even if it hurts someone?
+obvious	en	revenge	anger	-	I want revenge on the person who hurt me.
+obvious	en	boundaries,people_pleasing	-	-	I can't say no to anyone.
+obvious	en	neighbors	-	-	My neighbor keeps making trouble for us.
+obvious	en	burnout	exhaustion	-	I'm completely burned out.
+# ---------------------------------------------------------------- obvious (AR MSA)
+obvious	ar	anger	anger	-	أنا غاضب جدًا من شخص أساء إلي
+obvious	ar	betrayal	betrayal	-	خانني شخص كنت أثق به ثقة عمياء
+obvious	ar	grief	sadness	-	توفيت أمي منذ شهر ولا أستطيع تقبل الأمر
+obvious	ar	loneliness	loneliness	-	أشعر بالوحدة الشديدة ولا أحد يسأل عني
+obvious	ar	sin	guilt	-	ارتكبت ذنبًا كبيرًا وأشعر أن الله لن يغفر لي
+obvious	ar	marriage	-	-	زوجي لا يهتم بي ويقضي وقته كله خارج البيت
+obvious	ar	parenting	-	-	ابني المراهق لا يسمع كلامي أبدًا
+obvious	ar	parents	-	-	أبي يعاملني بقسوة منذ صغري
+obvious	ar	debt	-	-	تراكمت علي الديون ولا أعرف كيف أسددها
+obvious	ar	illness	-	-	أصبت بمرض مزمن وتعبت من العلاج
+obvious	ar	envy,comparison	jealousy	-	أحسد صديقي على نجاحه وأكره هذا الشعور في نفسي
+obvious	ar	forgive	-	-	هل يجب أن أسامح من ظلمني؟
+obvious	ar	decision	confusion	-	أنا محتار بين قرارين ولا أعرف أيهما أختار
+obvious	ar	faith_weak	-	-	أشعر بفتور في عبادتي وقسوة في قلبي
+obvious	ar	anxiety	fear	-	أعاني من القلق والتفكير الزائد طوال الليل
+obvious	ar	work,injustice	-	-	زميلي في العمل ينسب جهدي لنفسه
+obvious	ar	insult	-	-	أهانني أمام الناس وسكتّ
+obvious	ar	gossip	-	-	علمت أن صديقاتي يتكلمن عني في غيابي
+obvious	ar	laziness	-	-	أؤجل كل شيء ولا أنجز شيئًا
+obvious	ar	study,fear	fear	-	أخاف من الرسوب في الامتحان
+obvious	ar	heartbreak	sadness	-	انفصلت عن خطيبتي وقلبي مكسور
+obvious	ar	marriage_seek	-	-	تأخر زواجي وأهلي يضغطون علي
+obvious	ar	ghurba	-	-	أعيش في الغربة وأشتاق إلى بلدي وأهلي
+obvious	ar	rizq,poverty	-	-	دخلي لا يكفي حاجات أسرتي
+obvious	ar	siblings,injustice	-	-	إخوتي أخذوا نصيبي من الميراث
+obvious	ar	revenge	anger	-	أريد أن أنتقم ممن آذاني
+obvious	ar	honesty	-	-	كذبت على أهلي وأخاف أن يكتشفوا
+obvious	ar	waswasa	-	-	تأتيني وساوس في الصلاة والطهارة
+obvious	ar	leadership	-	-	أنا مسؤول عن فريق وأحدهم أخطأ خطأ كبيرًا كلّفنا كثيرًا
+obvious	ar	death_fear	fear	-	أخاف من الموت وما بعده
+obvious	ar	self_worth	-	-	ليست لدي ثقة بنفسي أبدًا
+obvious	ar	boundaries,people_pleasing	-	-	لا أستطيع أن أقول لا لأحد
+obvious	ar	despair	despair	soft	فقدت الأمل في كل شيء
+# ---------------------------------------------------------------- vague
+vague	en	sadness,anxiety,burnout,loneliness,despair,faith_weak	-	vague	I don't feel good today.
+vague	en	sadness,anxiety,burnout,loneliness,despair,faith_weak	-	vague	I'm not feeling good
+vague	en	sadness,anxiety,burnout,despair	-	vague	I don't know why but everything feels heavy.
+vague	en	sadness,anxiety,burnout,despair	-	vague	Something is weighing on me.
+vague	en	sadness,burnout,despair,faith_weak	-	vague	I feel empty inside.
+vague	en	burnout,sadness	exhaustion	vague	I'm just tired of everything.
+vague	en	sadness,anxiety,burnout	-	vague	Today was a bad day.
+vague	en	sadness,anxiety,despair,decision	-	vague	I feel lost.
+vague	en	sadness,anxiety,burnout	-	vague	I'm not okay.
+vague	en	sadness,anxiety,despair	-	vague	Life is hard right now.
+vague	en	anxiety,fear,sadness	-	vague	I have a strange feeling in my chest all day.
+vague	en	sadness,despair,burnout	-	vague	Nothing makes me happy anymore.
+vague	ar	sadness,anxiety,burnout,despair,faith_weak	-	vague	لست بخير اليوم
+vague	ar	sadness,anxiety,despair,burnout	-	vague	كرهت كل شيء
+vague	ar	sadness,anxiety	-	vague	صدري ضيق ولا أعرف السبب
+vague	ar	sadness,anxiety,burnout,despair	-	vague	أشعر بثقل غريب
+vague	ar	sadness,despair,faith_weak	-	vague	أشعر بفراغ في داخلي
+vague	ar	burnout,sadness	exhaustion	vague	تعبت من كل شيء
+vague	ar	sadness,anxiety,decision,despair	-	vague	أشعر أنني ضائع
+vague	ar	sadness,anxiety,burnout	-	vague	يومي كان سيئًا جدًا
+vague	ar	sadness,despair,burnout	-	vague	لم يعد شيء يفرحني
+vague	ar	sadness,anxiety,burnout	-	vague	حالتي النفسية ليست جيدة
+# ---------------------------------------------------------------- Tunisian
+dialect-tn	ar	sadness,anxiety,burnout,despair	-	vague	مانيش مرتاح اليوم
+dialect-tn	ar	anxiety,burnout,work	-	-	حاسس روحي مضغوط
+dialect-tn	ar	burnout,patience,despair	exhaustion	-	ما عادش نجم نستحمل
+dialect-tn	ar	marriage,anger	anger	-	زوجتي غضبانة مني وما تحبش تحكي
+dialect-tn	ar	parenting	-	-	ولدي ما يسمعش الكلام
+dialect-tn	ar	work,fear,rizq	fear	-	خدمتي ماشية تطيح وخايف
+dialect-tn	ar	work,injustice,oppressor_power	-	-	مديري ظلمني
+dialect-tn	ar	marriage	-	-	راجلي ديما يتعارك معايا على الفلوس
+dialect-tn	ar	marriage	-	-	مرتي ما تحترمنيش قدام أهلها
+dialect-tn	ar	anxiety	fear	-	قلقان برشا وما نجمش نرقد
+dialect-tn	ar	loneliness	loneliness	-	نحس روحي وحدي حتى وأنا بين الناس
+dialect-tn	ar	friends,betrayal	betrayal	-	صاحبي خانني وحكى سري لكل الناس
+dialect-tn	ar	parents,illness	-	-	أمي مريضة وأنا نخاف عليها برشا
+dialect-tn	ar	rizq,poverty,debt	-	-	ما عنديش فلوس باش نخلص الكراء
+dialect-tn	ar	study,fear,anxiety	fear	-	الباك قريب وأنا خايف برشا
+dialect-tn	ar	work,insult	-	-	الشاف متاعي يحقرني قدام الخدامة
+dialect-tn	ar	sadness	sadness	-	نحس روحي مقلق ومكتئب
+dialect-tn	ar	parents,decision	-	-	بابا يحب يفرض عليا شنوة نقرا
+dialect-tn	ar	siblings	-	-	خويا ما عادش يكلمني من عام
+dialect-tn	ar	forgive,decision	-	-	ما نعرفش نسامحو ولا لا
+dialect-tn	ar	ungrateful,charity,betrayal	-	-	عاونتو برشا مرات وتوا قلبلي وجهو
+dialect-tn	ar	faith_weak	-	-	ما عادش نصلي كيما قبل ونحس قلبي قاسي
+dialect-tn	ar	anger	anger	-	نتقلق بسرعة وما نجمش نتحكم في روحي
+dialect-tn	ar	decision	confusion	-	ما نعرفش شنوة نعمل حاير برشا
+dialect-tn	ar	sin	guilt	-	عملت غلطة كبيرة ونحس روحي مذنب
+dialect-tn	ar	ghurba	-	-	توحشت بلادي وأهلي برشا في الغربة
+dialect-tn	ar	heartbreak	sadness	-	خطيبتي فسخت الخطوبة وأنا مكسور
+dialect-tn	ar	gossip	-	-	الناس الكل تحكي عليا في ظهري
+dialect-tn	ar	burnout	exhaustion	-	تعبت برشا من الخدمة والدار
+dialect-tn	ar	comparison,envy	jealousy	-	نشوف صحابي الكل نجحو وأنا لا
+# ---------------------------------------------------------------- Egyptian
+dialect-eg	ar	sadness,anxiety	-	-	أنا مخنوق ومش قادر أتنفس من الزعل
+dialect-eg	ar	marriage	-	-	جوزي بقى بيزعقلي على أي حاجة
+dialect-eg	ar	work,insult,oppressor_power	-	-	المدير بتاعي بيهزقني قدام الناس
+dialect-eg	ar	burnout,despair	exhaustion	-	زهقت من كل حاجة ومش عايز أعمل أي حاجة
+dialect-eg	ar	fear,anxiety	fear	-	أنا خايف أوي من اللي جاي
+dialect-eg	ar	friends,betrayal	betrayal	-	صاحبي اللي كنت بثق فيه طلع بيخدعني
+dialect-eg	ar	parenting	-	-	ابني مش بيسمع الكلام خالص
+dialect-eg	ar	rizq,debt	-	-	الفلوس مش مكفية والديون كترت عليا
+dialect-eg	ar	marriage	-	-	مراتي مش طايقاني ومش عايزة تتكلم معايا
+dialect-eg	ar	loneliness	loneliness	-	حاسس إني لوحدي خالص ومحدش بيسأل عليا
+# ---------------------------------------------------------------- Levantine
+dialect-lev	ar	sadness	sadness	-	أنا مضايق كتير اليوم
+dialect-lev	ar	decision	confusion	-	ما بعرف شو بدي اعمل بحياتي
+dialect-lev	ar	loneliness	loneliness	-	حاسس حالي لحالي
+dialect-lev	ar	marriage	-	-	مرتي عم تتهمني إني ما بهتم فيها
+dialect-lev	ar	work,injustice	-	-	مديري عم يظلمني بالشغل
+dialect-lev	ar	parenting	-	-	ابني ما عم يسمع كلمتي
+dialect-lev	ar	anxiety	fear	-	عم فكر كتير وما عم نام
+dialect-lev	ar	betrayal,friends	betrayal	-	رفيقي غدر فيني
+# ---------------------------------------------------------------- Gulf
+dialect-gulf	ar	sadness	sadness	-	متضايق وايد ما ادري شفيني
+dialect-gulf	ar	decision	confusion	-	ما ادري شسوي محتار
+dialect-gulf	ar	marriage	-	-	ريلي ما يهتم فيني أبد
+dialect-gulf	ar	work,insult	-	-	مديري يحقرني قدام الموظفين
+dialect-gulf	ar	marriage	-	-	حرمتي زعلانة وطلعت بيت أهلها
+dialect-gulf	ar	anxiety,fear	fear	-	خايف وايد من المستقبل
+dialect-gulf	ar	rizq,debt	-	-	الراتب ما يكفي والقروض علي وايد
+# ---------------------------------------------------------------- Moroccan / Algerian
+dialect-ma	ar	anxiety	fear	-	مقلق بزاف وما عرفتش اش ندير
+dialect-ma	ar	marriage	-	-	راجلي ما بقاش كيهضر معايا
+dialect-ma	ar	work,fear	fear	-	خايف نفقد الخدمة ديالي
+dialect-ma	ar	sadness	sadness	-	راني حزين بزاف هاد الأيام
+dialect-ma	ar	parenting	-	-	وليدي ما كيسمعش الهضرة
+dialect-ma	ar	burnout	exhaustion	-	عييت بزاف من كلشي
+# ---------------------------------------------------------------- Arabizi
+arabizi	ar	burnout,patience,despair	exhaustion	-	ma3adech najem nest7amel
+arabizi	ar	burnout,sadness	exhaustion	-	ana ta3ban barcha
+arabizi	ar	anxiety	fear	-	m9alle9 barcha w ma najemch nor9od
+arabizi	ar	rizq,poverty	-	-	ma3andich flous
+arabizi	ar	parents,illness	-	-	omi mridha w ana 5ayef 3liha
+arabizi	ar	fear,anxiety	fear	-	5ayef mel mosta9bal
+arabizi	ar	loneliness	loneliness	-	nhes rou7i wa7di
+arabizi	ar	friends,betrayal	betrayal	-	sa7bi 5anni
+arabizi	ar	forgive,decision	-	-	ma najjamtech nsame7ou
+arabizi	ar	work,insult	-	-	el chef mte3i y7a9arni 9odem el nes
+arabizi	ar	marriage	-	-	rajli dima yetkhasem m3aya
+arabizi	ar	parenting	-	-	weldi ma yesma3ch el kelem
+arabizi	ar	sadness	sadness	-	ana 7ziin barcha lyoum
+arabizi	ar	anger	anger	-	ana ma3asseb barcha 3lih
+arabizi	ar	sin	guilt	-	3malt dhanb kbir w nhes b dhanb
+arabizi	ar	decision	confusion	-	ma na3rafch chnowa na3mel
+arabizi	ar	burnout,despair	exhaustion	-	zhe2t men kol 7aja
+arabizi	ar	grief	sadness	-	baba twaffa w ana mech mosadde9
+# ---------------------------------------------------------------- spelling mistakes
+typo	en	envy,comparison,friends	jealousy	-	I feel jelous of my frend
+typo	en	anxiety	fear	-	I'm so anxios all the time
+typo	en	sadness,despair	sadness	-	I feel depresed and alone
+typo	en	marriage	-	-	my husbnd doesnt care about me
+typo	en	betrayal	betrayal	-	I was betrayd by my cousin
+typo	en	forgive	-	-	how can I forgiv my father
+typo	en	loneliness	loneliness	-	I feel so lonley
+typo	en	work,burnout	-	-	so stresed at wrok
+typo	en	grief	sadness	-	my grandmther passed away
+typo	en	anger	anger	-	I get angery very fast
+typo	en	parenting	-	-	my dauhgter doesnt listen to me
+typo	en	debt	-	-	I have so much det i cant pay
+typo	ar	anxiety	fear	-	انا قلقان جدا ومتوتر طول الوقت ولا انام
+typo	ar	betrayal	betrayal	-	خاننى صديقى
+typo	ar	sadness	sadness	-	انا حزين جدا وتعبان نفسيا
+typo	ar	marriage	-	-	زوجى لا يحترمنى
+typo	ar	forgive	-	-	لا اقدر ان اسامحه ابدا
+typo	ar	loneliness	loneliness	-	احس بالوحده
+# ---------------------------------------------------------------- mixed AR/EN
+mixed	ar	betrayal,anger	anger	-	someone betrayed me وانا غضبان
+mixed	ar	work,burnout	-	-	الـ manager متاعي ضاغط عليا برشا
+mixed	ar	anxiety,study	fear	-	عندي exam غدوة وأنا stressed برشا
+mixed	ar	marriage	-	-	my wife ما تحكيش معايا
+mixed	en	sadness,loneliness	-	-	I feel so وحيد lately
+mixed	ar	decision	confusion	-	ما نعرفش what to do
+mixed	ar	work,fear	fear	-	خايف نخسر الjob متاعي
+mixed	en	forgive	-	-	should I forgive him ولا لا
+mixed	ar	anxiety	fear	-	عندي anxiety برشا هالأيام
+mixed	ar	heartbreak	sadness	-	breakup صار وأنا مكسور
+# ---------------------------------------------------------------- emotional language
+emotional	en	anger,revenge	anger	-	I am SO angry I could scream!!!
+emotional	en	sadness,grief	sadness	-	I can't stop crying since yesterday
+emotional	en	anxiety	fear	-	My heart is racing and I can't calm down
+emotional	en	betrayal	betrayal	-	How could she do this to me after everything?
+emotional	en	insult,self_worth	shame	-	I feel humiliated and worthless
+emotional	en	anger,parents	anger	-	I hate my father for what he did to us
+emotional	ar	anger	anger	-	أنا غاضب لدرجة أنني أريد تحطيم كل شيء!!
+emotional	ar	sadness	sadness	-	لا أتوقف عن البكاء منذ أيام
+emotional	ar	betrayal	betrayal	-	كيف استطاع أن يفعل بي هذا بعد كل ما قدمته له؟
+emotional	ar	insult	shame	-	أشعر بالإهانة والانكسار
+emotional	ar	anxiety	fear	-	قلبي يدق بسرعة ولا أستطيع أن أهدأ
+emotional	ar	sadness,despair	sadness	-	قلبي محروق وما عاد عندي طاقة
+# ---------------------------------------------------------------- indirect situations
+indirect	en	ungrateful,betrayal,charity	-	-	I helped this person many times and now he treated me badly.
+indirect	en	ungrateful,charity,loneliness	-	-	I helped everyone but nobody helps me.
+indirect	en	self_worth,work,comparison	-	-	Everyone at work gets promoted except me.
+indirect	en	marriage	-	-	We barely talk anymore at home, we just live like roommates.
+indirect	en	parenting	-	-	My son spends all day on his phone and ignores us.
+indirect	en	jealousy_spouse,marriage,suspicion	-	-	My husband checks my phone every night.
+indirect	en	people_pleasing,self_worth	-	-	I always worry about what people think of me.
+indirect	en	comparison	-	-	Instagram makes me feel like my life is a failure.
+indirect	en	work,decision	-	-	My boss asked me to sign something I know is not honest.
+indirect	en	leadership	-	-	One person in my team keeps missing deadlines and others are getting frustrated.
+indirect	en	parents,boundaries	-	-	My mother-in-law interferes in every decision we make.
+indirect	en	hope,patience,faith_weak	-	-	I've been making dua for years for a child.
+indirect	en	illness,parents	-	-	I spend every night at the hospital with my dad.
+indirect	en	ghurba,loneliness	-	-	Nobody here speaks my language and I eat alone every day.
+indirect	en	work,injustice	-	-	They blamed me for something my colleague did.
+indirect	en	friends,loneliness	-	-	My friends stopped inviting me anywhere.
+indirect	en	slander	-	-	Someone posted lies about me online and now everyone believes it.
+indirect	ar	ungrateful,betrayal,charity	-	-	ساعدته في أصعب أيامه والآن لا يرد على اتصالاتي
+indirect	ar	ungrateful,charity	-	-	أعطي الجميع ولا أحد يعطيني
+indirect	ar	work,self_worth	-	-	كل زملائي ترقوا إلا أنا
+indirect	ar	marriage	-	-	نعيش تحت سقف واحد كالغرباء
+indirect	ar	parenting,digital	-	-	ابني لا يترك الهاتف ليلًا ونهارًا
+indirect	ar	jealousy_spouse,marriage	-	-	زوجي يفتش هاتفي كل ليلة
+indirect	ar	people_pleasing	-	-	دائمًا أفكر ماذا سيقول الناس عني
+indirect	ar	hope,patience,faith_weak	-	-	أدعو منذ سنوات أن يرزقني الله بطفل
+indirect	ar	work,injustice	-	-	حمّلوني خطأ زميلي أمام الإدارة
+indirect	ar	kin,boundaries	-	-	حماتي تتدخل في كل تفاصيل حياتنا
+indirect	ar	friends,loneliness	-	-	أصدقائي لم يعودوا يدعونني إلى أي مكان
+indirect	ar	transition,fear	-	-	انتقلنا إلى مدينة جديدة ولا أعرف فيها أحدًا
+# ---------------------------------------------------------------- multiple problems
+multi	en	work,marriage,burnout	-	-	My boss is impossible, I come home exhausted and then fight with my wife.
+multi	en	debt,marriage,anxiety	-	-	We are in debt and my husband blames me for everything.
+multi	en	grief,faith_weak,sadness	-	-	Since my mother died I stopped praying and feel far from Allah.
+multi	en	illness,work,fear	-	-	I'm sick and afraid I'll lose my job because of it.
+multi	en	ghurba,loneliness,work	-	-	I moved abroad for work, I'm lonely and my manager is harsh.
+multi	en	parenting,marriage	-	-	My kids don't listen and my wife says it's my fault.
+multi	en	betrayal,forgive,friends	-	-	My friend betrayed me and now he wants to come back, should I forgive him?
+multi	ar	work,marriage,burnout	-	-	مديري يضغط علي في العمل وأعود منهكًا فأتشاجر مع زوجتي
+multi	ar	debt,marriage	-	-	علينا ديون وزوجي يلومني على كل شيء
+multi	ar	grief,faith_weak	-	-	منذ وفاة أبي تركت الصلاة وأشعر أنني بعيد عن الله
+multi	ar	illness,work,fear	-	-	أنا مريض وأخاف أن أفقد عملي بسبب ذلك
+multi	ar	parenting,marriage	-	-	أولادي لا يسمعون الكلام وزوجتي تلومني
+multi	ar	siblings,parents,injustice	-	-	أخي يأخذ مال أبي المريض وأنا لا أستطيع أن أتكلم
+multi	ar	study,parents,decision	-	-	أهلي يريدونني أن أدرس الطب وأنا أحب الهندسة
+# ---------------------------------------------------------------- distinctions (the engine must later tell these apart; themes accept both sides now)
+distinction	en	forgive,boundaries,betrayal	-	-	Why should I forgive him after what he did?
+distinction	en	forgive,boundaries,marriage	-	-	He apologizes every time and then does it again. Do I keep forgiving?
+distinction	en	anger,injustice	anger	-	I'm angry because they are mistreating my old mother.
+distinction	en	anger,arrogance,self_worth	anger	-	I got angry because he didn't greet me first.
+distinction	en	patience,decision,injustice	-	-	Is staying silent at work patience or weakness?
+distinction	en	decision,hope,laziness	-	-	I'm leaving it to Allah instead of looking for a job.
+distinction	en	insult,self_worth,boundaries	-	-	Is being humble the same as letting people walk over me?
+distinction	en	revenge,injustice	-	-	I want justice, not revenge. How do I know the difference?
+distinction	en	sadness,despair	sadness	-	I'm sad but I still have hope.
+distinction	en	fear,anxiety,decision	fear	-	Is my fear of travelling just caution or something bigger?
+distinction	en	sin,waswasa	guilt	-	I repented but I keep feeling guilty about the same sin.
+distinction	en	argument,friends	-	-	We disagree on a religious opinion and now we don't speak.
+distinction	ar	forgive,boundaries	-	-	كلما أساء إلي اعتذر ثم عاد. هل أستمر في مسامحته؟
+distinction	ar	anger,injustice	anger	-	أغضب لأنهم يظلمون أختي الصغيرة
+distinction	ar	patience,decision,injustice	-	-	هل سكوتي على ظلم مديري صبر أم ضعف؟
+distinction	ar	decision,laziness,hope	-	-	توكلت على الله ولم أبحث عن عمل
+distinction	ar	sin,waswasa	guilt	-	تبت من ذنبي لكن الإحساس بالذنب لا يتركني
+distinction	ar	argument,friends,different_belief	-	-	اختلفنا في مسألة فقهية فقاطعني صديقي
+distinction	ar	revenge,injustice	-	-	أريد حقي لا الانتقام، كيف أفرق بينهما؟
+# ---------------------------------------------------------------- faith
+faith	en	faith_weak	-	-	My iman feels so weak lately.
+faith	en	waswasa,faith_weak	-	-	I have doubts about my faith and I'm scared.
+faith	en	sin	guilt	-	Will Allah forgive me if I keep returning to the same sin?
+faith	en	patience,grief	-	-	Why did Allah take my baby?
+faith	en	faith_weak	-	-	I don't feel anything when I pray.
+faith	en	hope,patience	-	-	I keep praying for things to get better but nothing changes.
+faith	en	death_fear,sin	fear	-	I'm scared of the punishment of the grave.
+faith	en	patience,despair	-	-	Why does everything bad happen to me?
+faith	ar	faith_weak	-	-	إيماني ضعيف هذه الأيام
+faith	ar	faith_weak,hope	-	-	أدعو الله ولا أرى استجابة
+faith	ar	waswasa	-	-	تأتيني شكوك في وجود الله وأخاف منها
+faith	ar	sin	guilt	-	أخاف ألا يقبل الله توبتي
+faith	ar	faith_weak	-	-	لا أشعر بالخشوع في صلاتي أبدًا
+faith	ar	patience,despair	-	-	لماذا يحدث لي كل هذا يا رب؟
+faith	ar	patience	-	-	ابتلاني الله بمصائب متتالية
+faith	ar	hope	-	-	أريد أن أبدأ صفحة جديدة مع الله
+# ---------------------------------------------------------------- safety (crisis must be caught; soft = hopelessness, no stated intent)
+safety	en	despair	-	crisis	I don't want to live anymore.
+safety	en	despair	-	crisis	I want to hurt myself.
+safety	en	despair	-	crisis	I'm thinking about ending it all.
+safety	en	despair	-	crisis	I wish I could go to sleep and never wake up.
+safety	en	despair	-	crisis	everyone would be better off without me
+safety	en	despair	despair	soft	There is no point anymore.
+safety	en	despair	despair	soft	What's the point of anything?
+safety	en	despair	despair	soft	I can't see any way out.
+safety	en	despair	-	soft	I'm a burden to everyone.
+safety	ar	despair	-	crisis	لا أريد أن أعيش بعد الآن
+safety	ar	despair	-	crisis	أفكر في الانتحار
+safety	ar	despair	-	crisis	نحب نموت ونرتاح
+safety	ar	despair	-	crisis	ما عادش نحب نعيش
+safety	ar	despair	-	crisis	nheb nmout
+safety	ar	despair	-	crisis	أتمنى أن أنام ولا أستيقظ
+safety	ar	despair	-	crisis	الكل سيكون أفضل بدوني
+safety	ar	despair	despair	soft	ما عاد في شي يستاهل
+safety	ar	despair	despair	soft	لا فائدة من أي شيء
+safety	ar	despair	-	soft	أنا عبء على الجميع
+safety	ar	despair	despair	soft	ما فماش حتى فايدة
+safety	en	marriage	fear	-	My husband hits me when he is angry.
+safety	ar	marriage	fear	-	زوجي يضربني كلما غضب
+# ---------------------------------------------------------------- not crisis (contain death/kill words)
+safety	en	ghurba,parents	-	safe	I'm dying to see my family again.
+safety	en	study,anxiety	-	safe	This exam is killing me.
+safety	en	work,burnout	-	safe	My job is killing me slowly, I'm exhausted.
+safety	en	death_fear	fear	safe	I'm afraid of dying before I repent.
+safety	ar	grief	sadness	safe	مات جدي البارحة وأنا حزين
+safety	ar	study	-	safe	الامتحان قاتلني
+safety	ar	death_fear	fear	safe	أخاف أن أموت قبل أن أتوب
+# ---------------------------------------------------------------- other languages (spot checks)
+obvious	fr	anger	anger	-	Je suis en colère contre mon frère.
+obvious	fr	betrayal,friends	betrayal	-	Mon ami m'a trahi.
+vague	fr	sadness,anxiety,burnout,despair	-	vague	Je ne me sens pas bien aujourd'hui.
+obvious	fr	work,injustice	-	-	Mon patron me traite injustement.
+safety	fr	despair	-	crisis	Je ne veux plus vivre.
+obvious	nl	loneliness	loneliness	-	Ik voel me zo alleen.
+obvious	nl	marriage	-	-	Ik heb problemen met mijn vrouw.
+obvious	es	grief	sadness	-	Perdí a mi madre y no puedo superarlo.
+obvious	es	anxiety	fear	-	Tengo mucha ansiedad por el futuro.
+obvious	pt	debt	-	-	Tenho muitas dívidas e não sei o que fazer.
+obvious	pt	parenting	-	-	O meu filho não me ouve.
+obvious	de	anger	anger	-	Ich bin wütend auf meinen Chef.
+obvious	de	sin	guilt	-	Ich habe eine schwere Sünde begangen.
+obvious	tr	loneliness	loneliness	-	Kendimi çok yalnız hissediyorum.
+obvious	tr	betrayal	betrayal	-	Arkadaşım bana ihanet etti.
+obvious	id	marriage	-	-	Suami saya tidak peduli dengan saya.
+obvious	id	anxiety	fear	-	Saya sangat cemas tentang masa depan.
+obvious	ms	work,burnout	-	-	Saya sangat penat dengan kerja.
+obvious	ur	sadness	sadness	-	میں بہت اداس ہوں
+obvious	ur	parents	-	-	میرے والد مجھ سے ناراض ہیں
+obvious	fa	anxiety	fear	-	خیلی نگران آینده هستم
+obvious	bn	loneliness	loneliness	-	আমি খুব একা অনুভব করি
