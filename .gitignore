@@ -29,3 +29,9 @@ desktop.ini
 *.bak
 *.tmp
 *~
+
+# ── Build-time model downloads (semantic layer; only the reduced js/data-embed.js ships) ──
+build/embed/model/
+build/embed/model-e5/
+build/embed/anchors.json
+build/embed/engine-scores.json
