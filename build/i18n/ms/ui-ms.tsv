@@ -1,0 +1,802 @@
+0	Nabi ﷺ
+1	Disalin
+2	Dibuang daripada simpanan
+3	Ditambah ke simpanan
+4	Simpan
+5	Atau mulakan daripada satu topik
+6	Semua topik ›
+7	{0} situasi dan kisah
+8	{0} ayat dan petikan
+9	{0} hadis dan doa
+10	{0} topik kehidupan
+11	Ayat hari ini
+12	Hadis hari ini
+13	Sila terangkan situasi anda dengan sedikit lebih terperinci
+14	Al-Quran al-Karim
+15	Salin
+16	Hadis Nabi
+17	Perawi:
+18	Doa daripada al-Quran
+19	Doa yang sahih
+20	Ringkasan riwayat
+21	Teks hadis
+22	maksudnya, bukan lafaz tepat
+23	Daripada kitab-kitab sirah
+24	Butiran peristiwa ini diriwayatkan dalam sumber sirah yang diiktiraf ({0}), dan sebahagian lafaznya dibincangkan oleh pengkritik hadis. Ia ialah riwayat sejarah yang dipegang dalam sirah, bukan hadis bertaraf sahih.
+25	Sumber:
+26	Buka semua bahagian
+27	Tutup semua bahagian
+28	Sekarang
+29	Minggu ini
+30	Jangka panjang
+31	Dengar jawapan penuh
+32	Sebelum segala-galanya
+33	Apa yang anda tulis menunjukkan kesakitan yang mendalam, dan kami mengambilnya dengan serius. Nyawa anda berharga di sisi Allah dan di sisi orang yang menyayangi anda: “Dan janganlah kamu membunuh diri kamu. Sesungguhnya Allah Maha Penyayang kepada kamu.” Aplikasi ini untuk renungan dan tidak mencukupi untuk krisis seperti ini. Sila hubungi sekarang orang yang anda percayai, talian krisis kesihatan mental di negara anda, atau jabatan kecemasan terdekat. Meminta pertolongan ialah kekuatan, bukan kelemahan, dan anda tidak bersendirian.
+34	Keselamatan anda didahulukan
+35	Situasi anda nampaknya melibatkan keganasan atau penderaan. Islam tidak meminta anda kekal dalam kemudaratan atas nama sabar: “Tidak boleh memudaratkan dan tidak boleh membalas mudarat.” Jika anda dalam bahaya, pergilah ke tempat yang selamat dan hubungi pihak perlindungan, polis atau orang yang dipercayai, kemudian pakar keluarga dan undang-undang.
+36	Perkara agama atau undang-undang yang sensitif
+37	Situasi anda melibatkan perkara (seperti perceraian, pusaka atau hak) yang mempunyai hukum terperinci. Apa yang berikut ialah prinsip umum dan panduan untuk renungan, bukan fatwa; rujuklah ulama yang berkelayakan atau pakar undang-undang untuk hukum kes anda.
+38	Saya tidak menemui padanan yang cukup dekat dengan situasi anda dalam perpustakaan semasa. Cuba tambah butiran: siapa orang yang terlibat? Apa yang berlaku? Bagaimana perasaan anda? Apa yang anda mahu lakukan? Atau
+39	layari topik
+40	Padanan kuat
+41	Padanan sederhana
+42	Padanan lemah
+43	Bacaan awal situasi anda
+44	Topik yang dikesan
+45	Umum
+46	Perasaan
+47	(mungkin)
+48	Tidak dinyatakan secara jelas
+49	Pihak yang terlibat
+50	Tidak dinyatakan
+51	Anda menggambarkan kesilapan anda sendiri
+52	Beratnya situasi
+53	Perspektif al-Quran dan Nabi tentang situasi anda
+54	Dalil
+55	Apa yang kita perhatikan pada tindakan {0}?
+56	Prinsip yang diambil
+57	Bagaimana anda boleh mengambil manfaat?
+58	Situasi lain yang menerangi situasi anda
+59	Berkaitan dengan: {0}
+60	Al-Quran
+61	Daripada al-Quran al-Karim
+62	Daripada Sunnah Nabi
+63	Pelan praktikal untuk situasi anda
+64	Ketik mana-mana langkah untuk menandakannya selesai.
+65	Doa sahih yang sesuai dengan situasi anda
+66	Soalan untuk membantu anda memahami diri sendiri
+67	Apa yang perlu dielakkan
+68	Batasan contoh ini — bilakah ia tidak terpakai?
+69	Renungan
+70	Analisis peribadi yang mendalam (pilihan)
+71	Al-Quran al-Karim, {0}
+72	Sumber
+73	Sangat sahih
+74	Al-Quran, atau hadis dalam dua Sahih atau bertaraf sahih
+75	Sahih
+76	hadis sahih atau hasan dalam kitab Sunan dan Musnad
+77	Riwayat sejarah
+78	daripada kitab sirah, bukan bertaraf hadis sahih.
+79	Ayat dipaparkan dalam ejaan biasa; rujuk mushaf ketika membaca.
+80	Mengapa keputusan ini muncul? (ketelusan analisis)
+81	Perkataan yang dikesan daripada tulisan anda:
+82	Skor situasi:
+83	Kaedah: penormalan teks dan pencarian kata dasar → pengesanan topik dan perasaan → pengembangan pertanyaan → kedudukan BM25 dengan penguatan semantik → membina analisis daripada teks yang ditemui sahaja.
+84	Nilai jawapan ini
+85	Adakah bacaan ini membantu? Penilaian anda membantu kami menambah baik aplikasi
+86	Situasi baharu
+87	Salin ringkasan
+88	Kongsi
+89	Cetak / PDF
+90	Teroka topik
+91	Rifqat al-Uswa — ringkasan renungan
+92	Situasi:
+93	Situasi paling dekat:
+94	Pelan untuk sekarang:
+95	Ini ialah renungan sebagai panduan, bukan fatwa.
+96	Perdalam analisis dengan AI
+97	Terhad kepada teks yang ditemui di atas sahaja, dan menyebut kodnya
+98	Pilihan — memerlukan kunci API Claude dan sambungan internet
+99	Model akan membaca situasi anda bersama petikan sahih yang ditemui, menulis analisis peribadi yang menghubungkannya, dan mencadangkan langkah tepat untuk kes anda. Teks anda akan dihantar kepada Anthropic untuk tujuan ini sahaja.
+100	Mulakan analisis mendalam
+101	Tanya soalan susulan tentang situasi anda…
+102	Hantar
+103	Analisis sahih di atas lengkap dan berfungsi tanpa internet. Jika anda mahu lapisan tambahan di mana model bahasa menulis analisis peribadi yang menghubungkan teks yang sama ini (dan tiada teks dari luar), tambahkan kunci API Claude dalam Tetapan.
+104	Buka tetapan
+105	Model tidak dapat menyelesaikan permintaan ini. Analisis sahih di atas masih tersedia.
+106	(Panjang maksimum dicapai.)
+107	(Patuhi peraturan yang sama: tiada teks kecuali daripada petikan yang ditemui, dan berikan kodnya. Jawab dalam bahasa Melayu.)
+108	{0} situasi · {1} ayat · {2} hadis
+109	Tiada topik yang sepadan. Cuba “Semua situasi”, atau terangkan situasi anda di halaman utama.
+110	Tiada keputusan yang sepadan dengan carian anda.
+111	Penilaian anda
+112	Dengar topik ini
+113	Bacaan al-Quran dan Nabi
+114	Terangkan situasi anda tentang topik ini
+115	Situasi berkaitan
+116	Pelan praktikal
+117	Daripada al-Quran al-Karim ({0})
+118	Daripada Sunnah Nabi ({0})
+119	Doa
+120	Soalan untuk renungan
+121	Semua
+122	Ayat
+123	Hadis
+124	{0} teks
+125	Tunjuk lagi
+126	Tiada teks yang sepadan.
+127	Situasi
+128	Hadis dan doa
+129	Anda belum menyimpan apa-apa.
+130	Ketik “Simpan” di sebelah mana-mana situasi, ayat atau hadis supaya ia muncul di sini, dan nilai situasi supaya penilaian anda juga muncul di sini.
+131	‹ Kembali
+132	Dengar
+133	Daripada al-Quran
+134	Apa yang berlaku
+135	Latar belakang
+136	Pihak yang terlibat:
+137	Teks
+138	Prinsip
+139	Apa yang kita pelajari hari ini?
+140	Batasan contoh ini
+141	↔ Bandingkan dengan situasi lain
+142	Situasi berkaitan
+143	Nilai situasi ini
+144	Nilai situasi ini dan tinggalkan ulasan
+145	Allah Taala berfirman dalam {0}:
+146	Bacaan suara tidak disokong dalam pelayar ini
+147	Tiada enjin pertuturan pada peranti ini. Pasang “Speech Services by Google” daripada kedai.
+148	Enjin pertuturan tiada suara bahasa Melayu; pemasangnya akan dibuka
+149	Tiada suara bahasa Melayu dipasang. Di Windows: Settings → Time & language → Language → tambah “Malay” dengan ciri “Speech”, kemudian buka semula aplikasi.
+150	Membaca situasi
+151	Membaca topik
+152	Membaca jawapan penuh
+153	Tiada teks untuk dibaca
+154	Tidak dapat memuatkan bacaan (tiada sambungan)
+155	Tidak dapat memuatkan bacaan (tiada sambungan); maknanya akan dibaca sebagai ganti
+156	Jeda
+157	Sambung
+158	Bacaan oleh Syeikh {0}
+159	Suara 1
+160	Pencerita
+161	Dijeda
+162	{0} daripada {1}
+163	Kelajuan bacaan: {0}×
+164	Apa pendapat anda tentang jawapan ini?
+165	Penilaian
+166	{0} daripada 5
+167	Tinggalkan ulasan atau cadangan (pilihan): apa yang membantu anda? Apa yang kurang?
+168	Lampirkan teks situasi saya pada penilaian (ia kekal pada peranti anda kecuali anda menghantarnya)
+169	Disimpan pada peranti anda sahaja; anda akan menemuinya di bawah “Simpanan”
+170	Simpan penilaian
+171	Jazakallahu khairan atas penilaian anda
+172	Sunting
+173	Semua penilaian saya
+174	Pilih bilangan bintang dahulu
+175	Penilaian anda telah disimpan, terima kasih
+176	Rifqat al-Uswa — penilaian dan maklum balas pengguna (versi {0})
+177	Analisis situasi
+178	Situasi
+179	Tarikh:
+180	Topik:
+181	Padanan:
+182	Teks situasi:
+183	Ulasan:
+184	Belum ada penilaian
+185	Maklum balas Rifqat al-Uswa
+186	Maklum balas tentang aplikasi Rifqat al-Uswa
+187	Penilaian dan maklum balas saya
+188	{0} penilaian
+189	Hantar maklum balas kepada pembangun
+190	Analisis:
+191	Buka situasi
+192	Padam
+193	lelaki
+194	perempuan
+195	Automatik
+196	Belum ada suara bahasa Melayu ditemui.
+197	Pasang suara bahasa Melayu
+198	Tiada suara bahasa Melayu dipasang. Di Windows: Settings → Time & language → Language & region → tambah “Malay” dengan ciri “Speech”, kemudian mulakan semula aplikasi.
+199	Tiada suara lelaki yang disahkan ditemui; cuba suara yang ada dan pilih yang terbaik. Aplikasi merendahkan nada suara 1 secara automatik.
+200	Hanya satu suara bahasa Melayu tersedia; aplikasi akan membezakan dua suara melalui nada.
+201	Penilaian dipadam
+202	Anda memilih bacaan tanpa tilawah
+203	Rifqat al-Uswa
+204	Terangkan situasi anda tentang “{0}” dengan terperinci…
+205	Apa yang anda tulis tidak disimpan
+206	Format kunci tidak sah (ia bermula dengan sk-ant-)
+207	Tetapan disimpan
+208	Kunci dipadam
+209	Pilihan disimpan
+210	Pasang aplikasi
+211	tanda kesakitan yang teruk
+212	Apa yang anda tulis terutamanya tentang “{0}”
+213	, dan bertindih dengan “{0}”
+214	, dalam konteks hubungan anda dengan {0}
+215	Apa yang anda tulis berkaitan hubungan anda dengan {0}.
+216	Kata-kata anda menunjukkan perasaan {0}. Perasaan ini boleh difahami dan anda tidak dipersalahkan kerana mempunyainya; yang penting ialah apa yang kita lakukan dengannya.
+217	dan
+218	Situasi seperti ini mungkin disertai perasaan {0}, walaupun anda tidak menyatakannya secara jelas.
+219	atau
+220	Situasi ini nampaknya berat bagi anda dan sudah berlarutan, jadi kita akan mulakan dengan apa yang meringankan tekanan sekarang sebelum pelan jangka panjang.
+221	Saya juga perasan anda bercakap tentang kesilapan anda sendiri; mengakui kesilapan ialah separuh jalan, dan petunjuk Nabi membuka bagi anda pintu memperbaiki, bukan pintu menghukum diri.
+222	Di sini anda pihak yang dizalimi; jalan Nabi mula-mula mengiktiraf hak anda, kemudian menawarkan pilihan yang lebih tinggi tanpa memaksanya ke atas anda.
+223	Contoh paling dekat yang saya temui untuk situasi anda: “{0}”.
+224	## Topik yang dikesan
+225	keyakinan
+226	Perasaan:
+227	Hubungan:
+228	Penulis mengakui kesilapan sendiri:
+229	ya
+230	tidak
+231	## Situasi daripada sirah dan al-Quran (ditemui)
+232	Apa yang berlaku:
+233	Prinsip:
+234	Batasan penerapan:
+235	Teks:
+236	[ringkasan makna]
+237	Ayat:
+238	## Ayat (ditemui)
+239	Pengajaran:
+240	## Hadis (ditemui)
+241	Taraf:
+242	## Doa sahih (ditemui)
+243	## Bacaan al-Quran dan Nabi tentang topik
+244	Kunci API belum ditetapkan.
+245	Kunci API tidak sah atau telah tamat tempoh.
+246	Kunci ini tiada akses kepada model ini.
+247	Had permintaan telah dilampaui buat sementara. Sila cuba sebentar lagi.
+248	Perkhidmatan Claude sedang sibuk. Sila cuba sebentar lagi.
+249	Permintaan gagal ({0}).
+250	Ralat semasa penstriman
+251	Tiada sambungan internet, atau permintaan disekat. Analisis sahih di atas berfungsi tanpa internet.
+252	Membaca apa yang anda tulis dan memahami konteksnya…
+253	Mengesan topik, perasaan dan hubungan yang terlibat…
+254	Mencari situasi berhampiran daripada sirah dan kisah para nabi…
+255	Mencari ayat dan hadis yang berkaitan…
+256	Menyemak taraf dan sumber teks…
+257	Membina bacaan dan pelan praktikal…
+258	Pilih penilaian anda
+259	Lemah
+260	Sederhana
+261	Baik
+262	Sangat baik
+263	Cemerlang
+264	Terangkan apa yang anda lalui dengan kata-kata anda sendiri, dan kami akan membacanya bersama anda dalam cahaya al-Quran al-Karim, Sunnah Nabi dan sirah.
+265	Analisis situasi saya
+266	Aplikasi renungan dan panduan — bukan fatwa, dan bukan pengganti ulama atau pakar. Setiap ayat dan hadis di dalamnya datang daripada perpustakaan yang disahkan beserta sumber dan tarafnya, dan tiada teks yang direka.
+267	Teroka mengikut situasi anda
+268	Topik kehidupan, setiap satu dengan bacaan al-Quran dan Nabi, situasi, ayat, hadis dan doa
+269	Mengikut topik
+270	Semua situasi (
+271	‹ Kembali ke topik
+272	Perpustakaan yang disahkan
+273	Ayat, hadis dan doa yang menjadi sandaran analisis, beserta sumber dan taraf
+274	Simpanan
+275	Situasi, ayat dan hadis yang anda simpan (pada peranti ini sahaja)
+276	Tentang Rifqat al-Uswa
+277	Bagaimana ia berfungsi?
+278	Aplikasi menganalisis apa yang anda tulis secara setempat pada peranti anda: ia mengesan topik, perasaan dan hubungan yang terlibat, kemudian mencari daripada perpustakaan yang disahkan (situasi daripada sirah dan kisah para nabi, ayat, dan hadis beserta tarafnya) teks yang paling dekat dengan situasi anda, dan membina bacaan serta pelan praktikal daripadanya.
+279	Privasi:
+280	Apa yang anda tulis tidak pernah dihantar ke mana-mana pelayan dan tidak disimpan. Satu-satunya pengecualian: jika anda mengaktifkan “Perdalam dengan AI” dengan kunci anda sendiri, teks anda dan petikan yang ditemui dihantar terus kepada Claude (Anthropic) untuk menghasilkan analisis.
+281	Amanah ilmiah:
+282	Aplikasi ini tidak pernah menjana ayat atau hadis; setiap teks diambil daripada perpustakaan sebagaimana adanya. Terjemahan makna al-Quran dalam bahasa Melayu ialah karya Abdullah Muhammad Basmeih (melalui Tanzil.net); terjemahan hadis bahasa Melayu disediakan untuk aplikasi ini daripada terjemahan Inggeris sunnah.com dan dinyatakan sedemikian. Ayat dipaparkan dalam ejaan biasa; rujuk mushaf ketika membaca.
+283	Ini ialah aplikasi renungan dan panduan; ia bukan pengganti fatwa ulama yang berkelayakan, atau rundingan dengan pakar kesihatan mental atau undang-undang apabila perlu.
+284	OK
+285	Tetapan
+286	Bahasa / اللغة
+287	العربية
+288	Paparan
+289	Cerah
+290	Gelap
+291	Saiz fon
+292	Kecil
+293	Biasa
+294	Besar
+295	Lebih besar
+296	Baris pada penjelasan
+297	Berbaris
+298	Tanpa baris
+299	Ayat dan hadis sentiasa dipaparkan dengan baris penuh.
+300	Kelajuan bacaan suara
+301	Perlahan
+302	Biasa
+303	Laju
+304	Lebih laju
+305	Ayat dibacakan oleh qari
+306	Dengar
+307	Ayat dibacakan dalam bahasa Arab daripada rakaman sebenar qari terkenal (memerlukan internet), diikuti makna bahasa Melayunya. Tanpa internet, hanya maknanya dibaca.
+308	Suara 1 — hadis, doa dan makna ayat
+309	Cuba
+310	Suara 2 — pencerita (tajuk dan penjelasan)
+311	Perdalam dengan AI (pilihan) — kunci API Claude
+312	Analisis sahih berfungsi sepenuhnya tanpa kunci dan tanpa internet. Kunci menambah lapisan analisis generatif yang terhad kepada teks yang ditemui sahaja. Kunci disimpan pada peranti ini sahaja dan dihantar terus ke api.anthropic.com. Dapatkan di console.anthropic.com
+313	Model
+314	Padam kunci
+315	Bacaan suara
+316	Aplikasi renungan yang menganalisis situasi anda dan menghubungkannya dengan al-Quran al-Karim, Sunnah Nabi dan sirah, dengan sumber yang disahkan dan taraf hadis yang jelas.
+317	Rifqat al-Uswa
+318	Utama
+319	Navigasi
+320	Topik
+321	Perpustakaan ayat dan hadis
+322	Perpustakaan
+323	Tentang aplikasi dan privasi
+324	Tentang aplikasi
+325	Tulis apa yang berlaku, dengan cara anda sendiri dan seterperinci yang anda mahu… Siapa? Apa yang berlaku? Bagaimana perasaan anda? (bahasa Melayu atau Arab)
+326	Cari topik atau situasi… cth. marah, hutang, ibu bapa
+327	Cari dalam teks… cth. sabar, rezeki, marah
+328	Bahagian sebelumnya
+329	Main atau jeda
+330	Bahagian seterusnya
+331	Kelajuan bacaan
+332	Henti
+333	Hentikan bacaan
+334	Penganiayaan dan pencerobohan
+335	Ibn Hisyam, al-Sirah al-Nabawiyyah
+336	Kesilapan
+337	Keluarga
+338	Masyarakat
+339	Perasaan dan ujian
+340	Kepimpinan
+341	Kejayaan dan kekuatan
+342	Ibn Kathir, al-Bidayah wa al-Nihayah
+343	Keputusan sukar
+344	Hubungan
+345	Yusuf, alaihissalam
+346	Tafsir Ibn Kathir tentang surah Yusuf
+347	Ya'qub, alaihissalam
+348	Yunus, alaihissalam
+349	Ayyub, alaihissalam
+350	Tafsir Ibn Kathir (dengan berhati-hati terhadap riwayat Israiliyyat)
+351	Musa, alaihissalam
+352	Ibrahim, alaihissalam
+353	Maryam, alaihassalam
+354	Ibu Nabi Musa
+355	Abu Bakar al-Siddiq radhiallahu anhu
+356	Khadijah radhiallahu anha
+357	Ummu Salamah radhiallahu anha
+358	Abu Hurairah radhiallahu anhu
+359	Ummu Sulaim radhiallahu anha
+360	Juraij si ahli ibadah
+361	Salman al-Farisi radhiallahu anhu
+362	Hanzalah radhiallahu anhu
+363	Abu Zar al-Ghifari radhiallahu anhu
+364	Fatimah radhiallahu anha
+365	Dua anak Adam
+366	Tafsir Ibn Kathir tentang surah al-Ma'idah
+367	Qarun dan kaumnya
+368	Sulaiman, alaihissalam
+369	Pemilik dua kebun dan sahabatnya
+370	Tafsir Ibn Kathir tentang surah al-Kahfi
+371	Nuh, alaihissalam
+372	Tafsir Ibn Kathir tentang surah Hud
+373	Luqman al-Hakim
+374	Adam, alaihissalam
+375	Zakaria, alaihissalam
+376	Hajar, alaihassalam
+377	Seorang lelaki daripada umat terdahulu
+378	Abu Sufyan di hadapan Heraclius
+379	Seorang lelaki yang menziarahi saudaranya
+380	Perasaan dan diri
+381	Hubungan dan keluarga
+382	Kerja dan wang
+383	Kesihatan dan pengajian
+384	Masyarakat dan keadilan
+385	Kepimpinan dan keputusan
+386	Mahmoud Khalil Al-Husary
+387	Muhammad Siddiq Al-Minshawi
+388	Abdul Basit Abdul Samad
+389	Mishary Rashid Alafasy
+390	Maher Al-Muaiqly
+391	Saad Al-Ghamdi
+392	Fares Abbad
+393	Tiada tilawah (hanya makna dibaca)
+394	Claude Opus 5 — analisis paling mendalam (lalai)
+395	Claude Sonnet 5 — seimbang dan lebih pantas
+396	Claude Haiku 4.5 — paling pantas dan paling murah
+397	Situasi paling dekat dengan situasi anda, daripada al-Quran
+398	Situasi paling dekat dengan situasi anda, daripada kehidupan Nabi
+399	,
+400	;
+401	Suara lelaki
+402	dengan merendahkan nada
+403	Suara perempuan
+404	dengan menaikkan nada
+405	Suara yang dipasang pada peranti ini
+406	Pasang lebih banyak suara
+407	Belum ada suara ditemui untuk bahasa ini.
+408	Tiada suara {0} dipasang. Di Windows: Settings → Time & language → Language & region → tambah “{1}” dengan ciri “Speech”, kemudian mulakan semula aplikasi (Windows menyediakan suara lelaki “{2}”).
+409	Tiada suara lelaki dipasang untuk bahasa ini; memilih “Suara lelaki” merendahkan nada suara yang ada. Untuk suara lelaki sebenar, pasang suara tambahan daripada tetapan teks-ke-pertuturan peranti anda.
+410	Suara lelaki disenaraikan dahulu.
+411	Kunci akan dibuang apabila anda menyimpan
+412	Bahasa dan paparan
+413	Bahasa / Language / اللغة
+414	Analisis lebih mendalam dengan AI (pilihan)
+415	Kunci API Claude
+416	Batal
+417	Bahasa · Language · اللغة
+418	Tutup tanpa menyimpan
+419	Laporkan jawapan ini
+420	Sebab laporan (tulis di sini):
+421	Soalan saya:
+422	Jawapan model:
+423	Rifqat al-Uswa {0} · {1}
+424	Laporan tentang jawapan AI dalam Rifqat al-Uswa
+425	Tetapan pertuturan peranti
+426	Dengar tanpa internet
+427	Memuat turun… {0} daripada {1}
+428	Dimuat turun untuk didengar tanpa internet ({0} MB)
+429	Dimuat turun sebahagian ({0} daripada {1}).
+430	Muat turun bacaan qari ini ({0} ayat, kira-kira {1} MB) untuk mendengar tanpa sambungan.
+431	Qari lain sedang dimuat turun; sila tunggu sehingga selesai.
+432	Pilih qari dahulu
+433	Ruang storan tidak mencukupi
+434	Tidak dapat memulakan muat turun
+435	Muat turun selesai: {0}
+436	Sebahagian ayat tidak dapat dimuat turun; semak sambungan anda dan cuba lagi
+437	Muat turun dihentikan
+438	Bacaan qari telah dibuang daripada peranti
+439	Muat turun
+440	Selesaikan muat turun
+441	Al-Minshawi (mujawwad)
+442	Abdul Basit (mujawwad)
+443	Muhammad Al-Tablawi
+444	Muhammad Jibreel
+445	Abdul Rahman Al-Sudais
+446	Saud Al-Shuraim
+447	Yasser Al-Dosari
+448	Ali Al-Hudhaifi
+449	Muhammad Ayyub
+450	Abdullah Basfar
+451	Abu Bakr Al-Shatri
+452	Ahmad Al-Ajmi
+453	Nasser Al-Qatami
+454	Hani Al-Rifai
+455	Khalid Al-Qahtani
+456	Salah Al-Budair
+457	Ali Jaber
+458	Akram Al-Alaqimi
+459	Ayman Suwaid
+460	Dengan kata-kata anda:
+461	Apa yang anda rasa
+462	Apa yang paling mungkin anda perlukan
+463	Kerana anda menulis:
+464	(disimpulkan daripada konteks kata-kata anda)
+465	Apa yang menarik anda ke dua arah
+466	Masa
+467	Pihak yang terlibat dan beratnya situasi
+468	Mengapa situasi ini?
+469	Persamaannya dengan kes anda:
+470	Masalah di sana:
+471	Dan petunjuk di dalamnya ialah:
+472	Satu soalan untuk dibawa bersama anda
+473	Untuk bacaan yang lebih tepat, tambahkan:
+474	Apa yang anda tulis membawa kesakitan yang mendalam, dan keselamatan anda didahulukan
+475	Anda bercakap sebagai orang yang melakukan kesilapan dan mahu memperbaikinya
+476	Anda bercakap sebagai orang yang kehilangan seseorang yang disayangi
+477	Anda bercakap sebagai orang yang telah disakiti
+478	Anda memikul beban menjaga {0}
+479	Anda risau tentang {0}
+480	Anda berdepan keputusan yang belum anda buat
+481	Keselamatan anda dahulu: berada di tempat yang selamat sebelum sebarang renungan
+482	Membuat keputusan dengan tenang bahawa ia paling dekat dengan yang betul
+483	Memperbaiki apa yang rosak dan tahu di mana hendak bermula
+484	Langkah praktikal yang jelas: apa yang perlu dilakukan sekarang
+485	Memahami makna dan hikmah apa yang berlaku
+486	Agar kesakitan anda didengar dan difahami sebelum sebarang nasihat
+487	Antara kasih anda kepada {0} dan luka atas apa yang mereka lakukan
+488	Antara keterikatan anda kepada orang yang anda sayangi dan luka atas apa yang berlaku
+489	Antara marah kepada orang lain dan menyalahkan diri sendiri
+490	Antara tanggungjawab anda terhadap {0} dan keperluan anda sendiri untuk berehat
+491	Antara keinginan untuk membuat keputusan dan takut tersalah pilih
+492	Kesedihan yang datang daripada kasih: semakin anda sayang, semakin sakit
+493	Antara menyesal atas apa yang anda lakukan dan takut pandangan orang terhadap anda
+494	Antara putus asa yang anda rasa dan satu soalan yang menunjukkan anda masih mencari jalan keluar
+495	Sesuatu yang berterusan sejak sekian lama, bukan peristiwa sekali
+496	Sesuatu yang telah berlaku dan berakhir, tetapi masih memberi kesan kepada anda
+497	Kerisauan anda lebih kepada apa yang akan datang daripada apa yang telah berlaku
+498	Siapakah orang yang terlibat?
+499	Orang yang terlibat ialah
+500	Bagaimana perasaan anda?
+501	Saya rasa
+502	Apa yang anda mahu berlaku?
+503	Saya mahu
+504	Apa yang berlaku, secara terperinci?
+505	Apa yang berlaku ialah
+506	Sejak bila?
+507	Ia bermula
+508	Apa yang paling mungkin anda perlukan: {0}.
+509	Anda ditarik ke dua arah: {0}.
+510	Kedudukan penulis:
+511	Apa yang paling mungkin mereka perlukan:
+512	Ketegangan dalaman:
+513	Masa:
+514	Kehidupan moden dan peralihan
+515	Tahap padanan:
+516	## Situasi harian yang serupa (untuk memahami situasi sahaja; bukan teks agama)
+517	Pandangan lebih mendalam tentang situasi anda
+518	Bacaan renungan berdasarkan kata-kata anda sahaja; ia bukan diagnosis psikologi atau fatwa.
+519	Inti situasi
+520	Di sebalik perasaan
+521	Sifat hubungan
+522	Corak dalam cara anda berfikir
+523	Apa yang dalam tangan anda, dan apa yang tidak
+524	Dalam tangan anda:
+525	Bukan dalam tangan anda:
+526	Kekuatan dalam apa yang anda tulis
+527	Tanda yang patut diberi perhatian
+528	Keutamaan sekarang
+529	## Analisis lebih mendalam (renungan, bukan diagnosis)
+530	Corak pemikiran:
+531	Tanda yang patut diberi perhatian:
+532	Marah ialah tenaga yang memberitahu anda bahawa salah satu batasan anda telah dilanggar atau keperluan anda tidak dihormati. Masalahnya bukan perasaan itu sendiri, tetapi saat ia mula mengemudi tindakan anda dan bukan anda yang mengemudinya.
+533	Kesedihan dan rasa berat menekan tenaga dan fikiran anda, sehingga tugas kecil kelihatan besar. Yang membantu di sini ialah mengurangkan apa yang anda harapkan daripada diri sendiri buat seketika, dan berpegang pada rutin yang mudah dan teman yang menenangkan.
+534	Kebimbangan dan terlalu banyak berfikir berjalan dalam satu kitaran: fikiran yang menakutkan, kemudian cubaan mengawalnya dengan lebih banyak berfikir, dan kebimbangan bertambah. Memutuskan kitaran bermula dengan memisahkan apa yang boleh dilakukan sekarang daripada apa yang hanya kemungkinan.
+535	Takut ialah penggera yang tugasnya melindungi anda, tetapi ia boleh berbunyi lebih kuat daripada bahaya sebenar. Soalan yang berguna: apakah bukti sebenar bahaya? Dan apa yang boleh saya lakukan jika ia berlaku?
+536	Kesunyian yang panjang mengubah cara kita melihat diri dan orang lain, sehingga semakin sukar untuk menghubungi orang semakin lama ia berlarutan. Jalan keluarnya ialah langkah kecil yang berulang, bukan satu lompatan besar.
+537	Putus asa menyempitkan pandangan sehingga hanya jalan buntu yang kelihatan. Ini bukan masa untuk keputusan besar; ini masa untuk mencari sokongan daripada Allah dan manusia, dan membina semula harapan dengan langkah paling kecil.
+538	Kehilangan datang dalam gelombang kejutan, kesedihan dan rindu, kadang-kadang marah atau rasa bersalah, dan ia tidak bergerak dalam garis lurus. Berduka atas orang yang disayangi bukan iman yang lemah; ia memerlukan masa, bukan tergesa-gesa.
+539	Sabar bukan menyembunyikan kesakitan atau berputus asa; ia ialah berdiri teguh sambil terus mengambil sebab. Sabar yang panjang memerlukan tempat bersandar dan saat-saat rehat, supaya ia tidak bertukar menjadi keletihan.
+540	Harapan yang realistik tidak menafikan kesukaran; ia melihat jalan melaluinya. Ia dibina dengan matlamat kecil yang boleh dicapai lebih daripada dengan angan-angan.
+541	Menyesal atas dosa ialah tanda hati yang hidup, tetapi berpusing dalam menghukum diri menghalang taubat itu sendiri. Jalan yang sihat: mengaku, berhenti, perbaiki apa yang boleh diperbaiki, kemudian teruskan.
+542	Was-was yang mengganggu membesar dengan cubaan untuk mendiamkannya melalui pengulangan dan mencari kepastian; semakin anda melayannya, semakin kuat ia. Ia perlu diabaikan dengan tegas, dan pakar diperlukan jika ia mula mengganggu kehidupan atau ibadah anda.
+543	Kelesuan rohani ialah peringkat yang dilalui ramai orang yang ikhlas, sering berkaitan dengan keletihan, kesibukan atau ketiadaan teman yang baik. Jalan kembali ialah amalan kecil yang konsisten, bukan semangat besar yang cepat pudar.
+544	Keletihan melampau datang daripada memberi untuk masa yang lama tanpa rehat, penghargaan atau pengisian semula, sehingga seseorang sampai kepada kepenatan dan rasa kebas. Rawatannya bukan usaha yang lebih banyak, tetapi mengagihkan semula beban dan menetapkan batasan yang jelas.
+545	Ingin menyenangkan semua orang selalunya ialah rasa takut ditolak atau mencari penerimaan. Harganya ialah anda terus menangguhkan keperluan sendiri sehingga ia terkumpul dalam diri sebagai keletihan atau rasa terkilan.
+546	Konflik suami isteri biasanya bukan tentang topik yang kelihatan, tetapi tentang keperluan yang lebih dalam: penghargaan, rasa selamat dan rasa didengari. Memahami keperluan ini pada kedua-dua pihak lebih penting daripada memenangi pertengkaran.
+547	Cemburu antara suami isteri berbeza daripada cemburu yang sihat yang melindungi hubungan hingga syak wasangka meletihkan yang memusnahkannya. Bezanya ialah sama ada ada bukti sebenar, atau ketakutan dalaman yang mencari pengesahan.
+548	Hati yang patah selepas berpisah seperti kehilangan: ada kesedihan, rindu dan mempersoalkan diri. Adalah biasa untuk berbolak-balik antara menerima dan ingin kembali sebelum anda tenang.
+549	Keputusan untuk berkahwin menghimpunkan hati, akal dan tekanan orang sekeliling. Tekanan, umur dan perbandingan boleh mendorong keputusan tergesa-gesa, manakala pilihan yang baik memerlukan kejelasan tentang nilai dan keserasian.
+550	Tingkah laku anak lebih kepada mesej daripada masalah: tentang keperluan perhatian, batasan atau rasa selamat, atau tentang peringkat perkembangan yang sedang dilaluinya. Didikan yang berkesan menggabungkan ketegasan dan kemesraan bersama.
+551	Hubungan dengan ibu bapa membawa seluruh zaman kanak-kanak kita, sebab itu ia memberi kesan lebih daripada hubungan lain. Berbakti yang sebenar memberi ruang kepada hormat dan kebaikan di samping batasan yang sihat apabila perlu.
+552	Hubungan adik-beradik dibentuk oleh peranan lama, perbandingan, pusaka dan tanggungjawab terhadap ibu bapa. Banyak konflik semasa ialah lanjutan luka lama yang tidak pernah dibincangkan.
+553	Dengan saudara-mara, budi bahasa, kewajipan dan campur tangan dalam hal peribadi bercampur aduk. Menyambung silaturahim adalah mungkin sambil mengekalkan batasan yang jelas dan jarak yang sihat.
+554	Persahabatan berdiri atas memberi dan menerima serta kepercayaan; apabila keseimbangannya terganggu lama, rasa terkilan muncul. Adalah bijak membezakan kawan yang sedang melalui masa sukar sementara daripada hubungan yang sentiasa meletihkan anda.
+555	Pengkhianatan menggoncang kepercayaan anda kepada orang itu dan juga kepada penilaian anda sendiri, menimbulkan soalan seperti “bagaimana saya tidak perasan?”. Pemulihan melalui beberapa peringkat; ia tidak semestinya bermakna kembali, dan tidak juga bermakna berdendam.
+556	Memaafkan ialah satu perjalanan, bukan keputusan sesaat, dan ia membebaskan hati anda dahulu. Ia tidak bermakna melupakan apa yang berlaku, melepaskan hak anda, atau kembali kepada punca kemudaratan.
+557	Keinginan untuk membalas dendam meluahkan kesakitan yang dalam dan rasa dizalimi yang mahu diiktiraf. Tetapi dendam mengikat anda lebih erat dengan orang yang menyakiti anda, manakala keadilan dan batasan membebaskan anda daripadanya.
+558	Syak wasangka mengisi ruang kosong maklumat dengan tafsiran paling buruk, terutama apabila ada luka lama. Menyemak dan bercakap secara langsung lebih berguna daripada membina penilaian atas kemungkinan.
+559	Mengumpat dan mengadu domba memusnahkan kepercayaan dalam seluruh persekitaran, sama ada anda yang bercakap atau yang diperkatakan. Menanganinya memerlukan batasan yang jelas, bukan reaksi yang marah.
+560	Tuduhan palsu menyakitkan kerana ia menyentuh nama baik dan maruah sekali gus, dan menimbulkan rasa tidak berdaya. Penanganan yang bijak menggabungkan menjelaskan kebenaran dengan tenang dan tidak terheret ke dalam pertelingkahan yang meletihkan.
+561	Konflik dengan jiran berulang kerana kedekatan yang berterusan, sehingga perkara kecil bertimbun hingga membesar. Komunikasi yang awal dan tenang sebelum rasa terkilan terkumpul ialah kuncinya.
+562	Tekanan kerja bukan datang daripada tugas semata-mata, tetapi daripada hubungan dan rasa adil serta dihargai. Mengetahui dengan tepat dari mana tekanan datang menunjukkan sama ada jawapannya perbualan, batasan atau perubahan.
+563	Kepimpinan menggabungkan hasil dan manusia, dan tekanannya datang daripada mengimbangi ketegasan dan belas kasihan. Jangkaan yang jelas dan layanan yang adil mencegah banyak masalah sebelum ia berlaku.
+564	Kerisauan kewangan antara tekanan paling berat kerana ia menyentuh rasa selamat anda, menghabiskan fikiran dan tidur. Memisahkan perancangan praktikal daripada kerisauan semata-mata mengembalikan sedikit kawalan kepada anda.
+565	Hutang membebankan jiwa sebelum poket, dan bersamanya datang rasa malu dan mengelak. Menghadapinya secara teratur — menyenaraikan hutang, bercakap dengan pemiutang, pelan yang realistik — meringankan beban lebih daripada melarikan diri.
+566	Keperluan material membawa tekanan harian dan rasa malu yang boleh lebih berat daripada keperluan itu sendiri. Nilai anda tidak terikat dengan apa yang anda miliki, dan meminta bantuan yang sah bukan kehinaan.
+567	Hasad dan perbandingan biasanya datang daripada rasa kekurangan atau kehilangan. Memberi perhatian kepada apa yang anda benar-benar mahu lebih berguna daripada memerhati apa yang orang lain ada.
+568	Takut akan ain boleh bertukar menjadi kebimbangan yang menjelaskan setiap masalah dengannya. Mencari perlindungan yang syar'i adalah baik, tetapi penting untuk tidak mengabaikan mencari punca sebenar masalah.
+569	Perbandingan di media sosial pada dasarnya tidak adil: anda melihat saat terbaik orang lain berbanding hari biasa anda. Terlalu banyak terdedah kepadanya melemahkan rasa cukup dan harga diri.
+570	Memerhati nikmat mengubah sudut pandang anda tanpa menafikan kesukaran. Ia kemahiran yang tumbuh melalui latihan harian, bukan perasaan yang kita tunggu datang sendiri.
+571	Penyakit menyentuh tubuh, fikiran dan rasa diri sekali gus, dan membawa kerisauan serta hilang kawalan. Menjaga sisi emosi ialah sebahagian daripada rawatan, bukan kemewahan.
+572	Tekanan pelajaran berganda apabila keputusan dikaitkan dengan harga diri atau harapan keluarga. Perancangan yang realistik dan rehat yang teratur membantu pembelajaran lebih daripada berjaga malam dan risau.
+573	Menangguh biasanya bukan malas semata-mata, tetapi lari daripada perasaan yang tidak menyenangkan: takut gagal, kesempurnaan, atau tugas yang kabur. Memecahkan tugas kepada langkah yang sangat kecil memecahkan kebekuan.
+574	Tabiat ketagihan berjalan dalam kitaran: tekanan, kemudian beralih kepada tabiat untuk lega, kemudian penyesalan yang mengembalikan tekanan. Memahami pencetusnya dan mengubah persekitaran lebih berkesan daripada bergantung pada kemahuan semata-mata.
+575	Bergelut dengan syahwat ialah sebahagian fitrah manusia, bukan bukti kerosakan. Menjaga kesucian dibina dengan mengurus pencetus, mengisi masa lapang dan jalan yang halal, lebih daripada menekan dan rasa bersalah.
+576	Takut akan mati dan akhirat boleh menjadi kesedaran yang bermanfaat, atau bertukar menjadi kebimbangan yang melumpuhkan kehidupan. Keseimbangan antara takut dan harap yang menjadikan perasaan ini pendorong dan bukan beban.
+577	Kezaliman menimbulkan dua kesakitan: kesakitan mudarat itu sendiri, dan kesakitan tidak mampu menolaknya. Rasa hak yang dirampas perlu diiktiraf dahulu, kemudian jalan yang sah untuk menuntutnya.
+578	Hinaan melukai maruah, sebab itu kesannya kekal dalam jiwa selepas situasi berakhir. Respons paling kuat biasanya yang memelihara maruah anda tanpa menurunkan anda ke tahap orang yang menghina.
+579	Apabila orang yang zalim berkuasa, kezaliman datang bersama takut akan akibatnya. Penanganan yang bijak mengimbangi melindungi diri dan mata pencarian anda dengan tidak berdiam diri tentang kebenaran, melalui cara yang ada.
+580	Kejujuran sukar apabila ia ada harganya, dan dusta menggoda dengan penyelesaian cepat lalu melahirkan kerisauan berterusan. Kejujuran yang bijak memilih masa dan cara tanpa melepaskan kebenaran.
+581	Amanah, rahsia dan janji meletakkan seseorang antara komitmennya dan tekanan keadaan. Kejelasan tentang apa yang anda benar-benar mampu sebelum berjanji melindungi anda daripada rasa malu kemudian.
+582	Pertengkaran yang panas memindahkan perbincangan daripada “apa yang betul?” kepada “siapa yang menang?”, dan kedua-dua pihak rugi. Bertenang dan menangguhkan perbualan sehingga marah reda melindungi hubungan dan kebenaran sekali gus.
+583	Kesombongan — anda atau orang lain — sering menyembunyikan rasa tidak cukup atau keperluan untuk membuktikan diri. Tawaduk yang sebenar datang daripada rasa selamat dalaman, bukan daripada merendah-rendahkan diri.
+584	Perbezaan agama dalam keluarga menyentuh identiti dan rasa kepunyaan sekali gus. Hidup bersama adalah mungkin dengan hormat dan hikmah, tanpa sesiapa melepaskan keyakinannya atau memaksanya ke atas orang lain.
+585	Keinginan untuk memberi ialah tanda kebaikan, dan manfaatnya disempurnakan dengan hikmah: memberi mengikut kemampuan anda, dan menyemak keperluan orang yang anda beri.
+586	Tidak berterima kasih menyakitkan kerana ia membuat anda rasa pemberian anda tidak dilihat. Ia membantu untuk menyemak semula jangkaan dan niat anda dalam memberi, tanpa membatalkan hak anda untuk dihargai.
+587	Keputusan sukar biasanya sukar kerana setiap pilihan ada harganya, dan kerana takut menyesal. Kejelasan tentang nilai paling penting bagi anda, syura dan istikharah meringankan keputusan walaupun ia tidak sempurna.
+588	Belas kasihan kepada haiwan ialah ukuran belas kasihan hati. Menangani apa yang anda lihat menggabungkan perasaan ikhlas dengan tindakan praktikal yang bertanggungjawab.
+589	Hidup di perantauan menggabungkan kehilangan yang biasa dengan usaha harian untuk menyesuaikan diri, dan rindu kampung halaman mungkin menyembunyikan rasa kehilangan identiti. Keseimbangan antara setia kepada akar dan keterbukaan kepada tempat baharu meringankan bebannya.
+590	Setiap perubahan besar — walaupun positif — membawa kehilangan apa yang biasa. Adalah biasa untuk melalui fasa kekeliruan sebelum tenang, kerana penyesuaian memerlukan masa.
+591	Dalam kecemasan fikiran bekerja dalam mod “bertahan”, sehingga pemikiran menyempit dan perasaan memecut. Keselamatan dan langkah praktikal didahulukan; akan ada masa kemudian untuk menangani kesan emosi.
+592	Masalah digital menyentuh privasi dan keselamatan, dan menimbulkan rasa terdedah dan hilang kawalan. Langkah praktikal yang cepat — melindungi akaun, menyimpan bukti, melaporkan — mengembalikan sebahagian kawalan itu.
+593	Kesukaran menetapkan batasan sering berkaitan dengan takut ditolak atau rasa bersalah. Batasan yang sihat tidak bermakna kasar; ia melindungi hubungan daripada rasa terkilan yang terkumpul.
+594	Harga diri yang rendah membuat seseorang membaca setiap situasi sebagai bukti kekurangannya. Nilai sebenar tidak diperoleh dengan pencapaian dan tidak hilang kerana kesilapan; ia asas untuk dibina.
+595	Marah sering ialah perasaan kedua yang mengawal perasaan yang lebih dalam: luka, rasa tidak dihargai, atau takut hilang kawalan. Tanya diri anda: apa sebenarnya yang menyakiti saya sebelum saya marah?
+596	Kesedihan ialah respons semula jadi terhadap kehilangan sesuatu yang penting bagi anda: seseorang, satu hubungan, atau gambaran yang anda harapkan. Ia tidak perlu dihalau tetapi dinamakan dan dilalui dengan lembut.
+597	Kebimbangan hidup di masa depan: ia membesarkan apa yang mungkin berlaku dan mengecilkan kemampuan anda menghadapinya. Membezakan “apa yang sebenarnya berlaku” daripada “apa yang saya takut akan berlaku” mengembalikannya kepada saiz sebenar.
+598	Rasa bersalah yang sihat berkata “saya telah melakukan kesilapan” dan mendorong untuk memperbaiki; yang meletihkan berkata “saya jahat” dan melumpuhkan. Yang pertama pintu taubat; yang kedua bukan sesuatu yang dituntut agama daripada anda.
+599	Dihina di hadapan orang menyentuh maruah, sebab itu ia lebih menyakitkan daripada banyak kehilangan. Hinaan yang menimpa anda menggambarkan orang yang menghina; ia tidak menentukan nilai anda.
+600	Kesunyian bukan kerana sedikit orang di sekeliling anda, tetapi kerana tiada yang memahami anda. Ia menunjukkan keperluan yang sah untuk rasa kepunyaan, bukan kekurangan dalam diri anda.
+601	Putus asa membuat saat sukar kelihatan kekal dan menyeluruh. Tetapi hakikat bahawa anda menulis dan mencari menunjukkan sebahagian diri anda masih berharap.
+602	Rasa serba salah sering tanda bahawa setiap pilihan mempunyai nilai bagi anda, bukan tanda pemikiran yang lemah. Kejelasan tentang nilai datang sebelum kejelasan tentang keputusan.
+603	Keletihan ialah mesej daripada fikiran dan tubuh anda bahawa pemberian telah melebihi tenaga anda. Mengabaikannya tidak menjadikan anda lebih kuat; ia hanya menangguhkan keruntuhan.
+604	Cemburu pada asasnya ialah takut kehilangan tempat atau orang yang disayangi. Memahami ketakutan di sebaliknya lebih berguna daripada melawannya sendirian.
+605	Dikecewakan melukai dua kali: sekali kerana perbuatan itu sendiri, dan sekali kerana runtuhnya kepercayaan yang anda bina. Sebab itu pemulihannya memerlukan masa dan tidak boleh dipintas dengan satu keputusan.
+606	Keterikatan kepada orang yang anda sayangi menggandakan kesakitan yang mereka sebabkan; kekuatan kasih itulah kekuatan luka. Ini tidak bermakna menyayangi itu satu kesilapan.
+607	Kegembiraan atau rasa syukur dalam kata-kata anda ialah tanda kesejahteraan; nikmat yang anda perhatikan di tengah kesukaran ialah asas untuk dibina.
+608	Perkahwinan ialah hubungan paling dekat dan paling dalam kesannya; konflik di dalamnya tidak diukur dengan siapa yang menang, tetapi dengan berapa banyak kasih sayang dan rasa selamat yang tinggal selepasnya.
+609	Tempoh pertunangan ialah masa untuk berkenalan dan menguji; apa yang merisaukan anda sekarang ialah maklumat berharga sebelum komitmen, bukan sekadar halangan.
+610	Dengan ibu bapa, kewajipan berbakti bertemu keperluan anda untuk berdikari; berbakti tidak bermakna memadamkan keperibadian anda, dan berdikari tidak bermakna memutuskan hubungan.
+611	Dengan anak-anak anda, anda bertanggungjawab dan pendidik, bukan setaraf dengan mereka; tingkah laku mereka sering ialah mesej tentang keperluan yang belum mereka temui kata-katanya.
+612	Konflik adik-beradik membawa sejarah panjang perbandingan dan peranan lama; sebab itu kejadian kecil boleh kelihatan lebih besar daripada sebenarnya.
+613	Dengan saudara-mara, batasan dan kewajipan bertindih; menyambung silaturahim tidak bermakna menerima campur tangan dalam segala hal.
+614	Dalam hubungan dengan orang yang bertanggungjawab ada jurang kuasa; sebab itu ia memerlukan hikmah dalam masa dan cara, serta merekod apa yang berlaku, bukan konfrontasi emosi.
+615	Dengan rakan sekerja anda berurusan setiap hari dengan orang yang tidak anda pilih; yang diperlukan ialah hubungan profesional yang saling menghormati, tidak semestinya persahabatan.
+616	Persahabatan ialah hubungan pilihan; apa yang menyakitkan di dalamnya menyakitkan kerana anda meletakkan kepercayaan padanya, dan anda berhak menyemak semula apa yang anda beri dan apa yang anda terima.
+617	Jiran hadir dalam hidup anda setiap hari dan mempunyai hak yang besar; konflik dengannya ditangani dengan hikmah dan sabar lebih daripada dengan pertembungan.
+618	Mereka yang di bawah tanggungjawab anda melihat keadilan anda sebelum kata-kata anda; kepimpinan di sini ialah amanah yang akan ditanya.
+619	Dengan guru ada jurang ilmu dan kuasa; menghormatinya tidak menghalang anda daripada meminta hak anda dengan sopan dan jelas.
+620	Apabila pihak lain itu ialah diri anda, hubungan anda dengan diri sendiri memerlukan keadilan yang sama yang anda berikan kepada orang lain: bukan kekerasan dan bukan alasan.
+621	Allah hadir dalam kata-kata anda: sokongan dalaman yang berharga yang membantu anda kekal teguh.
+622	Anda telah mencuba dan berusaha: anda tidak berputus asa; anda mencari jalan yang lebih baik.
+623	Kesabaran dan ketahanan anda setakat ini: kekuatan sebenar yang patut dijaga, bukan dihabiskan.
+624	Anda bertanya dan mencari jalan keluar: itulah permulaan penyelesaian.
+625	Kejujuran anda dengan diri sendiri dan pengakuan anda atas kesilapan: sesuatu yang ramai orang tidak mampu lakukan.
+626	Keprihatinan dan perhatian anda terhadap orang lain: hati anda hadir walaupun letih.
+627	Kemampuan anda memerhati nikmat di tengah kesukaran.
+628	Anda meluahkan apa yang anda rasa dengan kata-kata: meluahkan kesakitan ialah langkah pertama untuk memahaminya.
+629	Anda menyebut tentang tidur: tidur yang terganggu menjadikan segala-galanya terasa lebih berat; jika ia berterusan berminggu-minggu, adalah bijak untuk berjumpa doktor.
+630	Anda menyebut gejala fizikal: tubuh memikul apa yang dipikul jiwa, dan adalah bijak untuk doktor menenangkan anda tentang kesihatan anda.
+631	Pengasingan yang berterusan menjadikan setiap kerisauan lebih berat; mempunyai walaupun seorang yang dipercayai untuk berbual mengubah banyak perkara.
+632	Rasa berat yang besar dan berpanjangan wajar mendapat sokongan profesional (kaunselor atau ahli terapi), dan memintanya ialah kekuatan, bukan kelemahan.
+633	Keutamaan sekarang ialah keselamatan anda; segala yang lain datang selepas itu.
+634	Keutamaannya ialah meringankan tekanan pada fikiran dan tubuh anda sebelum mencari penyelesaian besar.
+635	Sebelum menilai situasi, semak semula cara anda membacanya; sebahagian beratnya datang daripada bacaan, bukan daripada realiti.
+636	Keutamaannya ialah menjadi jelas tentang apa yang paling penting bagi anda, kemudian memilih satu langkah kecil yang boleh disemak semula.
+637	Keutamaannya ialah agar kesakitan anda didengar dan dirangkul sebelum sebarang penyelesaian.
+638	Keutamaannya ialah satu langkah ikhlas untuk memperbaiki, bukan pelan yang lengkap.
+639	Keutamaannya ialah satu langkah praktikal hari ini, bukan menyelesaikan semuanya sekali gus.
+640	Keutamaannya ialah mencari makna yang membantu anda menanggungnya, tanpa menuntut diri anda memahami semua hikmahnya sekarang.
+641	Membuat generalisasi
+642	Perkataan mutlak muncul dalam apa yang anda tulis. Apabila kita terluka, kita melihat seluruh situasi dalam satu warna; soalan yang berguna ialah: adakah ini benar setiap kali, atau kebanyakan masa, atau sesekali?
+643	Menghakimi diri sendiri
+644	Anda menggambarkan diri dengan penilaian yang menyeluruh. Tindakan anda boleh dinilai dan diperbetulkan, tetapi diri anda lebih besar daripada satu kesilapan atau satu pengalaman.
+645	Membesar-besarkan bencana
+646	Kata-kata anda cenderung kepada kemungkinan paling buruk. Kesakitannya nyata, tetapi penilaian muktamad tentang masa depan masih terlalu awal; keadaan berubah, dan apa yang kelihatan tertutup hari ini mungkin terbuka esok.
+647	Membaca fikiran orang
+648	Anda menganggap apa yang ada dalam hati orang lain. Anggapan anda mungkin betul, tetapi ia kekal sangkaan sehingga disahkan; menyemak sebelum menilai melindungi hubungan dan melindungi anda.
+649	Kekerasan perkataan “mesti”
+650	“Saya mesti” dan “saya sepatutnya” berulang dalam kata-kata anda. Piawaian yang tinggi itu indah, tetapi apabila ia menjadi arahan yang keras ia bertukar menjadi hukuman diri dan bukan pendorong.
+651	Perbandingan
+652	Anda mengukur diri dengan orang lain. Perbandingan menunjukkan kepada anda tingkap pameran kehidupan orang lain berbanding belakang tabir kehidupan anda, sehingga anda sentiasa kalah pada neraca yang tidak adil.
+653	Menyalahkan diri atas segalanya
+654	Anda meletakkan seluruh tanggungjawab ke atas diri sendiri. Tanggungjawab yang jujur bermakna mengetahui bahagian sebenar anda, bukan memikul bahagian orang lain juga.
+655	Respons anda, batasan anda, menuntut hak anda melalui jalan yang sah, dan apa yang anda benarkan menetap dalam hati anda
+656	Niat orang yang menyakiti anda, dan apa yang sebenarnya dilakukannya
+657	Cara anda menjaga diri dalam kesedihan, dan apa yang anda hadiahkan kepada yang telah pergi berupa doa dan kebaikan
+658	Apa yang telah Allah takdirkan dan apa yang telah berlalu
+659	Mengaku, memohon maaf, memperbaiki, dan berazam untuk tidak mengulanginya
+660	Bagaimana dan bila orang lain akan menerima permohonan maaf anda
+661	Mengumpul maklumat, bermesyuarat, solat istikharah, kemudian mengambil langkah pertama
+662	Menjamin hasilnya terlebih dahulu
+663	Apa yang anda berikan mengikut kemampuan, meminta bantuan, dan hak anda untuk berehat
+664	Kesembuhannya, atau perubahannya sepenuhnya
+665	Kehadiran anda, perbualan anda, dan cara yang ada pada anda
+666	Pilihannya sendiri, dan apa yang belum berlaku
+667	Meminta bantuan sekarang, dan kekal dekat dengan orang yang anda percayai
+668	Memikul ini sendirian; itu tidak dituntut daripada anda
+669	Respons anda, langkah seterusnya, dan cara anda bercakap dengan diri sendiri
+670	Tindakan dan perasaan orang lain, dan apa yang telah berlalu
+671	Nampaknya yang membebankan anda bukan ketiadaan sebab yang jelas untuk memilih, tetapi adanya sebab sebenar yang menarik ke kedua-dua arah.
+672	Nampaknya keraguan di sini kurang berkaitan dengan maklumat yang tiada dan lebih kepada beratnya keputusan itu sendiri; semakin sesuatu itu dekat dengan hidup dan masa depan anda, semakin berat dan perlahan pilihannya.
+673	Nampaknya apa yang anda lalui bukan perselisihan biasa, tetapi kemudaratan yang berulang dan menyentuh maruah serta keselamatan anda; sebab itu setiap fikiran tentang langkah seterusnya bermula dengan hak anda untuk selamat.
+674	Nampaknya situasi ini mengandungi dua kesakitan sekali gus: kesakitan kezaliman itu sendiri, dan kesakitan tidak mampu membalasnya apabila ia datang daripada orang yang berkuasa ke atas anda. Gabungan itulah yang menjadikan diam terasa berat dan bercakap terasa menakutkan pada masa yang sama.
+675	Nampaknya kerisauan di sini hidup di masa depan lebih daripada masa kini; fikiran mendahului peristiwa dan melaluinya berkali-kali sebelum ia berlaku, membesarkan apa yang mungkin berlaku sebanyak ia mengecilkan kemampuan anda menghadapinya.
+676	Nampaknya apa yang anda pikul ialah beban sebenar walaupun ia tiada satu punca yang jelas; kesedihan tidak selalu memerlukan peristiwa tertentu untuk menjadi tulen, dan kadang-kadang ia himpunan perkara kecil yang bertimbun secara senyap.
+677	Nampaknya yang anda rindui bukan sangat orang di sekeliling, tetapi seseorang yang memerhati dan bertanya khabar anda; seseorang boleh berada di tengah ramai dan masih rasa tidak dilihat.
+678	Nampaknya yang menyakiti anda bukan hanya apa yang berlaku, tetapi apa maksudnya bagi anda: bahawa ia datang daripada orang yang anda tidak sangka, atau dengan cara yang menyentuh maruah dan rasa keadilan anda.
+679	Nampaknya apa yang anda lalui bukan kesedihan sementara, tetapi kehilangan yang menyusun semula banyak perkara dalam diri anda; ketiadaan tidak mengambil orang itu sahaja, ia juga mengambil kebiasaan, perbualan dan peranan yang menjadi sebahagian hari anda.
+680	Nampaknya yang menyibukkan anda bukan hanya kesilapan itu, tetapi apa yang datang selepasnya: bagaimana memperbaiki apa yang rosak, dan bagaimana memandang diri selepas apa yang berlaku. Kerisauan itu sendiri tanda hati nurani yang hidup.
+681	Nampaknya anda memikul lebih daripada yang ditunjukkan oleh kata-kata anda: beban praktikal menjaga, kerisauan senyap terhadap orang yang anda sayangi, dan mungkin rasa bahawa keletihan anda tidak dilihat.
+682	Nampaknya kerisauan anda datang daripada kasih lebih daripada yang lain; anda memikirkan seseorang yang penting bagi anda, dan cuba melihat apa yang mungkin datang sebelum ia datang.
+683	Nampaknya apa yang anda tulis bukan sangat menggambarkan satu situasi tetapi satu himpunan: tekanan yang berterusan sehingga keletihan menjadi sebahagian hari anda.
+684	Nampaknya kesukaran di sini bukan hanya pada situasi, tetapi pada bagaimana ia memberi kesan kepada gambaran anda tentang diri; apa yang berlaku di luar cepat bertukar menjadi penilaian di dalam.
+685	Nampaknya apa yang anda lalui di perantauan bukan hanya jauh dari satu tempat, tetapi jauh dari satu versi diri anda yang hidup di tengah orangnya, bahasanya dan butiran kecilnya; sebab itu rindu kampung halaman kadang-kadang datang sebagai keletihan yang sumbernya tidak dapat anda namakan.
+686	Nampaknya apa yang anda lalui ialah masa peralihan lebih daripada satu masalah; perubahan mengambil yang biasa sebelum menawarkan gantinya, dan di antara keduanya ada tempoh kekeliruan yang sangat biasa.
+687	Nampaknya ini berlaku secara tiba-tiba dan meninggalkan kesan kejutan sebelum yang lain; dalam saat seperti ini pemikiran menyempit dan kerisauan memecut, dan itu reaksi semula jadi, bukan kelemahan.
+688	Nampaknya apa yang berlaku di alam digital meninggalkan kesan di luar skrin: rasa terdedah, atau hilang kawalan ke atas apa yang menjadi milik anda, dan perasaan itu nyata dan boleh difahami.
+689	Nampaknya kesukaran di sini bukan permintaan itu sendiri, tetapi mengatakan “tidak” kepada orang yang meminta; menolak sering terasa seperti kasar atau kehilangan, walaupun ia perlindungan yang sah bagi masa dan tenaga anda.
+690	Nampaknya apa yang anda lalui di tempat kerja melangkaui tugas itu sendiri kepada apa yang menyentuh rasa dihargai, keadilan dan kestabilan; dan perkara ini meresap ke rumah dan tidur lebih daripada yang kita jangka.
+691	Nampaknya tekanan kewangan di sini tidak terhad kepada angka, tetapi meluas kepada rasa selamat dan kemampuan merancang, dan mungkin rasa malu di hadapan orang lain.
+692	Nampaknya konflik di sini bukan hanya tentang topik yang kelihatan, tetapi tentang apa yang terletak di bawahnya: keperluan untuk dihargai, untuk kata-kata didengar dan difahami, atau untuk rasa selamat dalam hubungan.
+693	Nampaknya yang menyibukkan anda dalam mendidik anak-anak melangkaui tingkah laku itu sendiri kepada mencari cara yang betul; kerisauan itu sahaja tanda keprihatinan sebenar, bukan kegagalan.
+694	Nampaknya yang menyibukkan anda menyentuh hubungan anda dengan Allah dan cara anda melihat diri di hadapan-Nya; kerisauan itu sendiri bukti hati yang hidup yang mencari kedekatan, bukan hati yang jauh.
+695	Nampaknya penyakit di sini menyentuh bukan hanya tubuh, tetapi juga rasa selamat dan kawalan ke atas butiran kehidupan harian, dan bersamanya datang kerisauan yang boleh difahami tentang apa yang akan datang.
+696	Nampaknya apa yang anda gambarkan ialah kitaran yang berulang lebih daripada satu kesilapan: tekanan yang mendorong kepada tabiat, kemudian penyesalan yang mengembalikan tekanan; memahami kitaran ini lebih membantu daripada menyalahkan diri kerananya.
+697	Nampaknya ada lebih banyak dalam kata-kata anda daripada yang kelihatan pada baris pertamanya; di sebalik situasi yang kelihatan ada perasaan dan keperluan yang wajar difahami sebelum mencari sebarang penyelesaian.
+698	Di satu pihak: {0}; di pihak lain: {1}. Kedua-dua pihak mengandungi sesuatu yang wajar ditimbang, sebab itu membuat keputusan tidak terasa mudah.
+699	Apa yang menarik anda kepada pilihan ini jelas: {0}; dan mungkin yang melambatkan keputusan bukan kelemahan sebab-sebab ini, tetapi besarnya apa yang menyusul daripadanya.
+700	Nampaknya apa yang membuat anda ragu mempunyai berat sebenar: {0}; ini bukan khayalan yang mudah diketepikan, tetapi ia juga bukan keseluruhan gambaran.
+701	Menerima mungkin bermakna mendekati apa yang anda rasa selesa, namun ia juga membuka soalan tentang kestabilan dan tanggungjawab yang akan datang; menolak mungkin kelihatan lebih selamat, namun ia mungkin membawa takut kehilangan sesuatu yang mungkin tidak datang lagi. Maka setiap pilihan terikat dengan kemungkinan kehilangan, bukan hanya keuntungan yang jelas.
+702	Kekal mungkin bermakna memelihara apa yang telah anda bina dan kestabilan orang di sekeliling anda, namun ia juga mungkin bermakna apa yang meletihkan anda berterusan; pergi mungkin menjanjikan kelegaan, namun ia juga membawa takut akan yang tidak diketahui dan harga perpisahan. Mungkin kesukarannya ialah kedua-dua jalan mempunyai harga yang sebenar.
+703	Memaafkan mungkin bermakna ketenangan hati dan memelihara ikatan yang bernilai, namun ia mungkin menimbulkan takut bahawa kemudaratan akan berulang; memutuskan hubungan mungkin terasa seperti melindungi diri, namun ia mungkin meninggalkan kekosongan atau rasa bersalah. Penting untuk diingat bahawa memaafkan tidak semestinya bermakna kembali seperti dahulu.
+704	Bercakap secara terbuka mungkin bermakna berlaku adil kepada diri sendiri dan membawa kejelasan kepada hubungan, namun ia membawa takut akan reaksi dan apa yang mungkin berubah antara kamu; berdiam diri mungkin menjaga keamanan buat masa ini, namun ia mungkin menimbun dalam diri apa yang sukar dipikul lama.
+705	Berpindah mungkin bermakna peluang untuk permulaan yang lebih luas, namun ia juga bermakna meninggalkan yang biasa dan orang yang dekat dengan anda; kekal memelihara kedekatan dan rasa selamat, namun ia mungkin meninggalkan soalan tergantung tentang apa yang mungkin berlaku.
+706	Meneruskan mungkin bermakna setia kepada apa yang anda mulakan dan mengelakkan kerugian, namun ia mungkin bermakna apa yang menghabiskan tenaga anda kekal; berhenti mungkin membuka pintu baharu, namun ia membawa takut bahawa ia keputusan yang tergesa-gesa.
+707	Sebab itu takut menyesal mengambil dua bentuk yang bertentangan di sini: menyesal jika anda meneruskan, dan menyesal jika anda menahan diri. Apabila penyesalan mungkin di setiap arah, ia tidak lagi menjadi bukti bagi mana-mana satu, tetapi tanda bahawa keputusan itu penting bagi anda.
+708	Nampaknya takut menyesal sangat hadir dalam kata-kata anda; dan mungkin ketakutan yang lebih dalam bukan terhadap hasil tertentu, tetapi menyalahkan diri kemudian kerana tidak memilih dengan cukup teliti.
+709	Mungkin ketakutan yang lebih dalam ialah kehilangan seseorang yang anda rasa dekat, atau kehilangan gambaran yang anda lakarkan tentang apa yang boleh menjadi hubungan itu.
+710	Nampaknya pandangan orang terhadap anda hadir dalam perkiraan anda; itu boleh difahami, tetapi ia membantu untuk membezakan apa yang anda sendiri benar-benar takuti daripada apa yang hanya gema apa yang mungkin dikatakan orang.
+711	Ketakutan di sini mungkin lebih dalam daripada satu hasil: takut akan apa yang hasil itu katakan tentang anda, seolah-olah kegagalan — jika berlaku — menjadi penilaian ke atas nilai anda dan bukan ke atas satu percubaan.
+712	Nampaknya diam anda bukan kelemahan, tetapi perkiraan untuk mata pencarian dan kestabilan anda; dan perkiraan itu sah dan boleh difahami. Namun diam yang panjang tentang sesuatu yang terus berlaku juga ada harganya: daripada ketenangan fikiran anda, dan daripada rasa anda terhadap nilai diri dan keadilan apa yang anda lalui.
+713	Sebahagian kerisauan mungkin tentang keselamatan: tentang kemampuan memenuhi keperluan dan mengekalkan kestabilan hidup. Ia kerisauan yang sah yang memerlukan perkiraan realistik, bukan mengabaikan dan bukan membesar-besarkan.
+714	Mungkin ketakutan sekarang membawa gema pengalaman lalu; orang yang pernah disakiti menjadi berhati-hati, dan sikap berhati-hati itu kadang-kadang melindunginya, dan kadang-kadang membuatnya melihat masa lalu dalam setiap situasi baharu.
+715	Ada perbezaan antara konfrontasi emosi dan menuntut kebenaran dengan bijak; yang kedua mungkin bermakna merekod apa yang berlaku, memilih masa dan saluran yang betul, dan kata-kata yang tenang yang melindungi hak anda tanpa mendedahkan anda kepada kerugian yang tidak perlu.
+716	Ada perbezaan penting antara pendapatan yang terhad dan ketiadaan kestabilan; yang pertama keadaan yang boleh berubah dengan usaha dan perancangan bersama, manakala yang kedua berkaitan kesungguhan dan pandangan yang jelas tentang masa depan. Mungkin lebih berguna untuk melihat bagaimana tanggungjawab dipikul daripada apa yang dimiliki sekarang.
+717	Ada perbezaan antara rasa selesa dan serasi: rasa selesa ialah tanda penting yang tidak patut diketepikan, manakala keserasian kelihatan pada nilai, cara menangani perselisihan dan cara melihat kehidupan harian. Yang pertama tidak menggantikan menyemak yang kedua, sebagaimana tiada yang menggantikan ketiadaannya.
+718	Keraguan keluarga anda mungkin datang daripada keprihatinan mereka terhadap anda lebih daripada menolak pilihan anda; memahami dengan tepat dari mana keraguan itu datang — satu perkara tertentu atau beberapa — mungkin mengubah seluruh bentuk keputusan, dan mengubah perselisihan menjadi dialog.
+719	Ada perbezaan antara memilih dengan bebas dan memilih di bawah tekanan: tekanan masa, umur, atau desakan orang sekeliling. Keputusan yang dibuat untuk lari daripada tekanan mungkin membawa kelegaan seketika, tetapi yang dibuat atas keyakinan bertahan lebih lama.
+720	Nampaknya dalam situasi ini ada jarak antara apa yang anda mahu dan apa yang orang lain harapkan daripada anda; mengakui jarak itu dengan jelas ialah langkah pertama untuk merapatkannya, dan bukan membiarkannya kekal sebagai pergelutan senyap dalam diri anda.
+721	Penting untuk membezakan takut membuat kesilapan daripada bukti bahawa sesuatu pilihan itu salah; yang pertama perasaan semula jadi yang menyertai setiap keputusan penting, dan yang kedua maklumat yang wajar diteliti dengan tenang.
+722	Ada perbezaan antara rasa bersalah yang berkata “saya bersalah” dan mendorong untuk memperbaiki, dan rasa malu yang berkata “saya jahat” dan melumpuhkan; yang pertama pintu taubat dan perubahan, manakala yang kedua hanya memberatkan situasi.
+723	Penting untuk memisahkan apa yang berlaku daripada nilai anda; situasi itu — betapa sukar pun — menggambarkan satu pengalaman atau satu peringkat, dan ia tidak boleh menjadi penilaian muktamad ke atas anda.
+724	Ada perbezaan antara memaafkan dan berdamai: memaafkan membebaskan hati anda daripada beban apa yang berlaku, manakala berdamai ialah kembali kepada hubungan yang memerlukan kepercayaan dan jaminan baharu. Yang pertama mungkin boleh walaupun yang kedua tidak bijak.
+725	Penting untuk membezakan sabar menghadapi kesukaran sementara daripada kekal di bawah kemudaratan yang berterusan; sabar ialah kebaikan, tetapi ia tidak bermakna menerima apa yang mengancam keselamatan atau maruah anda.
+726	Ada perbezaan antara menetapkan batasan yang jelas dan memutuskan hubungan; batasan yang sihat mungkin tepat apa yang menjaga hubungan daripada terhakis, bukan apa yang memusnahkannya.
+727	Ada perbezaan antara menjaga orang yang anda sayangi dan memikul segalanya untuknya; penjagaan yang menghabiskan anda sepenuhnya tidak boleh bertahan, dan meminta bantuan ialah sebahagian daripada penjagaan itu sendiri, bukan kegagalan di dalamnya.
+728	Penting untuk membezakan kesedihan daripada putus asa: kesedihan ialah kesakitan atas apa yang hilang dan boleh wujud bersama harapan, manakala putus asa menjatuhkan hukuman ke atas seluruh masa depan daripada satu saat.
+729	Marah yang kelihatan dalam kata-kata anda mungkin menutupi sesuatu yang lebih dalam: luka, rasa tidak dihargai, atau kekecewaan terhadap seseorang yang anda harapkan lain daripadanya.
+730	Ada perbezaan antara apa yang benar-benar anda lihat dan apa yang diisi oleh kerisauan pada ruang kosong; syak wasangka hidup dengan kemungkinan, dan menyemak dengan tenang atau perbualan langsung lebih berguna daripada membina penilaian ke atasnya.
+731	Ada perbezaan antara bersendirian dan rasa sunyi; yang kedua bermakna merindui seseorang yang memahami anda, dan ia keperluan yang sah untuk kedekatan, bukan kekurangan dalam diri anda.
+732	Membandingkan diri dengan orang lain meletakkan tingkap pameran kehidupan mereka berbanding setiap butiran kehidupan anda; sebab itu ia jarang adil, dan jarang memberitahu anda sesuatu yang benar tentang jalan anda sendiri.
+733	Penting untuk membezakan malas daripada keletihan; apa yang kelihatan seperti cuai mungkin sebenarnya tenaga yang telah habis, dan rehat di sini bukan kemewahan tetapi syarat untuk meneruskan.
+734	Ada perbezaan antara apa yang boleh anda pengaruhi dan apa yang tidak dalam tangan anda; kerisauan cuba mengawal segalanya, manakala ketenangan bermula apabila tenaga diarahkan kepada bahagian yang benar-benar boleh dilakukan.
+735	Ia membantu untuk memisahkan apa yang sebenarnya berlaku daripada bacaan anda tentang apa yang ada dalam hati orang lain; bacaan anda mungkin betul, tetapi ia kekal kemungkinan sehingga disahkan.
+736	Keterikatan kepada apa yang telah berlaku — atau kepada apa yang anda harapkan ia menjadi — mungkin lebih kuat daripada keterikatan kepada orangnya; membezakan keduanya membantu anda memahami apa yang benar-benar anda perlukan sekarang.
+737	Kehilangan sering disertai rasa telah cuai; tetapi apa yang anda lihat dengan jelas sekarang, selepas ketiadaannya, tidak sejelas itu pada masanya. Kekurangan yang menyakiti anda ialah tanda betapa besarnya kasih anda, dan pintu kebaikan melalui doa, sedekah dan kesetiaan masih terbuka.
+738	Ada perbezaan antara berbakti kepada ibu atau bapa dan kehadiran fizikal yang berterusan; berbakti mempunyai ruang untuk pelbagai bentuk penjagaan, hubungan dan aturan praktikal, dan yang lebih tepat ialah melihat apa yang benar-benar diperlukan oleh orang yang anda sayangi, dan apa yang boleh diatur supaya ia sampai kepadanya dalam apa jua keadaan.
+739	Ada perbezaan antara niat anda dan kesan tindakan anda terhadap orang lain; niat mungkin baik tetapi kesannya menyakitkan, dan memperbaiki bermula dengan mengakui kesannya tanpa perlu menafikan niatnya.
+740	Dari sudut yang lebih luas: {0}
+741	Dalam sifat hubungan itu sendiri: {0}
+742	Di bawah permukaan apa yang anda rasa: {0}
+743	Takut menyesal tidak bermakna mana-mana pilihan itu salah. Kejelasan tidak datang dengan memadamkan ketakutan ini, tetapi dengan mengetahui apa yang anda tidak boleh lepaskan, dan apa yang boleh dibina dari semasa ke semasa.
+744	Mempunyai sebab yang baik di kedua-dua arah tidak menjadikan pilihan mustahil; ia bermakna pilihan itu perlu disusun: mengetahui sebab mana yang paling berat bagi anda dalam jangka panjang, bukan hanya pada saat kerisauan.
+745	Kejelasan mungkin tidak datang sekali gus; banyak keputusan menjadi jelas langkah demi langkah, apabila maklumat dikumpul, hati yang dipercayai dirujuk dan petunjuk Allah dicari melalui istikharah, kemudian hati dibiarkan tenang.
+746	Keselamatan dan maruah anda tidak boleh ditawar-menawar; setiap keputusan yang anda buat wajar bermula dari tempat yang selamat, dengan sokongan orang yang dipercayai atau perkhidmatan khusus, bukan daripada rasa bahawa anda menghadapi segalanya sendirian.
+747	Mengakui bahawa apa yang berlaku itu menyakitkan tidak bermakna anda mesti bertindak balas segera atau memaafkan segera; anda boleh mengambil masa, dan memilih apa yang melindungi maruah dan ketenangan dalaman anda sekali gus.
+748	Apa yang menanti anda bukan ujian nilai anda, tetapi satu perhentian antara banyak perhentian; dan semakin perhatian anda kembali kepada langkah di hadapan anda sekarang, semakin ringan beban apa yang belum berlaku.
+749	Anda tidak perlu menemui penjelasan lengkap tentang apa yang anda rasa untuk layak dilayan dengan lembut; menjaga diri dalam fasa ini, dan mendekati orang yang anda percayai, ialah dua langkah yang datang sebelum sebarang pemahaman yang lebih dalam.
+750	Keperluan untuk kedekatan bukan kelemahan, tetapi sebahagian fitrah manusia; jalan keluar daripada kesunyian mungkin bermula dengan satu hubungan kecil yang dibina dengan lembut, bukan dengan mengubah segalanya sekali gus.
+751	Kesedihan atas orang yang telah pergi bukan sesuatu untuk dilupakan dengan cepat; ia mula dipikul dengan cara berbeza seiring masa. Apa yang anda rasa sekarang bukan kelemahan, tetapi kesan kasih sebenar yang masih mencari tempatnya.
+752	Mengakui kesilapan — seperti yang ditunjukkan kata-kata anda — bukan penghujung cerita tetapi permulaannya yang paling jujur; yang penting sekarang bukan menghukum diri, tetapi satu langkah ikhlas untuk memperbaiki yang membuka pintu kepada apa yang menyusul.
+753	Pemberian anda sangat bernilai, tetapi ia juga perlu dilindungi; menjaga diri bukan pentingkan diri, ia yang memungkinkan anda terus memberi.
+754	Kerisauan anda tanda kasih anda, tetapi kasih berfungsi paling baik apabila ia menjadi kehadiran yang tenang dan langkah yang mungkin, bukan memikul setiap kemungkinan sekali gus.
+755	Apa yang anda perlukan sekarang mungkin bukan penyelesaian besar, tetapi ruang kecil untuk bernafas; perkara yang kelihatan mustahil di puncak keletihan sering menjadi lebih jelas selepas sedikit rehat dan sokongan.
+756	Nilai anda tidak diukur dengan satu situasi atau satu hasil; dan apabila gambaran anda tentang diri dipisahkan daripada kebisingan saat itu, menghadapi situasi itu sendiri menjadi jauh lebih ringan.
+757	Rasa kepunyaan tidak terhad kepada satu tempat; ia boleh dibina di tempat baharu sedikit demi sedikit tanpa membatalkan kesetiaan kepada akar anda, dan setiap hubungan kecil yang anda bina di sini tidak mengurangkan kasih anda kepada apa yang anda tinggalkan di sana.
+758	Penyesuaian tidak berlaku sekali gus; ia terdiri daripada hari-hari kecil yang berturutan, dan apa yang kelihatan asing hari ini mungkin menjadi biasa sebelum anda sedar.
+759	Keutamaan sekarang ialah langkah praktikal yang jelas, satu demi satu; dan setelah ia berlalu, ia membantu untuk memberi diri anda masa untuk pulih daripada apa yang anda lalui, dan bukan meneruskan seolah-olah tiada apa yang berlaku.
+760	Apa yang berlaku boleh ditangani melalui langkah praktikal satu demi satu; mendapatkan semula kawalan bermula dengan satu langkah kecil yang jelas, dan dengan mengingati bahawa apa yang dilakukan orang lain tidak menentukan nilai anda.
+761	Batasan yang jelas tidak menjadikan anda kurang penyayang atau kurang pemurah; ia menjadikan apa yang anda beri datang daripada pilihan yang bebas, bukan daripada rasa terpaksa.
+762	Mengetahui dengan tepat dari mana tekanan datang ialah separuh jalan; apa yang diselesaikan dengan perbualan berbeza daripada apa yang diselesaikan dengan batasan, dan kedua-duanya berbeza daripada apa yang memerlukan perubahan yang lebih besar.
+763	Tekanan kewangan — betapa berat pun — menjadi ringan apabila ia bertukar daripada kerisauan umum kepada angka dan langkah yang jelas; usaha yang teratur bersama tawakal kepada Allah mengembalikan sedikit ketenangan walaupun sebelum keadaan berubah.
+764	Hubungan yang rapat tidak diukur dengan ketiadaan konflik, tetapi dengan kemampuan memperbaiki apa yang retak di dalamnya; memperbaiki sering bermula dengan satu ayat yang tenang pada masa yang tepat.
+765	Tingkah laku anak biasanya mesej tentang keperluan yang belum mereka temui kata-katanya; menggabungkan ketegasan dengan kemesraan, dengan sabar terhadap perubahan beransur-ansur, membuat perbezaan lebih besar daripada yang ditunjukkan oleh satu hari.
+766	Pintu kembali kepada Allah tidak pernah tertutup, dan jalan kepada-Nya ditempuh dengan langkah kecil yang konsisten lebih daripada lompatan besar yang terputus; rasa resah yang anda rasa ialah tanda anda masih di atas jalan.
+767	Menjaga sisi emosi ialah sebahagian daripada perjalanan rawatan, bukan kemewahan; apa sahaja yang meringankan beban anda — teman, rehat atau maklumat yang jelas — wajar diberi tempatnya.
+768	Perubahan di sini jarang datang daripada satu keputusan besar, tetapi daripada perubahan kecil pada persekitaran, masa dan alternatif, yang diulang sehingga menjadi tabiat baharu.
+769	Memahami dengan tenang apa yang berlaku dalam diri anda ialah langkah pertama; banyak situasi menjadi lebih ringan apabila perasaan dan keperluannya dinamakan dengan jelas, sebelum mencari sebarang penyelesaian.
+770	rasa selesa yang anda rasakan
+771	agama dan akhlak yang anda lihat
+772	janji yang dibawa oleh peluang itu
+773	kehidupan dan sejarah yang dikongsi bersama
+774	sisi kewangan dan batasannya
+775	keraguan keluarga anda
+776	jarak dan perubahan tempat
+777	tekanan umur dan masa
+778	kata-kata orang dan pandangan mereka
+779	kesan pengalaman lalu
+780	sifat-sifat perangainya yang merisaukan anda
+781	betapa sedikitnya anda mengenalinya
+782	besarnya tanggungjawab yang akan datang
+783	{0}
+784	Tulis bacaan yang lebih mendalam dengan AI
+785	Bacaan lebih mendalam yang ditulis oleh Claude dengan kunci anda
+786	Saya tidak dapat memahami dengan jelas tentang apa situasi anda. Pilih topik yang paling dekat dan saya akan membacanya semula:
+787	Saya memfokuskan bacaan pada “{0}”, seperti yang anda pilih.
+788	Simpan ke Situasi Saya
+789	Disimpan dalam Situasi Saya
+790	Situasi Saya
+791	Situasi anda kekal pada peranti ini sahaja dan tidak dihantar ke mana-mana.
+792	Buka bacaan
+793	Padam semua situasi saya
+794	Ketik sekali lagi untuk memadam semua situasi anda
+795	Situasi anda telah dipadam daripada peranti ini
+796	Disimpan ke Situasi Saya
+797	Dibuang daripada Situasi Saya
+798	Skrin dan teks
+799	Jenis fon
+800	Digunakan pada semua teks kecuali ayat al-Quran, yang kekal dengan fonnya sendiri.
+801	Asal

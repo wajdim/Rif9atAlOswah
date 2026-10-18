@@ -1,0 +1,371 @@
+{
+"theme": {
+"ghurba": {
+"label": "Gurbet ve sıla hasreti",
+"insight": "Evinden uzakta yaşamak, Peygamber yolunda ne iman zayıflığıdır ne de vatana ve aileye vefasızlık: Kur'an, Peygamber'in ﷺ kendi şehrinden çıkışını anar, “inkar edenler onu Mekke'den çıkardıklarında”; Medyen'e yalnız bir yabancı olarak varıp Rabbine yönelen Musa'yı (a.s.) da anar: “Rabbim! Doğrusu bana indireceğin hayra muhtacım.” Aileye ve vatana duyulan hasret kimsenin kınanmadığı fıtri bir duygudur; önemli olan bu hasretin sıla-i rahme, iyiliğe ve duaya dönüşmesi, şimdiki hayattan kopuşa dönüşmemesidir. Allah'ın rahmetidir ki “Kul hastalandığında ya da yolculuğa çıktığında, evde ve sağlıklıyken yapmakta olduğunun benzeri onun için yazılır”; taşınmanın sana yaptırmadığı şeylerin sevabı, niyetin samimiyse kaybolmaz. Öyleyse bulunduğun yerde inşa et: ailenle bağ, iyi arkadaşlık, kapanmadan gurur duyduğun bir kimlik ve insanlarla tanışmak; Allah'ın buyurduğu gibi: “Sizi milletler ve kabileler haline koyduk ki birbirinizi kolayca tanıyasınız.”",
+"plan": {
+"now": [
+"Bugün aileni ara, özel bir sebep olmadan kısa bir arama; sıla-i rahim bir vesile beklemez",
+"Tam olarak neyi özlediğini adlandır: insanları mı? dili mi? yemekleri mi? ibadetin havasını mı? Belirgin bir hasretle başa çıkmak daha kolaydır",
+"Musa'nın gurbetteki duasıyla dua et: “Rabbim! Doğrusu bana indireceğin hayra muhtacım”"
+],
+"week": [
+"Yakındaki bir cami, İslami merkez ya da topluluk bul ve en az bir buluşmaya katıl",
+"Bekleyen resmi işlemlerini ve son tarihlerini listele; bunları dedikodu gruplarına değil, resmi kuruma ya da güvenilir bir hukuki yardım kuruluşuna sor",
+"Yeni ülkenden bir komşu ya da iş arkadaşıyla tanış; birbirini tanımak Kur'ani bir amaç ve kendini evinde hissetmenin yoludur"
+],
+"long": [
+"Boş zaman beklemek yerine ailenle iletişime sabit bir zaman ayır, haftalık bir arama gibi",
+"Çocuklarına dilini ve ailenin hikâyelerini zorla değil sevgiyle öğret; aidiyetleriyle çatışmasız gurur duymalarına izin ver",
+"Arada bir kendine sor: Neden geldim? O sebep hâlâ geçerli mi? Bilinçli bir karar, belirsiz bir hasretten daha hafiftir"
+]
+},
+"questions": [
+"Gerçekte neyi özlüyorsun: insanları mı, yeri mi, yoksa orada yaşayan hâlini mi?",
+"Zor başlangıca rağmen burada Allah'a şükre değer neler inşa ettin?",
+"Şimdini mi yaşıyorsun, yoksa onu belirsiz bir dönüş gününe mi erteliyorsun?"
+],
+"avoid": [
+"Yeni toplumdan tamamen kopmak ya da dinini ve kimliğini kaybedecek kadar onun içinde erimek",
+"Resmi işlemlerde resmi kaynaklar ve uzmanlar yerine söylentilere güvenmek",
+"Ailenden uzak olduğun için kendini hırpalamak; meşru bir sebeple uzakta olup bağı ve iyiliği korumak, onların hakkını ihmal ettiğin anlamına gelmez"
+],
+"help": "Oturum, iltica, sözleşmeler ve haklar konusunda resmi bir kuruma, bir avukata ya da güvenilir bir hukuki yardım kuruluşuna başvur; doğrulanmamış grupların tavsiyelerine güvenme.",
+"triggers": [
+"gurbet",
+"gurbette",
+"gurbetçi",
+"yurt dışı",
+"yurt dışında",
+"yurtdışında",
+"göçmen",
+"göç ettim",
+"mülteci",
+"sığınmacı",
+"iltica",
+"oturum izni",
+"ikamet izni",
+"oturma izni",
+"vize",
+"aile birleşimi",
+"sıla hasreti",
+"memleket hasreti",
+"memleketimi özledim",
+"ailemi özledim",
+"ailemden uzak",
+"evden uzak",
+"yeni bir ülke",
+"yabancı ülke",
+"ana vatan",
+"memleketim",
+"dili bilmiyorum",
+"buranın dili",
+"uyum sağlamak",
+"entegrasyon",
+"memlekete dönmek",
+"ülkeme dönmek",
+"ait değilim"
+]
+},
+"transition": {
+"label": "Değişim ve uyum",
+"insight": "Değişim hayatın bir sünnetidir ve Kur'an bize başlangıçları ilk hislerimize göre yargılamamayı öğretir: “İhtimal ki hoşlanmadığınız şey sizin iyiliğinizedir.” Hicretin kendisi de bir taşınma ve yeni bir başlangıçtı; sebeplere sarılarak ve planlanarak, Allah'a tam bir tevekkülle hazırlanmıştı. Peygamber ﷺ ikisini birleştirmeyi öğretti: “Onu bağla ve Allah'a tevekkül et.” Başlangıçlarla baş etmenin yolu, ilk karışıklık dönemini kabullenip bütün yolu ona göre yargılamamak, küçük ama sürekli bir şeyle başlamaktır; çünkü “Amellerin Allah'a en sevimli olanı, az da olsa devamlı olanıdır.” Ve Allah'tan doğruluk istemektir: “Rabbimiz! Katından bize rahmet ver ve işimizde doğruyu göster, bizi başarılı kıl.”",
+"plan": {
+"now": [
+"Değişen üç şeyi ve aynı kalan üç şeyi yaz: imanın, değerlerin ve seni sevenler",
+"Bu yeni dönemde koruyacağın küçük ve sabit bir alışkanlık seç: vaktinde bir namaz, bir yürüyüş ya da kısa bir günlük zikir",
+"Dua et: “Rabbimiz! Katından bize rahmet ver ve işimizde doğruyu göster, bizi başarılı kıl”"
+],
+"week": [
+"Yeni yerde bir kişiyle tanış ve yeni gelen birinin en çok neye ihtiyaç duyduğunu sor",
+"Uyum sürecini küçük işlere böl (evraklar, yollar, yerler, insanlar) ve her gün birini bitir",
+"Kararı başarısız saymadan önce kendine makul bir uyum süresi tanı"
+],
+"long": [
+"Üç ay sonra değerlendir: Ne öğrendim? Neyin düzeltilmesi gerekiyor?",
+"Bu döneme bir anlam kat: Burada daha önce mümkün olmayan hangi iyiliği yapabilirsin?",
+"Önceki dönemde sana eşlik edenlerle bağını koru; değişim kopuş demek değildir"
+]
+},
+"questions": [
+"Yeni dönemi ilk karışık günlerine göre mi yargılıyorsun?",
+"Önceki dönemden yanında getirdiğin ve devam etmeyi hak eden ne var?",
+"Bu yeri ya da bu rolü biraz daha senin kılacak en küçük adım nedir?"
+],
+"avoid": [
+"Yeni bir başlangıcı, yerleşmek için yıllarının olduğu önceki bir dönemin sonuyla kıyaslamak",
+"Tecrübeye zaman tanımadan ilk zorlukta aceleyle geri dönmek",
+"Hazırlıklarla meşgul olmayı bahane edip ibadeti ve dinlenmeyi ihmal etmek"
+],
+"triggers": [
+"taşındım",
+"taşındık",
+"taşınma",
+"yeni ev",
+"yeni şehir",
+"yeni iş",
+"yeni işim",
+"yeni okul",
+"yeni başlangıç",
+"yeni dönem",
+"emekli",
+"emekli oldum",
+"emeklilik",
+"mezun olduktan sonra",
+"mezuniyetten sonra",
+"sıfırdan başlamak",
+"sıfırdan başladım",
+"büyük değişiklik",
+"hayatım değişti",
+"uyum sağlayamıyorum",
+"alışamadım",
+"alışmak",
+"adapte"
+]
+},
+"emergency": {
+"label": "Acil durumlar ve ani aksilikler",
+"insight": "Hoş olmayan sürprizler bu dünyanın tabiatındandır ve Peygamber yolu, başa geldiklerinde üç şey öğretir: ilk anda sebat, çünkü “Sabır ancak ilk sarsıntı anındadır”; “keşke” diyerek kendini suçlamayı bırakmak: “Başına bir şey gelirse ‘Keşke şöyle yapsaydım, şöyle olurdu’ deme; ‘Allah takdir etti, dilediğini yaptı’ de”; ve sonra hemen harekete geçmek: “Sana fayda verecek şeye hırslı ol, Allah'tan yardım iste ve acze düşme.” Ayrıca acil durum gelmeden tedbir almayı öğretir, “Onu bağla ve Allah'a tevekkül et”; belgelerin kopyalarını saklamak, zaman ve paradan bir pay ayırmak gibi. Başına gelen kişi utanmadan yardım istesin; darda olan birini gören de ona yardım etsin, çünkü “Kim bir müminin dünya sıkıntılarından birini giderirse, Allah da onun kıyamet sıkıntılarından birini giderir.”",
+"plan": {
+"now": [
+"Dur, nefes al ve de ki: “Allah takdir etti, dilediğini yaptı”",
+"Önceliği belirle: önce senin ve yanındakilerin güvenliği, sonra şu an kurtarılabilecek olanlar",
+"Tehlike ya da yaralanma varsa hemen acil servisi ara ve çevrendekilerden yardım istemekten çekinme"
+],
+"week": [
+"İşlemleri adım adım tamamla: resmi tutanak, belgelerin yenilenmesi, banka ya da ilgili kurumla iletişim",
+"Olaydan ne öğrendiğini suçlamadan yaz: Hangi tedbir bunun tekrarlanmasını önler?",
+"Sana yardım edene tek bir kelimeyle de olsa teşekkür et; “İnsanlara teşekkür etmeyen Allah'a şükretmemiş olur”"
+],
+"long": [
+"Önemli belgelerinin dijital kopyalarını ve acil durumlar için küçük bir miktar para sakla",
+"Temel ilk yardımı öğren; belki onunla bir hayat kurtarırsın",
+"Başkalarının acil durumlarında ihtiyaç duydukları yardım sen ol"
+]
+},
+"questions": [
+"Olan şey düzeltilebilir mi, yoksa kabullenilmesi mi gerekiyor? Her iki durumda bir sonraki adım ne?",
+"Çözüm aramaktan çok “keşke” diyerek kendini mi suçluyorsun?",
+"Şu anda kimden yardım isteyebilirsin?"
+],
+"avoid": [
+"Anın şokuyla aceleci kararlar vermek",
+"Çözüme odaklanmak yerine kendini ya da başkalarını suçlamak",
+"İhtiyacın olduğunda yardım istemekten utanmak"
+],
+"help": "Hayati tehlike, yaralanma ya da yangın varsa her şeyden önce hemen ülkendeki acil durum numarasını ara.",
+"triggers": [
+"acil durum",
+"acil",
+"pasaportumu kaybettim",
+"pasaportum kayboldu",
+"cüzdanımı kaybettim",
+"anahtarlarımı kaybettim",
+"çantamı kaybettim",
+"bavulum kayboldu",
+"bagajım kayboldu",
+"çalındı",
+"soyuldum",
+"hırsızlık",
+"gasp",
+"kaza",
+"trafik kazası",
+"arabam bozuldu",
+"araba arızası",
+"elektrik kesintisi",
+"elektrikler kesildi",
+"uçağı kaçırdım",
+"treni kaçırdım",
+"uçuş iptal",
+"dışarıda kaldım",
+"asansörde kaldım",
+"yangın",
+"beklenmedik"
+]
+},
+"digital": {
+"label": "Dijital hayat ve mahremiyet",
+"insight": "Dijital dünya hayatımızın bir parçasıdır ve Kur'an ile Sünnet'in değerleri onu da gerçek hayatı yönettiği gibi yönetir: yazılan her söz kaydedilir, “yanında hazır birer gözcü olarak söylediği her sözü zaptederler”; dolaşan bir haber paylaşılmadan önce doğrulanmalıdır, “Eğer yoldan çıkmışın biri size bir haber getirirse, onun iç yüzünü araştırın”; insanların mahremiyeti korunur, “Birbirinizin suçunu araştırmayın”; ve tek bir söz insanı yükseltebilir ya da düşürebilir. Şüpheli bağlantılara ve mesajlara karşı dikkatli olmak hikmettir, “Seni şüpheye düşüreni bırak, şüpheye düşürmeyene bak”, ve “Mümin aynı delikten iki kez sokulmaz.” Zaman, pek çok kişinin ihmal ettiği bir nimettir: “İki nimet vardır ki insanların çoğu onlarda aldanmıştır: sağlık ve boş vakit.” Tehdit edilir ya da şantaja uğrarsan boyun eğme ve tek başına göğüslemeye çalışma: delilleri sakla ve yardım iste; zararın günahı zarar verene aittir.",
+"plan": {
+"now": [
+"Şantajcıya ya da tehdit edene cevap verme, para ya da fotoğraf gönderme, delil olarak ekran görüntüleri al",
+"Şifreni hemen değiştir ve hesabın tehlikedeyse iki adımlı doğrulamayı aç",
+"Bir haberi paylaşmadan ya da iletmeden önce sor: Doğruladım mı? Bana nispet edilmesinden hoşnut olur muyum?"
+],
+"week": [
+"Hesaplarının gizlilik ayarlarını gözden geçir: paylaşımlarını, fotoğraflarını ve numaralarını kim görüyor?",
+"Artık seni yansıtmayanı korkmadan ve kendini suçlamadan sil ya da arşivle",
+"Telefonsuz zamanlar belirle: uyurken, ailenle birlikteyken ve namazda"
+],
+"long": [
+"Her paylaşıma bir soru sor: Bunu amel defterimde görmekten memnun olur muyum?",
+"Çocuklarına ve ailendeki yaşlılara dijital güvenliğin temellerini yumuşaklıkla öğret",
+"Değerini beğenilerden ve takipçilerden bağımsız kıl; Allah “sizin suretlerinize ve mallarınıza bakmaz; fakat kalplerinize ve amellerinize bakar”"
+]
+},
+"questions": [
+"Saygı duyduğun insanlar yazdıklarını okusa, bir şeyi değiştirir miydin?",
+"Telefonunu sen mi kullanıyorsun, o mu seni? Vaktinin ne kadarı sen seçmeden gidiyor?",
+"Yaymanın yükünü taşımadan önce haberi doğruladın mı?"
+],
+"avoid": [
+"Şantaja boyun eğmek ya da para ödemek; bu genellikle talepleri durdurmaz, artırır",
+"Şifreleri ya da özel fotoğrafları güvenle bile olsa kimseyle paylaşmak",
+"Bir haberi doğrulamadan yaymak ya da insanların hatalarını herkesin önünde teşhir etmek"
+],
+"help": "Şantaja ya da tehdide uğrarsan veya fotoğrafların iznin olmadan paylaşılırsa tek başına göğüsleme: platforma bildir, delilleri sakla, polise ya da siber suçlarla mücadele birimine başvur ve gençsen güvendiğin bir yetişkine anlat.",
+"triggers": [
+"hacklendi",
+"hesabım hacklendi",
+"hesabım çalındı",
+"şifre",
+"şifrem",
+"oltalama",
+"phishing",
+"şüpheli bağlantı",
+"şüpheli link",
+"şüpheli mesaj",
+"internet dolandırıcılığı",
+"şantaj",
+"şantaj yapıyor",
+"özel fotoğraflar",
+"özel fotoğraflarım",
+"fotoğrafımı paylaştı",
+"fotoğrafımı yayınladı",
+"paylaşımım",
+"gönderimi sil",
+"whatsapp grubu",
+"whatsapp",
+"internet",
+"sosyal medya",
+"gizlilik",
+"mahremiyet",
+"beni gözetliyor",
+"sahte hesap",
+"kimliğime bürünmüş",
+"ekran süresi",
+"bildirimler",
+"yapay zeka",
+"ekran görüntüsü",
+"tehdit mesajı",
+"siber zorbalık"
+]
+},
+"boundaries": {
+"label": "Sınır koymak ve “hayır” demek",
+"insight": "Sınır koymak Peygamber yolunda bencillik ya da sertlik değildir; her hak sahibine hakkını vermenin parçasıdır: “Rabbinin senin üzerinde hakkı var, nefsinin senin üzerinde hakkı var, ailenin senin üzerinde hakkı var; her hak sahibine hakkını ver.” Allah'ın kendisi “kişiye ancak gücünün yeteceği kadar yükler”; o hâlde nezaket uğruna gücünün üstünde yük taşımak zorunda değilsin. Mahremiyet Kur'an'da dokunulmazdır: “Birbirinizin suçunu araştırmayın.” Berîre kıssasında Peygamber ﷺ kocasına dönmesi için aracı olduğunda “Ben sadece aracılık ediyorum” buyurdu, o da “Ona ihtiyacım yok” dedi; böylece onun, Peygamber'in aracılığına bile hayır deme hakkı olduğunu açıkça gösterdi. Peygamber yolu sınırdaki kararlılığı sözdeki yumuşaklıkla birleştirir: “Şüphesiz Allah yumuşaktır, yumuşaklığı sever”, ve “insanlarla güzel güzel konuşun”; yumuşak ve açık bir “hayır”, ardından kırgınlık ve ihmal bırakan bir “evet”ten iyidir.",
+"plan": {
+"now": [
+"Herhangi bir isteği kabul etmeden önce “Biraz düşüneyim, sana dönerim” de; bu ara seni baskı altında evet demekten korur",
+"Şu an ihtiyaç duyduğun bir sınırı belirle (zaman, para, mahremiyet, konuşma üslubu) ve kısa, kibar bir cümleyle ifade et",
+"Unutma: kibar bir ret ne akrabalık bağını koparır ne de sevgiyi bozar"
+],
+"week": [
+"Küçük bir durumda uzun açıklamalar yapmadan yumuşak ve net bir “hayır” de: “Kusura bakma, bu sefer yapamayacağım”",
+"Sınır tekrar aşılırsa sakin bir anda kişiyle onun kusurlarını değil, bunun sende bıraktığı etkiyi konuş",
+"Kimin isteğini reddettiğinde hep suçluluk duyduğunu fark et ve sor: Bu suçluluk gerçek mi, yoksa bir alışkanlık mı?"
+],
+"long": [
+"Taahhütlerini enerjine ve vaktine göre ayarla; az ama sürekli olan, çok ama kesilenden iyidir",
+"Her sorunu çözme sorumluluğunu üstlenmeden dinlemeyi öğren",
+"Başkalarının sınırlarına, kendi sınırlarına gösterilmesini istediğin saygıyı göster"
+]
+},
+"questions": [
+"Hep kabul edip sonra pişman olduğun istek hangisi? Onu reddetmek neden bu kadar zor?",
+"Karşındakinin hoşnutsuzluğundan korkman, kendi hakkını ve ailenin senin üzerindeki hakkını önemsemenden daha mı fazla?",
+"Hem sevgiyi hem onuru koruyacak şekilde nasıl “hayır” diyebilirsin?"
+],
+"avoid": [
+"Sınırı küslükle karıştırmak; sınır ilişkiyi düzenler, yıkmaz",
+"Sert ya da alaycı bir şekilde reddetmek; kararlılık yaralamaya ihtiyaç duymaz",
+"Uzun özürler ve aşırı gerekçeler, ta ki sınır her zaman pazarlığa açık görünene kadar"
+],
+"help": "Sınırlar zarar, taciz ya da sürekli kontrol noktasına kadar aşılıyorsa bu artık nezaket meselesi değildir: güvendiğin birinden ya da uzman bir kurumdan yardım iste.",
+"triggers": [
+"sınırlarım",
+"sınır koymak",
+"sınır koyamıyorum",
+"hayır diyemiyorum",
+"hayır demek",
+"reddedemiyorum",
+"hayatıma karışıyor",
+"karışıyorlar",
+"müdahale ediyor",
+"özel sorular",
+"kişisel sorular",
+"izinsiz",
+"sormadan",
+"eşyalarımı kullanıyor",
+"beni kullanıyor",
+"beni tüketiyor",
+"sürekli istiyor",
+"mesai dışında",
+"gece arıyor",
+"kendi alanım",
+"alana ihtiyacım",
+"kendimi feda"
+]
+},
+"self_worth": {
+"label": "Öz değer",
+"insight": "Kur'an ve Sünnet'te insanın değeri görünüşle, notlarla ya da beğenilerle ölçülmez: “Şüphesiz Allah sizin suretlerinize ve mallarınıza bakmaz; fakat kalplerinize ve amellerinize bakar”, ve “Şüphesiz, Allah katında en değerliniz, O'na karşı gelmekten en çok sakınanızdır.” Bu seni insanların onayını kovalamaktan kurtarır ve ulaşabileceğin adil bir ölçünün karşısına koyar. Peygamber yolu iki şeyi dengeler: seni gayrete sevk eden bir özgüven, “Güçlü mümin, zayıf müminden daha hayırlı ve Allah'a daha sevimlidir; her ikisinde de hayır vardır. Sana fayda verecek şeye hırslı ol, Allah'tan yardım iste ve acze düşme”, ve seni kibirden koruyan bir tevazu, “Kendinizi temize çıkarmayın.” Peygamber ﷺ ilk vahiyde korktuğunda Hatice ona şöyle dedi: “Asla! Vallahi Allah seni hiçbir zaman utandırmaz”; samimi ve destekleyen bir söz ruha sebatını geri verir ve bazen onu kendine söylemen gerekir.",
+"plan": {
+"now": [
+"Bu hafta samimiyet ve emekle yaptığın üç şeyi yaz, parlak bir sonuçla değil",
+"İçinden “Ben başarısızım” sesini duyduğunda sor: Bunu benim yerimdeki bir arkadaşıma söyler miydim?",
+"Dua et: “Allah'ım, nefsime takvasını ver ve onu arındır; onu en iyi arındıracak sensin”"
+],
+"week": [
+"Bir beceri seç ve her gün biraz çalış; acemi olmayı kabullen",
+"Seni kendini küçük görmeye iten şeylerden uzak dur: hesaplar, kıyaslamalar ve sürekli eleştiren insanlar",
+"Seni seven ve sana dürüst olan birinden sende gördüğü güçlü yanları söylemesini iste"
+],
+"long": [
+"Değerini kalıcı olan üzerine kur: niyetin, ahlakın ve gayretin; insanların değişken övgüleri üzerine değil",
+"Küçük ilerlemeleri kutla; “Amellerin Allah'a en sevimli olanı, az da olsa devamlı olanıdır”",
+"Çocukluktan kalan sert bir eleştiri hâlâ içinde konuşuyorsa, onu bir uzmanla anlamak zayıflık değil cesur bir adımdır"
+]
+},
+"questions": [
+"Kendini ölçtüğün ölçüyü kim koydu? Adil bir ölçü mü?",
+"Notlar, beğeniler ve makamlar kaybolsa senden geriye ne kalır?",
+"Sana göre tevazu ile kendini küçük görmek arasındaki fark nedir?"
+],
+"avoid": [
+"Değerini son sonucuna, görünüşüne ya da tek bir kişinin fikrine bağlamak",
+"Başlamak için mükemmelliği beklemek; mükemmeliyetçilik çoğu zaman kılık değiştirmiş bir korkudur",
+"Tevazu adına kendini hor görmek; tevazu insanlara tepeden bakmamaktır, kendini aşağılamak değil"
+],
+"help": "Kendini hor görmek sürekli hâle gelirse ya da yalnızlaşma veya kendine zarar verme düşünceleriyle birlikte olursa bir ruh sağlığı uzmanına danış; tedavi olmak sebeplere sarılmanın parçasıdır.",
+"triggers": [
+"özgüven",
+"özgüvenim yok",
+"özgüven eksikliği",
+"kendime güvenmiyorum",
+"kendimden şüphe",
+"kendimden nefret",
+"görünüşümden nefret",
+"görünüşüm",
+"vücudum",
+"bedenim",
+"hak etmiyorum",
+"yeterince iyi değilim",
+"başarısızım",
+"ben başarısızım",
+"değersizim",
+"değersiz hissediyorum",
+"mükemmeliyetçilik",
+"mükemmeliyetçi",
+"sahtekarlık sendromu",
+"utangaç",
+"utangaçlık",
+"kekeme",
+"kekemelik",
+"başarısız olmaktan korkuyorum",
+"başarısızlık korkusu",
+"kendimi kanıtlamak"
+]
+}
+}
+}

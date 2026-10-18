@@ -1,0 +1,378 @@
+{
+"theme": {
+"ghurba": {
+"label": "Hidup di rantau dan rindu kampung halaman",
+"insight": "Hidup jauh dari rumah, dalam jalan Nabi, bukanlah kelemahan iman dan bukan pengkhianatan terhadap tanah air dan keluarga: Al-Qur'an menyebut Nabi ﷺ meninggalkan kotanya sendiri, “ketika orang-orang kafir (musyrikin Mekah) mengeluarkannya (dari Mekah)”, dan menyebut Musa (alaihissalam) yang tiba di Madyan sebagai orang asing yang sendirian lalu berdoa kepada Tuhannya: “Ya Tuhanku sesungguhnya aku sangat memerlukan sesuatu kebaikan yang Engkau turunkan kepadaku.” Rindu kepada keluarga dan tanah air adalah perasaan fitrah yang tidak dicela; yang penting rindu itu berubah menjadi silaturahmi, kebaikan, dan doa, bukan menjadi menarik diri dari masa kini. Dengan rahmat Allah, “jika seorang hamba sakit atau bepergian, dicatat baginya seperti apa yang biasa ia kerjakan ketika mukim dan sehat”; apa yang tak bisa kamu lakukan karena pindah tidak hilang pahalanya jika niatmu tulus. Maka bangunlah di tempatmu sekarang: hubungan dengan keluarga, teman yang baik, identitas yang kamu banggakan tanpa menutup diri, dan saling mengenal dengan orang lain, sebagaimana firman Allah: “menjadikan kamu berbangsa-bangsa dan bersuku-suku supaya kamu saling kenal-mengenal.”",
+"plan": {
+"now": [
+"Teleponlah keluargamu hari ini, singkat saja tanpa alasan khusus; silaturahmi tidak butuh momen",
+"Sebutkan dengan tepat apa yang kamu rindukan: orang-orang? bahasa? makanan? suasana ibadah? Rindu yang jelas lebih mudah dihadapi",
+"Berdoalah dengan doa Musa saat ia di perantauan: “Ya Tuhanku sesungguhnya aku sangat memerlukan sesuatu kebaikan yang Engkau turunkan kepadaku”"
+],
+"week": [
+"Carilah masjid, pusat Islam, atau komunitas terdekat, dan hadiri setidaknya satu pertemuan",
+"Catat urusan resmi yang masih tertunda beserta tenggatnya, lalu tanyakan kepada instansi resmi atau lembaga bantuan hukum tepercaya, bukan grup penyebar kabar burung",
+"Berkenalanlah dengan tetangga atau rekan dari negara barumu; saling mengenal adalah tujuan Qur'ani dan jalan untuk merasa betah"
+],
+"long": [
+"Tetapkan waktu rutin untuk menghubungi keluarga, seperti telepon mingguan, daripada menunggu waktu luang",
+"Ajarkan bahasamu dan kisah keluargamu kepada anak-anak dengan cinta, bukan paksaan, dan biarkan mereka bangga dengan asal-usulnya tanpa konflik",
+"Sesekali tanyakan pada dirimu: mengapa aku datang ke sini? Apakah alasan itu masih berlaku? Keputusan yang disadari lebih ringan daripada rindu yang samar"
+]
+},
+"questions": [
+"Apa yang sebenarnya kamu rindukan: orang-orangnya, tempatnya, atau versi dirimu yang dulu tinggal di sana?",
+"Apa yang telah kamu bangun di sini yang layak kamu syukuri kepada Allah meski awalnya berat?",
+"Apakah kamu menjalani masa kinimu, atau menundanya sampai hari pulang yang tak pasti?"
+],
+"avoid": [
+"Menutup diri sepenuhnya dari masyarakat baru, atau larut di dalamnya sampai kehilangan agama dan identitas",
+"Mengandalkan kabar burung untuk urusan resmi alih-alih sumber resmi dan ahlinya",
+"Menyalahkan diri karena jauh dari keluarga; jauh karena alasan yang sah sambil menjaga silaturahmi dan kebaikan bukan berarti kamu mengabaikan hak mereka"
+],
+"help": "Untuk urusan izin tinggal, suaka, kontrak, dan hak-hak, mintalah bantuan instansi resmi, pengacara, atau lembaga bantuan hukum tepercaya, dan jangan mengandalkan saran dari grup yang tidak terverifikasi.",
+"triggers": [
+"rantau",
+"merantau",
+"perantauan",
+"perantau",
+"di luar negeri",
+"luar negeri",
+"tki",
+"tkw",
+"pekerja migran",
+"imigran",
+"imigrasi",
+"pengungsi",
+"suaka",
+"izin tinggal",
+"visa",
+"kartu izin tinggal",
+"rindu kampung halaman",
+"rindu rumah",
+"rindu keluarga",
+"kangen keluarga",
+"kangen rumah",
+"kangen kampung",
+"jauh dari keluarga",
+"jauh dari rumah",
+"negara baru",
+"negara asing",
+"negeri orang",
+"tanah air",
+"bahasa di sini",
+"tidak bisa bahasanya",
+"pulang kampung",
+"kembali ke tanah air",
+"tidak merasa memiliki"
+]
+},
+"transition": {
+"label": "Perubahan dan penyesuaian diri",
+"insight": "Perubahan adalah sunnatullah dalam hidup, dan Al-Qur'an mengajarkan agar kita tidak menilai awal sesuatu dari perasaan pertama: “Boleh jadi kamu membenci sesuatu, padahal ia amat baik bagimu.” Hijrah sendiri adalah perpindahan dan awal yang baru, disiapkan dengan ikhtiar dan perencanaan disertai tawakal penuh kepada Allah, dan Nabi ﷺ mengajarkan kita memadukan keduanya: “Ikatlah ia dan bertawakallah kepada Allah.” Cara menghadapi awal yang baru adalah menerima fase bingung yang pertama tanpa menilai seluruh perjalanan darinya, memulai dengan sesuatu yang kecil tapi tetap, karena “amal yang paling dicintai Allah adalah yang paling terus-menerus dikerjakan, walaupun sedikit,” dan memohon petunjuk kepada Allah: “Wahai Tuhan kami, berikanlah rahmat kepada kami dari sisi-Mu dan sempurnakanlah bagi kami petunjuk yang lurus dalam urusan kami (ini).”",
+"plan": {
+"now": [
+"Tulis tiga hal yang berubah dan tiga hal yang tetap: imanmu, nilai-nilaimu, dan orang-orang yang menyayangimu",
+"Pilih satu rutinitas kecil yang tetap untuk dijaga di fase baru ini: salat tepat waktu, jalan kaki, atau zikir singkat harian",
+"Berdoalah: “Wahai Tuhan kami, berikanlah rahmat kepada kami dari sisi-Mu dan sempurnakanlah bagi kami petunjuk yang lurus dalam urusan kami (ini)”"
+],
+"week": [
+"Berkenalanlah dengan satu orang di tempat baru, dan tanyakan apa yang paling dibutuhkan pendatang baru",
+"Bagi proses penyesuaian menjadi tugas-tugas kecil (dokumen, rute, tempat, orang) dan selesaikan satu setiap hari",
+"Beri dirimu waktu penyesuaian yang wajar sebelum menilai keputusan itu gagal"
+],
+"long": [
+"Setelah tiga bulan, tinjau kembali: apa yang sudah aku pelajari? Apa yang perlu disesuaikan?",
+"Beri makna pada fase ini: kebaikan apa yang bisa kamu berikan di sini yang sebelumnya tidak mungkin?",
+"Tetap jalin hubungan dengan orang-orang yang menemanimu di fase sebelumnya; berubah bukan berarti memutus"
+]
+},
+"questions": [
+"Apakah kamu menilai fase baru dari hari-hari pertamanya yang membingungkan?",
+"Apa yang kamu bawa dari fase sebelumnya yang layak untuk diteruskan?",
+"Apa langkah terkecil yang membuat tempat atau peran ini terasa lebih menjadi milikmu?"
+],
+"avoid": [
+"Membandingkan awal yang baru dengan akhir fase sebelumnya yang sudah bertahun-tahun kamu jalani",
+"Mundur tergesa-gesa pada kesulitan pertama sebelum pengalaman itu diberi waktu",
+"Melalaikan ibadah dan istirahat dengan alasan sibuk mengurus persiapan"
+],
+"triggers": [
+"pindah rumah",
+"pindah kota",
+"baru pindah",
+"kami pindah",
+"kota baru",
+"pekerjaan baru",
+"kerja baru",
+"sekolah baru",
+"awal baru",
+"babak baru",
+"fase baru",
+"pensiun",
+"sudah pensiun",
+"setelah lulus",
+"lulus kuliah",
+"mulai dari nol",
+"memulai dari awal",
+"perubahan besar",
+"hidupku berubah",
+"menyesuaikan diri",
+"belum bisa menyesuaikan",
+"adaptasi",
+"beradaptasi"
+]
+},
+"emergency": {
+"label": "Keadaan darurat dan musibah mendadak",
+"insight": "Kejutan yang tidak menyenangkan adalah bagian dari tabiat dunia, dan jalan Nabi mengajarkan tiga hal saat itu terjadi: teguh di saat pertama, karena “sesungguhnya sabar itu pada pukulan pertama”; berhenti menyalahkan diri dengan “seandainya”: “Jika sesuatu menimpamu, jangan berkata: ‘Seandainya aku melakukan ini dan itu, tentu akan begini dan begitu,’ tetapi katakanlah: ‘Allah telah menakdirkan, dan apa yang Dia kehendaki Dia lakukan’”; lalu segera bertindak: “Bersemangatlah terhadap apa yang bermanfaat bagimu, mohonlah pertolongan kepada Allah, dan jangan lemah.” Jalan ini juga mengajarkan berjaga-jaga sebelum darurat datang, “Ikatlah ia dan bertawakallah kepada Allah,” seperti menyimpan salinan dokumen dan menyisakan cadangan waktu dan uang. Siapa yang tertimpa hendaknya meminta tolong tanpa malu, dan siapa yang melihat orang dalam kesulitan hendaknya menolongnya, karena “siapa yang melepaskan seorang mukmin dari satu kesusahan dunia, Allah akan melepaskannya dari satu kesusahan hari kiamat.”",
+"plan": {
+"now": [
+"Berhenti sejenak, tarik napas, dan ucapkan: “Allah telah menakdirkan, dan apa yang Dia kehendaki Dia lakukan”",
+"Tentukan prioritas: keselamatanmu dan orang yang bersamamu lebih dulu, lalu apa yang masih bisa diselamatkan sekarang",
+"Jika ada bahaya atau cedera, segera hubungi layanan darurat, dan jangan ragu meminta tolong orang di sekitarmu"
+],
+"week": [
+"Selesaikan urusannya langkah demi langkah: laporan resmi, penggantian dokumen, menghubungi bank atau instansi terkait",
+"Tulis apa yang kamu pelajari dari kejadian ini tanpa menyalahkan: kewaspadaan apa yang mencegahnya terulang?",
+"Berterima kasihlah kepada yang menolongmu, walau dengan satu kata; “Siapa yang tidak berterima kasih kepada manusia, ia tidak bersyukur kepada Allah”"
+],
+"long": [
+"Simpan salinan digital dokumen pentingmu, dan sedikit dana darurat",
+"Pelajari dasar-dasar pertolongan pertama; mungkin kamu bisa menyelamatkan nyawa dengannya",
+"Jadilah penolong yang dibutuhkan orang lain saat mereka dalam keadaan darurat"
+]
+},
+"questions": [
+"Apakah yang terjadi bisa diperbaiki, atau perlu diterima? Apa langkah berikutnya untuk masing-masing?",
+"Apakah kamu lebih banyak menyalahkan diri dengan “seandainya” daripada mencari jalan keluar?",
+"Kepada siapa kamu bisa meminta tolong sekarang?"
+],
+"avoid": [
+"Keputusan tergesa-gesa di bawah kejutan saat itu",
+"Menyalahkan diri atau orang lain alih-alih fokus pada solusi",
+"Malu meminta tolong ketika kamu membutuhkannya"
+],
+"help": "Jika ada bahaya bagi nyawa, cedera, atau kebakaran, segera hubungi nomor darurat di negaramu sebelum hal lain.",
+"triggers": [
+"darurat",
+"keadaan darurat",
+"paspor hilang",
+"paspor saya hilang",
+"dompet hilang",
+"kunci hilang",
+"tas hilang",
+"koper hilang",
+"bagasi hilang",
+"kecurian",
+"dicuri",
+"dirampok",
+"perampokan",
+"pencurian",
+"kecelakaan",
+"kecelakaan mobil",
+"mobil mogok",
+"motor mogok",
+"mati listrik",
+"listrik padam",
+"ketinggalan pesawat",
+"ketinggalan kereta",
+"penerbangan dibatalkan",
+"terkunci di luar",
+"terjebak di lift",
+"kebakaran"
+]
+},
+"digital": {
+"label": "Kehidupan digital dan privasi",
+"insight": "Dunia digital adalah bagian dari hidup kita, dan nilai-nilai Al-Qur'an dan Sunnah berlaku di sana sebagaimana di kehidupan nyata: setiap kata yang ditulis tercatat, “Tiada suatu ucapanpun yang diucapkannya melainkan ada di dekatnya malaikat pengawas yang selalu hadir”; berita yang beredar harus diperiksa sebelum dibagikan, “jika datang kepadamu orang fasik membawa suatu berita, maka periksalah dengan teliti”; privasi orang dilindungi, “dan janganlah mencari-cari keburukan orang”; dan satu kata bisa mengangkat atau menjatuhkan seseorang. Bijaklah dengan waspada terhadap tautan dan pesan yang mencurigakan, “Tinggalkan apa yang meragukanmu menuju apa yang tidak meragukanmu,” dan “seorang mukmin tidak tersengat dua kali dari lubang yang sama.” Waktu adalah nikmat yang banyak dilalaikan: “Ada dua nikmat yang banyak manusia tertipu di dalamnya: kesehatan dan waktu luang.” Jika kamu diancam atau diperas, jangan menyerah dan jangan menghadapinya sendirian: simpan buktinya dan mintalah bantuan; dosa kezaliman ada pada pelakunya.",
+"plan": {
+"now": [
+"Jangan membalas pemeras atau pengancam, jangan mengirim uang atau foto, dan simpan tangkapan layar sebagai bukti",
+"Segera ganti kata sandimu, dan aktifkan verifikasi dua langkah jika akunmu terancam",
+"Sebelum membagikan atau meneruskan berita, tanyakan: sudahkah aku memeriksanya? Apakah aku rela berita ini disandarkan kepadaku?"
+],
+"week": [
+"Periksa pengaturan privasi akun-akunmu: siapa yang melihat unggahan, foto, dan nomormu?",
+"Hapus atau arsipkan apa yang tidak lagi mencerminkan dirimu, tanpa takut dan tanpa menyalahkan diri",
+"Tetapkan waktu tanpa ponsel: saat tidur, bersama keluarga, dan saat salat"
+],
+"long": [
+"Ajukan satu pertanyaan untuk setiap unggahan: apakah aku senang melihatnya dalam catatan amalku?",
+"Ajarkan dengan lembut dasar-dasar keamanan digital kepada anak-anak dan orang tua di keluargamu",
+"Jadikan nilaimu tidak bergantung pada jumlah suka dan pengikut; Allah “tidak melihat rupa dan harta kalian, tetapi Dia melihat hati dan amal kalian”"
+]
+},
+"questions": [
+"Jika orang-orang yang kamu hormati membaca tulisanmu, adakah yang akan kamu ubah?",
+"Kamu yang memakai ponselmu, atau ponselmu yang memakaimu? Berapa banyak waktumu hilang tanpa kamu pilih?",
+"Sudahkah kamu memeriksa berita itu sebelum menanggung beban menyebarkannya?"
+],
+"avoid": [
+"Menyerah pada pemerasan atau membayar; biasanya itu menambah tuntutan, bukan menghentikannya",
+"Membagikan kata sandi atau foto pribadi kepada siapa pun, walau atas dasar percaya",
+"Menyebarkan berita sebelum memeriksanya, atau membeberkan kesalahan orang di depan umum"
+],
+"help": "Jika kamu diperas atau diancam, atau fotomu diunggah tanpa izin, jangan hadapi sendirian: laporkan ke platform, simpan buktinya, hubungi polisi atau unit siber, dan ceritakan kepada orang dewasa yang kamu percaya jika kamu masih muda.",
+"triggers": [
+"diretas",
+"akun saya diretas",
+"akunku diretas",
+"hack",
+"kata sandi",
+"password",
+"phishing",
+"tautan mencurigakan",
+"link mencurigakan",
+"pesan mencurigakan",
+"penipuan online",
+"pemerasan",
+"diperas",
+"memeras saya",
+"sextortion",
+"foto pribadi",
+"foto pribadiku",
+"mengunggah fotoku",
+"menyebarkan fotoku",
+"unggahanku",
+"postinganku",
+"hapus unggahan",
+"grup whatsapp",
+"grup wa",
+"whatsapp",
+"online",
+"internet",
+"media sosial",
+"privasi",
+"memata-matai",
+"akun palsu",
+"akun bodong",
+"pemalsuan identitas",
+"scrolling",
+"waktu layar",
+"notifikasi",
+"kecerdasan buatan",
+"tangkapan layar",
+"pesan ancaman",
+"perundungan siber"
+]
+},
+"boundaries": {
+"label": "Menetapkan batasan dan berkata “tidak”",
+"insight": "Menetapkan batasan, dalam jalan Nabi, bukan egois dan bukan keras; ia bagian dari memberi setiap pemilik hak akan haknya: “Rabbmu punya hak atasmu, dirimu punya hak atasmu, dan keluargamu punya hak atasmu; maka berikanlah kepada setiap yang punya hak akan haknya.” Allah sendiri “tidak membebani seseorang melainkan sesuai dengan kesanggupannya,” maka kamu tidak wajib memikul lebih dari kemampuanmu demi sungkan. Privasi itu terhormat dalam Al-Qur'an: “dan janganlah mencari-cari keburukan orang.” Dalam kisah Barirah, ketika Nabi ﷺ memberi syafaat agar ia kembali kepada suaminya, beliau bersabda: “Aku hanya memberi syafaat,” lalu ia berkata: “Aku tidak membutuhkannya”; beliau menjelaskan bahwa ia berhak berkata tidak, bahkan terhadap syafaat beliau. Jalan Nabi memadukan ketegasan dalam batasan dengan kelembutan dalam kata-kata: “Sesungguhnya Allah Maha Lembut dan mencintai kelembutan,” dan “ucapkanlah kata-kata yang baik kepada manusia”; “tidak” yang lembut dan jelas lebih baik daripada “ya” yang meninggalkan dongkol dan kelalaian.",
+"plan": {
+"now": [
+"Sebelum menyetujui permintaan apa pun, katakan: “Biar kupikirkan dulu, nanti kukabari”; jeda itu melindungimu dari menyetujui di bawah tekanan",
+"Tentukan satu batasan yang kamu butuhkan sekarang (waktu, uang, privasi, cara bicara) dan rumuskan dalam satu kalimat singkat yang sopan",
+"Ingat bahwa penolakan yang sopan tidak memutus silaturahmi dan tidak merusak kasih sayang"
+],
+"week": [
+"Katakan “tidak” dalam satu situasi kecil, dengan lembut dan jelas, tanpa penjelasan panjang: “Maaf, kali ini aku tidak bisa”",
+"Jika batasan itu dilanggar lagi, bicaralah dengan orangnya di saat tenang tentang dampaknya bagimu, bukan tentang kekurangannya",
+"Perhatikan siapa yang membuatmu merasa bersalah setiap kali kamu menolak, dan tanyakan: apakah rasa bersalah itu nyata, atau sekadar kebiasaan?"
+],
+"long": [
+"Sesuaikan komitmenmu dengan tenaga dan waktumu; sedikit tapi terus-menerus lebih baik daripada banyak tapi terhenti",
+"Belajarlah mendengarkan tanpa memikul tanggung jawab menyelesaikan setiap masalah",
+"Hormati batasan orang lain sebagaimana kamu ingin batasanmu dihormati"
+]
+},
+"questions": [
+"Permintaan apa yang selalu kamu iyakan lalu kamu sesali? Mengapa begitu sulit menolaknya?",
+"Apakah kamu lebih takut pada ketidaksenangan orang lain daripada peduli pada hakmu dan hak keluargamu atasmu?",
+"Bagaimana kamu bisa berkata “tidak” dengan cara yang menjaga kasih sayang dan martabat sekaligus?"
+],
+"avoid": [
+"Mencampuradukkan batasan dengan memutus hubungan; batasan menata hubungan, bukan merusaknya",
+"Menolak dengan kasar atau menyindir; ketegasan tidak perlu melukai",
+"Permintaan maaf yang panjang dan pembenaran berlebihan, sampai batasan itu selalu tampak bisa ditawar"
+],
+"help": "Jika batasan dilanggar sampai menyakiti, melecehkan, atau terus-menerus mengendalikan, ini bukan lagi soal sungkan: mintalah bantuan kepada orang yang kamu percaya atau layanan khusus.",
+"triggers": [
+"batasan",
+"batasanku",
+"menetapkan batasan",
+"bilang tidak",
+"berkata tidak",
+"tidak bisa menolak",
+"susah menolak",
+"tidak enakan",
+"sungkan",
+"ikut campur",
+"mencampuri hidupku",
+"pertanyaan pribadi",
+"tanpa izin",
+"tanpa bertanya",
+"memakai barangku",
+"memanfaatkan saya",
+"memanfaatkanku",
+"menguras tenagaku",
+"selalu minta",
+"di luar jam kerja",
+"menelepon malam-malam",
+"ruang pribadi",
+"butuh ruang",
+"mengorbankan diri sendiri"
+]
+},
+"self_worth": {
+"label": "Harga diri",
+"insight": "Dalam Al-Qur'an dan Sunnah, nilai seseorang tidak diukur dari rupa, nilai rapor, atau jumlah suka: “Sesungguhnya Allah tidak melihat rupa dan harta kalian, tetapi Dia melihat hati dan amal kalian,” dan “orang yang paling mulia diantara kamu disisi Allah ialah orang yang paling takwa diantara kamu.” Ini membebaskanmu dari mengejar pengakuan orang dan menghadapkanmu pada ukuran yang adil dan bisa kamu capai. Jalan Nabi menyeimbangkan dua hal: kepercayaan diri yang mendorongmu berusaha, “Mukmin yang kuat lebih baik dan lebih dicintai Allah daripada mukmin yang lemah, dan pada keduanya ada kebaikan. Bersemangatlah terhadap apa yang bermanfaat bagimu, mohonlah pertolongan kepada Allah, dan jangan lemah,” dan kerendahan hati yang menjagamu dari sombong, “maka janganlah kamu mengatakan dirimu suci.” Ketika Nabi ﷺ merasa takut pada wahyu pertama, Khadijah berkata kepadanya: “Sekali-kali tidak! Demi Allah, Allah tidak akan pernah menghinakanmu”; kata yang tulus dan menguatkan mengembalikan keteguhan jiwa, dan kadang kamu perlu mengatakannya kepada dirimu sendiri.",
+"plan": {
+"now": [
+"Tulis tiga hal yang kamu lakukan minggu ini dengan tulus dan sungguh-sungguh, bukan dengan hasil yang mengesankan",
+"Saat terdengar di dalam dirimu “aku gagal”, tanyakan: apakah aku akan mengatakan itu kepada sahabat di posisiku?",
+"Berdoalah: “Ya Allah, berikanlah kepada jiwaku ketakwaannya dan sucikanlah ia, Engkaulah sebaik-baik yang menyucikannya”"
+],
+"week": [
+"Pilih satu keterampilan dan latih sedikit setiap hari, terimalah bahwa kamu pemula",
+"Kurangi paparan hal-hal yang membuatmu merendahkan diri: akun, perbandingan, dan orang yang terus-menerus mengkritik",
+"Mintalah seseorang yang menyayangimu dan jujur kepadamu untuk menyebutkan kelebihan yang ia lihat padamu"
+],
+"long": [
+"Bangun nilaimu di atas hal yang bertahan: niat, akhlak, dan usahamu, bukan pujian orang yang berubah-ubah",
+"Rayakan kemajuan kecil; “amal yang paling dicintai Allah adalah yang paling terus-menerus dikerjakan, walaupun sedikit”",
+"Jika kritik keras dari masa kecil masih bersuara di dalam dirimu, memahaminya bersama tenaga ahli adalah langkah berani, bukan kelemahan"
+]
+},
+"questions": [
+"Siapa yang menetapkan ukuran yang kamu pakai untuk menilai dirimu? Apakah ukuran itu adil?",
+"Apa yang tersisa darimu jika nilai, jumlah suka, dan jabatan hilang?",
+"Apa bedanya, menurutmu, antara rendah hati dan merendahkan diri?"
+],
+"avoid": [
+"Mengikat nilaimu pada hasil terakhir, penampilan, atau pendapat satu orang",
+"Menunggu sempurna sebelum memulai; perfeksionisme sering kali adalah rasa takut yang menyamar",
+"Merendahkan diri atas nama rendah hati; rendah hati berarti tidak meremehkan orang, bukan menghinakan dirimu"
+],
+"help": "Jika merendahkan diri menjadi terus-menerus, atau disertai menarik diri atau pikiran untuk menyakiti diri, temuilah tenaga kesehatan jiwa; berobat termasuk ikhtiar.",
+"triggers": [
+"harga diri",
+"percaya diri",
+"tidak percaya diri",
+"kurang percaya diri",
+"minder",
+"insecure",
+"ragu pada diriku",
+"aku benci diriku",
+"benci penampilanku",
+"penampilanku",
+"tubuhku",
+"aku tidak pantas",
+"tidak cukup baik",
+"aku gagal",
+"aku orang gagal",
+"tidak berharga",
+"perfeksionis",
+"perfeksionisme",
+"sindrom penipu",
+"impostor",
+"pemalu",
+"malu tampil",
+"gagap",
+"takut gagal",
+"membuktikan diri"
+]
+}
+}
+}

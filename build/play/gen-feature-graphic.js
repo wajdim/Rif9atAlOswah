@@ -1,4 +1,4 @@
-// رِفقة الأُسوة — صورة العرض في متجر Play (1024×500) بثلاث لغات، بخطوط التطبيق نفسها.
+// رِفقة الأُسوة — صورة العرض في متجر Play (1024×500) بكل لغات التطبيق، بخطوط التطبيق نفسها.
 // الاستخدام: خادم محلي لجذر المشروع على المنفذ 8765، ثم: node build/play/gen-feature-graphic.js
 const { chromium } = require("playwright");
 const path = require("path");
@@ -13,7 +13,11 @@ const T = {
   fr: { dir: "ltr", name: "Rifqat al-Uswa", line: "Décrivez ce que vous vivez — lisez-le à la lumière du Coran et de la Sunna", sub: "115 situations prophétiques · Versets et hadiths sourcés · Fonctionne hors ligne" },
   ur: { dir: "rtl", name: "رفقۃ الاسوہ", line: "جو آپ پر گزر رہی ہے لکھیں — اور اسے قرآن و سنت کی روشنی میں پڑھیں", sub: "115 نبوی واقعات · ماخذ کے ساتھ آیات اور احادیث · بغیر انٹرنیٹ" },
   id: { dir: "ltr", name: "Rifqat al-Uswa", line: "Ceritakan yang sedang kamu alami — baca dalam cahaya Al-Qur'an dan Sunnah", sub: "115 kisah kenabian · Ayat dan hadits bersumber · Bisa offline" },
-  tr: { dir: "ltr", name: "Rifqat al-Uswa", line: "Yaşadığını anlat — onu Kur'an ve Sünnet ışığında oku", sub: "115 nebevî olay · Kaynaklı ayet ve hadisler · İnternetsiz çalışır" }
+  tr: { dir: "ltr", name: "Rifqat al-Uswa", line: "Yaşadığını anlat — onu Kur'an ve Sünnet ışığında oku", sub: "115 nebevî olay · Kaynaklı ayet ve hadisler · İnternetsiz çalışır" },
+  de: { dir: "ltr", name: "Rifqat al-Uswa", line: "Beschreibe, was du erlebst — lies es im Licht von Koran und Sunna", sub: "115 prophetische Situationen · Belegte Verse & Hadithe · Funktioniert offline" },
+  ms: { dir: "ltr", name: "Rifqat al-Uswa", line: "Ceritakan apa yang anda lalui — baca dalam cahaya al-Quran dan Sunnah", sub: "115 kisah kenabian · Ayat dan hadis bersumber · Boleh luar talian" },
+  fa: { dir: "rtl", name: "رفقة الأسوة", line: "آنچه را از سر می‌گذرانی بنویس — و آن را در پرتو قرآن و سنت بخوان", sub: "۱۱۵ موقعیت نبوی · آیات و احادیث با منبع · بدون اینترنت" },
+  bn: { dir: "ltr", name: "রিফকাতুল উসওয়া", line: "আপনি যা পার করছেন লিখুন — কুরআন ও সুন্নাহর আলোয় পড়ুন", sub: "১১৫টি নববি ঘটনা · উৎসসহ আয়াত ও হাদিস · ইন্টারনেট ছাড়াই চলে" }
 };
 const BOOK = '<svg viewBox="0 0 24 24" fill="none" stroke="#C9A15C" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10 5 7 4.6 3.5 5.2v12.6C7 17.2 10 17.6 12 19c2-1.4 5-1.8 8.5-1.2V5.2C17 4.6 14 5 12 6.5z"/><path d="M12 6.5V19"/></svg>';
 
@@ -26,7 +30,7 @@ const BOOK = '<svg viewBox="0 0 24 24" fill="none" stroke="#C9A15C" stroke-width
       <link rel="stylesheet" href="${BASE}fonts/fonts.css"><style>
       html,body{margin:0;width:1024px;height:500px;overflow:hidden}
       body{background:radial-gradient(120% 140% at 85% 10%,#2F4C3E 0%,#1F2E28 55%,#16211C 100%);color:#F7F2E4;
-        font-family:${lang === "ur" ? "'Noto Nastaliq Urdu','Urdu Typesetting','Tajawal'" : "'Tajawal'"},sans-serif;display:flex;align-items:center;gap:56px;padding:0 72px;box-sizing:border-box}
+        font-family:${lang === "ur" ? "'Noto Nastaliq Urdu','Urdu Typesetting','Tajawal'" : lang === "fa" ? "'Vazirmatn','Tajawal'" : lang === "bn" ? "'Noto Sans Bengali','Tajawal'" : "'Tajawal'"},sans-serif;display:flex;align-items:center;gap:56px;padding:0 72px;box-sizing:border-box}
       .icon{flex:none;width:210px;height:210px;border-radius:48px;background:#1F2E28;border:1.5px solid rgba(201,161,92,.35);
         display:grid;place-items:center;box-shadow:0 24px 60px rgba(0,0,0,.35)}
       .icon svg{width:150px;height:150px}
@@ -38,7 +42,7 @@ const BOOK = '<svg viewBox="0 0 24 24" fill="none" stroke="#C9A15C" stroke-width
       </style></head><body><div class="icon">${BOOK}</div><div class="txt"><h1>${t.name}</h1><div class="rule"></div><p>${t.line}</p><small>${t.sub}</small></div></body></html>`,
       { waitUntil: "networkidle" });
     await p.evaluate(() => document.fonts.ready);
-    await p.screenshot({ path: path.join(__dirname, "listing", { ar: "ar", en: "en-US", nl: "nl-NL", es: "es-ES", pt: "pt-PT", fr: "fr-FR", ur: "ur", id: "id", tr: "tr-TR" }[lang], "images/featureGraphic.png") });
+    await p.screenshot({ path: path.join(__dirname, "listing", { ar: "ar", en: "en-US", nl: "nl-NL", es: "es-ES", pt: "pt-PT", fr: "fr-FR", ur: "ur", id: "id", tr: "tr-TR", de: "de-DE", ms: "ms", fa: "fa", bn: "bn-BD" }[lang], "images/featureGraphic.png") });
     console.log("✓ feature graphic", lang);
   }
   await b.close();

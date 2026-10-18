@@ -1,0 +1,802 @@
+0	Der Prophet ﷺ
+1	Kopiert
+2	Aus den Gespeicherten entfernt
+3	Zu den Gespeicherten hinzugefügt
+4	Speichern
+5	Oder beginne mit einem Thema
+6	Alle Themen ›
+7	{0} Situationen und Geschichten
+8	{0} Verse und Stellen
+9	{0} Hadithe und Bittgebete
+10	{0} Lebensthemen
+11	Vers des Tages
+12	Hadith des Tages
+13	Bitte beschreibe deine Situation etwas ausführlicher
+14	Der edle Koran
+15	Kopieren
+16	Prophetischer Hadith
+17	Überlieferer:
+18	Bittgebet aus dem Koran
+19	Authentisches Bittgebet
+20	Zusammenfassung des Berichts
+21	Wortlaut des Hadith
+22	sinngemäß, nicht wörtlich
+23	Aus den Büchern der Sira
+24	Die Einzelheiten dieses Ereignisses werden in den anerkannten Sira-Quellen ({0}) berichtet, und manche Formulierungen werden von Hadith-Kritikern diskutiert. Es ist ein historischer Bericht, auf den sich die Sira stützt, kein Hadith vom Grad sahih.
+25	Quellen:
+26	Alle Abschnitte öffnen
+27	Alle Abschnitte schließen
+28	Jetzt
+29	Diese Woche
+30	Auf lange Sicht
+31	Die ganze Antwort anhören
+32	Vor allem anderen
+33	Was du geschrieben hast, zeigt tiefen Schmerz, und wir nehmen das ernst. Dein Leben ist kostbar bei Allah und bei denen, die dich lieben: „Und tötet euch nicht selbst. Gewiss, Allah ist gegen euch barmherzig.“ Diese App dient dem Nachdenken und reicht allein für eine solche Krise nicht aus. Bitte wende dich jetzt an einen Menschen, dem du vertraust, an eine Krisen-Hotline in deinem Land oder an die nächste Notaufnahme. Um Hilfe zu bitten ist Stärke, keine Schwäche, und du bist nicht allein.
+34	Deine Sicherheit geht vor
+35	Deine Situation scheint Gewalt oder Misshandlung zu enthalten. Der Islam verlangt nicht von dir, im Namen der Geduld unter Schaden zu bleiben: „Es gibt keinen Schaden und kein Schaden-Zufügen.“ Wenn du in Gefahr bist, begib dich an einen sicheren Ort und wende dich an eine Schutzstelle, die Polizei oder einen vertrauenswürdigen Menschen, danach an eine Familien- und Rechtsberatung.
+36	Eine heikle religiöse oder rechtliche Frage
+37	Deine Situation betrifft eine Angelegenheit (etwa Scheidung, Erbe oder Rechte) mit ausführlichen Bestimmungen. Was folgt, sind allgemeine Grundsätze und Hinweise zum Nachdenken, keine Fatwa; wende dich für ein Urteil in deinem Fall an einen qualifizierten Gelehrten oder an eine juristische Fachperson.
+38	Ich habe in der aktuellen Bibliothek nichts gefunden, das deiner Situation nah genug kommt. Füge Einzelheiten hinzu: Wer ist die andere Person? Was ist passiert? Wie fühlst du dich? Was möchtest du tun? Oder
+39	stöbere in den Themen
+40	Starke Übereinstimmung
+41	Mittlere Übereinstimmung
+42	Schwache Übereinstimmung
+43	Eine erste Lesart deiner Situation
+44	Erkannte Themen
+45	Allgemein
+46	Gefühle
+47	(wahrscheinlich)
+48	Nicht ausdrücklich genannt
+49	Beteiligte Personen
+50	Nicht angegeben
+51	Du beschreibst einen eigenen Fehler
+52	Gewicht der Situation
+53	Die Sicht von Koran und Sunna auf deine Situation
+54	Der Beleg
+55	Was fällt uns daran auf, wie {0} gehandelt hat?
+56	Daraus abgeleitete Grundsätze
+57	Wie kannst du davon profitieren?
+58	Weitere Situationen, die deine beleuchten
+59	Bezieht sich auf: {0}
+60	Koran
+61	Aus dem edlen Koran
+62	Aus der prophetischen Sunna
+63	Ein praktischer Plan für deine Situation
+64	Tippe auf einen Schritt, um ihn als erledigt zu markieren.
+65	Authentische Bittgebete, die zu deiner Situation passen
+66	Fragen, die dir helfen, dich selbst zu verstehen
+67	Was du vermeiden solltest
+68	Grenzen dieses Beispiels: Wann gilt es nicht?
+69	Nachdenken
+70	Vertiefte persönliche Analyse (optional)
+71	Der edle Koran, {0}
+72	Quellen
+73	Hoch authentisch
+74	Koran oder ein Hadith in den beiden Sahih-Werken oder als sahih eingestuft
+75	Authentisch
+76	ein sahih- oder hasan-Hadith in den Sunan- und Musnad-Sammlungen
+77	Historischer Bericht
+78	aus den Büchern der Sira, nicht vom Grad eines sahih-Hadith.
+79	Die Verse werden in vereinfachter Schreibweise gezeigt; nimm beim Rezitieren den Mushaf zur Hand.
+80	Warum erscheinen diese Ergebnisse? (Transparenz der Analyse)
+81	Wörter, die aus deinem Text erkannt wurden:
+82	Bewertung der Situationen:
+83	Methode: Textnormalisierung und Wortstammbildung → Erkennen von Themen und Gefühlen → Erweiterung der Anfrage → BM25-Ranking mit semantischer Verstärkung → Aufbau der Analyse nur aus den gefundenen Texten.
+84	Bewerte diese Antwort
+85	War diese Lesart hilfreich? Deine Bewertung hilft uns, die App zu verbessern
+86	Neue Situation
+87	Zusammenfassung kopieren
+88	Teilen
+89	Drucken / PDF
+90	Themen entdecken
+91	Rifqat al-Uswa – Zusammenfassung der Betrachtung
+92	Situation:
+93	Nächstliegende Situation:
+94	Plan für jetzt:
+95	Dies ist eine wegweisende Betrachtung, keine Fatwa.
+96	Analyse mit KI vertiefen
+97	Nur auf die oben gefundenen Texte beschränkt, mit Angabe ihrer Codes
+98	Optional – erfordert einen Claude-API-Schlüssel und eine Internetverbindung
+99	Das Modell liest deine Situation zusammen mit den gefundenen geprüften Texten, schreibt eine persönliche Analyse, die sie verbindet, und schlägt genaue Schritte für deinen Fall vor. Dein Text wird nur zu diesem Zweck an Anthropic gesendet.
+100	Vertiefte Analyse starten
+101	Stelle eine Folgefrage zu deiner Situation…
+102	Senden
+103	Die geprüfte Analyse oben ist vollständig und funktioniert offline. Wenn du eine zusätzliche Ebene möchtest, in der ein Sprachmodell eine persönliche Analyse schreibt, die genau diese Texte verbindet (und keinen Text von außerhalb), füge in den Einstellungen einen Claude-API-Schlüssel hinzu.
+104	Einstellungen öffnen
+105	Das Modell konnte diese Anfrage nicht abschließen. Die geprüfte Analyse oben bleibt verfügbar.
+106	(Maximale Länge erreicht.)
+107	(Halte dich an dieselben Regeln: kein Text außer aus den gefundenen Stellen, und gib die Codes an. Antworte auf Deutsch.)
+108	{0} Situationen · {1} Verse · {2} Hadithe
+109	Keine passenden Themen. Versuche „Alle Situationen“ oder beschreibe deine Situation auf der Startseite.
+110	Keine Ergebnisse für deine Suche.
+111	Deine Bewertung
+112	Dieses Thema anhören
+113	Die Lesart von Koran und Sunna
+114	Beschreibe deine Situation zu diesem Thema
+115	Verwandte Situationen
+116	Ein praktischer Plan
+117	Aus dem edlen Koran ({0})
+118	Aus der prophetischen Sunna ({0})
+119	Bittgebete
+120	Fragen zum Nachdenken
+121	Alle
+122	Verse
+123	Hadithe
+124	{0} Texte
+125	Mehr anzeigen
+126	Keine passenden Texte.
+127	Situationen
+128	Hadithe und Bittgebete
+129	Du hast noch nichts gespeichert.
+130	Tippe neben einer Situation, einem Vers oder einem Hadith auf „Speichern“, damit es hier erscheint, und bewerte Situationen, damit auch deine Bewertungen hier erscheinen.
+131	‹ Zurück
+132	Anhören
+133	Aus dem Koran
+134	Was geschah
+135	Hintergrund
+136	Beteiligte Personen:
+137	Die Texte
+138	Grundsätze
+139	Was lernen wir heute daraus?
+140	Grenzen dieses Beispiels
+141	↔ Mit einer anderen Situation vergleichen
+142	Verwandte Situationen
+143	Diese Situation bewerten
+144	Diese Situation bewerten und einen Kommentar hinterlassen
+145	Allah, der Erhabene, sagt in {0}:
+146	Vorlesen wird in diesem Browser nicht unterstützt
+147	Auf diesem Gerät gibt es keine Sprachausgabe. Installiere „Speech Services by Google“ aus dem Store.
+148	Die Sprachausgabe hat keine deutsche Stimme; ihr Installationsprogramm wird geöffnet
+149	Keine deutsche Stimme installiert. Unter Windows: Settings → Time & language → Language → „German“ mit der Funktion „Speech“ hinzufügen und die App neu öffnen.
+150	Die Situation wird vorgelesen
+151	Das Thema wird vorgelesen
+152	Die ganze Antwort wird vorgelesen
+153	Es gibt keinen Text zum Vorlesen
+154	Die Rezitation konnte nicht geladen werden (keine Verbindung)
+155	Die Rezitation konnte nicht geladen werden (keine Verbindung); stattdessen wird die Bedeutung vorgelesen
+156	Pause
+157	Fortsetzen
+158	Rezitation von Scheich {0}
+159	Stimme 1
+160	Erzähler
+161	Pausiert
+162	{0} von {1}
+163	Lesegeschwindigkeit: {0}×
+164	Was hältst du von dieser Antwort?
+165	Bewertung
+166	{0} von 5
+167	Hinterlasse einen Kommentar oder Vorschlag (optional): Was hat dir geholfen? Was fehlt?
+168	Meinen Situationstext an die Bewertung anhängen (er bleibt auf deinem Gerät, solange du ihn nicht sendest)
+169	Nur auf deinem Gerät gespeichert; du findest sie unter „Gespeichert“
+170	Bewertung speichern
+171	Dschazak Allahu chairan für deine Bewertung
+172	Bearbeiten
+173	Alle meine Bewertungen
+174	Wähle zuerst die Anzahl der Sterne
+175	Deine Bewertung wurde gespeichert, danke
+176	Rifqat al-Uswa – Bewertungen und Rückmeldungen (Version {0})
+177	Analyse der Situation
+178	Situation
+179	Datum:
+180	Themen:
+181	Übereinstimmung:
+182	Text der Situation:
+183	Kommentar:
+184	Noch keine Bewertungen
+185	Rückmeldung zu Rifqat al-Uswa
+186	Rückmeldung zur App Rifqat al-Uswa
+187	Meine Bewertungen und Rückmeldungen
+188	{0} Bewertungen
+189	Rückmeldung an den Entwickler senden
+190	Analyse:
+191	Situation öffnen
+192	Löschen
+193	männlich
+194	weiblich
+195	Automatisch
+196	Noch keine deutschen Stimmen gefunden.
+197	Deutsche Stimme installieren
+198	Keine deutsche Stimme installiert. Unter Windows: Settings → Time & language → Language & region → „German“ mit der Funktion „Speech“ hinzufügen und die App neu starten.
+199	Keine bestätigte männliche Stimme gefunden; probiere die verfügbaren Stimmen aus und wähle die beste. Die App senkt die Tonhöhe von Stimme 1 automatisch.
+200	Es ist nur eine deutsche Stimme verfügbar; die App unterscheidet die beiden Stimmen über die Tonhöhe.
+201	Bewertung gelöscht
+202	Du hast Vorlesen ohne Rezitation gewählt
+203	Rifqat al-Uswa
+204	Beschreibe deine Situation zu „{0}“ ausführlich…
+205	Was du schreibst, wird nicht gespeichert
+206	Ungültiges Schlüsselformat (er beginnt mit sk-ant-)
+207	Einstellungen gespeichert
+208	Schlüssel gelöscht
+209	Auswahl gespeichert
+210	App installieren
+211	Anzeichen starken Schmerzes
+212	Was du geschrieben hast, handelt vor allem von „{0}“
+213	, und überschneidet sich mit „{0}“
+214	, im Zusammenhang mit deiner Beziehung zu {0}
+215	Was du geschrieben hast, betrifft deine Beziehung zu {0}.
+216	Deine Worte zeigen Gefühle von {0}. Diese Gefühle sind verständlich, und du bist nicht schuld daran, sie zu haben; wichtig ist, was wir mit ihnen machen.
+217	und
+218	Eine solche Situation kann mit einem Gefühl von {0} einhergehen, auch wenn du es nicht ausdrücklich gesagt hast.
+219	oder
+220	Diese Situation scheint schwer auf dir zu lasten und dauert schon eine Weile; deshalb beginnen wir mit dem, was den Druck jetzt lindert, vor längerfristigen Plänen.
+221	Mir ist auch aufgefallen, dass du von einem eigenen Fehler sprichst; einen Fehler einzugestehen ist schon der halbe Weg, und die prophetische Rechtleitung öffnet dir die Tür zur Wiedergutmachung, nicht die Tür zur Selbstbestrafung.
+222	Hier bist du derjenige, dem Unrecht geschehen ist; der prophetische Weg erkennt zuerst dein Recht an und bietet dir dann höhere Möglichkeiten an, ohne sie dir aufzuzwingen.
+223	Das nächstliegende Beispiel, das ich für deine Situation gefunden habe: „{0}“.
+224	## Erkannte Themen
+225	Sicherheit
+226	Gefühle:
+227	Beziehung:
+228	Die schreibende Person gesteht einen eigenen Fehler ein:
+229	ja
+230	nein
+231	## Situationen aus der Sira und dem Koran (gefunden)
+232	Was geschah:
+233	Grundsätze:
+234	Grenzen der Anwendung:
+235	Text:
+236	[Zusammenfassung der Bedeutung]
+237	Vers:
+238	## Verse (gefunden)
+239	Lehre:
+240	## Hadithe (gefunden)
+241	Grad:
+242	## Authentische Bittgebete (gefunden)
+243	## Die Lesart von Koran und Sunna zu den Themen
+244	Es wurde noch kein API-Schlüssel festgelegt.
+245	Der API-Schlüssel ist ungültig oder abgelaufen.
+246	Dieser Schlüssel hat keinen Zugriff auf dieses Modell.
+247	Das Anfragelimit wurde vorübergehend überschritten. Bitte versuche es gleich noch einmal.
+248	Der Claude-Dienst ist gerade ausgelastet. Bitte versuche es gleich noch einmal.
+249	Die Anfrage ist fehlgeschlagen ({0}).
+250	Fehler beim Streaming
+251	Es besteht keine Internetverbindung, oder die Anfrage wurde blockiert. Die geprüfte Analyse oben funktioniert offline.
+252	Ich lese, was du geschrieben hast, und verstehe den Zusammenhang…
+253	Ich erkenne die Themen, Gefühle und die beteiligte Beziehung…
+254	Ich suche passende Situationen aus der Sira und den Geschichten der Propheten…
+255	Ich suche die zugehörigen Verse und Hadithe…
+256	Ich prüfe die Grade und Quellen der Texte…
+257	Ich baue die Lesart und den praktischen Plan auf…
+258	Wähle deine Bewertung
+259	Schwach
+260	Ausreichend
+261	Gut
+262	Sehr gut
+263	Ausgezeichnet
+264	Beschreibe mit deinen eigenen Worten, was du gerade durchmachst, und wir lesen es mit dir im Licht des edlen Korans, der prophetischen Sunna und der Sira.
+265	Meine Situation analysieren
+266	Eine App zum Nachdenken und zur Orientierung – keine Fatwa und kein Ersatz für Gelehrte oder Fachleute. Jeder Vers und jeder Hadith darin stammt aus einer geprüften Bibliothek mit Quelle und Grad, und kein Text wird je erfunden.
+267	Nach deiner Situation entdecken
+268	Lebensthemen, jedes mit einer Lesart aus Koran und Sunna, Situationen, Versen, Hadithen und Bittgebeten
+269	Nach Thema
+270	Alle Situationen (
+271	‹ Zurück zu den Themen
+272	Die geprüfte Bibliothek
+273	Die Verse, Hadithe und Bittgebete, auf die sich die Analyse stützt, mit Quelle und Grad
+274	Gespeichert
+275	Situationen, Verse und Hadithe, die du gespeichert hast (nur auf diesem Gerät)
+276	Über Rifqat al-Uswa
+277	Wie funktioniert es?
+278	Die App analysiert, was du schreibst, lokal auf deinem Gerät: Sie erkennt die Themen, Gefühle und die beteiligte Beziehung und holt dann aus einer geprüften Bibliothek (Situationen aus der Sira und den Geschichten der Propheten, Verse und Hadithe mit ihren Graden) die Texte, die deiner Situation am nächsten sind, und baut daraus eine Lesart und einen praktischen Plan.
+279	Datenschutz:
+280	Was du schreibst, wird nie an einen Server gesendet und nicht gespeichert. Die einzige Ausnahme: Wenn du „Mit KI vertiefen“ mit deinem eigenen Schlüssel aktivierst, werden dein Text und die gefundenen Stellen direkt an Claude (Anthropic) gesendet, um die Analyse zu erstellen.
+281	Wissenschaftliche Redlichkeit:
+282	Die App erzeugt niemals Verse oder Hadithe; jeder Text wird unverändert aus der Bibliothek übernommen. Die deutsche Koranbedeutung stammt von A. S. F. Bubenheim und N. Elyas (über Tanzil.net); die deutschen Hadith-Übersetzungen wurden für diese App aus der englischen Übersetzung von sunnah.com angefertigt und sind als solche gekennzeichnet. Die Verse werden in vereinfachter Schreibweise gezeigt; nimm beim Rezitieren den Mushaf zur Hand.
+283	Dies ist eine App zum Nachdenken und zur Orientierung; sie ersetzt nicht die Fatwa eines qualifizierten Gelehrten und nicht die Beratung durch psychologische oder juristische Fachleute, wenn sie nötig ist.
+284	OK
+285	Einstellungen
+286	Sprache / اللغة
+287	العربية
+288	Darstellung
+289	Hell
+290	Dunkel
+291	Schriftgröße
+292	Klein
+293	Normal
+294	Groß
+295	Größer
+296	Vokalzeichen bei den Erklärungen
+297	Mit Zeichen
+298	Ohne Zeichen
+299	Verse und Hadithe werden immer vollständig vokalisiert angezeigt.
+300	Vorlesegeschwindigkeit
+301	Langsam
+302	Normal
+303	Schnell
+304	Schneller
+305	Verse, rezitiert von einem Koranrezitator
+306	Anhören
+307	Die Verse werden auf Arabisch aus echten Aufnahmen bekannter Rezitatoren vorgetragen (Internet erforderlich), danach folgt ihre deutsche Bedeutung. Offline wird nur die Bedeutung vorgelesen.
+308	Stimme 1 – Hadithe, Bittgebete und Versbedeutungen
+309	Testen
+310	Stimme 2 – der Erzähler (Überschriften und Erklärungen)
+311	Mit KI vertiefen (optional) – Claude-API-Schlüssel
+312	Die geprüfte Analyse funktioniert vollständig ohne Schlüssel und ohne Internet. Ein Schlüssel fügt eine generative Analyseebene hinzu, die auf die gefundenen Texte beschränkt ist. Der Schlüssel wird nur auf diesem Gerät gespeichert und direkt an api.anthropic.com gesendet. Du erhältst ihn auf console.anthropic.com
+313	Modell
+314	Schlüssel löschen
+315	Vorlesen
+316	Eine App zum Nachdenken, die deine Situation analysiert und mit dem edlen Koran, der prophetischen Sunna und der Sira verbindet, mit geprüften Quellen und klaren Hadith-Graden.
+317	Rifqat al-Uswa
+318	Start
+319	Navigation
+320	Themen
+321	Bibliothek der Verse und Hadithe
+322	Bibliothek
+323	Über die App und Datenschutz
+324	Über die App
+325	Schreib, was passiert ist, auf deine Art und so ausführlich du möchtest… Wer? Was ist passiert? Wie fühlst du dich? (Deutsch oder Arabisch)
+326	Suche nach einem Thema oder einer Situation… z. B. Wut, Schulden, Eltern
+327	Durchsuche die Texte… z. B. Geduld, Versorgung, Wut
+328	Vorheriger Abschnitt
+329	Abspielen oder pausieren
+330	Nächster Abschnitt
+331	Lesegeschwindigkeit
+332	Stopp
+333	Vorlesen beenden
+334	Misshandlung und Angriffe
+335	Ibn Hischam, as-Sira an-Nabawiyya
+336	Fehler
+337	Familie
+338	Gesellschaft
+339	Gefühle und Prüfungen
+340	Führung
+341	Erfolg und Stärke
+342	Ibn Kathir, al-Bidaya wa-n-Nihaya
+343	Schwere Entscheidungen
+344	Beziehungen
+345	Yusuf (Josef), Friede sei mit ihm
+346	Tafsir Ibn Kathir zur Sure Yusuf
+347	Yaqub (Jakob), Friede sei mit ihm
+348	Yunus (Jona), Friede sei mit ihm
+349	Ayyub (Hiob), Friede sei mit ihm
+350	Tafsir Ibn Kathir (mit Vorsicht gegenüber Isra'iliyyat-Berichten)
+351	Musa (Mose), Friede sei mit ihm
+352	Ibrahim (Abraham), Friede sei mit ihm
+353	Maryam (Maria), Friede sei mit ihr
+354	Die Mutter von Musa
+355	Abu Bakr as-Siddiq, möge Allah mit ihm zufrieden sein
+356	Chadidscha, möge Allah mit ihr zufrieden sein
+357	Umm Salama, möge Allah mit ihr zufrieden sein
+358	Abu Huraira, möge Allah mit ihm zufrieden sein
+359	Umm Sulaim, möge Allah mit ihr zufrieden sein
+360	Dschuraidsch, der Gottesdiener
+361	Salman al-Farisi, möge Allah mit ihm zufrieden sein
+362	Hanzala, möge Allah mit ihm zufrieden sein
+363	Abu Dharr al-Ghifari, möge Allah mit ihm zufrieden sein
+364	Fatima, möge Allah mit ihr zufrieden sein
+365	Die beiden Söhne Adams
+366	Tafsir Ibn Kathir zur Sure al-Maida
+367	Qarun und sein Volk
+368	Sulaiman (Salomo), Friede sei mit ihm
+369	Der Besitzer der beiden Gärten und sein Gefährte
+370	Tafsir Ibn Kathir zur Sure al-Kahf
+371	Nuh (Noah), Friede sei mit ihm
+372	Tafsir Ibn Kathir zur Sure Hud
+373	Luqman der Weise
+374	Adam, Friede sei mit ihm
+375	Zakariyya (Zacharias), Friede sei mit ihm
+376	Hadschar (Hagar), Friede sei mit ihr
+377	Ein Mann aus früheren Völkern
+378	Abu Sufyan vor Heraklius
+379	Ein Mann, der seinen Bruder besuchte
+380	Gefühle und das Selbst
+381	Beziehungen und Familie
+382	Arbeit und Geld
+383	Gesundheit und Studium
+384	Gesellschaft und Gerechtigkeit
+385	Führung und Entscheidungen
+386	Mahmoud Khalil Al-Husary
+387	Muhammad Siddiq Al-Minshawi
+388	Abdul Basit Abdul Samad
+389	Mishary Rashid Alafasy
+390	Maher Al-Muaiqly
+391	Saad Al-Ghamdi
+392	Fares Abbad
+393	Keine Rezitation (nur die Bedeutung wird vorgelesen)
+394	Claude Opus 5 – die tiefste Analyse (Standard)
+395	Claude Sonnet 5 – ausgewogen und schneller
+396	Claude Haiku 4.5 – am schnellsten und günstigsten
+397	Die deiner am nächsten liegende Situation aus dem Koran
+398	Die deiner am nächsten liegende Situation aus dem Leben des Propheten
+399	,
+400	;
+401	Männliche Stimme
+402	durch Absenken der Tonhöhe
+403	Weibliche Stimme
+404	durch Anheben der Tonhöhe
+405	Auf diesem Gerät installierte Stimmen
+406	Weitere Stimmen installieren
+407	Für diese Sprache wurden noch keine Stimmen gefunden.
+408	Keine {0} Stimme installiert. Unter Windows: Settings → Time & language → Language & region → „{1}“ mit der Funktion „Speech“ hinzufügen und die App neu starten (Windows stellt die männliche Stimme „{2}“ bereit).
+409	Für diese Sprache ist keine männliche Stimme installiert; „Männliche Stimme“ senkt die Tonhöhe der verfügbaren Stimme. Für eine echte männliche Stimme installiere eine zusätzliche Stimme in den Sprachausgabe-Einstellungen deines Geräts.
+410	Männliche Stimmen werden zuerst aufgeführt.
+411	Der Schlüssel wird beim Speichern entfernt
+412	Sprache und Anzeige
+413	Sprache / Language / اللغة
+414	Tiefere Analyse mit KI (optional)
+415	Claude-API-Schlüssel
+416	Abbrechen
+417	Sprache · Language · اللغة
+418	Schließen ohne zu speichern
+419	Diese Antwort melden
+420	Grund der Meldung (schreibe ihn hier):
+421	Meine Frage:
+422	Die Antwort des Modells:
+423	Rifqat al-Uswa {0} · {1}
+424	Meldung zu einer KI-Antwort in Rifqat al-Uswa
+425	Sprachausgabe-Einstellungen des Geräts
+426	Offline anhören
+427	Wird heruntergeladen… {0} von {1}
+428	Für das Anhören ohne Internet heruntergeladen ({0} MB)
+429	Teilweise heruntergeladen ({0} von {1}).
+430	Lade die Rezitationen dieses Rezitators herunter ({0} Verse, etwa {1} MB), um ohne Verbindung zu hören.
+431	Ein anderer Rezitator wird gerade heruntergeladen; bitte warte, bis er fertig ist.
+432	Wähle zuerst einen Rezitator
+433	Nicht genug Speicherplatz
+434	Der Download konnte nicht gestartet werden
+435	Download abgeschlossen: {0}
+436	Einige Verse konnten nicht heruntergeladen werden; prüfe deine Verbindung und versuche es erneut
+437	Download angehalten
+438	Die Rezitationen des Rezitators wurden vom Gerät entfernt
+439	Herunterladen
+440	Download abschließen
+441	Al-Minshawi (mudschawwad)
+442	Abdul Basit (mudschawwad)
+443	Muhammad Al-Tablawi
+444	Muhammad Jibreel
+445	Abdul Rahman Al-Sudais
+446	Saud Al-Shuraim
+447	Yasser Al-Dosari
+448	Ali Al-Hudhaifi
+449	Muhammad Ayyub
+450	Abdullah Basfar
+451	Abu Bakr Al-Shatri
+452	Ahmad Al-Ajmi
+453	Nasser Al-Qatami
+454	Hani Al-Rifai
+455	Khalid Al-Qahtani
+456	Salah Al-Budair
+457	Ali Jaber
+458	Akram Al-Alaqimi
+459	Ayman Suwaid
+460	In deinen Worten:
+461	Was du fühlst
+462	Was du am ehesten brauchst
+463	Weil du geschrieben hast:
+464	(aus dem Zusammenhang deiner Worte erschlossen)
+465	Was dich in zwei Richtungen zieht
+466	Zeitlicher Rahmen
+467	Beteiligte Personen und Gewicht der Situation
+468	Warum diese Situation?
+469	Gemeinsam mit deinem Fall hat sie:
+470	Das Problem dort:
+471	Und die Rechtleitung darin war:
+472	Eine Frage, die du mitnehmen kannst
+473	Für eine genauere Lesart ergänze:
+474	Was du geschrieben hast, trägt tiefen Schmerz, und deine Sicherheit geht vor
+475	Du sprichst als jemand, der einen Fehler gemacht hat und ihn wiedergutmachen will
+476	Du sprichst als jemand, der einen geliebten Menschen verloren hat
+477	Du sprichst als jemand, der verletzt wurde
+478	Du trägst die Last, für {0} zu sorgen
+479	Du machst dir Sorgen um {0}
+480	Du stehst vor einer Entscheidung, die du noch nicht getroffen hast
+481	Zuerst deine Sicherheit: an einem sicheren Ort sein, vor jedem Nachdenken
+482	Eine Entscheidung mit innerer Ruhe treffen, dass sie dem Richtigen am nächsten ist
+483	Wiedergutmachen, was zerbrochen ist, und wissen, wo man anfängt
+484	Klare praktische Schritte: was jetzt zu tun ist
+485	Den Sinn und die Weisheit dessen verstehen, was geschehen ist
+486	Dass dein Schmerz gehört und verstanden wird, bevor irgendein Rat kommt
+487	Zwischen deiner Liebe zu {0} und dem Schmerz über das, was geschehen ist
+488	Zwischen deiner Bindung an einen geliebten Menschen und dem Schmerz über das, was geschah
+489	Zwischen Wut auf andere und Vorwürfen gegen dich selbst
+490	Zwischen deiner Pflicht gegenüber {0} und deinem eigenen Bedürfnis nach Ruhe
+491	Zwischen dem Wunsch, dich zu entscheiden, und der Angst vor der falschen Wahl
+492	Eine Traurigkeit, die aus Liebe kommt: je mehr du liebst, desto mehr schmerzt es
+493	Zwischen Reue über das, was du getan hast, und der Angst davor, wie die Leute dich sehen
+494	Zwischen der Verzweiflung, die du fühlst, und einer Frage, die zeigt, dass du noch einen Ausweg suchst
+495	Etwas, das schon eine Weile andauert, kein einmaliges Ereignis
+496	Etwas, das geschehen und vorbei ist, dich aber noch beschäftigt
+497	Deine Sorge gilt eher dem, was kommt, als dem, was geschehen ist
+498	Wer ist die andere Person?
+499	Die andere Person ist
+500	Wie fühlst du dich?
+501	Ich fühle mich
+502	Was soll geschehen?
+503	Ich möchte
+504	Was ist genau passiert?
+505	Passiert ist, dass
+506	Seit wann?
+507	Das hat angefangen
+508	Was du am ehesten brauchst: {0}.
+509	Du wirst in zwei Richtungen gezogen: {0}.
+510	Position der schreibenden Person:
+511	Was sie am ehesten braucht:
+512	Innere Spannung:
+513	Zeitlicher Rahmen:
+514	Modernes Leben und Übergänge
+515	Grad der Übereinstimmung:
+516	## Ähnliche Alltagssituationen (nur zum Verständnis der Situation; keine religiösen Texte)
+517	Ein tieferer Blick auf deine Situation
+518	Eine nachdenkliche Lesart, die nur auf deinen Worten beruht; sie ist keine psychologische Diagnose und keine Fatwa.
+519	Der Kern der Situation
+520	Unter den Gefühlen
+521	Die Art der Beziehung
+522	Muster in deinem Denken
+523	Was in deiner Hand liegt und was nicht
+524	In deiner Hand:
+525	Nicht in deiner Hand:
+526	Stärken in dem, was du geschrieben hast
+527	Zeichen, auf die es zu achten lohnt
+528	Die Priorität jetzt
+529	## Tiefere Analyse (nachdenklich, keine Diagnose)
+530	Denkmuster:
+531	Zeichen, das Aufmerksamkeit verdient:
+532	Wut ist Energie, die dir sagt, dass eine deiner Grenzen überschritten oder ein Bedürfnis von dir nicht respektiert wurde. Das Problem ist nicht das Gefühl selbst, sondern der Moment, in dem es dein Handeln steuert statt du.
+533	Traurigkeit und Schwere drücken sowohl auf deine Energie als auch auf dein Denken, sodass kleine Aufgaben groß erscheinen. Hier hilft es, eine Zeit lang weniger von dir zu erwarten und an einer einfachen Routine und tröstender Gesellschaft festzuhalten.
+534	Angst und Grübeln laufen im Kreis: ein beängstigender Gedanke, dann der Versuch, ihn durch noch mehr Denken zu kontrollieren, und die Angst wächst. Den Kreis durchbricht man, indem man trennt, was jetzt getan werden kann, und was nur eine Möglichkeit ist.
+535	Furcht ist ein Alarm, der dich schützen soll, aber er kann lauter schrillen, als die Gefahr wirklich ist. Die hilfreichen Fragen: Was ist der tatsächliche Beleg für Gefahr? Und was könnte ich tun, wenn es geschähe?
+536	Lange Einsamkeit verändert, wie wir uns selbst und andere sehen, sodass es immer schwerer wird, auf andere zuzugehen, je länger sie dauert. Der Weg hinaus sind kleine, wiederholte Schritte, kein großer Sprung.
+537	Verzweiflung verengt den Blick, bis nur noch die Sackgasse sichtbar ist. Jetzt ist nicht die Zeit für große Entscheidungen, sondern dafür, Halt bei Allah und bei Menschen zu suchen und die Hoffnung mit den kleinsten Schritten neu aufzubauen.
+538	Verlust kommt in Wellen von Schock, Traurigkeit und Sehnsucht, manchmal auch Wut oder dem Gefühl, versagt zu haben, und er verläuft nicht geradlinig. Um einen geliebten Menschen zu trauern ist kein schwacher Glaube; es braucht Zeit, keine Eile.
+539	Geduld ist weder das Verbergen von Schmerz noch Aufgeben; sie ist Standhaftigkeit, während man weiter die Mittel ergreift. Lange Geduld braucht jemanden, an den man sich lehnen kann, und Momente der Ruhe, damit sie nicht zur Erschöpfung wird.
+540	Realistische Hoffnung leugnet die Schwierigkeit nicht; sie sieht einen Weg hindurch. Sie wird eher mit kleinen, erreichbaren Zielen aufgebaut als mit Wünschen.
+541	Reue über eine Sünde ist ein Zeichen, dass das Herz lebendig ist, doch das Kreisen in Selbstbestrafung steht der Reue selbst im Weg. Der gesunde Weg: eingestehen, aufhören, wiedergutmachen, was sich wiedergutmachen lässt, und dann weitergehen.
+542	Aufdringliche Zweifel nähren sich vom Versuch, sie durch Wiederholung und Rückversicherung zum Schweigen zu bringen; je mehr du darauf eingehst, desto stärker werden sie. Sie müssen entschlossen ignoriert werden, und eine Fachperson ist nötig, wenn sie dein Leben oder deinen Gottesdienst stören.
+543	Ein geistliches Tief ist eine Phase, die viele aufrichtige Menschen durchlaufen, oft verbunden mit Müdigkeit, Beschäftigung oder dem Fehlen guter Gesellschaft. Der Weg zurück sind kleine, beständige Taten, kein großer Begeisterungsschub, der verpufft.
+544	Burnout entsteht, wenn man lange gibt, ohne Ruhe, Wertschätzung oder Auftanken, bis Erschöpfung und Taubheit eintreten. Die Abhilfe ist nicht mehr Anstrengung, sondern die Last neu zu verteilen und klare Grenzen zu ziehen.
+545	Es allen recht machen zu wollen ist oft Angst vor Ablehnung oder die Suche nach Anerkennung. Der Preis ist, dass du deine eigenen Bedürfnisse immer wieder aufschiebst, bis sie sich in dir als Müdigkeit oder Groll aufstauen.
+546	Ehekonflikte drehen sich meist nicht um das sichtbare Thema, sondern um tiefere Bedürfnisse: Wertschätzung, Sicherheit und das Gefühl, gehört zu werden. Diese Bedürfnisse auf beiden Seiten zu verstehen ist wichtiger, als den Streit zu gewinnen.
+547	Eifersucht zwischen Eheleuten reicht von einer gesunden Eifersucht, die die Beziehung schützt, bis zu einem zermürbenden Misstrauen, das sie zerstört. Der Unterschied liegt darin, ob es echte Belege gibt oder innere Ängste, die eine Bestätigung suchen.
+548	Ein gebrochenes Herz nach einer Trennung gleicht einem Verlust: Da sind Traurigkeit, Sehnsucht und Selbstzweifel. Es ist natürlich, zwischen Annahme und dem Wunsch, zurückzugehen, hin und her zu schwanken, bevor man zur Ruhe kommt.
+549	Die Entscheidung zu heiraten bringt Herz, Verstand und den Druck des Umfelds zusammen. Druck, Alter und Vergleiche können zu einer übereilten Entscheidung drängen, während eine gute Wahl Klarheit über Werte und Vereinbarkeit braucht.
+550	Das Verhalten von Kindern ist eher eine Botschaft als ein Problem: über ein Bedürfnis nach Aufmerksamkeit, Grenzen oder Sicherheit, oder über eine Entwicklungsphase, die sie gerade durchlaufen. Wirksame Erziehung verbindet Festigkeit und Wärme.
+551	Die Beziehung zu unseren Eltern trägt unsere ganze Kindheit in sich, deshalb berührt sie uns mehr als jede andere. Wahre Güte gegenüber den Eltern lässt Raum für Respekt und Freundlichkeit neben gesunden Grenzen, wenn sie nötig sind.
+552	Geschwisterbeziehungen werden von alten Rollen, Vergleichen, Erbe und Verantwortung für die Eltern geprägt. Viele heutige Konflikte sind die Fortsetzung alter Wunden, über die nie gesprochen wurde.
+553	Bei Verwandten vermischen sich Höflichkeit, Pflicht und Einmischung in private Dinge. Verwandtschaftsbande zu pflegen ist möglich, während man klare Grenzen und einen gesunden Abstand wahrt.
+554	Freundschaft beruht auf Geben und Nehmen und auf Vertrauen; wenn das Gleichgewicht lange gestört bleibt, entsteht Groll. Es ist klug, einen Freund in einer vorübergehend schweren Zeit von einer Beziehung zu unterscheiden, die dich ständig auslaugt.
+555	Verrat erschüttert dein Vertrauen in den anderen und auch in dein eigenes Urteil und wirft Fragen auf wie „Wie konnte ich das nicht merken?“. Die Heilung verläuft in Phasen; sie bedeutet weder zwingend eine Rückkehr noch nachtragenden Groll.
+556	Vergebung ist ein Weg, keine Entscheidung eines Augenblicks, und sie befreit zuerst dein eigenes Herz. Sie bedeutet nicht, das Geschehene zu vergessen, auf dein Recht zu verzichten oder zur Quelle des Schadens zurückzukehren.
+557	Der Wunsch nach Rache drückt tiefen Schmerz und ein Gefühl von Unrecht aus, das anerkannt werden will. Doch Rache bindet dich stärker an den, der dich verletzt hat, während Gerechtigkeit und Grenzen dich von ihm befreien.
+558	Misstrauen füllt Informationslücken mit den schlimmsten Deutungen, besonders wenn es alte Wunden gibt. Nachprüfen und direktes Gespräch sind nützlicher, als Urteile auf Möglichkeiten zu bauen.
+559	Üble Nachrede und Zwischenträgerei zerstören das Vertrauen im ganzen Umfeld, ob du der bist, der redet, oder über den geredet wird. Der Umgang damit braucht klare Grenzen, keine wütenden Reaktionen.
+560	Eine falsche Beschuldigung schmerzt, weil sie Ruf und Würde zugleich trifft, und sie erzeugt ein Gefühl der Ohnmacht. Ein kluger Umgang verbindet das ruhige Klarstellen der Wahrheit damit, sich nicht in einen zermürbenden Kampf ziehen zu lassen.
+561	Konflikte mit Nachbarn kehren immer wieder, weil die Nähe ständig ist, sodass sich Kleinigkeiten anhäufen, bis sie groß werden. Frühe, ruhige Kommunikation, bevor sich Groll aufstaut, ist der Schlüssel.
+562	Stress bei der Arbeit kommt nicht nur von den Aufgaben, sondern von Beziehungen und dem Gefühl von Fairness und Wertschätzung. Genau zu wissen, woher der Druck kommt, zeigt, ob die Antwort ein Gespräch, Grenzen oder eine Veränderung ist.
+563	Führung verbindet Ergebnisse und Menschen, und ihr Druck kommt aus dem Ausgleich von Festigkeit und Barmherzigkeit. Klare Erwartungen und faire Behandlung verhindern viele Probleme, bevor sie entstehen.
+564	Geldsorgen gehören zu den schwersten Belastungen, weil sie dein Gefühl von Sicherheit berühren und Gedanken und Schlaf aufzehren. Praktische Planung von bloßer Sorge zu trennen gibt dir ein Stück Kontrolle zurück.
+565	Schulden lasten auf der Seele, bevor sie auf dem Geldbeutel lasten, und mit ihnen kommen Scham und Vermeidung. Ihnen geordnet zu begegnen – die Schulden auflisten, mit den Gläubigern sprechen, ein realistischer Plan – erleichtert die Last mehr als Flucht.
+566	Materielle Not bringt täglichen Druck und eine Scham, die schwerer sein kann als die Not selbst. Dein Wert hängt nicht an dem, was du besitzt, und um rechtmäßige Hilfe zu bitten ist keine Demütigung.
+567	Neid und Vergleich entstehen meist aus einem Gefühl von Mangel oder Entbehrung. Darauf zu achten, was du wirklich willst, ist nützlicher, als zu beobachten, was andere haben.
+568	Die Angst vor dem bösen Blick kann zu einer Angst werden, die jedes Problem damit erklärt. Rechtmäßigen Schutz zu suchen ist gut, doch es ist wichtig, die Suche nach den wirklichen Ursachen der Probleme nicht zu vernachlässigen.
+569	Der Vergleich in sozialen Medien ist von Natur aus unfair: Du siehst die besten Momente anderer gegen deinen gewöhnlichen Tag. Zu viel davon schwächt Zufriedenheit und Selbstwert.
+570	Gaben wahrzunehmen verändert deinen Blickwinkel, ohne die Schwierigkeit zu leugnen. Es ist eine Fähigkeit, die durch tägliche Übung wächst, kein Gefühl, auf das wir warten, bis es von selbst kommt.
+571	Krankheit berührt Körper, Geist und Selbstbild zugleich und bringt Sorge und Kontrollverlust mit sich. Sich um die seelische Seite zu kümmern ist Teil der Behandlung, kein Luxus.
+572	Prüfungsdruck verdoppelt sich, wenn das Ergebnis an den Selbstwert oder an die Erwartungen der Familie gebunden ist. Realistische Planung und regelmäßige Ruhe helfen dem Lernen mehr als langes Aufbleiben und Sorgen.
+573	Aufschieben ist meist keine reine Faulheit, sondern eine Flucht vor einem unangenehmen Gefühl: Angst vor Versagen, Perfektionismus oder eine unklare Aufgabe. Die Aufgabe in einen sehr kleinen Schritt zu zerlegen löst die Starre.
+574	Eine zwanghafte Gewohnheit läuft in einem Kreislauf: Belastung, dann Griff zur Gewohnheit zur Erleichterung, dann Reue, die die Belastung zurückbringt. Zu verstehen, was sie auslöst, und die Umgebung zu verändern wirkt besser, als sich nur auf Willenskraft zu verlassen.
+575	Mit Begierde zu ringen gehört zur menschlichen Natur und ist kein Beweis für Verdorbenheit. Keuschheit wird durch den Umgang mit Auslösern, das Füllen leerer Zeit und erlaubte Wege aufgebaut, mehr als durch Unterdrückung und Schuldgefühle.
+576	Die Furcht vor dem Tod und dem Jenseits kann ein heilsames Erwachen sein, oder sie wird zu einer Angst, die das Leben lähmt. Das Gleichgewicht zwischen Furcht und Hoffnung macht dieses Gefühl zu einem Antrieb statt zu einer Last.
+577	Unrecht erzeugt zwei Schmerzen: den Schmerz des Schadens selbst und den Schmerz, ihn nicht abwehren zu können. Das Gefühl eines genommenen Rechts muss zuerst anerkannt werden, dann braucht es einen rechtmäßigen Weg, es einzufordern.
+578	Eine Beleidigung verletzt die Würde, deshalb bleibt ihre Wirkung in der Seele, wenn die Situation längst vorbei ist. Die stärkste Antwort ist meist die, die deine Würde bewahrt, ohne dich auf die Ebene dessen herabzuziehen, der beleidigt hat.
+579	Wenn der Unrechttuende Macht hat, verbindet sich das Unrecht mit der Angst vor den Folgen. Ein kluger Umgang wägt den Schutz deiner selbst und deines Lebensunterhalts dagegen ab, über das Richtige nicht zu schweigen, mit den verfügbaren Mitteln.
+580	Ehrlichkeit ist schwer, wenn sie einen Preis hat, und die Lüge lockt mit einer schnellen Lösung und erzeugt dann ständige Sorge. Kluge Ehrlichkeit wählt Zeitpunkt und Art, ohne die Wahrheit aufzugeben.
+581	Anvertrautes, Geheimnisse und Versprechen stellen einen Menschen zwischen seine Verpflichtung und den Druck der Umstände. Vorher klar zu wissen, was du wirklich leisten kannst, schützt dich später vor Verlegenheit.
+582	Ein hitziger Streit verschiebt die Diskussion von „Was ist richtig?“ zu „Wer gewinnt?“, und beide Seiten verlieren. Sich zu beruhigen und das Gespräch zu verschieben, bis sich die Gemüter abgekühlt haben, schützt Beziehung und Wahrheit zugleich.
+583	Hochmut – der eigene oder der eines anderen – verbirgt oft ein Gefühl der Unzulänglichkeit oder das Bedürfnis, sich zu beweisen. Wahre Demut kommt aus innerer Sicherheit, nicht daraus, auf sich selbst herabzusehen.
+584	Religiöse Unterschiede in der Familie berühren Identität und Zugehörigkeit zugleich. Zusammenleben ist mit Respekt und Weisheit möglich, ohne dass jemand seine Überzeugungen aufgibt oder sie anderen aufzwingt.
+585	Der Wunsch zu geben ist ein Zeichen von Güte, und sein Nutzen vollendet sich durch Weisheit: im Rahmen deiner Möglichkeiten geben und den Bedarf dessen prüfen, dem du gibst.
+586	Undankbarkeit schmerzt, weil sie dich fühlen lässt, dass dein Geben nicht gesehen wurde. Es hilft, deine Erwartungen und deine Absicht beim Geben zu überprüfen, ohne dein Recht auf Wertschätzung aufzuheben.
+587	Eine schwere Entscheidung ist meist schwer, weil jede Möglichkeit ihren Preis hat, und aus Angst vor Reue. Klarheit über deine wichtigsten Werte, Beratung und Istikhara machen die Entscheidung leichter, auch wenn sie nicht vollkommen ist.
+588	Barmherzigkeit gegenüber Tieren ist ein Maß für die Barmherzigkeit des Herzens. Der Umgang mit dem, was du gesehen hast, verbindet aufrichtiges Mitgefühl mit verantwortlichem praktischem Handeln.
+589	Das Leben in der Fremde verbindet den Verlust des Vertrauten mit der täglichen Mühe der Anpassung, und Heimweh kann ein Gefühl verbergen, die eigene Identität zu verlieren. Ein Gleichgewicht zwischen Treue zu den Wurzeln und Offenheit für den neuen Ort macht die Last leichter.
+590	Jede große Veränderung – auch eine positive – trägt einen Verlust des Vertrauten in sich. Es ist natürlich, eine Phase der Verwirrung zu durchlaufen, bevor man ankommt, denn Anpassung braucht Zeit.
+591	In einem Notfall arbeitet der Kopf im „Überlebensmodus“, sodass das Denken enger wird und die Gefühle sich beschleunigen. Sicherheit und praktische Schritte kommen zuerst; für die seelischen Folgen ist später Zeit.
+592	Digitale Probleme berühren Privatsphäre und Sicherheit und erzeugen ein Gefühl der Bloßstellung und des Kontrollverlusts. Schnelle praktische Schritte – Konten sichern, Beweise aufbewahren, melden – geben dir einen Teil dieser Kontrolle zurück.
+593	Schwierigkeiten, Grenzen zu setzen, hängen oft mit Angst vor Ablehnung oder mit Schuldgefühlen zusammen. Gesunde Grenzen bedeuten keine Härte; sie schützen die Beziehung vor aufgestautem Groll.
+594	Ein geringes Selbstwertgefühl lässt einen Menschen jede Situation als Beweis seines Mangels lesen. Wahrer Wert wird weder durch Leistung verdient noch durch einen Fehler verloren; er ist ein Fundament, auf dem man aufbaut.
+595	Wut ist oft ein zweites Gefühl, das ein tieferes bewacht: eine Wunde, das Gefühl, nicht geschätzt zu werden, oder die Angst, die Kontrolle zu verlieren. Frag dich: Was genau hat mich verletzt, bevor ich wütend wurde?
+596	Traurigkeit ist eine natürliche Antwort auf den Verlust von etwas, das dir wichtig ist: einem Menschen, einer Beziehung oder einem Bild, auf das du gehofft hattest. Sie muss nicht so sehr vertrieben werden, sondern benannt und behutsam durchlebt.
+597	Angst lebt in der Zukunft: Sie vergrößert, was geschehen könnte, und verkleinert deine Fähigkeit, damit umzugehen. „Was tatsächlich geschieht“ von „Was ich fürchte, dass es geschieht“ zu unterscheiden bringt sie auf ihre wirkliche Größe zurück.
+598	Gesunde Schuld sagt „Ich habe etwas falsch gemacht“ und drängt zur Wiedergutmachung; die zermürbende sagt „Ich bin schlecht“ und lähmt. Die erste ist eine Tür zur Reue; die zweite verlangt die Religion nicht von dir.
+599	Vor anderen gedemütigt zu werden berührt die Würde, deshalb schmerzt es mehr als viele Verluste. Eine Beleidigung, die dich getroffen hat, beschreibt den, der beleidigt hat; sie bestimmt nicht deinen Wert.
+600	Einsamkeit bedeutet nicht, wenige Menschen um sich zu haben, sondern jemanden zu vermissen, der dich versteht. Sie weist auf ein berechtigtes Bedürfnis nach Zugehörigkeit hin, nicht auf einen Fehler bei dir.
+601	Verzweiflung lässt einen schweren Moment dauerhaft und allumfassend erscheinen. Doch dass du schreibst und suchst, zeigt, dass ein Teil von dir noch hofft.
+602	Hin- und hergerissen zu sein ist oft ein Zeichen, dass jede Möglichkeit für dich einen Wert hat, nicht dass dein Denken schwach ist. Klarheit über die Werte kommt vor der Klarheit über die Entscheidung.
+603	Erschöpfung ist eine Botschaft deines Geistes und Körpers, dass das Geben deine Kraft überstiegen hat. Sie zu ignorieren macht dich nicht stärker; es schiebt den Zusammenbruch nur auf.
+604	Eifersucht ist im Kern die Angst, einen Platz oder einen geliebten Menschen zu verlieren. Die Angst dahinter zu verstehen ist nützlicher, als sie allein zu bekämpfen.
+605	Enttäuscht zu werden verletzt doppelt: einmal durch die Tat selbst und einmal durch den Zusammenbruch des Vertrauens, das du aufgebaut hast. Deshalb braucht die Heilung Zeit und lässt sich nicht durch eine Entscheidung abkürzen.
+606	Die Bindung an einen geliebten Menschen verdoppelt den Schmerz, den er verursacht; die Stärke der Liebe ist genau die Stärke der Verletzung. Das bedeutet nicht, dass Lieben ein Fehler war.
+607	Freude oder Dankbarkeit in deinen Worten ist ein Zeichen von Wohlbefinden; eine Gabe, die du mitten in der Schwierigkeit wahrnimmst, ist ein Fundament, auf dem man aufbauen kann.
+608	Die Ehe ist die engste Beziehung und die mit der tiefsten Wirkung; ein Konflikt in ihr wird nicht daran gemessen, wer gewinnt, sondern daran, wie viel Zuneigung und Sicherheit danach bleiben.
+609	Die Verlobungszeit ist eine Zeit des Kennenlernens und Prüfens; was dich jetzt beunruhigt, ist eine wertvolle Information vor der Bindung, nicht nur ein Hindernis.
+610	Bei den Eltern trifft die Pflicht zur Güte auf dein Bedürfnis nach Selbstständigkeit; Güte bedeutet nicht, deine Persönlichkeit auszulöschen, und Selbstständigkeit bedeutet nicht, die Bande zu kappen.
+611	Gegenüber deinen Kindern bist du verantwortlich und erziehst sie, du stehst nicht auf einer Stufe mit ihnen; ihr Verhalten ist oft eine Botschaft über ein Bedürfnis, für das sie noch keine Worte gefunden haben.
+612	Konflikte zwischen Geschwistern tragen eine lange Geschichte von Vergleichen und alten Rollen in sich; deshalb kann ein kleiner Vorfall größer erscheinen, als er ist.
+613	Bei Verwandten überschneiden sich Grenzen und Pflichten; Verwandtschaftsbande zu pflegen bedeutet nicht, Einmischung in alles hinzunehmen.
+614	In einer Beziehung zu jemandem, der Verantwortung trägt, gibt es ein Machtgefälle; deshalb verlangt sie Weisheit bei Zeitpunkt und Art und das Festhalten dessen, was geschieht, keine emotionale Konfrontation.
+615	Mit Kollegen hast du täglich mit Menschen zu tun, die du nicht ausgesucht hast; nötig ist eine respektvolle berufliche Beziehung, nicht unbedingt Freundschaft.
+616	Freundschaft ist eine Beziehung der Wahl; was darin schmerzt, schmerzt, weil du ihr dein Vertrauen geschenkt hast, und du hast das Recht zu prüfen, was du gibst und was du bekommst.
+617	Ein Nachbar ist jeden Tag in deinem Leben präsent und hat ein großes Recht; ein Konflikt mit ihm wird eher mit Weisheit und Geduld gelöst als mit einer Kraftprobe.
+618	Wer dir anvertraut ist, achtet auf deine Gerechtigkeit vor deinen Worten; Führung ist hier ein anvertrautes Gut, nach dem du gefragt wirst.
+619	Bei einem Lehrer gibt es ein Gefälle an Wissen und Autorität; ihn zu respektieren hindert dich nicht daran, höflich und klar um dein Recht zu bitten.
+620	Wenn die andere Seite du selbst bist, braucht deine Beziehung zu dir dieselbe Fairness, die du anderen gibst: weder Härte noch Ausreden.
+621	Allah ist in deinen Worten gegenwärtig: ein kostbarer innerer Halt, der dir hilft, standhaft zu bleiben.
+622	Du hast es versucht und dich bemüht: Du hast nicht aufgegeben; du suchst einen besseren Weg.
+623	Deine Geduld und Ausdauer bis jetzt: eine echte Stärke, die gepflegt und nicht aufgezehrt werden sollte.
+624	Du fragst und suchst einen Ausweg: Das ist der Anfang einer Lösung.
+625	Deine Ehrlichkeit dir selbst gegenüber und dein Eingeständnis des Fehlers: etwas, das viele Menschen nicht schaffen.
+626	Deine Fürsorge und Sorge um einen anderen Menschen: Dein Herz ist trotz der Müdigkeit da.
+627	Deine Fähigkeit, mitten in der Schwierigkeit Gaben wahrzunehmen.
+628	Du hast in Worte gefasst, was du fühlst: Schmerz auszudrücken ist ein erster Schritt, ihn zu verstehen.
+629	Du hast den Schlaf erwähnt: Gestörter Schlaf lässt alles schwerer wirken; wenn er wochenlang anhält, ist es klug, einen Arzt aufzusuchen.
+630	Du hast körperliche Beschwerden erwähnt: Der Körper trägt, was die Seele trägt, und es ist klug, dich von einem Arzt über deine Gesundheit beruhigen zu lassen.
+631	Anhaltende Isolation macht jede Sorge schwerer; schon ein einziger vertrauter Mensch zum Reden verändert viel.
+632	Große Schwere, die lange anhält, verdient die Unterstützung einer Fachperson (Beratung oder Therapie), und darum zu bitten ist Stärke, keine Schwäche.
+633	Die Priorität jetzt ist deine Sicherheit; alles andere kommt danach.
+634	Die Priorität ist, den Druck auf Geist und Körper zu lindern, bevor du nach großen Lösungen suchst.
+635	Bevor du die Situation beurteilst, überprüfe, wie du sie liest; ein Teil des Gewichts kommt aus der Lesart, nicht aus der Wirklichkeit.
+636	Die Priorität ist, Klarheit darüber zu gewinnen, was dir am wichtigsten ist, und dann einen kleinen Schritt zu wählen, den man überprüfen kann.
+637	Die Priorität ist, dass dein Schmerz gehört und aufgefangen wird, vor allen Lösungen.
+638	Die Priorität ist ein einziger aufrichtiger Schritt der Wiedergutmachung, kein vollständiger Plan.
+639	Die Priorität ist ein praktischer Schritt heute, nicht alles auf einmal zu lösen.
+640	Die Priorität ist, einen Sinn zu finden, der dir hilft, es zu tragen, ohne von dir zu verlangen, jetzt schon die ganze Weisheit zu verstehen.
+641	Verallgemeinern
+642	In deinem Text tauchen absolute Wörter auf. Wenn wir verletzt sind, sehen wir die ganze Situation in einer Farbe; die hilfreiche Frage lautet: Stimmt das wirklich jedes einzelne Mal, oder meistens, oder manchmal?
+643	Über dich selbst urteilen
+644	Du beschreibst dich mit einem pauschalen Urteil. Deine Taten lassen sich bewerten und korrigieren, aber du selbst bist größer als ein Fehler oder eine Erfahrung.
+645	Katastrophisieren
+646	Deine Worte neigen zu den schlimmsten Ausgängen. Der Schmerz ist echt, aber ein endgültiges Urteil über die Zukunft ist verfrüht; Umstände ändern sich, und was heute verschlossen aussieht, kann sich morgen öffnen.
+647	Gedankenlesen
+648	Du nimmst an, was in den Herzen anderer ist. Deine Annahme kann stimmen, aber sie bleibt eine Vermutung, bis sie bestätigt ist; nachzuprüfen, bevor man urteilt, schützt die Beziehung und dich.
+649	Die Härte des „Müssens“
+650	„Ich muss“ und „ich hätte müssen“ kehren in deinen Worten immer wieder. Hohe Ansprüche sind schön, doch wenn sie zu harten Befehlen werden, verwandeln sie sich in Selbstbestrafung statt in Antrieb.
+651	Vergleichen
+652	Du misst dich an anderen. Der Vergleich zeigt dir das Schaufenster des Lebens anderer gegen deine eigene Hinterbühne, sodass du auf einer unfairen Waage immer verlierst.
+653	Dir an allem die Schuld geben
+654	Du lädst dir die ganze Verantwortung auf. Ehrliche Verantwortung bedeutet, deinen wirklichen Anteil zu kennen, nicht auch noch den Anteil anderer zu tragen.
+655	Deine Reaktion, deine Grenzen, dein Recht auf rechtmäßigem Weg einzufordern und was du in deinem Herzen Platz nehmen lässt
+656	Die Absichten dessen, der dich verletzt hat, und was er tatsächlich getan hat
+657	Wie du in deiner Trauer für dich sorgst und was du dem Verstorbenen an Bittgebet und Güte schenkst
+658	Was Allah bestimmt hat und was vergangen ist
+659	Eingestehen, sich entschuldigen, wiedergutmachen und den Entschluss fassen, es nicht zu wiederholen
+660	Wie und wann andere deine Entschuldigung annehmen
+661	Informationen sammeln, sich beraten, Istikhara beten und dann den ersten Schritt tun
+662	Das Ergebnis im Voraus garantieren
+663	Was du im Rahmen deiner Kraft gibst, um Hilfe bitten und dein Recht auf Ruhe
+664	Seine Genesung oder dass er sich vollständig ändert
+665	Deine Gegenwart, deine Gespräche und die Mittel, die dir zur Verfügung stehen
+666	Seine eigenen Entscheidungen und was noch nicht geschehen ist
+667	Jetzt um Hilfe bitten und in der Nähe eines vertrauten Menschen bleiben
+668	Das allein tragen; das wird nicht von dir verlangt
+669	Deine Reaktion, dein nächster Schritt und die Art, wie du mit dir selbst sprichst
+670	Die Taten und Gefühle anderer und was vergangen ist
+671	Es scheint, dass dich nicht das Fehlen eines klaren Grundes für die Wahl belastet, sondern dass es echte Gründe gibt, die in beide Richtungen ziehen.
+672	Es scheint, dass das Zögern hier weniger mit fehlenden Informationen zu tun hat als mit dem Gewicht der Entscheidung selbst; je näher etwas deinem Leben und deiner Zukunft ist, desto schwerer und langsamer wird die Wahl.
+673	Es scheint, dass das, was du erlebst, keine gewöhnliche Meinungsverschiedenheit ist, sondern Schaden, der sich wiederholt und deine Würde und deine Sicherheit berührt; deshalb beginnt jeder Gedanke an den nächsten Schritt mit deinem Recht, sicher zu sein.
+674	Es scheint, dass diese Situation zwei Schmerzen zugleich enthält: den Schmerz des Unrechts selbst und den Schmerz, nicht antworten zu können, wenn es von jemandem kommt, der Macht über dich hat. Diese Verbindung macht das Schweigen schwer und das Sprechen zugleich beängstigend.
+675	Es scheint, dass die Sorge hier mehr in der Zukunft als in der Gegenwart lebt; der Kopf eilt dem Ereignis voraus und erlebt es viele Male, bevor es geschieht, und vergrößert, was geschehen könnte, ebenso sehr, wie er deine Fähigkeit verkleinert, damit umzugehen.
+676	Es scheint, dass du ein echtes Gewicht trägst, auch wenn es keine einzelne klare Ursache hat; Traurigkeit braucht nicht immer ein bestimmtes Ereignis, um echt zu sein, und manchmal ist sie die Summe kleiner Dinge, die sich still angehäuft haben.
+677	Es scheint, dass dir nicht so sehr Menschen um dich herum fehlen, sondern jemand, der dich wahrnimmt und nach dir fragt; ein Mensch kann unter vielen sein und sich dennoch ungesehen fühlen.
+678	Es scheint, dass dich nicht nur verletzt, was geschehen ist, sondern was es für dich bedeutet: dass es von jemandem kam, von dem du es nicht erwartet hast, oder auf eine Weise, die deine Würde und dein Gerechtigkeitsempfinden berührt.
+679	Es scheint, dass du keine vorübergehende Traurigkeit durchlebst, sondern einen Verlust, der vieles in dir neu ordnet; die Abwesenheit nimmt nicht nur den Menschen, sondern auch die Gewohnheiten, Gespräche und Rollen, die Teil deines Tages waren.
+680	Es scheint, dass dich nicht nur der Fehler beschäftigt, sondern was danach kommt: wie man repariert, was zerbrochen ist, und wie man sich selbst nach dem Geschehenen ansieht. Diese Sorge selbst ist ein Zeichen eines lebendigen Gewissens.
+681	Es scheint, dass du mehr trägst, als deine Worte zeigen: die praktische Last der Pflege, eine stille Sorge um einen geliebten Menschen und vielleicht das Gefühl, dass deine Müdigkeit nicht gesehen wird.
+682	Es scheint, dass deine Sorge vor allem aus Liebe kommt; du denkst an jemanden, der dir wichtig ist, und versuchst zu sehen, was kommen könnte, bevor es kommt.
+683	Es scheint, dass dein Text weniger eine einzelne Situation beschreibt als eine Anhäufung: Druck, der so lange anhielt, bis die Müdigkeit Teil deines Tages wurde.
+684	Es scheint, dass die Schwierigkeit hier nicht nur in der Situation liegt, sondern darin, wie sie sich auf das Bild auswirkt, das du von dir hast; was außen geschieht, wird schnell zu einem Urteil im Inneren.
+685	Es scheint, dass du in der Fremde nicht nur die Entfernung von einem Ort erlebst, sondern die Entfernung von einer Version deiner selbst, die unter ihren Menschen, ihrer Sprache und ihren kleinen Einzelheiten lebte; deshalb kommt das Heimweh manchmal als Müdigkeit, deren Quelle du nicht benennen kannst.
+686	Es scheint, dass du eher eine Übergangszeit durchlebst als ein einzelnes Problem; Veränderung nimmt das Vertraute, bevor sie einen Ersatz bietet, und dazwischen liegt eine Strecke der Verwirrung, die ganz natürlich ist.
+687	Es scheint, dass dies plötzlich geschah und vor allem anderen die Spur des Schocks hinterlassen hat; in solchen Momenten wird das Denken enger und die Sorge schneller, und das ist eine natürliche Reaktion, keine Schwäche.
+688	Es scheint, dass das, was in der digitalen Welt geschehen ist, eine Spur über den Bildschirm hinaus hinterlassen hat: ein Gefühl der Bloßstellung oder des Kontrollverlusts über das, was dir gehört, und dieses Gefühl ist echt und verständlich.
+689	Es scheint, dass die Schwierigkeit hier nicht die Bitte selbst ist, sondern zu der bittenden Person „Nein“ zu sagen; Ablehnen fühlt sich oft wie Härte oder Verlust an, selbst wenn es ein berechtigter Schutz deiner Zeit und Kraft ist.
+690	Es scheint, dass das, was du bei der Arbeit erlebst, über die Aufgaben selbst hinausgeht und dein Gefühl von Wertschätzung, Fairness und Stabilität berührt; und diese Dinge sickern stärker in Zuhause und Schlaf, als wir erwarten.
+691	Es scheint, dass sich die finanzielle Belastung hier nicht auf Zahlen beschränkt, sondern bis zum Gefühl der Sicherheit und zur Fähigkeit zu planen reicht, und vielleicht bis zur Scham vor anderen.
+692	Es scheint, dass sich der Konflikt hier nicht nur um das sichtbare Thema dreht, sondern um das, was darunter liegt: ein Bedürfnis nach Wertschätzung, danach, dass Worte gehört und verstanden werden, oder nach einem Gefühl von Sicherheit in der Beziehung.
+693	Es scheint, dass dich in der Erziehung deiner Kinder mehr beschäftigt als das Verhalten selbst, nämlich die Suche nach dem richtigen Weg; schon diese Sorge ist ein Zeichen echter Fürsorge, nicht des Versagens.
+694	Es scheint, dass das, was dich beschäftigt, deine Beziehung zu Allah berührt und wie du dich vor Ihm siehst; diese Sorge selbst ist ein Beleg für ein lebendiges Herz, das Nähe sucht, nicht für ein fernes.
+695	Es scheint, dass die Krankheit hier nicht nur den Körper berührt, sondern auch das Gefühl von Sicherheit und Kontrolle über die Einzelheiten des Alltags, und mit ihr kommt eine verständliche Sorge um das, was vor dir liegt.
+696	Es scheint, dass du eher einen sich wiederholenden Kreislauf beschreibst als einen einzelnen Fehler: Belastung, die zur Gewohnheit drängt, dann Reue, die die Belastung zurückbringt; diesen Kreislauf zu verstehen hilft mehr, als dir dafür Vorwürfe zu machen.
+697	Es scheint, dass in deinen Worten mehr steckt, als ihre ersten Zeilen zeigen; hinter der sichtbaren Situation stehen Gefühle und Bedürfnisse, die verstanden werden wollen, bevor man nach einer Lösung sucht.
+698	Auf der einen Seite: {0}; auf der anderen: {1}. Beide Seiten enthalten etwas, das abgewogen werden will, deshalb fühlt sich die Entscheidung nicht leicht an.
+699	Was dich zu dieser Wahl zieht, ist klar: {0}; und vielleicht verzögert nicht die Schwäche dieser Gründe die Entscheidung, sondern die Größe dessen, was aus ihr folgt.
+700	Es scheint, dass das, was dich zögern lässt, echtes Gewicht hat: {0}; das sind keine Einbildungen, die man leicht beiseiteschieben kann, aber sie sind auch nicht das ganze Bild.
+701	Annehmen kann bedeuten, dem näherzukommen, womit du dich wohlfühlst, doch es wirft auch Fragen nach Stabilität und den kommenden Verpflichtungen auf; Ablehnen mag sicherer scheinen, doch es kann die Angst tragen, etwas zu verlieren, das vielleicht nicht wiederkommt. So wird jede Möglichkeit mit einem möglichen Verlust verbunden, nicht nur mit einem klaren Gewinn.
+702	Bleiben kann bedeuten, das Aufgebaute und die Stabilität deines Umfelds zu bewahren, doch es kann auch bedeuten, dass weitergeht, was dich erschöpft; Gehen kann Erleichterung versprechen, trägt aber auch Angst vor dem Unbekannten und vor dem Preis der Trennung. Vielleicht liegt die Schwierigkeit darin, dass beide Wege einen echten Preis haben.
+703	Vergeben kann Herzensfrieden bedeuten und eine wertvolle Bindung bewahren, doch es kann die Angst wecken, dass sich der Schaden wiederholt; den Kontakt abzubrechen kann sich wie Selbstschutz anfühlen, kann aber eine Leere oder ein Schuldgefühl hinterlassen. Wichtig ist: Vergebung bedeutet nicht zwingend, zu dem zurückzukehren, wie es war.
+704	Offen zu sprechen kann bedeuten, dir selbst gerecht zu werden und Klarheit in die Beziehung zu bringen, doch es trägt die Angst vor der Reaktion und davor, was sich zwischen euch ändern könnte; zu schweigen mag den Frieden für den Moment wahren, kann aber in dir aufstauen, was sich lange schwer tragen lässt.
+705	Umziehen kann die Chance auf einen weiteren Anfang bedeuten, doch es heißt auch, das Vertraute und die Nahestehenden zu verlassen; Bleiben bewahrt Nähe und Sicherheit, kann aber die Frage offenlassen, was hätte sein können.
+706	Weitermachen kann bedeuten, dem treu zu bleiben, was du begonnen hast, und Verlust zu vermeiden, doch es kann bedeuten, dass bleibt, was dich auslaugt; Aufhören kann eine neue Tür öffnen, trägt aber die Angst, eine übereilte Entscheidung zu sein.
+707	Deshalb nimmt die Angst vor Reue hier zwei entgegengesetzte Formen an: Reue, wenn du weitergehst, und Reue, wenn du zurückhältst. Wenn Reue in jeder Richtung möglich ist, ist sie kein Beleg mehr für eine bestimmte Richtung, sondern ein Zeichen, dass dir die Entscheidung wichtig ist.
+708	Es scheint, dass die Angst vor Reue in deinen Worten stark gegenwärtig ist; und vielleicht ist die tiefere Angst nicht die vor einem bestimmten Ausgang, sondern die, dir später vorzuwerfen, nicht sorgfältig genug gewählt zu haben.
+709	Vielleicht ist die tiefere Angst, einen Menschen zu verlieren, dem du dich nahe fühlst, oder das Bild zu verlieren, das du dir davon gemacht hattest, was die Beziehung werden könnte.
+710	Es scheint, dass der Blick anderer in deinen Überlegungen gegenwärtig ist; das ist verständlich, doch es hilft zu unterscheiden, was du selbst wirklich fürchtest, und was nur ein Echo dessen ist, was die Leute sagen könnten.
+711	Die Angst hier reicht vielleicht tiefer als ein einzelnes Ergebnis: die Angst davor, was das Ergebnis über dich aussagen würde, als würde ein Scheitern – wenn es geschähe – zu einem Urteil über deinen Wert statt über einen einzigen Versuch.
+712	Es scheint, dass dein Schweigen keine Schwäche ist, sondern eine Abwägung um deinen Lebensunterhalt und deine Stabilität; diese Abwägung ist berechtigt und verständlich. Doch langes Schweigen über etwas, das sich wiederholt, hat auch einen Preis: an deinem inneren Frieden und an deinem Gefühl für deinen eigenen Wert und für die Gerechtigkeit dessen, was du erlebst.
+713	Ein Teil der Sorge betrifft vielleicht die Sicherheit: die Fähigkeit, den Bedarf zu decken und das Leben stabil zu halten. Es ist eine berechtigte Sorge, die eine realistische Abwägung braucht, weder Ignorieren noch Übertreiben.
+714	Vielleicht trägt die heutige Angst das Echo einer früheren Erfahrung; wer schon einmal verletzt wurde, wird vorsichtig, und diese Vorsicht schützt ihn manchmal und lässt ihn manchmal in jeder neuen Situation die Vergangenheit sehen.
+715	Es gibt einen Unterschied zwischen einer emotionalen Konfrontation und dem klugen Einfordern des Richtigen; Letzteres kann bedeuten, festzuhalten, was geschieht, den richtigen Zeitpunkt und den richtigen Weg zu wählen und ruhige Worte, die dein Recht schützen, ohne dich unnötigem Verlust auszusetzen.
+716	Es gibt einen wichtigen Unterschied zwischen einem begrenzten Einkommen und fehlender Stabilität; das Erste ist ein Zustand, der sich durch Mühe und gemeinsame Planung ändern kann, das Zweite betrifft Ernsthaftigkeit und einen klaren Blick in die Zukunft. Es kann nützlicher sein, darauf zu schauen, wie Verantwortung getragen wird, als darauf, was im Moment vorhanden ist.
+717	Es gibt einen Unterschied zwischen sich wohlfühlen und zueinander passen: Das Wohlgefühl ist ein wichtiges Zeichen, das man nicht abtun sollte, während sich das Zueinanderpassen in Werten zeigt, im Umgang mit Meinungsverschiedenheiten und im Blick auf den Alltag. Das Erste ersetzt nicht die Prüfung des Zweiten, so wie nichts sein Fehlen ausgleicht.
+718	Die Vorbehalte deiner Familie kommen vielleicht eher aus ihrer Sorge um dich als aus der Ablehnung deiner Wahl; genau zu verstehen, woher diese Vorbehalte kommen – von einer bestimmten Sache oder von mehreren –, kann die ganze Gestalt der Entscheidung verändern und Uneinigkeit in ein Gespräch verwandeln.
+719	Es gibt einen Unterschied zwischen freier Wahl und Wahl unter Druck: dem Druck der Zeit, des Alters oder des Drängens des Umfelds. Eine Entscheidung, die getroffen wird, um dem Druck zu entkommen, kann eine Weile Erleichterung bringen, doch eine aus Überzeugung getroffene trägt länger.
+720	Es scheint, dass es in dieser Situation einen Abstand gibt zwischen dem, was du willst, und dem, was andere von dir erwarten; diesen Abstand klar anzuerkennen ist der erste Schritt, ihn zu verringern, statt ihn als stillen Kampf in dir bestehen zu lassen.
+721	Es ist wichtig, die Angst, einen Fehler zu machen, von einem Beleg zu unterscheiden, dass eine Wahl falsch ist; das Erste ist ein natürliches Gefühl, das jede wichtige Entscheidung begleitet, das Zweite eine Information, die ruhig geprüft werden will.
+722	Es gibt einen Unterschied zwischen Schuld, die sagt „Ich habe falsch gehandelt“ und zur Wiedergutmachung drängt, und Scham, die sagt „Ich bin schlecht“ und lähmt; das Erste ist eine Tür zu Reue und Veränderung, das Zweite macht die Situation nur schwerer.
+723	Es ist wichtig, das Geschehene von deinem Wert zu trennen; die Situation – so schwer sie ist – beschreibt eine Erfahrung oder eine Phase, und sie kann kein endgültiges Urteil über dich sein.
+724	Es gibt einen Unterschied zwischen Vergebung und Versöhnung: Vergebung befreit dein Herz von der Last des Geschehenen, während Versöhnung eine Rückkehr in die Beziehung ist, die neues Vertrauen und Sicherheiten braucht. Das Erste kann möglich sein, auch wenn das Zweite nicht klug ist.
+725	Es ist wichtig, Geduld mit einer vorübergehenden Schwierigkeit davon zu unterscheiden, unter anhaltendem Schaden zu bleiben; Geduld ist eine Tugend, doch sie bedeutet nicht, hinzunehmen, was deine Sicherheit oder deine Würde bedroht.
+726	Es gibt einen Unterschied zwischen klaren Grenzen und dem Abbruch der Beziehung; gesunde Grenzen können genau das sein, was eine Beziehung vor dem Verschleiß bewahrt, nicht das, was sie zerstört.
+727	Es gibt einen Unterschied zwischen der Fürsorge für einen geliebten Menschen und davon, alles für ihn zu tragen; Fürsorge, die dich völlig auszehrt, kann nicht von Dauer sein, und um Hilfe zu bitten ist Teil der Fürsorge selbst, kein Versagen darin.
+728	Es ist wichtig, Traurigkeit von Verzweiflung zu unterscheiden: Traurigkeit ist Schmerz über das Verlorene und kann neben Hoffnung bestehen, während Verzweiflung aus einem einzigen Moment ein Urteil über die ganze Zukunft fällt.
+729	Die Wut, die sich in deinen Worten zeigt, verdeckt vielleicht etwas Tieferes: eine Wunde, das Gefühl, nicht geschätzt zu werden, oder die Enttäuschung über jemanden, von dem du anderes erwartet hast.
+730	Es gibt einen Unterschied zwischen dem, was du tatsächlich gesehen hast, und dem, womit die Sorge die Lücken füllt; Misstrauen nährt sich von Möglichkeiten, und ruhiges Nachprüfen oder ein direktes Gespräch ist nützlicher, als darauf Urteile zu bauen.
+731	Es gibt einen Unterschied zwischen allein sein und sich einsam fühlen; das Zweite bedeutet, jemanden zu vermissen, der dich versteht, und es ist ein berechtigtes Bedürfnis nach Nähe, kein Fehler bei dir.
+732	Der Vergleich mit anderen stellt das Schaufenster ihres Lebens gegen jede Einzelheit deines eigenen; deshalb ist er selten fair und sagt dir selten etwas Wahres über deinen eigenen Weg.
+733	Es ist wichtig, Faulheit von Erschöpfung zu unterscheiden; was wie Nachlässigkeit aussieht, ist in Wahrheit vielleicht aufgezehrte Kraft, und Ruhe ist hier kein Luxus, sondern eine Bedingung dafür, weitermachen zu können.
+734	Es gibt einen Unterschied zwischen dem, was du beeinflussen kannst, und dem, was nicht in deiner Hand liegt; die Sorge versucht, alles zu kontrollieren, während die Ruhe beginnt, wenn die Kraft auf den Teil gerichtet wird, der tatsächlich machbar ist.
+735	Es hilft, das tatsächlich Geschehene von deiner Deutung dessen zu trennen, was in den Herzen anderer ist; deine Deutung kann stimmen, aber sie bleibt eine Möglichkeit, bis sie bestätigt ist.
+736	Die Bindung an das, was war – oder an das, was du dir erhofft hattest –, ist vielleicht stärker als die Bindung an den Menschen; beides zu unterscheiden hilft dir zu verstehen, was du jetzt wirklich brauchst.
+737	Ein Verlust geht oft mit dem Gefühl einher, versagt zu haben; doch was du jetzt, nach der Abwesenheit, klar siehst, war damals nicht so klar. Das Versäumnis, das dich schmerzt, ist ein Zeichen, wie sehr du geliebt hast, und die Tür der Güte durch Bittgebet, Spende und Treue steht noch offen.
+738	Es gibt einen Unterschied zwischen pflichtbewusster Güte gegenüber einem Elternteil und ständiger körperlicher Anwesenheit; Güte hat Raum für viele Formen von Fürsorge, Kontakt und praktischer Regelung, und genauer ist es, darauf zu schauen, was der geliebte Mensch wirklich braucht und was sich so regeln lässt, dass es ihn in jedem Fall erreicht.
+739	Es gibt einen Unterschied zwischen deiner Absicht und der Wirkung deines Handelns auf den anderen; die Absicht kann gut und die Wirkung schmerzhaft sein, und die Wiedergutmachung beginnt damit, die Wirkung anzuerkennen, ohne die Absicht leugnen zu müssen.
+740	Aus einem weiteren Blickwinkel: {0}
+741	In der Art der Beziehung selbst: {0}
+742	Unter der Oberfläche dessen, was du fühlst: {0}
+743	Die Angst vor Reue bedeutet nicht, dass eine der Möglichkeiten falsch ist. Klarheit entsteht nicht dadurch, diese Angst auszulöschen, sondern indem du weißt, worauf du nicht verzichten kannst und was mit der Zeit aufgebaut werden kann.
+744	Gute Gründe in beide Richtungen machen die Wahl nicht unmöglich; sie bedeuten, dass sie Ordnung braucht: zu wissen, welcher dieser Gründe für dich auf lange Sicht am meisten wiegt, nicht nur im Moment der Sorge.
+745	Klarheit kommt vielleicht nicht auf einmal; viele Entscheidungen werden Schritt für Schritt klar, während man Informationen sammelt, vertrauenswürdige Herzen um Rat fragt und Allahs Führung durch Istikhara sucht, und dann das Herz zur Ruhe kommen lässt.
+746	Deine Sicherheit und deine Würde stehen nicht zur Verhandlung; jede Entscheidung, die du triffst, verdient es, von einem sicheren Ort aus zu beginnen, mit der Unterstützung vertrauenswürdiger Menschen oder einer Fachstelle, nicht aus dem Gefühl heraus, allem allein gegenüberzustehen.
+747	Anzuerkennen, dass das Geschehene schmerzhaft war, bedeutet nicht, dass du sofort reagieren oder sofort vergeben musst; du darfst dir Zeit lassen und wählen, was deine Würde und deinen inneren Frieden zugleich schützt.
+748	Was dich erwartet, ist keine Prüfung deines Wertes, sondern eine Station unter vielen; und je mehr deine Aufmerksamkeit zum Schritt zurückkehrt, der jetzt vor dir liegt, desto leichter wird das Gewicht dessen, was noch nicht geschehen ist.
+749	Du musst keine vollständige Erklärung für das finden, was du fühlst, um Behutsamkeit zu verdienen; in dieser Phase gut für dich zu sorgen und einem vertrauten Menschen nahe zu sein sind zwei Schritte, die vor jedem tieferen Verständnis kommen.
+750	Das Bedürfnis nach Nähe ist keine Schwäche, sondern Teil der menschlichen Natur; der Weg aus der Einsamkeit kann mit einer einzigen kleinen Verbindung beginnen, die behutsam aufgebaut wird, nicht damit, alles auf einmal zu ändern.
+751	Trauer um einen verlorenen Menschen ist nichts, worüber man schnell hinwegkommt; mit der Zeit lernt man, sie anders zu tragen. Was du jetzt fühlst, ist keine Schwäche, sondern die Spur einer echten Liebe, die noch ihren Platz sucht.
+752	Den Fehler einzugestehen – wie deine Worte zeigen – ist nicht das Ende der Geschichte, sondern ihr ehrlichster Anfang; wichtig ist jetzt nicht Selbstbestrafung, sondern ein einziger aufrichtiger Schritt der Wiedergutmachung, der die Tür zu dem öffnet, was folgt.
+753	Dein Geben hat großen Wert, doch es braucht auch Schutz; für dich selbst zu sorgen ist kein Egoismus, sondern das, was es möglich macht, weiter zu geben.
+754	Deine Sorge ist ein Zeichen deiner Liebe, doch Liebe wirkt am besten, wenn sie zu ruhiger Gegenwart und möglichen Schritten wird, statt jede Möglichkeit auf einmal zu tragen.
+755	Was du jetzt brauchst, ist vielleicht keine große Lösung, sondern ein kleiner Raum zum Durchatmen; was auf dem Höhepunkt der Erschöpfung unmöglich aussieht, wird nach etwas Ruhe und Unterstützung oft klarer.
+756	Dein Wert wird nicht an einer Situation oder einem Ergebnis gemessen; und wenn das Bild, das du von dir hast, vom Lärm des Augenblicks getrennt wird, wird der Umgang mit der Situation selbst viel leichter.
+757	Zugehörigkeit ist nicht auf einen Ort beschränkt; sie lässt sich am neuen Ort nach und nach aufbauen, ohne die Treue zu deinen Wurzeln aufzuheben, und jede kleine Verbindung, die du hier knüpfst, nimmt deiner Liebe zu dem, was du dort zurückgelassen hast, nichts weg.
+758	Anpassung geschieht nicht auf einmal; sie besteht aus kleinen Tagen, einer nach dem anderen, und was heute fremd scheint, kann vertraut werden, bevor du es bemerkst.
+759	Die Priorität jetzt sind klare praktische Schritte, einer nach dem anderen; und wenn es vorbei ist, hilft es, dir Zeit zu geben, dich von dem Erlebten zu erholen, statt weiterzumachen, als wäre nichts geschehen.
+760	Mit dem Geschehenen lässt sich durch praktische Schritte umgehen, einer nach dem anderen; die Kontrolle zurückzugewinnen beginnt mit einem kleinen, klaren Schritt und mit der Erinnerung, dass das, was ein anderer tut, nicht deinen Wert bestimmt.
+761	Klare Grenzen machen dich nicht weniger liebevoll oder weniger großzügig; sie sorgen dafür, dass dein Geben aus freier Wahl kommt, nicht aus einem Gefühl des Zwangs.
+762	Genau zu wissen, woher der Druck kommt, ist schon der halbe Weg; was sich durch ein Gespräch löst, ist etwas anderes als das, was sich durch Grenzen löst, und beides unterscheidet sich von dem, was eine größere Veränderung braucht.
+763	Finanzielle Belastung – so schwer sie ist – wird leichter, wenn sie sich von einer allgemeinen Sorge in Zahlen und klare Schritte verwandelt; geordnete Mühe zusammen mit Vertrauen auf Allah bringt etwas Ruhe zurück, noch bevor sich die Umstände ändern.
+764	Nahe Beziehungen werden nicht am Fehlen von Konflikten gemessen, sondern an der Fähigkeit, zu reparieren, was in ihnen Risse bekommt; Reparatur beginnt oft mit einem ruhigen Satz zur richtigen Zeit.
+765	Das Verhalten von Kindern ist meist eine Botschaft über ein Bedürfnis, für das sie keine Worte gefunden haben; Festigkeit mit Wärme zu verbinden, mit Geduld für schrittweise Veränderung, bewirkt mehr, als ein einzelner Tag zeigt.
+766	Die Tür der Rückkehr zu Allah ist nie verschlossen, und der Weg zu Ihm wird mehr mit kleinen, beständigen Schritten gegangen als mit großen, abgebrochenen Sprüngen; die Unruhe, die du fühlst, ist ein Zeichen, dass du noch auf dem Weg bist.
+767	Sich um die seelische Seite zu kümmern ist Teil des Behandlungsweges, kein Luxus; alles, was deine Last erleichtert – Gesellschaft, Ruhe oder klare Informationen –, verdient seinen Platz.
+768	Veränderung kommt hier selten aus einer großen Entscheidung, sondern aus einer kleinen Veränderung von Umgebung, Zeitpunkt und Alternativen, die so lange wiederholt wird, bis sie zu einer neuen Gewohnheit wird.
+769	In Ruhe zu verstehen, was in dir geschieht, ist der erste Schritt; viele Situationen werden leichter, wenn ihre Gefühle und Bedürfnisse klar benannt werden, bevor man nach einer Lösung sucht.
+770	das Wohlgefühl, das du empfindest
+771	der Glaube und der Charakter, die du siehst
+772	das Versprechen, das die Gelegenheit birgt
+773	das gemeinsame Leben und die gemeinsame Geschichte
+774	die finanzielle Seite und ihre Grenzen
+775	die Vorbehalte deiner Familie
+776	die Entfernung und der Ortswechsel
+777	der Druck von Alter und Zeit
+778	was die Leute sagen und wie sie es sehen
+779	die Spur einer früheren Erfahrung
+780	Seiten an seinem Wesen, die dich beunruhigen
+781	wie wenig du ihn kennst
+782	die Größe der kommenden Verpflichtungen
+783	{0}
+784	Eine tiefere Lesart mit KI schreiben
+785	Eine tiefere Lesart, geschrieben von Claude mit deinem Schlüssel
+786	Ich konnte nicht klar erkennen, worum es in deiner Situation geht. Wähle das nächstliegende Thema, dann lese ich sie noch einmal:
+787	Ich habe die Lesart auf „{0}“ ausgerichtet, wie du gewählt hast.
+788	In „Meine Situationen“ speichern
+789	In „Meine Situationen“ gespeichert
+790	Meine Situationen
+791	Deine Situationen bleiben nur auf diesem Gerät und werden nirgendwohin gesendet.
+792	Lesart öffnen
+793	Alle meine Situationen löschen
+794	Tippe noch einmal, um alle deine Situationen zu löschen
+795	Deine Situationen wurden von diesem Gerät gelöscht
+796	In „Meine Situationen“ gespeichert
+797	Aus „Meine Situationen“ entfernt
+798	Anzeige
+799	Schriftart
+800	Gilt für alle Texte außer Koranversen, die ihre eigene Schrift behalten.
+801	Original

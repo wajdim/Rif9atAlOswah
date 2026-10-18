@@ -23,7 +23,7 @@
 html{scroll-behavior:smooth;}
 body{
   margin:0;
-  font-family:'Tajawal',system-ui,sans-serif;
+  font-family:var(--font-ui,'Tajawal'),'Tajawal',system-ui,sans-serif;
   background-color:var(--bg);
   background-image:
     radial-gradient(circle at 12% 6%, rgba(169,130,47,0.07), transparent 42%),
@@ -163,7 +163,7 @@ h1,h2,h3,p,ul,ol{margin:0;}
 .evidence-item{border-inline-start:3px solid var(--gold); padding-inline-start:16px; margin-bottom:20px;}
 .evidence-item:last-child{margin-bottom:0;}
 .evidence-tag{font-size:.72rem; color:var(--gold); font-weight:700; margin-bottom:4px;}
-.evidence-quote{font-family:'Amiri',serif; font-size:1.14rem; line-height:2.05; color:var(--pine-strong);}
+.evidence-quote{font-family:var(--font-ui,'Amiri'),'Amiri',serif; font-size:1.14rem; line-height:2.05; color:var(--pine-strong);}
 .evidence-meta{font-size:.78rem; color:var(--muted); margin-top:7px;}
 .evidence-relevance{font-size:.86rem; color:var(--ink-soft); margin-top:8px; line-height:1.85;}
 
@@ -184,7 +184,7 @@ ol.steps li::before{
 .limits-box .lt{font-size:.78rem; font-weight:700; color:var(--muted); margin-bottom:8px;}
 
 .reflection-box{
-  font-family:'Amiri',serif; font-size:1.12rem; color:var(--pine-strong);
+  font-family:var(--font-ui,'Amiri'),'Amiri',serif; font-size:1.12rem; color:var(--pine-strong);
   line-height:2.25; text-align:center; padding:22px 20px; background:var(--pine-soft); border-radius:var(--radius-lg);
 }
 .sources-box{font-size:.86rem; color:var(--ink-soft); line-height:2.1;}
@@ -215,7 +215,7 @@ ol.steps li::before{
 
 /* ---------- Explore ---------- */
 .explore-head{max-width:var(--maxw); margin:0 auto; padding:24px 20px 6px; text-align:center;}
-.explore-head h2{font-family:'Amiri',serif; font-size:1.5rem; color:var(--pine-strong);}
+.explore-head h2{font-family:var(--font-ui,'Amiri'),'Amiri',serif; font-size:1.5rem; color:var(--pine-strong);}
 .explore-head p{color:var(--muted); font-size:.88rem; margin-top:8px;}
 .stats-bar{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:16px;}
 .stat-pill{display:flex; align-items:center; gap:6px; font-size:.74rem; color:var(--ink-soft); background:var(--surface); border:1px solid var(--border); padding:5px 12px; border-radius:999px;}
@@ -288,7 +288,7 @@ ol.steps li::before{
 }
 .modal-overlay[hidden]{display:none;}
 .modal-box{background:var(--surface); border-radius:var(--radius-lg); padding:26px 24px; max-width:420px; width:100%; line-height:1.9;}
-.modal-box h3{font-family:'Amiri',serif; color:var(--pine-strong); font-size:1.2rem; margin-bottom:12px;}
+.modal-box h3{font-family:var(--font-ui,'Amiri'),'Amiri',serif; color:var(--pine-strong); font-size:1.2rem; margin-bottom:12px;}
 .modal-box p{font-size:.9rem; color:var(--ink-soft); margin-bottom:10px;}
 .modal-actions{display:flex; justify-content:flex-end; gap:10px; margin-top:16px;}
 
@@ -296,3 +296,6 @@ ol.steps li::before{
   .hero{padding-top:60px;}
   .hero .logo{font-size:2.5rem;}
 }
+
+/* الآيات القرآنية تبقى دائمًا بخطها (لا يغيّرها اختيار الخط في الإعدادات) */
+.quran,[data-q]{font-family:'Amiri',serif !important;}

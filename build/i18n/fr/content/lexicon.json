@@ -597,6 +597,373 @@
     "c'est fini",
     "s'est passé"
    ]
+  },
+  "analysis": {
+   "absolute": [
+    "personne ne",
+    "tout le monde me déteste",
+    "tout le monde est contre",
+    "rien ne marche",
+    "plus jamais",
+    "pas une seule fois",
+    "aucun ne"
+   ],
+   "absoluteSoft": [
+    "jamais",
+    "toujours",
+    "à chaque fois",
+    "chaque fois",
+    "tout le monde"
+   ],
+   "label": [
+    "je suis nul",
+    "je suis nulle",
+    "je suis un échec",
+    "je suis bête",
+    "je suis stupide",
+    "je suis inutile",
+    "je ne vaux rien",
+    "je suis un fardeau",
+    "je suis mauvais",
+    "je suis mauvaise",
+    "je suis une mauvaise",
+    "je suis un mauvais",
+    "je ne suis rien",
+    "je suis une ratée",
+    "je suis un raté",
+    "pas à la hauteur"
+   ],
+   "catastrophe": [
+    "ma vie est finie",
+    "ma vie est foutue",
+    "tout est fini",
+    "tout est perdu",
+    "mon avenir est fichu",
+    "mon avenir est foutu",
+    "catastrophe",
+    "impossible",
+    "ne changera jamais",
+    "rien ne changera",
+    "aucune issue",
+    "c'est fini"
+   ],
+   "mindread": [
+    "me déteste",
+    "me détestent",
+    "il pense que je",
+    "elle pense que je",
+    "ils pensent que je",
+    "me méprise",
+    "me méprisent",
+    "se moquent de moi",
+    "me jugent",
+    "fait exprès"
+   ],
+   "should": [
+    "je devrais être",
+    "j'aurais dû",
+    "je dois être",
+    "il faut que je sois",
+    "j'aurais pas dû"
+   ],
+   "compare": [
+    "mieux que moi",
+    "tout le monde a",
+    "toutes mes amies",
+    "tous mes amis",
+    "moins que les autres",
+    "comme tout le monde",
+    "par rapport aux autres"
+   ],
+   "selfblame": [
+    "tout est de ma faute",
+    "si seulement j",
+    "je n'aurais jamais dû"
+   ],
+   "faith": [
+    "alhamdulillah",
+    "al hamdoulillah",
+    "hamdoulah",
+    "dieu merci",
+    "grâce à dieu",
+    "j'ai prié",
+    "je prie",
+    "inchallah",
+    "in cha allah",
+    "ô allah",
+    "ya allah",
+    "j'ai fait des douas",
+    "istikhara",
+    "astaghfirullah"
+   ],
+   "effort": [
+    "j'ai essayé",
+    "j'essaie",
+    "j'essaye",
+    "nous avons essayé",
+    "on a essayé",
+    "j'ai fait de mon mieux",
+    "je fais des efforts"
+   ],
+   "patience": [
+    "j'ai été patient",
+    "j'ai été patiente",
+    "j'ai patienté",
+    "j'ai supporté",
+    "j'ai enduré"
+   ],
+   "sleep": [
+    "je ne dors plus",
+    "je ne dors pas",
+    "je dors mal",
+    "insomnie",
+    "insomnies",
+    "cauchemars",
+    "pas dormi",
+    "n'arrive pas à dormir"
+   ],
+   "body": [
+    "mal de tête",
+    "maux de tête",
+    "migraine",
+    "palpitations",
+    "cœur qui bat",
+    "oppression dans la poitrine",
+    "plus d'appétit",
+    "perdu l'appétit",
+    "je ne mange plus",
+    "je tremble",
+    "vertiges",
+    "mal au ventre",
+    "mal à l'estomac"
+   ]
+  },
+  "reading": {
+   "factors": {
+    "comfort": [
+     "je me sens bien avec lui",
+     "je me sens bien avec elle",
+     "je suis à l'aise avec lui",
+     "je suis à l'aise avec elle",
+     "je me sens en paix avec",
+     "je me sens en sécurité avec",
+     "il me plaît",
+     "elle me plaît"
+    ],
+    "character": [
+     "pratiquant",
+     "pratiquante",
+     "religieux",
+     "religieuse",
+     "bon caractère",
+     "respectueux",
+     "respectueuse",
+     "bien élevé",
+     "bien élevée",
+     "il prie",
+     "elle prie",
+     "pieux",
+     "pieuse"
+    ],
+    "opportunity": [
+     "offre d'emploi",
+     "meilleur salaire",
+     "promotion",
+     "bourse",
+     "opportunité",
+     "meilleur poste",
+     "j'ai été accepté",
+     "j'ai été acceptée"
+    ],
+    "history": [
+     "années ensemble",
+     "nos enfants",
+     "longue histoire",
+     "nous avons des enfants"
+    ],
+    "money": [
+     "revenu limité",
+     "petit salaire",
+     "il est pauvre",
+     "elle est pauvre",
+     "pas beaucoup d'argent",
+     "financièrement",
+     "sans emploi",
+     "au chômage",
+     "des dettes",
+     "endetté"
+    ],
+    "family": [
+     "mes parents refusent",
+     "ma famille refuse",
+     "ma famille est contre",
+     "mes parents sont contre",
+     "mes parents ne sont pas d'accord",
+     "mes parents hésitent",
+     "ma famille hésite",
+     "mon père refuse",
+     "ma mère refuse"
+    ],
+    "distance": [
+     "un autre pays",
+     "une autre ville",
+     "loin de ma famille",
+     "loin de ma mère",
+     "loin de mes parents",
+     "partir à l'étranger",
+     "depuis que j'ai déménagé",
+     "depuis mon déménagement"
+    ],
+    "age": [
+     "mon âge",
+     "je vieillis",
+     "trop vieux",
+     "trop vieille",
+     "le temps passe"
+    ],
+    "people": [
+     "ce que les gens vont dire",
+     "le qu'en-dira-t-on",
+     "le regard des gens",
+     "la société",
+     "ma réputation"
+    ],
+    "past": [
+     "expérience passée",
+     "la dernière fois",
+     "mon premier mariage",
+     "divorcé",
+     "divorcée",
+     "j'ai déjà été blessé",
+     "j'ai déjà été blessée"
+    ],
+    "doubts": [
+     "colérique",
+     "il ment",
+     "elle ment",
+     "avare",
+     "jaloux",
+     "jalouse",
+     "possessif",
+     "lunatique",
+     "ne prie pas"
+    ],
+    "unknown": [
+     "je ne le connais pas bien",
+     "je ne la connais pas bien",
+     "à peine",
+     "vu une seule fois"
+    ],
+    "duties": [
+     "responsabilités",
+     "il a des enfants",
+     "elle a des enfants",
+     "veuf",
+     "veuve"
+    ],
+    "regret": [
+     "regretter",
+     "je vais regretter",
+     "peur de perdre",
+     "le perdre",
+     "la perdre"
+    ],
+    "pressure": [
+     "me mettent la pression",
+     "me met la pression",
+     "forcé",
+     "forcée",
+     "on me pousse",
+     "ils insistent",
+     "me pressent"
+    ],
+    "desire": [
+     "je le veux",
+     "je la veux",
+     "je veux l'épouser",
+     "mon cœur est avec",
+     "je rêve"
+    ],
+    "power": [
+     "mon patron",
+     "mon chef",
+     "ma cheffe",
+     "mon responsable",
+     "ma responsable",
+     "mon employeur",
+     "le directeur"
+    ],
+    "livelihood": [
+     "peur de perdre mon travail",
+     "peur de perdre mon emploi",
+     "peur d'être licencié",
+     "peur d'être licenciée",
+     "je ne peux pas répondre",
+     "je n'ose pas répondre"
+    ],
+    "harm": [
+     "il me frappe",
+     "elle me frappe",
+     "m'insulte",
+     "m'humilie",
+     "me maltraite",
+     "violent",
+     "violente",
+     "me fait du mal"
+    ]
+   },
+   "options": {
+    "accept_refuse": [
+     "accepter",
+     "refuser",
+     "dire oui",
+     "dire non",
+     "décliner",
+     "si j'accepte",
+     "si je refuse"
+    ],
+    "stay_leave": [
+     "rester avec lui",
+     "rester avec elle",
+     "le quitter",
+     "la quitter",
+     "divorcer",
+     "se séparer",
+     "me séparer",
+     "rompre"
+    ],
+    "forgive_cut": [
+     "pardonner",
+     "couper les ponts",
+     "rompre avec",
+     "ne plus lui parler",
+     "m'éloigner de"
+    ],
+    "speak_silent": [
+     "confronter",
+     "lui dire",
+     "lui parler",
+     "me taire",
+     "garder le silence",
+     "ne rien dire"
+    ],
+    "move_stay": [
+     "partir à l'étranger",
+     "voyager",
+     "émigrer",
+     "déménager",
+     "rentrer au pays",
+     "rester ici"
+    ],
+    "continue_quit": [
+     "démissionner",
+     "quitter mon travail",
+     "arrêter mes études",
+     "changer de filière",
+     "continuer mes études",
+     "continuer"
+    ]
+   }
   }
  }
 }

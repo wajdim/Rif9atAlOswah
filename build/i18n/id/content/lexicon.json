@@ -435,6 +435,360 @@
     "sudah berakhir",
     "sudah terjadi"
    ]
+  },
+  "analysis": {
+   "absolute": [
+    "tidak ada yang",
+    "tak ada yang",
+    "tidak ada seorang pun",
+    "semua orang benci",
+    "semua orang membenci",
+    "semua orang menentang",
+    "tidak pernah sekali pun",
+    "tidak ada yang berhasil"
+   ],
+   "absoluteSoft": [
+    "tidak pernah",
+    "selalu",
+    "setiap kali",
+    "semua orang"
+   ],
+   "label": [
+    "aku gagal",
+    "saya gagal",
+    "aku bodoh",
+    "saya bodoh",
+    "aku tidak berguna",
+    "saya tidak berguna",
+    "aku tidak berharga",
+    "saya tidak berharga",
+    "aku beban",
+    "saya beban",
+    "aku orang jahat",
+    "aku buruk",
+    "saya buruk",
+    "ibu yang buruk",
+    "ayah yang buruk",
+    "aku bukan apa-apa",
+    "saya bukan apa-apa",
+    "tidak cukup baik"
+   ],
+   "catastrophe": [
+    "hidupku hancur",
+    "hidup saya hancur",
+    "hidupku berakhir",
+    "semuanya hancur",
+    "semuanya hilang",
+    "masa depanku hancur",
+    "masa depan saya hancur",
+    "bencana",
+    "mustahil",
+    "tidak akan pernah berubah",
+    "tidak akan berubah",
+    "tidak ada jalan keluar"
+   ],
+   "mindread": [
+    "membenciku",
+    "benci aku",
+    "benci saya",
+    "pikir aku",
+    "pikir saya",
+    "menganggap aku",
+    "menganggap saya",
+    "meremehkanku",
+    "merendahkanku",
+    "menertawakanku",
+    "menghakimiku"
+   ],
+   "should": [
+    "aku harus",
+    "saya harus",
+    "seharusnya aku",
+    "seharusnya saya",
+    "harusnya aku",
+    "harusnya saya"
+   ],
+   "compare": [
+    "lebih baik dariku",
+    "lebih baik dari saya",
+    "semua orang punya",
+    "semua temanku",
+    "semua teman saya",
+    "kurang dari orang lain",
+    "dibanding orang lain",
+    "seperti orang lain"
+   ],
+   "selfblame": [
+    "semua salahku",
+    "semua salah saya",
+    "andai aku",
+    "andai saya",
+    "kalau saja aku"
+   ],
+   "faith": [
+    "alhamdulillah",
+    "ya allah",
+    "ya rabb",
+    "aku berdoa",
+    "saya berdoa",
+    "sudah berdoa",
+    "salat",
+    "sholat",
+    "insyaallah",
+    "insya allah",
+    "istikharah",
+    "astaghfirullah"
+   ],
+   "effort": [
+    "sudah mencoba",
+    "aku mencoba",
+    "saya mencoba",
+    "sudah berusaha",
+    "aku berusaha",
+    "saya berusaha",
+    "kami mencoba"
+   ],
+   "patience": [
+    "sudah bersabar",
+    "aku bersabar",
+    "saya bersabar",
+    "sudah bertahan",
+    "aku bertahan",
+    "saya bertahan"
+   ],
+   "sleep": [
+    "tidak bisa tidur",
+    "susah tidur",
+    "sulit tidur",
+    "insomnia",
+    "mimpi buruk",
+    "kurang tidur",
+    "tidak tidur"
+   ],
+   "body": [
+    "sakit kepala",
+    "pusing",
+    "jantung berdebar",
+    "dada sesak",
+    "sesak di dada",
+    "tidak nafsu makan",
+    "hilang nafsu makan",
+    "gemetar",
+    "sakit perut",
+    "sakit maag"
+   ]
+  },
+  "reading": {
+   "factors": {
+    "comfort": [
+     "merasa nyaman dengannya",
+     "nyaman dengan dia",
+     "merasa tenang dengannya",
+     "tenang bersamanya",
+     "merasa aman dengannya",
+     "saya suka dia",
+     "aku suka dia"
+    ],
+    "character": [
+     "saleh",
+     "salehah",
+     "taat beragama",
+     "religius",
+     "berakhlak baik",
+     "sopan",
+     "rajin salat",
+     "rajin sholat",
+     "baik hati"
+    ],
+    "opportunity": [
+     "tawaran kerja",
+     "gaji lebih baik",
+     "gaji lebih tinggi",
+     "promosi",
+     "beasiswa",
+     "kesempatan",
+     "pekerjaan lebih baik",
+     "diterima"
+    ],
+    "history": [
+     "bertahun-tahun bersama",
+     "anak-anak kami",
+     "sejarah panjang"
+    ],
+    "money": [
+     "penghasilan terbatas",
+     "gaji kecil",
+     "dia miskin",
+     "sedikit uang",
+     "secara finansial",
+     "menganggur",
+     "tidak bekerja",
+     "utang"
+    ],
+    "family": [
+     "orang tuaku menolak",
+     "orang tua saya menolak",
+     "keluargaku menolak",
+     "keluarga saya menolak",
+     "keluargaku tidak setuju",
+     "orang tuaku tidak setuju",
+     "orang tua saya tidak setuju",
+     "orang tuaku ragu",
+     "ayahku menolak",
+     "ibuku menolak"
+    ],
+    "distance": [
+     "negara lain",
+     "kota lain",
+     "jauh dari keluarga",
+     "jauh dari ibu",
+     "jauh dari orang tua",
+     "ke luar negeri",
+     "sejak pindah",
+     "setelah pindah"
+    ],
+    "age": [
+     "usiaku",
+     "usia saya",
+     "semakin tua",
+     "terlalu tua",
+     "waktu terus berjalan"
+    ],
+    "people": [
+     "apa kata orang",
+     "omongan orang",
+     "pandangan orang",
+     "masyarakat",
+     "nama baikku",
+     "reputasi"
+    ],
+    "past": [
+     "pengalaman sebelumnya",
+     "terakhir kali",
+     "pernikahan pertamaku",
+     "pernikahan pertama saya",
+     "bercerai",
+     "pernah disakiti"
+    ],
+    "doubts": [
+     "pemarah",
+     "suka berbohong",
+     "pelit",
+     "cemburuan",
+     "posesif",
+     "moody",
+     "tidak salat",
+     "tidak sholat"
+    ],
+    "unknown": [
+     "belum mengenalnya dengan baik",
+     "tidak terlalu kenal",
+     "baru bertemu sekali",
+     "jarang bicara"
+    ],
+    "duties": [
+     "tanggung jawab",
+     "sudah punya anak",
+     "duda",
+     "janda"
+    ],
+    "regret": [
+     "menyesal",
+     "akan menyesal",
+     "takut kehilangan",
+     "kehilangan dia"
+    ],
+    "pressure": [
+     "menekanku",
+     "menekan saya",
+     "dipaksa",
+     "memaksa",
+     "mendesak",
+     "terburu-buru"
+    ],
+    "desire": [
+     "aku ingin dia",
+     "saya ingin dia",
+     "ingin menikah dengannya",
+     "hatiku bersamanya",
+     "aku bermimpi"
+    ],
+    "power": [
+     "atasanku",
+     "atasan saya",
+     "bosku",
+     "bos saya",
+     "manajerku",
+     "manajer saya",
+     "pimpinan"
+    ],
+    "livelihood": [
+     "takut kehilangan pekerjaan",
+     "takut dipecat",
+     "tidak berani membalas",
+     "tidak bisa membalas",
+     "tidak berani menjawab"
+    ],
+    "harm": [
+     "memukulku",
+     "memukul saya",
+     "menghinaku",
+     "menghina saya",
+     "merendahkanku",
+     "kekerasan",
+     "menyakitiku"
+    ]
+   },
+   "options": {
+    "accept_refuse": [
+     "menerima",
+     "menolak",
+     "menerimanya",
+     "menolaknya",
+     "bilang ya",
+     "bilang tidak"
+    ],
+    "stay_leave": [
+     "bertahan dengannya",
+     "meninggalkannya",
+     "bercerai",
+     "cerai",
+     "berpisah",
+     "putus"
+    ],
+    "forgive_cut": [
+     "memaafkan",
+     "memaafkannya",
+     "memutus hubungan",
+     "menjauhinya",
+     "berhenti bicara"
+    ],
+    "speak_silent": [
+     "berterus terang",
+     "menegurnya",
+     "memberitahunya",
+     "bicara dengannya",
+     "diam saja",
+     "diam"
+    ],
+    "move_stay": [
+     "ke luar negeri",
+     "merantau",
+     "pindah",
+     "pulang kampung",
+     "kembali ke negaraku",
+     "tetap di sini"
+    ],
+    "continue_quit": [
+     "mengundurkan diri",
+     "resign",
+     "berhenti kerja",
+     "berhenti kuliah",
+     "pindah jurusan",
+     "melanjutkan kuliah",
+     "melanjutkan"
+    ]
+   }
   }
  }
 }

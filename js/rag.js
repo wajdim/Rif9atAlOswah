@@ -15,7 +15,7 @@ var RAG = (function(){
 
   /* ---------------- 1. معالجة النص العربي ---------------- */
   function normalize(str){
-    var t=String(str||"");
+    var t=String(str||"").replace(/ß/g,"ss").replace(/ẞ/g,"ss");      // الألمانية: ß ← ss
     if(t.normalize) t=t.normalize("NFD").replace(/[\u0300-\u036f]/g,"");   // é ë ï ← e e i (الهولندية)؛ همزات العربية تُوحَّد بعدها كما كانت
     return t
       .toLowerCase()
@@ -24,11 +24,13 @@ var RAG = (function(){
       .replace(/ى/g,"ي").replace(/ة/g,"ه")
       .replace(/ؤ/g,"و").replace(/ئ/g,"ي")
       // الأردية: توحيد الحروف المشتركة مع العربية، والإبقاء على حروفها الخاصة (پ چ ٹ ڈ ڑ ژ گ ں)
-      .replace(/ک/g,"ك").replace(/[یےۓ]/g,"ي").replace(/[ہھۃۂ]/g,"ه")
+      .replace(/ک/g,"ك").replace(/[یےۓ]/g,"ي").replace(/[ہھۃۂۀ]/g,"ه")
       .replace(/ı/g,"i")                                   // التركية: i بلا نقطة
       .replace(/[٠-٩]/g,d=>String("٠١٢٣٤٥٦٧٨٩".indexOf(d)))
       .replace(/[۰-۹]/g,d=>String("۰۱۲۳۴۵۶۷۸۹".indexOf(d)))
-      .replace(/[^ء-ي0-9a-z\s\u0679\u067E\u0686\u0688\u0691\u0698\u06AF\u06BA]/g," ")
+      .replace(/[০-৯]/g,d=>String("০১২৩৪৫৬৭৮৯".indexOf(d)))          // البنغالية: الأرقام
+      // الحروف البنغالية (\u0980-\u09FF) تبقى كما هي بعد التفكيك NFD؛ وعلامة الوقف «।» ونصف المسافة الفارسية تصيران مسافة
+      .replace(/[^ء-ي0-9a-z\s\u0679\u067E\u0686\u0688\u0691\u0698\u06AF\u06BA\u0980-\u09FF]/g," ")
       .replace(/\s+/g," ").trim();
   }
 
@@ -65,6 +67,22 @@ var RAG = (function(){
     "seni sana onu ona bunu buna var yok ise eger hem ya veya ne nasil neden niye ki diye olarak olan oldu olur sey").split(" ").forEach(function(w){ STOP.add(w); });
   if(window.I18N && I18N.lang==="ur") ["کا","کی","کے","کو","سے","میں","پر","اور","یا","کہ","یہ","وہ","ہے","ہیں","تھا","تھی","تھے","ہوں","ہو","گا","گی","گے","نے","بھی","تو",
     "میں","مجھے","میرا","میری","میرے","آپ","ہم","ان","اس","اپنے","اپنی","جو","کیا","لیے","لئے","ساتھ","بہت","اب","پھر","ایک","کر","کرنا","رہا","رہی","رہے"].forEach(function(w){ STOP.add(normalize(w)); });
+  // الألمانية والملايوية والفارسية والبنغالية: كلمات وظيفية في واجهاتها فقط (تبقى أدوات النفي و«دائمًا/أبدًا» لأنها قرائن في التحليل)
+  if(window.I18N && I18N.lang==="de") ("der die das den dem des ein eine einen einem einer eines und oder aber doch denn weil dass ob wenn als wie wo was wer wen wem " +
+    "warum wieso weshalb ich du er sie es wir ihr mich mir dich dir ihn ihm uns euch sich mein meine meinen meinem meiner meines dein deine deinen sein seine seinen " +
+    "ihre ihren unser unsere bin bist ist sind war waren wird werden wurde wurden habe hast hat haben hatte hatten kann kannst konnte konnte muss musste soll sollte " +
+    "will wollte mochte nur auch noch schon sehr so zu im in an auf aus bei mit nach von vor fur uber unter um bis durch gegen ohne zum zur am vom beim dann da " +
+    "hier dort jetzt mal etwas alles viel mehr man ja dieser diese dieses diesem diesen jener").split(" ").forEach(function(w){ STOP.add(w); });
+  if(window.I18N && I18N.lang==="ms") ("yang dan di ke dari ini itu untuk dengan pada adalah ada saya aku awak anda kamu dia ia mereka kami kita akan sudah telah juga " +
+    "atau tetapi tapi kerana sebab jika kalau apabila ketika supaya agar boleh dapat harus mesti perlu sangat amat lebih masih hanya sahaja je pun lah kah nya " +
+    "oleh bagi dalam tu ni sini sana macam bila").split(" ").forEach(function(w){ STOP.add(w); });
+  if(window.I18N && I18N.lang==="fa") ["و","در","به","از","که","این","آن","را","با","برای","تا","هم","یا","اما","ولی","چون","اگر","من","تو","او","ما","شما","آنها","ایشان",
+    "است","هست","بود","بودم","شد","شده","می","نمی","هر","خود","یک","بر","پس","نیز","همه","چه","چرا","چطور","کجا","وقتی","خیلی","فقط","هنوز","دیگر","ای","مرا","منو",
+    "اون","این","اینکه","کنم","کند","کرد","کردم","دارم","دارد","همیشه","سر","هستم","هستی","هستند","هستیم","باشد","باشم","شود","شوم","کنی","کنیم","کنند","کرده","کردند",
+    "داری","داریم","دارند","چیز","چیزی","حالا","الان","خب","اینجا","آنجا","روی","پیش","بعد","قبل","مثل","همین","همان","آیا","بله"].forEach(function(w){ STOP.add(normalize(w)); });
+  if(window.I18N && I18N.lang==="bn") ["এবং","ও","আর","বা","কিন্তু","তবে","যে","যা","যদি","তাহলে","কারণ","জন্য","সঙ্গে","সাথে","থেকে","দিয়ে","কাছে","মধ্যে","উপর",
+    "এই","ওই","সেই","এটা","ওটা","সেটা","আমি","তুমি","তুই","আপনি","সে","তিনি","আমরা","তোমরা","তারা","আমার","তোমার","তার","আমাকে","তোমাকে","তাকে",
+    "আছে","ছিল","হয়","হল","হলো","হবে","করে","করা","কি","কী","কেন","কিভাবে","কোথায়","কখন","খুব","শুধু","এখন","তো","ই","একটা","একটি","অনেক","আসসালামু","আলাইকুম","সালাম"].forEach(function(w){ STOP.add(normalize(w)); });
   // الفرنسية: تُضاف فقط في الواجهة الفرنسية (بلا حركات؛ والفاصلة العليا تصير مسافة: j'ai ← j ai)
   if(window.I18N && I18N.lang==="fr") (
     "le la les l un une des du de d et ou en au aux a dans par pour sur sous avec sans entre chez vers que qu qui quoi quand comme dont " +
@@ -135,20 +153,50 @@ var RAG = (function(){
     for(var p=0;p<2;p++){ for(var i=0;i<S.length;i++){ var x=S[i]; if(w.length-x.length>=3 && w.slice(-x.length)===x){ w=w.slice(0,-x.length); break; } } }
     return w;
   }
+  /* تجذيع ألماني خفيف (بعد التطبيع: ä→a ö→o ü→u ß→ss): الجمع والتصريف والنهايات الشائعة (Traurigkeit ← traurig، Freunden ← freund) */
+  function stemDe(w){
+    if(w.length<=4 || /[0-9]/.test(w)) return w;
+    var S=["ungen","ung","heiten","heit","keiten","keit","lichen","licher","liches","liche","lich","ischen","ische","isch","ern","en","er","es","em","e","s","n","t"];
+    for(var i=0;i<S.length;i++){ var x=S[i]; if(w.length-x.length>=4 && w.slice(-x.length)===x){ w=w.slice(0,-x.length); break; } }
+    return w;
+  }
+  /* تجذيع فارسي خفيف (بعد التطبيع ی←ي): الجمع واللواحق الضميرية وصيغ التفضيل (دوستانم ← دوست، غمگین‌ترین ← غمگين) */
+  var FA_SUF=["هايشان","هايتان","هايمان","هايم","هايت","هايش","هاي","ها","ترين","تر","شان","تان","مان","ام","ات","اش","يم","يد","ند","ي"];
+  function stemFa(w){
+    if(w.length<=3 || /[0-9]/.test(w)) return w;
+    for(var p=0;p<2;p++){ for(var i=0;i<FA_SUF.length;i++){ var x=FA_SUF[i]; if(w.length-x.length>=3 && w.slice(-x.length)===x){ w=w.slice(0,-x.length); break; } } }
+    return w;
+  }
+  /* تجذيع بنغالي خفيف: لواحق الجمع والحالة والتعريف (বন্ধুদের ← বন্ধু، মায়ের ← মা)؛ اللواحق تُطبَّع كالنص (NFD) */
+  var BN_SUF=["গুলোকে","গুলোর","গুলো","গুলি","দেরকে","দের","েরা","রা","কে","ের","এর","টার","টা","টির","টি","তে","য়","র","ে"].map(normalize).sort(function(a,b){ return b.length-a.length; });
+  function stemBn(w){
+    if(w.length<=2 || /[0-9]/.test(w)) return w;
+    for(var i=0;i<BN_SUF.length;i++){ var x=BN_SUF[i]; if(w.length-x.length>=2 && w.slice(-x.length)===x) return w.slice(0,-x.length); }
+    return w;
+  }
+  var BN_WORD=/[\u0980-\u09FF]/;
+  var BN_CASE=["ের","এর","র","য়ের","দের","রা","েরা","কে","কেও","দেরকে","টা","টি","টার","টির","গুলো","গুলোর","রাও","ও","েরও"].map(normalize);
   var STEM_LANG=(window.I18N && I18N.lang) || "en";
+  // الأردية والفارسية: بحروف عربية لكن بلا سوابق العربية ولواحقها
+  var NOAR=STEM_LANG==="ur" || STEM_LANG==="fa";
   function stem(w){
     if(!w) return w;
-    if(/[a-z]/.test(w)) return STEM_LANG==="nl"?stemNl(w):(STEM_LANG==="es"||STEM_LANG==="pt")?stemRom(w):STEM_LANG==="fr"?stemFr(w):STEM_LANG==="id"?stemId(w):STEM_LANG==="tr"?stemTr(w):stemEn(w);
+    if(/[a-z]/.test(w)) return STEM_LANG==="nl"?stemNl(w):(STEM_LANG==="es"||STEM_LANG==="pt")?stemRom(w):STEM_LANG==="fr"?stemFr(w):(STEM_LANG==="id"||STEM_LANG==="ms")?stemId(w):STEM_LANG==="tr"?stemTr(w):STEM_LANG==="de"?stemDe(w):stemEn(w);
+    if(BN_WORD.test(w)) return stemBn(w);
     if(w.length<=3 || /[0-9]/.test(w)) return w;
     if(STEM_LANG==="ur") return w.indexOf("ال")===0 && w.length>4 ? w.slice(2) : w;   // الأردية: لا سوابق/لواحق عربية
+    if(STEM_LANG==="fa") return stemFa(w.indexOf("ال")===0 && w.length>4 ? w.slice(2) : w);
     var s=w, i;
     for(i=0;i<PREFIXES.length;i++){
       var p=PREFIXES[i];
       if(s.indexOf(p)===0 && s.length-p.length>=3){ s=s.slice(p.length); break; }
     }
+    return stemSuffix(s);
+  }
+  function stemSuffix(s){
     for(var pass=0; pass<2; pass++){
       var cut=false;
-      for(i=0;i<SUFFIXES.length;i++){
+      for(var i=0;i<SUFFIXES.length;i++){
         var x=SUFFIXES[i];
         if(s.length-x.length>=3 && s.slice(-x.length)===x){ s=s.slice(0,-x.length); cut=true; break; }
       }
@@ -156,6 +204,20 @@ var RAG = (function(){
     }
     return s;
   }
+  /* جذع «محافظ» لمطابقة مفردات الموضوع: لا يحذف من السوابق إلا متعددة الحروف («ال، بال، وال، لل…») و«و» قبل كلمة
+     من 4 أحرف فأكثر؛ فتبقى «سعيد، بعيد، فريق، لقطة» كما هي، وتتوحد اللواحق كالمعتاد («طفلك، طفلي، وطفلها» ← طفل) */
+  function coreStem(w){
+    if(!w || /[a-z]/.test(w) || NOAR || BN_WORD.test(w) || w.length<=3) return stem(w);
+    for(var i=0;i<PREFIXES.length;i++){
+      var p=PREFIXES[i];
+      if(w.indexOf(p)!==0) continue;
+      if(p.length===1 && !(p==="و" && w.length-1>=4)) break;
+      if(w.length-p.length<3) break;
+      w=w.slice(p.length); break;
+    }
+    return stemSuffix(w);
+  }
+  function coreStems(text){ return contentWords(normalize(text)).map(coreStem).filter(function(s){ return s.length>=3; }); }
   function words(norm){ return norm.split(" ").filter(Boolean); }
   function contentWords(norm){ return words(norm).filter(function(w){ return !STOP.has(w) && w.length>1; }); }
   function stems(text){ return contentWords(normalize(text)).map(stem); }
@@ -194,10 +256,14 @@ var RAG = (function(){
     return out;
   };
 
-  var IDX={sit:new Index(), quran:new Index(), hadith:new Index(), theme:new Index()};
-  var BY={sit:{}, quran:{}, hadith:{}, theme:{}};
+  var IDX={sit:new Index(), quran:new Index(), hadith:new Index(), theme:new Index(), life:new Index()};
+  var BY={sit:{}, quran:{}, hadith:{}, theme:{}, life:{}};
+  var LIFE_STEMS=Object.create(null);       // n -> Set(life stems) لمواقف «500 موقف من الحياة»
   var THEME_OF_SIT=Object.create(null);   // sitId -> [themeIds]
   var TRIG=[];                              // [{theme, norm, multi, len}]
+  var THEME_CORE=Object.create(null);       // themeId -> Set(core stems of single-word triggers)
+  // جذوع شائعة المعنى لا تكفي وحدها لإثبات موضوع («مشروع صغير»، «تفقد محفظتك»، «عدت إلى الوطن»، «قريب منك»)
+  var GENERIC_CORE=new Set(["صغير","حاج","عدت","فقد","سمع","قريب"]);
   var built=false;
 
   function build(){
@@ -225,32 +291,92 @@ var RAG = (function(){
       BY.theme[t.id]=t;
       IDX.theme.add(t.id,[{text:t.label,w:3},{text:t.triggers,w:2},{text:t.insight,w:0.35},{text:t.questions,w:0.3}]);
       t.sits.forEach(function(id){ (THEME_OF_SIT[id]=THEME_OF_SIT[id]||[]).push(t.id); });
+      // مفردات الموضوع «الصلبة»: ألفاظه المفردة فقط؛ كلمات العبارات («بداية جديدة»، «هاتف زوجي») وكلمات الاسم العامة («الأسرة»، «النوايا») لا تدل وحدها
+      THEME_CORE[t.id]=new Set(coreStems(t.triggers.filter(function(x){ return normalize(x).indexOf(" ")<0; }).join(" ")).filter(function(s){ return !GENERIC_CORE.has(s); }));
       t.triggers.forEach(function(tr){
         var n=normalize(tr); if(!n) return;
         TRIG.push({theme:t.id, norm:n, multi:n.indexOf(" ")>-1, len:n.length});
       });
     });
-    ["sit","quran","hadith","theme"].forEach(function(k){ IDX[k].finish(); });
+    (window.LIFE||[]).forEach(function(x){
+      if(!x.th.some(function(id){ return BY.theme[id]; })) return;
+      BY.life[x.n]=x; var ls=lifeStems(x.t); LIFE_STEMS[x.n]=new Set(ls);
+      IDX.life.docs.push({id:String(x.n), tf:ls.reduce(function(m,s){ m[s]=1; return m; },{}), len:Math.max(1,new Set(ls).size)});
+    });
+    ["sit","quran","hadith","theme","life"].forEach(function(k){ IDX[k].finish(); });
     built=true;
   }
   function themeLabel(id){ var t=BY.theme[id]||THEMES.find(function(x){return x.id===id;}); return t?t.label:""; }
 
+  /* ---------------- 2ب. أمثلة «500 موقف من الحياة» ----------------
+     المواقف مكتوبة بصيغة المخاطَب («تشعر، تختلف»)، والمستخدم يكتب بصيغة المتكلم («أشعر، نختلف»):
+     لمطابقتها فقط نوحّد حرف المضارعة في أول الكلمة على الجانبين، ثم نقيس كم من وزن الموقف (IDF)
+     حاضر في كلام المستخدم. الموقف لا يُعرض نصه؛ إنما يرجّح الموضوعات المربوطة به يدويًا. */
+  function lifeStem(w){ var s=stem(w); return (s.length>=4 && /^[اتين]/.test(s)) ? s.slice(1) : s; }
+  function lifeStems(text){ return contentWords(normalize(text)).map(lifeStem).filter(function(s){ return s.length>=2; }); }
+  var LIFE_MIN=0.45, LIFE_W=2.0, LIFE_CAP=1.4;
+  function lifeMatches(raw){
+    if(!IDX.life.docs.length || NOAR) return [];
+    var qs=new Set(lifeStems(raw)); if(qs.size<2) return [];
+    var out=[];
+    IDX.life.docs.forEach(function(d){
+      var tot=0, got=0, shared=0, strong=0;
+      LIFE_STEMS[d.id].forEach(function(s){
+        var w=IDX.life.idf(s); tot+=w;
+        if(qs.has(s)){ got+=w; shared++; if(w>=2.5) strong++; }
+      });
+      var sim=tot?got/tot:0;
+      // كلمتان مشتركتان على الأقل، إحداهما غير شائعة في المجموعة، ونصف وزن الموقف تقريبًا
+      if(shared>=2 && strong>=1 && sim>=LIFE_MIN) out.push({n:+d.id, item:BY.life[d.id], sim:sim});
+    });
+    return out.sort(function(a,b){ return b.sim-a.sim; }).slice(0,3);
+  }
+
   /* ---------------- 3. الفهم ---------------- */
   function stripPrefix(w){
-    if(STEM_LANG==="ur") return w;
+    if(NOAR) return w;
     for(var i=0;i<PREFIXES.length;i++){ var p=PREFIXES[i]; if(w.indexOf(p)===0 && w.length-p.length>=2) return w.slice(p.length); }
     return w;
   }
+  /* كلمات تتطابق حروفها مع لفظ دالّ بعد حذف سابقة، ومعناها مختلف تمامًا:
+     «لقطة» ليست «ل+قطة»، و«أملك» (من المِلك) ليست «أمل»، و«الوحيد» (الأوحد) ليست الوحدة، و«مرتين» ليست «مرتي».
+     لا تطابق إلا لفظًا مساويًا لها حرفيًا. */
+  var HOMOGRAPHS=new Set(["لقطه","لقطات","لقطتي","املك","مرتين","مرتان","الوحيد","الوحيده","بابي",
+    "hello","hellos","helloo"]);   // «hello» ليست «hell»
+  var AR_WORD=/[ء-ي]/;
+  /* بقية الكلمة بعد اللفظ القصير يجب أن تكون لاحقة عربية حقيقية (أو لاحقتين):
+     «جاري، جارتها» تطابق «جار»، أما «جارح» و«الحقيقي» و«اخيرا» و«اختيار» فلا تطابق «جار، حقي، اخي، اختي» */
+  function suffixChain(rem, depth){
+    if(!rem || (depth===0 && rem==="ا")) return true;               // تنوين النصب: «ظلمًا، خوفًا»
+    if(depth===0 && rem.length>1 && rem.slice(-1)==="ا" && suffixChain(rem.slice(0,-1), 1)) return true;
+    if(depth>=2) return false;
+    for(var i=0;i<SUFFIXES.length;i++){
+      var x=SUFFIXES[i];
+      if(rem.length>=x.length && rem.slice(-x.length)===x && suffixChain(rem.slice(0,-x.length), depth+1)) return true;
+    }
+    return false;
+  }
+  function extendsTrig(w, trig){
+    if(w.indexOf(trig)!==0) return false;
+    if(NOAR || trig.length>=5 || !AR_WORD.test(trig)) return true;
+    return suffixChain(w.slice(trig.length), 0);
+  }
   /* هل تظهر الكلمة المفردة ضمن كلمات المستخدم (مع السوابق واللواحق)؟ */
   function wordHit(userWords, trig){
+    if(BN_WORD.test(trig)){   // البنغالية: الكلمة مع لواحق الحالة والجمع (বসের، মায়ের، ভাইদের ← বস، মা، ভাই)؛ لا «ে» وحدها كي لا تُطابق «বসে» (جالسًا) «বস»
+      for(var b=0;b<userWords.length;b++){ var bw=userWords[b]; if(bw===trig) return true;
+        if(bw.indexOf(trig)===0 && BN_CASE.indexOf(bw.slice(trig.length))>-1) return true; }
+      if(trig.length<3) return false;
+    }
     if(trig.length<3){ return userWords.indexOf(trig)>-1; }
     for(var i=0;i<userWords.length;i++){
       var u=userWords[i];
       if(u===trig) return true;
+      if(HOMOGRAPHS.has(u)) continue;
       var sp=stripPrefix(u);
       if(sp===trig) return true;
-      if(trig.length>=4 && (sp.indexOf(trig)===0 || u.indexOf(trig)===0)) return true;
-      if(trig.length===3 && sp.indexOf(trig)===0 && sp.length<=trig.length+3) return true;
+      if(trig.length>=4 && (extendsTrig(sp,trig) || extendsTrig(u,trig))) return true;
+      if(trig.length===3 && sp.length<=trig.length+3 && extendsTrig(sp,trig)) return true;
     }
     return false;
   }
@@ -287,8 +413,8 @@ var RAG = (function(){
     for(var i=0;i+parts.length<=userWords.length;i++){
       var ok=true;
       for(var j=0;j<parts.length;j++){
-        var u=userWords[i+j], t=parts[j], sp=stripPrefix(u);
-        if(!(u===t || sp===t || (t.length>=4 && (u.indexOf(t)===0 || sp.indexOf(t)===0)))){ ok=false; break; }
+        var u=userWords[i+j], t=parts[j], sp=HOMOGRAPHS.has(u)?u:stripPrefix(u);
+        if(!(u===t || (!HOMOGRAPHS.has(u) && (sp===t || (t.length>=4 && (extendsTrig(u,t) || extendsTrig(sp,t))))))){ ok=false; break; }
       }
       if(ok) out.push([i, i+parts.length-1]);
     }
@@ -296,7 +422,16 @@ var RAG = (function(){
   }
   function negated(userWords, span){
     negSets();
-    for(var k=1;k<=2;k++){ if(NEG_PRE.has(userWords[span[0]-k])) return true; if(NEG_POST.has(userWords[span[1]+k])) return true; }
+    // النفي لا يعبر علامات الترقيم: «et pas moi, ma vie est finie» ليست نفيًا لما بعد الفاصلة
+    var stops=RAW_STOPS.length===userWords.length;
+    for(var k=1;k<=2;k++){
+      if(stops && RAW_STOPS[span[0]-k]) break;
+      if(NEG_PRE.has(userWords[span[0]-k])) return true;
+    }
+    for(var k2=1;k2<=2;k2++){
+      if(stops && RAW_STOPS[span[1]+k2-1]) break;
+      if(NEG_POST.has(userWords[span[1]+k2])) return true;
+    }
     return false;
   }
   /* مثل lexHits لكنها تتجاهل الظهور المنفي، وتعيد الكلمة كما وردت في نص المستخدم (دليلًا) */
@@ -304,7 +439,7 @@ var RAG = (function(){
     var out=[], seen=new Set();
     list.forEach(function(w){
       var n=normalize(w); if(!n) return;
-      if(n.indexOf(" ")<0 && n.length<3){ if(userWords.indexOf(n)<0) return; }
+      if(n.indexOf(" ")<0 && n.length<3 && !BN_WORD.test(n)){ if(userWords.indexOf(n)<0) return; }
       var occ=occurrences(userWords, n);
       if(!occ.length){ if(n.indexOf(" ")>-1 ? phraseIn(norm,n) : wordHit(userWords,n)) out.push({w:w, ev:w}); return; }
       var live=occ.filter(function(sp){ return !negated(userWords, sp); });
@@ -319,7 +454,7 @@ var RAG = (function(){
     return out;
   }
 
-  function detectThemes(norm, userWords, qStems){
+  function detectThemes(norm, userWords, qStems, raw){
     var scores=Object.create(null), hits=Object.create(null);
     TRIG.forEach(function(tr){
       var ok = tr.multi ? phraseIn(norm, tr.norm) : wordHit(userWords, tr.norm);
@@ -331,9 +466,26 @@ var RAG = (function(){
     // إشارة دلالية إضافية من فهرس الموضوعات (تلتقط ما لم تلتقطه الألفاظ)
     var q={}; qStems.forEach(function(s){ q[s]=(q[s]||0)+1; });
     var sem=IDX.theme.search(q);
-    for(var id in sem){ var sv=Math.min(1.3, sem[id]*0.18); if(scores[id]) scores[id]+=sv; else if(sv>=1.0) scores[id]=sv; }
+    var distinct=coreStems(norm);
+    for(var id in sem){
+      var sv=Math.min(1.3, sem[id]*0.18);
+      if(scores[id]) scores[id]+=sv;
+      // موضوع بلا أي لفظ صريح لا يُقبل بكلمة عابرة («زميل» لا تعني «الشهوة»، و«جديد» لا تعني «الأمل»):
+      // يلزم أن يشارك كلامُ المستخدم الموضوعَ في كلمة من مفرداته «الصلبة» (THEME_CORE)
+      else if(sv>=1.0 && THEME_CORE[id] && distinct.some(function(s){ return THEME_CORE[id].has(s); })) scores[id]=sv;
+    }
+    // أمثلة المواقف الحياتية: صوت إضافي محدود السقف للموضوعات المربوطة بأقرب موقف (الأول هو الأساس)
+    var life=lifeMatches(raw), lifeAdd=Object.create(null);
+    life.forEach(function(m,r){
+      m.item.th.forEach(function(tid,pos){
+        if(!BY.theme[tid]) return;
+        lifeAdd[tid]=Math.min(LIFE_CAP,(lifeAdd[tid]||0)+LIFE_W*m.sim*(pos===0?1:0.7)*(r===0?1:0.5));
+      });
+    });
+    for(var lt in lifeAdd) scores[lt]=(scores[lt]||0)+lifeAdd[lt];
+    detectThemes.life=life;
     var list=Object.keys(scores).map(function(id){
-      return {id:id, theme:BY.theme[id], score:scores[id], hits:(hits[id]||[])};
+      return {id:id, theme:BY.theme[id], score:scores[id], hits:(hits[id]||[]), life:!!lifeAdd[id]};
     }).filter(function(x){ return x.theme && x.score>=0.9; })
       .sort(function(a,b){ return b.score-a.score; });
     var top=list.length?list[0].score:1;
@@ -342,17 +494,25 @@ var RAG = (function(){
     return list.filter(function(x,i){ return i<2 || x.score>=top*0.34; }).slice(0,5);
   }
 
-  function understand(raw){
+  function understand(raw, opts){
     build();
     var norm=normalize(raw), userWords=words(norm), qStems=stems(raw);
     RAW_STOPS=[]; RAW_WORDS=rawAligned(raw);
-    var themes=detectThemes(norm, userWords, qStems);
+    var themes=detectThemes(norm, userWords, qStems, raw);
     // عند إشارات إيذاء النفس: موضوع «اليأس» أولًا دائمًا، ويُستبعد «الخوف من الموت» حتى لا يُساء الفهم
     var crisis=/(اموت|الموت ارحم|انتحار|انتحر|انهي حياتي|اقتل نفسي|نقتل روحي|ان اعيش|اذي نفسي|اؤذي نفسي|suicid|kill myself|end my life|want to die|wish i (was|were) dead|hurt myself|harm myself|self harm|no reason to live|zelfmoord|mezelf (van kant|iets aan)|dood wil|wil (dood|sterven)|niet meer (leven|verder)|wou dat ik dood|mezelf pijn|zelfbeschadiging|een eind aan mijn leven|quiero morir|matarme|quitarme la vida|acabar con mi vida|no quiero (vivir|seguir viviendo)|hacerme dano|autolesion|ojala estuviera muert|quero morrer|matar me|me matar|tirar a minha (propria )?vida|acabar com a minha vida|nao quero (viver|continuar a viver)|magoar me|me magoar|automutila|autolesao|quem me dera estar mort|je veux mourir|envie de mourir|me suicider|suicidaire|(veux|vais|envie de) me tuer|en finir avec (la|ma) vie|mettre fin a (mes jours|ma vie)|(ne )?veux plus vivre|plus envie de vivre|me faire du mal|me mutiler|scarifi|j aimerais etre mort|je voudrais etre mort)/.test(norm);
     if(!crisis) crisis=CRISIS_EXTRA.some(function(t){ var n=normalize(t); return n && (" "+norm+" ").indexOf(" "+n)>-1; });
     if(crisis){
       themes=themes.filter(function(t){ return t.id!=="death_fear" && t.id!=="despair"; });
       themes.unshift({id:"despair", theme:BY.theme.despair, score:9, conf:1, hits:[T("إشارات ألم شديد")]});
+    }
+    // موضوع اختاره المستخدم بنفسه عند ضعف الفهم: يتقدّم على غيره (ولا يُقدَّم على إشارات الأزمة أبدًا)
+    var focus=opts && opts.focus && BY.theme[opts.focus] && !crisis ? opts.focus : null;
+    if(focus){
+      var fs0=themes[0]?themes[0].score:0;
+      themes=themes.filter(function(t){ return t.id!==focus; });
+      themes.unshift({id:focus, theme:BY.theme[focus], score:Math.max(3,fs0+1), conf:0.9, hits:[], focus:true});
+      themes=themes.slice(0,5);
     }
     var negatedEmo=new Set();
     var emotions=EMOTION_LEXICON.map(function(e){
@@ -375,6 +535,13 @@ var RAG = (function(){
     var relations=RELATION_LEXICON.map(function(r){
       var h=lexHitsNeg(norm,userWords,r.words); return {id:r.id,label:r.label,count:h.length,word:h[0]?h[0].ev:""};
     }).filter(function(r){ return r.count>0; }).sort(function(a,b){ return b.count-a.count; });
+    // موضوع مركّب: ظلم صريح من صاحب سلطة في العمل = «التعامل مع صاحب سلطة ظالم» (بأي لغة كُتب)
+    var inj=themes.filter(function(t){ return t.id==="injustice" && t.hits.length; })[0];
+    if(inj && !crisis && !themes.some(function(t){ return t.id==="oppressor_power"; }) &&
+       (relations.some(function(r){ return r.id==="boss"; }) || themes.some(function(t){ return t.id==="work" && t.hits.length; }))){
+      themes.push({id:"oppressor_power", theme:BY.theme.oppressor_power, score:inj.score*0.8, conf:inj.conf*0.8, hits:[]});
+      themes.sort(function(a,b){ return b.score-a.score; }); themes=themes.slice(0,5);
+    }
     var intens=lexHits(norm,userWords,INTENSIFIERS).length + ((raw.match(/[!！؟?]{2,}/g)||[]).length);
     var intensity = Math.min(3, 1 + (intens>=1?1:0) + (intens>=3?1:0) + (userWords.length>60?0.5:0));
     var selfFault = lexHitsNeg(norm,userWords,SELF_FAULT_CUES).length>0;
@@ -388,7 +555,8 @@ var RAG = (function(){
       .filter(function(x){ return x.count>0; }).sort(function(a,b){ return b.count-a.count; });
     return {raw:raw, norm:norm, words:userWords, stems:qStems, themes:themes, emotions:emotions.slice(0,4),
             relations:relations.slice(0,3), intensity:intensity, selfFault:selfFault, crisis:crisis,
-            needs:needs, question:question, time:times[0]?times[0].id:null};
+            needs:needs, question:question, focus:focus, time:times[0]?times[0].id:null,
+            life:(detectThemes.life||[]).map(function(m){ return {n:m.n, text:m.item.t, section:m.item.s, sim:Math.round(m.sim*100)/100}; })};
   }
 
   /* ---------------- 4. الاسترجاع ---------------- */
@@ -473,9 +641,26 @@ var RAG = (function(){
   /* القراءة الأولى «الذكية»: من تكون في هذا الموقف؟ ماذا تشعر وبأي كلمات؟ ماذا تحتاج؟ ما الذي يتجاذبك؟
      ولماذا اخترنا هذا الموقف بالذات؟ وما الذي ينقصنا لنفهم أدق؟ — كلها قواعد شفافة دون توليد */
   /* إشارات أزمة بلغات أخرى (تُطبَّع وقت المقارنة، فتصلح للأردية بحروفها) */
-  var CRISIS_EXTRA=["خودکشی","مرنا چاہتا","مرنا چاہتی","مر جانا چاہتا","مر جانا چاہتی","جینا نہیں چاہتا","جینا نہیں چاہتی","اپنی جان لے","خود کو نقصان","خود کو مار",
-    "bunuh diri","ingin mati","mau mati","pengen mati","mengakhiri hidup","menyakiti diri","tidak ingin hidup","tak ingin hidup","lebih baik mati",
-    "intihar","olmek istiyorum","kendimi oldur","hayatima son","yasamak istemiyorum","kendime zarar","keske olsem","ölmek istiyorum","kendimi öldür","hayatıma son","yaşamak istemiyorum","keşke ölsem"];
+  var CRISIS_EXTRA=[
+    // Deutsch
+    "selbstmord","suizid","mich umbringen","bringe mich um","bring mich um","mir das leben nehmen","mein leben beenden","meinem leben ein ende","will sterben","will nicht mehr leben",
+    "möchte sterben","sterben will","sterben möchte","nicht mehr leben will","nicht mehr leben möchte","lebensmüde","mich selbst verletzen","mir etwas antun","mich ritzen","wäre lieber tot","wünschte ich wäre tot",
+    // Bahasa Melayu
+    "nak mati","mahu mati","ingin mati","tak mahu hidup","tidak mahu hidup","tak nak hidup","tamatkan hidup","menamatkan hidup","cederakan diri","mencederakan diri","sakiti diri","menyakiti diri sendiri",
+    // فارسی
+    "خودکشی","می‌خواهم بمیرم","میخواهم بمیرم","میخوام بمیرم","دلم میخواد بمیرم","دوست دارم بمیرم","خودم را بکشم","خودمو بکشم","به زندگی‌ام پایان","به زندگیم پایان","نمی‌خواهم زنده بمانم","نمیخوام زنده بمونم","نمی‌خواهم زندگی کنم","نمیخوام زندگی کنم",
+    "به خودم آسیب","خودزنی","کاش مرده بودم","آرزوی مرگ دارم",
+    // বাংলা
+    "আত্মহত্যা","মরে যেতে চাই","মরতে চাই","বাঁচতে চাই না","বেঁচে থাকতে চাই না","নিজেকে শেষ করে","নিজেকে মেরে","জীবন শেষ করে","নিজের ক্ষতি","নিজেকে আঘাত","মরে গেলেই ভালো","মরে যাওয়াই ভালো",
+    "مرنا چاہتا","مرنا چاہتا","مرنا چاہتی","مر جانا چاہتا","مر جانا چاہتی","جینا نہیں چاہتا","جینا نہیں چاہتی","اپنی جان لے","خود کو نقصان","خود کو مار",
+    "bunuh diri","mau mati","pengen mati","mengakhiri hidup","menyakiti diri","tidak ingin hidup","tak ingin hidup","lebih baik mati",
+    "intihar","olmek istiyorum","kendimi oldur","hayatima son","yasamak istemiyorum","kendime zarar","keske olsem","ölmek istiyorum","kendimi öldür","hayatıma son","yaşamak istemiyorum","keşke ölsem",
+    // العربية: صيغ الاسم والعامية التي لم يلتقطها النمط السابق (و«اؤذي» لا تظهر بعد التطبيع لأن ؤ تصير و)
+    "إيذاء نفسي","إيذاء النفس","أؤذي نفسي","أجرح نفسي","جرح نفسي","أضر نفسي","أضر بنفسي","أضرب نفسي","أقطع شراييني","أقطع عروقي","أبتلع الحبوب","جرعة زائدة",
+    "إنهاء حياتي","لإنهاء حياتي","أنهي حياتي","لا أريد العيش","لا أريد الحياة","لا أرغب في الحياة","ما عاد بدي عيش","ما بدي عيش","ما بدي اعيش","مش عايز أعيش","مش عاوز أعيش",
+    "ما نحبش نعيش","ما بغيتش نعيش","ما ابي اعيش","ما ابغى اعيش","نحب نموت","ليتني لم أولد","أتمنى لو لم أولد","ليتني مت","الموت أفضل","الموت أحسن","أفضل لو مت","لو مت لارتاح",
+    "أختفي من هذه الدنيا","أختفي من الدنيا","أختفي من الوجود",
+    "cut myself","cutting myself","overdose","end it all","dont want to live","don't want to live","better off dead","no point living","no point in living"];
   var WRONGED=/injustice|insult|betrayal|slander|oppressor_power|ungrateful|gossip/;
   var GRIEF=/(^| )grief/;
   function deepRead(u, r){
@@ -545,13 +730,91 @@ var RAG = (function(){
     return D;
   }
 
+  /* التحليل الأعمق («قراءة المختص»): كل سطر مشروط بدليل من كلام المستخدم أو بما فهمه المحرك، ويُعرض مع دليله.
+     نصوص تأملية من ANALYSIS_TEXT لا تشخيص فيها، ولا تُخلط بالنصوص الشرعية */
+  function specialistRead(u, r, D){
+    var A=window.ANALYSIS_TEXT, C=window.ANALYSIS_CUES||{}; if(!A) return null;
+    var S={}, t0=u.themes[0], rel=u.relations[0];
+    var cue=function(id){ return C[id] ? lexHitsNeg(u.norm,u.words,C[id]).map(function(h){ return h.ev; }) : []; };
+    var role=D.role?D.role.id:"general";
+    // الأزمة: لا تحليل للأنماط ولا تفاصيل؛ السلامة أولًا
+    if(u.crisis){
+      S.control={mine:T(A.ctl.pain[0]), not:T(A.ctl.pain[1])};
+      S.strengths=[{text:T(A.str.voice)}];
+      S.priority=T(A.pri.safety);
+      return S;
+    }
+    // جوهر الموقف: الموضوع الأول، ثم زاوية الموضوع الثاني إن كان مسنودًا بلفظ صريح
+    // (الفضائل كالشكر والصبر لا تتصدر الجوهر ما دام في الكلام موضوع مشكلة صريح: «صبرت والحمد لله» ليست هي المشكلة)
+    var VIRTUE=/^(gratitude|patience|hope|charity)$/, cand=u.themes.slice(0,3), prob=cand.filter(function(t){ return !VIRTUE.test(t.id) && t.hits && t.hits.length; });
+    if(prob.length) cand=prob.concat(cand.filter(function(t){ return prob.indexOf(t)<0; }));
+    // من وقع عليه الأذى: موضوع الأذى نفسه أولًا (لا «سوء الظن» إن التُقط معه)
+    var hurt=role==="wronged" && u.themes.filter(function(t){ return WRONGED.test(t.id); })[0];
+    if(hurt) cand=[hurt].concat(cand.filter(function(t){ return t!==hurt && t.id!=="suspicion"; }));
+    var c0=cand[0], c1=cand[1];
+    S.core=[];
+    if(c0 && A.lens[c0.id]) S.core.push({label:c0.theme.label, text:T(A.lens[c0.id])});
+    if(c1 && A.lens[c1.id] && ((c1.hits && c1.hits.length) || c1.life) && c1.conf>=0.45 && !VIRTUE.test(c1.id)) S.core.push({label:c1.theme.label, text:T(A.lens[c1.id])});
+    // ما وراء المشاعر: المصرّح بها أولًا، وإلا المحتمل الأول
+    var em=u.emotions.filter(function(e){ return !e.implied; }); if(!em.length) em=u.emotions.slice(0,1);
+    if(em.length>1) em=em.filter(function(e){ return e.id!=="joy"; });
+    S.beneath=em.slice(0,2).filter(function(e){ return A.emo[e.id]; }).map(function(e){ return {label:e.label, implied:!!e.implied, text:T(A.emo[e.id])}; });
+    // طبيعة العلاقة
+    if(rel && A.rel[rel.id]) S.relation={label:rel.label, text:T(A.rel[rel.id])};
+    // أنماط التفكير، كل نمط مع الكلمات التي دلت عليه
+    var pats=[], seen=new Set();
+    var addPat=function(id, ev){
+      // دليل بلا تكرار: «it's all my fault» تُغني عن «all my fault»
+      ev=ev.map(normalize).filter(function(k,i,a){ return !seen.has(k) && !a.some(function(o,j){ return j!==i && o.length>k.length && o.indexOf(k)>-1; }) && a.indexOf(k)===i; })
+        .map(function(k){ seen.add(k); return ev.filter(function(x){ return normalize(x)===k; })[0]; });
+      if(ev.length && A.pat[id]) pats.push({id:id, name:T(A.pat[id].name), text:T(A.pat[id].text), ev:ev.slice(0,3)});
+    };
+    var abs=cue("absolute"), absSoft=cue("absoluteSoft");
+    if(abs.length || absSoft.length>=2) addPat("absolute", abs.concat(absSoft));
+    ["label","catastrophe","selfblame","mindread","should","compare"].forEach(function(id){ addPat(id, cue(id)); });
+    S.patterns=pats.slice(0,3);
+    // ما بيدك وما ليس بيدك
+    var ctl=A.ctl[role]||A.ctl.general;
+    S.control={mine:T(ctl[0]), not:T(ctl[1])};
+    // مواطن القوة: من كلماتك أولًا، ثم من صيغة كلامك وموقعك
+    var str=[];
+    var faith=cue("faith"), effort=cue("effort"), pat=cue("patience");
+    if(faith.length) str.push({text:T(A.str.faith), ev:faith.slice(0,2)});
+    if(effort.length) str.push({text:T(A.str.effort), ev:effort.slice(0,2)});
+    if(pat.length) str.push({text:T(A.str.patience), ev:pat.slice(0,2)});
+    if(u.selfFault) str.push({text:T(A.str.honesty)});
+    if(role==="carer" || role==="worried") str.push({text:T(A.str.care)});
+    if(u.emotions.some(function(e){ return e.id==="joy" && !e.implied; }) && !faith.length) str.push({text:T(A.str.gratitude)});
+    if(u.question || u.needs.some(function(n){ return /howto|decision|repair/.test(n.id); })) str.push({text:T(A.str.seeking)});
+    if(!str.length) str.push({text:T(A.str.voice)});
+    S.strengths=str.slice(0,3);
+    // إشارات تستحق الانتباه (لا تشخيص: دعوة إلى العناية والاستشارة فقط)
+    var sig=[], sl=cue("sleep"), bd=cue("body");
+    if(sl.length) sig.push({text:T(A.sig.sleep), ev:sl.slice(0,2)});
+    if(bd.length) sig.push({text:T(A.sig.body), ev:bd.slice(0,2)});
+    var lonely=u.emotions.some(function(e){ return e.id==="loneliness" && !e.implied; }) || (t0 && t0.id==="loneliness");
+    if(lonely && u.time==="ongoing") sig.push({text:T(A.sig.isolation)});
+    if(u.intensity>=2.5 && u.time==="ongoing" && /sadness|despair|anxiety|burnout|loneliness|grief|waswasa|self_worth/.test(u.themes.slice(0,2).map(function(t){ return t.id; }).join(" "))) sig.push({text:T(A.sig.heavy)});
+    S.signals=sig.slice(0,3);
+    // الأولوية الآن
+    var nd=D.need?D.need.id:null;
+    S.priority=T(nd==="safety" ? A.pri.safety
+      : (sl.length||bd.length) && (u.intensity>=2 || hasEmo(u,"exhaustion")) ? A.pri.relief
+      : pats.length>=2 ? A.pri.lens
+      : nd && A.pri[nd] ? A.pri[nd]
+      : u.intensity>=2.5 ? A.pri.relief
+      : pats.length ? A.pri.lens : A.pri.howto);
+    return S;
+  }
+  function hasEmo(u, id){ return u.emotions.some(function(e){ return e.id===id; }); }
+
   function composeReading(u, r){
     var parts=[];
     var rel=u.relations[0], t0=u.themes[0], t1=u.themes[1];
     var emo=u.emotions.filter(function(e){return !e.implied;}).map(function(e){return e.label;});
     var emoImp=u.emotions.filter(function(e){return e.implied;}).map(function(e){return e.label;});
     if(t0){
-      parts.push(T("يدور ما كتبته أساسًا حول «{0}»",t0.theme.label)+(t1?T("، ويتقاطع مع «{0}»",t1.theme.label):"")+(rel?T("، في سياق علاقتك بـ{0}",rel.label):"")+".");
+      parts.push(T("يدور ما كتبته أساسًا حول «{0}»",t0.theme.label)+(t1?T("، ويتقاطع مع «{0}»",t1.theme.label):"")+(rel?T("، في سياق علاقتك بـ{0}",rel.label):"")+(I18N.lang==="bn"?"।":"."));
     } else if(rel){
       parts.push(T("يدور ما كتبته حول علاقتك بـ{0}.",rel.label));
     }
@@ -560,16 +823,13 @@ var RAG = (function(){
     if(u.intensity>=2.5) parts.push(T("يبدو أن الموقف ثقيل عليك ومستمر منذ مدة، لذلك سنبدأ بما يخفف الضغط الآن قبل الخطط البعيدة."));
     if(u.selfFault) parts.push(T("ولاحظت أنك تتحدث عن خطأ وقع منك؛ والاعتراف بالخطأ نصف الطريق، فالهدي النبوي يفتح لك باب الإصلاح لا باب جلد الذات."));
     else if(t0 && /injustice|insult|betrayal|slander|oppressor_power/.test(t0.id)) parts.push(T("وموقعك هنا موقع من وقع عليه الأذى؛ والمنهج النبوي يعترف بحقك أولًا، ثم يعرض عليك خيارات أرفع دون أن يُلزمك بها."));
-    var D=deepRead(u, r);
-    if(D.need) parts.push(T("وما تحتاجه على الأرجح: {0}.",D.need.text.replace(/[.。]$/,"")));
-    if(D.tension.length) parts.push(T("ويتجاذبك أمران: {0}.",D.tension[0]));
     if(r.sits[0]) parts.push(T("وأقرب ما وجدته لحالتك: «{0}».",r.sits[0].s.title));
     return parts.join(" ");
   }
 
-  function analyze(raw){
+  function analyze(raw, opts){
     build();
-    var u=understand(raw);
+    var u=understand(raw, opts);
     var r=retrieve(u);
     var topThemes=u.themes.slice(0,2).map(function(t){return t.theme;});
     // الخطة العملية: من الموضوعين الأعلى + تطبيقات الموقف الأول
@@ -589,10 +849,19 @@ var RAG = (function(){
     var help=uniq(u.themes.slice(0,3).map(function(t){return t.theme.help;}).filter(Boolean));
 
     var topScore=r.sits[0]?r.sits[0].score:0, themeScore=u.themes[0]?u.themes[0].score:0;
-    var confidence = (topScore>=7 || themeScore>=3) ? "high" : (topScore>=3 || themeScore>=1.5) ? "mid" : "low";
+    // «مطابقة قوية» تتطلب فهمًا مسنودًا بدليل (لفظ صريح أو موقف حياتي مشابه)، لا مجرد تشابه نصي مع قصة؛
+    // وبلا أي موضوع مفهوم لا تتجاوز المطابقة «متوسطة» (ويظهر للمستخدم اقتراح إضافة تفاصيل عند «ضعيفة»)
+    var evidence=u.themes.some(function(t){ return (t.hits && t.hits.length) || t.life; });
+    var confidence = !u.themes.length ? (topScore>=7 ? "mid" : "low")
+      : (themeScore>=3 || (topScore>=7 && evidence)) ? "high" : (topScore>=3 || themeScore>=1.5) ? "mid" : "low";
+    if(u.focus) confidence="mid";   // الموضوع من اختيار المستخدم لا من دليل في نصه
 
+    var deep=deepRead(u,r), analysis=specialistRead(u,r,deep);
+    // القراءة الأولية العميقة (js/reading.js) إن توفرت أدلتها، وإلا القراءة المختصرة
+    var rd=null; try{ rd=window.READING ? READING.compose(u,r,deep,analysis) : null; }catch(e){ rd=null; }
+    var reading=rd ? rd.text : composeReading(u,r);
     return {
-      input:raw, understanding:u, retrieval:r, reading:composeReading(u,r), deep:deepRead(u,r),
+      input:raw, understanding:u, retrieval:r, reading:reading, readingInfo:rd, deep:deep, analysis:analysis,
       insights:topThemes.map(function(t){return {label:t.label, text:t.insight, id:t.id};}),
       plan:plan, questions:questions, avoid:avoid, help:help, confidence:confidence
     };
@@ -611,6 +880,20 @@ var RAG = (function(){
     if(D.need) L.push(T("ما يحتاجه على الأرجح:")+" "+D.need.text);
     if(D.tension&&D.tension.length) L.push(T("ما يتجاذبه:")+" "+D.tension.join(T("؛ ")));
     if(D.time) L.push(T("الزمن:")+" "+D.time.text);
+    var S=a.analysis;
+    if(S){
+      L.push("\n"+T("## تحليل أعمق (تأملي، ليس تشخيصًا)"));
+      (S.core||[]).forEach(function(c){ L.push("- "+c.label+": "+c.text); });
+      (S.patterns||[]).forEach(function(p){ L.push("- "+T("نمط في التفكير:")+" "+p.name+" ("+p.ev.join(T("، "))+")"); });
+      (S.signals||[]).forEach(function(s){ L.push("- "+T("إشارة تستحق الانتباه:")+" "+s.text); });
+      if(S.priority) L.push("- "+T("الأولوية الآن")+": "+S.priority);
+    }
+    L.push(T("درجة المطابقة:")+" "+{high:T("مطابقة قوية"),mid:T("مطابقة متوسطة"),low:T("مطابقة ضعيفة")}[a.confidence]);
+    var life=a.understanding.life||[];
+    if(life.length){
+      L.push("\n"+T("## مواقف حياتية مشابهة (لفهم الموقف فقط، وليست نصوصًا شرعية)"));
+      life.forEach(function(m){ L.push("- "+m.text); });
+    }
     L.push("\n"+T("## مواقف من السيرة والقرآن (مسترجعة)"));
     r.sits.slice(0,4).forEach(function(x,i){
       var s=x.s;
@@ -631,5 +914,5 @@ var RAG = (function(){
   }
 
   return {normalize:normalize, stem:stem, stems:stems, analyze:analyze, understand:understand, build:build,
-          contextFor:contextFor, byId:function(kind,id){ build(); return BY[kind][id]; }, themeLabel:themeLabel};
+          contextFor:contextFor, cueHits:function(u, list){ return lexHitsNeg(u.norm, u.words, list||[]).map(function(h){ return h.ev; }); }, byId:function(kind,id){ build(); return BY[kind][id]; }, themeLabel:themeLabel};
 })();

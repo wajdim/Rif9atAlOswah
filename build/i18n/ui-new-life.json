@@ -1,0 +1,32 @@
+{
+ "الحياة الحديثة والتحولات": {
+  "en": "Modern life and transitions",
+  "fr": "Vie moderne et transitions",
+  "nl": "Modern leven en overgangen",
+  "es": "Vida moderna y transiciones",
+  "pt": "Vida moderna e transições",
+  "ur": "جدید زندگی اور تبدیلیاں",
+  "id": "Kehidupan modern dan perubahan",
+  "tr": "Modern hayat ve değişimler"
+ },
+ "درجة المطابقة:": {
+  "en": "Match level:",
+  "fr": "Niveau de correspondance :",
+  "nl": "Mate van overeenkomst:",
+  "es": "Nivel de coincidencia:",
+  "pt": "Nível de correspondência:",
+  "ur": "مطابقت کا درجہ:",
+  "id": "Tingkat kecocokan:",
+  "tr": "Eşleşme düzeyi:"
+ },
+ "## مواقف حياتية مشابهة (لفهم الموقف فقط، وليست نصوصًا شرعية)": {
+  "en": "## Similar everyday situations (to understand the situation only; not scriptural texts)",
+  "fr": "## Situations de vie similaires (pour comprendre la situation seulement ; ce ne sont pas des textes religieux)",
+  "nl": "## Vergelijkbare levenssituaties (alleen om de situatie te begrijpen; geen religieuze teksten)",
+  "es": "## Situaciones de la vida parecidas (solo para entender la situación; no son textos religiosos)",
+  "pt": "## Situações de vida semelhantes (apenas para compreender a situação; não são textos religiosos)",
+  "ur": "## ملتی جلتی زندگی کی صورتیں (صرف صورتِ حال سمجھنے کے لیے، یہ شرعی نصوص نہیں)",
+  "id": "## Situasi hidup yang serupa (hanya untuk memahami keadaan; bukan teks syariat)",
+  "tr": "## Benzer hayat durumları (yalnızca durumu anlamak için; dini metin değildir)"
+ }
+}

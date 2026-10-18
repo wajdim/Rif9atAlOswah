@@ -1,0 +1,621 @@
+{
+"hadith": {
+"h-niyya": {
+"r": "ʿUmar ibn al-Chattab",
+"n": "Die Absicht verwandelt Gewohnheit in Gottesdienst: Arbeit, Studium und Ausgaben für die eigene Familie werden alle durch die Absicht belohnt."
+},
+"h-qulub": {
+"r": "Abu Huraira",
+"n": "Der Maßstab des Wertes bei Allah sind Herz und Taten, nicht Aussehen, Reichtum oder gesellschaftliche Stellung."
+},
+"h-ridallah": {
+"r": "ʿAischa",
+"n": "Ein Heilmittel dagegen, es den Menschen auf Kosten der Grundsätze recht zu machen: Wer Allahs Wohlgefallen voranstellt, dem genügt Allah gegen die Menschen."
+},
+"h-khafi": {
+"r": "Saʿd ibn Abi Waqqas",
+"n": "Verborgen zu sein und nicht gesehen werden zu wollen ist eine geliebte Eigenschaft, in einer Zeit, in der Menschen sich an der Zahl ihrer Follower messen."
+},
+"h-ghadab-julus": {
+"r": "Abu Dharr",
+"n": "Ein praktisches, körperliches Heilmittel: Die Körperhaltung zu ändern bricht den Ansturm des Zorns und bewahrt vor überstürztem Handeln."
+},
+"h-ghadab-istiadha": {
+"r": "Sulaiman ibn Surad",
+"n": "Zuflucht bei Allah zu suchen ist das Erste, was man im Zorn sagt.",
+"w": "Wenn der Zorn heftiger wird"
+},
+"h-ghadab-sukut": {
+"r": "Ibn ʿAbbas",
+"n": "Was Menschen im Zorn am meisten bereuen, ist das, was sie gesagt haben; vorübergehendes Schweigen schützt die Beziehung."
+},
+"h-kazm": {
+"r": "Muʿadh ibn Anas",
+"n": "Den Zorn zu zügeln ist am meisten wert, wenn man in der Lage ist, sich zu rächen."
+},
+"h-rifq": {
+"r": "ʿAischa",
+"n": "Sanftheit ist keine Schwäche, sondern ein erfolgreicherer Weg zum Ziel."
+},
+"h-rifq-zana": {
+"r": "ʿAischa",
+"n": "Der Prophet ﷺ sagte es zu ʿAischa, als sie ein schwieriges Kamel ritt und es immer wieder hin und her zog; Sanftheit sogar gegenüber Tieren."
+},
+"h-muflis-tabbaan": {
+"r": "ʿAbdullah ibn Masʿud",
+"n": "Selbst im Streit bleibt die Zunge des Gläubigen sauber."
+},
+"h-afw-izz": {
+"r": "Abu Huraira",
+"n": "Die Menschen fürchten, dass ihr Vergeben als Schwäche gesehen wird, darum kam das Versprechen: Vergebung mehrt die Ehre, sie mindert sie nicht."
+},
+"h-zulm-zulumat": {
+"r": "Dschabir ibn ʿAbdullah",
+"n": "Eine Warnung an den Unrechttuenden und ein Trost für den, dem Unrecht geschieht."
+},
+"h-dawat-mazlum": {
+"r": "Ibn ʿAbbas (aus dem Rat des Propheten ﷺ an Muʿadh)",
+"n": "Wem Unrecht geschieht, der hat eine Waffe, die nie abgewehrt wird, und wer Macht hat, hat eine ernste Warnung."
+},
+"h-unsur": {
+"r": "Anas ibn Malik",
+"n": "Einem Freund zu helfen, der Unrecht tut, heißt, ihn davon abzuhalten, nicht ihn darin zu unterstützen."
+},
+"h-muflis": {
+"r": "Abu Huraira",
+"n": "Die Rechte der Menschen werden durch Gottesdienst nicht aufgehoben, und wem Unrecht geschieht, der verliert sein Recht nie."
+},
+"h-la-darar": {
+"r": "Ibn ʿAbbas und ʿUbada ibn as-Samit",
+"n": "Eine große Rechtsregel: Schaden darf weder begonnen noch mit größerem Schaden beantwortet werden – eine Grundlage, anhaltende Misshandlung abzulehnen."
+},
+"h-la-yuldagh": {
+"r": "Abu Huraira",
+"n": "Vergebung bedeutet keine Naivität; der Gläubige lernt aus Erfahrung und setzt Grenzen, die ihn davor schützen, erneut verletzt zu werden."
+},
+"h-yuhibbu": {
+"r": "Anas ibn Malik",
+"n": "Das tiefste Heilmittel gegen Neid: anderen zu wünschen, was du dir selbst wünschst."
+},
+"h-la-tahasadu": {
+"r": "Abu Huraira",
+"n": "Eine Liste dessen, was die Brüderlichkeit zerstört: Neid, Hass, sich voneinander abwenden und unfairer Wettbewerb."
+},
+"h-hasad-ithnatayn": {
+"r": "ʿAbdullah ibn Masʿud",
+"n": "„Neid“ bedeutet hier gesunden Wetteifer: sich eine Gabe wie die eines anderen zu wünschen, ohne zu wollen, dass sie ihm genommen wird, und nur im Guten."
+},
+"h-hajr-thalath": {
+"r": "Abu Ayyub al-Ansari",
+"n": "Das Meiden hat eine zeitliche Grenze, und der Bessere ist der, der zuerst grüßt, nicht der, der wartet."
+},
+"h-istalaha": {
+"r": "Abu Huraira",
+"n": "Groll verzögert die Vergebung; Versöhnung ist keine gesellschaftliche Höflichkeit, sondern Gottesdienst."
+},
+"h-islah": {
+"r": "Abu ad-Darda",
+"n": "„Die Rasierende“: Sie rasiert die Religion ab, wie ein Rasiermesser das Haar abrasiert; darum gehört das Heilen von Beziehungen zu den höchsten Taten der Hingabe."
+},
+"h-mira": {
+"r": "Abu Umama al-Bahili",
+"n": "Gib fruchtloses Streiten auf, selbst wenn du recht hast: Eine Debatte zu gewinnen ist nicht immer ein Gewinn für die Beziehung."
+},
+"h-afshu-salam": {
+"r": "Abu Huraira",
+"n": "Der Friedensgruß ist der einfachste Schlüssel, das Eis zu brechen und Zuneigung aufzubauen."
+},
+"h-akhbirhu": {
+"r": "al-Miqdam ibn Maʿdikarib",
+"n": "Positive Gefühle auszudrücken ist Sunna, keine Schwäche."
+},
+"h-tahadu": {
+"r": "Abu Huraira",
+"n": "Ein kleines Geschenk schmilzt die Kälte."
+},
+"h-khalil": {
+"r": "Abu Huraira",
+"n": "Ein Freund formt dich, ohne dass du es merkst; darum ist die Wahl deiner Gesellschaft eine entscheidende Entscheidung."
+},
+"h-jalis": {
+"r": "Abu Musa al-Aschʿari",
+"n": "Von einem guten Gefährten profitierst du in jedem Fall, und ein schlechter schadet dir in jedem Fall, auch wenn du nicht handelst wie er."
+},
+"h-maa-man-ahabb": {
+"r": "Anas ibn Malik und Ibn Masʿud",
+"n": "Die Liebe zu den Rechtschaffenen hebt dich zu ihnen empor, auch wenn deine Taten zurückbleiben."
+},
+"h-yashkur-nas": {
+"r": "Abu Huraira",
+"n": "Den Menschen zu danken ist Teil des Dankes an Allah."
+},
+"h-kafiuhu": {
+"r": "ʿAbdullah ibn ʿUmar",
+"n": "Das Bittgebet ist die Vergeltung dessen, der sonst nichts zu geben hat."
+},
+"h-ghiba": {
+"r": "Abu Huraira",
+"n": "Üble Nachrede ist die Erwähnung eines wirklichen Fehlers, und Verleumdung die Erwähnung eines Fehlers, den es nicht gibt; beides ist verboten."
+},
+"h-yaqul-khayran": {
+"r": "Abu Huraira",
+"n": "Ein einfacher Test vor dem Sprechen: Ist es gut? Wenn nicht, dann Schweigen."
+},
+"h-kalima": {
+"r": "Abu Huraira",
+"n": "Ein beiläufiges Wort kann das Schwerste auf der Waage sein."
+},
+"h-muslim-salima": {
+"r": "ʿAbdullah ibn ʿAmr",
+"n": "Eine praktische Definition des Islam: dass die Menschen vor deinem Schaden sicher sind."
+},
+"h-zann": {
+"r": "Abu Huraira",
+"n": "Schlechter Argwohn gibt sich als „Intuition“ aus, und der Prophet ﷺ nannte ihn die lügenhafteste Rede."
+},
+"h-kalima-tayyiba": {
+"r": "Abu Huraira",
+"n": "Wer kein Geld hat, hat immer noch ein gutes Wort, das er als Spende geben kann."
+},
+"h-sitr": {
+"r": "Abu Huraira",
+"n": "Türen, die sich vervielfachen: Not lindern, erleichtern und verbergen – und der Lohn ist von der Art der Tat."
+},
+"h-mujahirin": {
+"r": "Abu Huraira",
+"n": "Wer in Sünde fällt, soll unter Allahs Bedeckung bleiben, sich nicht selbst bloßstellen und zwischen sich und seinem Herrn bereuen."
+},
+"h-munafiq": {
+"r": "Abu Huraira",
+"n": "Drei praktische Zeichen, um Vertrauen zu prüfen – bei anderen und bei sich selbst."
+},
+"h-da-ma-yaribuk": {
+"r": "al-Hasan ibn ʿAli",
+"n": "Im Zweifel wähle, womit das Herz im Frieden ist; Wahrhaftigkeit ist Seelenruhe, bevor sie Pflicht ist."
+},
+"h-birr-ithm": {
+"r": "an-Nawwas ibn Samʿan",
+"n": "Ein innerer Kompass: Was du nicht möchtest, dass die Leute es erfahren, hat meist etwas Falsches an sich."
+},
+"h-mustashar": {
+"r": "Abu Huraira",
+"n": "Wer um Rat gefragt wird, muss ehrlich raten, und wer Rat sucht, soll jemanden Vertrauenswürdigen wählen."
+},
+"h-atqan": {
+"r": "ʿAischa",
+"n": "Die Arbeit gut zu machen ist Gottesdienst, auch wenn niemand zusieht."
+},
+"h-ajir": {
+"r": "ʿAbdullah ibn ʿUmar",
+"n": "Das Recht des Arbeiters auf seinen Lohn sofort, ohne Verzögerung."
+},
+"h-kullukum-rai": {
+"r": "ʿAbdullah ibn ʿUmar",
+"n": "Jeder ist in seinem eigenen Kreis verantwortlich: Vater, Mutter, Vorgesetzter und Angestellter."
+},
+"h-ada-dayn": {
+"r": "Abu Huraira",
+"n": "Die aufrichtige Absicht zurückzuzahlen bringt Allahs Hilfe bei der Begleichung der Schuld."
+},
+"h-matl": {
+"r": "Abu Huraira",
+"n": "Jemandem sein Recht vorzuenthalten, obwohl man zahlen kann, ist offenes Unrecht."
+},
+"h-samh": {
+"r": "Dschabir ibn ʿAbdullah",
+"n": "Großzügige Nachsicht, auch beim Einfordern dessen, was einem zusteht."
+},
+"h-inzar": {
+"r": "Abu al-Yasar",
+"n": "Einem bedrängten Schuldner mehr Zeit zu geben oder ihm die Schuld zu erlassen ist eine Tat von großem Lohn."
+},
+"h-ghina-nafs": {
+"r": "Abu Huraira",
+"n": "Wahrer Reichtum ist ein Gefühl der Genügsamkeit, keine Zahl auf einem Konto."
+},
+"h-kafaf": {
+"r": "ʿAbdullah ibn ʿAmr",
+"n": "Erfolg braucht keinen Reichtum: Islam, das Nötige und Zufriedenheit."
+},
+"h-amin-sirbih": {
+"r": "ʿUbaidullah ibn Mihsan",
+"n": "Eine Neubestimmung der Gabe: Sicherheit, gute Gesundheit und das Essen für heute sind „diese Welt“ in ihrer Gesamtheit."
+},
+"h-unzuru-asfal": {
+"r": "Abu Huraira",
+"n": "Eine genaue psychologische Regel: Die Richtung des Vergleichs entscheidet, wie beschenkt du dich fühlst; in Dingen der Religion schau auf die über dir."
+},
+"h-tawakkul-tayr": {
+"r": "ʿUmar ibn al-Chattab",
+"n": "Die Vögel „gehen am Morgen hinaus“ – sie brechen auf und suchen; wahres Vertrauen auf Allah umfasst das Bemühen zusammen mit einem ruhigen Herzen."
+},
+"h-iqilha": {
+"r": "Anas ibn Malik",
+"n": "Auf Allah zu vertrauen bedeutet nicht, die Mittel aufzugeben; ergreife jedes Mittel und überlasse dann das Ergebnis Allah."
+},
+"h-hatab": {
+"r": "az-Zubair ibn al-ʿAwwam",
+"n": "Bescheidene Arbeit ist keine Schande; Würde liegt im erlaubten Verdienst, so bescheiden er sei."
+},
+"h-kafil-yatim": {
+"r": "Sahl ibn Saʿd",
+"n": "Die Sorge für eine Waise erhebt einen Menschen an die Seite des Propheten ﷺ."
+},
+"h-armala": {
+"r": "Abu Huraira",
+"n": "Den Schwachen zu dienen kommt den größten Gottesdiensten gleich."
+},
+"h-la-tahqiranna": {
+"r": "Abu Dharr",
+"n": "Die kleinste Güte hat Wert – ein praktischer Zugang für jeden, der sich unfähig fühlt, Gutes zu tun."
+},
+"h-anfauhum": {
+"r": "ʿAbdullah ibn ʿUmar",
+"n": "Für den, der fühlt, dass er den Sinn verloren hat, ist der Nutzen für die Menschen eine weite Tür, ihn zurückzugewinnen."
+},
+"h-khayrukum-ahlih": {
+"r": "ʿAischa",
+"n": "Wahrer Charakter wird im Haus gemessen, nicht außerhalb."
+},
+"h-akmal-iman": {
+"r": "Abu Huraira",
+"n": "Die Vollkommenheit des Glaubens ist mit der guten Behandlung der Ehefrau verbunden."
+},
+"h-la-yafrak": {
+"r": "Abu Huraira",
+"n": "Ein ausgewogener Blick: Beurteile deinen Partner nicht nach einem Fehler und vergiss das Gute nicht. Das gilt für beide Eheleute."
+},
+"h-istawsu": {
+"r": "Abu Huraira",
+"n": "Eine wiederholte prophetische Anweisung, Frauen gut zu behandeln."
+},
+"h-radiya-ghadba": {
+"r": "ʿAischa",
+"n": "Die Aufmerksamkeit des Propheten ﷺ für die feinsten Zeichen der Gefühle seiner Frau und sein ruhiger Umgang mit ihrem Ärger ohne Eskalation."
+},
+"h-mataa": {
+"r": "ʿAbdullah ibn ʿAmr",
+"n": "Eine rechtschaffene Ehefrau ist die größte Gabe dieser Welt."
+},
+"h-dhat-din": {
+"r": "Abu Huraira",
+"n": "Das Kriterium der Wahl: Religion und Charakter sind die Grundlage, ohne andere Gesichtspunkte zu vernachlässigen."
+},
+"h-tardawna": {
+"r": "Abu Huraira",
+"n": "Ein Rat für Familien: Erschwert die Ehe nicht mit übertriebenen materiellen Ansprüchen."
+},
+"h-shabab": {
+"r": "ʿAbdullah ibn Masʿud",
+"n": "Praktische Lösungen für die Begierde: die Ehe, wenn man dazu in der Lage ist, und das Fasten, wenn nicht."
+},
+"h-thalatha-awn": {
+"r": "Abu Huraira",
+"n": "Wer die Ehe mit der Absicht der Keuschheit sucht, dem hilft Allah."
+},
+"h-rughm": {
+"r": "Abu Huraira",
+"n": "Das Alter der Eltern ist eine goldene Gelegenheit für das Paradies, nicht nur eine Last."
+},
+"h-rida-walid": {
+"r": "ʿAbdullah ibn ʿAmr",
+"n": "Die Eltern zu ehren ist ein direkter Weg zu Allahs Wohlgefallen, in allem außer dem Ungehorsam gegen Ihn."
+},
+"h-asma-umm": {
+"r": "Asma bint Abi Bakr",
+"n": "Ein Unterschied in Religion oder Praxis hebt die Pflicht zu Güte und Verbundenheit nicht auf."
+},
+"h-sila-rizq": {
+"r": "Anas ibn Malik",
+"n": "Die Pflege der Verwandtschaftsbande bringt Segen in Versorgung und Lebenszeit."
+},
+"h-mal": {
+"r": "Abu Huraira",
+"n": "Wer die Bande zu Verwandten pflegt, die kalt zu ihm sind, hat einen Helfer von Allah, und die Sünde liegt bei ihnen, nicht bei ihm."
+},
+"h-adl-awlad": {
+"r": "an-Nuʿman ibn Baschir",
+"n": "Ein Kind beim Geben einem anderen vorzuziehen pflanzt Feindschaft zwischen ihnen."
+},
+"h-yarham-saghir": {
+"r": "ʿAbdullah ibn ʿAmr",
+"n": "Barmherzigkeit gegenüber den Jungen und Achtung vor den Alten, zusammen."
+},
+"h-rahimun": {
+"r": "ʿAbdullah ibn ʿAmr",
+"n": "Barmherzigkeit gegenüber der Schöpfung ist ein Weg zur Barmherzigkeit des Schöpfers."
+},
+"h-walad-salih": {
+"r": "Abu Huraira",
+"n": "Die Güte zu den Eltern endet nicht mit dem Tod: Dein Bittgebet und deine Spende für sie erreichen sie."
+},
+"h-kalima-lil-ahl": {
+"r": "Saʿd ibn Abi Waqqas",
+"n": "Selbst ein Bissen, den du deiner Frau gibst, ist mit der richtigen Absicht eine Spende; Ausgaben für die Familie sind Gottesdienst."
+},
+"h-ajaban": {
+"r": "Suhaib ar-Rumi",
+"n": "Der Gläubige gewinnt in jeder Lage: durch Dankbarkeit im Wohlergehen und Geduld in der Not."
+},
+"h-nasab": {
+"r": "Abu Saʿid al-Chudri und Abu Huraira",
+"n": "Selbst Sorge und seelische Traurigkeit – nicht nur körperlicher Schmerz – tragen Lohn und Sühne."
+},
+"h-ashadd-bala": {
+"r": "Saʿd ibn Abi Waqqas",
+"n": "Schwere Prüfung ist kein Zeichen des Zorns; sie kann sogar ein Zeichen des Ranges sein."
+},
+"h-azam-jaza": {
+"r": "Anas ibn Malik",
+"n": "Deine Haltung zur Prüfung (Annahme oder Unmut) entscheidet über ihre Frucht."
+},
+"h-maradh-kutib": {
+"r": "Abu Musa al-Aschʿari",
+"n": "Krankheit unterbricht den Lohn deines gewohnten Gottesdienstes nicht; sei also nicht traurig über das, wovon dich die Krankheit abhält."
+},
+"h-dawa": {
+"r": "Abu Huraira",
+"n": "Die Hoffnung auf Heilung gehört zum Glauben, und die Suche danach heißt, die Mittel zu ergreifen."
+},
+"h-tadawaw": {
+"r": "Usama ibn Scharik",
+"n": "Behandlung zu suchen ist geboten, auch die Sorge um die seelische Gesundheit; zum Arzt zu gehen widerspricht dem Vertrauen auf Allah nicht."
+},
+"h-habibatayn": {
+"r": "Anas ibn Malik",
+"n": "Der Verlust eines kostbaren Sinnes, mit Geduld getragen, wird mit dem Paradies ausgeglichen."
+},
+"h-la-yatamanna": {
+"r": "Anas ibn Malik",
+"n": "Ein klares Verbot, sich wegen eines Schmerzes den Tod zu wünschen, das schwere Gefühle in ein Bittgebet lenkt, das die Sache Allah überlässt.",
+"w": "In großer Not und Verzweiflung"
+},
+"h-yurid-khayran": {
+"r": "Abu Huraira",
+"n": "Ein Unglück kann eine Tür zum Guten sein, das Allah für dich gewollt hat."
+},
+"h-sabr-diya": {
+"r": "Abu Malik al-Aschʿari",
+"n": "Die Geduld ist „Glanz“ – ein Licht, das Hitze und Mühe in sich trägt –, anders als das Gebet, das reines „Licht“ ist."
+},
+"h-yatasabbar": {
+"r": "Abu Saʿid al-Chudri",
+"n": "Geduld ist eine Fähigkeit, die man durch Übung erwirbt: Wer sich um sie bemüht, dem hilft Allah dabei."
+},
+"h-hamm": {
+"r": "Anas ibn Malik",
+"n": "Sorge gilt der Zukunft und Traurigkeit der Vergangenheit; dieses Bittgebet umfasst acht Türen menschlicher Schwäche.",
+"w": "Morgens, abends und in Zeiten der Sorge"
+},
+"h-karb": {
+"r": "Ibn ʿAbbas",
+"n": "Das Bittgebet der Bedrängnis: Der Prophet ﷺ pflegte es in schweren Zeiten zu sprechen.",
+"w": "In Bedrängnis und großer Not"
+},
+"h-dhunnun": {
+"r": "Saʿd ibn Abi Waqqas",
+"n": "Das Bekenntnis zu Allahs Einheit, Sein Lobpreis und das Eingeständnis des eigenen Fehlers: drei Schlüssel zur Erleichterung.",
+"w": "In jeder Not"
+},
+"h-abduk": {
+"r": "ʿAbdullah ibn Masʿud",
+"n": "Ein Bittgebet, das die Ergebung in Allahs Bestimmung mit der Bitte verbindet, dass der Koran die Heilung der Traurigkeit sei.",
+"w": "In Sorge und Traurigkeit"
+},
+"h-rahmataka": {
+"r": "Abu Bakra",
+"n": "Die Bitte an Allah, dich nicht einen Augenblick dir selbst zu überlassen und „alle“ deine Angelegenheiten in Ordnung zu bringen.",
+"w": "In Not und wenn die Angelegenheiten zerstreut sind"
+},
+"h-hasbuna": {
+"r": "Ibn ʿAbbas",
+"n": "Die großen Worte des Anvertrauens, wenn man die Menschen oder die Zukunft fürchtet.",
+"w": "In Furcht, Bedrohung und Unrecht"
+},
+"h-bismillah-yadurr": {
+"r": "ʿUthman ibn ʿAffan",
+"n": "Ein tägliches schützendes Gedenken, das ein ängstliches Herz beruhigt.",
+"w": "Dreimal morgens und abends"
+},
+"h-ruqya-alam": {
+"r": "ʿUthman ibn Abi al-ʿAs",
+"n": "Eine prophetische Ruqya, die der Kranke über sich selbst spricht.",
+"w": "Bei Schmerz und Krankheit"
+},
+"h-adhhib-bas": {
+"r": "ʿAischa",
+"n": "Der Prophet ﷺ suchte damit Schutz für Angehörige seiner Familie.",
+"w": "Für Kranke und die, die sie besuchen"
+},
+"h-la-bas": {
+"r": "Ibn ʿAbbas",
+"n": "Ein prophetisches Trostwort, das die Krankheit zu einer Läuterung macht, nicht zu einer Strafe.",
+"w": "Beim Krankenbesuch"
+},
+"h-ayn-haqq": {
+"r": "Abu Huraira",
+"n": "Eine Bestätigung des bösen Blicks, verbunden mit dem Verbot übermäßiger Furcht davor oder der Erklärung von allem damit."
+},
+"h-barrakt": {
+"r": "Abu Umama ibn Sahl ibn Hunaif",
+"n": "Vorbeugung gegen den bösen Blick auf Seiten dessen, der schaut: „Möge Allah es dir segnen“ zu sagen, wenn ihn etwas beeindruckt."
+},
+"h-muawwidhat": {
+"r": "ʿUqba ibn ʿAmir",
+"n": "Die letzten beiden Suren sind der größte Schutz.",
+"w": "Morgens, abends und vor dem Schlafen"
+},
+"h-uidhukuma": {
+"r": "Ibn ʿAbbas",
+"n": "Kinder durch das Gedenken an Allah schützen.",
+"w": "Zum Schutz der Kinder"
+},
+"h-khattaun": {
+"r": "Anas ibn Malik",
+"n": "Fehler zu machen gehört zur menschlichen Natur; die Vortrefflichkeit liegt in der schnellen Umkehr."
+},
+"h-farah-tawba": {
+"r": "Anas ibn Malik",
+"n": "Allah nimmt deine Reue nicht nur an; Er freut sich darüber – ein Bild, das die Verzweiflung über die Sünde bricht."
+},
+"h-yabsut-yadah": {
+"r": "Abu Musa al-Aschʿari",
+"n": "Die Tür der Reue steht zu jeder Stunde offen."
+},
+"h-ma-daawtani": {
+"r": "Anas ibn Malik",
+"n": "Keine Sünde ist größer als Allahs Vergebung für den, der Ihn anruft und auf Ihn hofft."
+},
+"h-sayyid-istighfar": {
+"r": "Schaddad ibn Aus",
+"n": "Wer es am Tag mit Überzeugung spricht und an diesem Tag stirbt, gehört zu den Leuten des Paradieses.",
+"w": "Morgens, abends und nach einer Sünde"
+},
+"h-atbi-sayyia": {
+"r": "Abu Dharr und Muʿadh ibn Dschabal",
+"n": "Eine praktische Methode: Warte nicht auf Vollkommenheit; lass jeder schlechten Tat eine gute folgen."
+},
+"h-qatil-mia": {
+"r": "Abu Saʿid al-Chudri",
+"n": "Keine Sünde verschließt die Tür der Reue, und die Umgebung zu wechseln ist ein wesentlicher Teil der Veränderung."
+},
+"h-waswasa-sarih": {
+"r": "Abu Huraira",
+"n": "Die Einflüsterungen zu hassen und ungeheuerlich zu finden ist ein Zeichen des Glaubens, nicht des Unglaubens."
+},
+"h-tajawaz": {
+"r": "Abu Huraira",
+"n": "Gedanken, die ohne Tat oder Wort durch den Kopf gehen, rechnet Allah dir nicht an."
+},
+"h-waswasa-intahi": {
+"r": "Abu Huraira",
+"n": "Das Heilmittel gegen Einflüsterungen: Zuflucht suchen und dann aufhören, dem Gedanken zu folgen – nicht mit ihm streiten."
+},
+"h-muqallib": {
+"r": "Anas ibn Malik",
+"n": "Selbst der Prophet ﷺ bat um Standhaftigkeit; das Schwanken des Herzens ist natürlich, und das Bittgebet ist seine Heilung.",
+"w": "Immer, und wenn der Glaube schwach scheint"
+},
+"h-ahdini": {
+"r": "ʿAli ibn Abi Talib",
+"n": "Ein kurzes, umfassendes Bittgebet für jede Entscheidung und Aufgabe.",
+"w": "Vor Entscheidungen und Aufgaben"
+},
+"h-taqwaha": {
+"r": "Zaid ibn Arqam",
+"n": "Die Läuterung der Seele durch das Suchen von Allahs Hilfe, nicht durch eigene Kraft allein.",
+"w": "Zur Läuterung der Seele"
+},
+"h-kfini-halal": {
+"r": "ʿAli ibn Abi Talib",
+"n": "Der Prophet ﷺ lehrte es einen Mann, der nicht zahlen konnte, was er schuldete, und sagte: Selbst wenn du eine Schuld wie ein Berg hättest, würde Allah sie für dich begleichen.",
+"w": "Zur Tilgung von Schulden und für weitere Versorgung"
+},
+"h-la-sahl": {
+"r": "Anas ibn Malik",
+"n": "Ein Bittgebet, das Schwierige leicht zu machen: Prüfungen und schwere Aufgaben.",
+"w": "Vor einer Prüfung oder einer schweren Aufgabe"
+},
+"h-zawal-nima": {
+"r": "ʿAbdullah ibn ʿUmar",
+"n": "Zuflucht suchen, um die Gaben zu bewahren, die du hast.",
+"w": "Wenn man fürchtet, eine Gabe zu verlieren"
+},
+"h-istijaba-ajal": {
+"r": "Abu Huraira",
+"n": "Ungeduld und das Aufgeben des Bittgebets sind die größten Hindernisse für die Erhörung."
+},
+"h-nuzul": {
+"r": "Abu Huraira",
+"n": "Eine tägliche offene Begegnung mit Allah im letzten Teil der Nacht."
+},
+"h-sujud": {
+"r": "Abu Huraira",
+"n": "Die Niederwerfung ist der nächste Augenblick, also lege deine Sorgen in sie."
+},
+"h-hazabahu": {
+"r": "Hudhaifa ibn al-Yaman",
+"n": "Das Gebet ist die erste Zuflucht, zu der sich der Gläubige wendet, wenn etwas Wichtiges geschieht."
+},
+"h-arihna": {
+"r": "Ein Mann aus Chuzaʿa",
+"n": "Das Gebet ist Ruhe von der Müdigkeit, keine Müdigkeit, von der man sich ausruhen müsste."
+},
+"h-din-yusr": {
+"r": "Abu Huraira",
+"n": "Zu viel Härte gegen dich selbst endet im Aufgeben; „strebt nach dem Richtigen, und wenn ihr es nicht erreicht, kommt ihm nahe“."
+},
+"h-adwamuha": {
+"r": "ʿAischa",
+"n": "Wenig beständig zu tun ist nützlicher als vorübergehende Begeisterung für viel – der Grundsatz des Aufbaus von Gewohnheiten."
+},
+"h-haqq-nafs": {
+"r": "Abu Dschuhaifa (Salman sagte es zu Abu ad-Darda, und der Prophet ﷺ bestätigte es)",
+"n": "Gleichgewicht zwischen Gottesdienst, sich selbst, Familie und Arbeit."
+},
+"h-nimatan": {
+"r": "Ibn ʿAbbas",
+"n": "Die meisten Menschen verlieren dabei, wie sie ihre Gesundheit und freie Zeit einsetzen."
+},
+"h-ightanim": {
+"r": "Ibn ʿAbbas",
+"n": "Ein Lebensplan in Kürze: Jede gegenwärtige Gabe ist eine Gelegenheit, bevor sie sich ändert."
+},
+"h-muamin-qawi": {
+"r": "Abu Huraira",
+"n": "Eine vollständige Methode: Eifer + Hilfe suchen + keine Hilflosigkeit vor dem Ereignis, und Zufriedenheit und das Lassen von „Hätte ich doch“ danach."
+},
+"h-ihfadh": {
+"r": "Ibn ʿAbbas",
+"n": "In der Überlieferung von Ahmad: „Wisse, dass der Sieg mit der Geduld kommt, die Erleichterung mit der Bedrängnis und mit der Erschwernis die Erleichterung.“ Eine Wurzelheilung für die Furcht vor den Menschen."
+},
+"h-yassiru": {
+"r": "Anas ibn Malik",
+"n": "Eine Regel für Erziehung, Führung und den Aufruf zum Guten."
+},
+"h-ihsan": {
+"r": "Schaddad ibn Aus",
+"n": "Vortrefflichkeit ist in jeder Tat gefordert, auch in den schwersten Situationen."
+},
+"h-makarim": {
+"r": "Abu Huraira",
+"n": "Guter Charakter ist das Ziel der Botschaft, nicht ihr Rand."
+},
+"h-ahsanukum-khuluqan": {
+"r": "Dschabir ibn ʿAbdullah",
+"n": "Guter Charakter ist der Weg, dem Propheten ﷺ im Jenseits nahe zu sein."
+},
+"h-kibr": {
+"r": "ʿAbdullah ibn Masʿud",
+"n": "Eine genaue Definition von Hochmut: die Wahrheit zurückweisen und auf die Menschen herabsehen; mit gutem Aussehen hat er nichts zu tun."
+},
+"h-tawadau": {
+"r": "ʿIyad ibn Himar",
+"n": "Demut verhindert zweierlei: Prahlerei und Übergriffe."
+},
+"h-nasiha": {
+"r": "Tamim ad-Dari",
+"n": "Aufrichtiger Rat bedeutet, dem Beratenen Gutes zu wollen, und er wird sanft und unter vier Augen gegeben."
+},
+"h-munkar": {
+"r": "Abu Saʿid al-Chudri",
+"n": "Stufen des Widerstands gegen das Unrechte nach Vermögen, mit der Sorge, dass der Widerstand nicht zu größerem Unrecht führt."
+},
+"h-sabaa-yuzilluhum": {
+"r": "Abu Huraira",
+"n": "Der Begierde auf dem Höhepunkt der Versuchung zu widerstehen erhebt einen Menschen in den Schatten des Throns."
+},
+"h-man-taraka": {
+"r": "Ein Mann aus der Wüste, vom Propheten ﷺ",
+"n": "Etwas Verbotenes oder eine verbotene Beziehung aufzugeben ist kein Verlust: Allahs Ersatz ist größer."
+},
+"h-man-la-yarham": {
+"r": "Abu Huraira und Dscharir",
+"n": "Barmherzigkeit wird durch Barmherzigkeit erworben."
+},
+"h-hayaa": {
+"r": "ʿImran ibn Husain",
+"n": "Schamhaftigkeit ist eine Eigenschaft, die ihren Träger schützt, und bedeutet keine Scheu, die von der Wahrheit abhält."
+}
+}
+}

@@ -20,10 +20,11 @@
 <script>
 /* تطبيق اللغة والوضع وحجم الخط قبل الرسم لتجنب الوميض */
 (function(){try{var p=JSON.parse(localStorage.getItem("rifqa.prefs")||"{}"),d=document.documentElement;
-if(/^(en|nl|es|pt|fr|id|tr)$/.test(p.lang)){d.setAttribute("lang",p.lang);d.setAttribute("dir","ltr");}
-else if(p.lang==="ur"){d.setAttribute("lang","ur");}   /* الأردية: من اليمين لليسار مثل العربية */
+if(/^(en|nl|es|pt|fr|id|tr|de|ms|bn)$/.test(p.lang)){d.setAttribute("lang",p.lang);d.setAttribute("dir","ltr");}
+else if(p.lang==="ur"||p.lang==="fa"){d.setAttribute("lang",p.lang);}   /* الأردية والفارسية: من اليمين لليسار مثل العربية */
 var t=p.theme||"dark";if(t!=="auto")d.setAttribute("data-theme",t);   /* الوضع الداكن افتراضي */
-if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
+if(p.fs)d.style.setProperty("--fs",p.fs);
+if(p.lang!=="ur"&&p.lang!=="fa"&&p.ff!=="original")d.style.setProperty("--font-ui",{tahoma:"'RF Tahoma'",arial:"'RF Arial'",times:"'RF Times'"}[p.ff]||"'Andalus','RF Andalus'");}catch(e){}})();
 </script>
 </head>
 <body>
@@ -156,6 +157,10 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
     <button data-setlang="ur" lang="ur" dir="rtl" role="menuitem">اردو</button>
     <button data-setlang="id" lang="id" role="menuitem">Bahasa Indonesia</button>
     <button data-setlang="tr" lang="tr" role="menuitem">Türkçe</button>
+    <button data-setlang="de" lang="de" role="menuitem">Deutsch</button>
+    <button data-setlang="ms" lang="ms" role="menuitem">Bahasa Melayu</button>
+    <button data-setlang="fa" lang="fa" dir="rtl" role="menuitem">فارسی</button>
+    <button data-setlang="bn" lang="bn" role="menuitem">বাংলা</button>
   </div>
 
   <div class="detail-panel" id="detailPanel" role="dialog" aria-modal="true"></div>
@@ -182,11 +187,7 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
       <div class="set-body">
 
         <section class="set-sec">
-          <h4><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg><span>اللغة والعرض</span></h4>
-          <div class="set-group">
-            <label>اللغة / Language / Taal / Idioma</label>
-            <div class="seg" id="segLang"><button data-v="ar" lang="ar">العربية</button><button data-v="en" lang="en">English</button><button data-v="nl" lang="nl">Nederlands</button><button data-v="es" lang="es">Español</button><button data-v="pt" lang="pt">Português</button><button data-v="fr" lang="fr">Français</button><button data-v="ur" lang="ur">اردو</button><button data-v="id" lang="id">Indonesia</button><button data-v="tr" lang="tr">Türkçe</button></div>
-          </div>
+          <h4><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg><span>العرض</span></h4>
           <div class="set-group">
             <label>المظهر</label>
             <div class="seg" id="segTheme"><button data-v="auto">تلقائي</button><button data-v="light">فاتح</button><button data-v="dark">داكن</button></div>
@@ -194,6 +195,11 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
           <div class="set-group">
             <label>حجم الخط</label>
             <div class="seg" id="segFs"><button data-v="0.93">صغير</button><button data-v="1">عادي</button><button data-v="1.1">كبير</button><button data-v="1.2">أكبر</button></div>
+          </div>
+          <div class="set-group" id="ffGroup">
+            <label>نوع الخط</label>
+            <div class="seg" id="segFf"><button data-v="andalus" style="font-family:'Andalus','RF Andalus',sans-serif">Andalus</button><button data-v="tahoma" style="font-family:'RF Tahoma',sans-serif">Tahoma</button><button data-v="arial" style="font-family:'RF Arial',sans-serif">Arial</button><button data-v="times" style="font-family:'RF Times',serif">Times New Roman</button><button data-v="original" style="font-family:'Tajawal',sans-serif">الخط الأصلي</button></div>
+            <div class="set-hint">يُطبَّق على كل النصوص عدا الآيات القرآنية، فتبقى بخطها.</div>
           </div>
           <div class="set-group" id="tkGroup">
             <label>تشكيل النصوص الشارحة</label>
@@ -267,14 +273,17 @@ if(p.fs)d.style.setProperty("--fs",p.fs);}catch(e){}})();
 <script src="js/data-quran.js"></script>
 <script src="js/data-hadith.js"></script>
 <script src="js/data-themes.js"></script>
+<script src="js/data-life.js"></script>
+<script src="js/data-reading.js"></script>
 <script src="js/data-tashkeel.js"></script>
 <script src="js/data-tashkeel-prose.js"></script>
 <!-- i18n-data: ملف ترجمة اللغة الحالية فقط (bundle-html.js يضمّن كل اللغات ويشغّل الحالية) -->
-<script>(function(){var l=document.documentElement.lang;if(/^(en|nl|es|pt|fr|ur|id|tr)$/.test(l))document.write('<script src="js/data-'+l+'.js"><\/script>');})();</script>
+<script>(function(){var l=document.documentElement.lang;if(/^(en|nl|es|pt|fr|ur|id|tr|de|ms|fa|bn)$/.test(l))document.write('<script src="js/data-'+l+'.js"><\/script>');})();</script>
 <!-- /i18n-data -->
 <script src="js/i18n.js"></script>
 <script src="js/icons.js"></script>
 <script src="js/rag.js"></script>
+<script src="js/reading.js"></script>
 <script src="js/tts.js"></script>
 <script src="js/tashkeel-view.js"></script>
 <script src="js/ai.js"></script>

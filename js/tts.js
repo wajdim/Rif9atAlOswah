@@ -14,7 +14,7 @@
 var TTS = (function(){
   "use strict";
   var NATIVE = !!(window.AndroidBridge && typeof window.AndroidBridge.ttsSpeak === "function");
-  var LANG = (window.I18N && I18N.lang) || "ar";       // لغة النطق = لغة الواجهة (ar | en | nl | es | pt | fr | ur | id | tr)
+  var LANG = (window.I18N && I18N.lang) || "ar";       // لغة النطق = لغة الواجهة (ar | en | nl | es | pt | fr | ur | id | tr | de | ms | fa | bn)
   var EN = LANG !== "ar";
   var LANG_RE = new RegExp("^" + LANG + "([-_]|$)", "i");
   var SAY = {   // ما يُنطق بدل الرموز في كل لغة
@@ -26,7 +26,11 @@ var TTS = (function(){
     fr: {pbuh:", que la paix soit sur lui, ", to:"$1 à $2", num:" numéro $1 ", tag:"fr-FR"},
     ur: {pbuh:"، صلی اللہ علیہ وسلم، ", to:"$1 تا $2", num:" نمبر $1 ", tag:"ur-PK"},
     id: {pbuh:", shallallahu 'alaihi wa sallam, ", to:"$1 sampai $2", num:" nomor $1 ", tag:"id-ID"},
-    tr: {pbuh:", sallallahu aleyhi ve sellem, ", to:"$1 ile $2", num:" $1 numara ", tag:"tr-TR"}
+    tr: {pbuh:", sallallahu aleyhi ve sellem, ", to:"$1 ile $2", num:" $1 numara ", tag:"tr-TR"},
+    de: {pbuh:", Allah segne ihn und schenke ihm Frieden, ", to:"$1 bis $2", num:" Nummer $1 ", tag:"de-DE"},
+    ms: {pbuh:", sallallahu alaihi wasallam, ", to:"$1 hingga $2", num:" nombor $1 ", tag:"ms-MY"},
+    fa: {pbuh:"، صلی الله علیه و آله و سلم، ", to:"$1 تا $2", num:" شماره $1 ", tag:"fa-IR"},
+    bn: {pbuh:", সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম, ", to:"$1 থেকে $2", num:" নম্বর $1 ", tag:"bn-BD"}
   }[LANG];
   var synth = window.speechSynthesis || null;
   var MAX_CHUNK = 220;
@@ -340,7 +344,11 @@ var TTS = (function(){
         fr: ["Le Messager d'Allah, que la paix soit sur lui, a dit : Les actions ne valent que par les intentions, et chacun n'aura que ce qu'il a eu l'intention de faire.", "Voici la voix du narrateur : elle lit les titres et les explications, et la seconde voix répond avec les versets et les hadiths."],
         ur: ["رسول اللہ صلی اللہ علیہ وسلم نے فرمایا: اعمال کا دارومدار نیتوں پر ہے، اور ہر شخص کو وہی ملے گا جس کی اس نے نیت کی۔", "یہ راوی کی آواز ہے: یہ عنوانات اور وضاحتیں پڑھتی ہے، اور دوسری آواز آیات اور احادیث سناتی ہے۔"],
         id: ["Rasulullah shallallahu 'alaihi wa sallam bersabda: Sesungguhnya amal itu tergantung niatnya, dan setiap orang hanya mendapatkan apa yang ia niatkan.", "Ini adalah suara narator: membacakan judul dan penjelasan, dan suara kedua membacakan ayat dan hadits."],
-        tr: ["Allah Resulü sallallahu aleyhi ve sellem şöyle buyurdu: Ameller ancak niyetlere göredir ve herkese ancak niyet ettiği şey vardır.", "Bu anlatıcının sesidir: başlıkları ve açıklamaları okur, ikinci ses de ayetleri ve hadisleri okur."]
+        tr: ["Allah Resulü sallallahu aleyhi ve sellem şöyle buyurdu: Ameller ancak niyetlere göredir ve herkese ancak niyet ettiği şey vardır.", "Bu anlatıcının sesidir: başlıkları ve açıklamaları okur, ikinci ses de ayetleri ve hadisleri okur."],
+        de: ["Der Gesandte Allahs, Allah segne ihn und schenke ihm Frieden, sagte: Die Taten werden nur nach den Absichten beurteilt, und jedem Menschen steht nur das zu, was er beabsichtigt hat.", "Das ist die Stimme des Erzählers: Sie liest die Überschriften und Erklärungen, und die zweite Stimme antwortet mit den Versen und Hadithen."],
+        ms: ["Rasulullah sallallahu alaihi wasallam bersabda: Sesungguhnya setiap amalan itu bergantung kepada niat, dan setiap orang hanya mendapat apa yang diniatkannya.", "Ini suara pencerita: ia membaca tajuk dan penerangan, dan suara kedua membaca ayat dan hadis."],
+        fa: ["رسول خدا صلی الله علیه و آله و سلم فرمود: اعمال تنها به نیت‌هاست، و برای هر کس تنها همان است که نیت کرده است.", "این صدای راوی است: عنوان‌ها و توضیح‌ها را می‌خواند، و صدای دوم آیات و احادیث را می‌خواند."],
+        bn: ["রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেছেন: সকল কাজ নিয়তের উপর নির্ভরশীল, আর প্রত্যেক মানুষ তা-ই পাবে যার সে নিয়ত করেছে।", "এটি বর্ণনাকারীর কণ্ঠ: এটি শিরোনাম ও ব্যাখ্যা পড়ে, আর দ্বিতীয় কণ্ঠ আয়াত ও হাদিস পড়ে।"]
       }[LANG];
       speakText(my, P[role === 1 ? 0 : 1], role);
     },

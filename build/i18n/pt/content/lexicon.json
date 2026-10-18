@@ -577,6 +577,373 @@
     "acabou",
     "aconteceu"
    ]
+  },
+  "analysis": {
+   "absolute": [
+    "ninguém",
+    "toda a gente me odeia",
+    "todos me odeiam",
+    "todos estão contra mim",
+    "nem uma vez",
+    "nada funciona",
+    "nunca mais"
+   ],
+   "absoluteSoft": [
+    "nunca",
+    "sempre",
+    "cada vez",
+    "toda a gente",
+    "todo mundo"
+   ],
+   "label": [
+    "sou um fracasso",
+    "sou uma fracassada",
+    "sou burro",
+    "sou burra",
+    "sou estúpido",
+    "sou estúpida",
+    "sou um inútil",
+    "sou uma inútil",
+    "não valho nada",
+    "sou um fardo",
+    "sou mau",
+    "sou má",
+    "sou uma má",
+    "sou um mau",
+    "não sou nada",
+    "não sou suficiente"
+   ],
+   "catastrophe": [
+    "a minha vida acabou",
+    "minha vida acabou",
+    "a minha vida está arruinada",
+    "está tudo perdido",
+    "acabou tudo",
+    "o meu futuro está arruinado",
+    "catástrofe",
+    "desastre",
+    "impossível",
+    "nunca vai mudar",
+    "nada vai mudar",
+    "não há saída"
+   ],
+   "mindread": [
+    "me odeia",
+    "me odeiam",
+    "odeia-me",
+    "odeiam-me",
+    "pensa que sou",
+    "pensam que sou",
+    "me despreza",
+    "despreza-me",
+    "gozam comigo",
+    "riem-se de mim",
+    "me julgam",
+    "julgam-me",
+    "faz de propósito"
+   ],
+   "should": [
+    "devia ser",
+    "devia ter",
+    "deveria ter",
+    "tenho de ser perfeit",
+    "tenho que ser perfeit"
+   ],
+   "compare": [
+    "melhor do que eu",
+    "melhor que eu",
+    "todos têm",
+    "todas as minhas amigas",
+    "todos os meus amigos",
+    "menos do que os outros",
+    "comparado com os outros"
+   ],
+   "selfblame": [
+    "é tudo culpa minha",
+    "se eu tivesse",
+    "quem me dera não ter",
+    "não devia ter"
+   ],
+   "faith": [
+    "alhamdulillah",
+    "graças a deus",
+    "graças a allah",
+    "rezei",
+    "rezo",
+    "inshallah",
+    "in sha allah",
+    "ó allah",
+    "ya allah",
+    "fiz dua",
+    "istikhara",
+    "astaghfirullah"
+   ],
+   "effort": [
+    "tentei",
+    "estou a tentar",
+    "estou tentando",
+    "tento",
+    "tentámos",
+    "tentamos",
+    "fiz o meu melhor",
+    "esforço-me"
+   ],
+   "patience": [
+    "tive paciência",
+    "fui paciente",
+    "aguentei",
+    "suportei",
+    "tenho aguentado"
+   ],
+   "sleep": [
+    "não durmo",
+    "durmo mal",
+    "não consigo dormir",
+    "insónia",
+    "insônia",
+    "pesadelos",
+    "não dormi"
+   ],
+   "body": [
+    "dor de cabeça",
+    "dores de cabeça",
+    "palpitações",
+    "coração acelerado",
+    "aperto no peito",
+    "sem apetite",
+    "perdi o apetite",
+    "não como",
+    "tremo",
+    "tonturas",
+    "dor de estômago",
+    "dor de barriga"
+   ]
+  },
+  "reading": {
+   "factors": {
+    "comfort": [
+     "sinto-me bem com ele",
+     "sinto-me bem com ela",
+     "sinto-me à vontade com",
+     "sinto-me em paz com",
+     "sinto-me segura com",
+     "sinto-me seguro com",
+     "me sinto bem com",
+     "gosto dele",
+     "gosto dela"
+    ],
+    "character": [
+     "religioso",
+     "religiosa",
+     "praticante",
+     "bom caráter",
+     "respeitador",
+     "respeitadora",
+     "educado",
+     "educada",
+     "ele reza",
+     "ela reza",
+     "piedoso",
+     "piedosa"
+    ],
+    "opportunity": [
+     "oferta de emprego",
+     "salário melhor",
+     "salário mais alto",
+     "promoção",
+     "bolsa",
+     "oportunidade",
+     "emprego melhor",
+     "fui aceite",
+     "fui aceito"
+    ],
+    "history": [
+     "anos juntos",
+     "os nossos filhos",
+     "nossos filhos",
+     "longa história",
+     "temos filhos"
+    ],
+    "money": [
+     "rendimento limitado",
+     "salário baixo",
+     "é pobre",
+     "pouco dinheiro",
+     "financeiramente",
+     "sem emprego",
+     "desempregado",
+     "dívidas"
+    ],
+    "family": [
+     "os meus pais recusam",
+     "meus pais recusam",
+     "a minha família recusa",
+     "a minha família está contra",
+     "os meus pais estão contra",
+     "os meus pais não concordam",
+     "os meus pais hesitam",
+     "o meu pai recusa",
+     "a minha mãe recusa"
+    ],
+    "distance": [
+     "outro país",
+     "outra cidade",
+     "longe da minha família",
+     "longe da minha mãe",
+     "longe dos meus pais",
+     "ir para o estrangeiro",
+     "desde que me mudei",
+     "desde a mudança"
+    ],
+    "age": [
+     "a minha idade",
+     "estou a ficar velho",
+     "estou a ficar velha",
+     "velho demais",
+     "velha demais",
+     "o tempo passa"
+    ],
+    "people": [
+     "o que as pessoas vão dizer",
+     "o que vão dizer",
+     "o que os outros pensam",
+     "a sociedade",
+     "a minha reputação"
+    ],
+    "past": [
+     "experiência anterior",
+     "da última vez",
+     "o meu primeiro casamento",
+     "divorciado",
+     "divorciada",
+     "já fui magoado",
+     "já fui magoada"
+    ],
+    "doubts": [
+     "mau feitio",
+     "mente",
+     "forreta",
+     "avarento",
+     "ciumento",
+     "ciumenta",
+     "controlador",
+     "não reza"
+    ],
+    "unknown": [
+     "não o conheço bem",
+     "não a conheço bem",
+     "mal o conheço",
+     "mal a conheço",
+     "só o vi uma vez"
+    ],
+    "duties": [
+     "responsabilidades",
+     "tem filhos",
+     "viúvo",
+     "viúva"
+    ],
+    "regret": [
+     "arrepender-me",
+     "vou arrepender-me",
+     "medo de perder",
+     "perdê-lo",
+     "perdê-la"
+    ],
+    "pressure": [
+     "pressionam-me",
+     "pressiona-me",
+     "me pressionam",
+     "obrigado",
+     "obrigada",
+     "obrigam-me",
+     "insistem",
+     "apressam-me"
+    ],
+    "desire": [
+     "quero-o",
+     "quero-a",
+     "quero casar com",
+     "o meu coração está com",
+     "sonho com"
+    ],
+    "power": [
+     "o meu chefe",
+     "a minha chefe",
+     "meu chefe",
+     "o meu responsável",
+     "o meu supervisor",
+     "o meu empregador",
+     "o diretor"
+    ],
+    "livelihood": [
+     "medo de perder o emprego",
+     "medo de ser despedido",
+     "medo de ser despedida",
+     "não consigo responder",
+     "não me atrevo a responder"
+    ],
+    "harm": [
+     "bate-me",
+     "me bate",
+     "insulta-me",
+     "humilha-me",
+     "maltrata-me",
+     "violento",
+     "violenta",
+     "faz-me mal"
+    ]
+   },
+   "options": {
+    "accept_refuse": [
+     "aceitar",
+     "recusar",
+     "dizer que sim",
+     "dizer que não",
+     "se aceitar",
+     "se recusar"
+    ],
+    "stay_leave": [
+     "ficar com ele",
+     "ficar com ela",
+     "deixá-lo",
+     "deixá-la",
+     "divorciar-me",
+     "separar-me",
+     "acabar"
+    ],
+    "forgive_cut": [
+     "perdoar",
+     "cortar relações",
+     "cortar com",
+     "deixar de lhe falar",
+     "afastar-me de"
+    ],
+    "speak_silent": [
+     "confrontá-lo",
+     "confrontá-la",
+     "dizer-lhe",
+     "falar com ele",
+     "falar com ela",
+     "calar-me",
+     "não dizer nada"
+    ],
+    "move_stay": [
+     "ir para o estrangeiro",
+     "viajar",
+     "emigrar",
+     "mudar-me",
+     "voltar para o meu país",
+     "ficar aqui"
+    ],
+    "continue_quit": [
+     "despedir-me",
+     "deixar o emprego",
+     "deixar os estudos",
+     "mudar de curso",
+     "continuar os estudos",
+     "continuar"
+    ]
+   }
   }
  }
 }

@@ -5,6 +5,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"; DIST="$ROOT/dist"; mkdir -p "$DIST"
 echo "== 0) التشكيل";      node "$ROOT/build/tashkeel/build-tashkeel.js"
 echo "== 1) اختبار المحرك"; node "$ROOT/build/tests/test-engine.js" >/dev/null && echo "ok"
+echo "== 1ب) جودة الفهم والسلامة"; node "$ROOT/build/tests/test-understanding.js"
 echo "== 2) HTML مستقل";   node "$ROOT/build/bundle-html.js" "$DIST/RifqaAlUswa.html"
 echo "== 3) حزمة PWA للاستضافة"
 rm -f "$DIST/RifqaAlUswa-web.zip"

@@ -1,0 +1,931 @@
+{
+ "lexicon": {
+  "emotion": {
+   "anger": {
+    "label": "Wut",
+    "words": [
+     "wut",
+     "wütend",
+     "zornig",
+     "zorn",
+     "ärger",
+     "verärgert",
+     "sauer",
+     "aufgebracht",
+     "hasse",
+     "hass",
+     "genervt",
+     "rasend",
+     "platzt mir der kragen",
+     "kocht in mir"
+    ]
+   },
+   "sadness": {
+    "label": "Traurigkeit",
+    "words": [
+     "traurig",
+     "trauer",
+     "traurigkeit",
+     "weine",
+     "geweint",
+     "weinen",
+     "verletzt",
+     "gekränkt",
+     "gebrochenes herz",
+     "herz ist gebrochen",
+     "depressiv",
+     "deprimiert",
+     "niedergeschlagen",
+     "unglücklich",
+     "bedrückt"
+    ]
+   },
+   "fear": {
+    "label": "Angst und Sorge",
+    "words": [
+     "angst",
+     "habe angst",
+     "ängstlich",
+     "furcht",
+     "fürchte",
+     "sorge",
+     "sorgen",
+     "besorgt",
+     "panik",
+     "panisch",
+     "stress",
+     "gestresst",
+     "nervös",
+     "unruhig",
+     "beunruhigt"
+    ]
+   },
+   "guilt": {
+    "label": "Schuld und Reue",
+    "words": [
+     "schuldig",
+     "schuldgefühle",
+     "schuldgefühl",
+     "bereue",
+     "reue",
+     "gewissen",
+     "meine schuld",
+     "schäme mich für mich",
+     "tut mir so leid"
+    ]
+   },
+   "shame": {
+    "label": "Scham und Demütigung",
+    "words": [
+     "gedemütigt",
+     "blamiert",
+     "beschämt",
+     "schäme mich",
+     "beleidigt",
+     "erniedrigt",
+     "bloßgestellt",
+     "herabgesetzt",
+     "lächerlich gemacht"
+    ]
+   },
+   "loneliness": {
+    "label": "Einsamkeit",
+    "words": [
+     "einsam",
+     "einsamkeit",
+     "allein",
+     "niemand",
+     "keiner da",
+     "ausgeschlossen",
+     "ignoriert",
+     "isoliert",
+     "unsichtbar"
+    ]
+   },
+   "despair": {
+    "label": "Verzweiflung",
+    "words": [
+     "verzweifelt",
+     "verzweiflung",
+     "hoffnungslos",
+     "keine hoffnung",
+     "aufgegeben",
+     "gebe auf",
+     "sinnlos",
+     "hat keinen sinn",
+     "versager",
+     "wertlos",
+     "nutzlos",
+     "bringt alles nichts",
+     "am ende"
+    ]
+   },
+   "confusion": {
+    "label": "Verwirrung",
+    "words": [
+     "unentschlossen",
+     "verwirrt",
+     "hin und hergerissen",
+     "weiß nicht",
+     "weiss nicht",
+     "ratlos",
+     "zwiespalt",
+     "durcheinander"
+    ]
+   },
+   "exhaustion": {
+    "label": "Erschöpfung",
+    "words": [
+     "müde",
+     "erschöpft",
+     "ausgelaugt",
+     "ausgebrannt",
+     "burnout",
+     "keine kraft",
+     "kraftlos",
+     "am limit",
+     "fertig"
+    ]
+   },
+   "jealousy": {
+    "label": "Eifersucht",
+    "words": [
+     "eifersüchtig",
+     "eifersucht",
+     "neidisch",
+     "neid",
+     "missgönne"
+    ]
+   },
+   "betrayal": {
+    "label": "Enttäuschung",
+    "words": [
+     "verrat",
+     "verraten",
+     "betrogen",
+     "hintergangen",
+     "belogen",
+     "enttäuscht",
+     "enttäuschung",
+     "vertrauen missbraucht",
+     "fallen gelassen",
+     "im stich gelassen"
+    ]
+   },
+   "love": {
+    "label": "Bindung und Liebe",
+    "words": [
+     "liebe",
+     "lieben",
+     "vermisse",
+     "sehnsucht",
+     "hänge an",
+     "verliebt",
+     "zuneigung"
+    ]
+   },
+   "joy": {
+    "label": "Freude und Dankbarkeit",
+    "words": [
+     "glücklich",
+     "froh",
+     "freue mich",
+     "dankbar",
+     "alhamdulillah",
+     "erleichtert",
+     "geschafft",
+     "zufrieden"
+    ]
+   }
+  },
+  "relation": {
+   "spouse": {
+    "label": "deinem Ehepartner",
+    "words": [
+     "mein mann",
+     "meine frau",
+     "meinem mann",
+     "meiner frau",
+     "meinen mann",
+     "ehemann",
+     "ehefrau",
+     "ehepartner",
+     "partner",
+     "partnerin"
+    ]
+   },
+   "fiance": {
+    "label": "deinem Verlobten",
+    "words": [
+     "verlobter",
+     "verlobte",
+     "verlobten",
+     "verlobung"
+    ]
+   },
+   "parent": {
+    "label": "deinen Eltern",
+    "words": [
+     "meine mutter",
+     "mein vater",
+     "meiner mutter",
+     "meinem vater",
+     "meinen vater",
+     "mama",
+     "papa",
+     "eltern",
+     "meine eltern"
+    ]
+   },
+   "child": {
+    "label": "deinen Kindern",
+    "words": [
+     "mein sohn",
+     "meine tochter",
+     "meinem sohn",
+     "meiner tochter",
+     "meinen sohn",
+     "mein kind",
+     "meine kinder",
+     "meinen kindern"
+    ]
+   },
+   "sibling": {
+    "label": "deinen Geschwistern",
+    "words": [
+     "mein bruder",
+     "meine schwester",
+     "meinem bruder",
+     "meiner schwester",
+     "meinen bruder",
+     "geschwister",
+     "meine brüder",
+     "meine schwestern"
+    ]
+   },
+   "relative": {
+    "label": "deinen Verwandten",
+    "words": [
+     "onkel",
+     "tante",
+     "schwiegermutter",
+     "schwiegervater",
+     "schwiegereltern",
+     "cousin",
+     "cousine",
+     "verwandte",
+     "verwandten",
+     "schwager",
+     "schwägerin"
+    ]
+   },
+   "boss": {
+    "label": "deinem Vorgesetzten",
+    "words": [
+     "chef",
+     "chefin",
+     "vorgesetzter",
+     "vorgesetzte",
+     "vorgesetzten",
+     "abteilungsleiter",
+     "arbeitgeber",
+     "manager"
+    ]
+   },
+   "colleague": {
+    "label": "deinen Kollegen",
+    "words": [
+     "kollege",
+     "kollegin",
+     "kollegen",
+     "kolleginnen",
+     "arbeitskollege"
+    ]
+   },
+   "friend": {
+    "label": "deinen Freunden",
+    "words": [
+     "mein freund",
+     "meine freundin",
+     "meinem freund",
+     "meiner freundin",
+     "freunde",
+     "freundinnen",
+     "beste freundin",
+     "bester freund",
+     "kumpel"
+    ]
+   },
+   "neighbor": {
+    "label": "deinen Nachbarn",
+    "words": [
+     "nachbar",
+     "nachbarin",
+     "nachbarn"
+    ]
+   },
+   "employee": {
+    "label": "denen, für die du verantwortlich bist",
+    "words": [
+     "mitarbeiter",
+     "mitarbeiterin",
+     "mein team",
+     "angestellte",
+     "angestellter",
+     "untergebene"
+    ]
+   },
+   "teacher": {
+    "label": "deinen Lehrern",
+    "words": [
+     "lehrer",
+     "lehrerin",
+     "professor",
+     "professorin",
+     "dozent",
+     "imam"
+    ]
+   },
+   "self": {
+    "label": "dir selbst",
+    "words": [
+     "mich selbst",
+     "mir selbst",
+     "mit mir selbst"
+    ]
+   }
+  },
+  "intensifiers": [
+   "sehr",
+   "so sehr",
+   "extrem",
+   "total",
+   "völlig",
+   "immer",
+   "jeden tag",
+   "seit jahren",
+   "seit monaten",
+   "halte es nicht mehr aus",
+   "kann nicht mehr",
+   "unerträglich",
+   "zu viel",
+   "mehr denn je",
+   "nie"
+  ],
+  "selfFault": [
+   "meine schuld",
+   "ich lag falsch",
+   "ich habe einen fehler gemacht",
+   "fehler gemacht",
+   "ich habe gelogen",
+   "habe gelogen",
+   "ich habe betrogen",
+   "ich habe ihn verletzt",
+   "ich habe sie verletzt",
+   "ich habe ihn beleidigt",
+   "ich habe sie beleidigt",
+   "ich habe geschlagen",
+   "ich habe geschrien",
+   "ich habe angeschrien",
+   "ich habe verraten",
+   "ich habe unrecht getan",
+   "ich möchte mich entschuldigen",
+   "ich habe gesündigt",
+   "ich bereue, was ich getan habe"
+  ],
+  "negators": [
+   "nicht",
+   "kein",
+   "keine",
+   "keinen",
+   "keinem",
+   "keiner",
+   "nie",
+   "niemals",
+   "ohne",
+   "kaum"
+  ],
+  "negatorsPost": [],
+  "need": {
+   "safety": [
+    "bedroht mich",
+    "hat mich bedroht",
+    "ich bin in gefahr",
+    "habe angst vor ihm",
+    "habe angst vor ihr",
+    "schlägt mich",
+    "ich will weg",
+    "ich will fliehen",
+    "nicht sicher"
+   ],
+   "decision": [
+    "soll ich",
+    "sollte ich",
+    "vergebe ich",
+    "soll ich gehen",
+    "soll ich bleiben",
+    "ob ich",
+    "kann mich nicht entscheiden",
+    "hin und hergerissen zwischen",
+    "wählen zwischen",
+    "welche soll ich",
+    "welchen soll ich",
+    "ich muss mich entscheiden",
+    "eine entscheidung treffen"
+   ],
+   "repair": [
+    "entschuldigen",
+    "wiedergutmachen",
+    "in ordnung bringen",
+    "reparieren",
+    "versöhnen",
+    "zurückgewinnen",
+    "bereuen",
+    "um verzeihung bitten"
+   ],
+   "howto": [
+    "wie kann ich",
+    "wie soll ich",
+    "wie mache ich",
+    "was soll ich tun",
+    "was kann ich tun",
+    "was tun",
+    "ein rat",
+    "hilf mir",
+    "helft mir",
+    "rat mir",
+    "welche schritte"
+   ],
+   "why": [
+    "warum ich",
+    "warum hat",
+    "warum ist",
+    "warum passiert",
+    "was ist die weisheit",
+    "welchen sinn",
+    "warum"
+   ],
+   "comfort": [
+    "niemand versteht",
+    "keiner versteht",
+    "niemand hört zu",
+    "ich brauche jemanden",
+    "ich muss reden",
+    "ich muss mir das von der seele schreiben",
+    "ich halte es nicht mehr aus",
+    "ich schaffe das nicht",
+    "überfordert"
+   ]
+  },
+  "time": {
+   "ongoing": [
+    "seit jahren",
+    "seit monaten",
+    "seit langem",
+    "seit langer zeit",
+    "jeden tag",
+    "jede nacht",
+    "immer",
+    "ständig",
+    "passiert immer wieder",
+    "immer wieder",
+    "andauernd"
+   ],
+   "future": [
+    "morgen",
+    "nächste woche",
+    "nächsten monat",
+    "bald",
+    "demnächst",
+    "ich habe angst, dass",
+    "ich fürchte, dass",
+    "was wenn",
+    "was ist wenn",
+    "prüfung",
+    "vorstellungsgespräch",
+    "wird passieren"
+   ],
+   "past": [
+    "gestern",
+    "letzte woche",
+    "letzten monat",
+    "letztes jahr",
+    "vor ein paar tagen",
+    "vor jahren",
+    "verstorben",
+    "gestorben",
+    "ist gestorben",
+    "vorbei",
+    "es ist passiert",
+    "hat sich scheiden lassen"
+   ]
+  },
+  "analysis": {
+   "absolute": [
+    "niemand",
+    "keiner",
+    "alle hassen mich",
+    "jeder hasst mich",
+    "alle sind gegen mich",
+    "kein einziges mal",
+    "nichts klappt",
+    "nichts funktioniert",
+    "nie jemand"
+   ],
+   "absoluteSoft": [
+    "nie",
+    "niemals",
+    "immer",
+    "jedes mal",
+    "alles",
+    "alle",
+    "jeder"
+   ],
+   "label": [
+    "ich bin ein versager",
+    "ich bin eine versagerin",
+    "ich bin dumm",
+    "ich bin nutzlos",
+    "ich bin wertlos",
+    "ich bin schlecht",
+    "ich bin nichts",
+    "ich bin eine last",
+    "ich bin erbärmlich",
+    "ich bin ein verlierer",
+    "nicht gut genug",
+    "schlechte mutter",
+    "schlechter vater"
+   ],
+   "catastrophe": [
+    "mein leben ist vorbei",
+    "mein leben ist ruiniert",
+    "hat mein leben ruiniert",
+    "alles ist ruiniert",
+    "es ist aus",
+    "alles ist verloren",
+    "meine zukunft ist ruiniert",
+    "katastrophe",
+    "unmöglich",
+    "wird sich nie ändern",
+    "wird nie besser",
+    "nichts wird sich ändern",
+    "kein ausweg",
+    "mein leben ist zerstört",
+    "alles ist zerstört",
+    "alles ist kaputt",
+    "mein leben ist kaputt",
+    "alles ist vorbei"
+   ],
+   "mindread": [
+    "hasst mich",
+    "sie denken, ich",
+    "er denkt, ich",
+    "sie denkt, ich",
+    "macht es absichtlich",
+    "sieht auf mich herab",
+    "alle denken",
+    "lachen über mich",
+    "verurteilen mich",
+    "halten mich für"
+   ],
+   "should": [
+    "ich sollte",
+    "ich hätte sollen",
+    "ich hätte müssen",
+    "ich muss perfekt sein",
+    "ich müsste",
+    "hätte ich doch"
+   ],
+   "compare": [
+    "besser als ich",
+    "alle anderen haben",
+    "alle anderen sind",
+    "alle meine freunde",
+    "schlechter als alle",
+    "weniger als andere",
+    "im vergleich zu anderen",
+    "wie alle anderen",
+    "alle sind verheiratet"
+   ],
+   "selfblame": [
+    "alles meine schuld",
+    "es ist alles meine schuld",
+    "alles ist meine schuld",
+    "wenn ich nur",
+    "hätte ich nie"
+   ],
+   "faith": [
+    "alhamdulillah",
+    "gott sei dank",
+    "gelobt sei allah",
+    "ich habe gebetet",
+    "ich bete",
+    "inshallah",
+    "in sha allah",
+    "o allah",
+    "ya allah",
+    "dua gemacht",
+    "istikhara",
+    "astaghfirullah"
+   ],
+   "effort": [
+    "ich habe es versucht",
+    "habe versucht",
+    "ich versuche",
+    "ich bemühe mich",
+    "wir haben es versucht",
+    "ich habe mein bestes gegeben",
+    "habe alles gegeben"
+   ],
+   "patience": [
+    "ich war geduldig",
+    "ich bin geduldig",
+    "ich habe ausgehalten",
+    "habe es ertragen",
+    "ertrage es",
+    "halte durch"
+   ],
+   "sleep": [
+    "kann nicht schlafen",
+    "schlaflos",
+    "schlafstörungen",
+    "schlafe nicht",
+    "kein schlaf",
+    "albträume",
+    "alpträume",
+    "kaum schlaf"
+   ],
+   "body": [
+    "kopfschmerzen",
+    "herzrasen",
+    "herzklopfen",
+    "engegefühl in der brust",
+    "brust ist eng",
+    "keinen appetit",
+    "appetitlos",
+    "kann nicht essen",
+    "zittere",
+    "schwindel",
+    "schwindelig",
+    "bauchschmerzen",
+    "magenschmerzen"
+   ]
+  },
+  "reading": {
+   "factors": {
+    "comfort": [
+     "fühle mich wohl mit ihm",
+     "fühle mich wohl mit ihr",
+     "fühle mich wohl bei ihm",
+     "fühle mich wohl bei ihr",
+     "fühle mich sicher bei ihm",
+     "fühle mich sicher bei ihr",
+     "ich mag ihn",
+     "ich mag sie",
+     "bin bei ihm ruhig",
+     "fühle mich geborgen"
+    ],
+    "character": [
+     "religiös",
+     "praktizierend",
+     "guter charakter",
+     "gute manieren",
+     "gutherzig",
+     "respektvoll",
+     "anständig",
+     "er betet",
+     "sie betet",
+     "gottesfürchtig",
+     "fromm"
+    ],
+    "opportunity": [
+     "jobangebot",
+     "stellenangebot",
+     "besseres gehalt",
+     "höheres gehalt",
+     "beförderung",
+     "stipendium",
+     "chance",
+     "gelegenheit",
+     "besserer job",
+     "wurde angenommen",
+     "zusage"
+    ],
+    "history": [
+     "jahre zusammen",
+     "unsere kinder",
+     "lange geschichte",
+     "wir haben kinder",
+     "seit jahren verheiratet"
+    ],
+    "money": [
+     "begrenztes einkommen",
+     "geringes einkommen",
+     "er ist arm",
+     "sie ist arm",
+     "wenig geld",
+     "finanziell",
+     "sein gehalt",
+     "kein job",
+     "arbeitslos",
+     "schulden",
+     "verschuldet",
+     "kann es mir nicht leisten",
+     "sein einkommen",
+     "ihr einkommen",
+     "verdient nicht viel"
+    ],
+    "family": [
+     "meine eltern lehnen",
+     "meine familie lehnt",
+     "meine familie ist dagegen",
+     "meine eltern sind dagegen",
+     "meine eltern sind nicht einverstanden",
+     "meine familie ist nicht einverstanden",
+     "meine eltern zögern",
+     "meine familie zögert",
+     "mein vater lehnt",
+     "meine mutter lehnt",
+     "familie ist dagegen",
+     "eltern sind dagegen"
+    ],
+    "distance": [
+     "anderes land",
+     "andere stadt",
+     "weit weg von meiner familie",
+     "weit weg von meiner mutter",
+     "weit weg von meinen eltern",
+     "ins ausland",
+     "seit ich umgezogen bin",
+     "nach dem umzug",
+     "ich bin umgezogen"
+    ],
+    "age": [
+     "mein alter",
+     "werde älter",
+     "zu alt",
+     "die zeit läuft",
+     "biologische uhr"
+    ],
+    "people": [
+     "was die leute sagen",
+     "was werden die leute sagen",
+     "die leute reden",
+     "was andere denken",
+     "gesellschaft",
+     "mein ruf",
+     "gerede über mich"
+    ],
+    "past": [
+     "frühere erfahrung",
+     "letztes mal",
+     "meine erste ehe",
+     "geschieden",
+     "ich wurde schon einmal verletzt",
+     "schon einmal verletzt",
+     "ist schon einmal passiert"
+    ],
+    "doubts": [
+     "jähzornig",
+     "aufbrausend",
+     "er lügt",
+     "sie lügt",
+     "geizig",
+     "eifersüchtig",
+     "kontrollierend",
+     "launisch",
+     "betet nicht"
+    ],
+    "unknown": [
+     "kenne ihn nicht gut",
+     "kenne sie nicht gut",
+     "kenne ihn kaum",
+     "kenne sie kaum",
+     "nur einmal getroffen",
+     "haben kaum geredet"
+    ],
+    "duties": [
+     "verantwortung",
+     "verpflichtungen",
+     "hat kinder",
+     "witwer",
+     "witwe",
+     "versorgt seine familie"
+    ],
+    "regret": [
+     "bereuen",
+     "ich werde es bereuen",
+     "angst zu verlieren",
+     "angst, ihn zu verlieren",
+     "angst, sie zu verlieren",
+     "ihn verlieren",
+     "sie verlieren"
+    ],
+    "pressure": [
+     "setzen mich unter druck",
+     "setzt mich unter druck",
+     "gezwungen",
+     "zwingen mich",
+     "drängen mich",
+     "drängt mich",
+     "bestehen darauf",
+     "hetzen mich"
+    ],
+    "desire": [
+     "ich will ihn",
+     "ich will sie",
+     "ich will heiraten",
+     "mein herz ist bei",
+     "ich wünschte",
+     "ich träume"
+    ],
+    "power": [
+     "mein chef",
+     "meine chefin",
+     "mein vorgesetzter",
+     "meine vorgesetzte",
+     "mein arbeitgeber",
+     "der chef"
+    ],
+    "livelihood": [
+     "angst, meinen job zu verlieren",
+     "angst um meinen job",
+     "angst vor der kündigung",
+     "angst, gekündigt zu werden",
+     "kann nichts sagen",
+     "traue mich nicht, etwas zu sagen",
+     "aus angst, meine arbeit zu verlieren"
+    ],
+    "harm": [
+     "schlägt mich",
+     "beleidigt mich",
+     "demütigt mich",
+     "misshandelt mich",
+     "gewalttätig",
+     "verletzt mich",
+     "beschimpft mich"
+    ]
+   },
+   "options": {
+    "accept_refuse": [
+     "annehmen",
+     "ablehnen",
+     "ja sagen",
+     "nein sagen",
+     "absagen",
+     "zusagen",
+     "angenommen",
+     "abgelehnt"
+    ],
+    "stay_leave": [
+     "bei ihm bleiben",
+     "bei ihr bleiben",
+     "ihn verlassen",
+     "sie verlassen",
+     "scheidung",
+     "trennen",
+     "trennung",
+     "schluss machen",
+     "in der ehe bleiben"
+    ],
+    "forgive_cut": [
+     "vergeben",
+     "verzeihen",
+     "kontakt abbrechen",
+     "den kontakt abbrechen",
+     "nicht mehr reden mit",
+     "abstand nehmen",
+     "mich distanzieren"
+    ],
+    "speak_silent": [
+     "konfrontieren",
+     "es ihm sagen",
+     "es ihr sagen",
+     "mit ihm reden",
+     "mit ihr reden",
+     "schweigen",
+     "still bleiben",
+     "nichts sagen"
+    ],
+    "move_stay": [
+     "auswandern",
+     "ins ausland gehen",
+     "umziehen",
+     "zurück in die heimat",
+     "in mein land zurückkehren",
+     "hier bleiben",
+     "reisen"
+    ],
+    "continue_quit": [
+     "kündigen",
+     "aufhören",
+     "meinen job aufgeben",
+     "das studium abbrechen",
+     "studienfach wechseln",
+     "mein studium fortsetzen",
+     "weitermachen"
+    ]
+   }
+  }
+ }
+}

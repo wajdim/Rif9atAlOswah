@@ -584,6 +584,360 @@
     "se acabo",
     "paso"
    ]
+  },
+  "analysis": {
+   "absolute": [
+    "nadie",
+    "todo el mundo me odia",
+    "todos me odian",
+    "todos están contra mí",
+    "ni una sola vez",
+    "nada funciona",
+    "nunca más"
+   ],
+   "absoluteSoft": [
+    "nunca",
+    "siempre",
+    "cada vez",
+    "todo el mundo"
+   ],
+   "label": [
+    "soy un fracaso",
+    "soy una fracasada",
+    "soy un fracasado",
+    "soy tonto",
+    "soy tonta",
+    "soy estúpido",
+    "soy estúpida",
+    "soy un inútil",
+    "soy una inútil",
+    "no valgo nada",
+    "soy una carga",
+    "soy malo",
+    "soy mala",
+    "soy una mala",
+    "soy un mal",
+    "no soy nada",
+    "no soy suficiente"
+   ],
+   "catastrophe": [
+    "mi vida se acabó",
+    "mi vida está arruinada",
+    "todo está perdido",
+    "todo se acabó",
+    "mi futuro está arruinado",
+    "se acabó",
+    "catástrofe",
+    "desastre",
+    "imposible",
+    "nunca va a cambiar",
+    "nada va a cambiar",
+    "no hay salida"
+   ],
+   "mindread": [
+    "me odia",
+    "me odian",
+    "piensa que soy",
+    "piensan que soy",
+    "me desprecia",
+    "me desprecian",
+    "se burlan de mí",
+    "me juzgan",
+    "lo hace a propósito"
+   ],
+   "should": [
+    "debería ser",
+    "debería haber",
+    "tendría que haber",
+    "tengo que ser perfect",
+    "debí haber"
+   ],
+   "compare": [
+    "mejor que yo",
+    "todos tienen",
+    "todas mis amigas",
+    "todos mis amigos",
+    "menos que los demás",
+    "comparado con los demás",
+    "como todo el mundo"
+   ],
+   "selfblame": [
+    "todo es mi culpa",
+    "si tan solo",
+    "si yo hubiera",
+    "no debí"
+   ],
+   "faith": [
+    "alhamdulillah",
+    "gracias a dios",
+    "gracias a allah",
+    "he rezado",
+    "recé",
+    "rezo",
+    "inshallah",
+    "in sha allah",
+    "oh allah",
+    "ya allah",
+    "hice dua",
+    "istijara",
+    "astaghfirullah"
+   ],
+   "effort": [
+    "lo he intentado",
+    "lo intenté",
+    "intento",
+    "estoy intentando",
+    "hemos intentado",
+    "hice todo lo posible",
+    "me esfuerzo"
+   ],
+   "patience": [
+    "he tenido paciencia",
+    "he sido paciente",
+    "he aguantado",
+    "aguanté",
+    "he soportado",
+    "soporté"
+   ],
+   "sleep": [
+    "no duermo",
+    "duermo mal",
+    "no puedo dormir",
+    "insomnio",
+    "pesadillas",
+    "no he dormido"
+   ],
+   "body": [
+    "dolor de cabeza",
+    "palpitaciones",
+    "el corazón acelerado",
+    "opresión en el pecho",
+    "sin apetito",
+    "perdí el apetito",
+    "no como",
+    "tiemblo",
+    "mareos",
+    "mareado",
+    "mareada",
+    "dolor de estómago"
+   ]
+  },
+  "reading": {
+   "factors": {
+    "comfort": [
+     "me siento a gusto con él",
+     "me siento a gusto con ella",
+     "me siento tranquila con él",
+     "me siento tranquilo con ella",
+     "me siento en paz con",
+     "me siento segura con",
+     "me siento seguro con",
+     "me gusta"
+    ],
+    "character": [
+     "religioso",
+     "religiosa",
+     "practicante",
+     "buen carácter",
+     "respetuoso",
+     "respetuosa",
+     "educado",
+     "educada",
+     "reza",
+     "piadoso",
+     "piadosa"
+    ],
+    "opportunity": [
+     "oferta de trabajo",
+     "mejor sueldo",
+     "sueldo más alto",
+     "ascenso",
+     "beca",
+     "oportunidad",
+     "mejor trabajo",
+     "me aceptaron"
+    ],
+    "history": [
+     "años juntos",
+     "nuestros hijos",
+     "larga historia",
+     "tenemos hijos"
+    ],
+    "money": [
+     "ingresos limitados",
+     "sueldo bajo",
+     "es pobre",
+     "poco dinero",
+     "económicamente",
+     "sin trabajo",
+     "en paro",
+     "desempleado",
+     "deudas"
+    ],
+    "family": [
+     "mis padres se niegan",
+     "mi familia se niega",
+     "mi familia está en contra",
+     "mis padres están en contra",
+     "mis padres no están de acuerdo",
+     "mis padres dudan",
+     "mi padre se niega",
+     "mi madre se niega"
+    ],
+    "distance": [
+     "otro país",
+     "otra ciudad",
+     "lejos de mi familia",
+     "lejos de mi madre",
+     "lejos de mis padres",
+     "irme al extranjero",
+     "desde que me mudé",
+     "desde la mudanza"
+    ],
+    "age": [
+     "mi edad",
+     "me hago mayor",
+     "demasiado mayor",
+     "se me pasa el tiempo",
+     "el tiempo corre"
+    ],
+    "people": [
+     "lo que dirá la gente",
+     "qué dirá la gente",
+     "el qué dirán",
+     "lo que piensan los demás",
+     "la sociedad",
+     "mi reputación"
+    ],
+    "past": [
+     "experiencia anterior",
+     "la última vez",
+     "mi primer matrimonio",
+     "divorciado",
+     "divorciada",
+     "ya me hirieron"
+    ],
+    "doubts": [
+     "mal genio",
+     "miente",
+     "tacaño",
+     "tacaña",
+     "celoso",
+     "celosa",
+     "controlador",
+     "no reza"
+    ],
+    "unknown": [
+     "no lo conozco bien",
+     "no la conozco bien",
+     "apenas lo conozco",
+     "apenas la conozco",
+     "solo lo vi una vez"
+    ],
+    "duties": [
+     "responsabilidades",
+     "tiene hijos",
+     "viudo",
+     "viuda"
+    ],
+    "regret": [
+     "arrepentirme",
+     "me arrepentiré",
+     "miedo a perder",
+     "perderlo",
+     "perderla"
+    ],
+    "pressure": [
+     "me presionan",
+     "me presiona",
+     "obligado",
+     "obligada",
+     "me obligan",
+     "insisten",
+     "me meten prisa"
+    ],
+    "desire": [
+     "lo quiero",
+     "la quiero",
+     "quiero casarme con",
+     "mi corazón está con",
+     "sueño con"
+    ],
+    "power": [
+     "mi jefe",
+     "mi jefa",
+     "mi responsable",
+     "mi supervisor",
+     "mi empleador",
+     "el director"
+    ],
+    "livelihood": [
+     "miedo a perder mi trabajo",
+     "miedo a que me despidan",
+     "no puedo responder",
+     "no me atrevo a responder"
+    ],
+    "harm": [
+     "me pega",
+     "me insulta",
+     "me humilla",
+     "me maltrata",
+     "violento",
+     "violenta",
+     "me hace daño"
+    ]
+   },
+   "options": {
+    "accept_refuse": [
+     "aceptar",
+     "rechazar",
+     "decir que sí",
+     "decir que no",
+     "si acepto",
+     "si rechazo"
+    ],
+    "stay_leave": [
+     "quedarme con él",
+     "quedarme con ella",
+     "dejarlo",
+     "dejarla",
+     "divorciarme",
+     "separarme",
+     "romper"
+    ],
+    "forgive_cut": [
+     "perdonar",
+     "cortar la relación",
+     "cortar con",
+     "dejar de hablarle",
+     "alejarme de"
+    ],
+    "speak_silent": [
+     "enfrentarlo",
+     "enfrentarla",
+     "decírselo",
+     "hablar con él",
+     "hablar con ella",
+     "callarme",
+     "no decir nada"
+    ],
+    "move_stay": [
+     "irme al extranjero",
+     "viajar",
+     "emigrar",
+     "mudarme",
+     "volver a mi país",
+     "quedarme aquí"
+    ],
+    "continue_quit": [
+     "renunciar",
+     "dejar mi trabajo",
+     "dejar los estudios",
+     "cambiar de carrera",
+     "seguir estudiando",
+     "continuar"
+    ]
+   }
   }
  }
 }

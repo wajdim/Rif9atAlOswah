@@ -9,7 +9,7 @@
 function qs(id){ return document.getElementById(id); }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
 function toast(msg,ms){ var t=qs("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("show");},ms||2200); }
-var APP_VERSION="2.8.0";
+var APP_VERSION="2.12.0";
 var EN=I18N.en;
 function store(key, val){ try{ if(val===undefined) return JSON.parse(localStorage.getItem(key)||"null"); localStorage.setItem(key, JSON.stringify(val)); }catch(e){ return null; } }
 function iconSvg(k){ return '<svg viewBox="0 0 24 24">'+(ICONS[k]||ICONS.star)+'</svg>'; }
@@ -63,11 +63,18 @@ var prefs=store("rifqa.prefs")||{fs:"1"};
 if(!prefs.theme) prefs.theme="dark";                       // الوضع الداكن افتراضي ما لم يختر المستخدم غيره
 TTS.setRate(prefs.rate||1);
 setTimeout(function(){ TTS.configure(TTS_CFG()); },0);
+/* خط النصوص (كل شيء عدا الآيات القرآنية)؛ إن لم يكن الخط مثبتًا على الجهاز يُستعمل الخط الأصلي */
+/* خطوط مضمّنة بديلة حرة الرخصة (fonts/fonts.css) فتعمل الخيارات على أندرويد أيضًا؛ Andalus الأصلي يُستعمل إن كان مثبتًا */
+var FONTS={andalus:"'Andalus','RF Andalus'",tahoma:"'RF Tahoma'",arial:"'RF Arial'",times:"'RF Times'",original:""};   // original: خطوط التطبيق الأصلية (Tajawal وAmiri)
 function applyPrefs(p){
   p=p||prefs;
   var r=document.documentElement;
   if(p.theme==="auto") r.removeAttribute("data-theme"); else r.setAttribute("data-theme",p.theme);
   r.style.setProperty("--fs",p.fs||"1");
+  var ln=(window.I18N && I18N.lang) || p.lang;
+  if(ln==="ur" || ln==="fa") r.style.removeProperty("--font-ui");   // الأردية والفارسية بخطيهما دائمًا
+  else if(p.ff==="original") r.style.removeProperty("--font-ui");
+  else r.style.setProperty("--font-ui",FONTS[p.ff]||FONTS.andalus);
   var dark = p.theme==="dark" || (p.theme==="auto" && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches);
   var m=document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content", dark?"#141B17":"#2F4C3E");
 }
@@ -123,7 +130,7 @@ function renderHome(){
   // آية أو حديث اليوم (ثابت لليوم نفسه)
   var day=Math.floor(Date.now()/86400000), pool=QURAN_LIB.filter(function(q){return !q.dua;}).concat(HADITH_LIB.filter(function(h){return !h.dua;}));
   var it=pool[(day*7919)%pool.length], isQ=!!it.s;
-  qs("dailyCard").innerHTML='<div class="card"><div class="d-label">'+(isQ?T("آية اليوم"):T("حديث اليوم"))+'</div><div class="d-text"'+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":"«"+esc(hText(it.t))+"»")+'</div>'+
+  qs("dailyCard").innerHTML='<div class="card"><div class="d-label">'+(isQ?T("آية اليوم"):T("حديث اليوم"))+'</div><div class="d-text'+(isQ?' quran':'')+'"'+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":"«"+esc(hText(it.t))+"»")+'</div>'+
     (isQ?enAyah(it.s,it.a):enHadith(it.te))+
     '<div class="d-src">'+(isQ?esc(I18N.ref(it.s,it.a)):esc(it.r)+" — "+esc(I18N.src(it.src))+" — "+esc(I18N.grade(it.g)))+'</div><div class="ev-note">'+esc(it.n)+'</div></div>';
   var aiOn=AI.enabled(); qs("aiModeRow").hidden=!aiOn;
@@ -131,9 +138,9 @@ function renderHome(){
 }
 
 /* ---------------- التنبيهات الحساسة ---------------- */
-var SELF_HARM=["افكار انتحاريه","انتحار","انتحر","اذي نفسي","اؤذي نفسي","اريد ان اموت","اريد الموت","لا اريد ان اعيش","اقتل نفسي","انهي حياتي","ان انهي حياتي","نقتل روحي","نحب نموت","ما نحبش نعيش","حابب اموت","بدي موت","الموت ارحم","جرح نفسي","اجرح نفسي","suicide","suicidal","kill myself","end my life","want to die","wish i was dead","wish i were dead","hurt myself","harm myself","self harm","cut myself","no reason to live","me suicider","zelfmoord","suicidaal","mezelf van kant maken","mezelf iets aandoen","ik wil dood","ik wil sterven","wil niet meer leven","een eind aan mijn leven","mezelf pijn doen","zelfbeschadiging","mezelf snijden","suicidio","suicidarme","quiero morir","matarme","quitarme la vida","acabar con mi vida","no quiero vivir","hacerme daño","autolesión","cortarme","suicídio","suicidar-me","quero morrer","matar-me","tirar a minha vida","acabar com a minha vida","não quero viver","magoar-me","automutilação","cortar-me","suicide","suicidaire","je veux mourir","envie de mourir","en finir avec la vie","mettre fin à mes jours","mettre fin à ma vie","je ne veux plus vivre","plus envie de vivre","je veux me tuer","je vais me tuer","envie de me tuer","me faire du mal","me scarifier","automutilation","j'aimerais être mort","je voudrais être morte","خودکشی","مرنا چاہتا","مرنا چاہتی","جینا نہیں چاہتا","جینا نہیں چاہتی","اپنی جان لے","خود کو نقصان","bunuh diri","ingin mati","mau mati","mengakhiri hidup","menyakiti diri","tidak ingin hidup","intihar","ölmek istiyorum","kendimi öldür","hayatıma son","yaşamak istemiyorum","kendime zarar"];
-var LEGAL=["طلاق","ميراث","ارث","الورث","حد شرعي","ربا","محامي","قضيه","محكمه","نفقه","خلع","حضانه","فتوي","عقد","divorce","inheritance","custody","lawyer","court case","lawsuit","alimony","fatwa","khula","riba","usury","scheiding","echtscheiding","erfenis","voogdij","advocaat","rechtszaak","rechtbank","alimentatie","rente","divorcio","herencia","custodia","abogado","juicio","pensión alimenticia","usura","herança","guarda dos filhos","advogado","tribunal","processo judicial","pensão de alimentos","héritage","succession","garde des enfants","avocat","procès","pension alimentaire","usure","fatwa","khul","طلاق","وراثت","مقدمہ","عدالت","وکیل","خلع","perceraian","cerai","warisan","hak asuh","pengacara","pengadilan","gugatan","boşanma","miras","velayet","avukat","mahkeme","dava","nafaka"];
-var VIOLENCE=["عنف","يضربني","تضربني","ضربني","ضربتني","تعنيف","اعتداء","اغتصاب","تحرش","يهددني بالقتل","abuse","abusive","hits me","beats me","beat me","hit me","violence","violent","rape","assault","harass","threatens to kill","threatened to kill","mishandeling","mishandelt","slaat me","sloeg me","geweld","verkrachting","aanranding","intimidatie","bedreigt me","dreigt me te vermoorden","maltrato","me pega","me golpea","violencia","violación","agresión","acoso","amenaza con matarme","violência","me bate","bate-me","agressão","violação","assédio","ameaça matar-me","ameaça me matar","maltraitance","me frappe","me frappent","me tape dessus","me cogne","il m'a frappé","il m'a frappée","me bat","violence conjugale","viol","agression","harcèlement","menace de me tuer","m'a menacé de mort","مارتا ہے","مارتی ہے","مجھے مارا","تشدد","زیادتی","ہراساں","جان سے مارنے کی دھمکی","memukul saya","memukuliku","kekerasan","kdrt","pemerkosaan","pelecehan","mengancam membunuh","beni dövüyor","bana vuruyor","şiddet","tecavüz","taciz","öldürmekle tehdit"];
+var SELF_HARM=["افكار انتحاريه","انتحار","انتحر","اذي نفسي","اؤذي نفسي","اريد ان اموت","اريد الموت","لا اريد ان اعيش","اقتل نفسي","انهي حياتي","ان انهي حياتي","نقتل روحي","نحب نموت","ما نحبش نعيش","حابب اموت","بدي موت","الموت ارحم","جرح نفسي","اجرح نفسي","suicide","suicidal","kill myself","end my life","want to die","wish i was dead","wish i were dead","hurt myself","harm myself","self harm","cut myself","no reason to live","me suicider","zelfmoord","suicidaal","mezelf van kant maken","mezelf iets aandoen","ik wil dood","ik wil sterven","wil niet meer leven","een eind aan mijn leven","mezelf pijn doen","zelfbeschadiging","mezelf snijden","suicidio","suicidarme","quiero morir","matarme","quitarme la vida","acabar con mi vida","no quiero vivir","hacerme daño","autolesión","cortarme","suicídio","suicidar-me","quero morrer","matar-me","tirar a minha vida","acabar com a minha vida","não quero viver","magoar-me","automutilação","cortar-me","suicide","suicidaire","je veux mourir","envie de mourir","en finir avec la vie","mettre fin à mes jours","mettre fin à ma vie","je ne veux plus vivre","plus envie de vivre","je veux me tuer","je vais me tuer","envie de me tuer","me faire du mal","me scarifier","automutilation","j'aimerais être mort","je voudrais être morte","خودکشی","مرنا چاہتا","مرنا چاہتی","جینا نہیں چاہتا","جینا نہیں چاہتی","اپنی جان لے","خود کو نقصان","bunuh diri","ingin mati","mau mati","mengakhiri hidup","menyakiti diri","tidak ingin hidup","intihar","ölmek istiyorum","kendimi öldür","hayatıma son","yaşamak istemiyorum","kendime zarar","selbstmord","suizid","mich umbringen","bringe mich um","will sterben","möchte sterben","nicht mehr leben","mir das leben nehmen","mein leben beenden","mich selbst verletzen","mich ritzen","lebensmüde","nak mati","mahu mati","tak mahu hidup","tidak mahu hidup","tamatkan hidup","cederakan diri","menyakiti diri","خودکشی","می‌خواهم بمیرم","میخواهم بمیرم","میخوام بمیرم","دلم میخواد بمیرم","دوست دارم بمیرم","خودم را بکشم","خودمو بکشم","به زندگیم پایان","زنده بمانم","زنده بمونم","به خودم آسیب","خودزنی","আত্মহত্যা","মরে যেতে চাই","মরতে চাই","বাঁচতে চাই না","বেঁচে থাকতে চাই না","নিজেকে শেষ করে","নিজেকে মেরে","জীবন শেষ করে","নিজের ক্ষতি","নিজেকে আঘাত"];
+var LEGAL=["طلاق","ميراث","ارث","الورث","حد شرعي","ربا","محامي","قضيه","محكمه","نفقه","خلع","حضانه","فتوي","عقد","divorce","inheritance","custody","lawyer","court case","lawsuit","alimony","fatwa","khula","riba","usury","scheiding","echtscheiding","erfenis","voogdij","advocaat","rechtszaak","rechtbank","alimentatie","rente","divorcio","herencia","custodia","abogado","juicio","pensión alimenticia","usura","herança","guarda dos filhos","advogado","tribunal","processo judicial","pensão de alimentos","héritage","succession","garde des enfants","avocat","procès","pension alimentaire","usure","fatwa","khul","طلاق","وراثت","مقدمہ","عدالت","وکیل","خلع","perceraian","cerai","warisan","hak asuh","pengacara","pengadilan","gugatan","boşanma","miras","velayet","avukat","mahkeme","dava","nafaka","scheidung","erbschaft","erbteil","sorgerecht","anwalt","anwältin","gericht","klage","unterhalt","zinsen","cerai","perceraian","harta pusaka","faraid","hak penjagaan","peguam","mahkamah","saman","nafkah","fasakh","khuluk","ارث","میراث","حضانت","وکیل","دادگاه","شکایت","نفقه","مهریه","فتوا","তালাক","বিবাহবিচ্ছেদ","উত্তরাধিকার","হেফাজত","উকিল","আইনজীবী","আদালত","মামলা","ভরণপোষণ","দেনমোহর","ফতোয়া","সুদ"];
+var VIOLENCE=["عنف","يضربني","تضربني","ضربني","ضربتني","تعنيف","اعتداء","اغتصاب","تحرش","يهددني بالقتل","abuse","abusive","hits me","beats me","beat me","hit me","violence","violent","rape","assault","harass","threatens to kill","threatened to kill","mishandeling","mishandelt","slaat me","sloeg me","geweld","verkrachting","aanranding","intimidatie","bedreigt me","dreigt me te vermoorden","maltrato","me pega","me golpea","violencia","violación","agresión","acoso","amenaza con matarme","violência","me bate","bate-me","agressão","violação","assédio","ameaça matar-me","ameaça me matar","maltraitance","me frappe","me frappent","me tape dessus","me cogne","il m'a frappé","il m'a frappée","me bat","violence conjugale","viol","agression","harcèlement","menace de me tuer","m'a menacé de mort","مارتا ہے","مارتی ہے","مجھے مارا","تشدد","زیادتی","ہراساں","جان سے مارنے کی دھمکی","memukul saya","memukuliku","kekerasan","kdrt","pemerkosaan","pelecehan","mengancam membunuh","beni dövüyor","bana vuruyor","şiddet","tecavüz","taciz","öldürmekle tehdit","schlägt mich","hat mich geschlagen","gewalt","misshandelt","missbrauch","vergewaltig","belästigt mich","bedroht mich","droht mich umzubringen","pukul saya","memukul saya","dipukul","keganasan","didera","dera saya","rogol","gangguan seksual","ugut bunuh","mengugut saya","کتکم","کتک می","منو میزنه","مرا می‌زند","خشونت","آزارم","تجاوز","تهدید به قتل","آزار جنسی","মারধর","আমাকে মারে","নির্যাতন","সহিংসতা","ধর্ষণ","যৌন হয়রানি","মেরে ফেলার হুমকি"];
 function checkFlags(text){
   var n=" "+RAG.normalize(text)+" ";
   function hit(list){ return list.some(function(k){ var nk=RAG.normalize(k); return /[a-z]/.test(nk) ? n.indexOf(" "+nk)>-1 : n.indexOf(nk)>-1; }); }
@@ -143,7 +150,7 @@ function checkFlags(text){
 /* ---------------- التشغيل ---------------- */
 var STAGES=["أقرأ ما كتبته وأفهم سياقه…","أكتشف الموضوعات والمشاعر وطبيعة العلاقة…","أسترجع المواقف القريبة من السيرة وقصص الأنبياء…","أبحث في الآيات والأحاديث المرتبطة…","أراجع درجات النصوص ومصادرها…","أبني القراءة والخطة العملية…"];
 var lastAnalysis=null, aiSession=null;
-function runSearch(text){
+function runSearch(text, focus){
   text=(text||"").trim();
   if(text.length<4){ toast(T("اكتب موقفك بتفصيل أكثر قليلًا")); qs("userInput").focus(); return; }
   showScreen("loading",false);
@@ -151,12 +158,12 @@ function runSearch(text){
   list.innerHTML=STAGES.map(function(m,i){ return '<div class="stage-item" id="stage-'+i+'"><span class="dot"></span><span>'+T(m)+'</span></div>'; }).join("");
   var i=0, result=null;
   // التحليل الفعلي يُنفّذ فورًا؛ المراحل المرئية للإيضاح فقط
-  setTimeout(function(){ result={a:RAG.analyze(text), flags:checkFlags(text)}; },0);
+  setTimeout(function(){ result={a:RAG.analyze(text, focus?{focus:focus}:null), flags:checkFlags(text)}; },0);
   (function step(){
     if(i>0) qs("stage-"+(i-1)).classList.replace("active","done");
     if(i<STAGES.length){ qs("stage-"+i).classList.add("active"); i++; setTimeout(step, 300); }
     else setTimeout(function(){
-      result.a.id=Date.now().toString(36); lastAnalysis=result.a;
+      result.a.id=Date.now().toString(36); result.a.focus=focus||null; lastAnalysis=result.a;
       window.__lastFlags=result.flags; renderResult(result.a, result.flags);
       showScreen("result");
       if(AI.enabled() && qs("aiAuto").checked) startAI();
@@ -227,62 +234,6 @@ function planTabsHTML(){
 }
 function strengthBadge(s){ return '<span class="badge '+badgeClass(s.sourceStrength)+'">'+esc(T(s.sourceStrength))+'</span>'; }
 
-/* ---------------- القراءة الأولى للموقف (بطاقة متعددة الطبقات) ---------------- */
-function lcFirst(x){ return /^[A-ZÀ-Ý]/.test(x) && !/^I/.test(x) ? x.charAt(0).toLowerCase()+x.slice(1) : x; }
-function readingCardHTML(a, themesShown, confLabel){
-  var u=a.understanding, D=a.deep||{}, q=function(x){ return I18N.q(esc(x)); };
-  function row(icon, label, body, cls){ return '<div class="rd-row'+(cls?" "+cls:"")+'"><div class="rd-ic" aria-hidden="true">'+icon+'</div><div class="rd-main"><div class="rd-label">'+label+'</div><div class="rd-body">'+body+'</div></div></div>'; }
-  var IC={eye:'<svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
-    heart:'<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>',
-    need:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>',
-    pull:'<svg viewBox="0 0 24 24"><path d="M4 12h16M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg>',
-    time:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
-    people:'<svg viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9.5" r="2.4"/><path d="M15.5 14.2A4.6 4.6 0 0 1 21 18.5"/></svg>'};
-  var h='<div class="reading-card"><div class="rc-head"><div class="rc-title">'+T("قراءة أولية لموقفك")+'</div><span class="conf-pill conf-'+a.confidence+'">'+confLabel+'</span></div>';
-  // ما فهمته
-  var t0=u.themes[0], t1=u.themes[1], rel=u.relations[0], sum="";
-  if(t0) sum=T("يدور ما كتبته أساسًا حول «{0}»",esc(t0.theme.label))+(t1?T("، ويتقاطع مع «{0}»",esc(t1.theme.label)):"")+(rel?T("، في سياق علاقتك بـ{0}",rel.word?q(lcFirst(rel.word)):esc(rel.label)):"")+".";
-  else if(rel) sum=T("يدور ما كتبته حول علاقتك بـ{0}.",rel.word?q(lcFirst(rel.word)):esc(rel.label));
-  h+='<div class="rd-summary">'+sum+(D.role?'<div class="rd-role">'+esc(D.role.text)+'</div>':"")+'</div><div class="rd-rows">';
-  // المشاعر بالدليل
-  var fe=(D.feelings||[]).length ? D.feelings.map(function(f){
-      return '<span class="rd-feel"><span class="tag'+(f.implied?" soft":"")+'">'+esc(f.label)+(f.implied?" "+T("(محتمل)"):"")+'</span>'+
-        (f.ev&&f.ev.length?'<span class="rd-ev">'+T("من كلماتك:")+" "+f.ev.map(q).join(T("، "))+'</span>':"")+'</span>'; }).join("")
-    : '<span class="tag soft">'+T("لم تُذكر صراحة")+'</span>';
-  h+=row(IC.heart, T("ما تشعر به"), '<div class="rd-feels">'+fe+'</div>');
-  if(D.need) h+=row(IC.need, T("ما تحتاجه على الأرجح"), esc(D.need.text)+(D.need.cue?' <span class="rd-ev">'+T("لأنك كتبت:")+" "+q(D.need.cue)+'</span>':(D.need.inferred?' <span class="rd-ev">'+T("(استنتاج من سياق كلامك)")+'</span>':"")));
-  if(D.tension&&D.tension.length) h+=row(IC.pull, T("ما يتجاذبك"), D.tension.map(function(x){ return '<div class="rd-pull">'+esc(x)+'</div>'; }).join(""));
-  if(D.time) h+=row(IC.time, T("الزمن"), esc(D.time.text));
-  h+=row(IC.people, T("الأطراف وثقل الموقف"), '<div class="tag-row">'+(u.relations.length?u.relations.map(function(x){return '<span class="tag">'+esc(x.label)+'</span>';}).join(""):'<span class="tag soft">'+T("غير محدد")+'</span>')+(u.selfFault?'<span class="tag clay">'+T("تتحدث عن خطأ منك")+'</span>':"")+'</div>'+
-    '<div class="meter" title="'+T("ثقل الموقف")+'">'+[1,2,3].map(function(k){return '<i class="'+(u.intensity>=k?"on":"")+'"></i>';}).join("")+'</div>');
-  h+='</div>';
-  // الموضوعات
-  h+='<div class="rd-themes"><div class="dim-label">'+T("الموضوعات المكتشفة")+'</div>'+(themesShown.length?themesShown.map(function(t){
-      return '<div class="bar-row"><span class="bl">'+esc(t.theme.label)+'</span><span class="bt"><span class="bf" style="width:'+Math.round(t.conf*100)+'%"></span></span><span class="bp">'+Math.round(t.conf*100)+'%</span></div>'; }).join(""):'<span class="tag soft">'+T("عام")+'</span>')+'</div>';
-  // لماذا هذا الموقف؟
-  if(D.why){
-    var W=D.why;
-    h+='<div class="rd-why"><div class="rd-why-h">'+T("لماذا هذا الموقف؟")+'</div>'+
-      '<button class="rd-why-t" data-sit="'+esc(W.id)+'">'+esc(W.title)+' ›</button>'+
-      (W.shared.length?'<div class="rd-why-l">'+T("يشترك مع حالتك في:")+' '+W.shared.map(function(x){return '<span class="tag">'+esc(x)+'</span>';}).join("")+'</div>':"")+
-      (W.problem?'<div class="rd-why-l"><b>'+T("المشكلة هناك:")+'</b> '+esc(W.problem)+'</div>':"")+
-      (W.response?'<div class="rd-why-l"><b>'+T("وكان الهدي فيها:")+'</b> '+esc(W.response)+'</div>':"")+'</div>';
-  }
-  if(D.question) h+='<div class="rd-q"><span>'+T("سؤال تحمله معك")+'</span>'+esc(D.question)+'</div>';
-  if(D.gaps&&D.gaps.length) h+='<div class="rd-gaps tts-skip"><div class="dim-label">'+T("لتكون القراءة أدق، أضف:")+'</div><div class="tag-row">'+
-    D.gaps.map(function(g){ return '<button class="rd-gap" data-refine="'+esc(g.add)+'">+ '+esc(g.label)+'</button>'; }).join("")+'</div></div>';
-  return h+'</div>';
-}
-/* «لتكون القراءة أدق»: يعيدك إلى نصك مع بداية جملة جاهزة */
-function refineInput(add){
-  showScreen("home");
-  var ta=qs("userInput"), v=(lastAnalysis&&lastAnalysis.input)||ta.value||"";
-  ta.value=v.replace(/\s+$/,"")+(v?"\n":"")+add;
-  ta.dispatchEvent(new Event("input"));
-  ta.focus(); try{ ta.setSelectionRange(ta.value.length, ta.value.length); }catch(e){}
-  ta.scrollIntoView({block:"center"});
-}
-
 /* ---------------- عرض النتيجة ---------------- */
 /* اللفظ الملتقط كما كتبه المستخدم لا بصيغته المطبَّعة (مهم للأردية: ی ہ ھ لا تُعرض ي ه) */
 function rawHit(h, raw){
@@ -293,6 +244,53 @@ function rawHit(h, raw){
   }
   return h;
 }
+/* عند ضعف الفهم: موضوعات قريبة يختار منها المستخدم فتُعاد القراءة مركّزة عليه (بلا أسئلة داخل القراءة نفسها) */
+function focusChipsHTML(a){
+  var ids=[], add=function(id){ if(id && id!==a.focus && ids.indexOf(id)<0 && RAG.byId("theme",id)) ids.push(id); };
+  a.understanding.themes.forEach(function(t){ add(t.id); });
+  (a.retrieval.sits||[]).slice(0,4).forEach(function(x){ (x.via||[]).forEach(add); });
+  HOME_THEMES.forEach(add);
+  return '<div class="focus-pick tts-skip"><div class="fp-h">'+T("لم أفهم موضوع حالتك بوضوح. اختر الأقرب لما تمر به لأعيد القراءة:")+'</div><div class="row">'+
+    ids.slice(0,6).map(function(id){ var t=RAG.byId("theme",id); return '<button class="theme-chip" data-focus="'+esc(id)+'">'+iconSvg(t.icon)+esc(t.label)+'</button>'; }).join("")+'</div></div>';
+}
+
+/* «مواقفي»: يحفظ المستخدم ما كتبه بنفسه (اختياري، على هذا الجهاز فقط)، ويعيد فتح قراءته متى شاء */
+var journal=store("rifqa.journal")||[];
+function journalFind(a){ for(var i=0;i<journal.length;i++) if(journal[i].t===a.input && (journal[i].focus||null)===(a.focus||null)) return journal[i]; return null; }
+function journalBtnHTML(a){
+  var on=!!(a && journalFind(a));
+  return '<button class="btn-ghost'+(on?" on":"")+'" data-act="journal-save">'+(on?T("محفوظ في مواقفي"):T("احفظ في مواقفي"))+'</button>';
+}
+function journalToggle(){
+  var a=lastAnalysis; if(!a) return;
+  var f=journalFind(a);
+  if(f){ journal=journal.filter(function(x){return x!==f;}); toast(T("أُزيل الموقف من مواقفي")); }
+  else {
+    var top=a.retrieval.sits[0];
+    journal.unshift({id:a.id, t:a.input, ts:Date.now(), focus:a.focus||null, title:top?top.s.title:""});
+    journal=journal.slice(0,100); toast(T("حُفظ الموقف في مواقفي"));
+  }
+  store("rifqa.journal",journal);
+  document.querySelectorAll('[data-act="journal-save"]').forEach(function(b){ b.outerHTML=journalBtnHTML(a); });
+}
+function journalHTML(){
+  if(!journal.length) return "";
+  return '<div class="all-sit-group-title" style="margin-top:16px;">'+T("مواقفي")+'</div><div class="set-hint" style="margin-bottom:8px;">'+T("تبقى مواقفك على هذا الجهاز فقط، ولا تُرسل إلى أي مكان.")+'</div>'+
+    '<div class="journal-list">'+journal.map(function(j){
+      var ex=j.t.length>160?j.t.slice(0,160)+"…":j.t;
+      return '<div class="journal-item"><div class="ji-date">'+esc(fmtDate(j.ts))+(j.title?' · '+esc(j.title):"")+'</div><div class="ji-text">'+esc(ex)+'</div>'+
+        '<div class="ev-actions"><button class="mini-btn" data-act="journal-open" data-id="'+esc(j.id)+'">'+T("افتح القراءة")+'</button><button class="mini-btn" data-act="journal-del" data-id="'+esc(j.id)+'">'+T("حذف")+'</button></div></div>';
+    }).join("")+'</div><div class="ev-actions" style="margin-top:8px;"><button class="mini-btn" data-act="journal-clear">'+T("حذف كل مواقفي")+'</button></div>';
+}
+function journalClear(btn){
+  if(!btn.classList.contains("armed")){
+    btn.classList.add("armed"); btn.textContent=T("اضغط مرة أخرى لحذف كل مواقفك");
+    setTimeout(function(){ if(btn.isConnected){ btn.classList.remove("armed"); btn.textContent=T("حذف كل مواقفي"); } },4000);
+    return;
+  }
+  journal=[]; store("rifqa.journal",journal); renderSaved(); toast(T("حُذفت مواقفك من الجهاز"));
+}
+
 function renderResult(a, flags){
   var u=a.understanding, r=a.retrieval, top=r.sits[0], out="", n=0;
   out+='<div class="result-toolbar tts-skip">'+listenBtnHTML("result",T("استمع للإجابة كاملة"))+foldBarHTML()+'</div>';
@@ -308,15 +306,29 @@ function renderResult(a, flags){
     out+='<div class="notice"><b>'+T("جانب شرعي أو قانوني دقيق")+'</b>'+T("يتضمن موقفك مسألة (كالطلاق أو الميراث أو الحقوق) لها أحكام تفصيلية. ما يلي مبادئ وتوجيهات عامة للتأمل، وليس فتوى؛ ارجع إلى عالم شرعي مؤهل أو مختص قانوني للحكم في حالتك.")+'</div>';
   }
 
-  if(!top || a.confidence==="low"){
-    out+='<div class="confidence-note">'+T("لم أجد في المكتبة الحالية ما يطابق حالتك بدرجة كافية. جرّب إضافة تفاصيل: من الطرف الآخر؟ ماذا حدث؟ بماذا تشعر؟ ماذا تريد أن تفعل؟ أو")+' <button class="btn-ghost" style="padding:4px 10px;" data-nav="explore">'+T("تصفح الموضوعات")+'</button></div>';
+  if(u.focus && u.themes[0]){
+    out+='<div class="focus-note tts-skip">'+T("ركّزتُ القراءة على «{0}» كما اخترت.",esc(u.themes[0].theme.label))+'</div>';
+  }
+  if(!top || a.confidence==="low" || (!u.themes.length && !u.crisis)){
+    if(!top || a.confidence==="low") out+='<div class="confidence-note">'+T("لم أجد في المكتبة الحالية ما يطابق حالتك بدرجة كافية. جرّب إضافة تفاصيل: من الطرف الآخر؟ ماذا حدث؟ بماذا تشعر؟ ماذا تريد أن تفعل؟ أو")+' <button class="btn-ghost" style="padding:4px 10px;" data-nav="explore">'+T("تصفح الموضوعات")+'</button></div>';
+    if(!u.crisis && !flags.selfHarm) out+=focusChipsHTML(a);
     if(!top){ qs("resultWrap").innerHTML=out+actionsHTML(); return; }
   }
 
   // 1) قراءة الموقف
   var themesShown=u.themes.filter(function(t){return t.conf>=0.3;}).slice(0,4);
   var confLabel={high:T("مطابقة قوية"),mid:T("مطابقة متوسطة"),low:T("مطابقة ضعيفة")}[a.confidence];
-  out+=readingCardHTML(a, themesShown, confLabel);
+  out+='<div class="reading-card"><div class="rc-head"><div class="rc-title">'+T("قراءة أولية لموقفك")+'</div><span class="conf-pill conf-'+a.confidence+'">'+confLabel+'</span></div>'+
+    '<div class="rc-text">'+String(a.reading||"").split(/\n\n+/).map(function(p){ return '<p>'+esc(p)+'</p>'; }).join("")+'</div>'+
+    // قراءة أعمق بالذكاء الاصطناعي (بمفتاح المستخدم فقط، ولا تُعرض عند إشارات الأزمة)
+    (AI.enabled() && !u.crisis ? '<div class="rc-ai tts-skip" id="rcAi"><button class="mini-btn" data-act="ai-reading"><svg viewBox="0 0 24 24"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z"/></svg>'+T("اكتب قراءة أعمق بالذكاء الاصطناعي")+'</button></div>' : "")+
+    '<div class="dims">'+
+    '<div><div class="dim-label">'+T("الموضوعات المكتشفة")+'</div>'+(themesShown.length?themesShown.map(function(t){
+      return '<div class="bar-row"><span class="bl">'+esc(t.theme.label)+'</span><span class="bt"><span class="bf" style="width:'+Math.round(t.conf*100)+'%"></span></span></div>'; }).join(""):'<span class="tag soft">'+T("عام")+'</span>')+'</div>'+
+    '<div><div class="dim-label">'+T("المشاعر")+'</div><div class="tag-row">'+(u.emotions.length?u.emotions.map(function(e){ return '<span class="tag'+(e.implied?" soft":"")+'">'+esc(e.label)+(e.implied?" "+T("(محتمل)"):"")+'</span>'; }).join(""):'<span class="tag soft">'+T("لم تُذكر صراحة")+'</span>')+'</div>'+
+      '<div class="dim-label" style="margin-top:12px;">'+T("الأطراف")+'</div><div class="tag-row">'+(u.relations.length?u.relations.map(function(x){return '<span class="tag">'+esc(x.label)+'</span>';}).join(""):'<span class="tag soft">'+T("غير محدد")+'</span>')+(u.selfFault?'<span class="tag clay">'+T("تتحدث عن خطأ منك")+'</span>':"")+'</div>'+
+      '<div class="dim-label" style="margin-top:12px;">'+T("ثقل الموقف")+'</div><div class="meter">'+[1,2,3].map(function(k){return '<i class="'+(u.intensity>=k?"on":"")+'"></i>';}).join("")+'</div></div>'+
+    '</div></div>';
 
   a.help.forEach(function(h){ out+='<div class="help-note">'+esc(h)+'</div>'; });
 
@@ -397,7 +409,7 @@ function renderResult(a, flags){
 var IS_ANDROID_APP=!!window.AndroidBridge;
 function actionsHTML(){
   var canShare=IS_ANDROID_APP||!!navigator.share;
-  return '<div class="result-actions"><button class="btn-ghost" id="btnNewSearch">'+T("موقف جديد")+'</button><button class="btn-ghost" data-act="copy-result">'+T("نسخ الخلاصة")+'</button>'+
+  return '<div class="result-actions"><button class="btn-ghost" id="btnNewSearch">'+T("موقف جديد")+'</button>'+journalBtnHTML(lastAnalysis)+'<button class="btn-ghost" data-act="copy-result">'+T("نسخ الخلاصة")+'</button>'+
     (canShare?'<button class="btn-ghost" data-act="share-result">'+T("مشاركة")+'</button>':"")+(IS_ANDROID_APP?"":'<button class="btn-ghost" data-act="print">'+T("طباعة / PDF")+'</button>')+'<button class="btn-ghost" data-nav="explore">'+T("استكشف الموضوعات")+'</button></div>';
 }
 function resultSummaryText(){
@@ -464,6 +476,33 @@ function startAI(){
   aiSession={messages:[{role:"user",content:AI.buildUserTurn(lastAnalysis)}], busy:true};
   body.innerHTML='<div id="aiTurn0"></div>';
   runAIStream(qs("aiTurn0"), function(ok){ if(ok) qs("aiFoot").hidden=false; });
+}
+/* «قراءة أعمق» داخل بطاقة القراءة الأولية: طلب مستقل يكتب فيه Claude القراءة وفق تعليماتها، ثم تُعرض فوق القراءة دون اتصال */
+var aiReading=null;
+function startAIReading(){
+  if(!lastAnalysis || !AI.enabled() || (aiReading && aiReading.busy)) return;
+  var box=qs("rcAi"); if(!box) return;
+  aiReading={busy:true, text:"", input:lastAnalysis.input};
+  box.innerHTML='<div class="rc-ai-h">'+T("قراءة أعمق كتبها Claude بمفتاحك")+'</div><div class="rc-ai-body" id="rcAiBody"></div>';
+  var body=qs("rcAiBody"), raf=null;
+  function paint(done){ body.innerHTML=mdToHTML(aiReading.text)+(done?"":'<span class="cursor"></span>'); }
+  paint(false);
+  aiReading.handle=AI.streamReading(lastAnalysis,{
+    onText:function(d){ aiReading.text+=d; if(!raf) raf=requestAnimationFrame(function(){ raf=null; paint(false); }); },
+    onDone:function(info){
+      if(raf){ cancelAnimationFrame(raf); raf=null; }
+      if(info.stopReason==="refusal" && !aiReading.text) aiReading.text=T("تعذّر على النموذج إكمال هذا الطلب. التحليل الموثق أعلاه يبقى متاحًا.");
+      paint(true); aiReading.busy=false;
+      if(aiReading.text) box.insertAdjacentHTML("beforeend",'<div class="ai-report"><button class="mini-btn" data-act="ai-report-reading"><svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>'+T("الإبلاغ عن هذه الإجابة")+'</button></div>');
+    },
+    onError:function(msg){ if(raf){ cancelAnimationFrame(raf); raf=null; } body.innerHTML=mdToHTML(aiReading.text)+'<p class="ai-err">'+esc(msg)+'</p>'; aiReading.busy=false; }
+  });
+}
+function reportAIReading(){
+  if(!aiReading || !aiReading.text) return;
+  var L=[T("سبب البلاغ (اكتبه هنا):"),"","","— "+T("سؤالي:"),aiReading.input,"","— "+T("إجابة النموذج:"),aiReading.text,"",
+    T("رِفقة الأُسوة {0} · {1}",APP_VERSION,I18N.lang)];
+  composeEmail(T("بلاغ عن إجابة الذكاء الاصطناعي في رِفقة الأُسوة"), L.join("\n"));
 }
 function followUpAI(){
   var inp=qs("aiFollow"), q=(inp.value||"").trim();
@@ -564,7 +603,7 @@ function renderLibrary(){
   qs("libList").innerHTML=items.slice(0,libLimit).map(function(x){
     var it=x.it, isQ=x.k==="quran";
     return '<div class="lib-item"><div class="li-top"><div class="li-ref">'+(isQ?esc(I18N.ref(it.s,it.a)):esc(I18N.src(it.src))+'<span class="grade '+gradeClass(it.g)+'">'+esc(I18N.grade(it.g))+'</span>')+'</div>'+saveBtn(x.k,it.id)+'</div>'+
-      '<div class="li-text"'+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":"«"+esc(hText(it.t))+"»")+'</div>'+(isQ?enAyah(it.s,it.a):enHadith(it.te))+
+      '<div class="li-text'+(isQ?' quran':'')+'"'+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":"«"+esc(hText(it.t))+"»")+'</div>'+(isQ?enAyah(it.s,it.a):enHadith(it.te))+
       '<div class="li-note">'+(isQ?"":T("الراوي:")+" "+esc(it.r)+" · ")+esc(it.n)+'</div>'+
       '<div class="li-tags">'+it.th.filter(function(t){return RAG.themeLabel(t);}).map(function(t){return '<span class="tag soft" data-libtheme="'+t+'">'+esc(RAG.themeLabel(t))+'</span>';}).join("")+'</div></div>';
   }).join("")+(items.length>libLimit?'<div style="text-align:center;margin:14px 0;"><button class="btn-ghost" data-act="lib-more">'+T("عرض المزيد")+'</button></div>':"")+
@@ -573,7 +612,7 @@ function renderLibrary(){
 
 /* ---------------- المحفوظات ---------------- */
 function renderSaved(){
-  var h="";
+  var h=journalHTML();
   var ss=(saved.sit||[]).map(function(id){return RAG.byId("sit",id);}).filter(Boolean);
   var qq=(saved.quran||[]).map(function(id){return RAG.byId("quran",id);}).filter(Boolean);
   var hh=(saved.hadith||[]).map(function(id){return RAG.byId("hadith",id);}).filter(Boolean);
@@ -850,7 +889,7 @@ function previewDraft(){
   if(!EN && TashkeelView.available() && TashkeelView.enabled()!==draft.tk) TashkeelView.set(draft.tk);
 }
 // اسم اللغة والصوت الرجالي في ويندوز لكل لغة (لتلميح تثبيت الأصوات)
-var VOICE_HELP={ar:["عربي","العربية","نايف"], en:["English","English","David"], nl:["Nederlandse","Nederlands","Frank"], es:["español","Español","Pablo"], pt:["português","Português","Duarte"], fr:["français","Français","Paul"], ur:["اردو","اردو","Asad"], id:["Indonesia","Bahasa Indonesia","Ardi"], tr:["Türkçe","Türkçe","Tolga"]}[I18N.lang];
+var VOICE_HELP={ar:["عربي","العربية","نايف"], en:["English","English","David"], nl:["Nederlandse","Nederlands","Frank"], es:["español","Español","Pablo"], pt:["português","Português","Duarte"], fr:["français","Français","Paul"], ur:["اردو","اردو","Asad"], id:["Indonesia","Bahasa Indonesia","Ardi"], tr:["Türkçe","Türkçe","Tolga"], de:["Deutsch","Deutsch","Stefan"], ms:["Melayu","Bahasa Melayu","Rizwan"], fa:["فارسی","فارسی","Farid"], bn:["বাংলা","বাংলা","Pradeep"]}[I18N.lang];
 function renderVoiceSettings(){
   var c=draftCfg();
   var offOk=TTS.offline.supported, have=offOk?TTS.offline.downloaded():[];
@@ -911,15 +950,16 @@ if(TTS.offline.supported) TTS.offline.onChange(function(ev){
 });
 function renderSettingsSegs(){
   function mark(id,val){ document.querySelectorAll("#"+id+" button").forEach(function(b){ b.classList.toggle("active", String(b.getAttribute("data-v"))===String(val)); }); }
-  mark("segLang",draft.lang); mark("segTheme",draft.theme); mark("segFs",draft.fs); mark("segRate",draft.rate); mark("segTk",draft.tk?"1":"0");
+  mark("segTheme",draft.theme); mark("segFs",draft.fs); mark("segFf",draft.ff); mark("segRate",draft.rate); mark("segTk",draft.tk?"1":"0");
 }
 function openSettings(){
   var ai=AI.load();
-  draft={lang:I18N.lang, theme:prefs.theme||"dark", fs:prefs.fs||"1", rate:+prefs.rate||1, tk:prefs.tk!==false,
+  draft={lang:I18N.lang, theme:prefs.theme||"dark", fs:prefs.fs||"1", ff:(prefs.ff in FONTS)?prefs.ff:"andalus", rate:+prefs.rate||1, tk:prefs.tk!==false,
          voice1:prefs.voice1||"", voice2:prefs.voice2||"", reciter:TTS_CFG().reciter, key:ai.key||"", model:ai.model};
   qs("aiKey").value=draft.key;
   qs("aiModel").innerHTML=AI.MODELS.map(function(m){return '<option value="'+m.id+'"'+(m.id===draft.model?" selected":"")+'>'+esc(T(m.label))+'</option>';}).join("");
   qs("tkGroup").hidden=EN || !TashkeelView.available();
+  qs("ffGroup").hidden=I18N.lang==="ur" || I18N.lang==="fa";   // الأردية والفارسية تحتاجان خطّيهما (النستعليق/النسخ الفارسي)
   renderSettingsSegs(); renderVoiceSettings();
   qs("settingsModal").hidden=false;
   var body=document.querySelector("#settingsModal .set-body"); if(body) body.scrollTop=0;
@@ -936,7 +976,7 @@ function saveSettings(){
   var key=qs("aiKey").value.trim();
   if(key && !/^sk-ant-/.test(key)){ toast(T("صيغة المفتاح غير صحيحة (يبدأ بـ sk-ant-)")); return; }
   var d=draft; if(!d) return;
-  prefs.theme=d.theme; prefs.fs=d.fs; prefs.rate=d.rate; prefs.tk=d.tk; prefs.voice1=d.voice1; prefs.voice2=d.voice2; prefs.reciter=d.reciter;
+  prefs.theme=d.theme; prefs.fs=d.fs; prefs.ff=d.ff; prefs.rate=d.rate; prefs.tk=d.tk; prefs.voice1=d.voice1; prefs.voice2=d.voice2; prefs.reciter=d.reciter;
   store("rifqa.prefs",prefs);
   var cur=AI.load(); AI.save({key:key, model:qs("aiModel").value, auto:key?cur.auto:false});
   draft=null; qs("settingsModal").hidden=true;
@@ -960,14 +1000,14 @@ function toggleLangMenu(force){
 
 /* ---------------- مفوّض الأحداث العام ---------------- */
 document.addEventListener("click",function(e){
-  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-refine],[data-star],[data-theme-open],[data-nav],[data-sit],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],#segTheme button,#segFs button,#segRate button,#segTk button,#segLang button,[data-setlang],ol.steps li");
+  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-star],[data-theme-open],[data-focus],[data-nav],[data-sit],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],#segTheme button,#segFs button,#segRate button,#segTk button,#segFf button,[data-setlang],ol.steps li");
   if(!el) return;
   if(el.matches("ol.steps li")){ el.classList.toggle("done"); return; }
   if(el.matches(".section.collapsible > .section-title")){ toggleSection(el.parentElement); return; }
   if(el.hasAttribute("data-tts")){ ttsControl(el.getAttribute("data-tts")); return; }
   if(el.hasAttribute("data-listen")){ listen(el.getAttribute("data-listen")); return; }
-  if(el.hasAttribute("data-refine")){ refineInput(el.getAttribute("data-refine")); return; }
   if(el.hasAttribute("data-star")){ setStars(el.closest(".rate-box"), +el.getAttribute("data-star")); return; }
+  if(el.hasAttribute("data-focus")){ if(lastAnalysis) runSearch(lastAnalysis.input, el.getAttribute("data-focus")); return; }
   if(el.hasAttribute("data-theme-open")){ closeDetail(true); openTheme(el.getAttribute("data-theme-open")); return; }
   if(el.hasAttribute("data-nav")){ var nv=el.getAttribute("data-nav"); closeDetail(true); if(nv==="library") renderLibrary(); if(nv==="saved") renderSaved(); showScreen(nv); return; }
   if(el.hasAttribute("data-sit")){ openDetail(el.getAttribute("data-sit")); return; }
@@ -983,10 +1023,10 @@ document.addEventListener("click",function(e){
   if(el.hasAttribute("data-libtheme")){ libTheme=el.getAttribute("data-libtheme")||null; libLimit=40; renderLibrary(); window.scrollTo(0,0); return; }
   if(el.hasAttribute("data-close")){ qs(el.getAttribute("data-close")).hidden=true; return; }
   if(el.hasAttribute("data-setlang")){ toggleLangMenu(false); setLang(el.getAttribute("data-setlang")); return; }
-  if(el.closest("#segLang,#segTheme,#segTk,#segRate,#segFs")){
+  if(el.closest("#segTheme,#segTk,#segRate,#segFs,#segFf")){
     if(!draft) return;
     var v=el.getAttribute("data-v"), seg=el.closest(".seg").id;
-    if(seg==="segLang") draft.lang=v; else if(seg==="segTheme") draft.theme=v; else if(seg==="segFs") draft.fs=v;
+    if(seg==="segFf") draft.ff=v; else if(seg==="segTheme") draft.theme=v; else if(seg==="segFs") draft.fs=v;
     else if(seg==="segRate") draft.rate=+v; else if(seg==="segTk") draft.tk=v==="1";
     renderSettingsSegs(); previewDraft(); return;
   }
@@ -1010,6 +1050,12 @@ document.addEventListener("click",function(e){
   else if(act==="start-ai") startAI();
   else if(act==="ai-follow") followUpAI();
   else if(act==="ai-report") reportAI(+el.getAttribute("data-turn"));
+  else if(act==="ai-reading") startAIReading();
+  else if(act==="ai-report-reading") reportAIReading();
+  else if(act==="journal-save") journalToggle();
+  else if(act==="journal-open"){ var jid=el.getAttribute("data-id"), j=journal.filter(function(x){return x.id===jid;})[0]; if(j){ qs("userInput").value=j.t; runSearch(j.t, j.focus); } }
+  else if(act==="journal-del"){ var jd=el.getAttribute("data-id"); journal=journal.filter(function(x){return x.id!==jd;}); store("rifqa.journal",journal); renderSaved(); toast(T("أُزيل الموقف من مواقفي")); }
+  else if(act==="journal-clear") journalClear(el);
   else if(act==="open-settings") openSettings();
   else if(act==="copy-result") copyText(resultSummaryText());
   else if(act==="share-result"){

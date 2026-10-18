@@ -1,0 +1,370 @@
+{
+"theme": {
+"ghurba": {
+"label": "L'exil et le mal du pays",
+"insight": "Vivre loin de chez soi n'est pas, dans la voie prophétique, une faiblesse de foi ni une trahison envers sa patrie et sa famille : le Coran évoque le Prophète ﷺ quittant sa propre ville « lorsque ceux qui avaient mécru l'avaient banni », et il évoque Moïse (paix sur lui) arrivant à Madyan, étranger et seul, et se tournant vers son Seigneur : « Seigneur, j'ai grand besoin du bien que tu feras descendre vers moi. » La nostalgie de la famille et du pays est un sentiment naturel qu'on ne reproche à personne ; l'essentiel est qu'elle devienne liens, bonté et invocation, et non un retrait du présent. Par miséricorde d'Allah, « quand un serviteur tombe malade ou voyage, on lui inscrit l'équivalent de ce qu'il faisait quand il était chez lui et en bonne santé » ; ce qu'un déménagement vous empêche de faire n'est pas perdu si votre intention est sincère. Construisez donc là où vous êtes : des liens avec votre famille, une bonne compagnie, une identité dont vous êtes fier sans vous enfermer, et la rencontre des autres, comme le dit Allah : « Nous avons fait de vous des nations et des tribus, pour que vous vous entre-connaissiez. »",
+"plan": {
+"now": [
+"Appelez votre famille aujourd'hui, un appel court sans raison particulière ; garder le lien n'a pas besoin d'occasion",
+"Nommez précisément ce qui vous manque : des personnes ? une langue ? une cuisine ? l'ambiance de l'adoration ? Une nostalgie précise est plus facile à apaiser",
+"Invoquez avec les mots de Moïse lorsqu'il était étranger : « Seigneur, j'ai grand besoin du bien que tu feras descendre vers moi »"
+],
+"week": [
+"Cherchez une mosquée, un centre islamique ou une communauté proche, et assistez à au moins une rencontre",
+"Listez vos démarches administratives en attente et leurs échéances, et renseignez-vous auprès de l'organisme officiel ou d'une association d'aide juridique fiable, pas auprès de groupes de rumeurs",
+"Faites connaissance avec un voisin ou un collègue du pays ; se connaître les uns les autres est un objectif coranique et un chemin vers le sentiment d'être chez soi"
+],
+"long": [
+"Donnez au lien avec votre famille un rendez-vous fixe, comme un appel hebdomadaire, au lieu d'attendre un moment libre",
+"Transmettez à vos enfants votre langue et les histoires de votre famille avec amour, pas par contrainte, et laissez-les être fiers de leurs appartenances sans conflit",
+"De temps en temps, demandez-vous : pourquoi suis-je venu ? Cette raison tient-elle toujours ? Une décision consciente pèse moins qu'une nostalgie vague"
+]
+},
+"questions": [
+"Que vous manque-t-il vraiment : les personnes, le lieu, ou une version de vous-même qui vivait là-bas ?",
+"Qu'avez-vous construit ici qui mérite votre gratitude envers Allah malgré un début difficile ?",
+"Vivez-vous votre présent, ou le repoussez-vous jusqu'à un jour de retour incertain ?"
+],
+"avoid": [
+"Vous couper complètement de votre nouvelle société, ou vous y dissoudre jusqu'à perdre votre foi et votre identité",
+"Vous fier aux rumeurs pour les démarches officielles plutôt qu'aux sources officielles et aux spécialistes",
+"Vous accabler parce que vous êtes loin de votre famille ; être loin pour une raison légitime en gardant le lien et la bonté ne signifie pas que vous avez manqué à vos devoirs envers eux"
+],
+"help": "Pour le séjour, l'asile, les contrats et les droits, faites appel à un organisme officiel, à un avocat ou à une association d'aide juridique fiable, et ne vous fiez pas aux conseils de groupes non vérifiés.",
+"triggers": [
+"étranger",
+"à l'étranger",
+"expatrié",
+"expatriée",
+"immigré",
+"immigrée",
+"immigration",
+"émigré",
+"réfugié",
+"réfugiée",
+"asile",
+"titre de séjour",
+"carte de séjour",
+"visa",
+"papiers",
+"regroupement familial",
+"mal du pays",
+"nostalgie",
+"ma famille me manque",
+"mon pays me manque",
+"loin de ma famille",
+"loin de chez moi",
+"nouveau pays",
+"pays d'accueil",
+"mon pays d'origine",
+"je ne parle pas la langue",
+"la langue du pays",
+"intégration",
+"diaspora",
+"rentrer au pays",
+"retourner dans mon pays",
+"je n'appartiens"
+]
+},
+"transition": {
+"label": "Le changement et l'adaptation",
+"insight": "Le changement est une loi de la vie, et le Coran nous apprend à ne pas juger les commencements sur nos premières impressions : « il se peut que vous ayez de l'aversion pour une chose alors qu'elle vous est un bien. » L'Hégire elle-même fut un départ et un nouveau commencement, préparé par les moyens et la planification avec une entière confiance en Allah, et le Prophète ﷺ nous a appris à unir les deux : « Attache-la et remets-t'en à Allah. » La manière d'aborder les commencements est d'accepter la première phase de confusion sans juger tout le chemin à partir d'elle, de commencer par quelque chose de petit et de constant, car « les œuvres les plus aimées d'Allah sont les plus constantes, même si elles sont peu nombreuses », et de demander à Allah la droiture : « O notre Seigneur, donne-nous de Ta part une miséricorde ; et assure nous la droiture dans tout ce qui nous concerne. »",
+"plan": {
+"now": [
+"Notez trois choses qui ont changé et trois qui sont restées les mêmes : votre foi, vos valeurs, et ceux qui vous aiment",
+"Choisissez une petite routine stable à garder dans cette nouvelle étape : une prière à l'heure, une marche, ou un court rappel quotidien",
+"Invoquez : « O notre Seigneur, donne-nous de Ta part une miséricorde ; et assure nous la droiture dans tout ce qui nous concerne »"
+],
+"week": [
+"Faites connaissance avec une personne dans le nouveau lieu, et demandez-lui ce dont un nouvel arrivant a le plus besoin",
+"Découpez l'adaptation en petites tâches (papiers, trajets, lieux, personnes) et terminez-en une chaque jour",
+"Accordez-vous un temps d'adaptation raisonnable avant de juger la décision comme un échec"
+],
+"long": [
+"Après trois mois, faites le point : qu'ai-je appris ? Qu'est-ce qui doit être ajusté ?",
+"Donnez un sens à cette étape : quel bien pouvez-vous apporter ici qui n'était pas possible avant ?",
+"Gardez le lien avec ceux qui vous accompagnaient dans l'étape précédente ; changer ne veut pas dire rompre"
+]
+},
+"questions": [
+"Jugez-vous la nouvelle étape sur ses premiers jours confus ?",
+"Que portez-vous de l'étape précédente qui mérite de continuer ?",
+"Quel est le plus petit pas qui rendrait ce lieu ou ce rôle un peu plus vôtre ?"
+],
+"avoid": [
+"Comparer un nouveau commencement à la fin d'une étape précédente où vous aviez eu des années pour vous installer",
+"Faire marche arrière à la première difficulté avant que l'expérience ait eu son temps",
+"Négliger l'adoration et le repos sous prétexte d'être occupé par les préparatifs"
+],
+"triggers": [
+"déménagé",
+"déménagement",
+"nous avons déménagé",
+"nouvelle ville",
+"nouveau travail",
+"nouvel emploi",
+"nouvelle école",
+"nouveau départ",
+"nouvelle étape",
+"retraite",
+"à la retraite",
+"retraité",
+"retraitée",
+"après mes études",
+"après le diplôme",
+"repartir de zéro",
+"recommencer à zéro",
+"grand changement",
+"ma vie a changé",
+"m'adapter",
+"je n'arrive pas à m'adapter",
+"adaptation",
+"s'installer"
+]
+},
+"emergency": {
+"label": "Urgences et imprévus",
+"insight": "Les mauvaises surprises font partie de la nature de ce monde, et la voie prophétique enseigne trois choses lorsqu'elles arrivent : la fermeté au premier instant, car « la patience n'est qu'au premier choc » ; renoncer à se blâmer par des « si » : « Si quelque chose t'atteint, ne dis pas : “Si j'avais fait ceci et cela, il en aurait été ainsi”, mais dis : “Allah a décrété, et Il fait ce qu'Il veut” » ; puis passer aussitôt à l'action : « Recherche avec ardeur ce qui t'est utile, demande l'aide d'Allah et ne baisse pas les bras. » Elle enseigne aussi à prendre ses précautions avant l'imprévu, « Attache-la et remets-t'en à Allah », comme garder des copies de ses documents et prévoir une marge de temps et d'argent. Celui qui est touché doit demander de l'aide sans gêne, et celui qui voit quelqu'un en détresse doit l'aider, car « celui qui soulage un croyant d'une des détresses de ce monde, Allah le soulagera d'une des détresses du Jour de la Résurrection. »",
+"plan": {
+"now": [
+"Arrêtez-vous, respirez, et dites : « Allah a décrété, et Il fait ce qu'Il veut »",
+"Fixez la priorité : votre sécurité et celle de ceux qui sont avec vous d'abord, puis ce qui peut être sauvé maintenant",
+"S'il y a un danger ou une blessure, appelez immédiatement les secours, et n'hésitez pas à demander de l'aide aux personnes autour de vous"
+],
+"week": [
+"Accomplissez les démarches étape par étape : déclaration officielle, remplacement des documents, contact avec la banque ou le service concerné",
+"Notez ce que la situation vous a appris, sans reproche : quelle précaution éviterait que cela se reproduise ?",
+"Remerciez celui qui vous a aidé, ne serait-ce que d'un mot ; « Celui qui ne remercie pas les gens ne remercie pas Allah »"
+],
+"long": [
+"Gardez des copies numériques de vos documents importants, et une petite somme pour les urgences",
+"Apprenez les gestes de premiers secours ; vous pourriez sauver une vie",
+"Soyez l'aide dont les autres ont besoin dans leurs urgences"
+]
+},
+"questions": [
+"Ce qui s'est passé peut-il être réparé, ou faut-il l'accepter ? Quelle est la prochaine étape dans les deux cas ?",
+"Vous blâmez-vous avec des « si » plus que vous ne cherchez une solution ?",
+"À qui pouvez-vous demander de l'aide maintenant ?"
+],
+"avoid": [
+"Les décisions hâtives sous le choc du moment",
+"Vous blâmer ou blâmer les autres au lieu de vous concentrer sur la solution",
+"Avoir honte de demander de l'aide quand vous en avez besoin"
+],
+"help": "S'il y a un danger pour la vie, une blessure ou un incendie, appelez immédiatement le numéro d'urgence de votre pays, avant toute autre chose.",
+"triggers": [
+"urgence",
+"perdu mon passeport",
+"perdu mon portefeuille",
+"perdu mes clés",
+"perdu mon sac",
+"bagage perdu",
+"valise perdue",
+"volé",
+"on m'a volé",
+"cambriolage",
+"accident",
+"accident de voiture",
+"ma voiture est tombée en panne",
+"panne",
+"coupure de courant",
+"panne de courant",
+"raté mon avion",
+"raté mon vol",
+"raté le train",
+"vol annulé",
+"enfermé dehors",
+"incendie",
+"imprévu"
+]
+},
+"digital": {
+"label": "Vie numérique et vie privée",
+"insight": "Le monde numérique fait partie de nos vies, et les valeurs du Coran et de la Sunna le régissent comme elles régissent la vie réelle : chaque mot écrit est consigné, « Il ne prononce pas une parole sans avoir auprès de lui un observateur prêt à l'inscrire » ; une nouvelle qui circule doit être vérifiée avant d'être partagée, « Si un pervers vous apporte une nouvelle, voyez bien clair » ; la vie privée des gens est protégée, « et n'espionnez pas » ; et un seul mot peut élever quelqu'un ou le faire chuter. Il est sage de se méfier des liens et des messages douteux, « Laisse ce qui te fait douter pour ce qui ne te fait pas douter », et « le croyant ne se fait pas piquer deux fois dans le même trou ». Le temps est un bienfait que beaucoup négligent : « Il y a deux bienfaits dont beaucoup de gens sont lésés : la santé et le temps libre. » Si l'on vous menace ou vous fait chanter, ne cédez pas et n'affrontez pas cela seul : gardez les preuves et demandez de l'aide ; la faute du tort revient à celui qui le cause.",
+"plan": {
+"now": [
+"Ne répondez pas au maître chanteur ou à celui qui vous menace, n'envoyez ni argent ni photos, et gardez des captures d'écran comme preuves",
+"Changez votre mot de passe immédiatement, et activez la validation en deux étapes si votre compte est menacé",
+"Avant de partager ou de transférer une nouvelle, demandez-vous : l'ai-je vérifiée ? Accepterais-je qu'on me l'attribue ?"
+],
+"week": [
+"Revoyez les paramètres de confidentialité de vos comptes : qui voit vos publications, vos photos et vos numéros ?",
+"Supprimez ou archivez ce qui ne vous représente plus, sans peur ni reproche",
+"Fixez des moments sans téléphone : au coucher, en famille et pendant la prière"
+],
+"long": [
+"Posez une question à chaque publication : serais-je content de la voir dans le registre de mes actes ?",
+"Apprenez avec douceur à vos enfants et aux aînés de votre famille les bases de la sécurité en ligne",
+"Rendez votre valeur indépendante des « j'aime » et des abonnés ; Allah « ne regarde ni vos visages ni vos biens, mais Il regarde vos cœurs et vos actes »"
+]
+},
+"questions": [
+"Si les personnes que vous respectez lisaient ce que vous écrivez, en changeriez-vous quelque chose ?",
+"Utilisez-vous votre téléphone, ou est-ce lui qui vous utilise ? Combien de votre temps s'en va sans que vous l'ayez choisi ?",
+"Avez-vous vérifié la nouvelle avant de porter le poids de sa diffusion ?"
+],
+"avoid": [
+"Céder au chantage ou payer ; cela augmente généralement les exigences au lieu de les arrêter",
+"Partager vos mots de passe ou des photos privées avec qui que ce soit, même par confiance",
+"Diffuser une nouvelle avant de la vérifier, ou exposer en public les fautes des gens"
+],
+"help": "Si vous subissez un chantage ou des menaces, ou si vos photos sont publiées sans votre accord, ne faites pas face seul : signalez-le à la plateforme, gardez les preuves, contactez la police ou le service de lutte contre la cybercriminalité, et parlez-en à un adulte de confiance si vous êtes jeune.",
+"triggers": [
+"piraté",
+"mon compte a été piraté",
+"piratage",
+"mot de passe",
+"hameçonnage",
+"phishing",
+"lien suspect",
+"message suspect",
+"arnaque en ligne",
+"chantage",
+"sextorsion",
+"photos privées",
+"photos intimes",
+"publié ma photo",
+"partagé ma photo",
+"ma publication",
+"supprimer la publication",
+"groupe whatsapp",
+"whatsapp",
+"en ligne",
+"internet",
+"réseaux sociaux",
+"vie privée",
+"m'espionne",
+"faux compte",
+"usurpation",
+"usurpe",
+"scroller",
+"temps d'écran",
+"notifications",
+"intelligence artificielle",
+"capture d'écran",
+"message de menace",
+"cyberharcèlement"
+]
+},
+"boundaries": {
+"label": "Poser des limites et dire « non »",
+"insight": "Poser des limites n'est pas, dans la voie prophétique, de l'égoïsme ni de la dureté ; c'est donner à chacun son dû : « Ton Seigneur a un droit sur toi, ton âme a un droit sur toi, et ta famille a un droit sur toi ; donne donc à chacun son dû. » Allah Lui-même « n'impose à aucune âme une charge supérieure à sa capacité » ; vous n'êtes donc pas tenu de porter plus que vous ne pouvez par simple politesse. La vie privée est sacrée dans le Coran : « et n'espionnez pas. » Dans l'histoire de Barîra, lorsque le Prophète ﷺ intercéda pour qu'elle revienne vers son mari, il dit : « Je ne fais qu'intercéder », et elle répondit : « Je n'ai pas besoin de lui » ; il montra ainsi qu'elle avait le droit de dire non, même à son intercession. La voie prophétique unit la fermeté de la limite et la douceur des mots : « Certes, Allah est doux et Il aime la douceur », et « d'avoir de bonnes paroles avec les gens » ; un « non » doux et clair vaut mieux qu'un « oui » qui laisse rancœur et manquements.",
+"plan": {
+"now": [
+"Avant d'accepter une demande, dites : « Laissez-moi réfléchir et je vous réponds » ; ce délai vous protège d'accepter sous la pression",
+"Identifiez une limite dont vous avez besoin maintenant (temps, argent, intimité, ton employé) et formulez-la en une phrase courte et polie",
+"Rappelez-vous qu'un refus poli ne rompt pas les liens de parenté et ne gâche pas l'affection"
+],
+"week": [
+"Dites « non » dans une petite situation, avec douceur et clarté, sans longue justification : « Désolé, je ne peux pas cette fois »",
+"Si la limite est franchie à nouveau, parlez à la personne à un moment calme de l'effet que cela a sur vous, pas de ses défauts",
+"Repérez les personnes dont les demandes vous culpabilisent chaque fois que vous refusez, et demandez-vous : cette culpabilité est-elle réelle, ou une habitude ?"
+],
+"long": [
+"Gardez vos engagements proportionnés à votre énergie et à votre temps ; un peu fait avec constance vaut mieux que beaucoup qui s'arrête",
+"Apprenez à écouter sans prendre la responsabilité de résoudre chaque problème",
+"Respectez les limites des autres comme vous aimeriez qu'on respecte les vôtres"
+]
+},
+"questions": [
+"Quelle demande acceptez-vous toujours pour ensuite le regretter ? Pourquoi est-il si difficile de la refuser ?",
+"Craignez-vous davantage le mécontentement de l'autre que vous ne vous souciez de votre droit, et du droit de votre famille, sur vous ?",
+"Comment dire « non » d'une manière qui préserve à la fois l'affection et la dignité ?"
+],
+"avoid": [
+"Confondre limite et rupture ; une limite organise la relation, elle ne la détruit pas",
+"Refuser avec dureté ou ironie ; la fermeté n'a pas besoin de blesser",
+"Les longues excuses et les justifications excessives, jusqu'à ce que la limite paraisse toujours négociable"
+],
+"help": "Si les limites sont franchies jusqu'au tort, au harcèlement ou à un contrôle permanent, ce n'est plus une question de politesse : demandez de l'aide à une personne de confiance ou à un service spécialisé.",
+"triggers": [
+"limites",
+"mes limites",
+"poser des limites",
+"fixer des limites",
+"dire non",
+"je n'arrive pas à dire non",
+"je ne sais pas dire non",
+"intrusif",
+"intrusive",
+"s'immisce",
+"se mêle de ma vie",
+"questions personnelles",
+"sans demander",
+"sans permission",
+"sans mon accord",
+"utilise mes affaires",
+"profite de moi",
+"m'épuise",
+"me demande toujours",
+"après le travail",
+"m'appelle la nuit",
+"mon espace",
+"besoin d'espace",
+"à mes dépens"
+]
+},
+"self_worth": {
+"label": "L'estime de soi",
+"insight": "Dans le Coran et la Sunna, la valeur d'une personne ne se mesure ni à l'apparence, ni aux notes, ni aux « j'aime » : « Certes, Allah ne regarde ni vos visages ni vos biens, mais Il regarde vos cœurs et vos actes », et « Le plus noble d'entre vous, auprès d'Allah, est le plus pieux. » Cela vous libère de la course à l'approbation des gens et vous place devant un critère juste que vous pouvez atteindre. La voie prophétique équilibre deux choses : une confiance qui pousse à l'effort, « Le croyant fort est meilleur et plus aimé d'Allah que le croyant faible, et en chacun il y a du bien. Recherche avec ardeur ce qui t'est utile, demande l'aide d'Allah et ne baisse pas les bras », et une humilité qui protège de la vanité, « Ne vantez pas vous-mêmes votre pureté. » Quand le Prophète ﷺ eut peur lors de la première révélation, Khadîja lui dit : « Jamais ! Par Allah, Allah ne t'humiliera jamais » ; une parole sincère et bienveillante rend à l'âme sa stabilité, et il faut parfois se la dire à soi-même.",
+"plan": {
+"now": [
+"Notez trois choses que vous avez faites cette semaine avec sincérité et effort, pas avec un résultat éclatant",
+"Quand vous entendez en vous « je suis nul », demandez-vous : le dirais-je à un ami à ma place ?",
+"Invoquez : « Ô Allah, accorde à mon âme sa piété et purifie-la, car Tu es le meilleur à la purifier »"
+],
+"week": [
+"Choisissez une compétence et exercez-vous un peu chaque jour, en acceptant d'être débutant",
+"Réduisez votre exposition à ce qui vous pousse à vous mépriser : comptes, comparaisons, et personnes qui critiquent sans cesse",
+"Demandez à quelqu'un qui vous aime et qui est sincère avec vous de vous dire les forces qu'il voit en vous"
+],
+"long": [
+"Bâtissez votre valeur sur ce qui dure : votre intention, votre caractère et vos efforts, pas sur les éloges changeants des gens",
+"Célébrez les petits progrès ; « les œuvres les plus aimées d'Allah sont les plus constantes, même si elles sont peu nombreuses »",
+"Si une critique dure de l'enfance parle encore en vous, la comprendre avec un spécialiste est un pas courageux, pas une faiblesse"
+]
+},
+"questions": [
+"Qui a fixé le critère avec lequel vous vous mesurez ? Est-ce un critère juste ?",
+"Que reste-t-il de vous si les notes, les « j'aime » et les postes disparaissent ?",
+"Pour vous, quelle est la différence entre l'humilité et le mépris de soi ?"
+],
+"avoid": [
+"Lier votre valeur à votre dernier résultat, à votre apparence ou à l'avis d'une seule personne",
+"Attendre la perfection avant de commencer ; le perfectionnisme est souvent une peur déguisée",
+"Vous mépriser au nom de l'humilité ; l'humilité consiste à ne pas regarder les autres de haut, non à vous humilier"
+],
+"help": "Si le mépris de soi devient constant, ou s'accompagne d'isolement ou d'idées de vous faire du mal, consultez un professionnel de santé mentale ; se soigner fait partie de prendre les moyens.",
+"triggers": [
+"estime de soi",
+"confiance en moi",
+"confiance en soi",
+"manque de confiance",
+"pas confiance en moi",
+"je doute de moi",
+"je me déteste",
+"je déteste mon physique",
+"mon physique",
+"mon apparence",
+"mon corps",
+"je ne mérite pas",
+"pas assez bien",
+"je suis nul",
+"je suis nulle",
+"je suis un échec",
+"sans valeur",
+"perfectionnisme",
+"perfectionniste",
+"syndrome de l'imposteur",
+"timide",
+"timidité",
+"je bégaie",
+"bégaiement",
+"peur de l'échec",
+"peur d'échouer",
+"me prouver"
+]
+}
+}
+}

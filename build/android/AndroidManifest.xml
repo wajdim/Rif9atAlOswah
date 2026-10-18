@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rifqa.aluswa">
+    package="com.Dja.RifqatAlOswah">
     <!-- الإنترنت اختياري: تلاوات القراء المسجلة، والتعميق بالذكاء الاصطناعي بمفتاح المستخدم -->
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- أندرويد 11+: إظهار محركات النطق للتطبيق (القراءة الصوتية) -->

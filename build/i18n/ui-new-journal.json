@@ -1,0 +1,77 @@
+{
+ "لم أفهم موضوع حالتك بوضوح. اختر الأقرب لما تمر به لأعيد القراءة:": {
+  "en": "I couldn't tell clearly what your situation is about. Choose the closest topic and I'll read it again:",
+  "fr": "Je n'ai pas bien saisi le sujet de votre situation. Choisissez le thème le plus proche et je la relirai :",
+  "nl": "Ik kon niet goed opmaken waar je situatie over gaat. Kies het onderwerp dat er het dichtst bij komt, dan lees ik het opnieuw:",
+  "es": "No he entendido con claridad de qué trata tu situación. Elige el tema más cercano y la leeré de nuevo:",
+  "pt": "Não percebi com clareza de que trata a sua situação. Escolha o tema mais próximo e eu volto a lê-la:",
+  "ur": "میں واضح طور پر نہیں سمجھ سکا کہ آپ کا معاملہ کس بارے میں ہے۔ قریب ترین موضوع چنیں تاکہ میں دوبارہ پڑھوں:",
+  "id": "Aku belum menangkap dengan jelas tentang apa situasimu. Pilih topik yang paling dekat agar aku membacanya lagi:",
+  "tr": "Durumunun neyle ilgili olduğunu net anlayamadım. En yakın konuyu seç, yeniden okuyayım:"
+ },
+ "ركّزتُ القراءة على «{0}» كما اخترت.": {
+  "en": "I focused the reading on “{0}”, as you chose.",
+  "fr": "J'ai centré la lecture sur « {0} », comme vous l'avez choisi.",
+  "nl": "Ik heb de lezing gericht op „{0}”, zoals je koos.",
+  "es": "He centrado la lectura en «{0}», como elegiste.",
+  "pt": "Centrei a leitura em «{0}», como escolheu.",
+  "ur": "آپ کے انتخاب کے مطابق میں نے قراءت «{0}» پر مرکوز کی۔",
+  "id": "Aku memfokuskan bacaan pada “{0}”, sesuai pilihanmu.",
+  "tr": "Seçtiğin gibi okumayı “{0}” üzerine yoğunlaştırdım."
+ },
+ "احفظ في مواقفي": {
+  "en": "Save to My situations", "fr": "Enregistrer dans Mes situations", "nl": "Bewaar in Mijn situaties",
+  "es": "Guardar en Mis situaciones", "pt": "Guardar em As minhas situações", "ur": "میرے معاملات میں محفوظ کریں",
+  "id": "Simpan ke Situasiku", "tr": "Durumlarıma kaydet"
+ },
+ "محفوظ في مواقفي": {
+  "en": "Saved in My situations", "fr": "Enregistré dans Mes situations", "nl": "Bewaard in Mijn situaties",
+  "es": "Guardado en Mis situaciones", "pt": "Guardado em As minhas situações", "ur": "میرے معاملات میں محفوظ ہے",
+  "id": "Tersimpan di Situasiku", "tr": "Durumlarımda kayıtlı"
+ },
+ "مواقفي": {
+  "en": "My situations", "fr": "Mes situations", "nl": "Mijn situaties", "es": "Mis situaciones",
+  "pt": "As minhas situações", "ur": "میرے معاملات", "id": "Situasiku", "tr": "Durumlarım"
+ },
+ "تبقى مواقفك على هذا الجهاز فقط، ولا تُرسل إلى أي مكان.": {
+  "en": "Your situations stay on this device only and are never sent anywhere.",
+  "fr": "Vos situations restent uniquement sur cet appareil et ne sont envoyées nulle part.",
+  "nl": "Je situaties blijven alleen op dit apparaat en worden nergens naartoe gestuurd.",
+  "es": "Tus situaciones se quedan solo en este dispositivo y no se envían a ningún sitio.",
+  "pt": "As suas situações ficam apenas neste dispositivo e não são enviadas para lado nenhum.",
+  "ur": "آپ کے معاملات صرف اسی آلے پر رہتے ہیں اور کہیں نہیں بھیجے جاتے۔",
+  "id": "Situasimu hanya tersimpan di perangkat ini dan tidak dikirim ke mana pun.",
+  "tr": "Durumların yalnızca bu cihazda kalır ve hiçbir yere gönderilmez."
+ },
+ "افتح القراءة": {
+  "en": "Open the reading", "fr": "Ouvrir la lecture", "nl": "Open de lezing", "es": "Abrir la lectura",
+  "pt": "Abrir a leitura", "ur": "قراءت کھولیں", "id": "Buka bacaan", "tr": "Okumayı aç"
+ },
+ "حذف كل مواقفي": {
+  "en": "Delete all my situations", "fr": "Supprimer toutes mes situations", "nl": "Verwijder al mijn situaties",
+  "es": "Eliminar todas mis situaciones", "pt": "Apagar todas as minhas situações", "ur": "میرے تمام معاملات حذف کریں",
+  "id": "Hapus semua situasiku", "tr": "Tüm durumlarımı sil"
+ },
+ "اضغط مرة أخرى لحذف كل مواقفك": {
+  "en": "Tap again to delete all your situations", "fr": "Touchez encore pour supprimer toutes vos situations",
+  "nl": "Tik nogmaals om al je situaties te verwijderen", "es": "Toca otra vez para eliminar todas tus situaciones",
+  "pt": "Toque de novo para apagar todas as suas situações", "ur": "تمام معاملات حذف کرنے کے لیے دوبارہ دبائیں",
+  "id": "Ketuk sekali lagi untuk menghapus semua situasimu", "tr": "Tüm durumlarını silmek için tekrar dokun"
+ },
+ "حُذفت مواقفك من الجهاز": {
+  "en": "Your situations were deleted from this device", "fr": "Vos situations ont été supprimées de l'appareil",
+  "nl": "Je situaties zijn van dit apparaat verwijderd", "es": "Tus situaciones se eliminaron del dispositivo",
+  "pt": "As suas situações foram apagadas do dispositivo", "ur": "آپ کے معاملات آلے سے حذف ہو گئے",
+  "id": "Situasimu telah dihapus dari perangkat", "tr": "Durumların cihazdan silindi"
+ },
+ "حُفظ الموقف في مواقفي": {
+  "en": "Saved to My situations", "fr": "Situation enregistrée dans Mes situations", "nl": "Bewaard in Mijn situaties",
+  "es": "Guardada en Mis situaciones", "pt": "Guardada em As minhas situações", "ur": "معاملہ میرے معاملات میں محفوظ ہو گیا",
+  "id": "Tersimpan di Situasiku", "tr": "Durumlarına kaydedildi"
+ },
+ "أُزيل الموقف من مواقفي": {
+  "en": "Removed from My situations", "fr": "Retirée de Mes situations", "nl": "Verwijderd uit Mijn situaties",
+  "es": "Quitada de Mis situaciones", "pt": "Removida de As minhas situações", "ur": "معاملہ میرے معاملات سے ہٹا دیا گیا",
+  "id": "Dihapus dari Situasiku", "tr": "Durumlarından kaldırıldı"
+ }
+}

@@ -1,0 +1,922 @@
+{
+ "lexicon": {
+  "emotion": {
+   "anger": {
+    "label": "marah",
+    "words": [
+     "marah",
+     "geram",
+     "kecewa dan marah",
+     "radang",
+     "berang",
+     "meluat",
+     "benci",
+     "dendam",
+     "sakit hati dengan",
+     "bengang",
+     "naik angin",
+     "panas hati",
+     "menyampah",
+     "jengkel"
+    ]
+   },
+   "sadness": {
+    "label": "sedih",
+    "words": [
+     "sedih",
+     "menangis",
+     "nangis",
+     "sakit hati",
+     "terluka",
+     "hancur",
+     "patah hati",
+     "kecewa",
+     "murung",
+     "depresi",
+     "kemurungan",
+     "berduka",
+     "pilu",
+     "hiba",
+     "remuk"
+    ]
+   },
+   "fear": {
+    "label": "takut dan risau",
+    "words": [
+     "takut",
+     "risau",
+     "bimbang",
+     "cemas",
+     "gelisah",
+     "panik",
+     "stres",
+     "tertekan",
+     "was-was",
+     "gementar",
+     "resah",
+     "overthinking",
+     "fikir banyak"
+    ]
+   },
+   "guilt": {
+    "label": "rasa bersalah dan penyesalan",
+    "words": [
+     "rasa bersalah",
+     "bersalah",
+     "menyesal",
+     "penyesalan",
+     "salah saya",
+     "salah aku",
+     "hati nurani",
+     "saya menyesal",
+     "aku menyesal"
+    ]
+   },
+   "shame": {
+    "label": "malu dan dihina",
+    "words": [
+     "malu",
+     "dimalukan",
+     "dihina",
+     "direndahkan",
+     "dipandang rendah",
+     "diperlekehkan",
+     "dimaki",
+     "maruah",
+     "aib"
+    ]
+   },
+   "loneliness": {
+    "label": "kesunyian",
+    "words": [
+     "sunyi",
+     "kesunyian",
+     "keseorangan",
+     "sendirian",
+     "seorang diri",
+     "tiada siapa",
+     "tak ada siapa",
+     "terasing",
+     "dipinggirkan",
+     "diabaikan",
+     "tidak dipedulikan"
+    ]
+   },
+   "despair": {
+    "label": "putus asa",
+    "words": [
+     "putus asa",
+     "berputus asa",
+     "menyerah",
+     "tiada harapan",
+     "tak ada harapan",
+     "sia-sia",
+     "tiada guna",
+     "tak guna",
+     "tidak berguna",
+     "tak berguna",
+     "gagal dalam hidup",
+     "tidak bernilai",
+     "dah tak larat",
+     "buntu"
+    ]
+   },
+   "confusion": {
+    "label": "keliru",
+    "words": [
+     "keliru",
+     "ragu",
+     "ragu-ragu",
+     "serba salah",
+     "buntu fikiran",
+     "tidak tahu",
+     "tak tahu",
+     "bingung",
+     "dilema",
+     "berbelah bahagi"
+    ]
+   },
+   "exhaustion": {
+    "label": "keletihan",
+    "words": [
+     "letih",
+     "penat",
+     "lesu",
+     "keletihan",
+     "kepenatan",
+     "burnout",
+     "tiada tenaga",
+     "tak larat",
+     "kehabisan tenaga",
+     "lelah"
+    ]
+   },
+   "jealousy": {
+    "label": "cemburu dan iri",
+    "words": [
+     "cemburu",
+     "iri hati",
+     "iri",
+     "dengki",
+     "hasad"
+    ]
+   },
+   "betrayal": {
+    "label": "rasa dikhianati",
+    "words": [
+     "dikhianati",
+     "mengkhianati",
+     "khianat",
+     "ditipu",
+     "dibohongi",
+     "curang",
+     "berlaku curang",
+     "menikam dari belakang",
+     "duri dalam daging",
+     "mungkir janji"
+    ]
+   },
+   "love": {
+    "label": "keterikatan dan kasih",
+    "words": [
+     "sayang",
+     "cinta",
+     "mencintai",
+     "menyayangi",
+     "rindu",
+     "kasih",
+     "kasihkan"
+    ]
+   },
+   "joy": {
+    "label": "gembira dan syukur",
+    "words": [
+     "gembira",
+     "bahagia",
+     "seronok",
+     "bersyukur",
+     "alhamdulillah",
+     "berjaya",
+     "lega",
+     "tenang"
+    ]
+   }
+  },
+  "relation": {
+   "spouse": {
+    "label": "pasangan anda",
+    "words": [
+     "suami saya",
+     "isteri saya",
+     "suamiku",
+     "isteriku",
+     "suami aku",
+     "isteri aku",
+     "suami",
+     "isteri",
+     "pasangan",
+     "zaujah",
+     "orang rumah"
+    ]
+   },
+   "fiance": {
+    "label": "tunang anda",
+    "words": [
+     "tunang",
+     "tunang saya",
+     "bakal suami",
+     "bakal isteri"
+    ]
+   },
+   "parent": {
+    "label": "ibu bapa anda",
+    "words": [
+     "ibu saya",
+     "bapa saya",
+     "ayah saya",
+     "mak saya",
+     "emak",
+     "mak",
+     "abah",
+     "ibu",
+     "bapa",
+     "ayah",
+     "ibu bapa",
+     "mama",
+     "papa"
+    ]
+   },
+   "child": {
+    "label": "anak-anak anda",
+    "words": [
+     "anak saya",
+     "anakku",
+     "anak lelaki",
+     "anak perempuan",
+     "anak-anak",
+     "anak"
+    ]
+   },
+   "sibling": {
+    "label": "adik-beradik anda",
+    "words": [
+     "abang saya",
+     "kakak saya",
+     "adik saya",
+     "abang",
+     "kakak",
+     "adik",
+     "adik-beradik",
+     "adik beradik"
+    ]
+   },
+   "relative": {
+    "label": "saudara-mara anda",
+    "words": [
+     "pakcik",
+     "makcik",
+     "pak cik",
+     "mak cik",
+     "sepupu",
+     "mentua",
+     "ibu mentua",
+     "bapa mentua",
+     "ipar",
+     "biras",
+     "saudara-mara",
+     "saudara mara",
+     "keluarga besar",
+     "kerabat"
+    ]
+   },
+   "boss": {
+    "label": "majikan anda",
+    "words": [
+     "bos",
+     "majikan",
+     "pengurus",
+     "ketua",
+     "penyelia",
+     "atasan"
+    ]
+   },
+   "colleague": {
+    "label": "rakan sekerja anda",
+    "words": [
+     "rakan sekerja",
+     "kawan sekerja",
+     "teman sepejabat",
+     "kolega"
+    ]
+   },
+   "friend": {
+    "label": "kawan anda",
+    "words": [
+     "kawan saya",
+     "kawanku",
+     "kawan baik",
+     "sahabat",
+     "kawan",
+     "rakan"
+    ]
+   },
+   "neighbor": {
+    "label": "jiran anda",
+    "words": [
+     "jiran",
+     "jiran tetangga",
+     "jiran saya"
+    ]
+   },
+   "employee": {
+    "label": "mereka di bawah tanggungjawab anda",
+    "words": [
+     "pekerja saya",
+     "staf saya",
+     "orang bawahan",
+     "pasukan saya",
+     "pembantu rumah",
+     "anak buah"
+    ]
+   },
+   "teacher": {
+    "label": "guru anda",
+    "words": [
+     "guru",
+     "cikgu",
+     "pensyarah",
+     "ustaz",
+     "ustazah",
+     "pengajar"
+    ]
+   },
+   "self": {
+    "label": "diri anda sendiri",
+    "words": [
+     "diri sendiri",
+     "diri saya",
+     "diriku"
+    ]
+   }
+  },
+  "intensifiers": [
+   "sangat",
+   "amat",
+   "terlalu",
+   "sangat-sangat",
+   "betul-betul",
+   "teramat",
+   "selalu",
+   "setiap hari",
+   "bertahun-tahun",
+   "berbulan-bulan",
+   "tak tahan lagi",
+   "tidak tahan lagi",
+   "sudah tidak tahan",
+   "dah tak tahan",
+   "tak sanggup lagi"
+  ],
+  "selfFault": [
+   "salah saya",
+   "salah aku",
+   "memang salah saya",
+   "saya yang bersalah",
+   "saya telah bersalah",
+   "saya buat silap",
+   "saya tersilap",
+   "saya telah berbohong",
+   "saya sudah berbohong",
+   "saya yang berbohong",
+   "saya telah menipu",
+   "saya telah menyakiti",
+   "saya yang menyakiti",
+   "saya telah memarahi",
+   "saya telah memukul",
+   "saya telah menengking",
+   "saya telah curang",
+   "saya yang curang",
+   "saya telah mengkhianati",
+   "saya telah mengumpat",
+   "saya telah menzalimi",
+   "saya telah mencuri",
+   "saya telah menghina",
+   "nak minta maaf",
+   "ingin memohon maaf",
+   "saya berdosa",
+   "aku bersalah",
+   "aku telah berbohong",
+   "saya menyesal atas apa yang saya buat"
+  ],
+  "negators": [
+   "tidak",
+   "tak",
+   "bukan",
+   "belum",
+   "tiada",
+   "tanpa",
+   "jangan",
+   "tidaklah",
+   "takkan",
+   "tak pernah"
+  ],
+  "negatorsPost": [],
+  "need": {
+   "safety": [
+    "mengugut saya",
+    "dia mengugut",
+    "dalam bahaya",
+    "takut dengan dia",
+    "takut padanya",
+    "memukul saya",
+    "dipukul",
+    "nak lari",
+    "ingin lari",
+    "tidak selamat",
+    "tak selamat"
+   ],
+   "decision": [
+    "patutkah saya",
+    "perlukah saya",
+    "adakah saya patut",
+    "adakah saya perlu",
+    "tak tahu sama ada",
+    "tidak tahu sama ada",
+    "tidak dapat membuat keputusan",
+    "tak boleh buat keputusan",
+    "memilih antara",
+    "pilih antara",
+    "perlu membuat keputusan",
+    "maafkan atau"
+   ],
+   "repair": [
+    "minta maaf",
+    "memohon maaf",
+    "memperbaiki",
+    "membaiki",
+    "berdamai",
+    "berbaik semula",
+    "rujuk",
+    "bertaubat",
+    "menebus"
+   ],
+   "howto": [
+    "bagaimana cara",
+    "bagaimana saya",
+    "macam mana",
+    "apa yang perlu saya buat",
+    "apa patut saya buat",
+    "apa yang boleh",
+    "nasihat",
+    "tolong bantu",
+    "tolong saya",
+    "langkah apa"
+   ],
+   "why": [
+    "kenapa saya",
+    "mengapa saya",
+    "kenapa",
+    "mengapa",
+    "apa hikmahnya",
+    "apa maknanya"
+   ],
+   "comfort": [
+    "tiada siapa faham",
+    "tak ada siapa faham",
+    "tiada siapa mendengar",
+    "perlukan seseorang",
+    "nak luahkan",
+    "ingin meluahkan",
+    "luahan",
+    "tak kuat lagi",
+    "sudah tidak sanggup",
+    "tak mampu lagi"
+   ]
+  },
+  "time": {
+   "ongoing": [
+    "bertahun-tahun",
+    "berbulan-bulan",
+    "sudah lama",
+    "dah lama",
+    "setiap hari",
+    "setiap malam",
+    "selalu",
+    "sentiasa",
+    "berterusan",
+    "berulang kali",
+    "asyik"
+   ],
+   "future": [
+    "esok",
+    "minggu depan",
+    "bulan depan",
+    "tak lama lagi",
+    "takut kalau",
+    "bimbang kalau",
+    "risau kalau",
+    "bagaimana jika",
+    "peperiksaan",
+    "temu duga",
+    "akan berlaku"
+   ],
+   "past": [
+    "semalam",
+    "kelmarin",
+    "minggu lepas",
+    "bulan lepas",
+    "tahun lepas",
+    "beberapa hari lalu",
+    "bertahun dahulu",
+    "meninggal dunia",
+    "meninggal",
+    "arwah",
+    "sudah berakhir",
+    "sudah berlaku",
+    "bercerai"
+   ]
+  },
+  "analysis": {
+   "absolute": [
+    "tiada siapa",
+    "tak ada siapa",
+    "tidak ada sesiapa",
+    "semua orang benci",
+    "semua orang membenci",
+    "semua orang menentang",
+    "tak pernah sekali pun",
+    "tidak pernah sekali pun",
+    "tiada yang berjaya",
+    "tak ada yang menjadi"
+   ],
+   "absoluteSoft": [
+    "tidak pernah",
+    "tak pernah",
+    "selalu",
+    "sentiasa",
+    "setiap kali",
+    "semua orang"
+   ],
+   "label": [
+    "saya gagal",
+    "aku gagal",
+    "saya bodoh",
+    "aku bodoh",
+    "saya tak berguna",
+    "saya tidak berguna",
+    "aku tak berguna",
+    "saya tidak bernilai",
+    "saya beban",
+    "aku beban",
+    "saya orang jahat",
+    "saya teruk",
+    "ibu yang teruk",
+    "ayah yang teruk",
+    "saya bukan sesiapa",
+    "aku bukan sesiapa",
+    "tidak cukup baik",
+    "tak cukup baik"
+   ],
+   "catastrophe": [
+    "hidup saya hancur",
+    "hidup aku hancur",
+    "hidup saya musnah",
+    "hidup saya sudah berakhir",
+    "semuanya hancur",
+    "semuanya musnah",
+    "semuanya hilang",
+    "masa depan saya hancur",
+    "bencana",
+    "mustahil",
+    "tak akan berubah",
+    "tidak akan berubah",
+    "tiada jalan keluar",
+    "tak ada jalan keluar"
+   ],
+   "mindread": [
+    "benci saya",
+    "benci aku",
+    "membenci saya",
+    "fikir saya",
+    "ingat saya",
+    "anggap saya",
+    "pandang rendah saya",
+    "merendahkan saya",
+    "mentertawakan saya",
+    "gelakkan saya",
+    "menghakimi saya"
+   ],
+   "should": [
+    "saya mesti",
+    "aku mesti",
+    "saya sepatutnya",
+    "aku sepatutnya",
+    "saya patut",
+    "sepatutnya saya",
+    "saya kena"
+   ],
+   "compare": [
+    "lebih baik daripada saya",
+    "lebih baik dari saya",
+    "semua orang ada",
+    "semua kawan saya",
+    "kurang daripada orang lain",
+    "berbanding orang lain",
+    "macam orang lain",
+    "seperti orang lain",
+    "semua orang dah kahwin"
+   ],
+   "selfblame": [
+    "semua salah saya",
+    "semua salah aku",
+    "kalaulah saya",
+    "kalaulah aku",
+    "kalau saja saya",
+    "sepatutnya saya tak"
+   ],
+   "faith": [
+    "alhamdulillah",
+    "ya allah",
+    "ya rabb",
+    "saya berdoa",
+    "aku berdoa",
+    "sudah berdoa",
+    "solat",
+    "insyaallah",
+    "insya allah",
+    "istikharah",
+    "astaghfirullah",
+    "subhanallah"
+   ],
+   "effort": [
+    "sudah mencuba",
+    "dah cuba",
+    "saya cuba",
+    "saya mencuba",
+    "sudah berusaha",
+    "saya berusaha",
+    "kami cuba",
+    "saya dah buat yang terbaik"
+   ],
+   "patience": [
+    "sudah bersabar",
+    "dah bersabar",
+    "saya bersabar",
+    "sudah bertahan",
+    "saya bertahan",
+    "saya tahan"
+   ],
+   "sleep": [
+    "tak boleh tidur",
+    "tidak boleh tidur",
+    "susah tidur",
+    "sukar tidur",
+    "insomnia",
+    "mimpi buruk",
+    "kurang tidur",
+    "tak tidur"
+   ],
+   "body": [
+    "sakit kepala",
+    "pening",
+    "berdebar-debar",
+    "jantung berdebar",
+    "dada sesak",
+    "sesak dada",
+    "tiada selera makan",
+    "hilang selera",
+    "tak lalu makan",
+    "menggigil",
+    "sakit perut",
+    "gastrik"
+   ]
+  },
+  "reading": {
+   "factors": {
+    "comfort": [
+     "rasa selesa dengannya",
+     "selesa dengan dia",
+     "rasa tenang dengannya",
+     "tenang bersamanya",
+     "rasa selamat dengannya",
+     "saya suka dia",
+     "aku suka dia"
+    ],
+    "character": [
+     "soleh",
+     "solehah",
+     "warak",
+     "kuat agama",
+     "beragama",
+     "berakhlak baik",
+     "sopan",
+     "jaga solat",
+     "baik hati",
+     "beradab"
+    ],
+    "opportunity": [
+     "tawaran kerja",
+     "gaji lebih baik",
+     "gaji lebih tinggi",
+     "naik pangkat",
+     "biasiswa",
+     "peluang",
+     "kerja lebih baik",
+     "diterima masuk",
+     "dapat tawaran"
+    ],
+    "history": [
+     "bertahun-tahun bersama",
+     "anak-anak kami",
+     "sejarah panjang",
+     "sudah lama berkahwin"
+    ],
+    "money": [
+     "pendapatan terhad",
+     "gaji kecil",
+     "dia miskin",
+     "sedikit wang",
+     "dari segi kewangan",
+     "menganggur",
+     "tak bekerja",
+     "tidak bekerja",
+     "hutang",
+     "berhutang",
+     "tak mampu"
+    ],
+    "family": [
+     "ibu bapa saya menolak",
+     "keluarga saya menolak",
+     "keluarga saya tak setuju",
+     "keluarga saya tidak setuju",
+     "ibu bapa saya tak setuju",
+     "ibu bapa saya tidak setuju",
+     "ibu bapa saya ragu",
+     "ayah saya menolak",
+     "mak saya menolak",
+     "ibu saya menolak",
+     "keluarga tak restu"
+    ],
+    "distance": [
+     "negara lain",
+     "bandar lain",
+     "negeri lain",
+     "jauh dari keluarga",
+     "jauh dari mak",
+     "jauh dari ibu bapa",
+     "ke luar negara",
+     "sejak berpindah",
+     "selepas berpindah"
+    ],
+    "age": [
+     "umur saya",
+     "usia saya",
+     "semakin tua",
+     "terlalu tua",
+     "masa terus berjalan",
+     "sudah lanjut usia"
+    ],
+    "people": [
+     "apa orang kata",
+     "kata orang",
+     "mulut orang",
+     "pandangan orang",
+     "masyarakat",
+     "nama baik saya",
+     "reputasi"
+    ],
+    "past": [
+     "pengalaman lepas",
+     "kali terakhir",
+     "perkahwinan pertama saya",
+     "bercerai",
+     "pernah disakiti",
+     "pernah dikecewakan"
+    ],
+    "doubts": [
+     "panas baran",
+     "suka berbohong",
+     "kedekut",
+     "kuat cemburu",
+     "posesif",
+     "moody",
+     "tak solat",
+     "tidak solat"
+    ],
+    "unknown": [
+     "belum kenal dia dengan baik",
+     "tak berapa kenal",
+     "baru jumpa sekali",
+     "jarang bercakap"
+    ],
+    "duties": [
+     "tanggungjawab",
+     "sudah ada anak",
+     "duda",
+     "janda",
+     "ibu tunggal"
+    ],
+    "regret": [
+     "menyesal",
+     "akan menyesal",
+     "takut kehilangan",
+     "kehilangan dia"
+    ],
+    "pressure": [
+     "mendesak saya",
+     "dipaksa",
+     "memaksa",
+     "mendesak",
+     "tergesa-gesa",
+     "tertekan"
+    ],
+    "desire": [
+     "saya mahukan dia",
+     "aku mahukan dia",
+     "mahu berkahwin dengannya",
+     "hati saya bersamanya",
+     "saya impikan"
+    ],
+    "power": [
+     "majikan saya",
+     "bos saya",
+     "pengurus saya",
+     "ketua saya",
+     "penyelia saya",
+     "atasan"
+    ],
+    "livelihood": [
+     "takut hilang kerja",
+     "takut dipecat",
+     "takut dibuang kerja",
+     "tak berani membalas",
+     "tidak berani menjawab",
+     "tak berani melawan"
+    ],
+    "harm": [
+     "memukul saya",
+     "pukul saya",
+     "menghina saya",
+     "memaki saya",
+     "merendahkan saya",
+     "keganasan",
+     "dera",
+     "menyakiti saya"
+    ]
+   },
+   "options": {
+    "accept_refuse": [
+     "menerima",
+     "menolak",
+     "terima dia",
+     "tolak dia",
+     "kata ya",
+     "kata tidak",
+     "terima pinangan",
+     "tolak pinangan"
+    ],
+    "stay_leave": [
+     "kekal dengannya",
+     "tinggalkan dia",
+     "bercerai",
+     "cerai",
+     "berpisah",
+     "putus"
+    ],
+    "forgive_cut": [
+     "memaafkan",
+     "maafkan dia",
+     "putus hubungan",
+     "menjauhinya",
+     "berhenti bercakap",
+     "pulaukan"
+    ],
+    "speak_silent": [
+     "berterus terang",
+     "tegur dia",
+     "beritahu dia",
+     "bercakap dengannya",
+     "diam sahaja",
+     "diam"
+    ],
+    "move_stay": [
+     "ke luar negara",
+     "merantau",
+     "berpindah",
+     "pindah",
+     "balik kampung",
+     "pulang ke negara saya",
+     "kekal di sini"
+    ],
+    "continue_quit": [
+     "meletak jawatan",
+     "berhenti kerja",
+     "resign",
+     "berhenti belajar",
+     "tukar kursus",
+     "sambung belajar",
+     "teruskan"
+    ]
+   }
+  }
+ }
+}

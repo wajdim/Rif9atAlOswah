@@ -1,0 +1,1396 @@
+{
+ "_about": "Gold set for build/tests/test-understanding.js. 'expect' lists acceptable topics; the first detected topic must be one of them. Messages are paraphrases written for testing (not copied from data-life.js).",
+ "cases": [
+  {
+   "lang": "ar",
+   "text": "صار لي ثلاث سنين ما شفت امي وابوي، التذاكر غالية والشغل ما يسمح لي بالسفر",
+   "expect": [
+    "ghurba",
+    "parents",
+    "kin"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أعيش في أوروبا منذ سنتين وأشعر أنني لا أنتمي لا إلى هنا ولا إلى بلدي",
+   "expect": [
+    "ghurba",
+    "loneliness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "مرضت وأنا وحدي في بلد الغربة ولم يكن عندي من يعتني بي",
+   "expect": [
+    "ghurba",
+    "illness",
+    "loneliness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أولادي يكبرون هنا ويتكلمون لغة البلد فقط، وأخاف أن ينسوا العربية وأصلهم",
+   "expect": [
+    "ghurba",
+    "parenting"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "تأخرت أوراق إقامتي ولا أعرف هل سيجددونها، وأنا قلق جدا على عملي",
+   "expect": [
+    "ghurba",
+    "anxiety",
+    "work"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "وصلتني رسالة من البلدية بلغة لا أفهمها وفيها موعد نهائي للرد",
+   "expect": [
+    "ghurba",
+    "anxiety"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "شهادتي لم يعترفوا بها هنا، فصرت أشتغل في مطعم بعد أن كنت مهندسا",
+   "expect": [
+    "ghurba",
+    "work",
+    "self_worth"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أهلي يظنون أن حياتي في الخارج سهلة ويطلبون مني المال دائما وأنا بالكاد أكفي نفسي",
+   "expect": [
+    "ghurba",
+    "rizq",
+    "kin"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "رجعت لبلدي بعد عشر سنوات ولم أعد أعرف الناس ولا الأماكن وأشعر بالغربة في وطني",
+   "expect": [
+    "ghurba",
+    "transition",
+    "loneliness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "زميلي يرسل لي رسائل الشغل في منتصف الليل ويريدني أرد فورا",
+   "expect": [
+    "boundaries",
+    "work"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "قريبتي تسألني دائما أسئلة شخصية عن راتبي وزواجي وأنا لا أحب ذلك",
+   "expect": [
+    "boundaries",
+    "kin"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "دائما أوافق على كل ما يطلبه مني الناس ثم أتعب ولا أستطيع أن أنجز شيئا لنفسي",
+   "expect": [
+    "boundaries",
+    "people_pleasing",
+    "burnout"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "صديقتي تأخذ أغراضي دون أن تستأذن وأخجل أن أقول لها",
+   "expect": [
+    "boundaries",
+    "friends"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "واحد نشر صورتي في مجموعة فيسبوك من غير ما يستأذن وكتب عليها تعليقات",
+   "expect": [
+    "digital",
+    "insult",
+    "boundaries"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "شخص مجهول يهددني بنشر صوري الخاصة إن لم أدفع له",
+   "expect": [
+    "digital",
+    "fear"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "ضغطت على رابط وصلني وبعدها تم اختراق حسابي",
+   "expect": [
+    "digital",
+    "emergency"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أقضي ساعات كل ليلة على الهاتف أتصفح ولا أنام",
+   "expect": [
+    "digital",
+    "laziness",
+    "anxiety"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "في مجموعة الواتساب الجميع ينشر خبرا لم يتأكد منه أحد",
+   "expect": [
+    "digital",
+    "gossip",
+    "slander"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "ضاع جواز سفري في المطار قبل الرحلة بساعة",
+   "expect": [
+    "emergency"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "سرقوا محفظتي فيها البطاقة والأوراق وما عرفتش واش ندير",
+   "expect": [
+    "emergency"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "تعطلت سيارتي في طريق سريع ليلا وأنا مع أطفالي",
+   "expect": [
+    "emergency",
+    "fear",
+    "parenting"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "انقطعت الكهرباء وضاع عملي الذي لم أحفظه قبل التسليم",
+   "expect": [
+    "emergency",
+    "work",
+    "study"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "تقاعدت بعد ثلاثين سنة عمل ولا أعرف ماذا أفعل بأيامي",
+   "expect": [
+    "transition",
+    "hope"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "انتقلنا إلى مدينة جديدة وأطفالي لم يتأقلموا مع المدرسة",
+   "expect": [
+    "transition",
+    "parenting"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "تخرجت وما عنديش أي خطة، كأني ضايع بعد ما خلصت الجامعة",
+   "expect": [
+    "transition",
+    "anxiety",
+    "study"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "كلما مدحني أحد أشعر أنني لا أستحق وأنهم سيكتشفون أنني أقل مما يظنون",
+   "expect": [
+    "self_worth"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "لا أثق بنفسي أبدا وأخاف أن أتكلم أمام الناس",
+   "expect": [
+    "self_worth",
+    "fear"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أكره شكلي وأقارن جسمي بالمؤثرات على الانستغرام",
+   "expect": [
+    "self_worth",
+    "comparison"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أتلعثم كلما قدمت عرضا في الجامعة وأشعر بالإحراج",
+   "expect": [
+    "self_worth",
+    "study"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أهلي يرفضون الشاب الذي أريد الزواج منه بسبب أصله",
+   "expect": [
+    "marriage_seek",
+    "parents"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "زوجي لا يسمعني أبدا ويقاطعني كلما تكلمت",
+   "expect": [
+    "marriage",
+    "boundaries"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "زوجتي تفضح خلافاتنا أمام أهلها",
+   "expect": [
+    "marriage",
+    "kin",
+    "insult"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "ابني في المدرسة يتنمرون عليه ويرجع يبكي",
+   "expect": [
+    "parenting",
+    "insult"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "ابنتي تقضي اليوم كله على الآيباد ولا تسمع كلامي",
+   "expect": [
+    "parenting",
+    "digital",
+    "addiction"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "صديقي القديم صار يتجاهلني بعد ما تغيرت ظروفه",
+   "expect": [
+    "friends",
+    "loneliness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أصدقائي يضغطون علي لأجرب الحشيش ويقولون إنني جبان",
+   "expect": [
+    "friends",
+    "addiction"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "مديري انتقدني أمام كل الفريق في الاجتماع",
+   "expect": [
+    "work",
+    "insult"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "زميلي نسب المشروع لنفسه أمام المدير",
+   "expect": [
+    "work",
+    "injustice"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "رفضوني في عشرين مقابلة عمل وبدأت أشك في نفسي",
+   "expect": [
+    "work",
+    "self_worth",
+    "despair"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "طلبوا مني في العمل أن أخفي عيبا في المنتج عن الزبون",
+   "expect": [
+    "honesty",
+    "work",
+    "trust_amanah"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "وجدت مبلغا في حسابي حول إلي بالخطأ ولا أعرف هل أرده",
+   "expect": [
+    "trust_amanah",
+    "honesty"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "زميلي في الامتحان يغش وأنا محتار أبلغ أم لا",
+   "expect": [
+    "honesty",
+    "study",
+    "decision"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "رسبت في الباك للمرة الثانية وأحس أن مستقبلي ضاع",
+   "expect": [
+    "study",
+    "despair",
+    "sadness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "لا أستطيع دفع الإيجار هذا الشهر وصاحب البيت يهدد بطردي",
+   "expect": [
+    "rizq",
+    "debt",
+    "fear"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أقرضت صديقي مالا منذ سنة ولم يرده ويتهرب مني",
+   "expect": [
+    "debt",
+    "friends",
+    "betrayal"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "وقعت في عملية نصب على الإنترنت وخسرت مدخراتي",
+   "expect": [
+    "rizq",
+    "digital",
+    "betrayal"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أمي مريضة وأنا أعتني بها وحدي وإخوتي لا يساعدون",
+   "expect": [
+    "parents",
+    "illness",
+    "siblings"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أحتاج أن أذهب إلى طبيب نفسي لكني خائف من كلام الناس",
+   "expect": [
+    "sadness",
+    "anxiety",
+    "people_pleasing"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "توفي صديقي فجأة في حادث وما زلت لا أصدق",
+   "expect": [
+    "grief"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أصبحت أؤجل كل شيء ولم يعد عندي أي دافع للدراسة",
+   "expect": [
+    "laziness",
+    "study",
+    "sadness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أتطوع في جمعية لكن الوقت المطلوب صار أكثر من طاقتي",
+   "expect": [
+    "charity",
+    "boundaries",
+    "burnout"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "كلفوني بقيادة فريق فيه ناس أكبر مني خبرة",
+   "expect": [
+    "leadership",
+    "self_worth"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أريد أن أصلح علاقتي بعمي بعد قطيعة طويلة",
+   "expect": [
+    "kin",
+    "forgive"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "جاري يركن سيارته أمام بابي كل يوم",
+   "expect": [
+    "neighbors"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "عندي أسئلة عن الدين وأخاف أن أطرحها حتى لا يقولوا إن إيماني ضعيف",
+   "expect": [
+    "waswasa",
+    "faith_weak"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أصلي لكن لا أشعر بشيء، كأن قلبي فارغ",
+   "expect": [
+    "faith_weak",
+    "sadness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أصدقائي كلهم تزوجوا وأنا ما زلت وحدي والناس تسألني متى",
+   "expect": [
+    "marriage_seek",
+    "comparison",
+    "loneliness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "تعرفت على شخص على الانترنت ويطلب مني صورا خاصة ليثبت أني أثق به",
+   "expect": [
+    "digital",
+    "boundaries",
+    "desire"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "اكتشفت أنني ظلمت صديقي بحكمي المتسرع عليه",
+   "expect": [
+    "suspicion",
+    "sin",
+    "friends"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أخي الصغير يغار من أخيه الأكبر ويتشاجران كل يوم",
+   "expect": [
+    "siblings",
+    "envy",
+    "parenting"
+   ]
+  },
+  {
+   "lang": "en",
+   "text": "I moved abroad for work and I miss my family so much",
+   "expect": [
+    "ghurba",
+    "kin"
+   ]
+  },
+  {
+   "lang": "en",
+   "text": "Someone is blackmailing me with my private photos",
+   "expect": [
+    "digital",
+    "fear"
+   ]
+  },
+  {
+   "lang": "en",
+   "text": "I lost my passport during my trip",
+   "expect": [
+    "emergency"
+   ]
+  },
+  {
+   "lang": "en",
+   "text": "I can never say no to people and I am exhausted",
+   "expect": [
+    "boundaries",
+    "people_pleasing",
+    "burnout"
+   ]
+  },
+  {
+   "lang": "fr",
+   "text": "Je n'ai aucune confiance en moi",
+   "expect": [
+    "self_worth"
+   ]
+  },
+  {
+   "lang": "fr",
+   "text": "Je vis loin de mon pays et ma famille me manque",
+   "expect": [
+    "ghurba",
+    "kin"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "جيت لفرنسا باش نخدم وما لقيتش روحي، نتوحش دارنا ويماه بزاف",
+   "expect": [
+    "ghurba",
+    "kin",
+    "parents",
+    "loneliness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "زوجي يريد أن نعود إلى البلد وأنا أريد أن نبقى هنا من أجل مستقبل الأولاد",
+   "expect": [
+    "ghurba",
+    "marriage",
+    "decision"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أنتظر قرار اللجوء منذ سنة ولا أستطيع العمل ولا النوم",
+   "expect": [
+    "ghurba",
+    "anxiety"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أخي يدخل غرفتي ويفتش أغراضي ويقرأ رسائلي",
+   "expect": [
+    "boundaries",
+    "siblings"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "حماتي تتدخل في كل تفاصيل بيتنا وتربية أولادنا",
+   "expect": [
+    "kin",
+    "boundaries",
+    "marriage"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "لا أعرف كيف أرفض طلبات زملائي فأبقى في العمل حتى الليل",
+   "expect": [
+    "boundaries",
+    "people_pleasing",
+    "work"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "بنتي تنشر صورها في التيك توك وأنا خايفة عليها",
+   "expect": [
+    "parenting",
+    "digital",
+    "fear"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "وصلتني رسالة فيها رابط تقول إن حسابي البنكي سيغلق",
+   "expect": [
+    "digital",
+    "rizq"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أحدهم أنشأ حسابا باسمي وينشر كلاما سيئا",
+   "expect": [
+    "digital",
+    "slander"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "ضاعت حقيبتي في المطار وفيها دوائي",
+   "expect": [
+    "emergency",
+    "illness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "احترق مطبخ البيت والحمد لله ما صار شي للأولاد",
+   "expect": [
+    "emergency",
+    "gratitude"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "تعطل المصعد وأنا عالقة فيه مع ابني",
+   "expect": [
+    "emergency",
+    "fear"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "بعد التقاعد أحس أنني بلا قيمة ولا أحد يحتاجني",
+   "expect": [
+    "transition",
+    "self_worth",
+    "loneliness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "بدأت عملا جديدا في مدينة أخرى ولا أعرف أحدا",
+   "expect": [
+    "transition",
+    "work",
+    "loneliness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أحس إني أقل من الكل وما عندي أي موهبة",
+   "expect": [
+    "self_worth",
+    "comparison"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أخاف أن أبدأ أي مشروع لأنني أخاف الفشل",
+   "expect": [
+    "self_worth",
+    "fear"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أمي لا تكلمني منذ تزوجت من غير رضاها",
+   "expect": [
+    "parents",
+    "marriage"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "اكتشفت أن زوجي يكذب علي في أمور المال",
+   "expect": [
+    "marriage",
+    "honesty",
+    "betrayal"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "ابني عمره خمس سنوات ويضرب أخته الصغيرة",
+   "expect": [
+    "parenting",
+    "siblings",
+    "anger"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "صديقتي المقربة صارت تتجاهل رسائلي",
+   "expect": [
+    "friends",
+    "loneliness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "مديري يحملني أخطاء غيري أمام الإدارة",
+   "expect": [
+    "work",
+    "injustice",
+    "oppressor_power"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أعمل في وظيفتين ولم أعد أرى أولادي",
+   "expect": [
+    "burnout",
+    "work",
+    "parenting"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "ما عنديش باش نخلص الكرا هالشهر",
+   "expect": [
+    "rizq",
+    "debt"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "اقترضت من البنك بالربا وأنا نادم",
+   "expect": [
+    "debt",
+    "sin"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أبي في المستشفى ونتيجة التحاليل لم تظهر بعد",
+   "expect": [
+    "illness",
+    "anxiety",
+    "parents"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "فقدت جنيني في الشهر الرابع",
+   "expect": [
+    "grief",
+    "sadness"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "وقعت في الذنب نفسه مرة أخرى وأشعر أن الله لن يغفر لي",
+   "expect": [
+    "sin",
+    "despair"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أشعر أن صلاتي بلا روح منذ أشهر",
+   "expect": [
+    "faith_weak"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "جارتي تشتكي من ضجيج أطفالي كل يوم",
+   "expect": [
+    "neighbors",
+    "parenting"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "زملائي في الجامعة يسخرون من لهجتي",
+   "expect": [
+    "insult",
+    "study"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "وجدت هاتفا في الشارع ولا أعرف صاحبه",
+   "expect": [
+    "trust_amanah",
+    "honesty"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أريد أن أتطوع لمساعدة اللاجئين في مدينتي",
+   "expect": [
+    "charity"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "صاحبي ورطني في قرض وهرب",
+   "expect": [
+    "betrayal",
+    "debt",
+    "friends"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "عندي امتحان التخرج وأشعر أنني نسيت كل شيء",
+   "expect": [
+    "study",
+    "anxiety"
+   ]
+  },
+  {
+   "lang": "en",
+   "text": "My parents don't accept that I want to study art",
+   "expect": [
+    "parents",
+    "study",
+    "decision"
+   ]
+  },
+  {
+   "lang": "en",
+   "text": "I feel like I'm not good enough for my new job",
+   "expect": [
+    "self_worth",
+    "work"
+   ]
+  },
+  {
+   "lang": "en",
+   "text": "My coworker keeps texting me late at night about work",
+   "expect": [
+    "boundaries",
+    "work"
+   ]
+  },
+  {
+   "lang": "en",
+   "text": "Our house was robbed while we were away",
+   "expect": [
+    "emergency"
+   ]
+  },
+  {
+   "lang": "fr",
+   "text": "Je vis en France depuis cinq ans et je me sens toujours étranger",
+   "expect": [
+    "ghurba",
+    "loneliness"
+   ]
+  },
+  {
+   "lang": "fr",
+   "text": "Quelqu'un menace de publier mes photos privées",
+   "expect": [
+    "digital",
+    "fear"
+   ]
+  },
+  {
+   "lang": "nl",
+   "text": "Ik woon al jaren in het buitenland en ik heb heimwee",
+   "expect": [
+    "ghurba"
+   ]
+  },
+  {
+   "lang": "es",
+   "text": "Me cuesta mucho decir que no a mi familia",
+   "expect": [
+    "boundaries",
+    "kin",
+    "people_pleasing"
+   ]
+  },
+  {
+   "lang": "pt",
+   "text": "Perdi o passaporte durante a viagem",
+   "expect": [
+    "emergency"
+   ]
+  },
+  {
+   "lang": "ur",
+   "text": "میں بیرون ملک کام کرتا ہوں اور گھر والوں کی یاد بہت آتی ہے",
+   "expect": [
+    "ghurba",
+    "kin"
+   ]
+  },
+  {
+   "lang": "ur",
+   "text": "مجھے خود پر بالکل اعتماد نہیں ہے",
+   "expect": [
+    "self_worth"
+   ]
+  },
+  {
+   "lang": "id",
+   "text": "Saya merantau ke Jakarta dan sangat rindu keluarga",
+   "expect": [
+    "ghurba",
+    "kin"
+   ]
+  },
+  {
+   "lang": "id",
+   "text": "Akun Instagram saya diretas",
+   "expect": [
+    "digital"
+   ]
+  },
+  {
+   "lang": "tr",
+   "text": "Almanya'da gurbetteyim ve ailemi çok özledim",
+   "expect": [
+    "ghurba",
+    "kin"
+   ]
+  },
+  {
+   "lang": "de",
+   "text": "Mein Bruder hat mich beim Erbe betrogen und redet nicht mehr mit mir",
+   "expect": [
+    "siblings",
+    "betrayal",
+    "inheritance"
+   ]
+  },
+  {
+   "lang": "de",
+   "text": "Ich habe viele Schulden und die Gläubiger rufen jeden Tag an",
+   "expect": [
+    "debt",
+    "money"
+   ]
+  },
+  {
+   "lang": "ms",
+   "text": "Abang saya mengkhianati saya dalam soal harta pusaka dan tidak lagi bercakap dengan saya",
+   "expect": [
+    "siblings",
+    "betrayal",
+    "inheritance"
+   ]
+  },
+  {
+   "lang": "ms",
+   "text": "Saya ada banyak hutang dan pemiutang telefon setiap hari",
+   "expect": [
+    "debt",
+    "money"
+   ]
+  },
+  {
+   "lang": "fa",
+   "text": "برادرم در ارث به من خیانت کرد و دیگر با من حرف نمی‌زند",
+   "expect": [
+    "siblings",
+    "betrayal",
+    "inheritance"
+   ]
+  },
+  {
+   "lang": "fa",
+   "text": "بدهی زیادی دارم و طلبکارها هر روز زنگ می‌زنند",
+   "expect": [
+    "debt",
+    "money"
+   ]
+  },
+  {
+   "lang": "bn",
+   "text": "আমার ভাই উত্তরাধিকারের টাকা নিয়ে আমার সঙ্গে বিশ্বাসঘাতকতা করেছে আর এখন কথা বলে না",
+   "expect": [
+    "siblings",
+    "betrayal",
+    "inheritance"
+   ]
+  },
+  {
+   "lang": "bn",
+   "text": "আমার অনেক ঋণ আছে আর পাওনাদাররা প্রতিদিন ফোন করে",
+   "expect": [
+    "debt",
+    "money"
+   ]
+  }
+ ],
+ "crisis": [
+  {
+   "lang": "ar",
+   "text": "أكره نفسي وأفكر في إيذاء نفسي"
+  },
+  {
+   "lang": "ar",
+   "text": "أريد أن أجرح نفسي"
+  },
+  {
+   "lang": "ar",
+   "text": "ما عاد بدي عيش"
+  },
+  {
+   "lang": "ar",
+   "text": "أخطط لإنهاء حياتي"
+  },
+  {
+   "lang": "ar",
+   "text": "نحب نموت"
+  },
+  {
+   "lang": "ar",
+   "text": "اريد ان اموت ولا اريد ان اعيش"
+  },
+  {
+   "lang": "ar",
+   "text": "شخص يبتزني بصوري وأفكر أن أنهي حياتي"
+  },
+  {
+   "lang": "ar",
+   "text": "أنا في الغربة وحدي وأريد أن أموت"
+  },
+  {
+   "lang": "en",
+   "text": "I want to die, there is no reason to live"
+  },
+  {
+   "lang": "en",
+   "text": "I cut myself when I feel bad"
+  },
+  {
+   "lang": "fr",
+   "text": "je vis loin de ma famille et je veux mourir"
+  },
+  {
+   "lang": "ur",
+   "text": "میں پردیس میں اکیلا ہوں اور خودکشی کا سوچ رہا ہوں"
+  },
+  {
+   "lang": "tr",
+   "text": "gurbetteyim ve ölmek istiyorum"
+  },
+  {
+   "lang": "id",
+   "text": "saya merantau sendirian dan ingin mati"
+  },
+  {
+   "lang": "nl",
+   "text": "ik wil dood"
+  },
+  {
+   "lang": "es",
+   "text": "quiero morir"
+  },
+  {
+   "lang": "pt",
+   "text": "quero morrer"
+  },
+  {
+   "lang": "de",
+   "text": "Ich will nicht mehr leben, ich will mich umbringen"
+  },
+  {
+   "lang": "ms",
+   "text": "Saya tak mahu hidup lagi, saya nak bunuh diri"
+  },
+  {
+   "lang": "fa",
+   "text": "دیگر نمی‌خواهم زندگی کنم، می‌خواهم خودم را بکشم"
+  },
+  {
+   "lang": "bn",
+   "text": "আমি আর বাঁচতে চাই না, নিজেকে শেষ করে দিতে চাই"
+  }
+ ],
+ "notCrisis": [
+  {
+   "lang": "ar",
+   "text": "انتقلت إلى رحمة الله جدتي"
+  },
+  {
+   "lang": "ar",
+   "text": "زوجي يغار علي"
+  },
+  {
+   "lang": "ar",
+   "text": "الموت حق وأخاف منه"
+  },
+  {
+   "lang": "en",
+   "text": "I am better at my job now"
+  },
+  {
+   "lang": "ar",
+   "text": "ضاع جواز سفري في المطار"
+  },
+  {
+   "lang": "de",
+   "text": "Ich bin so müde von der Arbeit, ich könnte sterben vor Lachen über meinen Chef"
+  },
+  {
+   "lang": "ms",
+   "text": "Assalamualaikum, apa khabar?"
+  },
+  {
+   "lang": "fa",
+   "text": "سلام، حالتان چطور است؟"
+  },
+  {
+   "lang": "bn",
+   "text": "আসসালামু আলাইকুম, কেমন আছেন?"
+  }
+ ],
+ "analysis": [
+  {
+   "lang": "ar",
+   "text": "زوجي دائما يصرخ علي ولا أحد يفهمني، أنا فاشلة في كل شيء ولا أنام منذ شهور",
+   "patterns": [
+    "absolute",
+    "label"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "كل صديقاتي تزوجن وأنا لا، أحس أنني أقل من الكل",
+   "patterns": [
+    "compare"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أخاف أن أرسب، لو رسبت ضاع مستقبلي وانتهت حياتي",
+   "patterns": [
+    "catastrophe"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "صديقتي أكيد تكرهني لأنها لم ترد على رسالتي",
+   "patterns": [
+    "mindread"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "يجب أن أكون أما مثالية وكان المفروض أن أصبر أكثر",
+   "patterns": [
+    "should"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "ضربت ابني اليوم وأنا نادمة، كله بسببي",
+   "patterns": [
+    "selfblame"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "مديري يتعمد إهانتي أمام الزملاء وأنا صبرت كثيرا",
+   "patterns": [],
+   "notPatterns": [
+    "mindread"
+   ]
+  },
+  {
+   "lang": "ar",
+   "text": "أحاول دائما أن أساعد أمي",
+   "patterns": [],
+   "notPatterns": [
+    "absolute"
+   ]
+  },
+  {
+   "lang": "en",
+   "text": "My husband always yells at me and nobody understands me. I'm a failure",
+   "patterns": [
+    "absolute",
+    "label"
+   ]
+  },
+  {
+   "lang": "en",
+   "text": "I tried everything at work but my boss hates me, it's all my fault",
+   "patterns": [
+    "selfblame",
+    "mindread"
+   ]
+  },
+  {
+   "lang": "fr",
+   "text": "Je suis nulle, toutes mes amies sont mariées et pas moi, ma vie est finie",
+   "patterns": [
+    "label",
+    "catastrophe",
+    "compare"
+   ]
+  },
+  {
+   "lang": "nl",
+   "text": "Niemand begrijpt me, ik ben een mislukkeling",
+   "patterns": [
+    "absolute",
+    "label"
+   ]
+  },
+  {
+   "lang": "es",
+   "text": "Mi vida se acabó, nunca va a cambiar nada",
+   "patterns": [
+    "catastrophe"
+   ]
+  },
+  {
+   "lang": "pt",
+   "text": "Sou um fracasso, todos os meus amigos são melhores do que eu",
+   "patterns": [
+    "label"
+   ]
+  },
+  {
+   "lang": "ur",
+   "text": "میں ناکام ہوں، سب مجھ سے بہتر ہیں",
+   "patterns": [
+    "label",
+    "compare"
+   ]
+  },
+  {
+   "lang": "id",
+   "text": "Aku sudah berusaha tapi semua salahku",
+   "patterns": [
+    "selfblame"
+   ]
+  },
+  {
+   "lang": "tr",
+   "text": "Ben başarısızım, hayatım bitti",
+   "patterns": [
+    "label",
+    "catastrophe"
+   ]
+  },
+  {
+   "lang": "de",
+   "text": "Ich bin ein Versager, mein Leben ist zerstört",
+   "patterns": [
+    "label",
+    "catastrophe"
+   ]
+  },
+  {
+   "lang": "ms",
+   "text": "Saya gagal, hidup saya hancur",
+   "patterns": [
+    "label",
+    "catastrophe"
+   ]
+  },
+  {
+   "lang": "fa",
+   "text": "من شکست‌خورده‌ام، زندگی‌ام نابود شد",
+   "patterns": [
+    "label",
+    "catastrophe"
+   ]
+  },
+  {
+   "lang": "bn",
+   "text": "আমি ব্যর্থ, আমার জীবন শেষ",
+   "patterns": [
+    "label",
+    "catastrophe"
+   ]
+  }
+ ],
+ "reading": [
+  {
+   "lang": "ar",
+   "text": "تقدّم لخطبتي شاب متديّن وخلوق، لكن دخله محدود وأهلي متردّدون. أنا أرتاح له، لكني خائفة أن أندم لو قبلت أو لو رفضت.",
+   "kind": "dilemma",
+   "gender": 1,
+   "option": "accept_refuse",
+   "fear": "regret_both",
+   "minWords": 200
+  },
+  {
+   "lang": "ar",
+   "text": "زوجي يصرخ علي أمام أولادي ويهينني، لا أعرف هل أبقى من أجل الأولاد أم أطلب الطلاق",
+   "kind": "harm",
+   "gender": 1,
+   "fear": null
+  },
+  {
+   "lang": "ar",
+   "text": "مديري يحملني أخطاء غيري أمام الإدارة وأنا لا أستطيع الرد خوفا على وظيفتي",
+   "kind": "power",
+   "gender": 0,
+   "fear": "livelihood"
+  },
+  {
+   "lang": "ar",
+   "text": "ضربت ابني اليوم بسبب عصبيتي وأنا نادمة جدا",
+   "kind": "erred",
+   "gender": 1,
+   "fear": null
+  },
+  {
+   "lang": "ar",
+   "text": "توفي أبي منذ شهر ولا أستطيع أن أصدق، أشعر أنني قصرت معه",
+   "kind": "grieving"
+  },
+  {
+   "lang": "ar",
+   "text": "أنا حزينة جدا ولا أعرف السبب",
+   "kind": "sad",
+   "gender": 1
+  },
+  {
+   "lang": "ar",
+   "text": "تأخرت أوراق إقامتي ولا أعرف هل سيجددونها، وأنا قلق جدا على عملي",
+   "notKind": "deciding"
+  },
+  {
+   "lang": "ar",
+   "text": "جاءني عرض عمل في دبي براتب أفضل لكني سأبتعد عن أمي المريضة، هل أسافر أم أبقى؟",
+   "kind": "dilemma",
+   "option": "move_stay"
+  },
+  {
+   "lang": "en",
+   "text": "A religious, kind man proposed to me but his income is limited and my parents are hesitant. I feel at ease with him, but I'm afraid I'll regret it if I accept or if I refuse.",
+   "kind": "dilemma",
+   "option": "accept_refuse",
+   "minWords": 200
+  },
+  {
+   "lang": "fr",
+   "text": "Mon patron me met la faute des autres sur le dos devant la direction, et je n'ose pas répondre par peur de perdre mon travail",
+   "kind": "power",
+   "fear": "livelihood"
+  },
+  {
+   "lang": "de",
+   "text": "Ein Mann hat um meine Hand angehalten. Er ist gläubig und hat gute Manieren, aber sein Einkommen ist gering und meine Eltern sind dagegen. Soll ich annehmen oder ablehnen?",
+   "kind": "dilemma",
+   "option": "accept_refuse"
+  },
+  {
+   "lang": "ms",
+   "text": "Seorang lelaki meminang saya. Dia warak dan berakhlak baik, tetapi gajinya kecil dan ibu bapa saya tidak setuju. Patutkah saya menerima atau menolak?",
+   "kind": "dilemma",
+   "option": "accept_refuse"
+  },
+  {
+   "lang": "fa",
+   "text": "مردی از من خواستگاری کرده است. او دین‌دار و خوش‌اخلاق است، اما درآمدش کم است و پدر و مادرم مخالف‌اند. قبول کنم یا رد کنم؟",
+   "kind": "dilemma",
+   "option": "accept_refuse"
+  },
+  {
+   "lang": "bn",
+   "text": "আমার জন্য একটি বিয়ের প্রস্তাব এসেছে। ছেলেটি দ্বীনদার ও ভদ্র, কিন্তু আয় কম, আর আমার বাবা-মা রাজি না। গ্রহণ করব নাকি প্রত্যাখ্যান করব?",
+   "kind": "dilemma",
+   "option": "accept_refuse"
+  }
+ ]
+}

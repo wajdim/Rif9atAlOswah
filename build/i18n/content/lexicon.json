@@ -516,6 +516,415 @@
     "it happened",
     "divorced me"
    ]
+  },
+  "analysis": {
+   "absolute": [
+    "nobody",
+    "no one",
+    "noone",
+    "everyone hates",
+    "everybody hates",
+    "everyone is against",
+    "not a single",
+    "nothing ever",
+    "nothing works",
+    "no one ever"
+   ],
+   "absoluteSoft": [
+    "never",
+    "always",
+    "every time",
+    "everything",
+    "everyone",
+    "everybody"
+   ],
+   "label": [
+    "i am a failure",
+    "i'm a failure",
+    "im a failure",
+    "i am stupid",
+    "i'm stupid",
+    "i am useless",
+    "i'm useless",
+    "i am worthless",
+    "i'm worthless",
+    "i am a bad",
+    "i'm a bad",
+    "i am nothing",
+    "i'm nothing",
+    "i am a burden",
+    "i'm a burden",
+    "i am pathetic",
+    "i'm pathetic",
+    "i am a loser",
+    "i'm a loser",
+    "not good enough"
+   ],
+   "catastrophe": [
+    "my life is over",
+    "life is ruined",
+    "ruined my life",
+    "everything is ruined",
+    "it's over",
+    "its over",
+    "all is lost",
+    "my future is ruined",
+    "disaster",
+    "impossible",
+    "will never change",
+    "will never get better",
+    "nothing will change",
+    "no way out"
+   ],
+   "mindread": [
+    "hates me",
+    "they think i",
+    "he thinks i",
+    "she thinks i",
+    "doing it on purpose to me",
+    "looks down on me",
+    "they all think",
+    "laughing at me",
+    "judging me"
+   ],
+   "should": [
+    "i should be",
+    "i should have",
+    "i must be",
+    "should have been",
+    "i have to be perfect",
+    "i ought to"
+   ],
+   "compare": [
+    "better than me",
+    "everyone else has",
+    "everyone else is",
+    "all my friends",
+    "worse than everyone",
+    "less than others",
+    "compared to others",
+    "like everyone else"
+   ],
+   "selfblame": [
+    "all my fault",
+    "it's all my fault",
+    "its all my fault",
+    "everything is my fault",
+    "if only i",
+    "i should never have"
+   ],
+   "faith": [
+    "alhamdulillah",
+    "thank god",
+    "praise be to allah",
+    "i prayed",
+    "i pray",
+    "inshallah",
+    "in sha allah",
+    "oh allah",
+    "ya allah",
+    "i made dua",
+    "istikhara",
+    "astaghfirullah"
+   ],
+   "effort": [
+    "i tried",
+    "i've tried",
+    "ive tried",
+    "i try",
+    "i am trying",
+    "i'm trying",
+    "im trying",
+    "we tried",
+    "i did my best"
+   ],
+   "patience": [
+    "i have been patient",
+    "i've been patient",
+    "i endured",
+    "i put up with",
+    "been patient"
+   ],
+   "sleep": [
+    "can't sleep",
+    "cant sleep",
+    "cannot sleep",
+    "insomnia",
+    "not sleeping",
+    "no sleep",
+    "nightmares",
+    "barely sleep",
+    "sleepless"
+   ],
+   "body": [
+    "headache",
+    "headaches",
+    "heart racing",
+    "racing heart",
+    "palpitations",
+    "chest tightness",
+    "tight chest",
+    "lost my appetite",
+    "no appetite",
+    "can't eat",
+    "cant eat",
+    "shaking",
+    "dizzy",
+    "dizziness",
+    "stomach ache",
+    "stomach pain"
+   ]
+  },
+  "reading": {
+   "factors": {
+    "comfort": [
+     "i feel comfortable with him",
+     "i feel comfortable with her",
+     "i feel at ease with him",
+     "i feel at ease with her",
+     "i feel at peace with him",
+     "i feel at peace with her",
+     "i feel safe with him",
+     "i feel safe with her",
+     "i like him",
+     "i like her"
+    ],
+    "character": [
+     "religious",
+     "practising",
+     "practicing",
+     "good character",
+     "well mannered",
+     "kind hearted",
+     "respectful",
+     "good manners",
+     "he prays",
+     "she prays",
+     "pious"
+    ],
+    "opportunity": [
+     "job offer",
+     "better salary",
+     "higher salary",
+     "promotion",
+     "scholarship",
+     "opportunity",
+     "better job",
+     "got accepted"
+    ],
+    "history": [
+     "years together",
+     "our children",
+     "our kids",
+     "long history",
+     "we have kids"
+    ],
+    "money": [
+     "limited income",
+     "low income",
+     "he is poor",
+     "she is poor",
+     "not much money",
+     "financially",
+     "his salary",
+     "no job",
+     "unemployed",
+     "in debt",
+     "debts",
+     "can't afford",
+     "income is limited",
+     "his income",
+     "her income",
+     "not much income",
+     "doesn't earn much"
+    ],
+    "family": [
+     "my parents refuse",
+     "my family refuses",
+     "my family is against",
+     "my parents are against",
+     "my parents don't agree",
+     "my family doesn't agree",
+     "my parents are hesitant",
+     "my family is hesitant",
+     "my father refuses",
+     "my mother refuses",
+     "family disapproves",
+     "parents disapprove"
+    ],
+    "distance": [
+     "another country",
+     "another city",
+     "far from my family",
+     "far from my mother",
+     "far from my parents",
+     "move abroad",
+     "since i moved",
+     "after moving",
+     "i moved to"
+    ],
+    "age": [
+     "my age",
+     "getting older",
+     "too old",
+     "running out of time",
+     "biological clock"
+    ],
+    "people": [
+     "what people will say",
+     "what will people say",
+     "people talk",
+     "what others think",
+     "society",
+     "my reputation",
+     "gossip about me"
+    ],
+    "past": [
+     "previous experience",
+     "last time",
+     "my first marriage",
+     "divorced",
+     "i was hurt before",
+     "been hurt before",
+     "happened before"
+    ],
+    "doubts": [
+     "short tempered",
+     "bad temper",
+     "he lies",
+     "she lies",
+     "stingy",
+     "jealous",
+     "controlling",
+     "moody",
+     "doesn't pray"
+    ],
+    "unknown": [
+     "don't know him well",
+     "don't know her well",
+     "barely know",
+     "only met once",
+     "haven't talked much"
+    ],
+    "duties": [
+     "responsibilities",
+     "has children",
+     "has kids",
+     "widower",
+     "widow",
+     "supports his family"
+    ],
+    "regret": [
+     "regret",
+     "i'll regret",
+     "i will regret",
+     "afraid to lose",
+     "afraid of losing",
+     "lose him",
+     "lose her"
+    ],
+    "pressure": [
+     "pressuring me",
+     "pressure me",
+     "forced",
+     "forcing me",
+     "pushing me",
+     "insisting",
+     "rushing me"
+    ],
+    "desire": [
+     "i want him",
+     "i want her",
+     "i want to marry",
+     "my heart is with",
+     "i wish",
+     "i dream"
+    ],
+    "power": [
+     "my boss",
+     "my manager",
+     "my supervisor",
+     "my employer",
+     "the boss"
+    ],
+    "livelihood": [
+     "afraid to lose my job",
+     "scared to lose my job",
+     "afraid of being fired",
+     "can't speak up",
+     "cannot speak up",
+     "for fear of losing my job"
+    ],
+    "harm": [
+     "hits me",
+     "beats me",
+     "insults me",
+     "humiliates me",
+     "abuses me",
+     "abusive",
+     "violent",
+     "hurts me"
+    ]
+   },
+   "options": {
+    "accept_refuse": [
+     "accept",
+     "refuse",
+     "say yes",
+     "say no",
+     "turn down",
+     "reject him",
+     "reject her",
+     "accepted",
+     "refused"
+    ],
+    "stay_leave": [
+     "stay with him",
+     "stay with her",
+     "leave him",
+     "leave her",
+     "divorce",
+     "separate",
+     "break up",
+     "stay in the marriage"
+    ],
+    "forgive_cut": [
+     "forgive",
+     "cut ties",
+     "cut him off",
+     "cut her off",
+     "stop talking to",
+     "distance myself"
+    ],
+    "speak_silent": [
+     "confront",
+     "tell him",
+     "tell her",
+     "talk to him",
+     "talk to her",
+     "stay silent",
+     "keep quiet",
+     "say nothing"
+    ],
+    "move_stay": [
+     "move abroad",
+     "travel",
+     "emigrate",
+     "relocate",
+     "go back home",
+     "return to my country",
+     "stay here"
+    ],
+    "continue_quit": [
+     "quit",
+     "resign",
+     "leave my job",
+     "drop out",
+     "change my major",
+     "continue my studies",
+     "keep going"
+    ]
+   }
   }
  }
 }

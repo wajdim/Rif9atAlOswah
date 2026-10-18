@@ -427,6 +427,344 @@
     "bitti",
     "oldu"
    ]
+  },
+  "analysis": {
+   "absolute": [
+    "hiç kimse",
+    "kimse beni",
+    "herkes benden nefret",
+    "herkes bana karşı",
+    "bir kere bile",
+    "hiçbir şey işe yaramıyor",
+    "asla bir daha"
+   ],
+   "absoluteSoft": [
+    "asla",
+    "hiçbir zaman",
+    "her zaman",
+    "hep",
+    "her seferinde",
+    "herkes"
+   ],
+   "label": [
+    "ben başarısızım",
+    "başarısızın tekiyim",
+    "ben aptalım",
+    "aptalın tekiyim",
+    "ben işe yaramazım",
+    "işe yaramazın tekiyim",
+    "değersizim",
+    "ben bir yüküm",
+    "ben kötüyüm",
+    "kötü bir anne",
+    "kötü bir baba",
+    "ben hiçbir şeyim",
+    "yeterince iyi değilim"
+   ],
+   "catastrophe": [
+    "hayatım bitti",
+    "hayatım mahvoldu",
+    "her şey bitti",
+    "her şey mahvoldu",
+    "her şeyi kaybettim",
+    "geleceğim mahvoldu",
+    "felaket",
+    "imkansız",
+    "imkânsız",
+    "asla değişmeyecek",
+    "hiçbir şey değişmeyecek",
+    "çıkış yolu yok"
+   ],
+   "mindread": [
+    "benden nefret ediyor",
+    "benden nefret ediyorlar",
+    "benim hakkımda düşünüyor",
+    "beni küçük görüyor",
+    "beni küçümsüyor",
+    "bana gülüyorlar",
+    "beni yargılıyorlar",
+    "bilerek yapıyor",
+    "sanıyorlar ki ben",
+    "düşünüyorlar ki ben"
+   ],
+   "should": [
+    "olmalıyım",
+    "yapmalıydım",
+    "olmalıydım",
+    "etmeliydim",
+    "mükemmel olmalıyım"
+   ],
+   "compare": [
+    "benden daha iyi",
+    "herkesin var",
+    "bütün arkadaşlarım",
+    "tüm arkadaşlarım",
+    "herkesten daha az",
+    "başkalarına göre",
+    "herkes evlendi"
+   ],
+   "selfblame": [
+    "hepsi benim suçum",
+    "her şey benim suçum",
+    "keşke ben",
+    "keşke yapmasaydım"
+   ],
+   "faith": [
+    "elhamdülillah",
+    "elhamdulillah",
+    "allahım",
+    "ya rabbi",
+    "dua ettim",
+    "dua ediyorum",
+    "namaz kıl",
+    "inşallah",
+    "istihare",
+    "estağfurullah",
+    "allah'a şükür",
+    "çok şükür"
+   ],
+   "effort": [
+    "denedim",
+    "deniyorum",
+    "çabaladım",
+    "çabalıyorum",
+    "uğraştım",
+    "uğraşıyorum",
+    "elimden geleni yaptım"
+   ],
+   "patience": [
+    "sabrettim",
+    "sabrediyorum",
+    "katlandım",
+    "katlanıyorum",
+    "dayandım",
+    "dayanıyorum"
+   ],
+   "sleep": [
+    "uyuyamıyorum",
+    "uykusuzluk",
+    "uyku yok",
+    "uyumadım",
+    "kabus",
+    "uykum kaçtı"
+   ],
+   "body": [
+    "baş ağrısı",
+    "başım ağrıyor",
+    "çarpıntı",
+    "kalbim çarpıyor",
+    "göğsümde sıkışma",
+    "iştahım yok",
+    "iştahım kesildi",
+    "yemek yiyemiyorum",
+    "titriyorum",
+    "baş dönmesi",
+    "midem ağrıyor",
+    "karın ağrısı"
+   ]
+  },
+  "reading": {
+   "factors": {
+    "comfort": [
+     "onunla huzurluyum",
+     "onunla rahatım",
+     "yanında huzur",
+     "kendimi güvende hissediyorum",
+     "ondan hoşlanıyorum",
+     "içim rahat"
+    ],
+    "character": [
+     "dindar",
+     "namazında niyazında",
+     "ahlaklı",
+     "güzel ahlaklı",
+     "saygılı",
+     "terbiyeli",
+     "namaz kılıyor",
+     "iyi kalpli"
+    ],
+    "opportunity": [
+     "iş teklifi",
+     "daha iyi maaş",
+     "daha yüksek maaş",
+     "terfi",
+     "burs",
+     "fırsat",
+     "daha iyi bir iş",
+     "kabul edildim"
+    ],
+    "history": [
+     "yıllardır birlikte",
+     "çocuklarımız",
+     "uzun bir geçmiş"
+    ],
+    "money": [
+     "geliri sınırlı",
+     "sınırlı gelir",
+     "maaşı düşük",
+     "fakir",
+     "parası yok",
+     "maddi olarak",
+     "işsiz",
+     "çalışmıyor",
+     "borç"
+    ],
+    "family": [
+     "ailem karşı",
+     "ailem istemiyor",
+     "ailem kabul etmiyor",
+     "annem babam karşı",
+     "annem babam istemiyor",
+     "babam karşı",
+     "annem karşı",
+     "ailem tereddüt ediyor",
+     "ailem razı değil"
+    ],
+    "distance": [
+     "başka bir ülke",
+     "başka bir şehir",
+     "ailemden uzak",
+     "annemden uzak",
+     "yurt dışına",
+     "taşındığımdan beri",
+     "taşındıktan sonra"
+    ],
+    "age": [
+     "yaşım",
+     "yaşlanıyorum",
+     "yaşım geçiyor",
+     "çok geç",
+     "zaman geçiyor"
+    ],
+    "people": [
+     "insanlar ne der",
+     "elalem ne der",
+     "el âlem",
+     "insanların bakışı",
+     "toplum",
+     "itibarım"
+    ],
+    "past": [
+     "önceki deneyim",
+     "geçen sefer",
+     "ilk evliliğim",
+     "boşandım",
+     "boşanmış",
+     "daha önce kırıldım"
+    ],
+    "doubts": [
+     "sinirli",
+     "yalan söylüyor",
+     "cimri",
+     "kıskanç",
+     "kontrolcü",
+     "huysuz",
+     "namaz kılmıyor"
+    ],
+    "unknown": [
+     "onu iyi tanımıyorum",
+     "pek tanımıyorum",
+     "sadece bir kez gördüm",
+     "fazla konuşmadık"
+    ],
+    "duties": [
+     "sorumluluklar",
+     "çocukları var",
+     "dul"
+    ],
+    "regret": [
+     "pişman olurum",
+     "pişman olacağım",
+     "pişmanlık",
+     "kaybetmekten korkuyorum",
+     "onu kaybetmek"
+    ],
+    "pressure": [
+     "baskı yapıyorlar",
+     "baskı yapıyor",
+     "zorluyorlar",
+     "zorla",
+     "ısrar ediyorlar",
+     "acele ettiriyorlar"
+    ],
+    "desire": [
+     "onu istiyorum",
+     "onunla evlenmek istiyorum",
+     "kalbim onda",
+     "hayal ediyorum"
+    ],
+    "power": [
+     "müdürüm",
+     "patronum",
+     "amirim",
+     "yöneticim",
+     "şefim",
+     "işverenim"
+    ],
+    "livelihood": [
+     "işimi kaybetmekten korkuyorum",
+     "kovulmaktan korkuyorum",
+     "cevap veremiyorum",
+     "sesimi çıkaramıyorum"
+    ],
+    "harm": [
+     "beni dövüyor",
+     "bana vuruyor",
+     "bana hakaret ediyor",
+     "beni aşağılıyor",
+     "şiddet",
+     "bana eziyet"
+    ]
+   },
+   "options": {
+    "accept_refuse": [
+     "kabul etsem",
+     "reddetsem",
+     "kabul etmek",
+     "reddetmek",
+     "evet desem",
+     "hayır desem"
+    ],
+    "stay_leave": [
+     "onunla kalsam",
+     "onu bıraksam",
+     "boşanmak",
+     "boşansam",
+     "ayrılmak",
+     "ayrılsam"
+    ],
+    "forgive_cut": [
+     "affetsem",
+     "affetmek",
+     "ilişkiyi kesmek",
+     "küsmek",
+     "uzaklaşmak"
+    ],
+    "speak_silent": [
+     "yüzleşmek",
+     "yüzleşsem",
+     "söylesem",
+     "konuşsam",
+     "sussam",
+     "susmak"
+    ],
+    "move_stay": [
+     "yurt dışına gitmek",
+     "gitsem",
+     "göç etmek",
+     "taşınmak",
+     "memlekete dönmek",
+     "burada kalmak"
+    ],
+    "continue_quit": [
+     "istifa",
+     "işi bırakmak",
+     "okulu bırakmak",
+     "bölüm değiştirmek",
+     "devam etmek",
+     "devam etsem"
+    ]
+   }
   }
  }
 }

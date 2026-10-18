@@ -1,0 +1,30 @@
+Rifqat al-Uswa („in der Gesellschaft des besten Vorbilds“) ist ein stiller, nachdenklicher Begleiter. Beschreibe mit deinen eigenen Worten, was du gerade durchmachst – einen Konflikt, einen Verlust, Sorgen, Schuldgefühle, eine schwere Entscheidung –, und die App liest es mit dir im Licht des edlen Korans, der prophetischen Sunna und der Sira.
+
+SO FUNKTIONIERT ES
+• Schreib frei auf Deutsch, Arabisch, Englisch, Französisch, Niederländisch, Spanisch, Portugiesisch, Urdu, Indonesisch, Türkisch, Malaiisch, Persisch oder Bengalisch, so ausführlich du möchtest.
+• Die App erkennt die Themen, Gefühle und Beziehungen in deinem Text und deine Rolle in der Geschichte.
+• Sie bringt dir die passendste Situation aus dem Leben des Propheten ﷺ und der Propheten vor ihm: was geschah, wie er reagierte, die Grundsätze dahinter und wie sie heute gelten.
+• Dazu die passenden Verse, Hadithe und Bittgebete, jeweils mit Quelle und Echtheitsgrad, praktische Schritte und was du vermeiden solltest.
+
+INHALT
+• 115 prophetische Situationen und Geschichten, 63 Lebensthemen.
+• 201 Verse und Abschnitte sowie 149 Hadithe und Bittgebete mit Quellen und Echtheitsgraden.
+• Eine durchsuchbare Bibliothek aller Texte, auf die sich die Analyse stützt.
+• Vorlesen in dreizehn Sprachen mit Männer- oder Frauenstimme und Rezitation der Verse durch 26 bekannte Rezitatoren.
+• Lade deinen Lieblingsrezitator einmal herunter und höre die Rezitationen ohne Internet.
+• Helles und dunkles Design, einstellbare Schriftgröße und vier Schriftarten zur Auswahl.
+
+VERTRAUENSWÜRDIG
+• Die App erfindet niemals Verse oder Hadithe: Jeder Text stammt unverändert aus ihrer geprüften Bibliothek.
+• Der arabische Text wird immer angezeigt. Bedeutungen des Korans auf Deutsch: A. S. F. Bubenheim und N. Elyas (über Tanzil.net). Die deutschen Hadith-Übersetzungen wurden für diese App aus den englischen Übersetzungen von sunnah.com erstellt und sind entsprechend gekennzeichnet; maßgeblich bleibt das Arabische.
+• Schwache oder historische Überlieferungen sind deutlich gekennzeichnet.
+
+PRIVAT UND OFFLINE
+• Kein Konto, keine Werbung, keine Analyse, kein Tracking.
+• Alles funktioniert offline; was du schreibst, bleibt auf deinem Gerät.
+• Optional: Füge deinen eigenen Claude-API-Schlüssel (Anthropic) hinzu, um eine zusätzliche, von KI verfasste Betrachtung zu erhalten, die auf die gefundenen Texte beschränkt ist. Nur dann wird dein Text gesendet – direkt an Anthropic, niemals an den Entwickler. Jede KI-Antwort kann in der App gemeldet werden.
+
+WICHTIG
+Rifqat al-Uswa ist ein Leitfaden zum Nachdenken. Die App erteilt keine Fatwas und ersetzt keinen qualifizierten Gelehrten, Arzt, Therapeuten oder Anwalt. Wenn du eine Situation mit Gefahr, Gewalt oder Gedanken an Selbstverletzung beschreibst, verweist dich die App zuerst auf dringende Hilfe.
+
+Verfügbar auf Deutsch, العربية, English, Français, Nederlands, Español, Português, اردو, Bahasa Indonesia, Türkçe, Bahasa Melayu, فارسی und বাংলা. Feedback ist willkommen: wajdi.chaouche@gmail.com

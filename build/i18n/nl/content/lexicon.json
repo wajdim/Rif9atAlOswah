@@ -491,6 +491,338 @@
     "is voorbij",
     "gebeurde"
    ]
+  },
+  "analysis": {
+   "absolute": [
+    "niemand",
+    "iedereen haat me",
+    "iedereen is tegen me",
+    "geen enkele keer",
+    "niets werkt",
+    "nooit meer",
+    "helemaal niemand"
+   ],
+   "absoluteSoft": [
+    "nooit",
+    "altijd",
+    "elke keer",
+    "iedere keer",
+    "iedereen"
+   ],
+   "label": [
+    "ik ben een mislukkeling",
+    "ik ben dom",
+    "ik ben stom",
+    "ik ben waardeloos",
+    "ik ben nutteloos",
+    "ik ben slecht",
+    "ik ben een slechte",
+    "ik ben niks",
+    "ik ben niets",
+    "ik ben een last",
+    "ik ben een loser",
+    "niet goed genoeg"
+   ],
+   "catastrophe": [
+    "mijn leven is voorbij",
+    "mijn leven is verwoest",
+    "alles is kapot",
+    "alles is verloren",
+    "mijn toekomst is verpest",
+    "het is voorbij",
+    "ramp",
+    "onmogelijk",
+    "verandert nooit",
+    "wordt nooit beter",
+    "er is geen uitweg"
+   ],
+   "mindread": [
+    "haat me",
+    "haten me",
+    "denkt dat ik",
+    "denken dat ik",
+    "kijkt op me neer",
+    "kijken op me neer",
+    "lachen me uit",
+    "veroordelen me",
+    "doet het expres"
+   ],
+   "should": [
+    "ik zou moeten",
+    "ik had moeten",
+    "ik moet perfect",
+    "ik hoor te"
+   ],
+   "compare": [
+    "beter dan ik",
+    "iedereen heeft",
+    "al mijn vriendinnen",
+    "al mijn vrienden",
+    "minder dan anderen",
+    "vergeleken met anderen",
+    "net als iedereen"
+   ],
+   "selfblame": [
+    "allemaal mijn schuld",
+    "had ik maar",
+    "als ik maar"
+   ],
+   "faith": [
+    "alhamdulillah",
+    "godzijdank",
+    "god zij dank",
+    "ik heb gebeden",
+    "ik bid",
+    "inshallah",
+    "insha allah",
+    "o allah",
+    "ya allah",
+    "dua gedaan",
+    "istikhara",
+    "astaghfirullah"
+   ],
+   "effort": [
+    "ik heb geprobeerd",
+    "ik probeer",
+    "we hebben geprobeerd",
+    "mijn best gedaan",
+    "ik doe mijn best"
+   ],
+   "patience": [
+    "ik ben geduldig geweest",
+    "ik heb geduld gehad",
+    "ik heb het verdragen",
+    "ik heb het volgehouden"
+   ],
+   "sleep": [
+    "ik slaap niet",
+    "ik slaap slecht",
+    "kan niet slapen",
+    "slapeloos",
+    "slapeloosheid",
+    "nachtmerries",
+    "niet geslapen"
+   ],
+   "body": [
+    "hoofdpijn",
+    "hartkloppingen",
+    "benauwd",
+    "druk op mijn borst",
+    "geen eetlust",
+    "eet niet meer",
+    "ik tril",
+    "duizelig",
+    "buikpijn",
+    "maagpijn"
+   ]
+  },
+  "reading": {
+   "factors": {
+    "comfort": [
+     "ik voel me op mijn gemak bij hem",
+     "ik voel me op mijn gemak bij haar",
+     "ik voel me rustig bij",
+     "ik voel me veilig bij",
+     "ik vind hem leuk",
+     "ik vind haar leuk"
+    ],
+    "character": [
+     "religieus",
+     "praktiserend",
+     "goed karakter",
+     "respectvol",
+     "beleefd",
+     "hij bidt",
+     "zij bidt",
+     "vroom"
+    ],
+    "opportunity": [
+     "baanaanbod",
+     "hoger salaris",
+     "beter salaris",
+     "promotie",
+     "beurs",
+     "kans",
+     "betere baan",
+     "aangenomen"
+    ],
+    "history": [
+     "jaren samen",
+     "onze kinderen",
+     "lange geschiedenis",
+     "we hebben kinderen"
+    ],
+    "money": [
+     "beperkt inkomen",
+     "laag inkomen",
+     "hij is arm",
+     "zij is arm",
+     "weinig geld",
+     "financieel",
+     "werkloos",
+     "geen werk",
+     "schulden"
+    ],
+    "family": [
+     "mijn ouders weigeren",
+     "mijn familie weigert",
+     "mijn familie is tegen",
+     "mijn ouders zijn tegen",
+     "mijn ouders zijn het er niet mee eens",
+     "mijn ouders twijfelen",
+     "mijn vader weigert",
+     "mijn moeder weigert"
+    ],
+    "distance": [
+     "een ander land",
+     "een andere stad",
+     "ver van mijn familie",
+     "ver van mijn moeder",
+     "ver van mijn ouders",
+     "naar het buitenland",
+     "sinds ik verhuisd ben",
+     "sinds mijn verhuizing"
+    ],
+    "age": [
+     "mijn leeftijd",
+     "ik word ouder",
+     "te oud",
+     "de tijd dringt"
+    ],
+    "people": [
+     "wat mensen zullen zeggen",
+     "wat zullen de mensen zeggen",
+     "wat anderen denken",
+     "de maatschappij",
+     "mijn reputatie"
+    ],
+    "past": [
+     "eerdere ervaring",
+     "de vorige keer",
+     "mijn eerste huwelijk",
+     "gescheiden",
+     "al eerder gekwetst"
+    ],
+    "doubts": [
+     "opvliegend",
+     "hij liegt",
+     "zij liegt",
+     "gierig",
+     "jaloers",
+     "bezitterig",
+     "humeurig",
+     "bidt niet"
+    ],
+    "unknown": [
+     "ik ken hem niet goed",
+     "ik ken haar niet goed",
+     "nauwelijks",
+     "maar één keer gezien"
+    ],
+    "duties": [
+     "verantwoordelijkheden",
+     "heeft kinderen",
+     "weduwnaar",
+     "weduwe"
+    ],
+    "regret": [
+     "spijt",
+     "ik zal spijt krijgen",
+     "bang om te verliezen",
+     "hem te verliezen",
+     "haar te verliezen"
+    ],
+    "pressure": [
+     "zetten me onder druk",
+     "zet me onder druk",
+     "gedwongen",
+     "dwingen me",
+     "ze dringen aan",
+     "ze haasten me"
+    ],
+    "desire": [
+     "ik wil hem",
+     "ik wil haar",
+     "ik wil met hem trouwen",
+     "ik wil met haar trouwen",
+     "mijn hart is bij",
+     "ik droom"
+    ],
+    "power": [
+     "mijn baas",
+     "mijn manager",
+     "mijn leidinggevende",
+     "mijn werkgever",
+     "de directeur",
+     "mijn chef"
+    ],
+    "livelihood": [
+     "bang om mijn baan te verliezen",
+     "bang ontslagen te worden",
+     "ik kan niets terugzeggen",
+     "durf niets te zeggen"
+    ],
+    "harm": [
+     "slaat me",
+     "beledigt me",
+     "vernedert me",
+     "mishandelt me",
+     "gewelddadig",
+     "doet me pijn"
+    ]
+   },
+   "options": {
+    "accept_refuse": [
+     "accepteren",
+     "weigeren",
+     "ja zeggen",
+     "nee zeggen",
+     "afwijzen",
+     "als ik accepteer",
+     "als ik weiger"
+    ],
+    "stay_leave": [
+     "bij hem blijven",
+     "bij haar blijven",
+     "hem verlaten",
+     "haar verlaten",
+     "scheiden",
+     "uit elkaar",
+     "het uitmaken"
+    ],
+    "forgive_cut": [
+     "vergeven",
+     "het contact verbreken",
+     "breken met",
+     "niet meer praten met",
+     "afstand nemen"
+    ],
+    "speak_silent": [
+     "confronteren",
+     "het hem zeggen",
+     "het haar zeggen",
+     "met hem praten",
+     "met haar praten",
+     "zwijgen",
+     "niets zeggen"
+    ],
+    "move_stay": [
+     "naar het buitenland",
+     "emigreren",
+     "verhuizen",
+     "teruggaan naar mijn land",
+     "hier blijven",
+     "reizen"
+    ],
+    "continue_quit": [
+     "ontslag nemen",
+     "stoppen met mijn werk",
+     "stoppen met mijn studie",
+     "van studie veranderen",
+     "doorgaan met studeren",
+     "doorgaan"
+    ]
+   }
   }
  }
 }

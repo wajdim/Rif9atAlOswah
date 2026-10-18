@@ -1,0 +1,3 @@
+• New languages: German, Malay, Persian and Bengali
+• Choose the app font in Settings: Andalus, Tahoma, Arial or Times New Roman (Quranic verses keep their own script)
+• Better understanding of what you write, and fixes

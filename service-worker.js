@@ -3,13 +3,13 @@
   cache-first لملفات التطبيق مع تحديث في الخلفية، حتى يعمل كاملًا بلا إنترنت.
   لا يتدخل أبدًا في طلبات api.anthropic.com (وضع الذكاء الاصطناعي الاختياري).
 */
-const CACHE_NAME = "rifqa-aluswa-v2.8.0";
+const CACHE_NAME = "rifqa-aluswa-v2.12.0";
 const APP_SHELL = [
   "./", "./index.html", "./manifest.json",
   "./css/base.css", "./css/app.css", "./fonts/fonts.css",
   "./js/data-situations.js", "./js/data-situations-2.js", "./js/data-situations-3.js", "./js/data-situations-4.js",
-  "./js/data-quran.js", "./js/data-hadith.js", "./js/data-themes.js", "./js/data-tashkeel.js", "./js/data-tashkeel-prose.js", "./js/data-en.js", "./js/data-nl.js", "./js/data-es.js", "./js/data-pt.js", "./js/data-fr.js", "./js/data-ur.js", "./js/data-id.js", "./js/data-tr.js", "./js/i18n.js", "./js/tashkeel-view.js",
-  "./js/icons.js", "./js/rag.js", "./js/tts.js", "./js/ai.js", "./js/app.js",
+  "./js/data-quran.js", "./js/data-hadith.js", "./js/data-themes.js", "./js/data-life.js", "./js/data-reading.js", "./js/data-tashkeel.js", "./js/data-tashkeel-prose.js", "./js/data-en.js", "./js/data-nl.js", "./js/data-es.js", "./js/data-pt.js", "./js/data-fr.js", "./js/data-ur.js", "./js/data-id.js", "./js/data-tr.js", "./js/data-de.js", "./js/data-ms.js", "./js/data-fa.js", "./js/data-bn.js", "./js/i18n.js", "./js/tashkeel-view.js",
+  "./js/icons.js", "./js/rag.js", "./js/reading.js", "./js/tts.js", "./js/ai.js", "./js/app.js",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-512-maskable.png", "./icons/apple-touch-icon.png"
 ];
 

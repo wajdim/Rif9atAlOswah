@@ -1,0 +1,3 @@
+• Yeni diller: Almanca, Malayca, Farsça ve Bengalce
+• Ayarlar'dan uygulama yazı tipini seç: Andalus, Tahoma, Arial veya Times New Roman (Kur'an ayetleri kendi yazılarını korur)
+• Yazdıklarının daha iyi anlaşılması ve düzeltmeler
