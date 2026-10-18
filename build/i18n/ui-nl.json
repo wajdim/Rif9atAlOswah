@@ -812,5 +812,6 @@
  "موقف من «{0}».": "Een situatie uit ‘{0}’.",
  "ما قد تحتاجه فيه:": "Wat je erin nodig kunt hebben:",
  "أضف تفاصيل حالتك": "Voeg je eigen details toe",
- "النتائج: {0}": "Resultaten: {0}"
+ "النتائج: {0}": "Resultaten: {0}",
+ "لم يُطابَق آليًا مع نسخة المصدر": "Niet automatisch gecontroleerd met een kopie van de bron"
 }

@@ -812,5 +812,6 @@
  "موقف من «{0}».": "Uma situação de «{0}».",
  "ما قد تحتاجه فيه:": "O que podes precisar:",
  "أضف تفاصيل حالتك": "Acrescenta os teus detalhes",
- "النتائج: {0}": "Resultados: {0}"
+ "النتائج: {0}": "Resultados: {0}",
+ "لم يُطابَق آليًا مع نسخة المصدر": "Não verificado automaticamente com uma cópia da fonte"
 }

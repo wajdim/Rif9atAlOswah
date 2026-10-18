@@ -812,5 +812,6 @@
  "موقف من «{0}».": "A situation from “{0}”.",
  "ما قد تحتاجه فيه:": "What you may need in it:",
  "أضف تفاصيل حالتك": "Add your own details",
- "النتائج: {0}": "Results: {0}"
+ "النتائج: {0}": "Results: {0}",
+ "لم يُطابَق آليًا مع نسخة المصدر": "Not machine-checked against a copy of the source"
 }

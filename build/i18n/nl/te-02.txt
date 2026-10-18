@@ -65,7 +65,7 @@ lib:h-ruqya-alam	Leg je hand op het deel van je lichaam dat pijn doet en zeg dri
 lib:h-adhhib-bas	O Allah, Heer van de mensen, neem het kwaad weg en genees, want U bent de Genezer. Er is geen genezing dan Uw genezing — een genezing die geen ziekte achterlaat.
 lib:h-la-bas	Wanneer de Profeet ﷺ een zieke bezocht, zei hij: “Geen kwaad; het is een zuivering, als Allah het wil.”
 lib:h-ayn-haqq	Het boze oog is echt.
-lib:h-barrakt	Waarom zou een van jullie zijn broeder doden? Als je iets ziet wat je bevalt, waarom bad je dan niet om zegen voor hem?
+lib:h-barrakt	Waarom zou een van jullie zijn broeder doden? Waarom heb je geen zegen gevraagd?
 lib:h-muawwidhat	Heb je de verzen niet gezien die vannacht zijn geopenbaard, waarvan de gelijke nooit is gezien? “Zeg: ik zoek mijn toevlucht bij de Heer van de dageraad” en “Zeg: ik zoek mijn toevlucht bij de Heer van de mensen.”
 lib:h-uidhukuma	De Profeet ﷺ zocht bescherming voor al-Hasan en al-Husayn en zei: “Ik zoek bescherming voor jullie beiden in de volmaakte woorden van Allah tegen elke duivel en elk giftig dier, en tegen elk boos oog.”
 lib:h-khattaun	Elk kind van Adam zondigt, en de besten van wie zondigen zijn zij die berouw tonen.

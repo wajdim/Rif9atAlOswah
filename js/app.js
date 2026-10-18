@@ -209,7 +209,7 @@ function sitEvidenceHTML(s){
       (q.context?'<div class="evidence-meta">'+esc(q.context)+'</div>':"")+'<div class="evidence-relevance">'+esc(q.relevance||"")+'</div></div>';
   });
   (s.hadithRefs||[]).forEach(function(x){
-    h+='<div class="evidence-item"><div class="evidence-tag">'+(x.paraphrase?T("خلاصة الرواية"):T("نص الحديث"))+'<span class="grade '+gradeClass(x.grade)+'">'+esc(I18N.grade(x.grade))+'</span>'+(x.paraphrase?'<span class="paraphrase">'+T("بالمعنى لا باللفظ")+'</span>':"")+'</div>'+
+    h+='<div class="evidence-item"><div class="evidence-tag">'+(x.paraphrase?T("خلاصة الرواية"):T("نص الحديث"))+'<span class="grade '+gradeClass(x.grade)+'">'+esc(I18N.grade(x.grade))+'</span>'+(x.paraphrase?'<span class="paraphrase">'+T("بالمعنى لا باللفظ")+'</span>':"")+(x.ver==="unverified"?'<span class="paraphrase">'+T("لم يُطابَق آليًا مع نسخة المصدر")+'</span>':"")+'</div>'+
       '<div class="evidence-quote" '+AR_VOICE+AR_ATTR+' style="font-size:1.02rem;">«'+esc(hText(x.text))+'»</div>'+enHadith(x.te)+'<div class="evidence-meta">'+T("الراوي:")+' '+esc(x.narrator)+' — '+esc(I18N.src(x.source))+'</div></div>';
   });
   if(s.seerahSources && s.seerahSources.length && s.sourceStrength==="رواية تاريخية"){

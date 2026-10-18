@@ -97,20 +97,23 @@ async function surah(n) {
   }
 
   /* ---------- 2) الأحاديث والأذكار ---------- */
-  const src = {};   // hadith-tashkeel*.json: {المعرّف: النص المشكول}
-  fs.readdirSync(__dirname).filter(f => /^hadith-tashkeel.*\.json$/.test(f))
-    .forEach(f => Object.assign(src, JSON.parse(fs.readFileSync(path.join(__dirname, f), "utf8"))));
-  // المعتمد: ضبط كتب الحديث بعد المراجعة (finalize-hadith.py)، والضبط اليدوي احتياط لما لم يُوجد
-  const fin = path.join(__dirname, "hadith-final.json");
-  if (fs.existsSync(fin)) Object.assign(src, JSON.parse(fs.readFileSync(fin, "utf8")));
+  // لكل معرّف عدة مرشحين بالترتيب: ضبط كتب الحديث بعد المراجعة (hadith-final.json)، ثم الضبط اليدوي
+  // (hadith-tashkeel*.json)، ثم ضبط المصدر لما تغيّر نصه بعد التحقق (hadith-tashkeel-kb.json، build/kb/vocalize.py)؛
+  // ويُعتمد أول مرشح تطابق حروفه النص الحالي
+  const cands = {};
+  const add = f => { for (const [id, v] of Object.entries(JSON.parse(fs.readFileSync(path.join(__dirname, f), "utf8")))) (cands[id] = cands[id] || []).push(v); };
+  if (fs.existsSync(path.join(__dirname, "hadith-final.json"))) add("hadith-final.json");
+  fs.readdirSync(__dirname).filter(f => /^hadith-tashkeel.*\.json$/.test(f) && f !== "hadith-tashkeel-kb.json").forEach(add);
+  if (fs.existsSync(path.join(__dirname, "hadith-tashkeel-kb.json"))) add("hadith-tashkeel-kb.json");
   const plainTexts = new Map();
   G.HADITH_LIB.forEach(h => plainTexts.set(h.id, h.t));
   G.SITUATIONS.forEach(s => (s.hadithRefs || []).forEach((h, i) => plainTexts.set(s.id + "#" + i, h.text)));
   const speech = {}, badH = [];
-  for (const [id, vocal] of Object.entries(src)) {
+  for (const [id, list] of Object.entries(cands)) {
     const plain = plainTexts.get(id);
     if (!plain) { badH.push(id + " (معرّف غير موجود)"); continue; }
-    if (!sameLetters(vocal, plain)) { badH.push(id + " (الحروف لا تطابق الأصل)"); continue; }
+    const vocal = list.find(v => sameLetters(v, plain));
+    if (!vocal) { badH.push(id + " (الحروف لا تطابق الأصل)"); continue; }
     speech[skeleton(plain).s] = vocal.replace(/\s+/g, " ").trim();
   }
   const noH = [...plainTexts.keys()].filter(id => !speech[skeleton(plainTexts.get(id)).s]);   // النص المكرر يغطيه مفتاحه

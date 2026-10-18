@@ -7,7 +7,7 @@ const cache = {};
 function load(lang) {
   if (cache[lang]) return cache[lang];
   const ctx = { console, localStorage: { getItem: () => JSON.stringify({ lang }) }, document: {}, navigator: {} }; ctx.window = ctx; vm.createContext(ctx);
-  for (const f of ["data-situations.js", "data-situations-2.js", "data-situations-3.js", "data-situations-4.js", "data-quran.js", "data-hadith.js", "data-themes.js", "data-life.js", "data-taxonomy.js", "data-reading.js",
+  for (const f of ["data-situations.js", "data-situations-2.js", "data-situations-3.js", "data-situations-4.js", "data-quran.js", "data-hadith.js", "data-evidence.js", "data-themes.js", "data-life.js", "data-taxonomy.js", "data-reading.js",
     lang === "ar" ? "data-en.js" : "data-" + lang + ".js", "i18n.js", "rag.js", "data-nlu.js", "nlu.js", "reading.js"]) vm.runInContext(fs.readFileSync(path.join(JS, f), "utf8"), ctx, { filename: f });
   return cache[lang] = vm.runInContext("RAG", ctx);
 }

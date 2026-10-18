@@ -771,3 +771,4 @@
 811	Wat je erin nodig kunt hebben:
 812	Voeg je eigen details toe
 813	Resultaten: {0}
+814	Niet automatisch gecontroleerd met een kopie van de bron

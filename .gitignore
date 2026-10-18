@@ -35,3 +35,8 @@ build/embed/model/
 build/embed/model-e5/
 build/embed/anchors.json
 build/embed/engine-scores.json
+
+# evidence pipeline: downloaded sources and intermediate report (build/kb/README.md)
+build/kb/cache/
+build/kb/report.json
+build/kb/__pycache__/

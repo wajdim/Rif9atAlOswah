@@ -812,5 +812,6 @@
  "موقف من «{0}».": "“{0}” kategorisinden bir durum.",
  "ما قد تحتاجه فيه:": "Bu durumda ihtiyaç duyabilecekleriniz:",
  "أضف تفاصيل حالتك": "Kendi ayrıntılarınızı ekleyin",
- "النتائج: {0}": "Sonuç: {0}"
+ "النتائج: {0}": "Sonuç: {0}",
+ "لم يُطابَق آليًا مع نسخة المصدر": "Kaynağın bir nüshasıyla otomatik olarak karşılaştırılmadı"
 }

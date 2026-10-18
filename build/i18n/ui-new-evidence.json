@@ -1,0 +1,7 @@
+{
+ "لم يُطابَق آليًا مع نسخة المصدر": {
+  "en": "Not machine-checked against a copy of the source", "fr": "Non vérifié automatiquement sur une copie de la source", "nl": "Niet automatisch gecontroleerd met een kopie van de bron", "es": "No verificado automáticamente con una copia de la fuente", "pt": "Não verificado automaticamente com uma cópia da fonte",
+  "ur": "ماخذ کے کسی نسخے سے خودکار طور پر جانچا نہیں گیا", "id": "Belum dicocokkan otomatis dengan salinan sumbernya", "tr": "Kaynağın bir nüshasıyla otomatik olarak karşılaştırılmadı", "de": "Nicht automatisch mit einer Kopie der Quelle abgeglichen", "ms": "Belum disemak secara automatik dengan salinan sumbernya",
+  "fa": "به‌طور خودکار با نسخه‌ای از منبع تطبیق داده نشده است", "bn": "উৎসের কোনো কপির সঙ্গে স্বয়ংক্রিয়ভাবে মেলানো হয়নি"
+ }
+}
