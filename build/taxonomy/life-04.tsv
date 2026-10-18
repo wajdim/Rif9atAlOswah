@@ -1,0 +1,81 @@
+n	sub	em	need	en	ph_ar	ph_en
+161	ethics.amanah	confusion	guidance	You find something valuable and do not know who owns it.	لقيت حاجة غالية في الشارع وما نعرفش مولاها	I found something valuable and don't know who it belongs to
+162	ethics.honesty	confusion	decision	You have a chance to benefit from a mistake nobody noticed.	الكاشير غلط في الحساب لصالحي وحتى حد ما فاق	The cashier gave me too much change and nobody noticed
+163	self.pleasing	confusion	boundaries	A group pressures you to do something against your convictions.	صحابي يضغطوا علي باش نعمل حاجة ضد مبادئي	My friends are pressuring me to do something I don't believe in
+164	ethics.honesty	guilt	repentance	You lie to avoid an embarrassing situation and then regret it.	كذبت باش نهرب من موقف محرج وندمت	I lied to get out of an awkward situation and now I regret it
+165	people.speech	confusion	guidance	You hear a rumour and wonder whether to pass it on or stop it.	سمعت إشاعة على واحد ومحتار نحكيها ولا نسكت	I heard a rumour about someone and I'm not sure whether to share it
+166	ethics.injustice	fear	guidance	You witness an injustice and are afraid to defend the victim.	شفت ظلم وخفت ندافع على المظلوم	I saw someone being treated unfairly and was too scared to step in
+167	people.argument	confusion	guidance	You disagree with someone you respect on a religious or intellectual matter.	اختلفت مع شيخ نحترمه في مسألة	I disagree with someone I respect on a religious question
+168	faith.weak	guilt	growth	You try to keep up an act of worship or a good habit and then stop.	كل مرة نبدا نصلي قيام الليل ونقطع	I keep starting a good habit and dropping it
+169	faith.sin	guilt	repentance	You feel guilty about an old mistake.	غلطة قديمة مازالت تعذبني	An old sin still haunts me
+170	ethics.amanah	confusion	decision	You must choose between your own interest and keeping a promise.	وعدت صاحبي وتوا الوفاء بالوعد يضرني	Keeping my promise will cost me, and I'm torn
+171	ethics.honesty	shame	growth	Someone asks you about something you do not know and you are tempted to pretend.	سألوني على حاجة ما نعرفهاش وحبيت نعمل روحي نعرف	Someone asked me something I didn't know and I was tempted to bluff
+172	ethics.honesty	fear	repentance	You admit a mistake despite fearing the consequences.	بدي أعترف بغلطتي بس خايف من العواقب	I want to admit my mistake but I'm scared of what will happen
+173	ethics.honesty	fear,confusion	decision	You are asked to give testimony that does not match the truth.	طالبين مني نشهد بحاجة ماهيش صحيحة	I'm being asked to testify to something that isn't true
+174	people.forgive	betrayal	decision	You want to forgive someone but cannot regain your trust in them.	نحب نسامحو بس الثقة ما رجعتش	I want to forgive him but I can't trust him again
+175	people.community	confusion	boundaries	You hesitate between helping others and protecting your own limits.	نحب نعاون الناس بس ولّيت نتعب على حساب روحي	I want to help others but I keep neglecting myself
+176	people.suspicion	guilt	repair	You discover your judgement of someone was too hasty.	حكمت على واحد بسرعة وطلع إنسان باهي	I judged someone too quickly and I was wrong about him
+177	ethics.honesty	confusion	decision	You are offered a bribe or a favour in exchange for breaking the rules.	عرضوا علي رشوة باش نسكّر عيني	Someone offered me a bribe to look the other way
+178	people.argument	shame	growth	You defend your opinion and then realise it was wrong.	دافعت على رايي بقوة وبعد عرفت أني غالط	I argued hard for my opinion and then realised I was wrong
+179	ethics.amanah	guilt	repentance	You try to return what is due to someone after many years.	بدي أرجّع حق لصاحبه بعد سنين	I want to return something I owe someone from years ago
+180	self.pleasing	sadness	meaning	You choose to do the right thing even though no one will appreciate it.	عملت الصح وحتى حد ما قدر	I did the right thing and nobody noticed
+181	life.crisis	fear	guidance	You get lost in an unfamiliar place.	تهت في بلاصة ما نعرفهاش	I'm lost in a place I don't know
+182	life.crisis	anger,fear	guidance	You miss a flight or a train.	فاتتني الطيارة	I missed my flight
+183	life.abroad	fear,loneliness	guidance	You arrive in a new country without speaking its language.	وصلت لبلد جديد وما نعرفش اللغة	I've moved to a new country and don't speak the language
+184	life.crisis	fear	guidance	You lose your passport while travelling.	ضاع جواز سفري وأنا مسافر	I lost my passport while travelling
+185	life.abroad	confusion	guidance	A cultural difference causes a misunderstanding.	صار سوء فهم بسبب اختلاف الثقافة	A cultural difference caused a misunderstanding with a colleague
+186	life.transition	sadness	patience	The weather forces you to change your plans.	الطقس خرّب كل برنامجي	The weather ruined all my plans
+187	life.crisis	fear	guidance	Your car breaks down on a remote road.	الكرهبة طاحت بيا في طريق بعيدة	My car broke down in the middle of nowhere
+188	people.community	anger	guidance	A dispute with a neighbour over noise.	الجار يعمل حس كل ليلة وتخاصمنا	I'm fighting with my neighbour about the noise
+189	ethics.injustice	anger	justice	You are treated unfairly by a public service.	تعاملوا معايا بظلم في الإدارة	I was treated unfairly at a government office
+190	ethics.injustice	anger	guidance	You wait in a queue for a long time and someone cuts in.	استنيت برشا في الطابور وواحد تعداني	I waited ages in line and someone pushed in front of me
+191	life.digital	shame,fear	guidance	You send a private message to the wrong person.	بعثت رسالة خاصة للشخص الغالط	I sent a private message to the wrong person
+192	life.digital	guilt,shame	repentance	You post something online and then regret it.	نشرت حاجة على الفيسبوك وندمت	I posted something online and regret it
+193	life.digital	sadness	patience	You lose photos and memories because your phone broke.	ضاعوا تصاويري الكل كي تكسر التلفون	I lost all my photos when my phone broke
+194	life.transition	loneliness	patience	You move into a new home and feel unsettled.	بدلت الدار وما زلت ما ارتحتش	We moved house and I still don't feel settled
+195	ethics.decision	confusion	decision	You face an important decision between two good options.	عندي زوز اختيارات باهين ومحتار	I have two good options and I can't choose
+196	self.sadness	sadness	patience	An event you had long looked forward to is cancelled.	تلغات المناسبة اللي كنت نستنى فيها	The event I'd been waiting for was cancelled
+197	self.sadness	confusion,sadness	meaning	You achieve a dream and find it did not give you the feeling you expected.	حققت حلمي وما حسيتش بالفرحة اللي توقعتها	I achieved my dream and still feel empty
+198	life.transition	confusion	meaning	You retire or leave a familiar role and look for new meaning in your day.	تقاعدت وما عادش نعرف شنو نعمل بنهاري	I retired and don't know what to do with my days
+199	self.despair	joy,fear	growth	You get a second chance after an earlier failure.	جاتني فرصة ثانية بعد ما فشلت	I've been given a second chance after failing
+200	life.transition	fear,joy	guidance	You stand at a new beginning and feel fear and hope together.	نبدا مرحلة جديدة وخايف ومتفائل في نفس الوقت	I'm starting something new and feel scared and hopeful at once
+201	life.abroad	loneliness,fear	patience	You arrive in a new country and feel you are starting life from zero.	جيت لبلد جديد وحاسس نبدا من الصفر	I moved abroad and feel like I'm starting from zero
+202	life.abroad	loneliness,sadness	comfort	You miss your family and cannot visit them because of work or travel costs.	توحشت أهلي وما نقدرش نزورهم	I miss my family and can't afford to visit
+203	life.abroad	loneliness	comfort,support	You fall ill abroad and have no one to look after you.	مرضت في الغربة وحتى حد ما بجنبي	I got sick abroad and there's no one to look after me
+204	life.abroad	loneliness,sadness	comfort	You spend Eid far from your family and miss its atmosphere at home.	العيد في الغربة من غير عائلتي	Spending Eid alone abroad without my family
+205	life.abroad	sadness,guilt	comfort	You hear of a loved one's death and cannot attend the funeral.	جدتي ماتت وما نجمتش نحضر الجنازة	My grandmother died and I couldn't go to the funeral
+206	life.abroad	shame	guidance	You struggle to express your needs in the local language.	ما نعرفش نعبّر على روحي بلغة البلاد	I can't express what I need in the local language
+207	life.abroad	shame,anger	justice	You are mistreated because of your name, accent or origin.	يعاملوني خايب خاطر اسمي عربي	People treat me badly because of my name and where I'm from
+208	life.abroad	loneliness	comfort	You struggle to make friends despite living there for some time.	عندي سنين هنا وما عنديش صحاب	I've lived here for years and still have no friends
+209	life.abroad	confusion	decision	You hesitate between integrating and keeping your customs and identity.	محتار بين الاندماج والمحافظة على هويتي	I'm torn between fitting in and keeping my identity
+210	life.identity	fear	guidance	Your children grow up with a different language and culture and you fear they will drift from their roots.	خايف ولادي يكبروا بعيد على أصلهم	I'm afraid my kids are losing their roots growing up abroad
+211	life.identity	confusion	guidance	You disagree with your children about what home and belonging mean.	ولادي يقولوا البلاد هذي هي بلادهم	My children and I disagree about where home really is
+212	life.papers	fear	patience	You are waiting for your residence permit renewal and worry about your stability.	نستنى في تجديد الإقامة وخايف	I'm anxious waiting for my residence permit renewal
+213	life.abroad_work	sadness,anger	patience	Your degree or experience is not recognised, so you work in another field.	شهادتي ما يعترفوش بيها هنا ونخدم في حاجة أخرى	My degree isn't recognised here so I'm stuck in another job
+214	life.abroad	loneliness	comfort	Your family thinks life abroad is easy and it is hard to explain your struggles.	أهلي يحسابو الغربة جنة	My family thinks life abroad is easy and doesn't understand
+215	life.abroad	exhaustion	boundaries	You send money to your family while you face financial pressure yourself.	نبعث لأهلي فلوس وأنا نفسي مضيّق	I send money home while I'm struggling myself
+216	life.abroad	sadness	comfort	You miss your brother's wedding or sister's graduation.	فاتني عرس خويا وأنا في الغربة	I missed my brother's wedding because I'm abroad
+217	life.abroad	sadness,guilt	comfort	You watch your parents age over video calls and feel helpless.	نشوف والديا كبروا في الفيديو وما نقدر نعمل شي	I watch my parents get older on video calls and feel helpless
+218	life.papers	confusion	support	You need to understand housing, insurance or tax procedures and do not know who can help.	ما فهمت شي في الضرائب والتأمين هنا	I don't understand the tax and insurance system here
+219	life.papers	fear	support	You are afraid to ask for help because you do not know your rights or the language.	نخاف نطلب مساعدة خاطر ما نعرفش حقوقي	I'm afraid to ask for help because I don't know my rights
+220	life.abroad	sadness	comfort	You miss simple things from home: food, dialect, family gatherings.	توحشت الماكلة متاع أمي والقعدات	I miss my mum's cooking and family gatherings
+221	life.return	sadness,loneliness	comfort	You visit your homeland and discover people and places have changed.	رجعت للبلاد ولقيت كل شي تبدل	I went back home and everything had changed
+222	life.abroad	loneliness	meaning	You feel a stranger where you live and no longer fully belong to your country of origin.	لا هنا مرتاح ولا في بلادي	I don't belong here and I no longer belong back home
+223	life.abroad	confusion	decision	You and your spouse disagree about returning home or settling abroad.	مرتي تبي نرجعو وأنا نحب نقعد	My wife wants to go back home and I want to stay
+224	life.abroad	fear,confusion	decision	You want to return but fear losing what you built abroad.	نحب نروّح بس خايف نخسر اللي بنيتو	I want to go home but I'm afraid to lose everything I built here
+225	life.abroad	guilt	comfort	You feel guilty for being far from your family although you left to improve your lives.	نحس بالذنب خاطر بعيد على أهلي	I feel guilty for living so far from my family
+226	life.abroad	jealousy,sadness	meaning	You compare yourself to other expatriates and think you are behind.	المغتربين الآخرين نجحوا وأنا لا	Other people who moved abroad seem to be doing better than me
+227	life.abroad	loneliness	support	You look for a place to practise your faith or meet people who share your culture.	نلوج على جامع وناس من ثقافتي	I'm looking for a mosque and people from my culture
+228	life.abroad_work	anger,fear	justice	You are exploited in housing or work because you do not know the system.	مولى الدار يستغلني خاطر ما نعرفش القانون	My landlord takes advantage of me because I don't know the system
+229	life.abroad	joy	meaning	A local person helps you and you feel welcome for the first time.	جاري ساعدني وحسيت لأول مرة أني مرحّب بيا	A local helped me and I felt welcome for the first time
+230	life.abroad	joy	growth	You build a stable life abroad and learn to stay connected to home.	استقريت هنا وحاب نحافظ على صلتي ببلادي	I've settled abroad and want to stay connected to home
+231	life.papers	anger,fear	guidance	You arrive at an appointment and discover you brought the wrong documents.	مشيت للموعد ونسيت الوثيقة المطلوبة	I went to my appointment with the wrong documents
+232	life.papers	sadness	patience	Family reunification papers are delayed and your separation drags on.	أوراق لمّ الشمل تأخرت وعائلتي بعيدة	Family reunification is taking forever and I miss my family
+233	life.papers	confusion	guidance	You need to translate an old certificate that is hard to obtain.	لازمني نترجم شهادة قديمة وصعيب نجيبها	I need an old certificate translated and it's hard to get
+234	life.papers	anger	justice	Your application is rejected because of a small spelling mistake in your name.	رفضوا ملفي على غلطة في كتابة اسمي	My application was rejected because of a typo in my name
+235	life.papers	fear	support	You receive an official letter in a language you do not understand, with a deadline to reply.	جاتني رسالة رسمية ما فهمتهاش وفيها أجل	I got an official letter I can't understand with a deadline
+236	life.papers	guilt	guidance	You move house and forget to update your address with the authorities.	نسيت نبدل العنوان في البلدية	I moved and forgot to update my address with the authorities
+237	life.papers	fear	decision	Your residence permit is tied to your job, so changing jobs makes you anxious.	الإقامة مربوطة بالخدمة وخايف نبدل	My visa is tied to my job so I'm scared to change jobs
+238	life.papers	fear	guidance	You need to travel while your passport is held by an authority.	لازمني نسافر والباسبور عند الإدارة	I need to travel but my passport is with the immigration office
+239	life.papers	confusion	guidance	Your name is spelled differently on your passport and certificates.	اسمي مكتوب بطريقة مختلفة في الأوراق	My name is spelled differently on my passport and my diplomas
+240	life.papers	confusion	guidance	You are asked to prove something for which no document exists in your home country.	طالبين وثيقة ما فماش منها في بلادي	They want a document that doesn't exist in my home country

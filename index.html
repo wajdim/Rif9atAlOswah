@@ -108,7 +108,8 @@ if(p.lang!=="ur"&&p.lang!=="fa"&&p.ff!=="original")d.style.setProperty("--font-u
         <input type="text" id="exploreSearch" placeholder="ابحث عن موضوع أو موقف… مثل: الغضب، الديون، الوالدين">
       </div>
       <div class="explore-tabs">
-        <button class="explore-tab active" id="tabByTopic">حسب الموضوع</button>
+        <button class="explore-tab active" id="tabLife">مواقف الحياة (<span id="lifeCount"></span>)</button>
+        <button class="explore-tab" id="tabByTopic">حسب الموضوع</button>
         <button class="explore-tab" id="tabAllSit">كل المواقف (<span id="allCount"></span>)</button>
       </div>
       <div id="exploreBody"></div>
@@ -274,6 +275,7 @@ if(p.lang!=="ur"&&p.lang!=="fa"&&p.ff!=="original")d.style.setProperty("--font-u
 <script src="js/data-hadith.js"></script>
 <script src="js/data-themes.js"></script>
 <script src="js/data-life.js"></script>
+<script src="js/data-taxonomy.js"></script>
 <script src="js/data-reading.js"></script>
 <script src="js/data-tashkeel.js"></script>
 <script src="js/data-tashkeel-prose.js"></script>

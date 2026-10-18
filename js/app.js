@@ -150,7 +150,7 @@ function checkFlags(text){
 /* ---------------- التشغيل ---------------- */
 var STAGES=["أقرأ ما كتبته وأفهم سياقه…","أكتشف الموضوعات والمشاعر وطبيعة العلاقة…","أسترجع المواقف القريبة من السيرة وقصص الأنبياء…","أبحث في الآيات والأحاديث المرتبطة…","أراجع درجات النصوص ومصادرها…","أبني القراءة والخطة العملية…"];
 var lastAnalysis=null, aiSession=null;
-function runSearch(text, focus){
+function runSearch(text, focus, sit){
   text=(text||"").trim();
   if(text.length<4){ toast(T("اكتب موقفك بتفصيل أكثر قليلًا")); qs("userInput").focus(); return; }
   showScreen("loading",false);
@@ -159,14 +159,14 @@ function runSearch(text, focus){
   var i=0, result=null;
   // التحليل الفعلي يُنفّذ فورًا؛ المراحل المرئية للإيضاح فقط
   setTimeout(function(){
-    result={a:RAG.analyze(text, focus?{focus:focus}:null), flags:checkFlags(text)};
+    result={a:RAG.analyze(text, focus?{focus:focus}:sit?{sit:sit}:null), flags:checkFlags(text)};
     if(result.a.understanding.crisis) result.flags.selfHarm=true;   // كاشف واحد للأزمة: المحرك (العاميات، العربية اللاتينية، القواعد التركيبية) أو القائمة
   },0);
   (function step(){
     if(i>0) qs("stage-"+(i-1)).classList.replace("active","done");
     if(i<STAGES.length){ qs("stage-"+i).classList.add("active"); i++; setTimeout(step, 300); }
     else setTimeout(function(){
-      result.a.id=Date.now().toString(36); result.a.focus=focus||null; lastAnalysis=result.a;
+      result.a.id=Date.now().toString(36); result.a.focus=focus||null; result.a.sitN=(!focus&&sit)||null; lastAnalysis=result.a;
       window.__lastFlags=result.flags; renderResult(result.a, result.flags);
       showScreen("result");
       if(AI.enabled() && qs("aiAuto").checked) startAI();
@@ -271,7 +271,7 @@ function journalToggle(){
   if(f){ journal=journal.filter(function(x){return x!==f;}); toast(T("أُزيل الموقف من مواقفي")); }
   else {
     var top=a.retrieval.sits[0];
-    journal.unshift({id:a.id, t:a.input, ts:Date.now(), focus:a.focus||null, title:top?top.s.title:""});
+    journal.unshift({id:a.id, t:a.input, ts:Date.now(), focus:a.focus||null, sit:a.sitN||null, title:top?top.s.title:""});
     journal=journal.slice(0,100); toast(T("حُفظ الموقف في مواقفي"));
   }
   store("rifqa.journal",journal);
@@ -314,6 +314,7 @@ function renderResult(a, flags){
     out+='<div class="notice"><b>'+T("جانب شرعي أو قانوني دقيق")+'</b>'+T("يتضمن موقفك مسألة (كالطلاق أو الميراث أو الحقوق) لها أحكام تفصيلية. ما يلي مبادئ وتوجيهات عامة للتأمل، وليس فتوى؛ ارجع إلى عالم شرعي مؤهل أو مختص قانوني للحكم في حالتك.")+'</div>';
   }
 
+  out+=lifeNeedsHTML(a);
   if(u.focus && u.themes[0]){
     out+='<div class="focus-note tts-skip">'+T("ركّزتُ القراءة على «{0}» كما اخترت.",esc(u.themes[0].theme.label))+'</div>';
   }
@@ -530,7 +531,7 @@ function followUpAI(){
 }
 
 /* ---------------- الاستكشاف ---------------- */
-var exploreTab="topic";
+var exploreTab=window.TAXONOMY?"life":"topic";
 function themeCounts(t){
   return {sits:t.sits.length, ayat:QURAN_LIB.filter(function(q){return q.th.indexOf(t.id)>-1;}).length, hadith:HADITH_LIB.filter(function(h){return h.th.indexOf(t.id)>-1;}).length};
 }
@@ -542,6 +543,7 @@ function renderStats(){
 }
 function renderExploreBody(filter){
   var nf=RAG.normalize(filter||"");
+  if(exploreTab==="life"){ renderLifeBrowse(nf); return; }
   if(exploreTab==="topic"){
     var groups=[]; THEMES.forEach(function(t){ if(groups.indexOf(t.group)<0) groups.push(t.group); });
     var html="";
@@ -562,6 +564,70 @@ function renderExploreBody(filter){
       return '<div class="all-sit-group"><div class="all-sit-group-title">'+esc(T(cat))+'</div><div class="sit-list" style="padding:0;">'+by[cat].map(sitItemHTML).join("")+'</div></div>';
     }).join("");
   }
+}
+/* ---------------- تصفّح مواقف الحياة: فئة ← فرع ← موقف (js/data-taxonomy.js) ----------------
+   التسميات والنصوص بالعربية أو الإنجليزية (بقية اللغات تُعرض بالإنجليزية إلى أن تُترجم).
+   فتح الموقف يشغّل القراءة نفسها، لكن بموضوعاته ومشاعره المصنّفة يدويًا بدل تخمينها من النص. */
+var lifeCat=null, lifeSub=null;
+function tl(o){ return EN ? (o.en||o.ar) : o.ar; }
+function lifeAll(){ var out=[]; for(var n=1;n<1000;n++){ var x=RAG.byId("life",n); if(x && x.sub) out.push(x); } return out; }
+function lifeText(x){ return EN ? (x.en||x.t) : x.t; }
+function lifeSubOf(id){ for(var i=0;i<TAXONOMY.length;i++) for(var j=0;j<TAXONOMY[i].subs.length;j++) if(TAXONOMY[i].subs[j].id===id) return {cat:TAXONOMY[i], sub:TAXONOMY[i].subs[j]}; return null; }
+function lifeItemHTML(x, showSub){
+  var ss=showSub && lifeSubOf(x.sub);
+  return '<div class="life-item" data-life="'+x.n+'" role="button" tabindex="0">'+(ss?'<div class="li-sub">'+esc(tl(ss.cat))+' › '+esc(tl(ss.sub))+'</div>':"")+'<div class="li-text">'+esc(lifeText(x))+'</div></div>';
+}
+function lifeCrumbHTML(){
+  var h='<div class="life-crumb"><button class="crumb" data-life-cat="">'+T("كل الفئات")+'</button>';
+  if(lifeCat){ var c=TAXONOMY.filter(function(k){ return k.id===lifeCat; })[0]; h+='<span class="sep">›</span>'+(lifeSub?'<button class="crumb" data-life-cat="'+esc(c.id)+'">'+esc(tl(c))+'</button>':'<span class="here">'+esc(tl(c))+'</span>'); }
+  if(lifeSub){ var s=lifeSubOf(lifeSub); h+='<span class="sep">›</span><span class="here">'+esc(tl(s.sub))+'</span>'; }
+  return h+'</div>';
+}
+function renderLifeBrowse(nf){
+  var all=lifeAll(), body=qs("exploreBody");
+  if(nf){
+    // بحث بالجذوع: «الديون» تجد «دين، ديونك»، و«debts» تجد «debt»
+    var qst=RAG.stems(nf).filter(function(w){ return w.length>=2; });
+    var f=all.filter(function(x){
+      if(!x._st) x._st=RAG.stems(x.t+" "+(x.en||"")+" "+(x.ph||[]).join(" "));
+      return qst.length ? qst.every(function(q){ return x._st.some(function(w){ return w===q || (q.length>=3 && w.indexOf(q)===0); }); }) : RAG.normalize(x.t+" "+(x.en||"")).indexOf(nf)>-1;
+    });
+    // ثم مواقف الموضوع الذي يفهمه المحرك من كلمات البحث (الجموع المكسّرة والمرادفات: «الديون» ← الدَّين)
+    if(f.length<12){
+      var th=RAG.understand(nf).themes.filter(function(t){ return t.conf>=0.5; }).slice(0,1).map(function(t){ return t.id; })[0];
+      if(th) f=f.concat(all.filter(function(x){ return x.th[0]===th && f.indexOf(x)<0; }));
+    }
+    body.innerHTML=f.length ? '<div class="life-wrap"><div class="life-count">'+T("النتائج: {0}",f.length)+'</div>'+f.slice(0,80).map(function(x){ return lifeItemHTML(x,true); }).join("")+'</div>'
+      : '<div class="no-results">'+T("لا توجد نتائج مطابقة لبحثك.")+'</div>';
+    return;
+  }
+  var count=function(pred){ return all.filter(pred).length; }, h='<div class="life-wrap">';
+  if(!lifeCat){
+    h+='<div class="life-intro">'+T("اختر الفئة ثم الموقف الأقرب إلى حالك، وستجد قراءته من القرآن والسنة والسيرة. ويمكنك دائمًا أن تكتب موقفك بكلماتك.")+'</div><div class="topic-grid">'+TAXONOMY.map(function(c){
+      var k=count(function(x){ return x.sub.indexOf(c.id+".")===0; });
+      return '<button class="topic-card" data-life-cat="'+esc(c.id)+'" style="font-family:inherit;color:inherit;"><div class="topic-icon">'+iconSvg(c.icon)+'</div><div class="t-title">'+esc(tl(c))+'</div><div class="t-count">'+T("{0} موقفًا",k)+'</div></button>';
+    }).join("")+'</div>';
+  } else if(!lifeSub){
+    var c=TAXONOMY.filter(function(k){ return k.id===lifeCat; })[0];
+    h+=lifeCrumbHTML()+'<div class="life-subs">'+c.subs.map(function(s){
+      var k=count(function(x){ return x.sub===s.id; });
+      return '<button class="life-sub" data-life-sub="'+esc(s.id)+'"><span>'+esc(tl(s))+'</span><span class="k">'+k+'</span></button>';
+    }).join("")+'</div>';
+  } else {
+    h+=lifeCrumbHTML()+all.filter(function(x){ return x.sub===lifeSub; }).map(function(x){ return lifeItemHTML(x,false); }).join("");
+  }
+  body.innerHTML=h+'</div>';
+}
+function openLife(n){
+  var x=RAG.byId("life",+n); if(!x) return;
+  var text=lifeText(x); qs("userInput").value=text;
+  runSearch(text, null, x.n);
+}
+function lifeNeedsHTML(a){
+  var u=a.understanding; if(!u.sit || !window.SIT_NEEDS) return "";
+  var ss=lifeSubOf(u.sit.sub), needs=u.sit.need.map(function(id){ return SIT_NEEDS.filter(function(k){ return k.id===id; })[0]; }).filter(Boolean);
+  return '<div class="focus-note tts-skip">'+(ss?T("موقف من «{0}».",esc(tl(ss.sub)))+' ':"")+(needs.length?T("ما قد تحتاجه فيه:")+' '+needs.map(function(k){ return esc(tl(k)); }).join(T("، "))+'. ':"")+
+    '<button class="btn-ghost" style="padding:4px 10px;" data-act="life-edit">'+T("أضف تفاصيل حالتك")+'</button></div>';
 }
 function sitItemHTML(s){
   var desc=s.eventDescription, cut=EN?150:110, teaser=desc.length>cut?desc.slice(0,cut)+"…":desc;
@@ -1015,7 +1081,7 @@ function toggleLangMenu(force){
 
 /* ---------------- مفوّض الأحداث العام ---------------- */
 document.addEventListener("click",function(e){
-  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-star],[data-theme-open],[data-focus],[data-nav],[data-sit],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],#segTheme button,#segFs button,#segRate button,#segTk button,#segFf button,[data-setlang],ol.steps li");
+  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-star],[data-theme-open],[data-focus],[data-nav],[data-sit],[data-life],[data-life-cat],[data-life-sub],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],#segTheme button,#segFs button,#segRate button,#segTk button,#segFf button,[data-setlang],ol.steps li");
   if(!el) return;
   if(el.matches("ol.steps li")){ el.classList.toggle("done"); return; }
   if(el.matches(".section.collapsible > .section-title")){ toggleSection(el.parentElement); return; }
@@ -1026,6 +1092,9 @@ document.addEventListener("click",function(e){
   if(el.hasAttribute("data-theme-open")){ closeDetail(true); openTheme(el.getAttribute("data-theme-open")); return; }
   if(el.hasAttribute("data-nav")){ var nv=el.getAttribute("data-nav"); closeDetail(true); if(nv==="library") renderLibrary(); if(nv==="saved") renderSaved(); showScreen(nv); return; }
   if(el.hasAttribute("data-sit")){ openDetail(el.getAttribute("data-sit")); return; }
+  if(el.hasAttribute("data-life")){ openLife(el.getAttribute("data-life")); return; }
+  if(el.hasAttribute("data-life-cat")){ lifeCat=el.getAttribute("data-life-cat")||null; lifeSub=null; renderExploreBody(""); window.scrollTo(0,qs("exploreBody").offsetTop-80); return; }
+  if(el.hasAttribute("data-life-sub")){ lifeSub=el.getAttribute("data-life-sub"); renderExploreBody(""); window.scrollTo(0,qs("exploreBody").offsetTop-80); return; }
   if(el.hasAttribute("data-save")){ var sv=el.getAttribute("data-save").split(":"); toggleSave(sv[0], sv.slice(1).join(":")); return; }
   if(el.hasAttribute("data-copy")){ copyText(el.getAttribute("data-copy")); return; }
   if(el.hasAttribute("data-plan")){
@@ -1068,7 +1137,7 @@ document.addEventListener("click",function(e){
   else if(act==="ai-reading") startAIReading();
   else if(act==="ai-report-reading") reportAIReading();
   else if(act==="journal-save") journalToggle();
-  else if(act==="journal-open"){ var jid=el.getAttribute("data-id"), j=journal.filter(function(x){return x.id===jid;})[0]; if(j){ qs("userInput").value=j.t; runSearch(j.t, j.focus); } }
+  else if(act==="journal-open"){ var jid=el.getAttribute("data-id"), j=journal.filter(function(x){return x.id===jid;})[0]; if(j){ qs("userInput").value=j.t; runSearch(j.t, j.focus, j.sit); } }
   else if(act==="journal-del"){ var jd=el.getAttribute("data-id"); journal=journal.filter(function(x){return x.id!==jd;}); store("rifqa.journal",journal); renderSaved(); toast(T("أُزيل الموقف من مواقفي")); }
   else if(act==="journal-clear") journalClear(el);
   else if(act==="open-settings") openSettings();
@@ -1079,12 +1148,14 @@ document.addEventListener("click",function(e){
   }
   else if(act==="print") window.print();
   else if(act==="lib-more"){ libLimit+=40; renderLibrary(); }
+  else if(act==="life-edit"){ showScreen("home"); var lt=qs("userInput"); lt.focus(); lt.setSelectionRange(lt.value.length, lt.value.length); }
   else if(act==="ask-theme"){ showScreen("home"); var ta=qs("userInput"); ta.focus(); ta.placeholder=T("اكتب موقفك المتعلق بـ«{0}» بالتفصيل…",el.getAttribute("data-label")); }
 });
 document.addEventListener("keydown",function(e){
   if(e.key==="Enter" && e.target && e.target.id==="aiFollow"){ followUpAI(); }
   if((e.key==="Enter"||e.key===" ") && e.target && e.target.matches && e.target.matches(".section.collapsible > .section-title")){ e.preventDefault(); toggleSection(e.target.parentElement); }
   if(e.key==="Enter" && e.target && e.target.matches && e.target.matches(".sit-item")){ openDetail(e.target.getAttribute("data-sit")); }
+  if(e.key==="Enter" && e.target && e.target.matches && e.target.matches(".life-item")){ openLife(e.target.getAttribute("data-life")); }
   if(e.key==="Escape" && TTS.state()!=="idle" && !qs("detailPanel").classList.contains("open")){ TTS.stop(); return; }
   if(e.key==="Escape"){ toggleLangMenu(false); if(!qs("settingsModal").hidden){ cancelSettings(); return; } if(qs("detailPanel").classList.contains("open")) closeDetail(); document.querySelectorAll(".modal-overlay").forEach(function(m){m.hidden=true;}); }
 });
@@ -1110,8 +1181,15 @@ document.addEventListener("DOMContentLoaded",function(){
   });
   qs("aiAuto").addEventListener("change",function(){ var cur=AI.load(); cur.auto=qs("aiAuto").checked; AI.save(cur); });
   qs("exploreSearch").addEventListener("input",function(e){ renderExploreBody(e.target.value); });
-  qs("tabByTopic").addEventListener("click",function(){ exploreTab="topic"; qs("tabByTopic").classList.add("active"); qs("tabAllSit").classList.remove("active"); renderExploreBody(qs("exploreSearch").value); });
-  qs("tabAllSit").addEventListener("click",function(){ exploreTab="all"; qs("tabAllSit").classList.add("active"); qs("tabByTopic").classList.remove("active"); renderExploreBody(qs("exploreSearch").value); });
+  function setExploreTab(k){
+    exploreTab=k;
+    [["life","tabLife"],["topic","tabByTopic"],["all","tabAllSit"]].forEach(function(p){ var b=qs(p[1]); if(b) b.classList.toggle("active",p[0]===k); });
+    renderExploreBody(qs("exploreSearch").value);
+  }
+  if(window.TAXONOMY){ qs("tabLife").addEventListener("click",function(){ setExploreTab("life"); }); qs("lifeCount").textContent=lifeAll().length; }
+  else { qs("tabLife").remove(); qs("tabByTopic").classList.add("active"); }
+  qs("tabByTopic").addEventListener("click",function(){ setExploreTab("topic"); });
+  qs("tabAllSit").addEventListener("click",function(){ setExploreTab("all"); });
   qs("libSearch").addEventListener("input",function(){ libLimit=40; renderLibrary(); });
   document.addEventListener("click",function(e){ if(e.target && e.target.id==="btnNewSearch"){ qs("userInput").value=""; qs("charCount").textContent=T("لن يُحفظ ما تكتبه"); showScreen("home"); qs("userInput").focus(); } });
   if(window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListener && matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){ applyPrefs(draft||prefs); });

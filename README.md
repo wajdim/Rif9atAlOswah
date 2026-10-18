@@ -23,7 +23,7 @@ The user writes freely about a situation, such as a conflict, a loss, guilt or a
 2. **Retrieves material** from a curated library:
    - 115 Prophetic situations
    - 63 life topics
-   - 500 everyday life situations, used only to understand the user's message (never shown as religious text)
+   - 623 everyday life situations: the 500 of the source collection plus 123 written for topics it does not cover. They help understand the user's message and can be browsed; they are never shown as religious text
    - 201 verses
    - 149 hadith and supplications, with sources and grades
 3. **Writes a first reading** of 4–6 connected paragraphs (`js/reading.js`, material in `js/data-reading.js`), with no generation:
@@ -40,6 +40,8 @@ Every quoted text comes unchanged from the library; nothing is generated.
 
 When the engine finds no clear topic, the result offers nearby topics as buttons. Picking one re-runs the analysis focused on it (`RAG.analyze(text, {focus})`). A picked topic never overrides crisis signals and never raises the match to "strong".
 
+**Browse life situations** (Explore → Life situations) is the other way in: 8 categories → 52 subcategories → 623 situations. Opening one runs the same reading, but with the situation's hand-classified topics and feelings instead of guessing them from the text (`RAG.analyze(text, {sit})`); the result names the subcategory and what a person in that situation usually needs, with a button to add one's own details. Search matches word forms and falls back to the topic the engine understands from the query. Labels and situation texts are in Arabic and English; the other languages show English until they are translated.
+
 **My situations** is an optional journal. "Save to My situations" keeps the user's own text on the device (`rifqa.journal` in localStorage), and the Saved screen lists it so the reading can be reopened or deleted.
 
 There is also an optional **AI layer**. With the user's own Anthropic key, Claude writes a reflection that is restricted to the retrieved passages, and the reading card offers "Write a deeper reading with AI", which uses its own system prompt (`READING_SYSTEM` in `js/ai.js`). Each AI answer has a **Report** button.
@@ -52,7 +54,9 @@ js/
   app.js        UI                      rag.js     understanding + retrieval engine
   i18n.js      13 languages             tts.js     read-aloud, 26 reciters, offline recitations (Android)
   ai.js         optional Claude layer   data-*.js  content (situations, Quran, hadith, themes, translations)
-  data-life.js  500 everyday situations, each hand-mapped to 1-3 topics (understanding only)
+  data-life.js  500 everyday situations, each hand-mapped to 1-3 topics (text identical to the source collection)
+  data-taxonomy.js  GENERATED: categories, needs, and per situation: subcategory, feelings, needs, English text,
+                user phrases (Arabic incl. dialects + English); plus situations 501+ (see build/taxonomy/)
   nlu.js        pre-understanding: Arabizi → Arabic, English spelling, concepts, safety tiers, vague distress
   data-nlu.js   its data: multilingual/dialect concepts, crisis and soft-risk phrases and rules (never shown)
 build/
@@ -60,6 +64,7 @@ build/
   play/         Google Play listing (13 languages, graphics, generators) + publishing guide
   i18n/         translation sources and build-en.js (→ js/data-<lang>.js)
   tashkeel/     Arabic diacritisation pipeline
+  taxonomy/     situation taxonomy sources (taxonomy.json, life-NN.tsv, extra.tsv) and build.js (validates → js/data-taxonomy.js)
   tests/        engine regression test + understanding/safety quality gate (fixtures/understanding.json)
   rag/          standalone Python importer and notes for the Arabic situations corpus (not shipped in the app)
   build-all.sh  rebuilds everything into dist/
@@ -78,6 +83,8 @@ docs/           GitHub Pages: landing page, interactive user guide (guide.html),
 | Understanding and safety gate | `node build/tests/test-understanding.js [-v]` | fails if crisis detection or topic accuracy regresses |
 | Benchmark (355 messages, dialects, Arabizi, typos…) | `node build/tests/bench.js [-v] [--gate]` | per-dimension scores; `--gate` fails on regression |
 | Held-out benchmark (never tuned on) | `node build/tests/bench.js --set holdout [-v]` | measures generalisation |
+| Situation taxonomy | `node build/taxonomy/build.js [--check]` | validates the TSV sources and writes `js/data-taxonomy.js` |
+| Taxonomy test | `node build/tests/test-taxonomy.js [-v]` | browse consistency, no crisis false alarms, phrase understanding |
 | Single-file HTML | `node build/bundle-html.js dist/RifqaAlUswa.html` | – |
 
 `TOOLS` must contain:

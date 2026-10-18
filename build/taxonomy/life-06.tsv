@@ -1,0 +1,101 @@
+n	sub	em	need	en	ph_ar	ph_en
+301	life.return	joy,sadness	meaning	Your son returns from a visit home more attached to his relatives.	ولدي رجع من البلاد متعلق بأولاد عمو	My son came back from the trip home really attached to his cousins
+302	life.return	sadness	comfort	Your family back home moves to a new house you have never lived in.	أهلي بدلوا الدار وأنا عمري ما سكنت فيها	My family moved to a new house back home that I've never lived in
+303	life.return	fear	comfort,patience	You hear news from your homeland and worry about your family all day.	الأخبار متاع بلادي تقلقني على أهلي	The news from back home has me worried about my family all day
+304	life.return	confusion	decision	You think about buying a house back home though your return date is unclear.	نفكر نشري دار في البلاد وما نعرفش وقتاش نرجع	I'm thinking of buying a house back home but don't know when I'll return
+305	life.return	confusion	decision	The idea of returning comforts you but its practical details overwhelm you.	فكرة الرجوع تريحني بس التفاصيل تخوفني	Moving back appeals to me but the practical side overwhelms me
+306	life.return	loneliness,confusion	patience	You settle back home and struggle to readapt.	رجعت نستقر في البلاد وما تأقلمتش	I moved back home and I'm struggling to readjust
+307	life.return	sadness	guidance	Your children miss the country you used to live in after the family returns.	ولادي توحشوا البلاد اللي كنا فيها	My kids miss the country we used to live in
+308	life.return	joy	growth	You learn to keep a close bond with your family despite the time difference.	نحاول نبقى قريب من أهلي رغم فرق التوقيت	I'm learning to stay close to family despite the time difference
+309	life.return	joy	growth	You start a weekly family tradition that brings you together on a call.	بدينا مكالمة عائلية كل جمعة	We started a weekly family video call
+310	life.return	joy	meaning	You make peace with having memories and belonging in more than one place.	تصالحت مع فكرة أني نتمي لأكثر من بلاصة	I've made peace with belonging to more than one place
+311	people.boundaries	exhaustion	boundaries	Someone visits without notice when you need rest.	جاوني ضيوف بلا ما يعلموا وأنا تعبان	People keep showing up unannounced when I need rest
+312	people.boundaries	exhaustion	boundaries	A colleague calls you outside working hours and expects an immediate reply.	زميلي يكلمني بعد الخدمة ويستنى رد فوري	My colleague messages me after hours and expects an instant reply
+313	people.boundaries	shame	boundaries	Someone asks you a personal question you do not want to answer.	سألوني سؤال شخصي وما حبيتش نجاوب	People keep asking me personal questions I don't want to answer
+314	people.boundaries	guilt	boundaries	You agree to a request out of courtesy and then feel you cannot do it.	قلت إيه مجاملة وتوا ما نقدرش	I said yes to be polite and now I can't do it
+315	people.boundaries	guilt	repair	You need to go back on a promise you made under pressure.	وعدت تحت الضغط وتوا لازم نتراجع	I made a promise under pressure and need to take it back
+316	people.boundaries	guilt	boundaries	Someone takes your refusal of their request as rejecting them personally.	رفضت طلبه وحسبها رفض ليه هو	He took my "no" as a personal rejection
+317	people.boundaries	anger	boundaries	You talk with someone who keeps interrupting you.	ديما يقطعلي الكلام	He keeps interrupting me whenever I talk
+318	people.boundaries	anger	boundaries	One person monopolises the discussion and leaves no room for others.	واحد ياخذ الكلمة الكل وما يخلي حد يحكي	One person always dominates the conversation
+319	people.speech	guilt	repair	You joke with someone and then discover the joke hurt them.	عملت مزحة وطلعت جرحتو	I made a joke and it really hurt him
+320	people.boundaries	anger	boundaries	You receive an apology that justifies the offence more than it admits it.	اعتذر بس كلامه كله تبرير	His apology was more of an excuse than an apology
+321	people.boundaries	fear	guidance	You need to tell someone news that will disappoint them.	لازمني نقولو خبر باش يخيب أملو	I have to give someone news that will disappoint them
+322	people.boundaries	confusion	boundaries	Someone asks for your advice but only wants you to back their decision.	يطلب نصيحتي وهو يحب نوافقو برك	He asks for advice but only wants me to agree with him
+323	people.boundaries	anger,fear	boundaries	You disagree with someone who raises their voice whenever you object.	كل ما نعارضو يعلّي صوتو علي	He shouts at me every time I disagree
+324	self.anger	anger	growth	You try to express your anger without insulting the other person.	نحب نعبّر على غضبي بلا ما نهين حد	I want to express my anger without insulting anyone
+325	self.pleasing	exhaustion	boundaries	You discover you have said "yes" too often at the expense of your wellbeing.	نقول إيه للناس الكل على حساب روحي	I say yes to everyone and I'm drained
+326	people.boundaries	anger	boundaries	A relative uses your belongings without respecting your privacy.	قريبي يستعمل حوايجي بلا ما يستأذن	A relative keeps using my things without asking
+327	people.boundaries	guilt,confusion	boundaries	You need to set boundaries with someone you love and depend on.	لازمني نحط حدود مع أمي وأنا نحبها	I need to set boundaries with someone I love and depend on
+328	people.boundaries	confusion	growth	You learn to listen to a complaint without rushing to offer solutions.	نتعلم نسمع بلا ما نعطي حلول على طول	I'm learning to listen instead of jumping to solutions
+329	people.boundaries	guilt	boundaries	You tell someone you cannot help them this time.	لازمني نقولو المرة هذي ما نقدرش نعاونك	I have to tell him I can't help this time
+330	self.anger	anger	growth	You end a tense discussion and come back to it after calming down.	وقفت النقاش كي سخنت ونحب نرجعلو بهدوء	I walked away from a heated argument and want to return to it calmly
+331	life.digital	exhaustion	boundaries	You are added to a group you do not want to be in.	زادوني في مجموعة واتساب ما نحبهاش	They added me to a WhatsApp group I don't want to be in
+332	life.digital	anger	boundaries	Someone posts your photo without your permission.	نشروا تصويرتي بلا إذني	Someone posted my photo without my permission
+333	life.digital	sadness,anger	comfort	You find an abusive comment on a personal post.	لقيت تعليق مسيء على البوست متاعي	Someone left a nasty comment on my post
+334	life.digital	anger	justice	A sentence you never said is attributed to you because your words were cut out of context.	قصّوا كلامي ونسبولي حاجة ما قلتهاش	They cut my words out of context and twisted what I said
+335	life.digital	fear	guidance	You get a friend request from an account impersonating someone you know.	حساب مزيف بإسم صاحبي بعثلي طلب	A fake account pretending to be my friend added me
+336	life.digital	fear	guidance	You click a link and then suspect it was an attempt to steal your data.	ضغطت على رابط وخايف يكون اختراق	I clicked a link and I'm worried it was a scam
+337	life.digital	fear	guidance	You lose access to an account that holds your important files.	تسكّر علي الحساب وفيه ملفاتي الكل	I'm locked out of the account with all my important files
+338	life.digital	confusion	boundaries	A friend asks you to share your password.	صاحبتي تبي كلمة السر متاعي	My friend wants my password
+339	life.digital	fear	guidance	You discover your child posted your home address or phone number.	ولدي نشر عنوان الدار على النت	My child posted our home address online
+340	life.digital	shame	boundaries	An old photo of you is used in an embarrassing context.	تصويرة قديمة ليا ولّت مسخرة	An old photo of me is being used to mock me
+341	life.digital	confusion	guidance	A group circulates sensational news that has not been verified.	المجموعة تنشر في خبر ما تأكدوش منو	My group chat is spreading news nobody has checked
+342	life.digital	jealousy,sadness	meaning	Following other people's lives makes you more dissatisfied with your own.	كل ما نشوف حياة الناس في إنستغرام نكره حياتي	Scrolling through other people's lives makes me hate mine
+343	life.digital	exhaustion	growth	You spend a long time scrolling the news before sleep.	نقعد ساعات نتصفح قبل ما نرقد	I spend hours scrolling before bed
+344	life.digital	confusion	growth	You are so busy filming an event that you miss enjoying it.	نصور برشا وننسى نعيش اللحظة	I'm so busy filming that I miss the moment
+345	life.digital	confusion	decision	You hesitate to delete old content that no longer reflects who you are.	محتار نفسخ البوستات القديمة ولا لا	I'm not sure whether to delete old posts that aren't me anymore
+346	life.digital	fear	support,boundaries	You receive a threatening message from an unknown person.	جاتني رسالة تهديد من واحد ما نعرفوش	I received a threatening message from a stranger
+347	life.digital	anger	guidance	You find a digital subscription renewing that you do not remember activating.	لقيت اشتراك يتخصم من حسابي وأنا ما فعلتوش	I'm being charged for a subscription I don't remember signing up for
+348	life.digital	anger,fear	patience	An online service breaks down just when you badly need it.	الموقع طاح في الوقت اللي محتاجو	The website crashed right when I needed it most
+349	life.digital	joy	growth	You decide to keep away from your phone during family gatherings.	قررت نبعد التلفون في القعدة العائلية	I've decided to put my phone away during family time
+350	life.digital	joy	meaning	You help an elderly person protect their accounts.	عاونت جدي يحمي حساباتو	I helped my grandfather secure his accounts
+351	work.leadership	fear	growth	You are asked to lead a team with people more experienced than you.	كلفوني نقود فريق فيه ناس أقدم مني	I'm leading a team of people more experienced than me
+352	work.leadership	exhaustion	guidance	A new colleague needs training while you have urgent tasks.	زميل جديد يحتاج تدريب وأنا مضغوط	I need to train a new colleague while drowning in deadlines
+353	work.leadership	anger	guidance	A team member is late and the group bears the consequences.	واحد في الفريق ديما متأخر والكل يدفع الثمن	One team member keeps missing deadlines and we all pay for it
+354	work.leadership	confusion	decision	You must choose between ideas proposed by two of your friends.	لازمني نختار بين فكرة صاحبي وفكرة صاحبي الآخر	I have to choose between my two friends' ideas
+355	work.leadership	confusion	guidance	You notice a quiet person on the team never gets a chance to speak.	فما واحد ساكت في الفريق وما ياخذش فرصتو	A quiet person on my team never gets a chance to speak
+356	work.leadership	confusion	guidance	You are asked to evaluate someone you are friends with.	لازمني نقيّم صاحبي في الخدمة	I have to write a performance review for my friend
+357	work.leadership	guilt	repentance,repair	You discover a mistake in a decision you made as the person in charge.	اكتشفت أن القرار اللي خذيتو كمسؤول غالط	I made the wrong call as a manager
+358	work.leadership	shame,fear	growth	You need to admit to the team that you do not know the solution.	لازمني نعترف قدام الفريق أني ما نعرفش الحل	I need to admit to my team that I don't have the answer
+359	work.leadership	confusion	decision	The team wants you to decide while the information is incomplete.	الفريق يستنى قراري والمعلومات ناقصة	My team needs a decision and I don't have all the information
+360	work.leadership	guilt	justice	A team effort succeeds and the credit goes to you alone.	النجاح نسبوه ليا وحدي والفريق تعب معايا	I got all the credit for something the whole team did
+361	work.leadership	anger	guidance	A colleague refuses to share information others need.	زميلي يخبي المعلومات على الفريق	A colleague keeps information from the rest of the team
+362	work.leadership	confusion	growth	You hand over a task and find it hard not to interfere in every detail.	عطيت المهمة لغيري وما نجمتش ما نتدخلش	I delegated a task but can't stop micromanaging
+363	work.leadership	confusion	justice	You notice that tasks are not distributed according to people's abilities.	توزيع المهام في الفريق مش عادل	Tasks on my team aren't divided fairly
+364	work.leadership	confusion	justice	You receive a confidential complaint and wonder how to handle it fairly.	جاتني شكوى سرية وما نعرفش كيف نتصرف بعدل	I received a confidential complaint and want to handle it fairly
+365	work.leadership	exhaustion	patience	The project scope changes after the team has started work.	بدلوا المشروع بعد ما بدينا	The project changed halfway through
+366	work.leadership	confusion	decision	Limited resources force you to postpone part of the work.	الموارد ناقصة ولازم نأجل جزء	We don't have the resources so we must delay part of the work
+367	work.leadership	fear	guidance	You need to explain a project delay to the client.	لازمني نفسر للحريف علاش تأخرنا	I have to explain the project delay to the client
+368	work.leadership	joy	meaning	You resolve a conflict by letting each side explain their position.	حليت خلاف كي خليت كل واحد يحكي	I resolved a conflict by letting each person be heard
+369	work.leadership	jealousy	growth	You help a colleague succeed although they compete with you for an opportunity.	عاونت زميلي رغم أنه ينافسني	I helped a colleague even though we're competing for the same promotion
+370	work.leadership	sadness	meaning	You leave a leadership role and hand over your responsibilities to your successor.	سلمت منصبي للي جا بعدي	I stepped down and handed over my role
+371	life.crisis	anger,fear	patience	The power cuts during important work you had not saved.	الضو قص وأنا ما سجلتش الخدمة	The power went out and I lost unsaved work
+372	life.crisis	fear	guidance	Water leaks in the house as you are about to go out.	الماء يسيل في الدار وأنا خارج	There's a water leak at home just as I'm leaving
+373	life.crisis	anger	guidance	You shut the door and discover the keys are still inside.	سكرت الباب والمفاتيح داخل	I locked myself out of the house
+374	life.crisis	fear	comfort	The lift stops with you inside among strangers.	الأسانسور وقف بيا	I'm stuck in a lift with strangers
+375	life.crisis	fear	guidance	A child goes missing for a few minutes in a crowded place.	ولدي ضاع مني في السوق	My child went missing for a few minutes in a crowd
+376	life.crisis	fear	guidance	You witness an accident and need to call for help.	شفت حادث وما عرفت شنو نعمل	I saw an accident and didn't know what to do
+377	life.crisis	fear	guidance	Someone next to you suddenly feels unwell.	واحد بجنبي طاح فجأة	The person next to me suddenly collapsed
+378	life.crisis	fear,exhaustion	patience	You must leave your home temporarily because of a fault or damage.	لازمنا نخرجو من الدار بسبب ضرر	We had to leave our home because of damage
+379	life.crisis	fear	guidance	Transport breaks down on the day of an appointment you cannot easily postpone.	النقل وقف نهار الموعد المهم	Transport broke down on the day of my important appointment
+380	life.crisis	fear	guidance	Hours before travelling you discover your ticket has wrong details.	التذكرة فيها غلطة وأنا مسافر بعد ساعات	My ticket has the wrong details and I fly in a few hours
+381	life.crisis	anger,fear	guidance	You arrive at your accommodation and the booking is not registered.	وصلت للأوتيل وما لقاوش الحجز	I arrived at the hotel and they have no booking for me
+382	life.crisis	fear	guidance	Your suitcase is lost with clothes and medicine you need.	ضاعت الفاليجة وفيها الدواء	My suitcase with my medicine got lost
+383	life.crisis	fear	comfort	You cannot reach a family member when you were waiting to hear from them.	ما نجمتش نتصل بأمي ونستنى في خبرها	I can't reach my mother and I'm worried sick
+384	life.crisis	fear	guidance	You pass through an area with no phone signal and need directions.	ما فماش ريزو وأنا تايه	No phone signal and I don't know the way
+385	life.crisis	joy	meaning	Your car stops and a stranger offers help.	الكرهبة وقفت وواحد غريب عاوني	My car broke down and a stranger helped me
+386	life.crisis	anger,fear	guidance	Your belongings are stolen and you must sort things out quickly.	سرقولي حوايجي	My things were stolen and I have to sort everything out
+387	life.crisis	joy	meaning	Something you lost comes back after you thought you would never find it.	لقيت الحاجة اللي حسبتها ضاعت	I found something I thought I had lost forever
+388	life.crisis	exhaustion	patience	The date of an important event changes after you arranged everything around it.	بدلوا الموعد بعد ما رتبت كل شي	They changed the date after I arranged everything around it
+389	life.crisis	fear	decision	You need to make a quick decision while others are panicking.	لازمني نقرر بسرعة والناس الكل مرتبكة	I have to decide quickly while everyone around me panics
+390	life.crisis	exhaustion	patience	You regain your calm after a crisis and start repairing what you can.	بعد الأزمة نحاول نصلح اللي ينجم يتصلح	After the crisis I'm trying to fix what can be fixed
+391	self.worth	shame	growth	You receive praise and feel you do not deserve it.	مدحوني وحسيت ما نستاهلش	I got praised and felt like a fraud
+392	self.worth	sadness	growth	You achieve something and then belittle it by comparing it with others'.	نجحت بس قلت هذا شي ما يساويش قدام غيري	I achieved something but it feels small next to others
+393	self.pleasing	confusion	meaning	You discover that a goal you pursued was really to please others.	اكتشفت أني نجري ورا حلم مش متاعي	I realised I've been chasing a goal to please other people
+394	self.worth	shame	growth	You feel embarrassed to start a new hobby late in life.	نحشم نبدا هواية جديدة في عمري هذا	I feel too old to start a new hobby
+395	self.worth	fear	growth	You turn down an opportunity because you fear you are not good enough.	رفضت فرصة خاطر خايف ما نكونش في المستوى	I turned down an opportunity because I felt I wasn't good enough
+396	self.worth	shame,guilt	comfort	You recall an old embarrassing moment and blame yourself again and again.	نتفكر موقف محرج قديم ونلوم روحي	I keep replaying an embarrassing moment from years ago
+397	self.worth	sadness	meaning	You discover your self-image is built on criticism you heard as a child.	كل اللي نحسو على روحي جاي من كلام سمعتو صغير	My self-image comes from the criticism I heard as a child
+398	self.worth	shame	growth	You find it hard to accept help from others.	ما نحبش ناخذ مساعدة من حد	I find it really hard to accept help from anyone
+399	self.worth	exhaustion	meaning	You feel you must prove your worth by constant achievement.	نحس لازمني ننجز ديما باش نساوي حاجة	I feel I'm only worth something when I'm achieving
+400	self.worth	guilt	growth	You have an unproductive day and learn not to treat it as failure.	نهار ما عملت فيه شي ونحس روحي فاشل	I had an unproductive day and I feel like a failure

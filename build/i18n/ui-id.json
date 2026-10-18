@@ -804,5 +804,13 @@
  "نطمئن عليك أولًا": "Pertama, kami ingin tahu bahwa Anda aman",
  "ما كتبته يحمل تعبًا ويأسًا ثقيلين، ونحن نأخذ ذلك بجدية. إن خطرت لك فكرة إيذاء نفسك أو إنهاء حياتك، فتواصل الآن مع شخص تثق به، أو مع خط مساعدة نفسية في بلدك، أو أقرب قسم طوارئ. ما تمر به ليس دليلًا على ضعف إيمانك، وطلب العون من الناس ومن المختصين أخذٌ بالأسباب. وما يلي قراءة هادئة لحالتك.": "Apa yang Anda tulis membawa kelelahan dan keputusasaan yang berat, dan kami menanggapinya dengan serius. Jika suatu saat Anda berpikir untuk menyakiti diri sendiri atau mengakhiri hidup, segera hubungi orang yang Anda percayai, layanan bantuan kesehatan jiwa di negara Anda, atau unit gawat darurat terdekat. Apa yang Anda alami bukan tanda lemahnya iman, dan mencari bantuan dari orang lain dan tenaga ahli adalah bagian dari ikhtiar. Berikut bacaan yang tenang tentang keadaan Anda.",
  "يبدو أن شيئًا ما يثقل عليك. قد يكون حزنًا، أو قلقًا، أو إرهاقًا، أو وحدة، أو أمرًا أكثر تحديدًا. ما يلي توجيه عام، وإن اخترت الأقرب لما تشعر به أعدت القراءة مركّزة عليه.": "Sepertinya ada sesuatu yang membebani Anda. Bisa jadi kesedihan, kecemasan, kelelahan, kesepian, atau sesuatu yang lebih spesifik. Berikut panduan umum; jika Anda memilih yang paling mendekati perasaan Anda, saya akan mengulang bacaan dengan fokus itu.",
- "هل تشعر أنه أقرب إلى:": "Apakah menurut Anda lebih mirip dengan:"
+ "هل تشعر أنه أقرب إلى:": "Apakah menurut Anda lebih mirip dengan:",
+ "مواقف الحياة (": "Situasi hidup (",
+ "كل الفئات": "Semua kategori",
+ "{0} موقفًا": "{0} situasi",
+ "اختر الفئة ثم الموقف الأقرب إلى حالك، وستجد قراءته من القرآن والسنة والسيرة. ويمكنك دائمًا أن تكتب موقفك بكلماتك.": "Pilih kategori, lalu situasi yang paling dekat dengan keadaan Anda, dan Anda akan menemukan bacaannya dari Al-Qur'an, Sunnah, dan Sirah. Anda selalu bisa menuliskan situasi Anda dengan kata-kata sendiri.",
+ "موقف من «{0}».": "Situasi dari “{0}”.",
+ "ما قد تحتاجه فيه:": "Yang mungkin Anda butuhkan:",
+ "أضف تفاصيل حالتك": "Tambahkan detail Anda",
+ "النتائج: {0}": "Hasil: {0}"
 }

@@ -1,0 +1,61 @@
+n	sub	em	need	en	ph_ar	ph_en
+241	life.papers	betrayal,fear	guidance	You rely on someone to translate your papers and find they got an important detail wrong.	اللي ترجملي الأوراق غلط في معلومة مهمة	The person who translated my papers made a serious mistake
+242	life.papers	confusion	support	You face an online system you do not know how to use to finish your paperwork.	الموقع الإلكتروني متاع الإدارة ما فهمت فيه شي	I can't figure out the online system to complete my application
+243	life.papers	fear	guidance	A document expires while you are waiting for your appointment.	الوثيقة فات أجلها وأنا نستنى في الموعد	My document expired while I was waiting for the appointment
+244	life.papers	confusion	decision	You hesitate between handling the paperwork yourself and hiring a specialist.	محتار نكمل الإجراءات وحدي ولا نجيب محامي	I can't decide whether to do the paperwork myself or hire a lawyer
+245	life.papers	confusion,anger	guidance,support	Your application is refused and you do not understand why or what options you have.	رفضوا طلبي وما فهمتش علاش	My application was refused and I don't understand why
+246	life.papers	exhaustion	patience	You have to take repeated days off to finish procedures.	كل مرة ناخو إجازة على خاطر الأوراق	I keep taking days off work to deal with paperwork
+247	life.papers	exhaustion	patience	You move to another country and start getting your documents recognised all over again.	بدلت البلاد ورجعت من الأول في الأوراق	I moved country and have to start all the paperwork from scratch
+248	life.papers	fear	guidance	You feel flustered explaining your situation to an official.	نتلخبط كي نحكي وضعي قدام الموظف	I get flustered explaining my case to officials
+249	life.papers	joy	meaning	A volunteer helps you understand a procedure that seemed complicated.	متطوعة فهمتني الإجراءات اللي كنت حاسبها معقدة	A volunteer helped me understand a complicated procedure
+250	life.papers	joy	meaning	You obtain stable residency after years of waiting.	أخيرًا خذيت الإقامة بعد سنين	I finally got permanent residency after years of waiting
+251	life.identity	sadness	guidance	Your child asks you to speak the local language in front of their friends instead of Arabic.	بنتي قالتلي ما تحكيش بالعربي قدام صحابي	My daughter asked me not to speak Arabic in front of her friends
+252	life.identity	sadness	guidance	Your son understands your language but answers you in another.	ولدي يفهم العربي بس يجاوبني بالفرنساوي	My son understands Arabic but always answers in English
+253	life.identity	confusion	guidance	Your daughter asks why some family customs differ from her classmates'.	بنتي تسألني علاش عاداتنا مختلفة على صحباتها	My daughter asks why our family is different from her friends'
+254	life.identity	confusion	guidance	You find it hard to explain a religious occasion to your child's teacher.	ما عرفتش نفسر رمضان لمعلمة ولدي	I struggled to explain Ramadan to my child's teacher
+255	life.identity	fear	guidance	Your son needs suitable food on a school trip.	ولدي عندو رحلة مدرسية ونخاف على الماكلة	My son has a school trip and I worry about halal food
+256	life.identity	sadness	guidance	You try to teach your children Arabic but they see it as extra homework.	نحب نعلم ولادي العربي وهوما يعتبروه واجب زايد	I want my kids to learn Arabic but they see it as a chore
+257	life.identity	confusion	decision	Others pronounce your child's name differently and you wonder whether to correct them.	المعلمة تنطق اسم ولدي بطريقة غالطة	The teacher keeps mispronouncing my son's name
+258	life.identity	sadness	guidance	Your son wants to change his name because he gets comments about it.	ابني يبي يبدّل اسمه خاطر يعلقوا عليه	My son wants to change his name because he's teased about it
+259	life.identity	sadness	guidance	You discover your child is ashamed of the food you pack in their bag.	بنتي تحشم من الماكلة اللي نحطهالها	My daughter is embarrassed by the lunch I pack her
+260	life.identity	confusion	decision	You are unsure which language to speak at home.	محتارين بأي لغة نحكيو في الدار	We can't decide which language to speak at home
+261	life.identity	sadness	guidance	Your children visit your homeland and cannot easily talk with their grandparents.	ولادي ما يعرفوش يحكيو مع جدهم	My kids can't really talk with their grandparents back home
+262	life.identity	sadness	guidance	Your child refuses to travel to your country because they prefer spending the holiday with friends.	ولدي ما يحبش يمشي للبلاد في العطلة	My son doesn't want to visit our home country for the holidays
+263	life.identity	joy	growth	You learn the customs of the new society from your children.	ولادي هوما اللي يعلموني عادات البلاد	My children are teaching me how things work here
+264	life.identity	shame,joy	meaning	Your child translates for you in an important situation and you feel pride and embarrassment together.	بنتي ترجمتلي عند الطبيب وحسيت بالفخر والحشمة	My daughter had to translate for me at the doctor's and I felt proud and embarrassed
+265	life.identity	guilt	boundaries	You fear putting too much responsibility on your son because you need his help.	نخاف نحمّل ولدي أكثر من عمره	I worry I'm putting too much on my son's shoulders
+266	life.identity	confusion	guidance	Your child asks "Which country am I from?" and you look for an answer that fits their identity.	ولدي سألني من وين أنا بالضبط	My son asked me where he's really from
+267	life.identity	anger	boundaries	You disagree with the wider family about raising your children abroad.	العائلة في البلاد تنتقد تربيتي لولادي هنا	Family back home criticise how I raise my kids abroad
+268	life.identity	joy,confusion	meaning	You discover your children combine two cultures in a way you did not expect.	ولادي جمعوا بين ثقافتين بطريقة غريبة	My kids blend two cultures in ways that surprise me
+269	life.identity	joy	growth	You organise a small cultural activity so your children's friends learn about their home country.	نظمت نشاط صغير باش صحاب ولادي يعرفوا بلادنا	I organised a small event to share our culture with my kids' friends
+270	life.identity	joy	meaning	Your son asks about family history and you begin recording its stories and photos.	ولدي سألني على تاريخ العائلة وبديت نجمع الصور	My son asked about our family history so I started collecting our stories
+271	life.abroad_work	loneliness	patience	You understand the official work language but not your colleagues' jokes.	نفهم لغة الخدمة بس ما نفهمش نكت الزملاء	I understand the work language but not my colleagues' jokes
+272	life.abroad_work	shame,fear	growth	You hesitate to speak in a meeting for fear of pronunciation mistakes.	نخاف نحكي في الاجتماع على خاطر النطق متاعي	I avoid speaking in meetings because of my accent
+273	life.abroad_work	joy	meaning	You manage to explain a complex idea in a language you learned recently.	قدرت نشرح فكرة صعيبة باللغة الجديدة	I explained a complex idea in my new language for the first time
+274	life.abroad_work	sadness	patience	You feel your experience does not show because your language is weak.	خبرتي ما بانتش بسبب اللغة	My experience doesn't show because my language skills are weak
+275	life.abroad_work	confusion	guidance	Your direct manner is taken as coldness despite your good intentions.	يحسبوني جاف خاطر نحكي بصراحة	My directness at work comes across as rude
+276	life.abroad_work	shame,anger	guidance	You take an ordinary remark as an insult because communication styles differ.	حسيت ملاحظة زميلي إهانة وطلع عادي عندهم	I took a colleague's comment as an insult but it was normal for them
+277	life.abroad_work	confusion	decision	You are asked to join a work event that does not suit some of your convictions.	عزموني لحفلة خدمة فيها خمر	I've been invited to a work party with alcohol and I'm unsure what to do
+278	life.abroad_work	confusion	support	You struggle to understand a long lease full of jargon.	عقد الكراء طويل وما فهمت فيه شي	I can't understand my rental contract
+279	life.abroad_work	exhaustion	patience	Services you used to get immediately now need an appointment.	كل حاجة هنا تحتاج موعد	Everything here needs an appointment weeks in advance
+280	life.abroad_work	fear	support	You need to find a doctor who understands your language.	نلوج على طبيب يحكي العربي	I'm looking for a doctor who speaks my language
+281	life.abroad_work	fear,shame	support	You cannot describe a symptom precisely when you see the doctor.	ما عرفتش نوصف للطبيب شنو يوجعني	I couldn't explain my symptoms to the doctor
+282	life.abroad_work	confusion	guidance	Your expectations about hosting guests and visits differ from the local ones.	هنا ما يزوروش بعضهم كيما عنا	People here don't visit each other the way we do back home
+283	life.abroad_work	exhaustion	boundaries	A relative visits and expects you to be free throughout their stay.	قريبي جا يزورني ويحسابني فاضي ليه نهار كامل	A relative is visiting and expects me to be available all the time
+284	life.abroad_work	exhaustion	boundaries	You feel expected to buy gifts for everyone each time you go home.	كل ما نروّح لازم هدايا للعائلة الكل	Every time I go home I'm expected to bring gifts for everyone
+285	life.abroad_work	exhaustion	boundaries	You spend most of your holiday visiting relatives with no time to rest.	العطلة الكل في الزيارات وما ارتحتش	My whole holiday goes on visiting relatives and I never rest
+286	life.abroad_work	sadness,exhaustion	patience	You struggle with short days or long nights.	النهار قصير والظلام يقلقني	The short dark days here really get me down
+287	life.abroad_work	exhaustion	patience	You face your first harsh winter far from the climate you knew.	أول شتاء قاسي في الغربة	My first harsh winter abroad is hard
+288	life.abroad_work	confusion	growth	You learn to use a bicycle or public transport to manage daily life.	نتعلم نستعمل المترو والبيسكلات	I'm learning to get around by bike and public transport
+289	life.abroad_work	joy	meaning	A good relationship with a neighbour begins after months of simple greetings.	بعد شهور من السلام وليت صاحب مع جاري	After months of just saying hello I've become friends with my neighbour
+290	life.abroad_work	joy	meaning	You become the person who helps newcomers after needing help yourself.	وليت نعاون الجدد كيما عاونوني	Now I help newcomers the way others once helped me
+291	life.return	loneliness,sadness	comfort	Your friend returns home and you lose the person closest to you abroad.	صاحبي رجع للبلاد وبقيت وحدي هنا	My closest friend abroad moved back home and I'm alone
+292	life.return	loneliness	comfort	A family member returns home while you stay because of your commitments.	أختي رجعت للبلاد وأنا بقيت	My sister moved back home and I had to stay
+293	life.return	sadness	comfort	You visit your childhood home and find your memories clearer than the place itself.	زرت دار طفولتي وحسيت الذكريات أوضح من البلاصة	I visited my childhood home and it felt smaller than my memories
+294	life.return	anger	boundaries	Your relatives think your opinions changed because you live abroad.	يقولولي تبدلت من وقت ما سافرت	My relatives say I've changed since I moved abroad
+295	life.return	confusion	meaning	You defend your adopted country to your family and your home country to your colleagues.	نلقى روحي ندافع على البلدين	I find myself defending each country to the other side
+296	life.return	exhaustion	boundaries	You feel you must keep explaining your choices to both sides.	ديما مطالب نبرر اختياراتي للجهتين	I always have to justify my choices to everyone
+297	life.return	sadness	comfort	Your relationship with an old friend changes because your experiences now differ.	صاحبي القديم ما عادش يفهمني	My old friend and I have grown apart since I left
+298	life.return	sadness,guilt	comfort	You realise you cannot attend every occasion however hard you try.	ما نقدرش نحضر المناسبات الكل مهما حاولت	I can't make it to every family occasion no matter how hard I try
+299	life.return	confusion,guilt	decision	You must choose to visit one parent instead of attending another family event.	لازمني نختار بين زيارة أمي والعرس	I have to choose between visiting my mother and a family wedding
+300	life.return	fear	boundaries	You decide to give fewer gifts and fear it will be seen as stinginess.	نقصت الهدايا وخايف يقولوا بخيل	I want to cut back on gifts but I'm afraid they'll think I'm stingy

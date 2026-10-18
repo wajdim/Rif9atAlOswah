@@ -1,0 +1,86 @@
+{
+  "_doc": "Situation taxonomy: category → subcategory. 'th' = the themes a subcategory usually leads to (used for the auto draft and for validation, not at runtime). Edit here, then run: node build/taxonomy/build.js",
+  "cats": [
+    {"id": "self", "ar": "النفس والمشاعر", "en": "Inner life and emotions", "icon": "wave", "subs": [
+      {"id": "anger", "ar": "الغضب والانفعال", "en": "Anger and losing your temper", "th": ["anger"]},
+      {"id": "sadness", "ar": "الحزن والضيق", "en": "Sadness and heaviness", "th": ["sadness"]},
+      {"id": "anxiety", "ar": "القلق والخوف", "en": "Anxiety and fear", "th": ["anxiety", "fear", "death_fear"]},
+      {"id": "loneliness", "ar": "الوحدة والعزلة", "en": "Loneliness and isolation", "th": ["loneliness"]},
+      {"id": "despair", "ar": "اليأس وفقدان الأمل", "en": "Despair and losing hope", "th": ["despair", "hope"]},
+      {"id": "worth", "ar": "تقدير الذات والمقارنة", "en": "Self-worth and comparison", "th": ["self_worth", "comparison"]},
+      {"id": "pleasing", "ar": "إرضاء الناس وكلامهم", "en": "Pleasing people and their opinions", "th": ["people_pleasing"]},
+      {"id": "burnout", "ar": "الإرهاق والضغط", "en": "Exhaustion and pressure", "th": ["burnout"]},
+      {"id": "growth", "ar": "النضج وتهذيب النفس", "en": "Maturity and self-discipline", "th": ["laziness", "self_worth", "arrogance"]}
+    ]},
+    {"id": "faith", "ar": "الإيمان والروح", "en": "Faith and the soul", "icon": "star", "subs": [
+      {"id": "weak", "ar": "فتور الإيمان والعبادة", "en": "Weak faith and worship", "th": ["faith_weak"]},
+      {"id": "sin", "ar": "الذنب والتوبة", "en": "Sin and repentance", "th": ["sin"]},
+      {"id": "doubts", "ar": "الوسواس والشكوك والأسئلة", "en": "Intrusive thoughts, doubts and questions", "th": ["waswasa", "faith_weak"]},
+      {"id": "trials", "ar": "البلاء والصبر والقدر", "en": "Trials, patience and decree", "th": ["patience", "evil_eye"]},
+      {"id": "gratitude", "ar": "الشكر والقناعة", "en": "Gratitude and contentment", "th": ["gratitude"]},
+      {"id": "desire", "ar": "الشهوات والإدمان", "en": "Desires and addiction", "th": ["desire", "addiction"]}
+    ]},
+    {"id": "family", "ar": "الأسرة", "en": "Family", "icon": "home", "subs": [
+      {"id": "parents", "ar": "الوالدان", "en": "Parents", "th": ["parents"]},
+      {"id": "kin", "ar": "الإخوة والأقارب", "en": "Siblings and relatives", "th": ["siblings", "kin"]},
+      {"id": "parenting", "ar": "تربية الأبناء", "en": "Raising children", "th": ["parenting"]},
+      {"id": "independence", "ar": "الاستقلال والمسؤولية في الأسرة", "en": "Independence and responsibility at home", "th": ["parents", "decision"]}
+    ]},
+    {"id": "love", "ar": "الزواج والعلاقات العاطفية", "en": "Marriage and love", "icon": "heart", "subs": [
+      {"id": "seek", "ar": "البحث عن الزواج والاختيار", "en": "Seeking marriage and choosing", "th": ["marriage_seek"]},
+      {"id": "marriage", "ar": "الخلافات الزوجية", "en": "Conflict in marriage", "th": ["marriage"]},
+      {"id": "jealousy", "ar": "الغيرة والشك بين الزوجين", "en": "Jealousy and suspicion between spouses", "th": ["jealousy_spouse", "suspicion"]},
+      {"id": "heartbreak", "ar": "التعلّق والفراق وانكسار القلب", "en": "Attachment, separation and heartbreak", "th": ["heartbreak"]}
+    ]},
+    {"id": "people", "ar": "الناس والعلاقات", "en": "People and relationships", "icon": "circles", "subs": [
+      {"id": "friends", "ar": "الصداقة", "en": "Friendship", "th": ["friends"]},
+      {"id": "betrayal", "ar": "الخيانة والخذلان", "en": "Betrayal and being let down", "th": ["betrayal"]},
+      {"id": "speech", "ar": "الإهانة والغيبة والإشاعات", "en": "Insults, gossip and rumours", "th": ["insult", "gossip", "slander"]},
+      {"id": "forgive", "ar": "المسامحة والحقد والانتقام", "en": "Forgiveness, grudges and revenge", "th": ["forgive", "revenge"]},
+      {"id": "boundaries", "ar": "الحدود الشخصية والتواصل", "en": "Personal boundaries and communication", "th": ["boundaries"]},
+      {"id": "suspicion", "ar": "سوء الظن والثقة", "en": "Suspicion and trust", "th": ["suspicion"]},
+      {"id": "argument", "ar": "الخلاف والجدال والاختلاف", "en": "Disagreement, arguing and difference", "th": ["argument", "different_belief"]},
+      {"id": "community", "ar": "الجيران والمجتمع ومساعدة الناس", "en": "Neighbours, community and helping others", "th": ["neighbors", "charity", "animals"]}
+    ]},
+    {"id": "work", "ar": "العمل والدراسة والمال", "en": "Work, study and money", "icon": "compass", "subs": [
+      {"id": "job", "ar": "العمل والزملاء والمدير", "en": "Work, colleagues and managers", "th": ["work"]},
+      {"id": "leadership", "ar": "المسؤولية والقيادة والعمل الجماعي", "en": "Responsibility, leadership and teamwork", "th": ["leadership"]},
+      {"id": "study", "ar": "الدراسة والامتحانات", "en": "Study and exams", "th": ["study"]},
+      {"id": "money", "ar": "الرزق والمعيشة", "en": "Provision and making a living", "th": ["rizq", "poverty"]},
+      {"id": "debt", "ar": "الديون", "en": "Debt", "th": ["debt"]},
+      {"id": "envy", "ar": "الحسد والعين", "en": "Envy and the evil eye", "th": ["envy", "evil_eye"]}
+    ]},
+    {"id": "ethics", "ar": "الحق والضمير", "en": "Justice and conscience", "icon": "scale", "subs": [
+      {"id": "injustice", "ar": "الظلم والقهر", "en": "Injustice and oppression", "th": ["injustice", "oppressor_power"]},
+      {"id": "honesty", "ar": "الصدق والضمير والاختيارات", "en": "Honesty, conscience and choices", "th": ["honesty", "decision"]},
+      {"id": "amanah", "ar": "الأمانة والوعود", "en": "Trust and promises", "th": ["trust_amanah"]},
+      {"id": "ungrateful", "ar": "الجحود ونكران الجميل", "en": "Ingratitude", "th": ["ungrateful"]},
+      {"id": "decision", "ar": "الحيرة واتخاذ القرار", "en": "Confusion and decisions", "th": ["decision"]}
+    ]},
+    {"id": "life", "ar": "تقلّبات الحياة والغربة", "en": "Life changes and living abroad", "icon": "mountain", "subs": [
+      {"id": "illness", "ar": "المرض والصحة", "en": "Illness and health", "th": ["illness"]},
+      {"id": "grief", "ar": "الفقد والموت", "en": "Loss and death", "th": ["grief"]},
+      {"id": "crisis", "ar": "الأزمات والطوارئ", "en": "Crises and emergencies", "th": ["emergency"]},
+      {"id": "transition", "ar": "التغيّرات والبدايات الجديدة", "en": "Changes and new beginnings", "th": ["transition"]},
+      {"id": "digital", "ar": "الحياة الرقمية والخصوصية", "en": "Digital life and privacy", "th": ["digital"]},
+      {"id": "abroad", "ar": "الغربة والحنين", "en": "Living abroad and homesickness", "th": ["ghurba"]},
+      {"id": "papers", "ar": "الإقامة والإجراءات في الغربة", "en": "Residency and paperwork abroad", "th": ["ghurba"]},
+      {"id": "identity", "ar": "الهوية وتربية الأبناء في الغربة", "en": "Identity and raising children abroad", "th": ["ghurba", "parenting"]},
+      {"id": "abroad_work", "ar": "العمل والحياة اليومية في الغربة", "en": "Work and daily life abroad", "th": ["ghurba", "work"]},
+      {"id": "return", "ar": "العودة وتغيّر العلاقات", "en": "Returning home and changed relationships", "th": ["ghurba", "transition"]}
+    ]}
+  ],
+  "needs": [
+    {"id": "comfort", "ar": "أن يُسمَع ويُواسى", "en": "To be heard and comforted"},
+    {"id": "guidance", "ar": "أن يعرف ماذا يفعل", "en": "To know what to do"},
+    {"id": "decision", "ar": "أن يحسم قرارًا", "en": "To make a decision"},
+    {"id": "repair", "ar": "إصلاح علاقة أو اعتذار", "en": "To repair a relationship or apologise"},
+    {"id": "justice", "ar": "استرداد حق أو إنصاف", "en": "To recover a right or be treated fairly"},
+    {"id": "boundaries", "ar": "وضع حدود وحماية النفس", "en": "To set boundaries and protect oneself"},
+    {"id": "patience", "ar": "الصبر والثبات", "en": "Patience and steadfastness"},
+    {"id": "repentance", "ar": "التوبة وتصحيح الخطأ", "en": "Repentance and correcting a mistake"},
+    {"id": "meaning", "ar": "المعنى والطمأنينة", "en": "Meaning and inner peace"},
+    {"id": "support", "ar": "عون عملي أو مختص", "en": "Practical or professional help"},
+    {"id": "growth", "ar": "تطوير النفس", "en": "Personal growth"}
+  ]
+}

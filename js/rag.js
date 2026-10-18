@@ -258,7 +258,8 @@ var RAG = (function(){
 
   var IDX={sit:new Index(), quran:new Index(), hadith:new Index(), theme:new Index(), life:new Index()};
   var BY={sit:{}, quran:{}, hadith:{}, theme:{}, life:{}};
-  var LIFE_STEMS=Object.create(null);       // n -> Set(life stems) لمواقف «500 موقف من الحياة»
+  var LIFE_STEMS=Object.create(null);       // docId ("n:k") -> Set(life stems) لمواقف «500 موقف من الحياة» وما أُضيف إليها
+  var LIFE_OF=Object.create(null);          // docId -> n
   var THEME_OF_SIT=Object.create(null);   // sitId -> [themeIds]
   var TRIG=[];                              // [{theme, norm, multi, len}]
   var THEME_CORE=Object.create(null);       // themeId -> Set(core stems of single-word triggers)
@@ -298,10 +299,20 @@ var RAG = (function(){
         TRIG.push({theme:t.id, norm:n, multi:n.indexOf(" ")>-1, len:n.length});
       });
     });
+    // كل موقف يُفهرس بعدة صيغ (js/data-taxonomy.js): نصه، وعبارة المتكلم العامية، والنص والعبارة الإنجليزيان
+    // (الإنجليزيتان في الواجهتين العربية والإنجليزية فقط: في غيرهما تتقاطع كلمات اللاتينية بين اللغات)
+    var lifeEn=STEM_LANG==="ar" || STEM_LANG==="en";
     (window.LIFE||[]).forEach(function(x){
       if(!x.th.some(function(id){ return BY.theme[id]; })) return;
-      BY.life[x.n]=x; var ls=lifeStems(x.t); LIFE_STEMS[x.n]=new Set(ls);
-      IDX.life.docs.push({id:String(x.n), tf:ls.reduce(function(m,s){ m[s]=1; return m; },{}), len:Math.max(1,new Set(ls).size)});
+      BY.life[x.n]=x;
+      var forms=[x.t];
+      if(x.ph && x.ph[0]) forms.push(x.ph[0]);
+      if(lifeEn){ if(x.en) forms.push(x.en); if(x.ph && x.ph[1]) forms.push(x.ph[1]); }
+      forms.forEach(function(text,k){
+        var ls=lifeStems(text); if(ls.length<2) return;
+        var id=x.n+":"+k; LIFE_STEMS[id]=new Set(ls); LIFE_OF[id]=x.n;
+        IDX.life.docs.push({id:id, tf:ls.reduce(function(m,s){ m[s]=1; return m; },{}), len:Math.max(1,LIFE_STEMS[id].size)});
+      });
     });
     ["sit","quran","hadith","theme","life"].forEach(function(k){ IDX[k].finish(); });
     built=true;
@@ -318,7 +329,7 @@ var RAG = (function(){
   function lifeMatches(raw){
     if(!IDX.life.docs.length || NOAR) return [];
     var qs=new Set(lifeStems(raw)); if(qs.size<2) return [];
-    var out=[];
+    var best=Object.create(null);
     IDX.life.docs.forEach(function(d){
       var tot=0, got=0, shared=0, strong=0;
       LIFE_STEMS[d.id].forEach(function(s){
@@ -327,8 +338,10 @@ var RAG = (function(){
       });
       var sim=tot?got/tot:0;
       // كلمتان مشتركتان على الأقل، إحداهما غير شائعة في المجموعة، ونصف وزن الموقف تقريبًا
-      if(shared>=2 && strong>=1 && sim>=LIFE_MIN) out.push({n:+d.id, item:BY.life[d.id], sim:sim});
+      var n=LIFE_OF[d.id];
+      if(shared>=2 && strong>=1 && sim>=LIFE_MIN && (!best[n] || best[n].sim<sim)) best[n]={n:n, item:BY.life[n], sim:sim};
     });
+    var out=[]; for(var n in best) out.push(best[n]);
     return out.sort(function(a,b){ return b.sim-a.sim; }).slice(0,3);
   }
 
@@ -533,6 +546,14 @@ var RAG = (function(){
       themes.unshift({id:focus, theme:BY.theme[focus], score:Math.max(3,fs0+1), conf:0.9, hits:[], focus:true});
       themes=themes.slice(0,5);
     }
+    // موقف اختاره المستخدم من «تصفّح المواقف» (js/data-taxonomy.js): موضوعاته ومشاعره مراجَعة يدويًا، فلا نخمّنها من النص
+    var sit=opts && opts.sit && BY.life[opts.sit] && !crisis && !focus ? BY.life[opts.sit] : null;
+    if(sit){
+      var forced=sit.th.filter(function(id){ return BY.theme[id]; }).map(function(id,i){
+        return {id:id, theme:BY.theme[id], score:Math.max(3,6-i), conf:Math.max(0.6,0.95-0.1*i), hits:[], sit:true};
+      });
+      themes=forced.concat(themes.filter(function(t){ return sit.th.indexOf(t.id)<0; })).slice(0,5);
+    }
     var negatedEmo=new Set();
     var emotions=EMOTION_LEXICON.map(function(e){
       lexHitsNeg.negatedHit=false;
@@ -558,6 +579,11 @@ var RAG = (function(){
         var def=EMOTION_LEXICON.find(function(e){return e.id===eid;});
         if(def) emotions.push({id:eid,label:def.label,count:0,implied:true,hits:[]});
       }
+    });
+    if(sit) (sit.em||[]).slice().reverse().forEach(function(eid){
+      var def=EMOTION_LEXICON.find(function(e){ return e.id===eid; }); if(!def) return;
+      emotions=emotions.filter(function(e){ return e.id!==eid; });
+      emotions.unshift({id:eid, label:def.label, count:1, hits:[], sit:true});
     });
     var relations=RELATION_LEXICON.map(function(r){
       var h=lexHitsNeg(norm,userWords,r.words); return {id:r.id,label:r.label,count:h.length,word:h[0]?h[0].ev:""};
@@ -589,6 +615,7 @@ var RAG = (function(){
             relations:relations.slice(0,3), intensity:intensity, selfFault:selfFault, crisis:crisis, softRisk:softRisk,
             input:input, prep:prep, interpretations:interp?interp.ids:[], vagueCue:interp?interp.cue:"", distinctions:distinctions,
             needs:needs, question:question, focus:focus, time:times[0]?times[0].id:null,
+            sit:sit?{n:sit.n, sub:sit.sub||null, need:sit.need||[]}:null,
             life:(detectThemes.life||[]).map(function(m){ return {n:m.n, text:m.item.t, section:m.item.s, sim:Math.round(m.sim*100)/100}; })};
   }
 
@@ -888,6 +915,7 @@ var RAG = (function(){
     var confidence = !u.themes.length ? (topScore>=7 ? "mid" : "low")
       : (themeScore>=3 || (topScore>=7 && evidence)) ? "high" : (topScore>=3 || themeScore>=1.5) ? "mid" : "low";
     if(u.focus) confidence="mid";   // الموضوع من اختيار المستخدم لا من دليل في نصه
+    if(u.sit) confidence="high";    // موقف مصنَّف يدويًا
 
     var deep=deepRead(u,r), analysis=specialistRead(u,r,deep);
     // القراءة الأولية العميقة (js/reading.js) إن توفرت أدلتها، وإلا القراءة المختصرة

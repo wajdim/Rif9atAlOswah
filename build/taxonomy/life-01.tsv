@@ -1,0 +1,52 @@
+n	sub	em	need	en	ph_ar	ph_en
+1	family.parents	confusion	decision	You disagree with your parents about a decision that concerns your future.	بابا وماما مش موافقين على القرار اللي اخترته لمستقبلي	My parents are against the path I chose for my future
+2	family.kin	jealousy,sadness	comfort	You feel that one of your siblings gets more attention than you.	أحس أن أهلي يحبون أخوي أكثر مني	I feel my parents favour my brother over me
+3	family.kin	guilt,confusion	boundaries	A relative asks you for money and you cannot help.	قريبي طلب مني فلوس وأنا ما عنديش باش نعاونه	A cousin asked me for money and I just can't afford it
+4	family.parents	exhaustion	patience,support	You are caring for one of your parents during an illness.	أنا اللي نخدم على أمي المريضة وتعبت	I'm looking after my sick father and I'm worn out
+5	people.speech	sadness	comfort	You hear hurtful words from someone close to you.	سمعت كلام جرحني من أقرب الناس لي	Someone close to me said something really hurtful
+6	family.kin	confusion	guidance	A quarrel breaks out in the family and you are asked to intervene.	العائلة متخاصمة والكل يبيني أتدخل	My family is fighting and everyone wants me to take sides
+7	self.loneliness	loneliness	comfort	You feel lonely even though you are surrounded by your family.	عايش وسط أهلي وحاسس إني وحيد	I feel alone even when I'm with my family
+8	family.kin	confusion	boundaries	You are pushed to attend a family occasion you do not want to go to.	غاصبيني نحضر عرس في العائلة وأنا ما نحبش	They're forcing me to go to a family event I don't want to attend
+9	love.seek	sadness,confusion	decision	Your family rejects the person you want to marry.	أهلي رافضين الشخص اللي بدي أتزوجه	My parents refuse the person I want to marry
+10	ethics.ungrateful	sadness	comfort	You feel your family does not appreciate your effort.	نتعب على عائلتي وحتى حد ما يقدرني	I do so much for my family and nobody appreciates it
+11	ethics.honesty	betrayal	repair	You discover a family member hid something important from you.	اكتشفت أن أختي خبّت عليّ حاجة مهمة	I found out my family kept something important from me
+12	family.kin	anger	justice,guidance	You and your siblings disagree about sharing the care of your parents.	أنا وحدي اللي نهتم بالوالدين وخوتي ما يعاونوش	My siblings won't share the burden of caring for our parents
+13	self.worth	shame,sadness	comfort	You are constantly compared with one of your relatives.	دايمًا يقارنوني بولد عمي	They always compare me to my cousin
+14	family.parents	guilt	repentance,repair	You regret raising your voice at your mother or father.	صرخت على أمي وندمان برشا	I yelled at my mum and I feel terrible
+15	family.parents	confusion	decision	Your parents want you to choose a field of study you do not like.	أهلي يبوني أدرس تخصص ما أحبه	My parents want me to study something I hate
+16	family.kin	confusion	repair	You are trying to mend a broken relationship with a relative.	بدي أرجّع علاقتي مع خالي بعد قطيعة سنين	I want to reconnect with an uncle I haven't spoken to in years
+17	family.kin	anger	justice	A family dispute arises over an inheritance.	المشاكل بدات بيناتنا بسبب الورث	My family is fighting over the inheritance
+18	life.transition	loneliness,fear	comfort	You move to live far from your family for the first time.	أول مرة نسكن بعيد على عائلتي	It's my first time living away from my family
+19	family.parents	exhaustion,fear	patience	You find yourself responsible for the family after a parent is gone.	بعد ما بابا راح صرت أنا المسؤول على الدار	Since my father passed I have to carry the whole family
+20	people.forgive	sadness	comfort	A relative who hurt you apologises, but you are still in pain.	قريبي اعتذر لي بس قلبي لسه موجوع	My relative apologised but it still hurts
+21	love.marriage	anger	guidance	You and your spouse disagree about managing expenses.	أنا ومراتي ديما نتخاصمو على المصروف	My wife and I keep fighting about money
+22	love.marriage	loneliness,sadness	comfort	You feel your spouse does not listen to you.	زوجي ما يسمعني أبدًا	My husband never listens to me
+23	love.marriage	confusion	guidance	A conflict arises between your spouse and a member of your family.	مرتي وأمي ما يتفاهموش وأنا في الوسط	My wife and my mother can't get along and I'm stuck in the middle
+24	love.marriage	guilt	repair	Work keeps you so busy that you take less part in married life.	الشغل أخذني من زوجتي وأولادي	Work is taking me away from my wife
+25	love.marriage	anger	guidance	You disagree about how to raise the children.	نختلف أنا وزوجي في تربية الأولاد	My husband and I disagree on how to raise the kids
+26	love.marriage	guilt	repair	You forget an important occasion for your spouse.	نسيت عيد زواجنا وزعلت مني	I forgot our anniversary and she is upset
+27	love.marriage	confusion,sadness	guidance	You discover that you expected different things from marriage.	اكتشفنا أن كل واحد فينا متوقع حاجة مختلفة من الزواج	We realised we expected completely different things from marriage
+28	love.jealousy	jealousy	guidance	You feel jealous without any clear proof of wrongdoing.	نغير على زوجي برشا رغم أنه ما عمل شي	I get jealous of my husband even though he's done nothing
+29	love.marriage	fear	patience,guidance	You are going through financial hardship that strains your relationship.	الضيقة المادية خربت العلاقة بيني وبين مرتي	Money problems are hurting our marriage
+30	love.marriage	exhaustion	patience	Your spouse falls ill and your responsibilities grow.	زوجتي مريضة وكل شي صار علي	My wife is ill and everything falls on me
+31	love.marriage	shame,anger	boundaries	Your spouse embarrasses you in front of others.	زوجي يحرجني قدام الناس	My husband humiliates me in front of people
+32	love.marriage	loneliness	guidance	You find it hard to express your emotional needs.	ما نعرفش نقول لزوجي واش نحتاج	I can't tell my spouse what I need emotionally
+33	love.marriage	confusion	decision	You disagree about having children or when.	هو يبي أطفال الحين وأنا مو جاهزة	We disagree about when to have children
+34	love.marriage	anger	boundaries	Family members interfere in the private details of your life together.	أهل زوجي يتدخلوا في كل صغيرة وكبيرة	My in-laws interfere in everything in our marriage
+35	love.marriage	betrayal	repair	You lose trust after your spouse broke a promise.	وعدني وما وفّاش وما عادش نثق فيه	He broke his promise and I can't trust him anymore
+36	love.marriage	sadness	repair	The relationship is going through a cold, distant phase.	العلاقة بيناتنا بردت وما بقاش كيما قبل	Our marriage has gone cold
+37	love.marriage	loneliness	patience	Work forces the two of you to live in different countries.	أنا في بلد وزوجتي في بلد بسبب الشغل	My wife and I live in different countries because of work
+38	people.forgive	confusion	repair	You want to make up after a fight but do not know how to begin.	بدي أصالحها بعد الخناقة بس مش عارف أبدأ	I want to make up with my wife after the fight but don't know how
+39	love.jealousy	guilt	repair,repentance	You discover you were wrong to accuse your spouse.	اتهمت زوجي ظلم وطلعت غلطانة	I accused my husband and it turns out I was wrong
+40	love.marriage	confusion,sadness	decision	You face a possible separation and do not know the next step.	نفكر في الطلاق وما نعرفش شنو نعمل	We're thinking about divorce and I don't know what to do
+41	family.parenting	fear,confusion	guidance	Your child refuses to go to school.	ولدي رافض يمشي للمدرسة	My son refuses to go to school
+42	family.parenting	sadness	guidance	Your son lies to you out of fear of punishment.	ابني يكذب علي لأنه خايف مني	My son lies to me because he's afraid of being punished
+43	family.parenting	fear,anger	guidance	You discover your child is being bullied.	بنتي يتنمروا عليها في المدرسة	My daughter is being bullied at school
+44	family.parenting	shame	guidance	You notice that your son bullies others.	اكتشفت أن ولدي هو اللي يتنمر على صحابه	I found out my son is the one bullying other kids
+45	family.parenting	fear	guidance	Your child spends a long time in front of screens.	ولدي نهار كامل على التلفون	My kid is glued to his phone all day
+46	family.parenting	fear	guidance	You disagree with your teenage son about his friends.	ما يعجبنيش صحاب ولدي المراهق	I don't like the friends my teenage son hangs out with
+47	family.parenting	jealousy	guidance	One of your children is jealous of his younger brother.	ولدي الكبير يغار من أخوه الصغير	My older child is jealous of the new baby
+48	family.parenting	sadness	comfort,guidance	Your son fails an exam despite working hard.	ابني اجتهد ورسب وما عرفت كيف أواسيه	My son studied hard and still failed
+49	family.parenting	confusion	guidance	Your child asks a difficult question you cannot answer.	بنتي سألتني سؤال على ربي وما عرفت نجاوبها	My daughter asked me a hard question about God and I had no answer
+50	family.parenting	guilt	repair,growth	You lose your temper with your child and then regret it.	صرخت على ولدي وأنا معصب وندمت	I lost my temper with my child and regret it
+51	family.parenting	fear	support	Your child needs extra help with schoolwork.	ولدي ضعيف في القراية ويحتاج دعم	My child is struggling at school and needs extra help

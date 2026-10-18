@@ -1,0 +1,50 @@
+n	sub	em	need	en	ph_ar	ph_en
+52	family.parenting	confusion	decision	Your son rejects the study path you chose for him.	ولدي رافض التخصص اللي اخترتو ليه	My son refuses the field of study I picked for him
+53	family.parenting	fear	guidance,boundaries	You find out your son is talking to strangers online.	اكتشفت أن بنتي تحكي مع غرباء على النت	I found out my daughter chats with strangers online
+54	family.parenting	guilt	growth	You feel you do not spend enough time with your children.	ما عنديش وقت لأولادي وحاسس بالذنب	I feel guilty that I don't spend enough time with my kids
+55	family.parenting	guilt,sadness	guidance	Your child wants something beyond what you can afford.	بنتي تبي حاجة غالية وأنا ما نقدرش نشريهالها	My child wants something I can't afford
+56	family.parenting	fear,guilt	growth	You worry that you are too strict in raising your children.	أخاف أكون قاسي برشا مع أولادي	I'm afraid I'm too harsh with my children
+57	family.parenting	sadness	repair	Your son keeps a secret and you feel he does not trust you.	ابني صار يخبي علي وحاسة ما يثقش فيا	My son hides things from me and I feel he doesn't trust me
+58	life.transition	fear	guidance	The family moves to a new city and the children struggle to adapt.	انتقلنا لمدينة جديدة والأولاد ما تأقلموش	We moved cities and the kids can't settle in
+59	family.parenting	shame,fear	guidance	The school keeps complaining about your child's behaviour.	المدرسة كل مرة تشتكي من تصرفات ولدي	The school keeps complaining about my son's behaviour
+60	family.parenting	loneliness,sadness	comfort	Your son leaves home to study or work and you feel the emptiness.	ابني سافر يدرس والدار صارت فاضية علي	My son moved out and the house feels empty
+61	people.friends	betrayal	comfort	A friend lets you down when you needed them.	صاحبي خذلني وقت اللي كنت محتاجه	My friend let me down when I needed him most
+62	ethics.amanah	betrayal,anger	boundaries	Someone passes on a secret you trusted them with.	قلتلها سر وراحت حكاتو للناس كاملين	I told her a secret and she told everyone
+63	people.friends	loneliness	boundaries	You feel you are always the one who reaches out.	دايمًا أنا اللي نسأل على صحابي وحتى حد ما يسأل علي	I'm always the one who texts first
+64	people.friends	anger	guidance	You disagree with a friend about an opinion or a principle.	اختلفت مع صاحبي على مبدأ وتخاصمنا	My friend and I fell out over a principle
+65	work.envy	jealousy,guilt	growth	Your friend succeeds and you feel jealous despite loving them.	صاحبتي نجحت وأنا نحس بغيرة رغم أني نحبها	My best friend got the job and I feel jealous even though I love her
+66	self.loneliness	sadness,loneliness	comfort	Your name is left out of a group invitation.	عزموا الشلة كلها إلا أنا	Everyone was invited except me
+67	people.friends	confusion	boundaries	A friend asks you for a favour that goes beyond your limits.	صاحبي طالب مني خدمة فوق طاقتي وما عرفتش نرفض	A friend asked for a favour that's too much and I can't say no
+68	people.speech	anger,sadness	guidance	You discover someone has been speaking badly about you.	عرفت أن واحد يتكلم علي بالسوء من وراي	I found out someone has been talking behind my back
+69	people.friends	joy	repair	You meet an old friend after years without contact.	رجعت تلاقيت بصاحب قديم بعد سنين	I reconnected with an old friend after years
+70	people.friends	betrayal	boundaries	You feel some of your friends take advantage of you.	حاسس صحابي يستغلوني وقت الحاجة برك	I feel my friends only use me when they need something
+71	people.friends	confusion	boundaries,decision	You want to end a friendship that hurts you without wounding anyone.	بدي أبعد عن صاحبة مؤذية بدون ما أجرحها	I want to end a toxic friendship without hurting her
+72	self.anxiety	fear	comfort	You meet someone new and fear being rejected.	نخاف نتعرف على ناس جدد ويرفضوني	I'm scared new people will reject me
+73	people.speech	shame	comfort	You are mocked for your appearance or your accent.	يتمسخروا علي بسبب لهجتي	People make fun of my accent
+74	people.friends	confusion	guidance	You find yourself between two friends who have fallen out.	صاحبيني متخاصمين وأنا محتار مع من نقف	Two of my friends are fighting and I'm caught in between
+75	ethics.amanah	guilt	repair	You forget to return something you borrowed from a friend.	نسيت نرجع لصاحبي حاجة استلفتها	I forgot to give back something I borrowed from a friend
+76	people.forgive	confusion	decision	A friend apologises but you doubt the apology is sincere.	اعتذر لي بس ما نيش مصدقه	He apologised but I don't believe he means it
+77	people.friends	loneliness	comfort	Your circumstances change and you drift away from your group of friends.	ظروفي تبدلت وبعدت على صحابي	Life changed and I drifted away from my friends
+78	self.worth	shame	growth	You need to ask for help but feel embarrassed.	محتاج مساعدة بس نحشم نطلب	I need help but I'm too embarrassed to ask
+79	ethics.ungrateful	sadness	comfort	You help someone and then feel they did not appreciate it.	ساعدته بكل اللي نقدر وما قالش حتى شكرا	I helped him and he didn't even say thank you
+80	people.suspicion	confusion	repair	You misread a message and a problem arises because of it.	فهمت رسالتها غلط وصارت مشكلة كبيرة	I misread her message and it caused a big fight
+81	work.job	fear	growth	You start a new job and feel unsure of yourself.	بديت خدمة جديدة وما عنديش ثقة في روحي	I just started a new job and I feel like I don't belong
+82	work.job	anger	justice	A colleague takes credit for your work.	زميلي نسب الشغل اللي عملته لنفسه	A colleague took credit for my work
+83	work.job	shame	guidance	Your manager criticises you in front of others.	مديري هزأني قدام الزملاء	My boss criticised me in front of everyone
+84	work.job	exhaustion	boundaries	You are asked to finish work in an unrealistic time.	طالبين مني شغل ما يكملش في الوقت هذا	They want me to finish an impossible amount of work by tomorrow
+85	work.job	sadness	comfort,patience	You are turned down after a job interview.	رفضوني في مقابلة الشغل للمرة العاشرة	I got rejected after another job interview
+86	work.money	fear	guidance,patience	You suddenly lose your job.	طردوني من الخدمة فجأة	I lost my job out of nowhere
+87	work.money	fear	patience	Your salary is late and your obligations are piling up.	الراتب تأخر والالتزامات تراكمت	My salary is late and the bills keep coming
+88	work.leadership	confusion	guidance	You are promoted and find it hard to manage your former colleagues.	ترقيت وصرت مسؤول على زملائي القدام	I got promoted and now manage my old colleagues
+89	work.money	anger	justice	You feel your salary does not match your responsibilities.	نخدم برشا والراتب ما يستاهلش	I do so much and my salary is unfair
+90	work.job	guilt	repentance,repair	You make a professional mistake that affects the team.	غلطت غلطة في الخدمة وضرّت الفريق	I made a mistake at work that affected the whole team
+91	work.job	confusion	decision	You witness unethical behaviour at work.	شفت تصرف مش أخلاقي في الشركة	I saw something unethical happening at work
+92	ethics.honesty	confusion	decision	You are asked to hide important information from a client.	مديري طالب مني نخبي معلومة على الحريف	My boss wants me to hide important information from a client
+93	work.job	anger	guidance	You disagree with a colleague about how to carry out a task.	تخاصمت مع زميلي على طريقة الشغل	A colleague and I clash over how to do the work
+94	self.burnout	exhaustion	support	You feel exhausted from constant pressure at work.	ضغط الشغل هلكني	I'm burnt out from work pressure
+95	ethics.decision	confusion	decision	You hesitate between staying in your job and accepting a new offer.	جاني عرض شغل جديد ومحتار نقبل ولا لا	I got a new job offer and can't decide whether to take it
+96	work.job	anger,exhaustion	boundaries	Your manager refuses a leave you need.	المدير رفض يعطيني إجازة وأنا محتاجها	My manager refused the time off I really need
+97	work.job	exhaustion	patience	You have to work with someone you are not comfortable with.	مضطر نخدم مع واحد ما نرتاحلوش	I have to work with someone I can't stand
+98	work.job	fear	patience	Your contract is ending and you do not know whether it will be renewed.	العقد قرب يكمل وما نعرفش إذا باش يجددوه	My contract ends soon and I don't know if they'll renew it
+99	work.job	sadness	growth	You receive harsh feedback on a project you put effort into.	تعبت على المشروع وجاتني ملاحظات قاسية	I worked so hard on the project and got harsh feedback
+100	faith.gratitude	joy,exhaustion	meaning	You achieve professional success and find no time to celebrate it.	نجحت في الشغل بس ما لقيتش وقت نفرح	I got a big win at work but I'm too busy to enjoy it

@@ -763,3 +763,11 @@
 803	Wat je schreef draagt zware uitputting en wanhoop in zich, en dat nemen we serieus. Als je ooit denkt aan jezelf iets aan te doen of een einde aan je leven te maken, neem dan nu contact op met iemand die je vertrouwt, met een hulplijn voor geestelijke gezondheid in je land of met de dichtstbijzijnde spoedeisende hulp. Wat je doormaakt is geen teken van een zwak geloof, en hulp zoeken bij mensen en professionals hoort bij het gebruiken van de middelen. Hieronder volgt een rustige lezing van je situatie.
 804	Het lijkt erop dat er iets op je drukt. Het kan verdriet, angst, uitputting, eenzaamheid of iets specifiekers zijn. Hieronder volgt algemene begeleiding; als je kiest wat er het dichtst bij komt, doe ik de lezing opnieuw met die focus.
 805	Zou je zeggen dat het meer lijkt op:
+806	Levenssituaties (
+807	Alle categorieën
+808	{0} situaties
+809	Kies een categorie en daarna de situatie die het dichtst bij de jouwe ligt; je vindt er de lezing uit de Koran, de Soenna en de Sira bij. Je kunt je situatie ook altijd in je eigen woorden beschrijven.
+810	Een situatie uit ‘{0}’.
+811	Wat je erin nodig kunt hebben:
+812	Voeg je eigen details toe
+813	Resultaten: {0}

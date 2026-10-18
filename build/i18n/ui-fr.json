@@ -804,5 +804,13 @@
  "نطمئن عليك أولًا": "D'abord, nous voulons savoir que vous êtes en sécurité",
  "ما كتبته يحمل تعبًا ويأسًا ثقيلين، ونحن نأخذ ذلك بجدية. إن خطرت لك فكرة إيذاء نفسك أو إنهاء حياتك، فتواصل الآن مع شخص تثق به، أو مع خط مساعدة نفسية في بلدك، أو أقرب قسم طوارئ. ما تمر به ليس دليلًا على ضعف إيمانك، وطلب العون من الناس ومن المختصين أخذٌ بالأسباب. وما يلي قراءة هادئة لحالتك.": "Ce que vous avez écrit porte une lourde fatigue et un profond désespoir, et nous le prenons au sérieux. S'il vous arrive de penser à vous faire du mal ou à mettre fin à votre vie, contactez dès maintenant une personne de confiance, une ligne d'écoute en santé mentale de votre pays ou le service d'urgences le plus proche. Ce que vous traversez n'est pas le signe d'une foi faible, et demander de l'aide aux autres et aux professionnels fait partie des moyens à prendre. Voici une lecture apaisée de votre situation.",
  "يبدو أن شيئًا ما يثقل عليك. قد يكون حزنًا، أو قلقًا، أو إرهاقًا، أو وحدة، أو أمرًا أكثر تحديدًا. ما يلي توجيه عام، وإن اخترت الأقرب لما تشعر به أعدت القراءة مركّزة عليه.": "On dirait que quelque chose vous pèse. Cela peut être de la tristesse, de l'anxiété, de l'épuisement, de la solitude, ou quelque chose de plus précis. Voici une orientation générale ; si vous choisissez ce qui s'en rapproche le plus, je referai la lecture en me concentrant dessus.",
- "هل تشعر أنه أقرب إلى:": "Diriez-vous que cela ressemble plutôt à :"
+ "هل تشعر أنه أقرب إلى:": "Diriez-vous que cela ressemble plutôt à :",
+ "مواقف الحياة (": "Situations de vie (",
+ "كل الفئات": "Toutes les catégories",
+ "{0} موقفًا": "{0} situations",
+ "اختر الفئة ثم الموقف الأقرب إلى حالك، وستجد قراءته من القرآن والسنة والسيرة. ويمكنك دائمًا أن تكتب موقفك بكلماتك.": "Choisissez une catégorie, puis la situation la plus proche de la vôtre : vous trouverez sa lecture à partir du Coran, de la Sunna et de la Sîra. Vous pouvez toujours décrire votre situation avec vos propres mots.",
+ "موقف من «{0}».": "Une situation de « {0} ».",
+ "ما قد تحتاجه فيه:": "Ce dont vous pourriez avoir besoin :",
+ "أضف تفاصيل حالتك": "Ajoutez vos propres détails",
+ "النتائج: {0}": "Résultats : {0}"
 }

@@ -13,7 +13,7 @@ const cache = {};
 function load(lang) {
   if (cache[lang]) return cache[lang];
   const ctx = { console, localStorage: { getItem: () => JSON.stringify({ lang }) }, document: {}, navigator: {} }; ctx.window = ctx; vm.createContext(ctx);
-  for (const f of ["data-situations.js", "data-situations-2.js", "data-situations-3.js", "data-situations-4.js", "data-quran.js", "data-hadith.js", "data-themes.js", "data-life.js", "data-reading.js",
+  for (const f of ["data-situations.js", "data-situations-2.js", "data-situations-3.js", "data-situations-4.js", "data-quran.js", "data-hadith.js", "data-themes.js", "data-life.js", "data-taxonomy.js", "data-reading.js",
                    lang === "ar" ? "data-en.js" : "data-" + lang + ".js", "i18n.js", "rag.js", "data-nlu.js", "nlu.js", "reading.js"])
     vm.runInContext(fs.readFileSync(path.join(JS, f), "utf8"), ctx, { filename: f });
   return cache[lang] = vm.runInContext("({SITUATIONS,THEMES,QURAN_LIB,HADITH_LIB,LIFE,RAG})", ctx);
@@ -22,7 +22,10 @@ const fail = [];
 // 1) سلامة البيانات
 const G = load("ar"), themeIds = new Set(G.THEMES.map(t => t.id)), sitIds = new Set(G.SITUATIONS.map(s => s.id));
 G.LIFE.forEach(x => x.th.forEach(id => { if (!themeIds.has(id)) fail.push("life " + x.n + ": unknown theme " + id); }));
-if (G.LIFE.length !== 500 || new Set(G.LIFE.map(x => x.n)).size !== 500) fail.push("life: expected 500 unique situations");
+// the 500 situations of the PDF (n 1–500) plus those added by js/data-taxonomy.js (n ≥ 501)
+const pdfLife = G.LIFE.filter(x => x.n <= 500);
+if (pdfLife.length !== 500 || new Set(pdfLife.map(x => x.n)).size !== 500) fail.push("life: expected the 500 situations of the PDF");
+if (new Set(G.LIFE.map(x => x.n)).size !== G.LIFE.length) fail.push("life: duplicate situation numbers");
 G.QURAN_LIB.concat(G.HADITH_LIB).forEach(x => x.th.forEach(id => { if (!themeIds.has(id) && id !== "guilt" && id !== "orphan") fail.push(x.id + ": unknown theme tag " + id); }));
 G.THEMES.forEach(t => t.sits.forEach(id => { if (!sitIds.has(id)) fail.push("theme " + t.id + ": unknown situation " + id); }));
 // 2) الأزمات

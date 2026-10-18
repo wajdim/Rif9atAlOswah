@@ -1,0 +1,61 @@
+n	sub	em	need	en	ph_ar	ph_en
+101	work.study	sadness	comfort,patience	You fail an important exam.	رسبت في امتحان مهم وتحطمت	I failed an important exam and I'm crushed
+102	work.study	confusion	decision	You cannot decide which university major to choose.	محتار أي تخصص نختار في الجامعة	I can't decide what to study at university
+103	work.study	exhaustion	guidance	You struggle to understand a school subject.	المادة هذي ما فهمت فيها شي	I just don't understand this subject no matter what I do
+104	self.growth	guilt	growth	You put off studying until the last moment.	نأجل المراجعة لآخر لحظة كل مرة	I always leave studying until the last minute
+105	people.speech	anger,shame	justice	Your work is accused of cheating although you did it yourself.	اتهموني بالغش وأنا عملت البحث بروحي	They accused me of cheating on work I did myself
+106	ethics.honesty	confusion	decision	You see a classmate cheating and do not know what to do.	شفت زميلي يغش ومحتار نقول ولا نسكت	I saw a classmate cheating and don't know if I should report it
+107	work.study	sadness	comfort	You get a lower result than you expected.	جبت نتيجة أقل من اللي توقعتها	My grades were much lower than I expected
+108	self.worth	jealousy,sadness	comfort	You feel your classmates are moving ahead faster than you.	حاسس زملائي سابقيني بمراحل	Everyone in my class is ahead of me
+109	work.study	exhaustion	patience	You have to combine study and work.	نقرا ونخدم في نفس الوقت وتعبت	Studying and working at the same time is draining me
+110	self.growth	exhaustion	growth	You lose the enthusiasm to learn a skill you started.	بديت نتعلم حاجة وطاحت عزيمتي	I lost motivation for a skill I started learning
+111	self.worth	shame	growth	You stutter while giving a presentation in front of the class.	تلخبطت وأنا نقدم العرض قدام القسم	I froze and stuttered during my class presentation
+112	work.study	anger	guidance	Your teacher refuses a request you consider reasonable.	الأستاذ رفض طلبي رغم أنه معقول	My teacher refused a reasonable request
+113	life.crisis	fear	guidance	You lose project files just before the deadline.	ضاعوا ملفات المشروع قبل التسليم بيوم	I lost all my project files the day before the deadline
+114	work.study	confusion,fear	decision	You receive a scholarship that requires travelling abroad.	جاتني منحة برا ومحتار نسافر ولا لا	I got a scholarship abroad and I'm not sure whether to go
+115	work.study	fear	growth	You go back to studying after a long break.	رجعت نقرا بعد سنين وخايف ما نقدرش	I'm going back to school after years and I'm nervous
+116	work.leadership	anger	guidance	You disagree with your study group about dividing the tasks.	الفريق ما يخدمش وأنا اللي نعمل كل شي	My group project partners aren't doing their share
+117	self.worth	shame,fear	growth	You are afraid to ask a question so as not to look slow.	نحشم نسأل باش ما يقولوش ما فهمش	I'm afraid to ask questions in class in case I look stupid
+118	work.study	confusion,sadness	decision	You discover the major you chose does not suit you.	اكتشفت أن التخصص اللي اخترته ما يناسبنيش	I realised my major isn't right for me
+119	self.worth	shame	growth	You are learning a new language and your mistakes embarrass you.	نتعلم لغة جديدة ونحشم من أخطائي	I'm learning a new language and my mistakes embarrass me
+120	self.despair	joy	meaning	You succeed after repeated failures.	نجحت أخيرًا بعد ما فشلت برشا مرات	I finally passed after failing so many times
+121	work.debt	fear,despair	guidance,patience	Your debts keep piling up.	الديون تراكمت علي وما عرفتش كيفاش نخلصها	My debts keep piling up and I can't see a way out
+122	work.money	fear	guidance	You face an emergency expense you did not plan for.	طاحت علي مصاريف طارئة ما كنتش عامل حسابها	An unexpected expense came up and I don't have the money
+123	work.debt	anger	justice	You lend someone money and they do not repay it on time.	سلّفته فلوس وما رجعهمش في الوقت	I lent him money and he hasn't paid me back
+124	life.crisis	fear	guidance	You lose your wallet with important papers in it.	ضاع لي البزطام وفيه الأوراق المهمة	I lost my wallet with all my important documents
+125	work.money	guilt	growth	You buy something and then realise you do not need it.	شريت حاجة غالية وما كنتش محتاجها	I bought something expensive I didn't need and regret it
+126	work.money	betrayal,anger	justice	You fall victim to financial fraud.	تنصبوا علي وأخذوا فلوسي	I got scammed and lost my money
+127	work.debt	anger	justice	You disagree with someone about an amount owed.	تخاصمنا على مبلغ هو يقول خلصتو وأنا نقول لا	We're arguing over how much money is still owed
+128	work.money	fear,shame	guidance	You cannot pay the rent on time.	ما نقدرش نخلص الكراء هالشهر	I can't pay the rent this month
+129	work.money	confusion	guidance	You need to cut expenses and do not know where to start.	لازم ننقص المصاريف وما نعرفش منين نبدا	I need to cut back on spending and don't know where to start
+130	work.money	confusion	decision	Someone offers you a profit opportunity that seems unrealistic.	واحد عرض علي مشروع ربح سريع يبان مش معقول	Someone offered me a get-rich-quick deal that sounds too good to be true
+131	self.worth	jealousy	meaning	You compare your financial situation with people richer than you.	نقارن روحي باللي عندهم فلوس أكثر مني	I keep comparing myself to people who have more money
+132	work.money	confusion	decision	You hesitate between saving and fulfilling a personal wish.	محتار نوفّر الفلوس ولا نشري اللي نحبو	I can't decide whether to save or treat myself
+133	work.money	joy,confusion	decision	You receive unexpected money and do not know how to use it.	جاتني فلوس ما كنتش متوقعها ومحتار فيهم	I got some unexpected money and don't know what to do with it
+134	work.money	sadness,despair	patience	A small business you started fails.	المشروع الصغير اللي بديتو فشل	The small business I started has failed
+135	work.debt	confusion	decision	Someone asks you to guarantee their loan.	صاحبي طالب مني نكون ضامن في قرضه	A friend asked me to be the guarantor on his loan
+136	work.job	fear	guidance	An essential tool you rely on for work breaks down.	تكسرت الآلة اللي نخدم بيها	The equipment I need for my job broke down
+137	ethics.amanah	confusion	guidance	You find money transferred to your account by mistake.	لقيت فلوس في حسابي حولوها غلط	Someone transferred money to my account by mistake
+138	work.money	fear	patience	The cost of living rises while your income stays the same.	كل شي غلى والشهرية كيما هي	Everything is getting more expensive but my income stays the same
+139	work.money	shame	boundaries	You feel ashamed that you cannot keep up with your friends' spending.	نحشم مع صحابي خاطر ما نقدرش نصرف كيفهم	I'm embarrassed I can't afford to go out like my friends do
+140	faith.gratitude	joy	meaning	You reach a financial goal after a long period of discipline.	وصلت للمبلغ اللي كنت نجمع فيه سنين	I finally reached my savings goal after years
+141	life.illness	fear	comfort,patience	You receive a medical diagnosis you did not expect.	الطبيب قالي عندي مرض ما كنتش متوقعو	The doctor gave me a diagnosis I wasn't expecting
+142	life.illness	fear	comfort	You are waiting for test results and feel anxious.	نستنى في نتيجة التحاليل وقلبي يدق	I'm anxious waiting for my test results
+143	life.illness	sadness,fear	comfort	Someone dear to you falls ill.	أمي مرضت ومش قادر نشوفها هكا	Someone I love is seriously ill
+144	life.grief	sadness	comfort	You lose a relative or a friend.	مات صاحبي العزيز	I lost a dear friend
+145	life.grief	sadness	comfort,patience	You struggle to return to life after losing someone you love.	من وقت ما مات بابا ما رجعتش لروحي	Since my father died I can't get back to normal life
+146	self.anxiety	exhaustion	support	You suffer from insomnia that affects your day.	ما نرقدش في الليل ونهاري كامل مدمّر	I can't sleep at night and it's ruining my days
+147	self.sadness	sadness	comfort	You feel a constant sadness you cannot describe.	فيا حزن ما نعرفش منين جاي	I feel a constant sadness I can't explain
+148	self.anxiety	fear	comfort,support	You have a sudden panic attack.	جاتني نوبة هلع فجأة وقلبي ولّى يدق بقوة	I had a sudden panic attack out of nowhere
+149	life.illness	sadness	patience	You are temporarily unable to do an activity you loved.	بعد الإصابة ما عادش نقدر نلعب الكورة	After my injury I can't do the sport I love
+150	self.sadness	shame,fear	support	You need psychological support but hesitate to ask for it.	محتاج نشوف طبيب نفسي بس متردد	I think I need a therapist but I'm hesitant
+151	life.illness	shame,sadness	comfort	Your changed appearance after an illness or injury affects you.	شكلي تبدل بعد المرض وما عادش نحب نشوف روحي	My appearance changed after the illness and I hate it
+152	self.burnout	exhaustion,guilt	comfort,support	Caring for a sick person exhausts you and you feel guilty for being tired.	تعبت من رعاية أمي المريضة ونحس بالذنب خاطر تعبت	I'm exhausted caring for my sick mother and feel guilty about it
+153	life.illness	exhaustion	patience	You are recovering slowly but rush to return to your activities.	نتعافى بشوية بشوية وأنا مستعجل نرجع	I'm recovering slowly and I'm impatient to get back to normal
+154	self.sadness	sadness,anger	comfort	You hear a comment that belittles your suffering.	قالولي اللي فيك موش حاجة	People keep telling me my pain is no big deal
+155	self.anxiety	fear	guidance	You worry about your health because of things you read online.	قريت على النت وولّيت نخاف عندي مرض خطير	I read things online and now I'm convinced I'm seriously ill
+156	self.sadness	loneliness,sadness	comfort	You feel others do not understand your grief.	حتى حد ما فاهم حزني	No one understands my sadness
+157	life.illness	sadness	patience	You have to postpone an important plan for health reasons.	أجلت مشروعي بسبب صحتي	I had to put my plans on hold because of my health
+158	faith.desire	guilt	growth	You are trying to change a habit that harms your health and keep slipping.	نحاول نبطل التدخين ونرجعلو	I keep trying to quit smoking and failing
+159	self.burnout	exhaustion	support	You notice that life's pressure is affecting your relationships.	الضغط خلاني نتعصب على كل اللي حولي	Stress is ruining my relationships with everyone around me
+160	faith.gratitude	joy	meaning	You feel relief after sharing your worry with someone you trust.	ارتحت كي حكيت همي لصاحبي	I felt so much lighter after opening up to a friend
