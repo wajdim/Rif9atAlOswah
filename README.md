@@ -24,8 +24,8 @@ The user writes freely about a situation, such as a conflict, a loss, guilt or a
    - 115 Prophetic situations
    - 63 life topics
    - 623 everyday life situations: the 500 of the source collection plus 123 written for topics it does not cover. They help understand the user's message and can be browsed; they are never shown as religious text
-   - 201 verses
-   - 149 hadith and supplications, with sources and grades
+   - 322 verse entries (Tanzil text)
+   - 343 hadith and supplications, with sources and grades. Every quotation is checked word by word against offline copies of its source at build time (`build/kb/`, `js/data-evidence.js`); anything that cannot be checked is not shown
 3. **Writes a first reading** of 4–6 connected paragraphs (`js/reading.js`, material in `js/data-reading.js`), with no generation:
    - an opening observation specific to the situation, and the two sides of the scale taken from the user's own words
    - what each choice represents
@@ -66,6 +66,7 @@ build/
   tashkeel/     Arabic diacritisation pipeline
   taxonomy/     situation taxonomy sources (taxonomy.json, life-NN.tsv, extra.tsv) and build.js (validates → js/data-taxonomy.js)
   tests/        engine regression test + understanding/safety quality gate (fixtures/understanding.json)
+  kb/           evidence pipeline: source download, verification of every quotation, adding verses/hadith from the sources
   rag/          standalone Python importer and notes for the Arabic situations corpus (not shipped in the app)
   build-all.sh  rebuilds everything into dist/
 docs/           GitHub Pages: landing page, interactive user guide (guide.html), privacy policy
@@ -85,6 +86,8 @@ docs/           GitHub Pages: landing page, interactive user guide (guide.html),
 | Held-out benchmark (never tuned on) | `node build/tests/bench.js --set holdout [-v]` | measures generalisation |
 | Situation taxonomy | `node build/taxonomy/build.js [--check]` | validates the TSV sources and writes `js/data-taxonomy.js` |
 | Taxonomy test | `node build/tests/test-taxonomy.js [-v]` | browse consistency, no crisis false alarms, phrase understanding |
+| Evidence verification | `python -I build/kb/verify.py --write` (sources: `build/kb/fetch.py`) | `build/kb/REPORT.md`, `js/data-evidence.js` |
+| Evidence integrity test | `node build/tests/test-evidence.js` | every quotation verified for exactly the text that ships |
 | Single-file HTML | `node build/bundle-html.js dist/RifqaAlUswa.html` | – |
 
 `TOOLS` must contain:

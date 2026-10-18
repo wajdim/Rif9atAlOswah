@@ -655,6 +655,8 @@ var RAG = (function(){
     });
     sits.sort(function(a,b){ return b.score-a.score; });
 
+    // حين يُفهم موضوع بثقة، لا يكفي التشابه اللفظي العابر لتقديم نص لا صلة موضوعية له («كل شيء» ≠ حديث «الفحش في شيء»)
+    var themeSure=Object.keys(themeConf).some(function(t){ return themeConf[t]>=0.5; });
     function libRank(idx, lib, extra){
       var bm=idx.search(q), out=[];
       lib.forEach(function(it){
@@ -663,8 +665,8 @@ var RAG = (function(){
         it.th.forEach(function(tid){ if(themeConf[tid]){ boost+=2.1*themeConf[tid]; via.push(tid);} });
         if(extra) boost+=extra(it);
         // بلا صلة موضوعية يُشترط تطابق نصي قوي حتى لا تظهر نصوص بعيدة عن الحالة
-        if(!via.length && b<2.6) return;
-        var s=b+boost; if(s>0.4) out.push({item:it, score:s, via:via});
+        if(!via.length && (b<2.6 || (themeSure && b<6))) return;
+        var s=(via.length || !themeSure) ? b+boost : 0.6*b; if(s>0.4) out.push({item:it, score:s, via:via});
       });
       return out.sort(function(a,b){ return b.score-a.score; });
     }

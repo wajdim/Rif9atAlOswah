@@ -1,0 +1,202 @@
+# Builds the hadith added from the sources (hadith-add-*.tsv) into the app:
+#   js/data-hadith-kb.js                    entries appended to HADITH_LIB (Arabic text cut from the primary source)
+#   build/i18n/content/hadith-kb.json       English: translation, narrator, note, usage time
+#   build/tashkeel/hadith-tashkeel-kb.json  vowel marks: the source's own marks for the same excerpt
+# Each row: rid (Riyad al-Salihin, where it was selected), ref (primary collection:number), id, th, w (usage time if it is
+# a supplication), r (narrator), te (English, written for the app from the verified Arabic), n_ar, n_en, [from, to]
+# (words where the excerpt starts and ends in the source, when the Riyad quote alone is not a complete sentence).
+# The excerpt is taken from the primary source's text (not from Riyad's copy), and must match the Riyad quote.
+# Usage: python -I build/kb/build-hadith.py [--check]
+import io, json, os, re, sys, glob, subprocess
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from kbsrc import *
+sys.stdout.reconfigure(encoding="utf-8")
+CHECK = "--check" in sys.argv or "--show" in sys.argv
+SHOW = "--show" in sys.argv
+
+W_EN = {"عند زيارة المريض": "When visiting the sick", "عند فقد عزيز": "On losing a loved one", "في الدعاء للميت": "Praying for the deceased",
+        "ذكر يومي": "Daily remembrance", "في الصباح وبعد الصلاة": "Morning and after prayer", "دبر كل صلاة": "After every prayer",
+        "في السجود": "In prostration", "في المساء": "In the evening", "في الصباح والمساء وعند النوم": "Morning, evening and at bedtime",
+        "في الصباح والمساء": "Morning and evening", "عند النوم": "At bedtime", "دعاء جامع": "A comprehensive supplication",
+        "دعاء": "Supplication", "في الصلاة": "In prayer", "دعاء لغيرك": "Praying for others", "استغفار": "Seeking forgiveness",
+        "عند الخروج من البيت": "On leaving home"}
+NARR_EN = {}
+
+app = load_app()
+existing = {h["id"] for h in app["hadith"]}
+known_r = {}
+en_notes = json.load(open(os.path.join(ROOT, "build", "i18n", "content", "hadith-notes.json"), encoding="utf-8"))["hadith"]
+for h in app["hadith"]:
+    if h["id"] in en_notes and en_notes[h["id"]].get("r"): known_r[norm_ar(h["r"])] = en_notes[h["id"]]["r"]
+NARR_EN.update({norm_ar(k): v for k, v in {
+    "أبو سعيد الخدري": "Abu Sa‘id al-Khudri", "عبد الله بن عمرو": "‘Abdullah ibn ‘Amr", "عدي بن حاتم": "‘Adi ibn Hatim", "أبو هريرة": "Abu Hurayrah",
+    "ثوبان": "Thawban", "ابن عباس": "Ibn ‘Abbas", "أم سلمة": "Umm Salamah", "ابن عمر": "Ibn ‘Umar", "أسامة بن زيد": "Usamah ibn Zayd",
+    "عوف بن مالك": "‘Awf ibn Malik", "علي بن أبي طالب": "‘Ali ibn Abi Talib", "أبو موسى الأشعري": "Abu Musa al-Ash‘ari",
+    "سعد بن أبي وقاص": "Sa‘d ibn Abi Waqqas", "معاذ بن جبل": "Mu‘adh ibn Jabal", "عبد الله بن بسر": "‘Abdullah ibn Busr",
+    "أبو سعيد وأبو هريرة": "Abu Sa‘id and Abu Hurayrah", "عبد الله بن خبيب": "‘Abdullah ibn Khubayb", "البراء بن عازب": "Al-Bara’ ibn ‘Azib",
+    "أنس بن مالك": "Anas ibn Malik", "عبد الله بن مسعود": "‘Abdullah ibn Mas‘ud", "طارق بن أشيم": "Tariq ibn Ashyam", "عائشة": "‘A’ishah",
+    "قطبة بن مالك": "Qutbah ibn Malik", "شكل بن حميد": "Shakal ibn Humayd", "العباس بن عبد المطلب": "Al-‘Abbas ibn ‘Abd al-Muttalib",
+    "أبو الدرداء": "Abu al-Darda’", "جابر بن عبد الله": "Jabir ibn ‘Abdullah", "عبادة بن الصامت": "‘Ubadah ibn al-Samit", "سعيد بن زيد": "Sa‘id ibn Zayd",
+    "سهل بن سعد": "Sahl ibn Sa‘d", "سفيان بن عبد الله": "Sufyan ibn ‘Abdullah", "عقبة بن عامر": "‘Uqbah ibn ‘Amir", "أبو بكرة": "Abu Bakrah",
+    "معاوية بن أبي سفيان": "Mu‘awiyah ibn Abi Sufyan", "هشام بن حكيم": "Hisham ibn Hakim", "جندب بن عبد الله": "Jundub ibn ‘Abdullah",
+    "أبو أمامة الحارثي": "Abu Umamah al-Harithi", "عبد الرحمن بن سمرة": "‘Abd al-Rahman ibn Samurah", "زينب بنت أبي سلمة": "Zaynab bint Abi Salamah",
+    "أبو مسعود البدري": "Abu Mas‘ud al-Badri", "صفية بنت حيي": "Safiyyah bint Huyayy", "عمرو بن العاص": "‘Amr ibn al-‘As", "الأغر المزني": "Al-Agharr al-Muzani",
+    "زيد مولى النبي ﷺ": "Zayd, the freed servant of the Prophet ﷺ", "أسيد بن حضير": "Usayd ibn Hudayr", "عبد الله بن أبي أوفى": "‘Abdullah ibn Abi Awfa",
+    "أبو بكر الصديق": "Abu Bakr al-Siddiq", "النعمان بن بشير": "Al-Nu‘man ibn Bashir", "أبو قتادة": "Abu Qatadah", "حارثة بن وهب": "Harithah ibn Wahb",
+    "عائذ بن عمرو": "‘A’idh ibn ‘Amr", "معاوية بن حيدة": "Mu‘awiyah ibn Haydah", "حكيم بن حزام": "Hakim ibn Hizam", "أبو ذر": "Abu Dharr",
+    "عمر بن الخطاب": "‘Umar ibn al-Khattab", "عمرو بن عوف": "‘Amr ibn ‘Awf", "كعب بن مالك": "Ka‘b ibn Malik", "أبو أمامة": "Abu Umamah",
+    "فضالة بن عبيد": "Fadalah ibn ‘Ubayd", "المقدام بن معدي كرب": "Al-Miqdam ibn Ma‘dikarib", "أبو مريم الأزدي": "Abu Maryam al-Azdi",
+    "أبو بكرة نفيع": "Abu Bakrah", "جرير بن عبد الله": "Jarir ibn ‘Abdullah", "عبد الله بن زيد": "‘Abdullah ibn Zayd", "عبد الله بن الشخير": "‘Abdullah ibn al-Shikhkhir"}.items()})
+
+THEMES = set(json.loads(subprocess.check_output(["node", "-e", 'const L=require(process.argv[1])(process.argv[2]);process.stdout.write(JSON.stringify(L.THEMES.map(t=>t.id)))',
+                                              os.path.join(ROOT, "build", "tests", "load.js"), os.path.join(ROOT, "js")], encoding="utf-8")))
+C = {}
+def coll(b):
+    if b not in C: C[b] = Collection(b)
+    return C[b]
+QUOTE = re.compile(r"[“\"]([^”\"]{12,})[”\"]")
+
+WORD = re.compile(r"[ء-يٱً-ْٰ]+")
+def tokens_with_spans(text):
+    out = []
+    for m in WORD.finditer(text):
+        t = toks(m.group(0))
+        if t: out.append((t[0], m.start(), m.end()))
+    return out
+
+def lcs_span(q, src):
+    """positions in src of the in-order match of q (DP with backtrack) → (first, last, matched)"""
+    n, m = len(q), len(src)
+    dp = [[0] * (m + 1) for _ in range(n + 1)]
+    for i in range(n - 1, -1, -1):
+        for j in range(m - 1, -1, -1):
+            dp[i][j] = dp[i + 1][j + 1] + 1 if q[i] == src[j] else max(dp[i + 1][j], dp[i][j + 1])
+    i = j = 0; pos = []
+    while i < n and j < m:
+        if q[i] == src[j]: pos.append(j); i += 1; j += 1
+        elif dp[i + 1][j] >= dp[i][j + 1]: i += 1
+        else: j += 1
+    return (pos[0], pos[-1], len(pos)) if pos else (None, None, 0)
+
+def compact_span(q, src):
+    """the shortest window of src that matches the most quote words in order (greedy from each plausible start),
+    so a word repeated earlier in the narrative does not drag the excerpt back into the story"""
+    best = (None, None, 0)
+    starts = [j for j, w in enumerate(src) if w in q[:3]]
+    for j0 in starts:
+        i, j, got, first, last = 0, j0, 0, None, None
+        while i < len(q) and j < len(src):
+            k = j
+            while k < len(src) and k - j <= 12 and src[k] != q[i]: k += 1   # look ahead a little for the next quote word
+            if k < len(src) and src[k] == q[i]:
+                got += 1; first = k if first is None else first; last = k; j = k + 1
+            i += 1
+        if first is None: continue
+        if got > best[2] or (got == best[2] and best[0] is not None and last - first < best[1] - best[0]): best = (first, last, got)
+    return best
+
+def anchor_span(stoks, a_from, a_to):
+    f, t = toks(a_from), toks(a_to)
+    words = [w for w, _, _ in stoks]
+    for i in range(len(words)):
+        if words[i:i + len(f)] == f:
+            for j in range(i + max(0, len(f) - len(t)), len(words)):
+                if words[j:j + len(t)] == t: return i, j + len(t) - 1
+    return None
+
+def clean(excerpt):
+    s = excerpt.replace("صلى الله عليه وسلم", "ﷺ").replace("‏", "").replace("‎", "")
+    s = re.sub(r"[\"“”]", "", s)
+    s = s.replace("{", "﴿").replace("}", "﴾")                       # Qur'an quoted inside the hadith
+    if s.count("﴿") != s.count("﴾"): s = s.replace("﴿", "").replace("﴾", "")   # cut through by the excerpt
+    s = re.sub(r"﴿\s+", "﴿", re.sub(r"\s+﴾", "﴾", s))
+    s = re.sub(r"\s+([،.؛:؟!])", r"\1", s)
+    s = re.sub(r"\s+", " ", s).strip(" .،:؛-")
+    return s
+
+GR = {"صحيح": "صحيح", "حسن": "حسن", "حسن صحيح": "حسن صحيح"}
+rows, errors, warns = [], [], []
+for f in sorted(glob.glob(os.path.join(HERE, "hadith-add-*.tsv"))):
+    lines = io.open(f, encoding="utf-8").read().rstrip("\n").split("\n")
+    head = lines[0].split("\t")
+    for k, l in enumerate(lines[1:], 2):
+        p = dict(zip(head, l.split("\t") + [""] * (len(head) - len(l.split("\t")))))
+        p["_at"] = "%s:%d" % (os.path.basename(f), k); rows.append(p)
+
+riyad = coll("riyad")
+out, en, tk, ids = [], {"hadith": {}, "te": {}}, {}, set()
+for p in rows:
+    at, hid = p["_at"], p["id"]
+    if hid in existing or hid in ids: errors.append(at + ": duplicate id " + hid); continue
+    ids.add(hid)
+    th = [t for t in p["th"].split(",") if t]
+    for t in th:
+        if t not in THEMES: errors.append(at + ": unknown theme " + t)
+    book, num = p["ref"].split(":"); num = int(num)
+    ry = riyad.at(int(p["rid"]))
+    rq = max(QUOTE.findall(ry[0]["ar"]), key=len) if ry and QUOTE.findall(ry[0]["ar"]) else ""
+    best = None
+    for it in coll(book).at(num):
+        stoks = tokens_with_spans(it["ar"])
+        sw = [w for w, _, _ in stoks]
+        if p.get("from"):
+            sp = anchor_span(stoks, p["from"], p["to"])
+            if not sp: continue
+            a, b, score = sp[0], sp[1], 1.0
+        else:
+            q = toks(rq)
+            a, b, got = compact_span(q, sw)
+            if a is None or got / max(1, len(q)) < 0.8:
+                # reordered or reworded narrations: in-order match over the whole text, if it stays compact
+                a2, b2, got2 = lcs_span(q, sw)
+                if a2 is not None and got2 > got and (b2 - a2 + 1) <= 2 * len(q): a, b, got = a2, b2, got2
+            if a is None: continue
+            score = got / max(1, len(q))
+        if not best or score > best[0]: best = (score, it, stoks, a, b)
+    if not best or best[0] < 0.8:
+        errors.append(at + ": %s — quote not found in %s %d (%.2f)" % (hid, book, num, best[0] if best else 0)); continue
+    score, it, stoks, a, b = best
+    vocal = clean(it["ar"][stoks[a][1]:stoks[b][2]])
+    plain = re.sub(r"[ً-ْٰ]", "", vocal)
+    if rq and not p.get("from") and coverage(toks(plain), toks(rq)) < 0.8:
+        warns.append(at + ": " + hid + " excerpt wider than the Riyad quote")
+        if SHOW: print("\n## " + hid + "\n  RIYAD: " + rq + "\n  SRC  : " + plain)
+    # the narrator must appear in the source narration (chain or text)
+    rn = [w for w in toks(p["r"]) if w not in ("بن", "ابن", "بنت", "ابو", "ام", "مولي", "النبي", "صلي", "الله", "عليه", "وسلم")]
+    group = [w for x in coll(book).at(num) for w in x["toks"]]
+    if rn and not any(s.startswith(w) or w.startswith(s) for w in rn for s in group if len(s) >= 2):
+        warns.append(at + ": " + hid + " narrator «" + p["r"] + "» not found in the source text")
+    if book in ("bukhari", "muslim"): g = "صحيح"
+    else:
+        alb = [x[1] for x in graders_ar(it["grades"]) if x[0] == "الألباني"]
+        if not alb or alb[0] not in GR: errors.append(at + ": " + hid + " has no sahih/hasan verdict by al-Albani"); continue
+        g = alb[0]
+    e = {"id": hid, "t": plain, "r": p["r"], "src": "%s (%d)" % (BOOK_AR[book], num), "g": g, "th": th, "n": p["n_ar"], "kb": 1}
+    if p.get("w"): e["dua"] = True; e["w"] = p["w"]
+    out.append(e)
+    rn_en = NARR_EN.get(norm_ar(p["r"])) or known_r.get(norm_ar(p["r"]))
+    if not rn_en: warns.append(at + ": no English name for narrator " + p["r"])
+    en["hadith"][hid] = {"r": rn_en or p["r"], "n": p["n_en"]}
+    if p.get("w"):
+        if p["w"] not in W_EN: errors.append(at + ": no English for usage time " + p["w"])
+        en["hadith"][hid]["w"] = W_EN.get(p["w"], p["w"])
+    en["te"]["lib:" + hid] = p["te"]
+    tk[hid] = vocal
+
+print("hadith rows:", len(rows), "→ built", len(out))
+if warns: print("warnings (%d):\n  " % len(warns) + "\n  ".join(warns))
+if errors: print("ERRORS (%d):\n  " % len(errors) + "\n  ".join(errors)); sys.exit(1)
+if CHECK: sys.exit(0)
+J = lambda v: json.dumps(v, ensure_ascii=False)
+js = ("/* GENERATED by build/kb/build-hadith.py from build/kb/hadith-add-*.tsv - do not edit by hand.\n"
+      "   Hadith selected from Riyad al-Salihin and taken, word for word, from their primary collection\n"
+      "   (hadith-api / sunnah.com numbering). Grade: al-Bukhari and Muslim = sahih; others = al-Albani's verdict\n"
+      "   in the source edition (all verdicts are in js/data-evidence.js). Notes (n) are the app's own. */\n"
+      "HADITH_LIB.push(\n" + ",\n".join(J(e) for e in out) + "\n);\n")
+io.open(os.path.join(ROOT, "js", "data-hadith-kb.js"), "w", encoding="utf-8", newline="\n").write(js)
+io.open(os.path.join(ROOT, "build", "i18n", "content", "hadith-kb.json"), "w", encoding="utf-8", newline="\n").write(json.dumps(en, ensure_ascii=False, indent=1) + "\n")
+tf = os.path.join(ROOT, "build", "tashkeel", "hadith-tashkeel-kb.json")
+prev = json.load(open(tf, encoding="utf-8")) if os.path.exists(tf) else {}
+prev.update(tk)
+io.open(tf, "w", encoding="utf-8", newline="\n").write(json.dumps(prev, ensure_ascii=False, indent=0) + "\n")
+print("wrote js/data-hadith-kb.js (%d KB), content/hadith-kb.json, hadith-tashkeel-kb.json" % (len(js.encode("utf-8")) // 1024))

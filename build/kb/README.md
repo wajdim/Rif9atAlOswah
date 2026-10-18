@@ -23,6 +23,9 @@ Known caveats in the sources:
 
 ```bash
 python -I build/kb/fetch.py                # download sources into build/kb/cache/ (once)
+python -I build/kb/candidates.py           # hadith candidates from Riyad al-Salihin (working list, not committed)
+python -I build/kb/build-hadith.py         # hadith-add-*.tsv → js/data-hadith-kb.js
+python -I build/kb/build-quran.py          # quran-add-*.tsv → js/data-quran-kb.js
 python -I build/kb/verify.py --write       # audit everything → REPORT.md, report.json, js/data-evidence.js
 python -I build/kb/vocalize.py             # vowel marks from the source for texts whose marks are missing
 node build/tashkeel/build-tashkeel.js      # → js/data-tashkeel.js (refuses any marks whose letters differ)
@@ -30,6 +33,27 @@ node build/tests/test-evidence.js          # fingerprints: no quoted text change
 ```
 
 Review helpers: `show.py id <app id>`, `show.py ref <book> <num>`, `show.py find <book|all> <words>`, `show.py ayah <surah> <ayah>`, and `near.py <id>…` for the best match number per collection.
+
+## Adding verses and hadith
+
+All new texts come from the sources. No sacred text is typed by hand.
+
+**Hadith.** Write rows in `hadith-add-*.tsv`, then run `python -I build/kb/build-hadith.py`.
+- Candidates come from `candidates.py`: al-Nawawi's *Riyad al-Salihin*, each matched to its primary collection. Only al-Bukhari, Muslim, or a sahih/hasan verdict by al-Albani qualifies, and hadith already in the app are skipped.
+- The excerpt is cut from the primary collection's text, not from Riyad's copy. It is the most compact span that matches the Riyad quote. When the quote alone is not a complete sentence, explicit `from`/`to` words are given.
+- The narrator named in the row must appear in the source narration. This check caught two wrong attributions in the first batch.
+- The English translation (`te`) is written for this app from the verified Arabic. Grades are al-Bukhari/Muslim = sahih, otherwise al-Albani's verdict from the source edition.
+- Outputs: `js/data-hadith-kb.js`, `build/i18n/content/hadith-kb.json`, and the source's own vowel marks in `build/tashkeel/hadith-tashkeel-kb.json`.
+
+**Verses.** Write rows in `quran-add-*.tsv` (reference, expected words, themes, notes), then run `python -I build/kb/build-quran.py`.
+- The text is pulled from Tanzil.
+- The expected words must be present, which catches a wrong verse number.
+- A verse already in the library is refused.
+- Meanings in every language come from the full Tanzil translations. Only the notes need translating.
+
+Content added this way appears in English in the other 11 languages until it is translated (`build-en.js` falls back to `content/*-kb.json`).
+
+After any change: `verify.py --write`, then `build-tashkeel.js`, `build-en.js <lang>` for each language, and the tests.
 
 ## Statuses (in `js/data-evidence.js`)
 
@@ -53,3 +77,10 @@ The narrator's framing («عن فلان قال: قال رسول الله ﷺ:»)
 - **Unverifiable:** 5 hadith (al-Tabarani, Ibn Hibban, al-Hakim, Abu Ya'la). 4 of them are removed from answers. The 5th is the reference for Zayd ibn Sa'nah's story; it stays with a visible "not machine-checked" label.
 
 `fix-audit-1.py` and `fix-audit-1-te.py` record exactly what was changed, including the translations of the changed texts in all 12 languages.
+
+## First expansion (2026-10-19)
+
+- **198 hadith** from al-Bukhari, Muslim, Abu Dawud, al-Tirmidhi, al-Nasa'i and Ibn Majah, selected through Riyad al-Salihin. Hadith shown in the app: 145 → 343.
+- **121 verse entries** from Tanzil. Verse entries: 201 → 322.
+- **Coverage:** chosen for life situations the library covered thinly, such as grief and the loss of a child, debt, rumours and sharing unchecked news, privacy, unpaid wages, favouritism, wishing for death, unanswered prayer, relatives of another faith, leadership and the limits of obedience.
+- **Corrections** made by the checks during the build: two narrator attributions (Bukhari 6439 is Anas's, and 4330 is ʿAbdullah ibn Zayd's) and one narrator for Muslim 2958 (ʿAbdullah ibn al-Shikhkhir).
