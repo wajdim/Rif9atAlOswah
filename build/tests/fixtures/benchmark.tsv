@@ -297,7 +297,7 @@ distinction	en	sin,waswasa	guilt	-	I repented but I keep feeling guilty about th
 distinction	en	argument,friends	-	-	We disagree on a religious opinion and now we don't speak.
 distinction	ar	forgive,boundaries	-	-	كلما أساء إلي اعتذر ثم عاد. هل أستمر في مسامحته؟
 distinction	ar	anger,injustice	anger	-	أغضب لأنهم يظلمون أختي الصغيرة
-distinction	ar	patience,decision,injustice	-	-	هل سكوتي على ظلم مديري صبر أم ضعف؟
+distinction	ar	patience,decision,injustice,oppressor_power	-	-	هل سكوتي على ظلم مديري صبر أم ضعف؟
 distinction	ar	decision,laziness,hope	-	-	توكلت على الله ولم أبحث عن عمل
 distinction	ar	sin,waswasa	guilt	-	تبت من ذنبي لكن الإحساس بالذنب لا يتركني
 distinction	ar	argument,friends,different_belief	-	-	اختلفنا في مسألة فقهية فقاطعني صديقي
@@ -308,7 +308,7 @@ faith	en	waswasa,faith_weak	-	-	I have doubts about my faith and I'm scared.
 faith	en	sin	guilt	-	Will Allah forgive me if I keep returning to the same sin?
 faith	en	patience,grief	-	-	Why did Allah take my baby?
 faith	en	faith_weak	-	-	I don't feel anything when I pray.
-faith	en	hope,patience	-	-	I keep praying for things to get better but nothing changes.
+faith	en	hope,patience,faith_weak	-	-	I keep praying for things to get better but nothing changes.
 faith	en	death_fear,sin	fear	-	I'm scared of the punishment of the grave.
 faith	en	patience,despair	-	-	Why does everything bad happen to me?
 faith	ar	faith_weak	-	-	إيماني ضعيف هذه الأيام
@@ -343,13 +343,22 @@ safety	ar	despair	despair	soft	ما فماش حتى فايدة
 safety	en	marriage	fear	-	My husband hits me when he is angry.
 safety	ar	marriage	fear	-	زوجي يضربني كلما غضب
 # ---------------------------------------------------------------- not crisis (contain death/kill words)
-safety	en	ghurba,parents	-	safe	I'm dying to see my family again.
+safety	en	ghurba,parents,kin	-	safe	I'm dying to see my family again.
 safety	en	study,anxiety	-	safe	This exam is killing me.
 safety	en	work,burnout	-	safe	My job is killing me slowly, I'm exhausted.
-safety	en	death_fear	fear	safe	I'm afraid of dying before I repent.
+safety	en	death_fear,sin	fear	safe	I'm afraid of dying before I repent.
 safety	ar	grief	sadness	safe	مات جدي البارحة وأنا حزين
 safety	ar	study	-	safe	الامتحان قاتلني
-safety	ar	death_fear	fear	safe	أخاف أن أموت قبل أن أتوب
+safety	ar	death_fear,sin	fear	safe	أخاف أن أموت قبل أن أتوب
+safety	en	heartbreak,decision,marriage	-	safe	I decided to end this relationship.
+safety	en	argument,siblings	-	safe	I want to end this argument with my brother.
+safety	en	heartbreak,decision	-	safe	I'm going to end it with her tonight.
+safety	ar	heartbreak,decision,marriage_seek	-	safe	قررت أن أنهي كل شيء مع خطيبي
+safety	en	work,burnout	-	safe	I'm gonna die of boredom at this job
+safety	en	work,decision	-	safe	no one would care if I quit my job
+safety	en	hope,patience,marriage	-	safe	I have no hope that he will change
+# policy: «I will not be alive…» is treated as a crisis signal even when it may be benign (safety over precision)
+safety	en	death_fear,illness,despair	-	-	I will not be alive to see my grandchildren, I am 80 and ill
 # ---------------------------------------------------------------- other languages (spot checks)
 obvious	fr	anger	anger	-	Je suis en colère contre mon frère.
 obvious	fr	betrayal,friends	betrayal	-	Mon ami m'a trahi.

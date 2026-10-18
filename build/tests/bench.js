@@ -10,18 +10,20 @@
      evidence  top-3 verses/hadith share a theme with the acceptable set (retrieval relevance proxy)
      citations every retrieved verse/hadith resolves to a library record with a source and grade
    Usage: node build/tests/bench.js [-v] [--kind K] [--save] [--gate]
-     --save  write the current scores to fixtures/bench-baseline.json
+     --set S use fixtures/benchmark-S.tsv (e.g. holdout: never tuned on) instead of benchmark.tsv
+     --save  write the current scores to fixtures/bench-baseline.json (bench-S-baseline.json with --set)
      --gate  exit 1 if any score drops more than TOLERANCE below the baseline, or crisis recall < 100% */
 const fs = require("fs"), vm = require("vm"), path = require("path");
-const JS = path.join(__dirname, "..", "..", "js"), FIX = path.join(__dirname, "fixtures");
+const JS = process.env.BENCH_JS || path.join(__dirname, "..", "..", "js"), FIX = path.join(__dirname, "fixtures");
 const args = process.argv.slice(2), VERBOSE = args.includes("-v"), ONLY = args.includes("--kind") ? args[args.indexOf("--kind") + 1] : null;
-const TOLERANCE = 0.01;
+const TOLERANCE = 0.01, SET = args.includes("--set") ? args[args.indexOf("--set") + 1] : "main";
+const SET_FILE = SET === "main" ? "benchmark.tsv" : "benchmark-" + SET + ".tsv", BASE_FILE = SET === "main" ? "bench-baseline.json" : "bench-" + SET + "-baseline.json";
 
-const rows = fs.readFileSync(path.join(FIX, "benchmark.tsv"), "utf8").split(/\r?\n/)
+const rows = fs.readFileSync(path.join(FIX, SET_FILE), "utf8").split(/\r?\n/)
   .filter(l => l.trim() && !l.startsWith("#"))
   .map((l, i) => {
     const [kind, lang, themes, emotions, flags, text] = l.split("\t");
-    if (!text) throw new Error("benchmark.tsv: malformed row " + (i + 1) + ": " + l);
+    if (!text) throw new Error(SET_FILE + ": malformed row " + (i + 1) + ": " + l);
     const list = s => s === "-" ? [] : s.split(",").map(x => x.trim()).filter(Boolean);
     return { kind, lang, themes: list(themes), emotions: list(emotions), flags: new Set(list(flags)), text };
   })
@@ -32,7 +34,7 @@ function load(lang) {
   if (cache[lang]) return cache[lang];
   const ctx = { console, localStorage: { getItem: () => JSON.stringify({ lang }) }, document: {}, navigator: {} }; ctx.window = ctx; vm.createContext(ctx);
   const files = ["data-situations.js", "data-situations-2.js", "data-situations-3.js", "data-situations-4.js", "data-quran.js", "data-hadith.js", "data-themes.js", "data-life.js", "data-reading.js",
-    lang === "ar" ? "data-en.js" : "data-" + lang + ".js", "i18n.js", "rag.js", "reading.js"];
+    lang === "ar" ? "data-en.js" : "data-" + lang + ".js", "i18n.js", "rag.js", "data-nlu.js", "nlu.js", "reading.js"];
   for (const f of files) if (fs.existsSync(path.join(JS, f))) vm.runInContext(fs.readFileSync(path.join(JS, f), "utf8"), ctx, { filename: f });
   return cache[lang] = vm.runInContext("({RAG,QURAN_LIB,HADITH_LIB})", ctx);
 }
@@ -77,7 +79,7 @@ const ms = Date.now() - t0;
 const pct = b => b ? b.ok / b.n : null, fmt = b => b ? (100 * b.ok / b.n).toFixed(1) + "% (" + b.ok + "/" + b.n + ")" : "—";
 const KEYS = ["top1", "top3", "none", "emotion", "crisis", "soft", "falseCrisis", "vague", "evidence", "citations"];
 const LOWER_BETTER = new Set(["none", "falseCrisis"]);
-console.log("benchmark: " + rows.length + " messages · " + ms + " ms (" + (ms / rows.length).toFixed(1) + " ms/msg)\n");
+console.log("benchmark [" + SET + "]: " + rows.length + " messages · " + ms + " ms (" + (ms / rows.length).toFixed(1) + " ms/msg)\n");
 KEYS.forEach(k => console.log("  " + k.padEnd(12) + fmt(M[k]) + (LOWER_BETTER.has(k) ? "  (lower is better)" : "")));
 const table = (title, B) => {
   console.log("\n" + title);
@@ -89,7 +91,7 @@ table("by kind", byKind); table("by language", byLang);
 if (VERBOSE && fails.length) console.log("\nfailures (" + fails.length + "):\n" + fails.join("\n"));
 
 const scores = {}; KEYS.forEach(k => { if (M[k]) scores[k] = +pct(M[k]).toFixed(4); });
-const BASE = path.join(FIX, "bench-baseline.json");
+const BASE = path.join(FIX, BASE_FILE);
 if (args.includes("--save") && !ONLY) { fs.writeFileSync(BASE, JSON.stringify({ date: new Date().toISOString().slice(0, 10), messages: rows.length, scores }, null, 1) + "\n"); console.log("\nbaseline saved → " + path.relative(process.cwd(), BASE)); }
 if (args.includes("--gate")) {
   const base = fs.existsSync(BASE) ? JSON.parse(fs.readFileSync(BASE, "utf8")).scores : {}, bad = [];

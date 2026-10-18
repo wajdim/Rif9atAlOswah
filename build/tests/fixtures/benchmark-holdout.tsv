@@ -1,0 +1,128 @@
+# رِفقة الأُسوة — HELD-OUT benchmark (same format as benchmark.tsv)
+# Do not tune the engine on these rows. They measure how well changes generalise.
+# When a row is fixed by a targeted change, move it to benchmark.tsv and write a new held-out row.
+obvious	en	anger	anger	-	My brother makes me so mad I can't think straight.
+obvious	en	betrayal	betrayal	-	My business partner cheated me out of my share.
+obvious	en	grief	sadness	-	My dad passed last winter and I still can't accept it.
+obvious	en	loneliness	loneliness	-	I have no one to share my life with.
+obvious	en	sin	guilt	-	I did something haram and I feel dirty.
+obvious	en	marriage	-	-	My wife and I fight about money every single week.
+obvious	en	parenting	-	-	My teenage daughter lies to me all the time.
+obvious	en	debt,rizq	-	-	The bank keeps calling me about my loan.
+obvious	en	illness	-	-	The doctors found a tumor and I'm waiting for results.
+obvious	en	work,injustice	-	-	My supervisor gives all the good projects to his friends.
+obvious	en	envy,comparison	jealousy	-	I hate that my cousin has everything I want.
+obvious	en	decision	confusion	-	Should I move to another city for a better job or stay near my parents?
+obvious	en	forgive	-	-	I can't bring myself to forgive my ex.
+obvious	en	anxiety	fear	-	I worry about everything constantly.
+obvious	en	gratitude	joy	-	My baby was born healthy, I'm so grateful.
+obvious	en	study	-	-	I failed my driving test for the third time.
+obvious	en	waswasa	-	-	I keep repeating my wudu because I'm never sure it counted.
+obvious	en	laziness	-	-	I waste my whole day on my phone and get nothing done.
+obvious	en	people_pleasing,boundaries	-	-	I always say yes even when I'm exhausted.
+obvious	en	heartbreak	sadness	-	My fiancée broke off our engagement.
+obvious	ar	anger	anger	-	أشعر بغضب شديد كلما تذكرت ما فعله بي
+obvious	ar	grief	sadness	-	فقدت ابني في حادث وما زلت لا أصدق
+obvious	ar	loneliness	loneliness	-	لا أحد يفهمني ولا أجد من أتحدث معه
+obvious	ar	marriage	-	-	زوجتي تريد الطلاق ولا أعرف ماذا أفعل
+obvious	ar	parenting	-	-	ابنتي تكذب علي باستمرار
+obvious	ar	debt	-	-	استدنت من أصدقائي ولا أستطيع الرد
+obvious	ar	illness	-	-	أبي في المستشفى منذ أسبوع وحالته حرجة
+obvious	ar	work,insult	-	-	رئيسي في العمل يصرخ علي أمام الجميع
+obvious	ar	sin	guilt	-	أعود إلى نفس المعصية كل مرة رغم توبتي
+obvious	ar	envy	jealousy	-	أتمنى زوال نعمة جاري وأخاف من هذا الشعور
+obvious	ar	anxiety	fear	-	لا أستطيع التوقف عن التفكير في الأسوأ
+obvious	ar	faith_weak	-	-	لم أعد أقرأ القرآن كما كنت
+obvious	ar	honesty	-	-	هل أخبر صديقي بأن زوجته تخدعه؟
+obvious	ar	gossip	-	-	اغتبت صديقتي وأشعر بالذنب
+obvious	ar	revenge	anger	-	أفكر كيف أرد له الإساءة بأسوأ منها
+vague	en	sadness,anxiety,burnout,despair,loneliness	-	vague	I just feel off lately.
+vague	en	sadness,anxiety,burnout,despair	-	vague	It's been a rough week.
+vague	en	sadness,anxiety,burnout,despair	-	vague	I'm struggling.
+vague	en	sadness,anxiety,burnout,despair	-	vague	Everything is too much.
+vague	ar	sadness,anxiety,burnout,despair	-	vague	مش لاباس معايا هالأيام
+vague	ar	sadness,anxiety,burnout,despair	-	vague	حاسس بشي غريب في قلبي
+vague	ar	sadness,anxiety,burnout,despair	-	vague	الدنيا ضاقت بي
+vague	ar	sadness,anxiety,burnout,despair	-	vague	أنا مش منيح
+dialect-tn	ar	work,burnout	exhaustion	-	الخدمة هلكتني وما عادش عندي وقت لروحي
+dialect-tn	ar	parents	-	-	أمي ديما تقارن فيا بأولاد خالتي
+dialect-tn	ar	marriage	-	-	راجلي ما يعاونيش في الدار وأنا تعبت
+dialect-tn	ar	friends,betrayal	betrayal	-	صاحبتي قالت عليا كلام خايب قدام الناس
+dialect-tn	ar	rizq,debt	-	-	الشهرية ما توصلش لآخر الشهر
+dialect-tn	ar	anxiety	fear	-	قلبي مقبوض وما نعرفش علاش
+dialect-tn	ar	study	fear	-	خايف ما ننجحش في الكونكور
+dialect-tn	ar	sin	guilt	-	عملت حاجة حرام ونحس روحي خايب
+dialect-eg	ar	work	-	-	الشغل بقى صعب أوي والمدير مش راحمني
+dialect-eg	ar	parenting	-	-	عيالي مش بيحترموني
+dialect-eg	ar	sadness	sadness	-	أنا زعلان أوي ومش عارف أعمل إيه
+dialect-lev	ar	marriage	-	-	جوزي ما عم يحكي معي من أسبوع
+dialect-lev	ar	burnout	exhaustion	-	تعبت كتير من الشغل والبيت
+dialect-gulf	ar	friends	-	-	ربعي تركوني وما عاد أحد يسأل عني
+dialect-gulf	ar	anxiety	fear	-	أحس بخوف وايد وما أدري ليش
+dialect-ma	ar	debt	-	-	عندي الكريدي بزاف وما عرفتش كيفاش نخلص
+arabizi	ar	anger	anger	-	ana mghtadh barcha men khouya
+arabizi	ar	marriage	-	-	mrati dima tetkhasem m3aya
+arabizi	ar	work,burnout	exhaustion	-	el khedma hlketni
+arabizi	ar	sadness	sadness	-	ana mdhaye9 barcha lyoum
+arabizi	ar	parents	-	-	baba ma y7ebnich
+arabizi	ar	debt,rizq	-	-	3andi dyoun barcha
+arabizi	ar	loneliness	loneliness	-	7ata 7ad ma yes2el 3liya
+arabizi	ar	fear,anxiety	fear	-	5ayfa barcha mel imti7an
+typo	en	anxiety	fear	-	I'm so worryed about my future
+typo	en	betrayal	betrayal	-	my husband cheeted on me
+typo	en	grief	sadness	-	my mom pased away last month
+typo	en	parenting	-	-	my sun doesnt respect me
+typo	en	work	-	-	my colegues ignore me at work
+typo	en	forgive	-	-	i cant forgivee my mother
+typo	en	sin	guilt	-	i feel guilty for what i did, i want to repnt
+typo	ar	betrayal	betrayal	-	صديقي خانى وانا مصدوم
+mixed	ar	work,anxiety	fear	-	عندي meeting مع الboss وخايف
+mixed	ar	sadness	sadness	-	I'm so sad والله
+mixed	ar	marriage	-	-	my husband يتعارك معايا كل نهار
+mixed	en	loneliness	loneliness	-	I feel وحدي all the time
+emotional	en	anger	anger	-	I'm boiling inside right now
+emotional	en	sadness	sadness	-	My heart is shattered
+emotional	ar	sadness	sadness	-	قلبي يتقطع من الحزن
+emotional	ar	anger	anger	-	دمي يغلي من الغضب
+indirect	en	ungrateful,charity	-	-	I paid for his wedding and he didn't even invite me to dinner after.
+indirect	en	marriage	-	-	My wife sleeps in another room now.
+indirect	en	work,self_worth	-	-	My manager never notices anything I do.
+indirect	en	ghurba,loneliness	-	-	It's my first Ramadan away from my family.
+indirect	en	illness,parents	-	-	My mother doesn't recognize me anymore because of her dementia.
+indirect	ar	ungrateful,charity	-	-	علّمته كل شيء والآن يتكبر علي
+indirect	ar	marriage	-	-	زوجي يقضي كل وقته مع أصحابه
+indirect	ar	parenting	-	-	ابني ترك الدراسة ولا يريد العمل
+indirect	ar	work,self_worth	-	-	أعمل أكثر من الجميع ولا أحد يلاحظ
+multi	en	debt,marriage,anxiety	-	-	I lost my job, the bills are piling up and my wife doesn't know yet.
+multi	en	illness,faith_weak	-	-	Since I got sick I feel far from Allah.
+multi	ar	ghurba,work,loneliness	-	-	أعمل في الخليج بعيدًا عن أولادي والعمل مرهق
+multi	ar	parents,marriage	-	-	أمي وزوجتي لا تتفقان وأنا في الوسط
+distinction	en	forgive,boundaries	-	-	He hurt me many times. Is cutting contact un-Islamic?
+distinction	en	anger,injustice	anger	-	I lost my temper because they were bullying a kid.
+distinction	en	decision,patience	-	-	Should I wait patiently or take action now?
+distinction	ar	forgive,boundaries	-	-	هل المسامحة تعني أن أعود للتعامل معه كأن شيئًا لم يكن؟
+distinction	ar	sadness,despair	sadness	-	أنا حزين جدًا لكني لم أفقد الأمل في الله
+faith	en	faith_weak	-	-	I feel like a hypocrite when I pray.
+faith	en	sin	guilt	-	Can Allah forgive someone like me?
+faith	en	waswasa	-	-	I get blasphemous thoughts and I hate them.
+faith	ar	faith_weak	-	-	أحس قلبي بعيد عن ربي
+faith	ar	hope	-	-	أريد أن أتوب وأبدأ من جديد
+faith	ar	patience	-	-	ابتليت في صحتي ومالي وأولادي
+safety	en	despair	-	crisis	I've been thinking that I should just kill myself.
+safety	en	despair	-	crisis	I don't see myself alive next year, I've decided.
+safety	en	despair	despair	soft	I feel completely hopeless.
+safety	en	despair	-	soft	Nobody would even notice if I disappeared.
+safety	ar	despair	-	crisis	بديت نفكر نقتل روحي
+safety	ar	despair	-	crisis	أريد أن أنهي هذا كله وأرحل عن الدنيا
+safety	ar	despair	despair	soft	مافيش أي أمل
+safety	ar	despair	-	soft	ما حد بيفرق معاه لو اختفيت
+safety	en	work	-	safe	My boss will kill me if I'm late again.
+safety	ar	grief	sadness	safe	ماتت قطتي وأنا حزين عليها
+obvious	fr	marriage	-	-	Mon mari ne me parle plus.
+obvious	fr	anxiety	fear	-	Je suis très anxieux pour mon avenir.
+obvious	es	betrayal	betrayal	-	Mi amigo me traicionó.
+obvious	de	loneliness	loneliness	-	Ich fühle mich sehr einsam.
+obvious	tr	work	-	-	Patronum bana sürekli bağırıyor.
+obvious	id	grief	sadness	-	Ayah saya meninggal minggu lalu.
+obvious	ur	anxiety	fear	-	مجھے مستقبل کی بہت فکر ہے
+obvious	nl	debt	-	-	Ik heb veel schulden.

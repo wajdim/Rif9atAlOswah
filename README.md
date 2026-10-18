@@ -53,6 +53,8 @@ js/
   i18n.js      13 languages             tts.js     read-aloud, 26 reciters, offline recitations (Android)
   ai.js         optional Claude layer   data-*.js  content (situations, Quran, hadith, themes, translations)
   data-life.js  500 everyday situations, each hand-mapped to 1-3 topics (understanding only)
+  nlu.js        pre-understanding: Arabizi → Arabic, English spelling, concepts, safety tiers, vague distress
+  data-nlu.js   its data: multilingual/dialect concepts, crisis and soft-risk phrases and rules (never shown)
 build/
   android/      Android wrapper (WebView), build-android.sh → signed AAB + APK, no Gradle needed
   play/         Google Play listing (13 languages, graphics, generators) + publishing guide
@@ -74,6 +76,8 @@ docs/           GitHub Pages: landing page, interactive user guide (guide.html),
 | Translation check | `node build/i18n/check-lang.js es` | completeness report |
 | Engine test | `node build/tests/test-engine.js` | – |
 | Understanding and safety gate | `node build/tests/test-understanding.js [-v]` | fails if crisis detection or topic accuracy regresses |
+| Benchmark (355 messages, dialects, Arabizi, typos…) | `node build/tests/bench.js [-v] [--gate]` | per-dimension scores; `--gate` fails on regression |
+| Held-out benchmark (never tuned on) | `node build/tests/bench.js --set holdout [-v]` | measures generalisation |
 | Single-file HTML | `node build/bundle-html.js dist/RifqaAlUswa.html` | – |
 
 `TOOLS` must contain:

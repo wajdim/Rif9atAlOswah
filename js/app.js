@@ -158,7 +158,10 @@ function runSearch(text, focus){
   list.innerHTML=STAGES.map(function(m,i){ return '<div class="stage-item" id="stage-'+i+'"><span class="dot"></span><span>'+T(m)+'</span></div>'; }).join("");
   var i=0, result=null;
   // التحليل الفعلي يُنفّذ فورًا؛ المراحل المرئية للإيضاح فقط
-  setTimeout(function(){ result={a:RAG.analyze(text, focus?{focus:focus}:null), flags:checkFlags(text)}; },0);
+  setTimeout(function(){
+    result={a:RAG.analyze(text, focus?{focus:focus}:null), flags:checkFlags(text)};
+    if(result.a.understanding.crisis) result.flags.selfHarm=true;   // كاشف واحد للأزمة: المحرك (العاميات، العربية اللاتينية، القواعد التركيبية) أو القائمة
+  },0);
   (function step(){
     if(i>0) qs("stage-"+(i-1)).classList.replace("active","done");
     if(i<STAGES.length){ qs("stage-"+i).classList.add("active"); i++; setTimeout(step, 300); }
@@ -245,12 +248,13 @@ function rawHit(h, raw){
   return h;
 }
 /* عند ضعف الفهم: موضوعات قريبة يختار منها المستخدم فتُعاد القراءة مركّزة عليه (بلا أسئلة داخل القراءة نفسها) */
-function focusChipsHTML(a){
+function focusChipsHTML(a, head){
   var ids=[], add=function(id){ if(id && id!==a.focus && ids.indexOf(id)<0 && RAG.byId("theme",id)) ids.push(id); };
+  (a.understanding.interpretations||[]).forEach(add);
   a.understanding.themes.forEach(function(t){ add(t.id); });
   (a.retrieval.sits||[]).slice(0,4).forEach(function(x){ (x.via||[]).forEach(add); });
   HOME_THEMES.forEach(add);
-  return '<div class="focus-pick tts-skip"><div class="fp-h">'+T("لم أفهم موضوع حالتك بوضوح. اختر الأقرب لما تمر به لأعيد القراءة:")+'</div><div class="row">'+
+  return '<div class="focus-pick tts-skip"><div class="fp-h">'+(head||T("لم أفهم موضوع حالتك بوضوح. اختر الأقرب لما تمر به لأعيد القراءة:"))+'</div><div class="row">'+
     ids.slice(0,6).map(function(id){ var t=RAG.byId("theme",id); return '<button class="theme-chip" data-focus="'+esc(id)+'">'+iconSvg(t.icon)+esc(t.label)+'</button>'; }).join("")+'</div></div>';
 }
 
@@ -302,6 +306,10 @@ function renderResult(a, flags){
   if(flags.violence){
     out+='<div class="notice crisis"><b>'+T("سلامتك أولًا")+'</b>'+T("يبدو أن حالتك تتضمن عنفًا أو إيذاءً. لا يطلب منك الإسلام البقاء تحت الأذى باسم الصبر: «لا ضرر ولا ضرار». إن كنت في خطر فابتعد إلى مكان آمن وتواصل مع جهة حماية أو الشرطة أو شخص موثوق، ثم مع مختص أسري وقانوني.")+'</div>';
   }
+  // يأس بلا نية معلنة: اطمئنان على السلامة، ثم تستمر القراءة
+  if(u.softRisk && !flags.selfHarm){
+    out+='<div class="notice crisis soft"><b>'+T("نطمئن عليك أولًا")+'</b>'+T("ما كتبته يحمل تعبًا ويأسًا ثقيلين، ونحن نأخذ ذلك بجدية. إن خطرت لك فكرة إيذاء نفسك أو إنهاء حياتك، فتواصل الآن مع شخص تثق به، أو مع خط مساعدة نفسية في بلدك، أو أقرب قسم طوارئ. ما تمر به ليس دليلًا على ضعف إيمانك، وطلب العون من الناس ومن المختصين أخذٌ بالأسباب. وما يلي قراءة هادئة لحالتك.")+'</div>';
+  }
   if(flags.legal){
     out+='<div class="notice"><b>'+T("جانب شرعي أو قانوني دقيق")+'</b>'+T("يتضمن موقفك مسألة (كالطلاق أو الميراث أو الحقوق) لها أحكام تفصيلية. ما يلي مبادئ وتوجيهات عامة للتأمل، وليس فتوى؛ ارجع إلى عالم شرعي مؤهل أو مختص قانوني للحكم في حالتك.")+'</div>';
   }
@@ -309,7 +317,14 @@ function renderResult(a, flags){
   if(u.focus && u.themes[0]){
     out+='<div class="focus-note tts-skip">'+T("ركّزتُ القراءة على «{0}» كما اخترت.",esc(u.themes[0].theme.label))+'</div>';
   }
-  if(!top || a.confidence==="low" || (!u.themes.length && !u.crisis)){
+  // ضيق غير محدد: نسمّي القراءات المحتملة بدل «لم أجد ما يطابق»، ونعرضها للاختيار
+  var vague=!u.crisis && !u.focus && (u.interpretations||[]).length>=2;
+  if(vague){
+    out+='<div class="confidence-note">'+T("يبدو أن شيئًا ما يثقل عليك. قد يكون حزنًا، أو قلقًا، أو إرهاقًا، أو وحدة، أو أمرًا أكثر تحديدًا. ما يلي توجيه عام، وإن اخترت الأقرب لما تشعر به أعدت القراءة مركّزة عليه.")+'</div>';
+    if(!flags.selfHarm) out+=focusChipsHTML(a, T("هل تشعر أنه أقرب إلى:"));
+    if(!top){ qs("resultWrap").innerHTML=out+actionsHTML(); return; }
+  }
+  else if(!top || a.confidence==="low" || (!u.themes.length && !u.crisis)){
     if(!top || a.confidence==="low") out+='<div class="confidence-note">'+T("لم أجد في المكتبة الحالية ما يطابق حالتك بدرجة كافية. جرّب إضافة تفاصيل: من الطرف الآخر؟ ماذا حدث؟ بماذا تشعر؟ ماذا تريد أن تفعل؟ أو")+' <button class="btn-ghost" style="padding:4px 10px;" data-nav="explore">'+T("تصفح الموضوعات")+'</button></div>';
     if(!u.crisis && !flags.selfHarm) out+=focusChipsHTML(a);
     if(!top){ qs("resultWrap").innerHTML=out+actionsHTML(); return; }

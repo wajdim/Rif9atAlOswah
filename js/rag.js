@@ -333,6 +333,7 @@ var RAG = (function(){
   }
 
   /* ---------------- 3. الفهم ---------------- */
+  var CONCEPT_W=2.2;
   function stripPrefix(w){
     if(NOAR) return w;
     for(var i=0;i<PREFIXES.length;i++){ var p=PREFIXES[i]; if(w.indexOf(p)===0 && w.length-p.length>=2) return w.slice(p.length); }
@@ -484,6 +485,16 @@ var RAG = (function(){
     });
     for(var lt in lifeAdd) scores[lt]=(scores[lt]||0)+lifeAdd[lt];
     detectThemes.life=life;
+    // المفاهيم (js/data-nlu.js): قواعد تزامن متعددة اللغات تلتقط المعنى حين يغيب اللفظ الصريح («ساعدته… ثم تنكّر لي»)
+    var concepts=window.NLU ? NLU.concepts(userWords) : [];
+    concepts.forEach(function(c){
+      Object.keys(c.th).forEach(function(tid){
+        if(!BY.theme[tid]) return;
+        scores[tid]=(scores[tid]||0)+CONCEPT_W*c.th[tid];
+        (hits[tid]=hits[tid]||[]).push(c.ev);
+      });
+    });
+    detectThemes.concepts=concepts;
     var list=Object.keys(scores).map(function(id){
       return {id:id, theme:BY.theme[id], score:scores[id], hits:(hits[id]||[]), life:!!lifeAdd[id]};
     }).filter(function(x){ return x.theme && x.score>=0.9; })
@@ -496,12 +507,20 @@ var RAG = (function(){
 
   function understand(raw, opts){
     build();
+    // طبقة الفهم (js/nlu.js): العربية بحروف لاتينية ← حروف عربية، وتصحيح الأخطاء الإملائية اللاتينية، في مكانها
+    var input=raw, prep=window.NLU ? NLU.prepare(raw) : null;
+    if(prep) raw=prep.text;
     var norm=normalize(raw), userWords=words(norm), qStems=stems(raw);
     RAW_STOPS=[]; RAW_WORDS=rawAligned(raw);
     var themes=detectThemes(norm, userWords, qStems, raw);
     // عند إشارات إيذاء النفس: موضوع «اليأس» أولًا دائمًا، ويُستبعد «الخوف من الموت» حتى لا يُساء الفهم
-    var crisis=/(اموت|الموت ارحم|انتحار|انتحر|انهي حياتي|اقتل نفسي|نقتل روحي|ان اعيش|اذي نفسي|اؤذي نفسي|suicid|kill myself|end my life|want to die|wish i (was|were) dead|hurt myself|harm myself|self harm|no reason to live|zelfmoord|mezelf (van kant|iets aan)|dood wil|wil (dood|sterven)|niet meer (leven|verder)|wou dat ik dood|mezelf pijn|zelfbeschadiging|een eind aan mijn leven|quiero morir|matarme|quitarme la vida|acabar con mi vida|no quiero (vivir|seguir viviendo)|hacerme dano|autolesion|ojala estuviera muert|quero morrer|matar me|me matar|tirar a minha (propria )?vida|acabar com a minha vida|nao quero (viver|continuar a viver)|magoar me|me magoar|automutila|autolesao|quem me dera estar mort|je veux mourir|envie de mourir|me suicider|suicidaire|(veux|vais|envie de) me tuer|en finir avec (la|ma) vie|mettre fin a (mes jours|ma vie)|(ne )?veux plus vivre|plus envie de vivre|me faire du mal|me mutiler|scarifi|j aimerais etre mort|je voudrais etre mort)/.test(norm);
+    var crisis=/((?:اريد|اود|ارغب في|ابغي|ابي|بغيت|نحب|نبغي|حابب|حاب|بدي|عايز|عاوز|نفسي|ودي|اتمني) (?:ان )?(?:ا|ن)?موت|الموت ارحم|انتحار|انتحر|انهي حياتي|اقتل نفسي|نقتل روحي|(?:لا|ما|مش|لم اعد|ما عدت|ما عاد|ما عادش) (?:اريد|اود|ارغب في|احب|نحب|بدي|ابغي|ابي|عايز|عاوز|حاب) (?:ان )?(?:ا|ن)?عيش|اذي نفسي|اؤذي نفسي|suicid|kill myself|end my life|want to die|wish i (was|were) dead|hurt myself|harm myself|self harm|no reason to live|zelfmoord|mezelf (van kant|iets aan)|dood wil|wil (dood|sterven)|niet meer (leven|verder)|wou dat ik dood|mezelf pijn|zelfbeschadiging|een eind aan mijn leven|quiero morir|matarme|quitarme la vida|acabar con mi vida|no quiero (vivir|seguir viviendo)|hacerme dano|autolesion|ojala estuviera muert|quero morrer|matar me|me matar|tirar a minha (propria )?vida|acabar com a minha vida|nao quero (viver|continuar a viver)|magoar me|me magoar|automutila|autolesao|quem me dera estar mort|je veux mourir|envie de mourir|me suicider|suicidaire|(veux|vais|envie de) me tuer|en finir avec (la|ma) vie|mettre fin a (mes jours|ma vie)|(ne )?veux plus vivre|plus envie de vivre|me faire du mal|me mutiler|scarifi|j aimerais etre mort|je voudrais etre mort)/.test(norm);
     if(!crisis) crisis=CRISIS_EXTRA.some(function(t){ var n=normalize(t); return n && (" "+norm+" ").indexOf(" "+n)>-1; });
+    // صيغ إضافية (العاميات والعربية اللاتينية بعد تحويلها) + «خطر لطيف»: يأس بلا نية معلنة، يُعرض معه اطمئنان على السلامة
+    var safe=window.NLU ? NLU.safety(norm) : {crisis:false, soft:false};
+    if(window.NLU && input!==raw){ var s0=NLU.safety(normalize(input)); safe={crisis:safe.crisis||s0.crisis, soft:safe.soft||s0.soft}; }   // النص الأصلي أيضًا («nheb nmout»)
+    if(!crisis && safe.crisis) crisis=true;
+    var softRisk=!crisis && safe.soft;
     if(crisis){
       themes=themes.filter(function(t){ return t.id!=="death_fear" && t.id!=="despair"; });
       themes.unshift({id:"despair", theme:BY.theme.despair, score:9, conf:1, hits:[T("إشارات ألم شديد")]});
@@ -523,6 +542,14 @@ var RAG = (function(){
       var ev=h.map(function(x){return x.ev;}).filter(function(x,i,a){ var nx=normalize(x); return !a.some(function(y,j){ return j!==i && normalize(y).length>nx.length && normalize(y).indexOf(nx)>-1; }); });
       return {id:e.id,label:e.label,count:h.length,hits:ev};
     }).filter(function(e){ return e.count>0; }).sort(function(a,b){ return b.count-a.count; });
+    // مشاعر دلّت عليها المفاهيم (بدليلها من النص) إن لم يلتقطها المعجم
+    (detectThemes.concepts||[]).forEach(function(c){
+      c.emo.forEach(function(eid){
+        if(negatedEmo.has(eid) || emotions.some(function(e){ return e.id===eid; })) return;
+        var def=EMOTION_LEXICON.find(function(e){ return e.id===eid; });
+        if(def) emotions.push({id:eid, label:def.label, count:1, hits:[c.ev]});
+      });
+    });
     // استنتاج مشاعر من الموضوعات إن لم تُذكر صراحة
     var implied={anger:"anger",sadness:"sadness",grief:"sadness",anxiety:"fear",fear:"fear",loneliness:"loneliness",despair:"despair",sin:"guilt",betrayal:"betrayal",insult:"shame",burnout:"exhaustion",decision:"confusion",envy:"jealousy",jealousy_spouse:"jealousy",heartbreak:"love"};
     themes.slice(0,3).forEach(function(t){
@@ -551,10 +578,16 @@ var RAG = (function(){
       var h=lexHitsNeg(norm,userWords,NEED[id]||[],4); return {id:id, count:h.length, cue:h[0]?h[0].ev:""};
     }).filter(function(x){ return x.count>0; });
     var question=/[?؟]/.test(raw);
+    // ضيق غير محدد («لست بخير»، «everything feels heavy»): نعرض قراءات محتملة بدل التخمين، ونبني توجيهًا عامًا من أولها
+    var interp=(!crisis && window.NLU) ? NLU.interpret(userWords, norm, themes) : null;
+    if(interp && !themes.length && BY.theme[interp.ids[0]])
+      themes.push({id:interp.ids[0], theme:BY.theme[interp.ids[0]], score:1, conf:0.3, hits:[], vague:true});
+    var distinctions=(detectThemes.concepts||[]).filter(function(c){ return c.distinction; }).map(function(c){ return {id:c.distinction, ev:c.ev}; });
     var times=["ongoing","future","past"].map(function(id){ return {id:id, count:lexHits(norm,userWords,TIME[id]||[]).length}; })
       .filter(function(x){ return x.count>0; }).sort(function(a,b){ return b.count-a.count; });
     return {raw:raw, norm:norm, words:userWords, stems:qStems, themes:themes, emotions:emotions.slice(0,4),
-            relations:relations.slice(0,3), intensity:intensity, selfFault:selfFault, crisis:crisis,
+            relations:relations.slice(0,3), intensity:intensity, selfFault:selfFault, crisis:crisis, softRisk:softRisk,
+            input:input, prep:prep, interpretations:interp?interp.ids:[], vagueCue:interp?interp.cue:"", distinctions:distinctions,
             needs:needs, question:question, focus:focus, time:times[0]?times[0].id:null,
             life:(detectThemes.life||[]).map(function(m){ return {n:m.n, text:m.item.t, section:m.item.s, sim:Math.round(m.sim*100)/100}; })};
   }
