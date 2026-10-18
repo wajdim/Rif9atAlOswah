@@ -30,7 +30,7 @@ desktop.ini
 *.tmp
 *~
 
-# ── Build-time model downloads (semantic layer; only the reduced js/data-embed.js ships) ──
+# ── Build-time model downloads and derived files for the semantic-layer experiment (build/embed/README.md); nothing ships ──
 build/embed/model/
 build/embed/model-e5/
 build/embed/anchors.json
