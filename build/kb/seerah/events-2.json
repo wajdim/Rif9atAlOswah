@@ -1,0 +1,939 @@
+[
+ {
+  "id": "bir-mauna",
+  "mainCategory": "المشاعر والابتلاءات",
+  "sourceStrength": "موثق بدرجة عالية",
+  "seerahSources": [
+   "السيرة النبوية لابن هشام"
+  ],
+  "era": "medina",
+  "order": 80,
+  "when": {
+   "ar": "بئر معونة (4 هـ)",
+   "en": "Bi’r Ma‘unah (4 AH)"
+  },
+  "themes": [
+   "grief",
+   "betrayal",
+   "injustice",
+   "sadness"
+  ],
+  "quran": [
+   {
+    "ref": "3:169",
+    "expect": "ولا تحسبن الذين قتلوا",
+    "context": {
+     "ar": "في الشهداء الذين قُتلوا في سبيل الله",
+     "en": "About those killed in Allah's cause"
+    },
+    "relevance": {
+     "ar": "الفقد بالغدر ليس نهاية من فقدناهم؛ هم أحياء عند ربهم",
+     "en": "Loss through treachery is not the end of those we lost; they are alive with their Lord"
+    }
+   }
+  ],
+  "hadith": [
+   {
+    "ref": "bukhari:1300",
+    "from": "قنت رسول الله",
+    "to": "أشد منه",
+    "narrator": {
+     "ar": "أنس بن مالك رضي الله عنه",
+     "en": "Anas ibn Malik"
+    },
+    "te": "The Messenger of Allah ﷺ made supplication in prayer for a month when the reciters were killed, and I never saw the Messenger of Allah ﷺ grieve more intensely than he did then."
+   }
+  ],
+  "ar": {
+   "title": "بئر معونة: حزن النبي ﷺ على أصحابه الذين قُتلوا غدرًا",
+   "subCategories": [
+    "الغدر",
+    "الفقد الجماعي",
+    "الحزن العميق"
+   ],
+   "participants": [
+    "النبي ﷺ",
+    "القرّاء من الصحابة رضي الله عنهم"
+   ],
+   "eventDescription": "أرسل النبي ﷺ جماعة من أصحابه حفظة القرآن «القرّاء» ليعلّموا الناس، فغُدر بهم وقُتلوا. فحزن النبي ﷺ عليهم حزنًا شديدًا، قال أنس رضي الله عنه: «فما رأيت رسول الله ﷺ حزن حزنًا قط أشد منه»، وظل شهرًا كاملًا يدعو في صلاته على من غدر بهم.",
+   "historicalContext": "في السنة الرابعة للهجرة، بعد غزوة أحد بأشهر، وقد خرج القرّاء بأمان معلَن فغُدر بهم.",
+   "prophetTraits": [
+    "الصدق مع المشاعر",
+    "الرحمة",
+    "الوفاء",
+    "العدل"
+   ],
+   "problemType": "فقد جماعي لأحبة بريئين بسبب غدر وخيانة للعهد",
+   "responseType": "حزن معلن صادق، ودعاء على الظالم مدة محددة، دون تهور في الانتقام",
+   "emotionsAddressed": [
+    "الحزن العميق",
+    "الغضب من الغدر",
+    "الإحساس بالمسؤولية عن من أُرسلوا"
+   ],
+   "principles": [
+    "الحزن الشديد على المظلومين لا يتعارض مع الصبر",
+    "الغدر جريمة يُدعى على أصحابها ويُطلب فيها العدل",
+    "إظهار المشاعر عند الفاجعة صدق لا ضعف",
+    "للحزن مدة يُعبّر فيها عنه ثم تستمر الحياة"
+   ],
+   "modernApplications": [
+    "إذا فقدت أحبة في حادث أو جريمة، فحزنك العميق مشروع",
+    "يحق لك طلب العدالة والدعاء على الظالم",
+    "لا تحمّل نفسك ذنب ما فعله غيرك غدرًا",
+    "اجعل لحزنك مساحة، واطلب السند ممن حولك"
+   ],
+   "notToApplyTo": [
+    "لا يعني هذا أن يتحول الحزن إلى انتقام شخصي خارج القانون",
+    "ولا أن تدعو على من لم يظلمك أو على أبرياء"
+   ],
+   "keywords": [
+    "قتلوا أخي غدرا",
+    "فقدت أصدقائي في حادث",
+    "خانوا العهد",
+    "حزين جدا على من ماتوا",
+    "ماتوا ظلما",
+    "أشعر بالذنب لأني أرسلته"
+   ],
+   "semanticTags": [
+    "غدر",
+    "فقد",
+    "حزن",
+    "عدالة",
+    "شهداء"
+   ],
+   "behaviorObservations": [
+    "أظهر حزنه ولم يخفه حتى رآه أصحابه",
+    "دعا على من غدر شهرًا في صلاته",
+    "لم يندفع إلى رد فعل متهور",
+    "بقي وفيًّا لذكرى أصحابه"
+   ],
+   "whatToAvoid": [
+    "كبت الحزن وإنكاره",
+    "تحميل النفس ذنب غدر الآخرين"
+   ],
+   "reflection": "أشد ما حزن النبي ﷺ كان على أصحابه الذين قُتلوا غدرًا؛ فحزنك على أحبتك المظلومين يشبه حزنه، وهو رحمة في قلبك.",
+   "depth": {
+    "challenges": [
+     "فقد عدد كبير من الصحابة دفعة واحدة",
+     "أنهم قُتلوا غدرًا بعد أمان",
+     "الإحساس بأنهم خرجوا بأمره"
+    ],
+    "alternatives": [
+     "أن يكتم حزنه ويظهر التماسك",
+     "أن يندفع إلى انتقام فوري",
+     "أن يلوم نفسه على إرسالهم"
+    ],
+    "chose": "حزن حزنًا شديدًا معلنًا، ودعا على الغادرين في صلاته شهرًا، وترك الحكم لله.",
+    "notDone": [
+     "لم يخفِ حزنه عن أصحابه",
+     "لم يتهور في الانتقام",
+     "لم يتوقف عن تعليم الناس بسبب الفاجعة"
+    ],
+    "lessons": {
+     "self": "الحزن الشديد على من ظُلموا رحمة، وطلب العدل حق.",
+     "family": "عند فاجعة جماعية تحتاج الأسرة إلى من يعبّر عن حزنها معها، لا من يطلب منها التماسك.",
+     "work": "إذا أصاب فريقك أذى في مهمة كلفته بها، فاعترف بالألم ولا تجلد نفسك.",
+     "community": "المجتمع يحتاج إلى الحزن المشترك والعدالة معًا بعد المآسي."
+    }
+   }
+  },
+  "en": {
+   "title": "Bi’r Ma‘unah: the Prophet's grief for companions killed through treachery",
+   "subCategories": [
+    "Treachery",
+    "Collective loss",
+    "Deep grief"
+   ],
+   "participants": [
+    "The Prophet ﷺ",
+    "The reciters among the Companions"
+   ],
+   "eventDescription": "The Prophet ﷺ sent a group of his companions who had memorised the Qur'an, “the reciters”, to teach people, and they were betrayed and killed. The Prophet ﷺ grieved for them deeply. Anas said: “I never saw the Messenger of Allah ﷺ grieve more intensely than he did then,” and for a whole month he made supplication in his prayer against those who betrayed them.",
+   "historicalContext": "In the fourth year after the Hijra, months after Uhud. The reciters had gone out under a declared guarantee of safety and were betrayed.",
+   "prophetTraits": [
+    "Honesty about feelings",
+    "Mercy",
+    "Loyalty",
+    "Justice"
+   ],
+   "problemType": "Collective loss of innocent loved ones through treachery and broken promises",
+   "responseType": "Open, sincere grief, and supplication against the wrongdoer for a set period, without reckless revenge",
+   "emotionsAddressed": [
+    "Deep grief",
+    "Anger at treachery",
+    "A sense of responsibility for those who were sent"
+   ],
+   "principles": [
+    "Intense grief for the wronged does not contradict patience",
+    "Treachery is a crime: one may pray against its perpetrators and seek justice",
+    "Showing feelings in a tragedy is honesty, not weakness",
+    "Grief has its time of expression, then life continues"
+   ],
+   "modernApplications": [
+    "If you lost loved ones in an accident or a crime, your deep grief is legitimate",
+    "You have the right to seek justice and to pray against the wrongdoer",
+    "Do not burden yourself with the guilt of what others did through treachery",
+    "Give your grief space, and seek support from those around you"
+   ],
+   "notToApplyTo": [
+    "This does not mean turning grief into personal revenge outside the law",
+    "Nor praying against those who did not wrong you or against innocent people"
+   ],
+   "keywords": [
+    "they killed my brother treacherously",
+    "I lost my friends in an accident",
+    "they broke their word",
+    "devastated over those who died",
+    "they died unjustly",
+    "I feel guilty because I sent him"
+   ],
+   "semanticTags": [
+    "treachery",
+    "loss",
+    "grief",
+    "justice",
+    "martyrs"
+   ],
+   "behaviorObservations": [
+    "He showed his grief rather than hiding it, so that his companions saw it",
+    "He prayed against the betrayers for a month in his prayer",
+    "He did not rush into a reckless reaction",
+    "He stayed loyal to the memory of his companions"
+   ],
+   "whatToAvoid": [
+    "Suppressing and denying grief",
+    "Blaming yourself for others' treachery"
+   ],
+   "reflection": "The Prophet's deepest grief was for his companions killed through treachery. Your grief for wronged loved ones resembles his, and it is mercy in your heart.",
+   "depth": {
+    "challenges": [
+     "Losing many companions at once",
+     "They were killed treacherously after a promise of safety",
+     "The sense that they had gone out at his request"
+    ],
+    "alternatives": [
+     "Hiding his grief and appearing composed",
+     "Rushing into immediate revenge",
+     "Blaming himself for sending them"
+    ],
+    "chose": "He grieved deeply and openly, prayed against the betrayers in his prayer for a month, and left judgement to Allah.",
+    "notDone": [
+     "He did not hide his grief from his companions",
+     "He did not rush into revenge",
+     "He did not stop teaching people because of the tragedy"
+    ],
+    "lessons": {
+     "self": "Intense grief for the wronged is mercy, and seeking justice is a right.",
+     "family": "In a collective tragedy a family needs someone to grieve with them, not someone telling them to hold together.",
+     "work": "If your team is harmed on a task you gave them, acknowledge the pain and do not punish yourself.",
+     "community": "After tragedies a community needs shared grief and justice together."
+    }
+   }
+  }
+ },
+ {
+  "id": "ibn-ubayy",
+  "mainCategory": "القيادة",
+  "sourceStrength": "موثق بدرجة عالية",
+  "seerahSources": [
+   "السيرة النبوية لابن هشام"
+  ],
+  "era": "medina",
+  "order": 95,
+  "when": {
+   "ar": "غزوة بني المصطلق",
+   "en": "The expedition of Banu al-Mustaliq"
+  },
+  "themes": [
+   "leadership",
+   "insult",
+   "anger",
+   "argument",
+   "revenge"
+  ],
+  "quran": [
+   {
+    "ref": "63:8",
+    "expect": "ليخرجن الاعز منها الاذل",
+    "context": {
+     "ar": "نزلت في مقالة عبد الله بن أبي",
+     "en": "Revealed about ‘Abdullah ibn Ubayy's statement"
+    },
+    "relevance": {
+     "ar": "القرآن فضح الكلمة المسيئة، والنبي ﷺ لم يرد بالبطش",
+     "en": "The Qur'an exposed the hostile words, and the Prophet ﷺ did not respond with force"
+    }
+   }
+  ],
+  "hadith": [
+   {
+    "ref": "bukhari:4905",
+    "from": "فسمع بذلك عبد الله",
+    "to": "يقتل أصحابه",
+    "narrator": {
+     "ar": "جابر بن عبد الله رضي الله عنهما",
+     "en": "Jabir ibn ‘Abdullah"
+    },
+    "te": "‘Abdullah ibn Ubayy heard of it and said: “They have done it! By Allah, when we return to Madinah, the more honourable will surely drive out the more lowly.” This reached the Prophet ﷺ, and ‘Umar stood and said: “Messenger of Allah, let me strike the neck of this hypocrite.” The Prophet ﷺ said: “Leave him, lest people say that Muhammad kills his companions.”"
+   }
+  ],
+  "ar": {
+   "title": "عبد الله بن أُبيّ: الحِلم مع من يطعن من الداخل",
+   "subCategories": [
+    "الإساءة من داخل الجماعة",
+    "ضبط ردة الفعل",
+    "التفكير في العواقب"
+   ],
+   "participants": [
+    "النبي ﷺ",
+    "عبد الله بن أبي بن سلول",
+    "عمر بن الخطاب رضي الله عنه"
+   ],
+   "eventDescription": "في إحدى الغزوات وقع خلاف بين رجل من المهاجرين ورجل من الأنصار، فاستغله عبد الله بن أبي، رأس المنافقين، وقال: «لئن رجعنا إلى المدينة ليُخرجن الأعز منها الأذل»، يقصد النبي ﷺ وأصحابه. فقام عمر رضي الله عنه يطلب الإذن بقتله، فقال النبي ﷺ: «دعه، لا يتحدث الناس أن محمدًا يقتل أصحابه».",
+   "historicalContext": "في غزوة بني المصطلق، والمنافقون يتربصون بالجماعة من داخلها، ونزلت في ذلك سورة المنافقون.",
+   "prophetTraits": [
+    "الحلم",
+    "الحكمة",
+    "ضبط الغضب",
+    "التفكير في العواقب"
+   ],
+   "problemType": "شخص من داخل الجماعة يطعن في القائد ويحاول إشعال الفتنة، والمحيطون يطالبون بأشد رد",
+   "responseType": "رفض الرد العنيف، والنظر إلى أثر القرار على صورة الجماعة ووحدتها",
+   "emotionsAddressed": [
+    "الغضب من الإساءة",
+    "الرغبة في الانتقام",
+    "القلق على وحدة الجماعة"
+   ],
+   "principles": [
+    "ليس كل إساءة تستحق أشد رد ممكن",
+    "انظر إلى أثر ردك على الناس وصورة الحق قبل أن تقرر",
+    "القائد يحمي الجماعة من الانقسام ولو صبر على أذى شخصي",
+    "الحق قد يُفضح بالحجة دون حاجة إلى البطش"
+   ],
+   "modernApplications": [
+    "إذا أساء إليك زميل أو قريب علنًا، فكّر في أثر ردك على الآخرين قبل أن ترد",
+    "لا تستجب لضغط من يطالبك بأشد رد فعل",
+    "في الخلافات الجماعية، أطفئ نار العصبية «دعوها فإنها منتنة»",
+    "قد يكشف الوقت والحق من يطعن دون أن تضطر إلى معركة"
+   ],
+   "notToApplyTo": [
+    "لا يعني هذا السكوت عن إيذاء مستمر يمس سلامتك أو سلامة غيرك",
+    "ولا أن يتنازل المسؤول عن حماية الجماعة من خطر حقيقي"
+   ],
+   "keywords": [
+    "زميل يطعن فيّ من الخلف",
+    "شخص في العائلة يحرض علينا",
+    "أريد أن أرد بقوة على من أساء",
+    "أحدهم يشعل الفتنة بيننا",
+    "منافق في المجموعة",
+    "يتكلم علي أمام الناس"
+   ],
+   "semanticTags": [
+    "حلم",
+    "فتنة",
+    "إساءة",
+    "ردة فعل",
+    "قيادة"
+   ],
+   "behaviorObservations": [
+    "منع عمر من الرد العنيف رغم خطورة الكلام",
+    "علّل قراره بأثره على الناس وسمعة الحق",
+    "أطفأ العصبية بين المهاجرين والأنصار قبل ذلك بقوله: «دعوها فإنها منتنة»"
+   ],
+   "whatToAvoid": [
+    "الرد الانفعالي الذي يخدم هدف المسيء",
+    "تجاهل أثر القرار على الصورة العامة والجماعة"
+   ],
+   "reflection": "قال النبي ﷺ: «دعه، لا يتحدث الناس أن محمدًا يقتل أصحابه». أحيانًا يكون أقوى رد هو الذي يحرم المسيء من الفتنة التي يريدها.",
+   "depth": {
+    "challenges": [
+     "إساءة علنية خطيرة من رجل داخل المدينة",
+     "فتنة بين المهاجرين والأنصار",
+     "ضغط من أصحابه لرد قاسٍ"
+    ],
+    "alternatives": [
+     "معاقبة ابن أبي بأشد عقوبة",
+     "تجاهل الأمر تمامًا دون معالجة الفتنة",
+     "الدخول في جدال علني معه"
+    ],
+    "chose": "أطفأ الفتنة بين الفريقين، ورفض قتل ابن أبي نظرًا لأثر ذلك على الناس، وترك الوحي يكشفه.",
+    "notDone": [
+     "لم يستجب لطلب عمر بالقتل",
+     "لم يرد على الإساءة بإساءة",
+     "لم يترك العصبية بين أصحابه دون علاج"
+    ],
+    "lessons": {
+     "self": "اسأل نفسك قبل الرد: ماذا سيقول الناس؟ وهل يخدم ردي هدف من أساء؟",
+     "family": "في الخلافات العائلية، لا تجعل كلمة مسيئة من قريب سببًا لقطيعة تمزق الأسرة.",
+     "work": "مع الزميل الذي يحرض، اهتم بوحدة الفريق قبل الانتصار الشخصي.",
+     "community": "العصبيات بين الجماعات «منتنة»؛ وإطفاؤها أولى من الانتصار لطرف."
+    }
+   }
+  },
+  "en": {
+   "title": "‘Abdullah ibn Ubayy: forbearance with someone undermining from within",
+   "subCategories": [
+    "Harm from within the group",
+    "Controlling one's reaction",
+    "Thinking of consequences"
+   ],
+   "participants": [
+    "The Prophet ﷺ",
+    "‘Abdullah ibn Ubayy ibn Salul",
+    "‘Umar ibn al-Khattab"
+   ],
+   "eventDescription": "During an expedition a quarrel broke out between a man of the Emigrants and a man of the Helpers. ‘Abdullah ibn Ubayy, leader of the hypocrites, exploited it and said: “When we return to Madinah, the more honourable will surely drive out the more lowly,” meaning the Prophet ﷺ and his companions. ‘Umar stood up asking permission to kill him, and the Prophet ﷺ said: “Leave him, lest people say that Muhammad kills his companions.”",
+   "historicalContext": "During the expedition of Banu al-Mustaliq, with the hypocrites lying in wait within the community; Surat al-Munafiqun was revealed about it.",
+   "prophetTraits": [
+    "Forbearance",
+    "Wisdom",
+    "Controlling anger",
+    "Thinking of consequences"
+   ],
+   "problemType": "Someone inside the group attacks the leader and tries to ignite strife, while those around demand the harshest response",
+   "responseType": "Refusing a violent response, and weighing the decision's effect on the group's unity and image",
+   "emotionsAddressed": [
+    "Anger at the insult",
+    "Desire for revenge",
+    "Worry for the group's unity"
+   ],
+   "principles": [
+    "Not every offence deserves the harshest possible response",
+    "Consider the effect of your response on people and on how the truth is seen before you decide",
+    "A leader protects the group from division, even by bearing personal harm",
+    "Truth can be exposed by argument without force"
+   ],
+   "modernApplications": [
+    "If a colleague or relative insults you publicly, think about the effect of your response on others before replying",
+    "Do not give in to pressure from those urging the harshest reaction",
+    "In group conflicts, put out the fire of factionalism: “Leave it, it is putrid”",
+    "Time and truth may expose the one who undermines, without you having to fight"
+   ],
+   "notToApplyTo": [
+    "This does not mean staying silent about ongoing harm to your safety or others'",
+    "Nor that a leader should give up protecting the group from real danger"
+   ],
+   "keywords": [
+    "a colleague stabbing me in the back",
+    "someone in the family is stirring trouble",
+    "I want to hit back hard at whoever insulted me",
+    "someone is creating division between us",
+    "a hypocrite in the group",
+    "he talks about me in front of people"
+   ],
+   "semanticTags": [
+    "forbearance",
+    "strife",
+    "insult",
+    "reaction",
+    "leadership"
+   ],
+   "behaviorObservations": [
+    "He stopped ‘Umar's violent response despite the gravity of the words",
+    "He explained his decision by its effect on people and the reputation of the truth",
+    "He had already put out the factional fire between Emigrants and Helpers, saying: “Leave it, it is putrid”"
+   ],
+   "whatToAvoid": [
+    "An emotional response that serves the offender's goal",
+    "Ignoring the effect of a decision on the group and its image"
+   ],
+   "reflection": "The Prophet ﷺ said: “Leave him, lest people say that Muhammad kills his companions.” Sometimes the strongest response is the one that denies the offender the strife he wants.",
+   "depth": {
+    "challenges": [
+     "A serious public insult from a man inside Madinah",
+     "Strife between the Emigrants and the Helpers",
+     "Pressure from his companions for a harsh response"
+    ],
+    "alternatives": [
+     "Punishing Ibn Ubayy with the harshest penalty",
+     "Ignoring the matter entirely without addressing the strife",
+     "Entering a public argument with him"
+    ],
+    "chose": "He put out the strife between the two groups, refused to have Ibn Ubayy killed because of its effect on people, and let the revelation expose him.",
+    "notDone": [
+     "He did not grant ‘Umar's request to kill him",
+     "He did not answer insult with insult",
+     "He did not leave the factionalism among his companions untreated"
+    ],
+    "lessons": {
+     "self": "Ask yourself before responding: what will people say, and does my response serve the offender's aim?",
+     "family": "In family disputes, do not let a hurtful word from a relative become a rupture that tears the family apart.",
+     "work": "With a colleague who stirs trouble, care about team unity before personal victory.",
+     "community": "Factionalism between groups is “putrid”; putting it out matters more than winning for one side."
+    }
+   }
+  }
+ },
+ {
+  "id": "wafat-nabi",
+  "mainCategory": "المشاعر والابتلاءات",
+  "sourceStrength": "موثق بدرجة عالية",
+  "seerahSources": [],
+  "era": "medina",
+  "order": 140,
+  "when": {
+   "ar": "وفاة النبي ﷺ (11 هـ)",
+   "en": "The death of the Prophet ﷺ (11 AH)"
+  },
+  "themes": [
+   "grief",
+   "faith_weak",
+   "leadership",
+   "patience",
+   "death_fear"
+  ],
+  "quran": [
+   {
+    "ref": "3:144",
+    "expect": "وما محمد الا رسول قد خلت من قبله الرسل",
+    "context": {
+     "ar": "تلاها أبو بكر رضي الله عنه يوم وفاة النبي ﷺ",
+     "en": "Recited by Abu Bakr on the day the Prophet ﷺ died"
+    },
+    "relevance": {
+     "ar": "الإيمان متعلق بالله الحي الذي لا يموت، لا بالأشخاص مهما عظموا",
+     "en": "Faith is tied to Allah the Ever-Living who never dies, not to people however great"
+    }
+   }
+  ],
+  "hadith": [
+   {
+    "ref": "bukhari:3668",
+    "from": "ألا من كان يعبد محمدا",
+    "to": "حي لا يموت",
+    "narrator": {
+     "ar": "عائشة رضي الله عنها",
+     "en": "‘A’ishah"
+    },
+    "te": "Indeed, whoever worshipped Muhammad ﷺ, Muhammad has died; and whoever worships Allah, Allah is Ever-Living and does not die."
+   }
+  ],
+  "ar": {
+   "title": "يوم وفاة النبي ﷺ: الثبات عند أعظم فقد",
+   "subCategories": [
+    "الصدمة",
+    "الفقد",
+    "الثبات"
+   ],
+   "participants": [
+    "أبو بكر الصديق رضي الله عنه",
+    "عمر بن الخطاب رضي الله عنه",
+    "الصحابة رضي الله عنهم"
+   ],
+   "eventDescription": "لما توفي النبي ﷺ اضطرب الناس، وقام عمر رضي الله عنه من شدة الصدمة ينكر موته. فجاء أبو بكر رضي الله عنه فكشف عن وجه النبي ﷺ وقبّله وقال: «طبت حيًّا وميتًا»، ثم خرج إلى الناس فحمد الله وقال: «ألا من كان يعبد محمدًا ﷺ فإن محمدًا قد مات، ومن كان يعبد الله فإن الله حي لا يموت»، وتلا: ﴿وما محمد إلا رسول قد خلت من قبله الرسل﴾، فبكى الناس وكأنهم سمعوا الآية لأول مرة.",
+   "historicalContext": "في ربيع الأول من السنة الحادية عشرة للهجرة، وكانت أعظم مصيبة مرت على المسلمين.",
+   "prophetTraits": [
+    "الثبات",
+    "الحكمة",
+    "الصدق مع المشاعر"
+   ],
+   "problemType": "صدمة فقد أعظم سند، وإنكار الواقع، واضطراب الجماعة",
+   "responseType": "مواجهة الحقيقة مع الحزن، وتذكير الناس بالثابت الذي لا يتغير",
+   "emotionsAddressed": [
+    "الصدمة",
+    "الإنكار",
+    "الحزن الشديد",
+    "الخوف من المستقبل"
+   ],
+   "principles": [
+    "الإنكار ردة فعل طبيعية للصدمة، يحتاج صاحبها إلى من يعيده إلى الحقيقة برفق",
+    "الحزن لا يتعارض مع الثبات",
+    "الإيمان يتعلق بالله الحي الذي لا يموت",
+    "في الأزمات يحتاج الناس إلى صوت هادئ يذكّرهم بالثوابت"
+   ],
+   "modernApplications": [
+    "إذا أنكرت وفاة عزيز في البداية، فهذا من الصدمة لا من ضعف الإيمان",
+    "في المصيبة الجماعية، كن الصوت الهادئ الذي يذكّر بالحقيقة دون قسوة",
+    "اجعل تعلقك الأعمق بالله الذي لا يموت، حتى تتحمل فقد من تحب",
+    "اسمح لنفسك بالبكاء وأنت ثابت"
+   ],
+   "notToApplyTo": [
+    "لا يعني الثبات أن تمنع نفسك أو غيرك من الحزن والبكاء",
+    "ولا أن تلوم من أنكر في لحظة الصدمة"
+   ],
+   "keywords": [
+    "لا أصدق أنه مات",
+    "صدمة وفاة",
+    "فقدت أعظم سند في حياتي",
+    "مات من كنت أعيش لأجله",
+    "الناس منهارة بعد الوفاة",
+    "كيف أكون قويا لعائلتي"
+   ],
+   "semanticTags": [
+    "وفاة",
+    "صدمة",
+    "ثبات",
+    "حزن",
+    "إيمان"
+   ],
+   "behaviorObservations": [
+    "قبّل النبي ﷺ وقال كلمة حب ووداع قبل أن يخاطب الناس",
+    "خاطب الناس بهدوء وثبات في لحظة الاضطراب",
+    "ذكّرهم بآية من القرآن لا برأيه",
+    "لم يعنّف عمر على إنكاره بل صحّح الحقيقة للجميع"
+   ],
+   "whatToAvoid": [
+    "لوم من ينكر في لحظة الصدمة",
+    "الخلط بين الثبات وكبت الحزن"
+   ],
+   "reflection": "«من كان يعبد الله فإن الله حي لا يموت». كل من نحبهم سيرحلون، والذي لا يرحل هو الله؛ فاجعل قلبك متعلقًا به أولًا.",
+   "depth": {
+    "challenges": [
+     "أعظم فقد عرفه المسلمون",
+     "صدمة الصحابة وإنكار بعضهم",
+     "خطر اضطراب الجماعة بعد الفقد"
+    ],
+    "alternatives": [
+     "أن ينهار أبو بكر في حزنه",
+     "أن يسكت ويترك الناس في اضطرابهم",
+     "أن يعنّف من أنكر"
+    ],
+    "chose": "ودّع النبي ﷺ بحب، ثم واجه الناس بالحقيقة بهدوء، وذكّرهم بالقرآن وبالله الحي الذي لا يموت.",
+    "notDone": [
+     "لم يُنكر حزنه",
+     "لم يجرح عمر رضي الله عنه",
+     "لم يجعل الناس متعلقين بشخص بل بالله"
+    ],
+    "lessons": {
+     "self": "حين يفقد قلبك أعظم سند، تعلّق بالله الذي لا يموت.",
+     "family": "في وفاة عزيز في الأسرة، قد يكون دورك أن تكون الصوت الهادئ الحاني.",
+     "work": "في الأزمات الكبرى يحتاج الفريق إلى من يذكّره بالثوابت والهدف.",
+     "community": "الجماعة تثبت حين يكون تعلقها بالمبادئ لا بالأشخاص وحدهم."
+    }
+   }
+  },
+  "en": {
+   "title": "The day the Prophet ﷺ died: steadfastness in the greatest loss",
+   "subCategories": [
+    "Shock",
+    "Loss",
+    "Steadfastness"
+   ],
+   "participants": [
+    "Abu Bakr al-Siddiq",
+    "‘Umar ibn al-Khattab",
+    "The Companions"
+   ],
+   "eventDescription": "When the Prophet ﷺ died, people were thrown into turmoil, and ‘Umar, in his shock, stood denying his death. Abu Bakr came, uncovered the Prophet's face, kissed him and said: “You were pure in life and in death.” Then he went out to the people, praised Allah and said: “Whoever worshipped Muhammad ﷺ, Muhammad has died; and whoever worships Allah, Allah is Ever-Living and does not die,” and recited: “Muhammad is but a messenger; messengers have passed away before him.” The people wept as though they were hearing the verse for the first time.",
+   "historicalContext": "In Rabi‘ al-Awwal of the eleventh year after the Hijra; it was the greatest calamity the Muslims ever faced.",
+   "prophetTraits": [
+    "Steadfastness",
+    "Wisdom",
+    "Honesty about feelings"
+   ],
+   "problemType": "The shock of losing the greatest support, denial of reality, and turmoil in the community",
+   "responseType": "Facing the truth while grieving, and reminding people of what does not change",
+   "emotionsAddressed": [
+    "Shock",
+    "Denial",
+    "Intense grief",
+    "Fear of the future"
+   ],
+   "principles": [
+    "Denial is a natural reaction to shock; such a person needs to be gently brought back to reality",
+    "Grief does not contradict steadfastness",
+    "Faith is tied to Allah, the Ever-Living who never dies",
+    "In crises people need a calm voice reminding them of what is constant"
+   ],
+   "modernApplications": [
+    "If at first you could not believe a loved one died, that is shock, not weak faith",
+    "In a shared tragedy, be the calm voice that recalls the truth without harshness",
+    "Make your deepest attachment to Allah who never dies, so you can bear losing those you love",
+    "Allow yourself to weep while standing firm"
+   ],
+   "notToApplyTo": [
+    "Steadfastness does not mean stopping yourself or others from grieving and weeping",
+    "Nor blaming those who denied it in the moment of shock"
+   ],
+   "keywords": [
+    "I can't believe he died",
+    "shock of a death",
+    "I lost the greatest support in my life",
+    "the person I lived for died",
+    "everyone has collapsed after the death",
+    "how can I be strong for my family"
+   ],
+   "semanticTags": [
+    "death",
+    "shock",
+    "steadfastness",
+    "grief",
+    "faith"
+   ],
+   "behaviorObservations": [
+    "He kissed the Prophet ﷺ and spoke words of love and farewell before addressing people",
+    "He spoke calmly and firmly in a moment of turmoil",
+    "He reminded them with a verse of the Qur'an, not with his own opinion",
+    "He did not rebuke ‘Umar for his denial but corrected the truth for everyone"
+   ],
+   "whatToAvoid": [
+    "Blaming someone who denies in the moment of shock",
+    "Confusing steadfastness with suppressing grief"
+   ],
+   "reflection": "“Whoever worships Allah, Allah is Ever-Living and does not die.” Everyone we love will depart; the One who does not depart is Allah. Let your heart cling to Him first.",
+   "depth": {
+    "challenges": [
+     "The greatest loss the Muslims had known",
+     "The Companions' shock and some of them denying it",
+     "The danger of the community falling into turmoil after the loss"
+    ],
+    "alternatives": [
+     "Abu Bakr collapsing in his grief",
+     "Staying silent and leaving people in their turmoil",
+     "Rebuking those who denied it"
+    ],
+    "chose": "He bade the Prophet ﷺ farewell with love, then faced the people with the truth calmly, reminding them of the Qur'an and of Allah the Ever-Living who does not die.",
+    "notDone": [
+     "He did not deny his own grief",
+     "He did not hurt ‘Umar",
+     "He did not let people's attachment rest on a person, but on Allah"
+    ],
+    "lessons": {
+     "self": "When your heart loses its greatest support, cling to Allah who never dies.",
+     "family": "When a family member dies, your role may be to be the calm, tender voice.",
+     "work": "In major crises a team needs someone to remind it of what is constant and of the goal.",
+     "community": "A community holds firm when its attachment is to principles, not to individuals alone."
+    }
+   }
+  },
+  "figure": {
+   "ar": "أبو بكر الصديق رضي الله عنه",
+   "en": "Abu Bakr al-Siddiq"
+  }
+ },
+ {
+  "id": "musab-kafan",
+  "mainCategory": "النجاح والقوة",
+  "sourceStrength": "موثق بدرجة عالية",
+  "seerahSources": [],
+  "era": "medina",
+  "order": 74,
+  "when": {
+   "ar": "بعد غزوة أحد (3 هـ)",
+   "en": "After the Battle of Uhud (3 AH)"
+  },
+  "themes": [
+   "comparison",
+   "rizq",
+   "grief",
+   "self_worth",
+   "poverty"
+  ],
+  "quran": [
+   {
+    "ref": "33:23",
+    "expect": "رجال صدقوا ما عاهدوا الله عليه",
+    "context": {
+     "ar": "في الصحابة الذين وفوا بعهدهم حتى استشهدوا",
+     "en": "About the Companions who kept their pledge until martyrdom"
+    },
+    "relevance": {
+     "ar": "قيمة الإنسان في صدقه ووفائه، لا فيما يتركه من مال",
+     "en": "A person's worth lies in their truthfulness and loyalty, not in the wealth they leave behind"
+    }
+   }
+  ],
+  "hadith": [
+   {
+    "ref": "bukhari:3897",
+    "from": "هاجرنا مع النبي",
+    "to": "يهدبها",
+    "narrator": {
+     "ar": "خباب بن الأرت رضي الله عنه",
+     "en": "Khabbab ibn al-Aratt"
+    },
+    "te": "We emigrated with the Prophet ﷺ seeking the Face of Allah, and our reward fell due with Allah. Some of us passed on without taking anything of their reward in this world, among them Mus‘ab ibn ‘Umayr: he was killed on the day of Uhud and left only a striped cloak. When we covered his head with it his feet showed, and when we covered his feet his head showed, so the Messenger of Allah ﷺ told us to cover his head and put some idhkhir grass over his feet. And some of us have had their fruit ripen and are gathering it."
+   }
+  ],
+  "ar": {
+   "title": "كفن مصعب بن عمير: من ترك الرفاهية ولم يأخذ من الدنيا شيئًا",
+   "subCategories": [
+    "التضحية",
+    "القيمة الحقيقية",
+    "المقارنة بالآخرين"
+   ],
+   "participants": [
+    "مصعب بن عمير رضي الله عنه",
+    "خباب بن الأرت رضي الله عنه",
+    "النبي ﷺ"
+   ],
+   "eventDescription": "كان مصعب بن عمير رضي الله عنه من أنعم فتيان مكة عيشًا، فترك ذلك كله حين أسلم، وهاجر وكان أول سفير للإسلام في المدينة. واستشهد يوم أحد ولم يترك إلا بُردة قصيرة، إذا غطوا بها رأسه بدت رجلاه، وإذا غطوا رجليه بدا رأسه، فأمرهم النبي ﷺ أن يغطوا رأسه ويجعلوا على رجليه شيئًا من الإذخر. وكان خبّاب يتذكره بعد سنين ويقارن: «فمنا من مضى لم يأخذ من أجره شيئًا، ومنا من أينعت له ثمرته فهو يهدبها».",
+   "historicalContext": "استشهد مصعب يوم أحد في السنة الثالثة للهجرة، وروى خبّاب قصته بعد سنوات حين اتسعت الدنيا على المسلمين.",
+   "prophetTraits": [
+    "الرحمة",
+    "الوفاء",
+    "الواقعية"
+   ],
+   "problemType": "ترك الرفاهية من أجل المبدأ، ثم الرحيل دون أن ينال من الدنيا شيئًا",
+   "responseType": "الصدق مع المبدأ حتى النهاية، وتكريم النبي ﷺ له بما تيسر",
+   "emotionsAddressed": [
+    "الإحساس بالظلم في توزيع الدنيا",
+    "المقارنة بمن نالوا أكثر",
+    "الحزن على من رحل فقيرًا"
+   ],
+   "principles": [
+    "قيمة الإنسان ليست فيما يملك عند موته",
+    "من ترك شيئًا لله لم يضع أجره ولو لم يره في الدنيا",
+    "تكريم الراحل بما تيسر، دون تكلف",
+    "سعة الدنيا بعد الضيق تستدعي التواضع وتذكر من سبق"
+   ],
+   "modernApplications": [
+    "إذا ضحيت بمستوى معيشي من أجل مبدأ، فقيمتك لا تُقاس بما خسرته",
+    "لا تقارن نفسك بمن «أينعت له ثمرته»؛ أجرك محفوظ",
+    "إذا مات قريب فقير، فكرّمه بما تستطيع دون أن تحرج نفسك",
+    "إذا اتسعت عليك الدنيا، فتذكر من سبقك ولم ينل منها شيئًا"
+   ],
+   "notToApplyTo": [
+    "لا يعني هذا تمجيد الفقر أو ترك السعي في الرزق",
+    "ولا أن يُحرم الإنسان أهله من حقوقهم باسم الزهد"
+   ],
+   "keywords": [
+    "تركت وظيفة جيدة من أجل مبادئي",
+    "ضحيت بكل شيء",
+    "مات فقيرا",
+    "غيري أخذ كل شيء وأنا لا",
+    "لم آخذ من الدنيا شيئا",
+    "قيمتي ليست في مالي"
+   ],
+   "semanticTags": [
+    "تضحية",
+    "زهد",
+    "قيمة",
+    "مقارنة",
+    "وفاء"
+   ],
+   "behaviorObservations": [
+    "ترك مصعب الرفاهية حين اختار مبدأه",
+    "أمر النبي ﷺ بتكريمه بأفضل ما تيسر",
+    "لم يتكلف الصحابة ما لم يجدوا",
+    "تذكّره خبّاب بعد سنين بوفاء ومقارنة صادقة"
+   ],
+   "whatToAvoid": [
+    "قياس قيمة الناس بما يتركونه من مال",
+    "الشعور بأن التضحية ضاعت لأن ثمرتها لم تُرَ في الدنيا"
+   ],
+   "reflection": "مات مصعب ولم يجدوا ما يكفي لكفنه، ومع ذلك بقي ذكره بعد قرون. ما تقدمه لله لا يضيع، حتى لو لم تر ثمرته اليوم.",
+   "depth": {
+    "challenges": [
+     "ترك حياة مرفهة في مكة",
+     "الهجرة والعمل في ظروف صعبة",
+     "الاستشهاد دون أن ينال من الدنيا شيئًا"
+    ],
+    "alternatives": [
+     "البقاء في رفاهيته وترك الإسلام",
+     "طلب نصيب من الدنيا مقابل تضحيته",
+     "تكفينه بتكلف فوق المتاح"
+    ],
+    "chose": "اختار مصعب مبدأه حتى النهاية، واختار النبي ﷺ أن يكرّمه بما تيسر: يغطي رأسه ويجعل على رجليه الإذخر.",
+    "notDone": [
+     "لم يتراجع مصعب عن اختياره رغم ما خسر",
+     "لم يتكلف النبي ﷺ ما لا يوجد",
+     "لم يُنسَ مصعب بعد رحيله"
+    ],
+    "lessons": {
+     "self": "لا تقِس قيمتك بما تملك؛ ما تركته لله محفوظ.",
+     "family": "تكريم من رحل من الأسرة يكون بما تيسر، لا بالديون والتكلف.",
+     "work": "قد تختار طريقًا أقل دخلًا لأنه أصدق؛ هذا ليس فشلًا.",
+     "community": "حين تتسع الدنيا، تذكّر من ضحّوا قبلك ولم ينالوا شيئًا."
+    }
+   }
+  },
+  "en": {
+   "title": "Mus‘ab ibn ‘Umayr's shroud: one who left luxury and took nothing from the world",
+   "subCategories": [
+    "Sacrifice",
+    "True worth",
+    "Comparing oneself with others"
+   ],
+   "participants": [
+    "Mus‘ab ibn ‘Umayr",
+    "Khabbab ibn al-Aratt",
+    "The Prophet ﷺ"
+   ],
+   "eventDescription": "Mus‘ab ibn ‘Umayr had been among the most comfortable young men of Makkah, and he left all that when he became Muslim, emigrated, and became the first envoy of Islam to Madinah. He was martyred at Uhud and left nothing but a short striped cloak: when they covered his head his feet showed, and when they covered his feet his head showed, so the Prophet ﷺ told them to cover his head and put some idhkhir grass over his feet. Years later Khabbab remembered him and compared: “Some of us passed on without taking anything of their reward, and some of us have had their fruit ripen and are gathering it.”",
+   "historicalContext": "Mus‘ab was martyred at Uhud in the third year after the Hijra; Khabbab told his story years later, when the world had opened up for the Muslims.",
+   "prophetTraits": [
+    "Mercy",
+    "Loyalty",
+    "Realism"
+   ],
+   "problemType": "Leaving comfort for a principle, then departing without gaining anything of this world",
+   "responseType": "Staying true to principle to the end, and the Prophet ﷺ honouring him with what was available",
+   "emotionsAddressed": [
+    "A sense of unfairness in how worldly things are shared",
+    "Comparing oneself with those who gained more",
+    "Grief for someone who died poor"
+   ],
+   "principles": [
+    "A person's worth is not what they own when they die",
+    "Whoever gives something up for Allah has not lost its reward, even if they never see it in this world",
+    "Honouring the departed with what is available, without strain",
+    "Abundance after hardship calls for humility and remembering those who came before"
+   ],
+   "modernApplications": [
+    "If you gave up a standard of living for a principle, your worth is not measured by what you lost",
+    "Do not compare yourself with those whose “fruit has ripened”; your reward is kept",
+    "If a poor relative dies, honour them as you can without burdening yourself",
+    "If life opens up for you, remember those before you who gained nothing from it"
+   ],
+   "notToApplyTo": [
+    "This does not glorify poverty or abandoning the effort to earn a living",
+    "Nor depriving one's family of their rights in the name of asceticism"
+   ],
+   "keywords": [
+    "I left a good job for my principles",
+    "I sacrificed everything",
+    "he died poor",
+    "others got everything and I didn't",
+    "I gained nothing from this world",
+    "my worth is not my money"
+   ],
+   "semanticTags": [
+    "sacrifice",
+    "asceticism",
+    "worth",
+    "comparison",
+    "loyalty"
+   ],
+   "behaviorObservations": [
+    "Mus‘ab left luxury when he chose his principle",
+    "The Prophet ﷺ had him honoured with the best that was available",
+    "The Companions did not strain for what they did not have",
+    "Khabbab remembered him years later with loyalty and an honest comparison"
+   ],
+   "whatToAvoid": [
+    "Measuring people's worth by the wealth they leave",
+    "Feeling that a sacrifice was wasted because its fruit was not seen in this world"
+   ],
+   "reflection": "Mus‘ab died with not enough cloth for his shroud, yet he is remembered centuries later. What you give for Allah is never lost, even if you do not see its fruit today.",
+   "depth": {
+    "challenges": [
+     "Leaving a life of comfort in Makkah",
+     "Emigrating and working in hard conditions",
+     "Being martyred without gaining anything of this world"
+    ],
+    "alternatives": [
+     "Staying in his comfort and leaving Islam",
+     "Asking for a worldly share in return for his sacrifice",
+     "Shrouding him with strain beyond what was available"
+    ],
+    "chose": "Mus‘ab chose his principle to the end, and the Prophet ﷺ chose to honour him with what was available: cover his head and put idhkhir over his feet.",
+    "notDone": [
+     "Mus‘ab did not go back on his choice despite what he lost",
+     "The Prophet ﷺ did not strain for what did not exist",
+     "Mus‘ab was not forgotten after he died"
+    ],
+    "lessons": {
+     "self": "Do not measure your worth by what you own; what you gave up for Allah is kept.",
+     "family": "Honouring a family member who has died is done with what is available, not with debts and strain.",
+     "work": "You may choose a lower-paid path because it is more honest; that is not failure.",
+     "community": "When life opens up, remember those who sacrificed before you and gained nothing."
+    }
+   }
+  },
+  "figure": {
+   "ar": "مصعب بن عمير رضي الله عنه",
+   "en": "Mus‘ab ibn ‘Umayr"
+  }
+ }
+]

@@ -37,6 +37,9 @@ if(p.lang!=="ur"&&p.lang!=="fa"&&p.ff!=="original")d.style.setProperty("--font-u
       <button class="icon-btn" data-nav="explore" title="الموضوعات" aria-label="الموضوعات">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M14.5 9.5l-2 5-5 2 2-5z"></path></svg>
       </button>
+      <button class="icon-btn" data-nav="seerah" title="إلهام من السيرة" aria-label="إلهام من السيرة">
+        <svg viewBox="0 0 24 24"><path d="M3 18h18"></path><path d="M5 18l5-8 3 4 2-3 4 7"></path><circle cx="16.5" cy="6.5" r="1.8"></circle></svg>
+      </button>
       <button class="icon-btn" data-nav="library" title="مكتبة الآيات والأحاديث" aria-label="المكتبة">
         <svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10v16H5.5A1.5 1.5 0 0 1 4 18.5z"></path><path d="M14 4h4.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H14z"></path></svg>
       </button>
@@ -77,6 +80,7 @@ if(p.lang!=="ur"&&p.lang!=="fa"&&p.ff!=="original")d.style.setProperty("--font-u
 
       <div class="home-themes" id="homeThemes"></div>
       <div class="daily" id="dailyCard"></div>
+      <div class="daily" id="seerahDaily"></div>
 
       <div class="home-foot">
         <div class="divider2"></div>
@@ -113,6 +117,16 @@ if(p.lang!=="ur"&&p.lang!=="fa"&&p.ff!=="original")d.style.setProperty("--font-u
         <button class="explore-tab" id="tabAllSit">كل المواقف (<span id="allCount"></span>)</button>
       </div>
       <div id="exploreBody"></div>
+    </section>
+
+    <!-- SEERAH: inspiration from the Prophet's life, in order -->
+    <section id="screen-seerah" class="screen">
+      <div class="explore-head">
+        <h2>إلهام من السيرة</h2>
+        <p>مواقف من حياة النبي ﷺ مرتبة زمنيًا، ولكل موقف ما جعله صعبًا، والخيارات التي كانت أمامه، وما اختاره، وما امتنع عنه، ودروس لحياتك.</p>
+      </div>
+      <div class="seerah-areas" id="seerahAreas"></div>
+      <div id="seerahBody"></div>
     </section>
 
     <!-- THEME PAGE -->
@@ -275,8 +289,9 @@ if(p.lang!=="ur"&&p.lang!=="fa"&&p.ff!=="original")d.style.setProperty("--font-u
 <script src="js/data-quran-kb.js"></script>
 <script src="js/data-hadith.js"></script>
 <script src="js/data-hadith-kb.js"></script>
-<script src="js/data-evidence.js"></script>
 <script src="js/data-themes.js"></script>
+<script src="js/data-seerah-kb.js"></script>
+<script src="js/data-evidence.js"></script>
 <script src="js/data-life.js"></script>
 <script src="js/data-taxonomy.js"></script>
 <script src="js/data-reading.js"></script>

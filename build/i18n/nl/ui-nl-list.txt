@@ -772,3 +772,22 @@
 812	Voeg je eigen details toe
 813	Resultaten: {0}
 814	Niet automatisch gecontroleerd met een kopie van de bron
+815	Inspiratie uit de Sira
+816	Momenten uit het leven van de Profeet ﷺ in chronologische volgorde. Bij elk: wat het moeilijk maakte, de keuzes die hij had, wat hij koos, waarvan hij afzag, en lessen voor je leven.
+817	Inspiratie van vandaag uit de Sira
+818	Lees het verhaal
+819	Alle momenten op volgorde ›
+820	Mekka
+821	De Hidjra
+822	Medina
+823	Jezelf
+824	Gezin
+825	Werk
+826	Gemeenschap
+827	Wat maakte het moeilijk?
+828	Welke keuzes waren er?
+829	Wat werd er gekozen?
+830	Waarvan werd afgezien?
+831	Lessen voor je leven
+832	Situaties uit je leven die erop lijken
+833	Wanneer:

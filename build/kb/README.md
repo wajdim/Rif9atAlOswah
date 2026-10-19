@@ -55,6 +55,11 @@ Content added this way appears in English in the other 11 languages until it is 
 
 After any change: `verify.py --write`, then `build-tashkeel.js`, `build-en.js <lang>` for each language, and the tests.
 
+**Seerah.** New events go in `seerah/events-*.json` and the depth of existing events in `seerah/depth-*.json`, in Arabic and English. Then run `python -I build/kb/build-seerah.py`.
+- A quotation is never written out: a hadith is `{ref, from, to}`, cut from the source, and must be sahih or hasan; a verse is `{ref, expect}`, pulled from Tanzil.
+- Story elements known only from the Seerah books keep `sourceStrength` «موثق» or «رواية تاريخية», and name those books in `seerahSources`.
+- Output: `js/data-seerah-kb.js`, which appends the events, links them to their themes and attaches the depth.
+
 ## Statuses (in `js/data-evidence.js`)
 
 | Status | Meaning | In answers? |

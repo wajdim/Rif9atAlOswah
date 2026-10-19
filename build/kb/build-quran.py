@@ -21,7 +21,7 @@ def verses(s, a):
     a = str(a).replace("–", "-"); x = a.split("-")
     return [(s, v) for v in range(int(x[0]), int(x[-1]) + 1)]
 have = {}
-for q in app["quran"]:
+for q in [q for q in app["quran"] if not q.get("kb")]:   # generated entries are rebuilt
     for k in verses(SNO[norm_ar(q["s"])], q["a"]): have[k] = q["id"]
 MARKS = re.compile(r"[ً-ْٰۖ-ۭـ]")
 def plain(v):

@@ -208,7 +208,8 @@ var I18N = (function(){
     (window.SITUATIONS || []).forEach(function(s){
       var tr = (C.sit || {})[s.id]; if (!tr) return;
       put(s, tr, ["title","subCategories","participants","eventDescription","historicalContext","prophetTraits","problemType","responseType","emotionsAddressed",
-                  "principles","modernApplications","notToApplyTo","behaviorObservations","whatToAvoid","reflection"]);
+                  "principles","modernApplications","notToApplyTo","behaviorObservations","whatToAvoid","reflection","figure"]);
+      if (tr.depth && s.depth) { var dp = {}; for (var dk in s.depth) dp[dk] = s.depth[dk]; for (var tk in tr.depth) dp[tk] = tr.depth[tk]; s.depth = dp; }
       // الكلمات المفتاحية والوسوم: تُضاف الإنجليزية إلى العربية (البحث يعمل باللغتين)
       if (tr.keywords) s.keywords = tr.keywords.concat(s.keywords);
       if (tr.semanticTags) s.semanticTags = tr.semanticTags.concat(s.semanticTags);

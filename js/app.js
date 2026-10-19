@@ -658,6 +658,55 @@ function openTheme(id){
   showScreen("theme");
 }
 
+/* ---------------- إلهام من السيرة (js/data-seerah-kb.js) ----------------
+   المواقف التي لها «عمق» (depth): زمنها، وما جعلها صعبة، والخيارات، وما اختير، وما امتُنع عنه، ودروس بحسب مجال الحياة. */
+var SEERAH_AREAS=[["all","الكل"],["self","نفسك"],["family","أسرتك"],["work","عملك"],["community","مجتمعك"]];
+var SEERAH_ERAS=[["mecca","مكة"],["hijra","الهجرة"],["medina","المدينة"]];
+var seerahArea="all";
+function seerahEvents(){ return SITUATIONS.filter(function(s){ return s.depth; }).sort(function(a,b){ return a.depth.order-b.depth.order; }); }
+function seerahAreaLabel(k){ for(var i=0;i<SEERAH_AREAS.length;i++) if(SEERAH_AREAS[i][0]===k) return T(SEERAH_AREAS[i][1]); return ""; }
+function seerahCardHTML(s, area){
+  var lesson=area==="all" ? s.depth.chose : (s.depth.lessons||{})[area];
+  return '<div class="seerah-card" data-sit="'+esc(s.id)+'" role="button" tabindex="0"><div class="sc-when">'+esc(s.depth.when)+'</div><div class="sc-title">'+esc(s.title)+'</div>'+
+    '<div class="sc-lesson">'+(area==="all"?'<b>'+T("ماذا اختار؟")+'</b> ':'<b>'+esc(seerahAreaLabel(area))+':</b> ')+esc(lesson||"")+'</div></div>';
+}
+function renderSeerah(){
+  var ev=seerahEvents();
+  qs("seerahAreas").innerHTML=SEERAH_AREAS.map(function(a){ return '<button class="chip'+(seerahArea===a[0]?" active":"")+'" data-seerah-area="'+a[0]+'">'+T(a[1])+'</button>'; }).join("");
+  qs("seerahBody").innerHTML=SEERAH_ERAS.map(function(e){
+    var list=ev.filter(function(s){ return s.depth.era===e[0]; });
+    return list.length ? '<div class="seerah-era"><div class="seerah-era-title">'+T(e[1])+'</div>'+list.map(function(s){ return seerahCardHTML(s, seerahArea); }).join("")+'</div>' : "";
+  }).join("");
+}
+function renderSeerahDaily(){
+  var box=qs("seerahDaily"); if(!box) return;
+  var ev=seerahEvents(); if(!ev.length){ box.innerHTML=""; return; }
+  var day=Math.floor(Date.now()/86400000), s=ev[(day*31)%ev.length], area=["self","family","work","community"][day%4];
+  box.innerHTML='<div class="card"><div class="d-label">'+T("إلهام اليوم من السيرة")+'</div><div class="sc-when">'+esc(s.depth.when)+'</div>'+
+    '<div class="d-text">'+esc(s.title)+'</div><div class="ev-note"><b>'+esc(seerahAreaLabel(area))+':</b> '+esc((s.depth.lessons||{})[area]||"")+'</div>'+
+    '<div class="ev-actions"><button class="mini-btn" data-sit="'+esc(s.id)+'">'+T("اقرأ الموقف")+'</button><button class="mini-btn" data-nav="seerah">'+T("كل المواقف بالترتيب ‹")+'</button></div></div>';
+}
+/* مواقف «500 موقف من الحياة» القريبة من موقف سيرة: عبر الموضوعات المشتركة (js/data-taxonomy.js) */
+function lifeForSit(s){
+  if(!window.TAXONOMY) return [];
+  var th={}; THEMES.forEach(function(t){ if(t.sits.indexOf(s.id)>-1) th[t.id]=1; });
+  return lifeAll().map(function(x){ var k=x.th.filter(function(t){ return th[t]; }).length; return {x:x, k:k+(th[x.th[0]]?1:0)}; })
+    .filter(function(o){ return o.k>=2; }).sort(function(a,b){ return b.k-a.k || a.x.n-b.x.n; }).slice(0,4).map(function(o){ return o.x; });
+}
+function depthSectionsHTML(s, next){
+  var d=s.depth; if(!d) return "";
+  return section(next(),T("ما الذي جعل الموقف صعبًا؟"),list(d.challenges))+
+    section(next(),T("ما الخيارات التي كانت أمامه؟"),list(d.alternatives))+
+    section(next(),T("ماذا اختار؟"),'<div class="section-body">'+esc(d.chose)+'</div>')+
+    section(next(),T("ما الذي امتنع عنه؟"),list(d.notDone));
+}
+function lessonsHTML(s, next){
+  var d=s.depth; if(!d || !d.lessons) return "";
+  return section(next(),T("دروس لحياتك"),'<div class="lesson-grid">'+["self","family","work","community"].map(function(k){
+    return d.lessons[k]?'<div class="lg-item"><div class="lg-label">'+esc(seerahAreaLabel(k))+'</div><div class="lg-text">'+esc(d.lessons[k])+'</div></div>':"";
+  }).join("")+'</div>');
+}
+
 /* ---------------- المكتبة ---------------- */
 var libKind="all", libTheme=null, libLimit=40;
 function renderLibFilters(){
@@ -724,17 +773,21 @@ function openDetail(id){
     foldBarHTML()+'<h2 class="serif detail-title" style="font-size:1.5rem;color:var(--pine-strong);margin:10px 0 6px;line-height:1.6;">'+esc(s.title)+'</h2>'+
     '<div style="font-size:.8rem;color:var(--muted);margin-bottom:12px;">'+esc(T(s.mainCategory))+' · '+esc(s.subCategories.join(T("، ")))+'</div>'+
     (themes.length?'<div class="tag-row" style="margin-bottom:20px;">'+themes.map(function(t){return '<button class="theme-chip" data-theme-open="'+t.id+'">'+iconSvg(t.icon)+esc(t.label)+'</button>';}).join("")+'</div>':"")+
+    (s.depth?'<div class="sc-when" style="margin:-8px 0 14px;">'+T("متى:")+' '+esc(s.depth.when)+'</div>':"")+
     section(++n,T("الواقعة"),'<div class="section-body">'+esc(s.eventDescription)+'</div>')+
     section(++n,T("السياق"),'<div class="section-body">'+esc(s.historicalContext)+'</div><div class="section-body" style="margin-top:8px;font-size:.85rem;color:var(--muted);">'+T("المشاركون:")+' '+esc(s.participants.join(T("، ")))+'</div>')+
+    depthSectionsHTML(s, function(){ return ++n; })+
     section(++n,T("النصوص"),'<div class="card">'+sitEvidenceHTML(s)+'</div>')+
     section(++n,T("ماذا نلاحظ في موقف {0}؟",esc(figureOf(s))),list(s.behaviorObservations))+
     section(++n,T("المبادئ"),list(s.principles))+
     section(++n,T("ماذا نتعلم اليوم؟"),list(s.modernApplications,"steps"))+
+    lessonsHTML(s, function(){ return ++n; })+
     (s.whatToAvoid.length?section(++n,T("ما ينبغي تجنبه"),'<div class="avoid-box">'+list(s.whatToAvoid)+'</div>'):"")+
     (s.notToApplyTo.length?section(++n,T("حدود هذا المثال"),'<div class="limits-box">'+list(s.notToApplyTo)+'</div>'):"")+
     section(++n,T("تأمل"),'<div class="reflection-box">'+esc(s.reflection)+'</div>')+
     (s.contrasts&&s.contrasts.length?section(++n,T("↔ قارن مع موقف مختلف"),s.contrasts.map(function(c){
       var t=RAG.byId("sit",c.id); return t?'<div class="compare-card" data-sit="'+esc(t.id)+'"><div class="c-title">'+esc(t.title)+'</div><div class="c-note">'+esc(c.note)+'</div></div>':"";}).join("")):"")+
+    (function(){ var lf=lifeForSit(s); return lf.length?section(++n,T("مواقف من حياتك تشبهه"),lf.map(function(x){ return lifeItemHTML(x,true); }).join("")):""; })()+
     (rel.length?section(++n,T("مواقف ذات صلة"),rel.map(function(r){
       return '<div class="related-sit" data-sit="'+esc(r.id)+'"><div class="r-label">'+esc(figureOf(r))+' · '+esc(T(r.mainCategory))+'</div><div class="r-title">'+esc(r.title)+'</div></div>';}).join("")):"")+
     section(++n,T("قيّم هذا الموقف"),rateBoxHTML("sit:"+s.id,{kind:"sit",title:s.title,sitId:s.id,prompt:T("قيّم هذا الموقف واترك تعليقك")}))+
@@ -1081,7 +1134,7 @@ function toggleLangMenu(force){
 
 /* ---------------- مفوّض الأحداث العام ---------------- */
 document.addEventListener("click",function(e){
-  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-star],[data-theme-open],[data-focus],[data-nav],[data-sit],[data-life],[data-life-cat],[data-life-sub],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],#segTheme button,#segFs button,#segRate button,#segTk button,#segFf button,[data-setlang],ol.steps li");
+  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-star],[data-theme-open],[data-focus],[data-nav],[data-sit],[data-life],[data-life-cat],[data-life-sub],[data-seerah-area],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],#segTheme button,#segFs button,#segRate button,#segTk button,#segFf button,[data-setlang],ol.steps li");
   if(!el) return;
   if(el.matches("ol.steps li")){ el.classList.toggle("done"); return; }
   if(el.matches(".section.collapsible > .section-title")){ toggleSection(el.parentElement); return; }
@@ -1090,9 +1143,10 @@ document.addEventListener("click",function(e){
   if(el.hasAttribute("data-star")){ setStars(el.closest(".rate-box"), +el.getAttribute("data-star")); return; }
   if(el.hasAttribute("data-focus")){ if(lastAnalysis) runSearch(lastAnalysis.input, el.getAttribute("data-focus")); return; }
   if(el.hasAttribute("data-theme-open")){ closeDetail(true); openTheme(el.getAttribute("data-theme-open")); return; }
-  if(el.hasAttribute("data-nav")){ var nv=el.getAttribute("data-nav"); closeDetail(true); if(nv==="library") renderLibrary(); if(nv==="saved") renderSaved(); showScreen(nv); return; }
+  if(el.hasAttribute("data-nav")){ var nv=el.getAttribute("data-nav"); closeDetail(true); if(nv==="library") renderLibrary(); if(nv==="saved") renderSaved(); if(nv==="seerah") renderSeerah(); showScreen(nv); return; }
   if(el.hasAttribute("data-sit")){ openDetail(el.getAttribute("data-sit")); return; }
-  if(el.hasAttribute("data-life")){ openLife(el.getAttribute("data-life")); return; }
+  if(el.hasAttribute("data-life")){ closeDetail(true); openLife(el.getAttribute("data-life")); return; }
+  if(el.hasAttribute("data-seerah-area")){ seerahArea=el.getAttribute("data-seerah-area"); renderSeerah(); return; }
   if(el.hasAttribute("data-life-cat")){ lifeCat=el.getAttribute("data-life-cat")||null; lifeSub=null; renderExploreBody(""); window.scrollTo(0,qs("exploreBody").offsetTop-80); return; }
   if(el.hasAttribute("data-life-sub")){ lifeSub=el.getAttribute("data-life-sub"); renderExploreBody(""); window.scrollTo(0,qs("exploreBody").offsetTop-80); return; }
   if(el.hasAttribute("data-save")){ var sv=el.getAttribute("data-save").split(":"); toggleSave(sv[0], sv.slice(1).join(":")); return; }
@@ -1154,7 +1208,7 @@ document.addEventListener("click",function(e){
 document.addEventListener("keydown",function(e){
   if(e.key==="Enter" && e.target && e.target.id==="aiFollow"){ followUpAI(); }
   if((e.key==="Enter"||e.key===" ") && e.target && e.target.matches && e.target.matches(".section.collapsible > .section-title")){ e.preventDefault(); toggleSection(e.target.parentElement); }
-  if(e.key==="Enter" && e.target && e.target.matches && e.target.matches(".sit-item")){ openDetail(e.target.getAttribute("data-sit")); }
+  if(e.key==="Enter" && e.target && e.target.matches && e.target.matches(".sit-item,.seerah-card")){ openDetail(e.target.getAttribute("data-sit")); }
   if(e.key==="Enter" && e.target && e.target.matches && e.target.matches(".life-item")){ openLife(e.target.getAttribute("data-life")); }
   if(e.key==="Escape" && TTS.state()!=="idle" && !qs("detailPanel").classList.contains("open")){ TTS.stop(); return; }
   if(e.key==="Escape"){ toggleLangMenu(false); if(!qs("settingsModal").hidden){ cancelSettings(); return; } if(qs("detailPanel").classList.contains("open")) closeDetail(); document.querySelectorAll(".modal-overlay").forEach(function(m){m.hidden=true;}); }
@@ -1164,7 +1218,7 @@ document.addEventListener("keydown",function(e){
 document.addEventListener("DOMContentLoaded",function(){
   try{ history.replaceState({screen:"home"},""); }catch(e){}
   I18N.applyStatic(document);
-  renderHome(); renderStats(); renderExploreBody("");
+  renderHome(); renderStats(); renderExploreBody(""); renderSeerahDaily();
   qs("btnSearch").addEventListener("click",function(){ runSearch(qs("userInput").value); });
   qs("userInput").addEventListener("keydown",function(e){ if(e.key==="Enter"&&(e.ctrlKey||e.metaKey)) runSearch(qs("userInput").value); });
   qs("userInput").addEventListener("input",function(){ var l=qs("userInput").value.length; qs("charCount").textContent=l?l+" / 3000":T("لن يُحفظ ما تكتبه"); });

@@ -21,7 +21,7 @@ The user writes freely about a situation, such as a conflict, a loss, guilt or a
 
 1. **Understands the text.** It works out the themes, feelings, relationships and safety signals, in Arabic (formal or dialect), English, French, Dutch, Spanish, Portuguese, Urdu, Indonesian, Turkish, German, Malay, Persian or Bengali. Crisis signals always come first.
 2. **Retrieves material** from a curated library:
-   - 115 Prophetic situations
+   - 126 Prophetic situations. 35 key Seerah events also have a "depth" layer: when it happened, what made it hard, the options, what was chosen, what was refrained from, and lessons for self, family, work and community
    - 63 life topics
    - 623 everyday life situations: the 500 of the source collection plus 123 written for topics it does not cover. They help understand the user's message and can be browsed; they are never shown as religious text
    - 322 verse entries (Tanzil text)
@@ -41,6 +41,11 @@ Every quoted text comes unchanged from the library; nothing is generated.
 When the engine finds no clear topic, the result offers nearby topics as buttons. Picking one re-runs the analysis focused on it (`RAG.analyze(text, {focus})`). A picked topic never overrides crisis signals and never raises the match to "strong".
 
 **Browse life situations** (Explore → Life situations) is the other way in: 8 categories → 52 subcategories → 623 situations. Opening one runs the same reading, but with the situation's hand-classified topics and feelings instead of guessing them from the text (`RAG.analyze(text, {sit})`); the result names the subcategory and what a person in that situation usually needs, with a button to add one's own details. Search matches word forms and falls back to the topic the engine understands from the query. Labels and situation texts are in Arabic and English; the other languages show English until they are translated.
+
+**Inspiration from the Seerah** (the mountain icon) lists those 35 events in order: Makkah, the Hijra, Madinah.
+- The life-area chips (yourself, family, work, community) switch the lesson shown on each card.
+- The home screen shows one event a day.
+- Every event page adds the depth sections and links to similar everyday situations from the taxonomy.
 
 **My situations** is an optional journal. "Save to My situations" keeps the user's own text on the device (`rifqa.journal` in localStorage), and the Saved screen lists it so the reading can be reopened or deleted.
 
@@ -87,6 +92,7 @@ docs/           GitHub Pages: landing page, interactive user guide (guide.html),
 | Situation taxonomy | `node build/taxonomy/build.js [--check]` | validates the TSV sources and writes `js/data-taxonomy.js` |
 | Taxonomy test | `node build/tests/test-taxonomy.js [-v]` | browse consistency, no crisis false alarms, phrase understanding |
 | Evidence verification | `python -I build/kb/verify.py --write` (sources: `build/kb/fetch.py`) | `build/kb/REPORT.md`, `js/data-evidence.js` |
+| Seerah layer | `python -I build/kb/build-seerah.py` (sources `build/kb/seerah/*.json`) + `node build/tests/test-seerah.js` | `js/data-seerah-kb.js` |
 | Evidence integrity test | `node build/tests/test-evidence.js` | every quotation verified for exactly the text that ships |
 | Single-file HTML | `node build/bundle-html.js dist/RifqaAlUswa.html` | – |
 

@@ -3,10 +3,14 @@
 const fs = require("fs"), path = require("path");
 const LANG = process.argv[2], QUIET = process.argv.includes("--quiet");
 if (!/^(nl|es|pt|fr|ur|id|tr|de|ms|fa|bn)$/.test(LANG || "")) { console.error("usage: check-lang.js <nl|es|pt|fr|ur|id|tr|de|ms|fa|bn>"); process.exit(2); }
-const load = dir => { const out = {}; if (!fs.existsSync(dir)) return out;
-  for (const f of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) { const d = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")); for (const k in d) Object.assign(out[k] = out[k] || {}, d[k]); }
+// content/*-kb.json = content added from the sources (build/kb): shown in English until translated, so it is
+// reported as "pending translation", not as a problem
+const load = (dir, kb) => { const out = {}; if (!fs.existsSync(dir)) return out;
+  for (const f of fs.readdirSync(dir).filter(f => f.endsWith(".json") && (kb === undefined || /-kb\.json$/.test(f) === kb)).sort()) { const d = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")); for (const k in d) Object.assign(out[k] = out[k] || {}, d[k]); }
   return out; };
-const EN = load(path.join(__dirname, "content")), L = load(path.join(__dirname, LANG, "content"));
+const EN = load(path.join(__dirname, "content"), false), KB = load(path.join(__dirname, "content"), true), L = load(path.join(__dirname, LANG, "content"));
+let pending = 0;
+for (const k of Object.keys(KB)) for (const id of Object.keys(KB[k])) if (!(L[k] || {})[id] || (k === "sit" && KB[k][id].depth && !((L[k] || {})[id] || {}).depth)) pending++;
 const bad = [], stat = {};
 const need = (cond, msg) => { if (!cond) bad.push(msg); };
 
@@ -64,6 +68,7 @@ for (const k of missUi) bad.push("ui missing: " + k.slice(0, 50));
 for (const k of Object.keys(ui)) if (/\{\d\}/.test(uiE[k] || "")) { const a = (uiE[k].match(/\{\d\}/g) || []).sort().join(), b = (ui[k].match(/\{\d\}/g) || []).sort().join(); need(a === b, "ui placeholders differ: " + k.slice(0, 50)); }
 stat.ui = (Object.keys(uiE).length - missUi.length) + "/" + Object.keys(uiE).length;
 
-console.log("[" + LANG + "] " + Object.entries(stat).map(([k, v]) => k + " " + v).join(" · ") + (bad.length ? "  ✗ " + bad.length + " problems" : "  ✓ complete"));
+console.log("[" + LANG + "] " + Object.entries(stat).map(([k, v]) => k + " " + v).join(" · ") + (bad.length ? "  ✗ " + bad.length + " problems" : "  ✓ complete") +
+  (pending ? " · pending translation (build/kb, shown in English): " + pending : ""));
 if (bad.length && !QUIET) console.log(bad.slice(0, 40).map(x => "  - " + x).join("\n") + (bad.length > 40 ? "\n  … +" + (bad.length - 40) : ""));
 process.exit(bad.length ? 1 : 0);

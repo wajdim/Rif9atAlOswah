@@ -272,6 +272,23 @@ ol.steps li::before{
 .sit-item .s-teaser{font-size:.82rem; color:var(--muted); margin-top:5px; line-height:1.8;}
 .sit-item .s-badges{margin-top:9px;}
 
+/* ---------- Inspiration from the Seerah ---------- */
+.seerah-areas{display:flex; flex-wrap:wrap; gap:8px; max-width:var(--maxw); margin:14px auto 0; padding:0 18px;}
+.seerah-era{max-width:var(--maxw); margin:22px auto 0; padding:0 18px; display:flex; flex-direction:column; gap:10px;}
+.seerah-era-title{font-size:.8rem; font-weight:800; color:var(--gold); letter-spacing:.3px;}
+.seerah-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:14px 16px; cursor:pointer; transition:.15s; border-inline-start:3px solid var(--gold-soft);}
+.seerah-card:hover, .seerah-card:focus-visible{border-color:var(--gold);}
+.sc-when{font-size:.72rem; color:var(--gold); font-weight:800; margin-bottom:3px;}
+.sc-title{font-weight:700; color:var(--pine-strong); font-size:.95rem; line-height:1.7;}
+.sc-lesson{font-size:.84rem; color:var(--ink-soft); margin-top:6px; line-height:1.85;}
+.sc-lesson b{color:var(--pine);}
+.lesson-grid{display:grid; grid-template-columns:1fr; gap:10px;}
+@media(min-width:560px){.lesson-grid{grid-template-columns:1fr 1fr;}}
+.lg-item{background:var(--bg); border-radius:var(--radius-md); padding:12px 14px;}
+.lg-label{font-size:.74rem; font-weight:800; color:var(--gold); margin-bottom:4px;}
+.lg-text{font-size:.88rem; color:var(--ink); line-height:1.85;}
+.seerah-era:last-child{padding-bottom:60px;}
+
 /* ---------- Life situations browse (category → subcategory → situation) ---------- */
 .life-wrap{max-width:var(--maxw); margin:18px auto 0; padding:0 18px 60px; display:flex; flex-direction:column; gap:10px;}
 .life-wrap .topic-grid{margin-top:4px;}
