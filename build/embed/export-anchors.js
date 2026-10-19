@@ -15,7 +15,7 @@ for (const l of ["en", "fr", "nl", "es", "pt", "ur", "id", "tr", "de", "ms", "fa
   const G = load(l);
   G.THEMES.forEach(t => { out.themes[t.id][l] = { label: t.label, triggers: t.triggers.filter(x => !/[ء-ي]/.test(x) || l === "ur" || l === "fa") }; });
 }
-const ex = path.join(__dirname, "exemplars.json");
+const ex = path.join(__dirname, "..", "taxonomy", "theme-phrases.json");
 out.exemplars = fs.existsSync(ex) ? JSON.parse(fs.readFileSync(ex, "utf8")) : {};
 fs.writeFileSync(path.join(__dirname, "anchors.json"), JSON.stringify(out));
 console.log("themes", Object.keys(out.themes).length, "life", out.life.length, "exemplars", Object.keys(out.exemplars).length);

@@ -1,0 +1,13 @@
+{
+ "date": "2026-10-19",
+ "messages": 159,
+ "scores": {
+  "top1": 0.7564,
+  "top3": 0.8654,
+  "none": 0.044,
+  "emotion": 0.7879,
+  "vague": 0.6667,
+  "evidence": 0.9114,
+  "citations": 1
+ }
+}

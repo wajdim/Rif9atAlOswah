@@ -195,6 +195,22 @@ function hadithHTML(h, via){
     '<div class="evidence-meta">'+T("الراوي:")+' '+esc(h.r)+' — '+esc(I18N.src(h.src))+'</div><div class="ev-note">'+esc(h.n)+'</div>'+themeTags(via)+
     '<div class="ev-actions"><button class="mini-btn" data-copy="«'+esc(hText(h.t))+'»'+(EN&&h.te?esc("\n“"+h.te+"”"):"")+' — '+esc(I18N.src(h.src))+' ('+esc(I18N.grade(h.g))+')">'+T("نسخ")+'</button>'+saveBtn("hadith",h.id)+'</div></div>';
 }
+/* تمييز دقيق (js/data-distinctions.js): ليس…/بل…، علامات للتمييز، وأدلته من المكتبة الموثقة بمعرّفاتها، ومواقف من السيرة */
+function distinctionHTML(x){
+  var d=x.d, c=(EN?d.en:d.ar)||d.ar;
+  var ev=(d.evidence||[]).map(function(id){
+    var q=RAG.byId("quran",id), h=q?null:RAG.byId("hadith",id);
+    return q?ayahHTML(q,[]):h?hadithHTML(h,[]):"";
+  }).join("");
+  var sits=(d.sits||[]).map(function(id){ return RAG.byId("sit",id); }).filter(Boolean);
+  return '<div class="distinction"><div class="ds-title">'+esc(c.title)+'</div>'+
+    '<div class="ds-row ds-not"><b>'+T("ليس:")+'</b> '+esc(c.not)+'</div>'+
+    '<div class="ds-row ds-is"><b>'+T("بل:")+'</b> '+esc(c.is)+'</div>'+
+    (c.signs&&c.signs.length?'<div class="dim-label" style="margin-top:10px;">'+T("أسئلة تساعدك على التمييز")+'</div>'+list(c.signs):"")+
+    (ev?'<details class="ds-ev"><summary>'+T("الأدلة")+'</summary><div class="ev-list">'+ev+'</div></details>':"")+
+    (sits.length?'<div class="mini-sits">'+sits.map(function(s){ return '<button class="mini-sit" data-sit="'+esc(s.id)+'"><div class="ms-fig">'+esc(figureOf(s))+'</div><div class="ms-title">'+esc(s.title)+'</div></button>'; }).join("")+'</div>':"")+
+    '</div>';
+}
 function duaHTML(d){
   var it=d.item, isQ=d.kind==="quran";
   return '<div class="dua-card"><div class="dw">'+esc(it.w||(isQ?T("دعاء قرآني"):T("ذكر مأثور")))+'</div><div class="dt" '+(isQ?'data-q="'+esc(it.s)+'|'+esc(it.a)+'"':AR_VOICE)+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":esc(hText(it.t)))+'</div>'+
@@ -352,6 +368,11 @@ function renderResult(a, flags){
   if(a.insights.length){
     out+=section(++n,T("المنظور القرآني والنبوي لحالتك"), a.insights.map(function(x){
       return '<div class="insight"><div class="i-label">'+esc(x.label)+'</div>'+insightLines(x.text)+'</div>'; }).join(""));
+  }
+
+  // 2ب) تمييز دقيق حين يقف صاحب الرسالة عند مفترق يكثر فيه الخلط
+  if((u.distinctions||[]).length && !flags.selfHarm){
+    out+=section(++n,T("تمييز مهم في حالتك"), u.distinctions.map(distinctionHTML).join(""));
   }
 
   // 3) الموقف الأقرب

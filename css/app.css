@@ -102,6 +102,14 @@ button:focus-visible, .chip:focus-visible, textarea:focus-visible, input:focus-v
 
 .insight{background:var(--pine-soft); border-radius:var(--radius-md); padding:16px 17px; margin-bottom:12px;}
 .insight .i-label{font-size:.74rem; font-weight:800; color:var(--gold); margin-bottom:6px;}
+.distinction{border:1px solid var(--border); border-radius:var(--radius-md); padding:15px 16px; margin-bottom:12px; background:var(--surface);}
+.distinction .ds-title{font-weight:800; color:var(--pine-strong); margin-bottom:8px; line-height:1.7;}
+.distinction .ds-row{font-size:.93rem; line-height:1.95; margin-bottom:6px;}
+.distinction .ds-not b{color:var(--clay);}
+.distinction .ds-is b{color:var(--pine-strong);}
+.distinction .ds-ev{margin-top:10px;}
+.distinction .ds-ev summary{cursor:pointer; font-weight:700; color:var(--gold); font-size:.85rem;}
+.distinction .mini-sits{margin-top:10px;}
 .insight .i-text{font-size:.94rem; line-height:2.05; color:var(--ink);}
 
 .mini-sits{display:grid; grid-template-columns:1fr; gap:10px; margin-top:12px;}

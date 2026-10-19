@@ -71,6 +71,9 @@ subs.forEach((s,id)=>{ if((per[id]||0)<4) err("subcategory "+id+" has only "+(pe
 const reach=new Set(); LIFE.forEach(x=>x.th.forEach(t=>reach.add(t))); EXTRA.forEach(x=>x.th.forEach(t=>reach.add(t)));
 themeIds.forEach(t=>{ if(!reach.has(t)) err("theme "+t+" is not linked to any situation"); });
 
+// theme phrases: natural first-person sentences per theme (Arabic incl. dialects, English), used as extra examples
+const PHRASES=JSON.parse(fs.readFileSync(path.join(HERE,"theme-phrases.json"),"utf8"));
+Object.keys(PHRASES).forEach(t=>{ if(!themeIds.has(t)) err("theme-phrases.json: unknown theme "+t); if(!Array.isArray(PHRASES[t])||PHRASES[t].length<3) err("theme-phrases.json: "+t+" needs at least 3 phrases"); });
 const total=Object.keys(X).length+EXTRA.length;
 console.log("situations: "+total+" ("+Object.keys(X).length+" from the PDF + "+EXTRA.length+" new) · "+tax.cats.length+" categories · "+subs.size+" subcategories");
 if(warnings.length) console.log("warnings ("+warnings.length+"):\n  "+warnings.join("\n  "));
@@ -86,6 +89,7 @@ const out=`/* ==================================================================
    - LIFE_X: enrichment of the 500 situations in js/data-life.js (whose text stays identical to the PDF):
        sub (subcategory), em (emotions, ids of EMOTION_LEXICON), need (SIT_NEEDS ids),
        en (English text), ph (possible user phrases: [Arabic, English]).
+   - THEME_PHRASES: natural first-person phrases per theme (understanding only: extra examples for the matcher).
    - LIFE_EXTRA: situations written for this app (n ≥ 501), same fields plus t (Arabic) and th (themes).
    No religious text lives here: evidence is reached only through the themes (th) and their verified sources.
    ====================================================================== */
@@ -94,6 +98,7 @@ var SIT_NEEDS = ${J(tax.needs)};
 var LIFE_X = {
 ${Object.keys(X).map(n=>J(String(n))+":"+J(X[n])).join(",\n")}
 };
+var THEME_PHRASES = ${J(PHRASES)};
 var LIFE_EXTRA = [
 ${EXTRA.map(x=>J(x)).join(",\n")}
 ];

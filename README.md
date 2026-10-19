@@ -38,6 +38,10 @@ The user writes freely about a situation, such as a conflict, a loss, guilt or a
 
 Every quoted text comes unchanged from the library; nothing is generated.
 
+**Distinctions.** Some situations sit at a point where two things are easily confused: forgiveness and accepting ongoing harm, patience and passivity, reliance on Allah and inaction, humility and humiliation, justice and revenge, anger for justice and anger for pride, disagreement and severing ties, and seven more (`js/data-distinctions.js`, 14 in all). When a message stands at one of them, the result adds a card: what it is not, what it is, questions that help tell the two apart, and the evidence. The evidence is referenced by library id only, so the card can only show verified verses and hadith, plus related Seerah events. Detection uses NLU concepts, explicit phrases, or the message's main topics together with a cue phrase. No card is shown alongside crisis signals.
+
+**Ranking.** Topic scores combine word matches, NLU concepts, the life situations, and short natural phrases written for each topic (`build/taxonomy/theme-phrases.json`, matched but never shown). A light reranker lets a specific issue (an insult, a betrayal, a debt) come before the context it happened in (parents, marriage, work) when both are present. The weights are in `TUNE` in `js/rag.js`. They are tuned only on the development set (`node build/tests/tune.js`); the held-out set is never used for tuning.
+
 When the engine finds no clear topic, the result offers nearby topics as buttons. Picking one re-runs the analysis focused on it (`RAG.analyze(text, {focus})`). A picked topic never overrides crisis signals and never raises the match to "strong".
 
 **Browse life situations** (Explore → Life situations) is the other way in: 8 categories → 52 subcategories → 623 situations. Opening one runs the same reading, but with the situation's hand-classified topics and feelings instead of guessing them from the text (`RAG.analyze(text, {sit})`); the result names the subcategory and what a person in that situation usually needs, with a button to add one's own details. Search matches word forms and falls back to the topic the engine understands from the query. Labels and situation texts are in Arabic and English; the other languages show English until they are translated.
@@ -64,6 +68,7 @@ js/
                 user phrases (Arabic incl. dialects + English); plus situations 501+ (see build/taxonomy/)
   nlu.js        pre-understanding: Arabizi → Arabic, English spelling, concepts, safety tiers, vague distress
   data-nlu.js   its data: multilingual/dialect concepts, crisis and soft-risk phrases and rules (never shown)
+  data-distinctions.js  14 distinctions (forgiveness vs. ongoing harm, patience vs. passivity…): text in ar/en, evidence by library id, detection rules
 build/
   android/      Android wrapper (WebView), build-android.sh → signed AAB + APK, no Gradle needed
   play/         Google Play listing (13 languages, graphics, generators) + publishing guide
@@ -88,12 +93,15 @@ docs/           GitHub Pages: landing page, interactive user guide (guide.html),
 | Engine test | `node build/tests/test-engine.js` | – |
 | Understanding and safety gate | `node build/tests/test-understanding.js [-v]` | fails if crisis detection or topic accuracy regresses |
 | Benchmark (355 messages, dialects, Arabizi, typos…) | `node build/tests/bench.js [-v] [--gate]` | per-dimension scores; `--gate` fails on regression |
+| Development benchmark (159 messages, used for tuning) | `node build/tests/bench.js --set dev [-v]` | per-dimension scores |
+| Weight tuning (dev set only, main set may not drop more than one message) | `node build/tests/tune.js` | prints the best `TUNE` values for `js/rag.js` |
 | Held-out benchmark (never tuned on) | `node build/tests/bench.js --set holdout [-v]` | measures generalisation |
 | Situation taxonomy | `node build/taxonomy/build.js [--check]` | validates the TSV sources and writes `js/data-taxonomy.js` |
 | Taxonomy test | `node build/tests/test-taxonomy.js [-v]` | browse consistency, no crisis false alarms, phrase understanding |
 | Evidence verification | `python -I build/kb/verify.py --write` (sources: `build/kb/fetch.py`) | `build/kb/REPORT.md`, `js/data-evidence.js` |
 | Seerah layer | `python -I build/kb/build-seerah.py` (sources `build/kb/seerah/*.json`) + `node build/tests/test-seerah.js` | `js/data-seerah-kb.js` |
 | Evidence integrity test | `node build/tests/test-evidence.js` | every quotation verified for exactly the text that ships |
+| Distinctions test | `node build/tests/test-distinctions.js` | evidence ids in the verified library, ar/en complete, detection and false alarms |
 | Single-file HTML | `node build/bundle-html.js dist/RifqaAlUswa.html` | – |
 
 `TOOLS` must contain:

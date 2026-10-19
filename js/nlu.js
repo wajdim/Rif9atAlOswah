@@ -39,6 +39,7 @@ var NLU = (function(){
     return f.indexOf(pw.w) > -1;
   }
   /* a phrase: list of {w, star}; matches consecutive user tokens */
+  var PH_CACHE = {};
   function compile(phrase){
     var parts = String(phrase).trim().split(/\s+/).map(function(x){ return {w: norm(x.replace(/\*$/, "")), star: /\*$/.test(x)}; })
       .filter(function(p){ return p.w; });
@@ -292,5 +293,6 @@ var NLU = (function(){
     return {cue: vague || "", ids: ids.slice(0, 5)};
   }
   return {prepare: prepare, safety: safety, concepts: concepts, interpret: interpret,
+          phrase: function(tokens, ph){ build(); var c = PH_CACHE[ph] || (PH_CACHE[ph] = compile(ph)); return c.parts.length ? findPhrase(tokens, c) : null; },
           _skel: function(t){ build(); return {latin: latClass(t, false), vowels: latClass(t, true), word: arabiziWord(t)}; }};
 })();

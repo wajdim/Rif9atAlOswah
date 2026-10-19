@@ -20,7 +20,7 @@ but not betrayal from slander from heartbreak, which are exactly the distinction
 The gains come from curated understanding data (concepts, dialect vocabulary, user phrases per situation) instead.
 
 What we keep:
-- `exemplars.json`: natural first-person phrases per theme (Arabic, including dialects, and English). They feed the
+- `../taxonomy/theme-phrases.json` (formerly `exemplars.json`, now shipped as THEME_PHRASES): natural first-person phrases per theme (Arabic, including dialects, and English). They feed the
   situation taxonomy as "possible user phrases".
 - The scripts, so the experiment can be re-run when a better small multilingual model appears.
 

@@ -225,7 +225,73 @@ concepts: [
   {id:"burden", th:{despair:1, self_worth:0.6}, all:[["burden","عبء","عاله","حمل ثقيل","ثقل على"]]},
   {id:"no_way_out", th:{despair:1.5}, emo:["despair"], all:[
     ["no way out","can t see any way out","cant see any way out","لا مخرج","ما فماش حل","ما في حل","مسدوده","no point","pointless","ما فماش فايده","ما فماش حتى فايده","لا فائده","لا فايده",
-     "ما في فايده","ما عاد في شي يستاهل","ما عاد شي يستاهل","what s the point","whats the point","nothing matters","hopeless"]]}
+     "ما في فايده","ما عاد في شي يستاهل","ما عاد شي يستاهل","what s the point","whats the point","nothing matters","hopeless"]]},
+  /* ---------- Phase 5: ways of saying things the engine missed (general vocabulary, not single messages) ---------- */
+  {id:"name_calling", th:{insult:1.6}, emo:["shame"], all:[
+    ["calls me","called me","call me","calling me","says i m","said i was","يسميني","يقول لي","يقولي","يقللي","تقول لي","تقولي","ينعتني","تنعتني","يناديني","قالي","قالت لي","تقلي","يقولولي","يوصفني","تصفني","يصفني"],
+    ["stupid","idiot","useless","worthless","dumb","fat","ugly","loser","failure","غبي*","حمار*","تافه*","فاشل*","بهيم*","مكلخ*","بليد*","ما تسواش","ما تسوى","لا تساوي","ما تنفع","ما تصلحش","معاق"]]},
+  {id:"wish_them_suffer", th:{revenge:1.6, anger:0.5}, emo:["anger"], all:[
+    ["want him","want her","want them","want to see him","wish he","wish she","make him","make her","make them","اريده ان","اريدها ان","بدي ياه","نحبو","نحبها","اتمنى ان","يجب ان","لازم"],
+    ["suffer*","pay for","feel the pain","hurt like","regret it","يتعذب","تتعذب","يتالم","تتالم","يندم","تندم","يدفع الثمن","تدفع الثمن","يذوق","تذوق","يحس باللي","يقاسي"]]},
+  {id:"pay_back", th:{revenge:1.5}, emo:["anger"], all:[
+    ["get back at","pay him back","pay her back","get even","take revenge","ارد له","ارد لها","نرد عليه","نرد عليها","ارد الصاع","نرد الصاع","اخذ حقي بيدي","انتقم*","نخلص منه","ادفعه الثمن"]]},
+  {id:"disaster", th:{emergency:1.6}, emo:["fear"], all:[
+    ["fire","flood*","earthquake","house burned","caught fire","burned down","car accident","crash","حريق","احترق*","اتحرق","فيضان","فيضانات","سيول","زلزال","حادث","انهار البيت","غرق البيت","طاحت الدار"]]},
+  {id:"procrastination", th:{laziness:1.6}, all:[
+    ["procrastinat*","oversleep","sleep until noon","sleep till noon","waste my day","wasting my days","waste my time","can t get started","انام الى الظهر","انام للظهر","انام حتى الظهر","نرقد للظهر","اضيع يومي","اضيع وقتي","نضيع وقتي","نضيع نهاري","لا انجز","ما ننجز","تسويف","اسوف","اؤجل كل","نأجل كل","نفس الشي كل نهار"]]},
+  {id:"proposal", th:{marriage_seek:1.6}, all:[
+    ["proposed to me","marriage proposal","asked for my hand","a suitor","تقدم لي","تقدم لخطبتي","تقدملي","تقدم لخطبه","خطبني","جاني خطيب","جاء خاطب","عريس","طلب يدي","يبي يخطبني","يحب يخطبني","طلب الزواج مني"]]},
+  {id:"marriage_pressure", th:{marriage_seek:1.4, parents:0.6}, all:[
+    ["pressure to marry","pressuring me to marry","want me to get married","يبوني اتزوج","يبوني اعرس","يريدون ان اتزوج","يضغطون علي للزواج","يحبوني نعرس","بدهم يجوزوني","عايزين يجوزوني","يزوجوني"]]},
+  {id:"feel_superior", th:{arrogance:1.6}, all:[
+    ["i look down on","i feel superior","better than them","التعالي","اتعالى","نتعالى","متكبر","تكبر","اتكبر","غرور","مغرور*","انا احسن منهم","افضل منهم"]]},
+  {id:"amanah_breach", th:{trust_amanah:1.6}, emo:["guilt"], all:[
+    ["entrusted","asked me to keep","kept for him","kept for her","حفظه له","احفظه له","احفظها له","امانه عندي","اعطاني امانه","ائتمنني","تركه عندي","عطاني نحفظ"],
+    ["spent","used some","used part","took some","صرفت","استعملت","اخذت منه","تصرفت فيه","صرفت جزء","صرفت منه"]]},
+  {id:"retirement", th:{transition:1.6}, all:[["retired","retirement","تقاعدت","التقاعد","متقاعد*","خرجت للتقاعد","طلعت للريتريت","تقاعد"]]},
+  {id:"pet", th:{animals:1.4, grief:0.4}, all:[["my cat","my dog","my bird","my pet","قطتي","قطي","كلبي","قطوسي","عصفوري","حيواني","قطوستي","بسيستي"]]},
+  {id:"authority_abuse", th:{oppressor_power:1.5, injustice:0.6}, emo:["fear"], all:[
+    ["police*","officer","landlord","the authorities","official","border guard","الشرطي","الشرطه","البوليس","بوليس","صاحب الدار","صاحب البيت","مالك العقار","المسؤول","الموظف","العسكري","الحاكم"],
+    ["threat*","took my","bribe","unjust*","report me","evict","يهدد*","اخذ مني","رشوه","ظلم*","يبتزني","بلا حق","ظلما","يطردني","يشتكي بي","يبلغ عني"]]},
+  {id:"ungrateful_raised", th:{ungrateful:1.6}, emo:["betrayal"], all:[
+    ["i raised","brought them up","i took care of them","ربيت","ربيتهم","كبرتهم","صرفت عليهم","تعبت عليهم","رعيتهم"],
+    ["don t ask about me","never call","never visit","forgot me","لا يسألون","ما يسالوش","نسوني","لا يزورونني","ما يزوروش","ما عادوش يسألو","لا يتصلون"]]},
+  {id:"envy_milestones", th:{envy:1.3, comparison:0.8}, emo:["jealousy"], all:[
+    ["engaged","married","getting married","pregnant","promoted","تزوجت","تزوج","خطبت","انجبت","حامل","ترقى","تترقى","نجح"],
+    ["bitter","jealous","envious","resent*","it hurts to see","اتضايق","يقهرني","تقهرني","اغار","احسد","تحرقني","حره","حرقه","ما نحبش نشوف"]]},
+  {id:"running_on_empty", th:{burnout:1.6}, emo:["exhaustion"], all:[
+    ["nothing left to give","running on empty","burned out","burnt out","no energy left","so drained","ما عاد فيني حيل","ما عندي طاقه","استنزفت","مستنزف*","مهدود","ما بقى فيا جهد","خلصت طاقتي","ما عادش نقدر"]]},
+  {id:"futility", th:{despair:1.3, hope:0.4}, emo:["despair"], all:[
+    ["why bother","never works out","nothing ever works","always fail","everything fails","كل شيء يفشل","ما ينجح شي","ما في شي ينجح","كل محاولاتي تفشل","ابواب مغلقه","كل الابواب مغلقه","كل الابواب مسدوده"]]},
+  {id:"spouse_contacts", th:{jealousy_spouse:1.6}, emo:["jealousy"], all:[
+    ["my wife","my husband","زوجتي","زوجي","مرتي","راجلي","جوزي","مراتي"],
+    ["texts","messages","talks to","chats with","other men","other women","coworkers","يكلم","تكلم","يحكي مع","تحكي مع","يراسل","تراسل","زميلاته","زملاءها","زملائها","البنات","الرجال","رجال"],
+    ["furious","jealous","can t stand","angry","drives me crazy","upset","اغار","يجنني","تجنني","اتعصب","نتغشش","ما نتحملش","يقهرني","نغير"]]},
+  {id:"prayer_doubt", th:{waswasa:1.6}, all:[
+    ["هل نويت","هل صليت","اعيد الصلاه","اعيدها","اعيد الوضوء","نعاود الصلاه","repeat my prayer","redo my prayer","not sure if my prayer","not sure if i prayed","شك في الصلاه","اشك في صلاتي","اشك هل","نشك في"]]},
+  {id:"explicit_content", th:{desire:1.3, addiction:1.0}, emo:["guilt"], all:[
+    ["مقاطع محرمه","المقاطع المحرمه","مواقع اباحيه","اباحي*","افلام اباحيه","افلام قذره","porn*","explicit videos","adult content","haram videos","العاده السريه","masturbat*","صور عاريه","الافلام الخليعه"]]},
+  {id:"quran_neglect", th:{faith_weak:1.5}, all:[
+    ["لا افتح المصحف","ما نفتحش المصحف","هجرت القران","بطلت نقرا القران","تركت القران","نسيت القران","stopped reading quran","haven t opened the quran","nothing when i pray","don t feel anything when i pray","dont feel anything when i pray","قلبي قاسي","قلبي بارد"]]},
+  {id:"layoffs", th:{work:1.0, anxiety:0.9, rizq:0.6}, emo:["fear"], all:[
+    ["layoff*","laid off","redundan*","job cuts","downsizing","تسريح","تسريحات","يسرحوا","سيستغنون عني","يستغنوا عني","خايف يطردوني","خايف نتطرد","اخاف ان افصل"]]},
+  {id:"trusted_stole", th:{betrayal:1.6, trust_amanah:0.6}, emo:["betrayal"], all:[
+    ["stole","took money","robbed","embezzl*","سرق*","اختلس*","نهب","اخذ الفلوس","سرقني"],
+    ["trusted","i trusted","with the keys","ائتمنته","وثقت فيه","وثقت به","امنته","كنت مأمنو","كنت واثق"]]},
+  {id:"worthless_compared", th:{self_worth:1.4, comparison:0.6}, all:[
+    ["لا اساوي شيئا","لا اساوي شيء","ما نسوى شي","ما نسواش","ما اسوى شي","i m worthless","im worthless","not good enough","never good enough","اقل منهم","اقل من اخوتي","اقل من الكل"]]},
+  {id:"left_for_another", th:{heartbreak:1.6}, emo:["sadness"], all:[
+    ["خطبت واحد","تخطبت لواحد","تزوجت غيري","تزوج غيري","left me for","dumped me","broke up with me","سابتني","سيبتني","تركتني","مشات مع","ذهبت مع","sayebtni","خلاتني","فسخ الخطوبه","فسخت الخطوبه","broke off the engagement"]]},
+  {id:"want_to_give", th:{charity:1.3}, all:[
+    ["help refugees","help the poor","donate","volunteer*","give charity","اتبرع","اتصدق","التطوع","اتطوع","اساعد الفقراء","اساعد اللاجئين","اعاون الفقراء","نتصدق"]]},
+  {id:"exam_soon", th:{study:1.4, anxiety:0.6}, emo:["fear"], all:[
+    ["exam","exams","test","الامتحان","الامتحانات","امتحان","الباك","examen","الكونكور","concours"],
+    ["tomorrow","next week","soon","in a few days","قريب","قرب","غدا","غدوه","بكره","بكرا","ghodwa","بعد اسبوع","بعد ايام","الاسبوع الجاي"]]},
+  {id:"tomorrow_fear", th:{anxiety:1.4}, emo:["fear"], all:[
+    ["بخاف","خايف","خايفه","اخاف","نخاف","afraid","scared","worried","worry","قلقان"],
+    ["من بكرا","من بكره","من الغد","من المستقبل","شو رح يصير","ايش بيصير","وش بيصير","what will happen","the future","what tomorrow","شنوه باش يصير","اش غادي يوقع"]]},
+  {id:"nobody_here", th:{loneliness:1.2, transition:0.6, ghurba:0.4}, emo:["loneliness"], all:[
+    ["لا اعرف احدا","لا اعرف احد","ما نعرف حتى حد","ما بعرف حدا","ما اعرف احد","don t know anyone","dont know anyone","don t know anybody","no friends here"]]}
 ],
 
 /* phrases of unspecific distress: the engine offers interpretations instead of guessing */

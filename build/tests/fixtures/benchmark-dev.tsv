@@ -1,0 +1,162 @@
+# رِفقة الأُسوة — DEVELOPMENT benchmark (same format as benchmark.tsv)
+# Written for Phase 5 (reranking): this is the set the engine may be tuned on.
+# benchmark-holdout.tsv stays untouched and is only reported.
+obvious	ar	anger	anger	-	كل ما يكلمني أخي أنفجر في وجهه وبعدين أندم
+obvious	ar	grief,sadness	sadness	-	توفيت جدتي التي ربتني ولا أعرف كيف أعيش بدونها
+obvious	ar	debt,rizq	fear	-	عليّ أقساط متأخرة والبنك يرسل لي إنذارات
+obvious	ar	marriage,argument	-	-	زوجتي ترفع صوتها عليّ أمام الأولاد في كل نقاش
+obvious	ar	parenting	-	-	ابني عمره خمس عشرة سنة ولا يسمع كلامي أبدًا
+obvious	ar	parents	-	-	أمي كبيرة في السن وتغضب من كل شيء أفعله
+obvious	ar	siblings,injustice	-	-	أخي الأكبر أخذ نصيبي من البيت ولا يريد أن يعطيني شيئًا
+obvious	ar	illness,patience	-	-	عندي مرض في الظهر منذ سنتين والألم لا يتوقف
+obvious	ar	work,injustice	-	-	مديري يحمّلني أخطاء زملائي ويخصم من راتبي
+obvious	ar	study,anxiety	fear	-	الامتحانات بعد أسبوع ولم أراجع شيئًا وأنا مرعوب
+obvious	ar	loneliness	loneliness	-	أعيش في مدينة جديدة ولا أعرف أحدًا هنا
+obvious	ar	sin	guilt	-	وقعت في معصية كبيرة وأشعر أن الله لن يقبلني
+obvious	ar	faith_weak	-	-	لم أعد أصلي كما كنت وأشعر أن قلبي بارد
+obvious	ar	envy,comparison	jealousy	-	صديقتي تزوجت وأنجبت وأنا ما زلت وحدي وأتضايق كلما رأيتها
+obvious	ar	heartbreak	sadness	-	خطيبي فسخ الخطوبة قبل العرس بشهر
+obvious	ar	betrayal,friends	betrayal	-	صديقي الذي ائتمنته على أسراري حكاها للجميع
+obvious	ar	gossip,slander	-	-	زميلاتي يتكلمن عني بالباطل في غيابي
+obvious	ar	waswasa	-	-	أشك دائمًا هل نويت الصلاة أم لا فأعيدها
+obvious	ar	decision	confusion	-	عرض عليّ عمل في الخارج ووالدي مريض ولا أعرف ماذا أختار
+obvious	ar	addiction,desire	-	-	أحاول التوقف عن مشاهدة المقاطع المحرمة وأفشل كل مرة
+obvious	ar	jealousy_spouse,suspicion,marriage	jealousy	-	أفتش في هاتف زوجي كل ليلة لأني لا أثق به
+obvious	ar	neighbors	-	-	جيراننا يرمون القمامة أمام بابنا كل يوم
+obvious	ar	marriage_seek	-	-	تقدم لي شاب ملتزم لكن ظروفه المادية صعبة
+obvious	ar	burnout,work	exhaustion	-	أعمل في وظيفتين وأرجع البيت منهكًا تمامًا
+obvious	ar	self_worth	-	-	أشعر أني لا أساوي شيئًا مقارنة بإخوتي
+obvious	ar	people_pleasing,boundaries,burnout	-	-	لا أستطيع أن أقول لا لأي أحد حتى لو تعبت
+obvious	ar	revenge,injustice	anger	-	أريد أن أرد له الإهانة بأشد منها
+obvious	ar	evil_eye,envy	-	-	منذ أن عرف الناس بنجاحي وأنا أمرض وأتعثر
+obvious	ar	ghurba,loneliness	loneliness	-	أنا في الغربة منذ ثلاث سنوات وأفتقد أهلي كثيرًا
+obvious	ar	poverty,rizq	-	-	راتبي لا يكفي لإطعام أولادي حتى آخر الشهر
+obvious	ar	insult	-	-	مديري سخر مني أمام كل الموظفين
+obvious	ar	forgive	-	-	أختي آذتني كثيرًا ثم اعتذرت ولا أستطيع مسامحتها
+obvious	ar	hope,despair	despair	-	كل أبواب العمل مغلقة في وجهي ولم أعد أرى أملًا
+obvious	ar	death_fear	fear	-	أفكر في الموت كثيرًا وأخاف منه
+obvious	ar	arrogance	-	-	أشعر بالتعالي على زملائي الأقل تعليمًا وأكره ذلك في نفسي
+obvious	ar	honesty	-	-	كذبت على أبي في أمر مهم ولا أعرف كيف أصحح
+obvious	ar	trust_amanah	-	-	أعطاني صديقي مالًا أحفظه له وصرفت جزءًا منه
+obvious	ar	charity	-	-	أريد أن أتصدق لكن دخلي محدود
+obvious	ar	different_belief,friends	-	-	صديقي المقرب ترك الإسلام ولا أعرف كيف أتعامل معه
+obvious	ar	leadership	-	-	عُيّنت رئيس قسم وأغلب الموظفين أكبر مني سنًّا
+obvious	ar	transition,decision	-	-	تقاعدت ولا أعرف ماذا أفعل بوقتي
+obvious	ar	emergency	fear	-	احترق المطبخ والحمد لله نجونا لكني ما زلت مصدومًا
+obvious	ar	digital,slander	-	-	أحدهم نشر صورتي مع كلام كاذب على مواقع التواصل
+obvious	ar	gratitude	joy	-	رُزقت بطفل بعد سنوات من الانتظار وأريد أن أشكر الله
+obvious	ar	animals,grief,sadness	-	-	قطتي ماتت وأنا حزين عليها جدًا
+obvious	ar	laziness	-	-	أنام إلى الظهر وأضيع يومي ولا أنجز شيئًا
+obvious	ar	kin	-	-	عمي قطع علاقته بنا منذ سنوات بسبب خلاف قديم
+obvious	ar	oppressor_power,injustice	fear	-	الشرطي أخذ مني مالًا ظلمًا ولا أستطيع أن أشتكي
+obvious	ar	ungrateful	-	-	ربيت أولاد أخي بعد وفاته والآن لا يسألون عني
+obvious	ar	suspicion	-	-	أظن أن كل من حولي يكرهونني ويتآمرون عليّ
+obvious	en	anger,parenting	anger	-	I snapped at my kids again over nothing and now I feel awful.
+obvious	en	grief	sadness	-	My best friend died in a car crash last month.
+obvious	en	debt	fear	-	I owe money to three different people and I can't sleep.
+obvious	en	marriage	-	-	My husband and I barely talk anymore, we're like roommates.
+obvious	en	parenting	-	-	My daughter refuses to wear hijab and we fight every morning.
+obvious	en	parents	-	-	My father never approves of anything I do.
+obvious	en	siblings	-	-	My sister and I haven't spoken since our mother's funeral.
+obvious	en	illness,fear	-	-	I was diagnosed with diabetes and I'm scared.
+obvious	en	work	-	-	My coworkers exclude me from every meeting.
+obvious	en	study	-	-	I keep failing statistics no matter how hard I study.
+obvious	en	loneliness	loneliness	-	Weekends are the worst, I just sit alone in my apartment.
+obvious	en	sin	guilt	-	I slept with someone before marriage and I regret it deeply.
+obvious	en	faith_weak	-	-	I don't feel anything when I pray anymore.
+obvious	en	envy,comparison	jealousy	-	Everyone on my feed is getting engaged and I'm bitter about it.
+obvious	en	heartbreak	sadness	-	She left me for someone with more money.
+obvious	en	betrayal	betrayal	-	My cousin stole from my shop while I trusted him with the keys.
+obvious	en	slander,gossip	-	-	Someone is spreading lies about me at the mosque.
+obvious	en	waswasa	-	-	Blasphemous thoughts keep popping into my head and I'm terrified.
+obvious	en	decision	confusion	-	I can't decide whether to accept his proposal.
+obvious	en	addiction	-	-	I've been smoking weed every night to cope.
+obvious	en	jealousy_spouse	jealousy	-	I get furious when my wife texts her male coworkers.
+obvious	en	neighbors	-	-	Our upstairs neighbours play loud music until 3 am.
+obvious	en	burnout	exhaustion	-	I'm a nurse and I have nothing left to give.
+obvious	en	self_worth	-	-	I feel ugly and worthless every time I look in the mirror.
+obvious	en	people_pleasing,boundaries	-	-	I always say yes and then resent everyone.
+obvious	en	revenge	anger	-	I want him to suffer the way he made me suffer.
+obvious	en	ghurba	loneliness	-	I moved to Canada for work and I miss home terribly.
+obvious	en	poverty	-	-	We can't afford rent and we might be evicted.
+obvious	en	insult	-	-	My mother-in-law calls me stupid in front of guests.
+obvious	en	forgive	-	-	My father abandoned us and now he wants to reconnect.
+obvious	en	despair,hope	despair	-	Nothing ever works out for me, why bother trying.
+obvious	en	honesty	-	-	I lied on my CV and now I'm scared they'll find out.
+obvious	en	leadership	-	-	I just became a team lead and nobody respects me.
+obvious	en	emergency	fear	-	We were in a flood and lost everything.
+obvious	en	gratitude	joy	-	I finally got my visa after two years, alhamdulillah.
+obvious	en	kin	-	-	My uncles fight over the family land every Eid.
+obvious	en	oppressor_power	fear	-	My landlord threatens to report me if I complain about the mould.
+obvious	en	charity	-	-	I want to help refugees but I don't know where to start.
+obvious	en	laziness	-	-	I procrastinate on everything and hate myself for it.
+dialect-tn	ar	anger	anger	-	نتغشش برشا على صغاري وبعد نندم
+dialect-tn	ar	work,injustice	-	-	الشاف متاعي ياكل في حقي وما يعطينيش البريمة
+dialect-tn	ar	marriage	-	-	راجلي ما يحكيش معايا كي يروح من الخدمة
+dialect-tn	ar	debt	fear	-	عليا كريدي كبير وما نعرفش كيفاش باش نخلصو
+dialect-tn	ar	loneliness	loneliness	-	نحس روحي وحيد حتى وأنا وسط الناس
+dialect-tn	ar	parents	-	-	أمي ديما تقارني بأولاد خالتي
+dialect-tn	ar	study	fear	-	الباك قرب وما قريت شي
+dialect-tn	ar	heartbreak	sadness	-	البنية اللي نحبها خطبت واحد آخر
+dialect-eg	ar	work	-	-	المدير بتاعي بيكلمني وحش قدام الناس كل يوم
+dialect-eg	ar	marriage	-	-	جوزي مش بيصرف على البيت وأنا اللي شايلة كل حاجة
+dialect-eg	ar	sadness	sadness	-	أنا مخنوقة ومش عارفة ليه
+dialect-eg	ar	friends,betrayal	betrayal	-	صاحبتي الأنتيم باعتني عشان واحدة جديدة
+dialect-gulf	ar	marriage_seek	-	-	أهلي يبوني أتزوج وأنا مو مستعد
+dialect-gulf	ar	burnout	exhaustion	-	تعبت من الدوام وايد ما عاد فيني حيل
+dialect-gulf	ar	envy	jealousy	-	أحس بحرة من أخوي لأنه صار أحسن مني
+dialect-lev	ar	anxiety	fear	-	بخاف كتير من بكرا وما بعرف شو رح يصير
+dialect-lev	ar	parenting	-	-	ابني ما بدو يروح عالمدرسة وكل يوم بنتخانق
+dialect-lev	ar	ghurba	loneliness	-	صرلي سنين برا البلد واشتقت لأهلي كتير
+dialect-ma	ar	debt,poverty	-	-	ما عنديش باش نخلص الكرا وصاحب الدار كيتسنى
+dialect-ma	ar	siblings	-	-	خويا ما بقاش كيهضر معايا من نهار الورث
+arabizi	ar	loneliness	loneliness	-	ana wa7di barcha w ma3andi 7ad nehki m3ah
+arabizi	ar	anger	anger	-	nheb nkasar kol chay mel ghachch
+arabizi	ar	marriage	-	-	mrati dima tetkhasem m3aya 3la flous
+arabizi	ar	study,fear,anxiety	fear	-	3andi examen ghodwa w ana khayef barcha
+arabizi	ar	heartbreak	sadness	-	sayebtni w mchet m3a wa7ed ekher
+typo	en	anxiety	fear	-	im so anxius about everthing latly
+typo	en	grief	sadness	-	my mom pased away and i cant stop cryng
+typo	en	marriage	-	-	my wfe and i argu evry day
+typo	en	debt	-	-	i have so much det i dont know wat to do
+typo	ar	sadness	sadness	-	انا حزين جدا ومش لاقي حد يسمعني
+typo	ar	work	-	-	مديري بيظلمني في الشغل وبيخصم من مرتبي
+indirect	ar	burnout,work	exhaustion	-	أصحو قبل الفجر وأعود بعد العشاء ولا أرى أولادي إلا نائمين
+indirect	ar	grief	sadness	-	ما زلت أضع فنجانين على المائدة كل صباح كأنه سيعود
+indirect	ar	marriage,loneliness	loneliness	-	نعيش تحت سقف واحد لكن كل واحد في عالمه
+indirect	ar	comparison,self_worth	-	-	كلما فتحت إنستغرام أغلقته وأنا أكره حياتي
+indirect	ar	parents,boundaries	-	-	أمي تتصل بي عشرين مرة في اليوم وتغضب إذا لم أرد
+indirect	ar	injustice,work	-	-	أنا من يعمل والترقية تذهب لابن عم المدير
+indirect	ar	faith_weak	-	-	كنت أحفظ القرآن والآن لا أفتح المصحف أبدًا
+indirect	ar	ghurba,transition	-	-	وصلت إلى بلد لا أفهم لغته ولا أعرف فيه أحدًا
+indirect	ar	debt,trust_amanah	-	-	وعدته أن أرد المال قبل شهر ولم أفعل وأتهرب من اتصالاته
+indirect	ar	illness,parents	-	-	أبي في المستشفى منذ أسبوع وأنا أبيت بجانبه
+indirect	en	burnout	exhaustion	-	I cry in the car before going into the office every morning.
+indirect	en	grief	sadness	-	I still call his number just to hear the voicemail.
+indirect	en	loneliness	loneliness	-	Nobody would notice if I disappeared for a week.
+indirect	en	marriage	-	-	We only talk about bills and the kids now.
+indirect	en	comparison	-	-	All my classmates are doctors and engineers and I'm still at home.
+indirect	en	parents	-	-	My mom reads my messages and tracks my phone at 24.
+indirect	en	work,injustice	-	-	I trained the new guy and he got promoted over me.
+indirect	en	addiction	-	-	I tell myself just one more episode and suddenly it's 4 am.
+multi	ar	marriage,rizq,argument	-	-	زوجي فقد عمله ونتشاجر كل يوم على المصاريف
+multi	ar	parents,decision,marriage_seek	confusion	-	أبي يرفض الرجل الذي أحبه وأنا ممزقة بين رضاه وقلبي
+multi	ar	illness,burnout,parents	exhaustion	-	أرعى أمي المريضة وأعمل وأدرس ولم أعد أتحمل
+multi	ar	betrayal,work,friends	betrayal	-	شريكي في المشروع وصديق عمري اختفى بالمال
+multi	en	debt,marriage	-	-	My husband hid a loan from me and now the bank is calling.
+multi	en	grief,sin	guilt	-	My mother died while I wasn't speaking to her.
+multi	en	work,anxiety	fear	-	Layoffs are coming and I have a mortgage and three kids.
+multi	en	parenting,digital	-	-	My son is addicted to his phone and talks back when I take it.
+distinction	ar	boundaries,forgive	-	-	يطلبون مني أن أسامح زوجي مع أنه يضربني كل أسبوع
+distinction	ar	patience,decision	-	-	هل الصبر أن أبقى في عمل يهينني فيه المدير منذ سنوات
+distinction	ar	laziness,decision,hope	-	-	أقول توكلت على الله لكني لا أبحث عن عمل
+distinction	ar	revenge,injustice	-	-	هل المطالبة بحقي في المحكمة انتقام أم عدل
+distinction	ar	self_worth,boundaries	-	-	أتنازل دائمًا عن حقي باسم التواضع حتى صار الناس يستغلونني
+distinction	ar	argument,different_belief	-	-	اختلفت مع صديقي في مسألة فقهية وتحول الأمر إلى قطيعة
+distinction	en	forgive,boundaries	-	-	Does forgiving my abusive father mean I have to let him back into my life?
+distinction	en	patience,decision	-	-	Is staying in this toxic marriage what patience means?
+distinction	en	decision,laziness	-	-	I keep saying it's in God's hands but I'm not doing anything.
+distinction	en	anger,injustice	anger	-	Am I angry for justice or just because my pride is hurt?
+vague	ar	sadness,anxiety,burnout	-	vague	مش مرتاح وخلاص
+vague	en	sadness,anxiety,burnout	-	vague	Something just feels off lately.
+vague	ar	sadness,despair,burnout	-	vague	تعبت من كل شيء

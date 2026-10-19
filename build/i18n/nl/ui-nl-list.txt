@@ -791,3 +791,8 @@
 831	Lessen voor je leven
 832	Situaties uit je leven die erop lijken
 833	Wanneer:
+834	Een belangrijk onderscheid in jouw situatie
+835	Het is niet:
+836	Maar wel:
+837	Vragen die je helpen het verschil te zien
+838	Bewijzen

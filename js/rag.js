@@ -314,6 +314,19 @@ var RAG = (function(){
         IDX.life.docs.push({id:id, tf:ls.reduce(function(m,s){ m[s]=1; return m; },{}), len:Math.max(1,LIFE_STEMS[id].size)});
       });
     });
+    // عبارات طبيعية لكل موضوع (THEME_PHRASES في js/data-taxonomy.js): أمثلة إضافية تصوّت لموضوعها فقط ولا تُعرض
+    var TP=window.THEME_PHRASES||{}, pk=0;
+    Object.keys(TP).forEach(function(tid){
+      if(!BY.theme[tid]) return;
+      TP[tid].forEach(function(text){
+        var ar=/[\u0600-\u06FF]/.test(text); if(!ar && !lifeEn) return;
+        var ls=lifeStems(text); if(ls.length<2) return;
+        var key="p"+(pk++), id=key+":0";
+        BY.life[key]={n:key, th:[tid], t:text, phrase:true};
+        LIFE_STEMS[id]=new Set(ls); LIFE_OF[id]=key;
+        IDX.life.docs.push({id:id, tf:ls.reduce(function(m,s){ m[s]=1; return m; },{}), len:Math.max(1,LIFE_STEMS[id].size)});
+      });
+    });
     ["sit","quran","hadith","theme","life"].forEach(function(k){ IDX[k].finish(); });
     built=true;
   }
@@ -325,7 +338,9 @@ var RAG = (function(){
      حاضر في كلام المستخدم. الموقف لا يُعرض نصه؛ إنما يرجّح الموضوعات المربوطة به يدويًا. */
   function lifeStem(w){ var s=stem(w); return (s.length>=4 && /^[اتين]/.test(s)) ? s.slice(1) : s; }
   function lifeStems(text){ return contentWords(normalize(text)).map(lifeStem).filter(function(s){ return s.length>=2; }); }
-  var LIFE_MIN=0.45, LIFE_W=2.0, LIFE_CAP=1.4;
+  /* معاملات الدمج وإعادة الترتيب: تُضبط على مجموعة التطوير (build/tests/tune.js) لا على مجموعة الاختبار المحجوزة */
+  var TUNE={lifeMin:0.45, lifeW:2.0, lifeCap:1.4, phraseW:1.0, conceptW:2.2, semScale:0.18, semCap:1.3,
+            ctxPenalty:1.0, genPenalty:1.0, issueRatio:0.6, phraseOnlyMin:1.3};
   function lifeMatches(raw){
     if(!IDX.life.docs.length || NOAR) return [];
     var qs=new Set(lifeStems(raw)); if(qs.size<2) return [];
@@ -339,14 +354,14 @@ var RAG = (function(){
       var sim=tot?got/tot:0;
       // كلمتان مشتركتان على الأقل، إحداهما غير شائعة في المجموعة، ونصف وزن الموقف تقريبًا
       var n=LIFE_OF[d.id];
-      if(shared>=2 && strong>=1 && sim>=LIFE_MIN && (!best[n] || best[n].sim<sim)) best[n]={n:n, item:BY.life[n], sim:sim};
+      if(shared>=2 && strong>=1 && sim>=TUNE.lifeMin && (!best[n] || best[n].sim<sim)) best[n]={n:n, item:BY.life[n], sim:sim};
     });
     var out=[]; for(var n in best) out.push(best[n]);
     return out.sort(function(a,b){ return b.sim-a.sim; }).slice(0,3);
   }
 
   /* ---------------- 3. الفهم ---------------- */
-  var CONCEPT_W=2.2;
+
   function stripPrefix(w){
     if(NOAR) return w;
     for(var i=0;i<PREFIXES.length;i++){ var p=PREFIXES[i]; if(w.indexOf(p)===0 && w.length-p.length>=2) return w.slice(p.length); }
@@ -468,6 +483,23 @@ var RAG = (function(){
     return out;
   }
 
+  /* إعادة الترتيب: «السياق» (الوالدان، الزواج، العمل…) يخبر أين وقع الموقف، و«المشاعر العامة» (حزن، خوف…) تخبر كيف يشعر صاحبه؛
+     أما «القضية» (إهانة، خيانة، دين، مقارنة…) فهي ما حدث فعلًا. إذا قاربت قضيةٌ لها دليلها الخاص الموضوعَ الأول، تقدّمت عليه
+     («حماتي تصفني بالغبية أمام الضيوف» ← الإهانة قبل العلاقة بالأهل). */
+  var CONTEXT_THEMES={parents:1,siblings:1,kin:1,friends:1,marriage:1,parenting:1,work:1,neighbors:1,study:1};
+  var BROAD_THEMES={sadness:1,fear:1,anxiety:1,argument:1,patience:1,hope:1,loneliness:1};
+  function rerank(list){
+    if(list.length<2) return;
+    var top0=list[0].score;
+    var issue=list.some(function(x){ return !CONTEXT_THEMES[x.id] && !BROAD_THEMES[x.id] && x.score>=TUNE.issueRatio*top0 && ((x.hits&&x.hits.length)||x.life); });
+    if(!issue) return;
+    list.forEach(function(x){
+      if(CONTEXT_THEMES[x.id]) x.score*=TUNE.ctxPenalty;
+      else if(BROAD_THEMES[x.id]) x.score*=TUNE.genPenalty;
+    });
+    list.sort(function(a,b){ return b.score-a.score; });
+  }
+
   function detectThemes(norm, userWords, qStems, raw){
     var scores=Object.create(null), hits=Object.create(null);
     TRIG.forEach(function(tr){
@@ -482,18 +514,19 @@ var RAG = (function(){
     var sem=IDX.theme.search(q);
     var distinct=coreStems(norm);
     for(var id in sem){
-      var sv=Math.min(1.3, sem[id]*0.18);
+      var sv=Math.min(TUNE.semCap, sem[id]*TUNE.semScale);
       if(scores[id]) scores[id]+=sv;
       // موضوع بلا أي لفظ صريح لا يُقبل بكلمة عابرة («زميل» لا تعني «الشهوة»، و«جديد» لا تعني «الأمل»):
       // يلزم أن يشارك كلامُ المستخدم الموضوعَ في كلمة من مفرداته «الصلبة» (THEME_CORE)
       else if(sv>=1.0 && THEME_CORE[id] && distinct.some(function(s){ return THEME_CORE[id].has(s); })) scores[id]=sv;
     }
     // أمثلة المواقف الحياتية: صوت إضافي محدود السقف للموضوعات المربوطة بأقرب موقف (الأول هو الأساس)
-    var life=lifeMatches(raw), lifeAdd=Object.create(null);
+    var life=lifeMatches(raw), lifeAdd=Object.create(null), lifeReal=Object.create(null);
     life.forEach(function(m,r){
       m.item.th.forEach(function(tid,pos){
         if(!BY.theme[tid]) return;
-        lifeAdd[tid]=Math.min(LIFE_CAP,(lifeAdd[tid]||0)+LIFE_W*m.sim*(pos===0?1:0.7)*(r===0?1:0.5));
+        if(!m.item.phrase) lifeReal[tid]=1;
+        lifeAdd[tid]=Math.min(TUNE.lifeCap,(lifeAdd[tid]||0)+TUNE.lifeW*(m.item.phrase?TUNE.phraseW:1)*m.sim*(pos===0?1:0.7)*(r===0?1:0.5));
       });
     });
     for(var lt in lifeAdd) scores[lt]=(scores[lt]||0)+lifeAdd[lt];
@@ -503,15 +536,18 @@ var RAG = (function(){
     concepts.forEach(function(c){
       Object.keys(c.th).forEach(function(tid){
         if(!BY.theme[tid]) return;
-        scores[tid]=(scores[tid]||0)+CONCEPT_W*c.th[tid];
+        scores[tid]=(scores[tid]||0)+TUNE.conceptW*c.th[tid];
         (hits[tid]=hits[tid]||[]).push(c.ev);
       });
     });
     detectThemes.concepts=concepts;
     var list=Object.keys(scores).map(function(id){
       return {id:id, theme:BY.theme[id], score:scores[id], hits:(hits[id]||[]), life:!!lifeAdd[id]};
-    }).filter(function(x){ return x.theme && x.score>=0.9; })
+    // موضوع لا يسنده إلا تشابه مع «عبارات الموضوعات» (بلا لفظ صريح ولا مفهوم ولا موقف حياتي) يحتاج تشابهًا أقوى
+    // («Hello, I want to talk about something» لا تعني الوحدة)
+    }).filter(function(x){ return x.theme && x.score>=0.9 && (x.hits.length || lifeReal[x.id] || x.score-(lifeAdd[x.id]||0)>0.05 || x.score>=TUNE.phraseOnlyMin); })
       .sort(function(a,b){ return b.score-a.score; });
+    rerank(list);
     var top=list.length?list[0].score:1;
     list.forEach(function(x){ x.conf=Math.max(0.15, Math.min(1, x.score/Math.max(3.2, top))); });
     // تجميع: الموضوعات ذات الثقة المنخفضة جدًا مقارنة بالأول تُستبعد
@@ -572,7 +608,8 @@ var RAG = (function(){
       });
     });
     // استنتاج مشاعر من الموضوعات إن لم تُذكر صراحة
-    var implied={anger:"anger",sadness:"sadness",grief:"sadness",anxiety:"fear",fear:"fear",loneliness:"loneliness",despair:"despair",sin:"guilt",betrayal:"betrayal",insult:"shame",burnout:"exhaustion",decision:"confusion",envy:"jealousy",jealousy_spouse:"jealousy",heartbreak:"love"};
+    var implied={anger:"anger",sadness:"sadness",grief:"sadness",anxiety:"fear",fear:"fear",loneliness:"loneliness",despair:"despair",sin:"guilt",betrayal:"betrayal",insult:"shame",burnout:"exhaustion",decision:"confusion",envy:"jealousy",jealousy_spouse:"jealousy",heartbreak:"sadness",
+                 debt:"fear",poverty:"fear",emergency:"fear",ghurba:"loneliness",gratitude:"joy",revenge:"anger",comparison:"jealousy",death_fear:"fear"};
     themes.slice(0,3).forEach(function(t){
       var eid=implied[t.id]; if(!eid || negatedEmo.has(eid)) return;
       if(!emotions.some(function(e){return e.id===eid;})){
@@ -608,7 +645,7 @@ var RAG = (function(){
     var interp=(!crisis && window.NLU) ? NLU.interpret(userWords, norm, themes) : null;
     if(interp && !themes.length && BY.theme[interp.ids[0]])
       themes.push({id:interp.ids[0], theme:BY.theme[interp.ids[0]], score:1, conf:0.3, hits:[], vague:true});
-    var distinctions=(detectThemes.concepts||[]).filter(function(c){ return c.distinction; }).map(function(c){ return {id:c.distinction, ev:c.ev}; });
+    var distinctions=crisis ? [] : detectDistinctions(userWords, themes, detectThemes.concepts||[]);
     var times=["ongoing","future","past"].map(function(id){ return {id:id, count:lexHits(norm,userWords,TIME[id]||[]).length}; })
       .filter(function(x){ return x.count>0; }).sort(function(a,b){ return b.count-a.count; });
     return {raw:raw, norm:norm, words:userWords, stems:qStems, themes:themes, emotions:emotions.slice(0,4),
@@ -616,7 +653,28 @@ var RAG = (function(){
             input:input, prep:prep, interpretations:interp?interp.ids:[], vagueCue:interp?interp.cue:"", distinctions:distinctions,
             needs:needs, question:question, focus:focus, time:times[0]?times[0].id:null,
             sit:sit?{n:sit.n, sub:sit.sub||null, need:sit.need||[]}:null,
-            life:(detectThemes.life||[]).map(function(m){ return {n:m.n, text:m.item.t, section:m.item.s, sim:Math.round(m.sim*100)/100}; })};
+            life:(detectThemes.life||[]).filter(function(m){ return !m.item.phrase; }).map(function(m){ return {n:m.n, text:m.item.t, section:m.item.s, sim:Math.round(m.sim*100)/100}; })};
+  }
+
+  /* التمييزات الدقيقة (js/data-distinctions.js): تُعرض حين يقف صاحب الرسالة عند مفترق يكثر فيه الخلط
+     (المسامحة/قبول الإيذاء، الصبر/السلبية…). مصدرها: وسم من مفاهيم NLU، أو عبارة صريحة (strong)،
+     أو موضوعات الرسالة الأهم مع عبارة دالة (themes + cues). اثنان على الأكثر. */
+  function detectDistinctions(tokens, themes, concepts){
+    var D=window.DISTINCTIONS||[], byId={}, out=[], seen={};
+    D.forEach(function(d){ byId[d.id]=d; });
+    function add(id, ev){ if(seen[id] || !byId[id]) return; seen[id]=1; out.push({id:id, ev:ev||"", d:byId[id]}); }
+    concepts.forEach(function(c){ if(c.distinction) add(c.distinction, c.ev); });
+    if(!window.NLU || !NLU.phrase) return out.slice(0,2);
+    var top=themes.slice(0,4).map(function(t){ return t.id; });
+    function first(list){ for(var i=0;i<(list||[]).length;i++){ var h=NLU.phrase(tokens, list[i]); if(h) return h; } return null; }
+    D.forEach(function(d){
+      var t=d.detect||{}, h=first(t.strong);
+      if(h){ add(d.id, h); return; }
+      if(!t.themes || !t.cues) return;
+      var okT=t.themes.every(function(g){ return g.some(function(id){ return top.indexOf(id)>-1; }); });
+      if(okT && (h=first(t.cues))) add(d.id, h);
+    });
+    return out.slice(0,2);
   }
 
   /* ---------------- 4. الاسترجاع ---------------- */
@@ -977,5 +1035,5 @@ var RAG = (function(){
   }
 
   return {normalize:normalize, stem:stem, stems:stems, analyze:analyze, understand:understand, build:build,
-          contextFor:contextFor, cueHits:function(u, list){ return lexHitsNeg(u.norm, u.words, list||[]).map(function(h){ return h.ev; }); }, byId:function(kind,id){ build(); return BY[kind][id]; }, themeLabel:themeLabel};
+          contextFor:contextFor, cueHits:function(u, list){ return lexHitsNeg(u.norm, u.words, list||[]).map(function(h){ return h.ev; }); }, byId:function(kind,id){ build(); return BY[kind][id]; }, themeLabel:themeLabel, TUNE:TUNE};
 })();
