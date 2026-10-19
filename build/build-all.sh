@@ -10,6 +10,7 @@ echo "== 1ج) تصنيف المواقف"; node "$ROOT/build/tests/test-taxonomy.
 echo "== 1د) سلامة الأدلة"; node "$ROOT/build/tests/test-evidence.js"
 echo "== 1هـ) طبقة السيرة"; node "$ROOT/build/tests/test-seerah.js"
 echo "== 1و) التمييزات الدقيقة"; node "$ROOT/build/tests/test-distinctions.js"
+echo "== 1ز) تركيب الإجابة والاستشهادات"; node "$ROOT/build/tests/test-compose.js"
 echo "== 2) HTML مستقل";   node "$ROOT/build/bundle-html.js" "$DIST/RifqaAlUswa.html"
 echo "== 3) حزمة PWA للاستضافة"
 rm -f "$DIST/RifqaAlUswa-web.zip"

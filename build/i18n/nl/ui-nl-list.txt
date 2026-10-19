@@ -796,3 +796,37 @@
 836	Maar wel:
 837	Vragen die je helpen het verschil te zien
 838	Bewijzen
+839	Sahih al-Bukhari
+840	Sahih Muslim
+841	Jami' al-Tirmidhi
+842	Sunan Abi Dawud
+843	Sunan Ibn Majah
+844	Sunan al-Nasa'i
+845	Muwatta Malik
+846	al-Albani
+847	Zubair Ali Zai
+848	Ahmad Shakir
+849	Bashshar Awwad Ma'ruf
+850	Muhyi al-Din Abd al-Hamid
+851	Shu'ayb al-Arna'ut
+852	Muhammad Fu'ad Abd al-Baqi
+853	Abd al-Fattah Abu Ghudda
+854	Salim al-Hilali
+855	Vindplaats:
+856	nr. {0}
+857	Beoordeling in de bronuitgave:
+858	Da'if (zwak)
+859	Brongegevens
+860	Kort
+861	Standaard
+862	Uitgebreid
+863	Diepgang van het antwoord:
+864	Lees de volledige lezing
+865	Stappen om nu mee te beginnen
+866	De tekst is letter voor letter vergeleken met de Tanzil-Koran (volledige verzen).
+867	De tekst is letter voor letter vergeleken met de Tanzil-Koran (deel van het vers of de verzen).
+868	De bewoording is vergeleken met het genoemde boek, in een digitale kopie die bij het bouwen van de app is gebruikt.
+869	De bewoording is gevonden in een verzamelwerk dat het genoemde boek citeert.
+870	Dit is een samenvatting van een overlevering op de genoemde plaats, niet de letterlijke tekst.
+871	Overlevering
+872	We citeren de bewoording niet, omdat die niet met een kopie van de bron kon worden vergeleken.

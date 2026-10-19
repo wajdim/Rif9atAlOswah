@@ -102,6 +102,14 @@ button:focus-visible, .chip:focus-visible, textarea:focus-visible, input:focus-v
 
 .insight{background:var(--pine-soft); border-radius:var(--radius-md); padding:16px 17px; margin-bottom:12px;}
 .insight .i-label{font-size:.74rem; font-weight:800; color:var(--gold); margin-bottom:6px;}
+.depth-bar{display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:0 0 14px;}
+.depth-bar .depth-label{font-size:.78rem; color:var(--muted); margin-inline-end:4px;}
+.depth-bar .chip{padding:5px 12px;}
+details.cite{margin-top:8px; font-size:.8rem; color:var(--ink-soft);}
+details.cite summary{cursor:pointer; color:var(--gold); font-weight:700; font-size:.78rem;}
+details.cite .cite-body{margin-top:6px; padding:8px 10px; border-radius:var(--radius-sm); background:var(--pine-soft); line-height:1.9;}
+details.cite .cite-status{color:var(--muted); margin-top:4px;}
+.rc-text .mini-btn{margin-top:4px;}
 .distinction{border:1px solid var(--border); border-radius:var(--radius-md); padding:15px 16px; margin-bottom:12px; background:var(--surface);}
 .distinction .ds-title{font-weight:800; color:var(--pine-strong); margin-bottom:8px; line-height:1.7;}
 .distinction .ds-row{font-size:.93rem; line-height:1.95; margin-bottom:6px;}

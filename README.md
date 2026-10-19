@@ -40,6 +40,20 @@ Every quoted text comes unchanged from the library; nothing is generated.
 
 **Distinctions.** Some situations sit at a point where two things are easily confused: forgiveness and accepting ongoing harm, patience and passivity, reliance on Allah and inaction, humility and humiliation, justice and revenge, anger for justice and anger for pride, disagreement and severing ties, and seven more (`js/data-distinctions.js`, 14 in all). When a message stands at one of them, the result adds a card: what it is not, what it is, questions that help tell the two apart, and the evidence. The evidence is referenced by library id only, so the card can only show verified verses and hadith, plus related Seerah events. Detection uses NLU concepts, explicit phrases, or the message's main topics together with a cue phrase. No card is shown alongside crisis signals.
 
+**Answer depth.** A switch on every result picks Brief, Standard or In depth (`js/compose.js`, remembered in the preferences):
+- **Brief:** the first part of the reading, the closest situation and its evidence, one verse, one hadith, steps to start now, and one supplication.
+- **Standard:** the full answer.
+- **In depth:** adds, for the 35 Seerah events that have it, what made the moment hard, the options, what was chosen and what was refrained from, and lessons for one's life, plus more evidence and more situations.
+
+Safety notices, distinctions and the limits of each example ("when does this not apply?") are kept at every depth.
+
+**Citations.** Every verse and hadith has a "Source details" panel: the reference, the book with its number and section, the gradings recorded in the source edition, and how the text was checked. Before any quotation is shown, a validator (`COMPOSE.validate`) requires:
+- a verification record in `js/data-evidence.js`;
+- an accepted status;
+- a fingerprint matching the exact text being shown.
+
+The vowelled version is shown only if its letters match the verified text; otherwise the verified text is shown as it is. A narration that could not be matched against its source is named with its source, but its wording is not quoted.
+
 **Ranking.** Topic scores combine word matches, NLU concepts, the life situations, and short natural phrases written for each topic (`build/taxonomy/theme-phrases.json`, matched but never shown). A light reranker lets a specific issue (an insult, a betrayal, a debt) come before the context it happened in (parents, marriage, work) when both are present. The weights are in `TUNE` in `js/rag.js`. They are tuned only on the development set (`node build/tests/tune.js`); the held-out set is never used for tuning.
 
 When the engine finds no clear topic, the result offers nearby topics as buttons. Picking one re-runs the analysis focused on it (`RAG.analyze(text, {focus})`). A picked topic never overrides crisis signals and never raises the match to "strong".
@@ -68,6 +82,7 @@ js/
                 user phrases (Arabic incl. dialects + English); plus situations 501+ (see build/taxonomy/)
   nlu.js        pre-understanding: Arabizi → Arabic, English spelling, concepts, safety tiers, vague distress
   data-nlu.js   its data: multilingual/dialect concepts, crisis and soft-risk phrases and rules (never shown)
+  compose.js    answer depth (brief / standard / in depth) and the citation validator
   data-distinctions.js  14 distinctions (forgiveness vs. ongoing harm, patience vs. passivity…): text in ar/en, evidence by library id, detection rules
 build/
   android/      Android wrapper (WebView), build-android.sh → signed AAB + APK, no Gradle needed
@@ -101,6 +116,7 @@ docs/           GitHub Pages: landing page, interactive user guide (guide.html),
 | Evidence verification | `python -I build/kb/verify.py --write` (sources: `build/kb/fetch.py`) | `build/kb/REPORT.md`, `js/data-evidence.js` |
 | Seerah layer | `python -I build/kb/build-seerah.py` (sources `build/kb/seerah/*.json`) + `node build/tests/test-seerah.js` | `js/data-seerah-kb.js` |
 | Evidence integrity test | `node build/tests/test-evidence.js` | every quotation verified for exactly the text that ships |
+| Answer composer and citation validator | `node build/tests/test-compose.js` | every message × 3 depths: no citation dropped, depths graded, altered/unknown/unverified texts rejected |
 | Distinctions test | `node build/tests/test-distinctions.js` | evidence ids in the verified library, ar/en complete, detection and false alarms |
 | Single-file HTML | `node build/bundle-html.js dist/RifqaAlUswa.html` | – |
 
