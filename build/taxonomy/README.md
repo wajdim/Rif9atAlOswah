@@ -8,6 +8,8 @@ Sources for `js/data-taxonomy.js`, which is generated from these files. Never ed
 | `life-NN.tsv` | one row per situation 1–500 of «500 موقف من الحياة»: `n, sub, em, need, en, ph_ar, ph_en` |
 | `extra.tsv` | situations written for this app (n ≥ 501), for themes the collection does not cover: `n, sub, th, em, need, t, en, ph_ar, ph_en` |
 | `build.js` | validates everything and writes `js/data-taxonomy.js` (`--check` validates only and fails if the generated file is stale) |
+| `pdf-parity.py` | checks situations 1–500 in `js/data-life.js` against the source PDF (`docs/500-life-situations-arabic.pdf`, not in git): presence, text and section. Writes `PDF-PARITY.md` with `--write`. Needs PyMuPDF at build time only |
+| `PDF-PARITY.md` | last parity report: 500/500 found, 500 identical |
 | `draft.js` | prints a first-guess subcategory for a range of situations, as a helper when writing rows |
 
 Columns:

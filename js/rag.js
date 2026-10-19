@@ -14,7 +14,14 @@ var RAG = (function(){
   "use strict";
 
   /* ---------------- 1. معالجة النص العربي ---------------- */
-  function normalize(str){
+  /* ذاكرة للدوال النقية (التطبيع والتجذيع وحذف السوابق): ألفاظ الموضوعات نفسها تُعالج مع كل رسالة.
+     النتيجة مطابقة تمامًا لحساب الدالة من جديد؛ تُفرَّغ الذاكرة إذا كبرت. */
+  function memo(fn){
+    var m=new Map();
+    return function(x){ var r=m.get(x); if(r===undefined){ r=fn(x); if(m.size>80000) m.clear(); m.set(x,r); } return r; };
+  }
+  var normalize=memo(function(str){ return normalize0(str); });
+  function normalize0(str){
     var t=String(str||"").replace(/ß/g,"ss").replace(/ẞ/g,"ss");      // الألمانية: ß ← ss
     if(t.normalize) t=t.normalize("NFD").replace(/[\u0300-\u036f]/g,"");   // é ë ï ← e e i (الهولندية)؛ همزات العربية تُوحَّد بعدها كما كانت
     return t
@@ -179,7 +186,8 @@ var RAG = (function(){
   var STEM_LANG=(window.I18N && I18N.lang) || "en";
   // الأردية والفارسية: بحروف عربية لكن بلا سوابق العربية ولواحقها
   var NOAR=STEM_LANG==="ur" || STEM_LANG==="fa";
-  function stem(w){
+  var stem=memo(stem0);
+  function stem0(w){
     if(!w) return w;
     if(/[a-z]/.test(w)) return STEM_LANG==="nl"?stemNl(w):(STEM_LANG==="es"||STEM_LANG==="pt")?stemRom(w):STEM_LANG==="fr"?stemFr(w):(STEM_LANG==="id"||STEM_LANG==="ms")?stemId(w):STEM_LANG==="tr"?stemTr(w):STEM_LANG==="de"?stemDe(w):stemEn(w);
     if(BN_WORD.test(w)) return stemBn(w);
@@ -234,13 +242,16 @@ var RAG = (function(){
     this.docs.push({id:id, tf:tf, len:len||1});
   };
   Index.prototype.finish=function(){
+    this.idfMemo=null;
     var df=this.df, total=0;
     this.docs.forEach(function(d){ total+=d.len; for(var t in d.tf) df[t]=(df[t]||0)+1; });
     this.avg=total/Math.max(1,this.docs.length);
     this.N=this.docs.length;
   };
   Index.prototype.idf=function(t){
-    var n=this.df[t]||0; return Math.log(1+(this.N-n+0.5)/(n+0.5));
+    var c=this.idfMemo||(this.idfMemo=Object.create(null)), v=c[t];
+    if(v===undefined){ var n=this.df[t]||0; v=c[t]=Math.log(1+(this.N-n+0.5)/(n+0.5)); }
+    return v;
   };
   /* q: {stem: weight} → Map id→score */
   Index.prototype.search=function(q){
@@ -362,7 +373,8 @@ var RAG = (function(){
 
   /* ---------------- 3. الفهم ---------------- */
 
-  function stripPrefix(w){
+  var stripPrefix=memo(stripPrefix0);
+  function stripPrefix0(w){
     if(NOAR) return w;
     for(var i=0;i<PREFIXES.length;i++){ var p=PREFIXES[i]; if(w.indexOf(p)===0 && w.length-p.length>=2) return w.slice(p.length); }
     return w;

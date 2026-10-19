@@ -58,6 +58,8 @@ function copyText(text){
   if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(text).then(function(){toast(T("تم النسخ"));},fallback); } else fallback();
 }
 RAG.build();
+// تهيئة الفهارس الكسولة (طبقة الفهم، أمثلة المواقف، القراءة) بعد ظهور الواجهة، حتى يكون أول بحث بسرعة ما بعده
+setTimeout(function(){ try{ RAG.analyze("أشعر بالقلق من المستقبل"); RAG.analyze("I feel worried about the future"); }catch(e){} }, 700);
 
 /* ---------------- التفضيلات والمحفوظات ---------------- */
 var prefs=store("rifqa.prefs")||{fs:"1"};

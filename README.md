@@ -69,6 +69,34 @@ When the engine finds no clear topic, the result offers nearby topics as buttons
 
 There is also an optional **AI layer**. With the user's own Anthropic key, Claude writes a reflection that is restricted to the retrieved passages, and the reading card offers "Write a deeper reading with AI", which uses its own system prompt (`READING_SYSTEM` in `js/ai.js`). Each AI answer has a **Report** button.
 
+## Quality and measurements
+
+The runtime makes no network request except the optional AI layer and recitation streaming, which the user turns on. Every figure below can be reproduced with the commands in [Build](#build).
+
+**Understanding** (`build/tests/bench.js`):
+
+| set | messages | top-1 topic | top-3 | emotions | evidence |
+|---|---|---|---|---|---|
+| main (regression gate) | 355 | 97.8% | 99.7% | 100% | 99.4% |
+| development (used for tuning) | 159 | 75.6% | 86.5% | 78.8% | 91.1% |
+| held-out (never tuned on) | 121 | 57.5% | 69.0% | 73.6% | 80.5% |
+
+The held-out set is the honest estimate for messages unlike anything the engine was built around. Crisis and self-harm detection is a separate gate (`test-understanding.js`) and must always pass.
+
+**Evidence** (`build/kb/REPORT.md`, `test-evidence.js`, `test-compose.js`):
+- 914 quotations are checked word for word against offline copies of their sources.
+- Five hadith that cannot be checked are hidden.
+- The citation validator rejects any text that differs from what was verified.
+
+**Source collection**: all 500 situations match the PDF of «500 موقف من الحياة» (`build/taxonomy/PDF-PARITY.md`).
+
+**Speed** (`build/tests/perf.js`, Node on a desktop):
+- Analysing a message takes a median of 9 ms (p95 32 ms).
+- Composing an answer takes under 1 ms.
+- With the CPU slowed 4× in Chrome (roughly a mid-range phone), a message takes about 70 ms, and a re-render 35–135 ms.
+
+The engine's indexes are warmed up just after the page appears, so the first search is as fast as the next ones.
+
 ## Project layout
 
 ```
@@ -116,6 +144,9 @@ docs/           GitHub Pages: landing page, interactive user guide (guide.html),
 | Evidence verification | `python -I build/kb/verify.py --write` (sources: `build/kb/fetch.py`) | `build/kb/REPORT.md`, `js/data-evidence.js` |
 | Seerah layer | `python -I build/kb/build-seerah.py` (sources `build/kb/seerah/*.json`) + `node build/tests/test-seerah.js` | `js/data-seerah-kb.js` |
 | Evidence integrity test | `node build/tests/test-evidence.js` | every quotation verified for exactly the text that ships |
+| Offline guarantee | `node build/tests/test-offline.js` | network APIs only in the opt-in `ai.js` and `tts.js`; CSP allows no other host |
+| Engine speed | `node build/tests/perf.js [--budget]` | load, first analysis, median/p95 per message; `--budget` fails above 40 ms median / 120 ms p95 |
+| Source-collection parity | `python -I build/taxonomy/pdf-parity.py [--write]` (needs PyMuPDF) | `build/taxonomy/PDF-PARITY.md` |
 | Answer composer and citation validator | `node build/tests/test-compose.js` | every message × 3 depths: no citation dropped, depths graded, altered/unknown/unverified texts rejected |
 | Distinctions test | `node build/tests/test-distinctions.js` | evidence ids in the verified library, ar/en complete, detection and false alarms |
 | Single-file HTML | `node build/bundle-html.js dist/RifqaAlUswa.html` | – |
