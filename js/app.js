@@ -9,7 +9,7 @@
 function qs(id){ return document.getElementById(id); }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
 function toast(msg,ms){ var t=qs("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("show");},ms||2200); }
-var APP_VERSION="2.12.0";
+var APP_VERSION="2.13.0";
 var EN=I18N.en;
 function store(key, val){ try{ if(val===undefined) return JSON.parse(localStorage.getItem(key)||"null"); localStorage.setItem(key, JSON.stringify(val)); }catch(e){ return null; } }
 function iconSvg(k){ return '<svg viewBox="0 0 24 24">'+(ICONS[k]||ICONS.star)+'</svg>'; }

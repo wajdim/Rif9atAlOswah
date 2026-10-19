@@ -10,7 +10,7 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"; ROOT="$(cd "$HERE/../.." && pwd)"
 
-VERSION_NAME="2.12.0"; VERSION_CODE=16
+VERSION_NAME="2.13.0"; VERSION_CODE=17
 MIN_SDK=24; TARGET_SDK=36; BT_VER=36.0.0
 
 : "${TOOLS:?TOOLS غير محدد}"
