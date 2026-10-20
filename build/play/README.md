@@ -5,9 +5,9 @@ Everything needed for the Play Console is in this folder. This guide walks throu
 | | |
 |---|---|
 | Package name | `com.Dja.RifqatAlOswah` (permanent; cannot change after the first upload) |
-| Version | 2.13.0 (version code 17) |
+| Version | 2.14.0 (version code 18) |
 | Target / min SDK | 36 (Android 16) / 24 (Android 7.0) |
-| Upload file | `build/android/out/RifqaAlUswa-2.13.0.aab` |
+| Upload file | `build/android/out/RifqaAlUswa-2.14.0.aab` |
 | Privacy policy | https://wajdim.github.io/Rif9atAlOswah/privacy.html |
 | Support email | wajdi.chaouche@gmail.com |
 
@@ -33,8 +33,8 @@ TOOLS=/path/to/tools bash build/android/build-android.sh
 ```
 
 This produces two files:
-- **`RifqaAlUswa-2.13.0.aab`**, which you upload to Play.
-- **`RifqaAlUswa-2.13.0.apk`**, for installing directly (sideloading).
+- **`RifqaAlUswa-2.14.0.aab`**, which you upload to Play.
+- **`RifqaAlUswa-2.14.0.apk`**, for installing directly (sideloading).
 
 Before every release, bump `VERSION_NAME`/`VERSION_CODE` in `build-android.sh`, and `APP_VERSION` in `js/app.js`.
 
@@ -68,7 +68,7 @@ Add translations for **ar**, **en-US**, **nl-NL**, **es-ES**, **pt-PT**, **fr-FR
 | App icon 512×512 | `images/icon.png` |
 | Feature graphic 1024×500 | `images/featureGraphic.png` |
 | Phone screenshots (2–8) | `images/phoneScreenshots/*.png` |
-| Release notes | `changelogs/16.txt` |
+| Release notes | `changelogs/18.txt` |
 
 - **Category:** Books & Reference. Alternatives are Education or Lifestyle.
 - **Tags:** Religion, Reference, Self-help.
