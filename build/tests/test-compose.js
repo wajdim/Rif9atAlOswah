@@ -43,7 +43,8 @@ const msgs = [];
 for (const f of ["benchmark.tsv", "benchmark-dev.tsv"]) fs.readFileSync(path.join(FIX, f), "utf8").split(/\r?\n/).forEach(l => {
   const c = l.split("\t"); if (c.length === 6 && l[0] !== "#") msgs.push({ text: c[5], flags: c[4] });
 });
-const count = x => x.ayat.length + x.hadith.length + x.duas.length + (x.sit ? x.sit.quran.length + x.sit.hadith.length : 0);
+const count = x => x.ayat.length + x.hadith.length + x.duas.length + (x.sit ? x.sit.quran.length + x.sit.hadith.length : 0) +
+  (x.chapters ? x.chapters.chapters.reduce((k, c) => k + c.ayat.length + c.hadith.length, 0) : 0);   // with the evidence inside chapters
 let cites = 0, composed = 0, crisisN = 0;
 for (const m of msgs) {
   const a = L.RAG.analyze(m.text), out = {};

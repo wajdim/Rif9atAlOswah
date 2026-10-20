@@ -560,6 +560,7 @@ var RAG = (function(){
     }).filter(function(x){ return x.theme && x.score>=0.9 && (x.hits.length || lifeReal[x.id] || x.score-(lifeAdd[x.id]||0)>0.05 || x.score>=TUNE.phraseOnlyMin); })
       .sort(function(a,b){ return b.score-a.score; });
     rerank(list);
+    detectThemes.all=list.slice();
     var top=list.length?list[0].score:1;
     list.forEach(function(x){ x.conf=Math.max(0.15, Math.min(1, x.score/Math.max(3.2, top))); });
     // تجميع: الموضوعات ذات الثقة المنخفضة جدًا مقارنة بالأول تُستبعد
@@ -644,6 +645,13 @@ var RAG = (function(){
       themes.push({id:"oppressor_power", theme:BY.theme.oppressor_power, score:inj.score*0.8, conf:inj.conf*0.8, hits:[]});
       themes.sort(function(a,b){ return b.score-a.score; }); themes=themes.slice(0,5);
     }
+    // محاور الرسالة (js/data-facets.js): مجالات من الحياة ذكرها المستخدم صراحةً، بترتيب ذكرها.
+    // اثنان فأكثر ← إجابة في فصول؛ ويُضاف موضوع المحور إلى الموضوعات إن لم يكن بينها (بعدها، فلا يغيّر ترتيبها)
+    var facets=(crisis||focus||sit) ? [] : facetsOf(norm, detectThemes.all||[], relations);
+    facets.forEach(function(f){
+      if(themes.length<5 && !themes.some(function(t){ return t.id===f.theme; }))
+        themes.push({id:f.theme, theme:BY.theme[f.theme], score:f.score, conf:0.35, hits:f.ev.slice(), facet:true});
+    });
     var intens=lexHits(norm,userWords,INTENSIFIERS).length + ((raw.match(/[!！؟?]{2,}/g)||[]).length);
     var intensity = Math.min(3, 1 + (intens>=1?1:0) + (intens>=3?1:0) + (userWords.length>60?0.5:0));
     var selfFault = lexHitsNeg(norm,userWords,SELF_FAULT_CUES).length>0;
@@ -663,9 +671,35 @@ var RAG = (function(){
     return {raw:raw, norm:norm, words:userWords, stems:qStems, themes:themes, emotions:emotions.slice(0,4),
             relations:relations.slice(0,3), intensity:intensity, selfFault:selfFault, crisis:crisis, softRisk:softRisk,
             input:input, prep:prep, interpretations:interp?interp.ids:[], vagueCue:interp?interp.cue:"", distinctions:distinctions,
-            needs:needs, question:question, focus:focus, time:times[0]?times[0].id:null,
+            needs:needs, question:question, focus:focus, time:times[0]?times[0].id:null, facets:facets,
             sit:sit?{n:sit.n, sub:sit.sub||null, need:sit.need||[]}:null,
             life:(detectThemes.life||[]).filter(function(m){ return !m.item.phrase; }).map(function(m){ return {n:m.n, text:m.item.t, section:m.item.s, sim:Math.round(m.sim*100)/100}; })};
+  }
+
+  var IDAFA_CHILD=/ [وفبل]?(اولاد|ابناء|بنات) (?!(و|في|مع|من|علي|عن|الي|لا|لم|ما|كل|دائما) )\S/;
+  var OWN_CHILD=/ [وفبل]?(ابني|ابنتي|بنتي|ولدي|اولادي|ابنائي|اطفالي|طفلي|طفلتي|بناتي|الاولاد|الابناء|الاطفال|اولادنا|ابنائنا|ابناؤنا|son|daughter|my kids|my children|my child)( |$)/;
+  /* المحاور: لكل مجال (FACETS.domains) أول لفظ دلّ عليه وموضعه في النص؛ من موضوع مسنود بلفظ صريح أو من طرف علاقة */
+  function facetsOf(norm, all, relations){
+    var F=window.FACETS; if(!F) return [];
+    var out=[], at={}, h=" "+norm+" ";
+    function pos(w){ var i=w?h.indexOf(normalize(w)):-1; return i<0?9999:i; }
+    function add(dom, tid, ev, score){
+      var d=F.domains[dom]; if(!d) return; tid=tid||d.theme; if(!BY.theme[tid]) return;
+      var f=at[dom], p=pos(ev);
+      if(f){ if(ev && f.ev.indexOf(ev)<0) f.ev.push(ev); f.pos=Math.min(f.pos,p); f.score=Math.max(f.score,score); return; }
+      out.push(at[dom]={id:dom, theme:tid, kind:d.kind, ev:ev?[ev]:[], pos:p, score:score});
+    }
+    all.forEach(function(t){
+      var dom=F.byTheme[t.id]; if(!dom || !t.hits || !t.hits.length || t.score<0.9) return;
+      var weak=(F.weak||{})[dom]||[], strong=t.hits.filter(function(x){ return weak.indexOf(normalize(x))<0; });
+      if(strong.length) add(dom, t.id, strong[0], t.score);
+    });
+    relations.forEach(function(r){ var dom=F.byRel[r.id]; if(dom) add(dom, null, r.word, 1); });
+    // «أولاد خالتي، أبناء أخي»: أبناء غيرك (إضافة) لا يجعلون «أبناءك» محورًا
+    if(at.children && IDAFA_CHILD.test(h) && !OWN_CHILD.test(h)) out=out.filter(function(f){ return f.id!=="children"; });
+    if(out.length<2) return [];
+    // أقوى أربعة محاور، ثم بترتيب ذكرها في الرسالة
+    return out.sort(function(a,b){ return b.score-a.score; }).slice(0,4).sort(function(a,b){ return a.pos-b.pos; });
   }
 
   /* التمييزات الدقيقة (js/data-distinctions.js): تُعرض حين يقف صاحب الرسالة عند مفترق يكثر فيه الخلط
@@ -1000,6 +1034,18 @@ var RAG = (function(){
     };
   }
 
+  /* موضوعات مقترحة لرسالة لم يُفهم منها موضوع: أقرب الموضوعات في فهرس الموضوعات (بلا عتبة)، ثم موضوعات أقرب المواقف الحياتية.
+     للاقتراح فقط (يختار المستخدم منها)، ولا تُعامل كفهم للرسالة. */
+  function suggest(raw, max){
+    build();
+    var prep=window.NLU ? NLU.prepare(raw) : null; if(prep) raw=prep.text;
+    var q=Object.create(null); stems(raw).forEach(function(s){ q[s]=(q[s]||0)+1; });
+    var sem=IDX.theme.search(q), sc=Object.create(null);
+    for(var id in sem) sc[id]=sem[id];
+    lifeMatches(raw).forEach(function(m,r){ m.item.th.forEach(function(t,i){ sc[t]=(sc[t]||0)+m.sim*(i===0?2:1)*(r===0?1:0.5); }); });
+    return Object.keys(sc).filter(function(id){ return BY.theme[id]; }).sort(function(a,b){ return sc[b]-sc[a]; }).slice(0,max||6);
+  }
+
   /* يبني السياق النصي المسترجع لنموذج اللغة (وضع RAG التوليدي الاختياري) */
   function contextFor(a){
     var r=a.retrieval, L=[];
@@ -1047,5 +1093,5 @@ var RAG = (function(){
   }
 
   return {normalize:normalize, stem:stem, stems:stems, analyze:analyze, understand:understand, build:build,
-          contextFor:contextFor, cueHits:function(u, list){ return lexHitsNeg(u.norm, u.words, list||[]).map(function(h){ return h.ev; }); }, byId:function(kind,id){ build(); return BY[kind][id]; }, themeLabel:themeLabel, TUNE:TUNE};
+          contextFor:contextFor, suggest:suggest, cueHits:function(u, list){ return lexHitsNeg(u.norm, u.words, list||[]).map(function(h){ return h.ev; }); }, byId:function(kind,id){ build(); return BY[kind][id]; }, themeLabel:themeLabel, TUNE:TUNE};
 })();

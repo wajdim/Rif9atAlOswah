@@ -830,3 +830,40 @@
 870	Dit is een samenvatting van een overlevering op de genoemde plaats, niet de letterlijke tekst.
 871	Overlevering
 872	We citeren de bewoording niet, omdat die niet met een kopie van de bron kon worden vergeleken.
+873	Allah de Verhevene zegt:
+874	De Boodschapper van Allah ﷺ zei:
+875	De Boodschapper van Allah ﷺ zei, overleverend van zijn Heer:
+876	Uit de Soenna van de Profeet ﷺ:
+877	Een smeekbede van de Profeet ﷺ:
+878	Uit de overleveringen van de metgezellen en vroege overleveraars:
+879	Overlevering (athar)
+880	Tekst van de overlevering
+881	De onderdelen van je situatie
+882	Uit je woorden:
+883	Stappen voor dit onderdeel
+884	Een verhaal dat licht werpt op dit onderdeel
+885	Richt het antwoord op dit onderdeel
+886	Hoofdstuk {0}: {1}
+887	Wat deze onderdelen verbindt
+888	Gaat je situatie vooral over:
+889	Kies wat het dichtst bij komt, dan richt ik het antwoord daarop, of lees gewoon verder.
+890	Onderwerpen die misschien dicht bij je bedoeling liggen:
+891	Ik begrijp je situatie nog steeds niet goed
+892	Ik heb je situatie nog niet begrepen
+893	Kies het onderwerp dat het dichtst bij je situatie ligt, of voeg details toe in andere woorden.
+894	Vertel me meer zodat ik je begrijp: wie is de ander? Wat is er gebeurd? Hoe voel je je? Wat zou je willen dat er gebeurt? Voeg toe wat je kunt; ik voeg het samen met wat je schreef.
+895	Voeg hier details toe…
+896	Opnieuw analyseren
+897	Stel onderwerpen voor
+898	Vandaag
+899	Gisteren
+900	Vorige dag
+901	Volgende dag
+902	Dagen op rij: {0}
+903	Een les voor je leven ({0}):
+904	Lees het hele verhaal
+905	De situatie van vandaag
+906	Hoe zou jij handelen als je erin zat? Denk even na en lees dan waar de Koran, de Soenna en de Sira naartoe leiden.
+907	Uit de Sira, een verhaal dat er licht op werpt:
+908	Lees hoe je ermee omgaat
+909	Een alledaagse situatie

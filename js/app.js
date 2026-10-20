@@ -20,6 +20,13 @@ function gradeClass(g){ return /صحيح/.test(g)?"g-sahih":"g-hasan"; }
 function qText(surah, ayah, plain){ var v=window.TASHKEEL && TASHKEEL.quranFor(surah, ayah, plain); return window.COMPOSE ? COMPOSE.shown(plain, v) : (v||plain); }
 function sayText(plain){ return (window.TASHKEEL && TASHKEEL.speech(plain)) || plain; }
 function hText(plain){ var v=sayText(plain); return window.COMPOSE ? COMPOSE.shown(plain, v) : v; }   // الحديث يُعرض مشكولًا دائمًا
+/* تقديم النص بما يميّزه: «قال الله تعالى» قبل الآية، وقبل الحديث ما يناسب نوعه (COMPOSE.attrib ← js/data-attrib.js):
+   قول النبي ﷺ، أو ما يرويه عن ربه، أو خبر عنه، أو دعاء مأثور عنه، أو أثر عن صحابي. والخلاصة بالمعنى بلا تقديم. */
+var LEADS={quran:"قال الله تعالى:", qala:"قال رسول الله ﷺ:", qudsi:"قال رسول الله ﷺ فيما يرويه عن ربه:", report:"من السنة النبوية:", dua:"من الأدعية النبوية:", athar:"من الآثار والروايات:"};
+function leadKind(kind, id){ return window.COMPOSE ? COMPOSE.attrib(kind, id) : (kind==="quran"?"quran":"qala"); }
+function leadText(kind, id){ var k=LEADS[leadKind(kind, id)]; return k?T(k):""; }
+function leadCopy(kind, id){ var t=leadText(kind, id); return t?t+" ":""; }
+function leadHTML(kind, id){ var t=leadText(kind, id); return t?'<div class="say-lead'+(kind==="quran"?" q-lead":"")+'">'+esc(t)+'</div>':""; }
 /** «القراءة القرآنية النبوية»: كل عبارة في سطر.
     - يُشكَّل النص كاملًا أولًا (إن كان التشكيل مفعّلًا) ثم يُقسَّم، حتى يطابق النص المشكول المحفوظ.
     - التقسيم عند . ؛ : ، (و; , بالإنجليزية) خارج «» و“” و﴿﴾ والأقواس؛ والعبارة القصيرة تُضم لما بعدها.
@@ -133,7 +140,7 @@ function renderHome(){
   // آية أو حديث اليوم (ثابت لليوم نفسه)
   var day=Math.floor(Date.now()/86400000), pool=QURAN_LIB.filter(function(q){return !q.dua;}).concat(HADITH_LIB.filter(function(h){return !h.dua;}));
   var it=pool[(day*7919)%pool.length], isQ=!!it.s;
-  qs("dailyCard").innerHTML='<div class="card"><div class="d-label">'+(isQ?T("آية اليوم"):T("حديث اليوم"))+'</div><div class="d-text'+(isQ?' quran':'')+'"'+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":"«"+esc(hText(it.t))+"»")+'</div>'+
+  qs("dailyCard").innerHTML='<div class="card"><div class="d-label">'+(isQ?T("آية اليوم"):T("حديث اليوم"))+'</div>'+leadHTML(isQ?"quran":"hadith",it.id)+'<div class="d-text'+(isQ?' quran':'')+'"'+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":"«"+esc(hText(it.t))+"»")+'</div>'+
     (isQ?enAyah(it.s,it.a):enHadith(it.te))+
     '<div class="d-src">'+(isQ?esc(I18N.ref(it.s,it.a)):esc(it.r)+" — "+esc(I18N.src(it.src))+" — "+esc(I18N.grade(it.g)))+'</div><div class="ev-note">'+esc(it.n)+'</div></div>';
   var aiOn=AI.enabled(); qs("aiModeRow").hidden=!aiOn;
@@ -153,7 +160,7 @@ function checkFlags(text){
 /* ---------------- التشغيل ---------------- */
 var STAGES=["أقرأ ما كتبته وأفهم سياقه…","أكتشف الموضوعات والمشاعر وطبيعة العلاقة…","أسترجع المواقف القريبة من السيرة وقصص الأنبياء…","أبحث في الآيات والأحاديث المرتبطة…","أراجع درجات النصوص ومصادرها…","أبني القراءة والخطة العملية…"];
 var lastAnalysis=null, aiSession=null;
-function runSearch(text, focus, sit){
+function runSearch(text, focus, sit, round){
   text=(text||"").trim();
   if(text.length<4){ toast(T("اكتب موقفك بتفصيل أكثر قليلًا")); qs("userInput").focus(); return; }
   showScreen("loading",false);
@@ -169,7 +176,7 @@ function runSearch(text, focus, sit){
     if(i>0) qs("stage-"+(i-1)).classList.replace("active","done");
     if(i<STAGES.length){ qs("stage-"+i).classList.add("active"); i++; setTimeout(step, 300); }
     else setTimeout(function(){
-      result.a.id=Date.now().toString(36); result.a.focus=focus||null; result.a.sitN=(!focus&&sit)||null; lastAnalysis=result.a;
+      result.a.id=Date.now().toString(36); result.a.focus=focus||null; result.a.sitN=(!focus&&sit)||null; result.a.round=round||1; lastAnalysis=result.a;
       window.__lastFlags=result.flags; renderResult(result.a, result.flags);
       showScreen("result");
       if(AI.enabled() && qs("aiAuto").checked) startAI();
@@ -208,16 +215,16 @@ function citeHTML(kind, id, src){
 }
 function ayahHTML(q, via){
   if(!citeOK("quran", q.id, q.t)) return "";
-  return '<div class="evidence-item"><div class="evidence-tag">'+T("قرآن كريم")+' — '+esc(I18N.ref(q.s,q.a))+'</div>'+
+  return '<div class="evidence-item"><div class="evidence-tag">'+T("قرآن كريم")+' — '+esc(I18N.ref(q.s,q.a))+'</div>'+leadHTML("quran",q.id)+
     '<div class="evidence-quote" data-q="'+esc(q.s)+'|'+esc(q.a)+'"'+AR_ATTR+'>﴿ '+esc(qText(q.s,q.a,q.t))+' ﴾</div>'+enAyah(q.s,q.a)+'<div class="ev-note">'+esc(q.n)+'</div>'+themeTags(via)+citeHTML("quran", q.id)+
-    '<div class="ev-actions"><button class="mini-btn" data-copy="﴿'+esc(qText(q.s,q.a,q.t))+'﴾ ['+esc(I18N.ref(q.s,q.a))+']'+(EN?esc("\n"+I18N.quranEn(q.s,q.a)):"")+'">'+T("نسخ")+'</button>'+saveBtn("quran",q.id)+'</div></div>';
+    '<div class="ev-actions"><button class="mini-btn" data-copy="'+esc(leadCopy("quran",q.id))+'﴿'+esc(qText(q.s,q.a,q.t))+'﴾ ['+esc(I18N.ref(q.s,q.a))+']'+(EN?esc("\n"+I18N.quranEn(q.s,q.a)):"")+'">'+T("نسخ")+'</button>'+saveBtn("quran",q.id)+'</div></div>';
 }
 function hadithHTML(h, via){
   if(!citeOK("hadith", h.id, h.t)) return "";
-  return '<div class="evidence-item"><div class="evidence-tag">'+T("حديث نبوي")+'<span class="grade '+gradeClass(h.g)+'">'+esc(I18N.grade(h.g))+'</span></div>'+
+  return '<div class="evidence-item"><div class="evidence-tag">'+(leadKind("hadith",h.id)==="athar"?T("أثر"):T("حديث نبوي"))+'<span class="grade '+gradeClass(h.g)+'">'+esc(I18N.grade(h.g))+'</span></div>'+leadHTML("hadith",h.id)+
     '<div class="evidence-quote" '+AR_VOICE+AR_ATTR+' style="font-size:1.04rem;">«'+esc(hText(h.t))+'»</div>'+enHadith(h.te)+
     '<div class="evidence-meta">'+T("الراوي:")+' '+esc(h.r)+' — '+esc(I18N.src(h.src))+'</div><div class="ev-note">'+esc(h.n)+'</div>'+themeTags(via)+citeHTML("hadith", h.id, h.src)+
-    '<div class="ev-actions"><button class="mini-btn" data-copy="«'+esc(hText(h.t))+'»'+(EN&&h.te?esc("\n“"+h.te+"”"):"")+' — '+esc(I18N.src(h.src))+' ('+esc(I18N.grade(h.g))+')">'+T("نسخ")+'</button>'+saveBtn("hadith",h.id)+'</div></div>';
+    '<div class="ev-actions"><button class="mini-btn" data-copy="'+esc(leadCopy("hadith",h.id))+'«'+esc(hText(h.t))+'»'+(EN&&h.te?esc("\n“"+h.te+"”"):"")+' — '+esc(I18N.src(h.src))+' ('+esc(I18N.grade(h.g))+')">'+T("نسخ")+'</button>'+saveBtn("hadith",h.id)+'</div></div>';
 }
 /* تمييز دقيق (js/data-distinctions.js): ليس…/بل…، علامات للتمييز، وأدلته من المكتبة الموثقة بمعرّفاتها، ومواقف من السيرة */
 function distinctionHTML(x){
@@ -238,16 +245,16 @@ function distinctionHTML(x){
 function duaHTML(d){
   var it=d.item, isQ=d.kind==="quran";
   if(!citeOK(isQ?"quran":"hadith", it.id, it.t)) return "";
-  return '<div class="dua-card"><div class="dw">'+esc(it.w||(isQ?T("دعاء قرآني"):T("ذكر مأثور")))+'</div><div class="dt" '+(isQ?'data-q="'+esc(it.s)+'|'+esc(it.a)+'"':AR_VOICE)+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":esc(hText(it.t)))+'</div>'+
+  return '<div class="dua-card"><div class="dw">'+esc(it.w||(isQ?T("دعاء قرآني"):T("ذكر مأثور")))+'</div>'+leadHTML(isQ?"quran":"hadith",it.id)+'<div class="dt" '+(isQ?'data-q="'+esc(it.s)+'|'+esc(it.a)+'"':AR_VOICE)+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":esc(hText(it.t)))+'</div>'+
     (isQ?enAyah(it.s,it.a):enHadith(it.te))+
     '<div class="ds">'+(isQ?esc(I18N.ref(it.s,it.a)):esc(I18N.src(it.src))+" — "+esc(I18N.grade(it.g)))+'</div>'+citeHTML(isQ?"quran":"hadith", it.id, it.src)+
-    '<div class="ev-actions"><button class="mini-btn" data-copy="'+esc(it.t)+(EN?esc("\n"+(isQ?I18N.quranEn(it.s,it.a):(it.te||""))):"")+'">'+T("نسخ")+'</button></div></div>';
+    '<div class="ev-actions"><button class="mini-btn" data-copy="'+esc(leadCopy(isQ?"quran":"hadith",it.id)+it.t)+(EN?esc("\n"+(isQ?I18N.quranEn(it.s,it.a):(it.te||""))):"")+'">'+T("نسخ")+'</button></div></div>';
 }
 function sitEvidenceHTML(s){
   var h="";
   (s.quranRefs||[]).forEach(function(q,i){
     if(!citeOK("quran", s.id+"#q"+i, q.text)) return;
-    h+='<div class="evidence-item"><div class="evidence-tag">'+T("قرآن كريم")+' — '+esc(I18N.ref(q.surahName,q.ayahNumber))+'</div><div class="evidence-quote" data-q="'+esc(q.surahName)+'|'+esc(q.ayahNumber)+'"'+AR_ATTR+'>﴿ '+esc(qText(q.surahName,q.ayahNumber,q.text))+' ﴾</div>'+enAyah(q.surahName,q.ayahNumber)+
+    h+='<div class="evidence-item"><div class="evidence-tag">'+T("قرآن كريم")+' — '+esc(I18N.ref(q.surahName,q.ayahNumber))+'</div>'+leadHTML("quran",s.id+"#q"+i)+'<div class="evidence-quote" data-q="'+esc(q.surahName)+'|'+esc(q.ayahNumber)+'"'+AR_ATTR+'>﴿ '+esc(qText(q.surahName,q.ayahNumber,q.text))+' ﴾</div>'+enAyah(q.surahName,q.ayahNumber)+
       (q.context?'<div class="evidence-meta">'+esc(q.context)+'</div>':"")+'<div class="evidence-relevance">'+esc(q.relevance||"")+'</div>'+citeHTML("quran", s.id+"#q"+i)+'</div>';
   });
   (s.hadithRefs||[]).forEach(function(x,i){
@@ -257,8 +264,8 @@ function sitEvidenceHTML(s){
         '<div class="evidence-meta">'+esc(I18N.src(x.source))+'</div><div class="evidence-relevance">'+T("لا نقتبس لفظها لأنه لم يُطابَق مع نسخة المصدر.")+'</div></div>';
       return;
     }
-    h+='<div class="evidence-item"><div class="evidence-tag">'+(x.paraphrase?T("خلاصة الرواية"):T("نص الحديث"))+'<span class="grade '+gradeClass(x.grade)+'">'+esc(I18N.grade(x.grade))+'</span>'+(x.paraphrase?'<span class="paraphrase">'+T("بالمعنى لا باللفظ")+'</span>':"")+'</div>'+
-      '<div class="evidence-quote" '+AR_VOICE+AR_ATTR+' style="font-size:1.02rem;">«'+esc(hText(x.text))+'»</div>'+enHadith(x.te)+'<div class="evidence-meta">'+T("الراوي:")+' '+esc(x.narrator)+' — '+esc(I18N.src(x.source))+'</div>'+citeHTML("hadith", s.id+"#"+i, x.source)+'</div>';
+    h+='<div class="evidence-item"><div class="evidence-tag">'+(x.paraphrase?T("خلاصة الرواية"):leadKind("hadith",s.id+"#"+i)==="athar"?T("نص الرواية"):T("نص الحديث"))+'<span class="grade '+gradeClass(x.grade)+'">'+esc(I18N.grade(x.grade))+'</span>'+(x.paraphrase?'<span class="paraphrase">'+T("بالمعنى لا باللفظ")+'</span>':"")+'</div>'+
+      leadHTML("hadith",s.id+"#"+i)+'<div class="evidence-quote" '+AR_VOICE+AR_ATTR+' style="font-size:1.02rem;">«'+esc(hText(x.text))+'»</div>'+enHadith(x.te)+'<div class="evidence-meta">'+T("الراوي:")+' '+esc(x.narrator)+' — '+esc(I18N.src(x.source))+'</div>'+citeHTML("hadith", s.id+"#"+i, x.source)+'</div>';
   });
   if(s.seerahSources && s.seerahSources.length && s.sourceStrength==="رواية تاريخية"){
     h+='<div class="evidence-item"><div class="evidence-tag">'+T("من كتب السيرة")+'</div><div class="evidence-relevance">'+T("وردت تفاصيل هذا الموقف في مصادر السيرة المعتبرة ({0})، وبعض ألفاظه محل نقاش عند نقّاد الحديث، فهو خبر تاريخي معتمد في كتب السيرة لا حديث بدرجة الصحيح.", esc(s.seerahSources.map(function(x){return T(x);}).join(T("، "))))+'</div></div>';
@@ -267,8 +274,8 @@ function sitEvidenceHTML(s){
 }
 function list(arr,cls){ return '<'+(cls==="steps"?"ol":"ul")+' class="'+(cls||"bullets")+'">'+arr.map(function(x){return "<li>"+esc(x)+"</li>";}).join("")+'</'+(cls==="steps"?"ol":"ul")+'>'; }
 /** فصل قابل للطي: مطويّ افتراضيًا ليرى المستخدم كل الفصول ثم يفتح ما يريد */
-function section(num,title,body){
-  return '<div class="section collapsible collapsed"><div class="section-title" role="button" tabindex="0" aria-expanded="false"><span class="section-num">'+num+'</span><span class="st-text">'+title+'</span><span class="st-chev" aria-hidden="true"></span></div><div class="sec-body">'+body+'</div></div>';
+function section(num,title,body,attrs,cls){
+  return '<div class="section collapsible collapsed'+(cls?" "+cls:"")+'"'+(attrs?" "+attrs:"")+'><div class="section-title" role="button" tabindex="0" aria-expanded="false"><span class="section-num">'+num+'</span><span class="st-text">'+title+'</span><span class="st-chev" aria-hidden="true"></span></div><div class="sec-body">'+body+'</div></div>';
 }
 function toggleSection(sec, open){
   if(!sec) return;
@@ -302,14 +309,61 @@ function rawHit(h, raw){
   return h;
 }
 /* عند ضعف الفهم: موضوعات قريبة يختار منها المستخدم فتُعاد القراءة مركّزة عليه (بلا أسئلة داخل القراءة نفسها) */
-function focusChipsHTML(a, head){
+function focusChipsHTML(a, head, extra){
   var ids=[], add=function(id){ if(id && id!==a.focus && ids.indexOf(id)<0 && RAG.byId("theme",id)) ids.push(id); };
+  (extra||[]).forEach(add);
   (a.understanding.interpretations||[]).forEach(add);
   a.understanding.themes.forEach(function(t){ add(t.id); });
   (a.retrieval.sits||[]).slice(0,4).forEach(function(x){ (x.via||[]).forEach(add); });
   HOME_THEMES.forEach(add);
   return '<div class="focus-pick tts-skip"><div class="fp-h">'+(head||T("لم أفهم موضوع حالتك بوضوح. اختر الأقرب لما تمر به لأعيد القراءة:"))+'</div><div class="row">'+
     ids.slice(0,6).map(function(id){ var t=RAG.byId("theme",id); return '<button class="theme-chip" data-focus="'+esc(id)+'">'+iconSvg(t.icon)+esc(t.label)+'</button>'; }).join("")+'</div></div>';
+}
+
+/* عدة محاور في رسالة واحدة (COMPOSE.compose → chapters، من js/data-facets.js) */
+function miniSitHTML(s){ return '<button class="mini-sit" data-sit="'+esc(s.id)+'"><div class="ms-fig">'+esc(figureOf(s))+(s.sourceType==="quran"?'<span class="src-quran">'+T("قرآن")+'</span>':"")+'</div><div class="ms-title">'+esc(s.title)+'</div></button>'; }
+function facetMapHTML(Ch){
+  return '<div class="facet-map"><div class="fm-title">'+T("محاور موقفك")+'</div><p class="fm-text"><span>'+esc(Ch.intro)+'</span> <span>'+esc(Ch.order)+'</span></p>'+
+    '<div class="fm-chips tts-skip">'+Ch.chapters.map(function(c){ return '<button class="fm-chip" data-chapter="'+c.n+'"><span class="fm-n">'+c.n+'</span>'+esc(c.name)+'</button>'; }).join("")+'</div></div>';
+}
+function chaptersHTML(Ch, raw, next){
+  var h="";
+  Ch.chapters.forEach(function(c){
+    var ev=c.ayat.map(function(q){ return ayahHTML(q,[]); }).join("")+c.hadith.map(function(x){ return hadithHTML(x,[]); }).join("");
+    var evs=[];   // ألفاظه كما كتبها، بلا تكرار («ابناء» داخل «والأبناء»)
+    c.ev.forEach(function(w){ var r=rawHit(w,raw), nr=RAG.normalize(r);
+      for(var i=0;i<evs.length;i++){ var nx=RAG.normalize(evs[i]); if(nx.indexOf(nr)>-1) return; if(nr.indexOf(nx)>-1){ evs[i]=r; return; } }
+      evs.push(r); });
+    var body=(evs.length?'<div class="ch-ev tts-skip">'+T("ممّا كتبتَ:")+' '+evs.map(function(w){ return "<code>"+esc(w)+"</code>"; }).join(" ")+'</div>':"")+
+      (c.insight?'<div class="insight"><div class="i-label">'+T("القراءة القرآنية النبوية")+'</div>'+insightLines(c.insight)+'</div>':"")+
+      (c.pair?'<div class="ch-pair"><div class="dim-label">'+esc(Ch.setting)+' × '+esc(c.name)+'</div><div class="section-body">'+esc(c.pair)+'</div></div>':"")+
+      (ev?'<div class="ev-list">'+ev+'</div>':"")+
+      (c.steps.length?'<div class="dim-label" style="margin-top:14px;">'+T("خطوات في هذا المحور")+'</div>'+list(c.steps,"steps"):"")+
+      (c.sit?'<div class="dim-label" style="margin-top:14px;">'+T("موقف يضيء هذا المحور")+'</div><div class="mini-sits">'+miniSitHTML(c.sit)+'</div>':"")+
+      '<div class="ev-actions tts-skip" style="margin-top:12px;"><button class="mini-btn" data-focus="'+esc(c.theme)+'">'+T("ركّز الإجابة على هذا المحور")+'</button></div>';
+    h+=section(next(), T("الفصل {0}: {1}", c.n, esc(c.name)), body, 'id="chapter-'+c.n+'"', "chapter");
+  });
+  return h+section(next(), T("ما يجمع بين هذه المحاور"), '<div class="reflection-box">'+esc(Ch.link)+'</div>');
+}
+/* موضوعان متقاربان في الدرجة: «هل يدور موقفك أساسًا حول…؟» (اختياري؛ الإجابة كاملة تحته) */
+function ambiguityHTML(ids){
+  return '<div class="focus-pick dym tts-skip"><div class="fp-h">'+T("هل يدور موقفك أساسًا حول:")+'</div><div class="row">'+
+    ids.map(function(id){ var t=RAG.byId("theme",id); return t?'<button class="theme-chip" data-focus="'+esc(id)+'">'+iconSvg(t.icon)+esc(t.label)+'</button>':""; }).join("")+
+    '</div><div class="fp-s">'+T("اختر الأقرب لأركّز الإجابة عليه، أو تابع القراءة كما هي.")+'</div></div>';
+}
+/* لم يُفهم شيء: نطلب التفاصيل أولًا (تُضم إلى ما كتب)، ثم نقترح موضوعات؛ وفي المحاولة الثانية تظهر الموضوعات مباشرة */
+function clarifyHTML(a){
+  var again=(a.round||1)>=2, sug=RAG.suggest ? RAG.suggest(a.input, 6) : [];
+  var gaps=(a.deep&&a.deep.gaps&&a.deep.gaps.length)?a.deep.gaps:[{label:T("من الطرف الآخر؟"),add:T("الطرف الآخر هو ")},{label:T("ماذا حدث بالتفصيل؟"),add:T("ما حدث هو أن ")},{label:T("بماذا تشعر؟"),add:T("أشعر ")},{label:T("ماذا تريد أن يحدث؟"),add:T("أريد ")}];
+  var topics=focusChipsHTML(a, T("موضوعات قد تكون قريبة مما تقصد:"), sug);
+  return '<div class="clarify tts-skip"><div class="cl-title">'+(again?T("ما زلت لم أفهم موقفك بوضوح"):T("لم أفهم موقفك بعد"))+'</div>'+
+    '<p class="cl-text">'+(again?T("اختر الموضوع الأقرب لما تمر به، أو أضف تفاصيل بكلمات أخرى."):T("أخبرني أكثر لأفهمك: من الطرف الآخر؟ ماذا حدث؟ بماذا تشعر؟ ماذا تريد أن يحدث؟ أضف ما تستطيع، وسأجمعه مع ما كتبت."))+'</p>'+
+    (again?topics:"")+
+    '<div class="cl-gaps">'+gaps.map(function(g){ return '<button class="chip" data-clarify-add="'+esc(g.add)+'">'+esc(g.label)+'</button>'; }).join("")+'</div>'+
+    '<textarea id="clarifyInput" maxlength="2000" placeholder="'+esc(T("أضف تفاصيل هنا…"))+'"></textarea>'+
+    '<div class="cl-actions"><button class="btn-primary" data-act="clarify-run">'+T("حلّل من جديد")+'</button>'+
+    (again?"":'<button class="btn-ghost" data-act="clarify-topics">'+T("اقترح عليّ موضوعات")+'</button>')+'</div>'+
+    (again?"":'<div class="cl-topics" hidden>'+topics+'</div>')+'</div>';
 }
 
 /* «مواقفي»: يحفظ المستخدم ما كتبه بنفسه (اختياري، على هذا الجهاز فقط)، ويعيد فتح قراءته متى شاء */
@@ -370,10 +424,14 @@ function renderResult(a, flags){
     out+='<div class="notice"><b>'+T("جانب شرعي أو قانوني دقيق")+'</b>'+T("يتضمن موقفك مسألة (كالطلاق أو الميراث أو الحقوق) لها أحكام تفصيلية. ما يلي مبادئ وتوجيهات عامة للتأمل، وليس فتوى؛ ارجع إلى عالم شرعي مؤهل أو مختص قانوني للحكم في حالتك.")+'</div>';
   }
 
+  // لم يُفهم من الرسالة شيء: لا إجابة عامة، بل طلب تفاصيل تُضم إلى ما كتب (ثم موضوعات مقترحة)
+  if(C.clarity==="lost" && !flags.selfHarm && !flags.violence){ qs("resultWrap").innerHTML=out+clarifyHTML(a)+actionsHTML(); aiSession=null; return; }
   out+=lifeNeedsHTML(a);
   if(u.focus && u.themes[0]){
     out+='<div class="focus-note tts-skip">'+T("ركّزتُ القراءة على «{0}» كما اخترت.",esc(u.themes[0].theme.label))+'</div>';
   }
+  // موضوعان متقاربان: اختيار اختياري يركّز الإجابة، والقراءة تستمر تحته
+  if(C.ambiguous.length && !flags.selfHarm) out+=ambiguityHTML(C.ambiguous);
   // ضيق غير محدد: نسمّي القراءات المحتملة بدل «لم أجد ما يطابق»، ونعرضها للاختيار
   var vague=!u.crisis && !u.focus && (u.interpretations||[]).length>=2;
   if(vague){
@@ -386,6 +444,9 @@ function renderResult(a, flags){
     if(!u.crisis && !flags.selfHarm) out+=focusChipsHTML(a);
     if(!top){ qs("resultWrap").innerHTML=out+actionsHTML(); return; }
   }
+
+  // عدة محاور: فقرة تجمع ما فُهم من كلامه وروابط إلى فصولها، قبل أي تفصيل
+  if(C.chapters) out+=facetMapHTML(C.chapters);
 
   // 1) قراءة الموقف
   var themesShown=u.themes.filter(function(t){return t.conf>=0.3;}).slice(0,4);
@@ -404,6 +465,9 @@ function renderResult(a, flags){
     '</div></div>';
 
   a.help.forEach(function(h){ out+='<div class="help-note">'+esc(h)+'</div>'; });
+
+  // عدة محاور في رسالة واحدة: فصل لكل محور، ثم ما يجمع بينها (وخريطتها فوق القراءة الأولية)
+  if(C.chapters) out+=chaptersHTML(C.chapters, u.raw, function(){ return ++n; });
 
   // 2) المنظور القرآني النبوي
   if(C.insights.length){
@@ -499,8 +563,8 @@ function resultSummaryText(){
   var r=a.retrieval, L=[T("رِفقة الأُسوة — خلاصة التأمل"),"",T("الموقف:")+" "+a.input,"",a.reading,""];
   a.insights.forEach(function(x){ L.push("• "+x.label+": "+x.text); });
   if(r.sits[0]) L.push("",T("الموقف الأقرب:")+" "+r.sits[0].s.title);
-  r.ayat.slice(0,2).forEach(function(x){ L.push("﴿"+x.item.t+"﴾ ["+I18N.ref(x.item.s,x.item.a)+"]"+(EN?"\n"+I18N.quranEn(x.item.s,x.item.a):"")); });
-  r.hadith.slice(0,2).forEach(function(x){ L.push("«"+x.item.t+"»"+(EN&&x.item.te?"\n“"+x.item.te+"”":"")+" — "+I18N.src(x.item.src)+" ("+I18N.grade(x.item.g)+")"); });
+  r.ayat.slice(0,2).forEach(function(x){ L.push(leadCopy("quran",x.item.id)+"﴿"+x.item.t+"﴾ ["+I18N.ref(x.item.s,x.item.a)+"]"+(EN?"\n"+I18N.quranEn(x.item.s,x.item.a):"")); });
+  r.hadith.slice(0,2).forEach(function(x){ L.push(leadCopy("hadith",x.item.id)+"«"+x.item.t+"»"+(EN&&x.item.te?"\n“"+x.item.te+"”":"")+" — "+I18N.src(x.item.src)+" ("+I18N.grade(x.item.g)+")"); });
   L.push("",T("خطة الآن:")); a.plan.now.forEach(function(p,i){ L.push((i+1)+". "+p); });
   L.push("",T("هذا تأمل إرشادي وليس فتوى."));
   return L.join("\n");
@@ -744,13 +808,69 @@ function renderSeerah(){
     return list.length ? '<div class="seerah-era"><div class="seerah-era-title">'+T(e[1])+'</div>'+list.map(function(s){ return seerahCardHTML(s, seerahArea); }).join("")+'</div>' : "";
   }).join("");
 }
+/* ---------------- إلهام اليوم (الشاشة الرئيسية) ----------------
+   يومٌ موقف من السيرة (ما جعله صعبًا، وما اختاره ﷺ، ودرس لمجال من حياتك)، ويومٌ موقف من الحياة اليومية مع موقف من السيرة يضيئه.
+   الاختيار من تاريخ اليوم وحده (بلا شبكة ولا عشوائية): خطوة ثابتة أوّلية مع عدد العناصر، فلا يتكرر عنصر قبل المرور بالجميع.
+   يمكن الرجوع إلى الأيام السابقة، وعدّاد الأيام المتتالية يبقى على الجهاز فقط. */
+function dayNo(){ var d=new Date(); return Math.floor((d.getTime()-d.getTimezoneOffset()*60000)/86400000); }
+function gcd(a,b){ return b?gcd(b,a%b):a; }
+function cycleAt(list, k, salt){ var n=list.length, st=Math.max(2,Math.round(n*0.38)); while(gcd(st,n)!==1) st++; return list[((k*st+salt)%n+n)%n]; }
+function inspireItem(day){
+  var ev=seerahEvents(), life=window.TAXONOMY?lifeAll():[], k=Math.floor(day/2);
+  if(ev.length && (!life.length || day%2===0)) return {kind:"seerah", s:cycleAt(ev,k,7), area:["self","family","work","community"][((k%4)+4)%4]};
+  return life.length ? {kind:"life", x:cycleAt(life,k,11)} : null;
+}
+/* موقف من السيرة يضيء موقفًا من الحياة: أكثر الموضوعات المشتركة (الموضوع الأول للموقف أثقل)، ومواقف «العمق» أولًا */
+function seerahForLife(x){
+  var w={}; x.th.forEach(function(t,i){ w[t]=i===0?2:1; });
+  var best=null, bs=0;
+  SITUATIONS.forEach(function(s){
+    var sc=0; THEMES.forEach(function(t){ if(w[t.id] && t.sits.indexOf(s.id)>-1) sc+=w[t.id]; });
+    if(sc && s.depth) sc+=0.5;
+    if(sc>bs){ bs=sc; best=s; }
+  });
+  return best;
+}
+var inspireOffset=0, inspireText="";
+function visitStreak(){
+  var v=store("rifqa.visits")||{}, d=dayNo();
+  if(v.last!==d){ v.streak=v.last===d-1?(v.streak||1)+1:1; v.last=d; v.best=Math.max(v.best||0,v.streak); store("rifqa.visits",v); }
+  return v;
+}
 function renderSeerahDaily(){
   var box=qs("seerahDaily"); if(!box) return;
-  var ev=seerahEvents(); if(!ev.length){ box.innerHTML=""; return; }
-  var day=Math.floor(Date.now()/86400000), s=ev[(day*31)%ev.length], area=["self","family","work","community"][day%4];
-  box.innerHTML='<div class="card"><div class="d-label">'+T("إلهام اليوم من السيرة")+'</div><div class="sc-when">'+esc(s.depth.when)+'</div>'+
-    '<div class="d-text">'+esc(s.title)+'</div><div class="ev-note"><b>'+esc(seerahAreaLabel(area))+':</b> '+esc((s.depth.lessons||{})[area]||"")+'</div>'+
-    '<div class="ev-actions"><button class="mini-btn" data-sit="'+esc(s.id)+'">'+T("اقرأ الموقف")+'</button><button class="mini-btn" data-nav="seerah">'+T("كل المواقف بالترتيب ‹")+'</button></div></div>';
+  var today=dayNo(), day=today+inspireOffset, it=inspireItem(day); if(!it){ box.innerHTML=""; return; }
+  var rtl=(document.documentElement.getAttribute("dir")||"rtl")==="rtl", v=visitStreak();
+  var when=inspireOffset===0?T("اليوم"):inspireOffset===-1?T("أمس"):fmtDate((day*86400000)+new Date().getTimezoneOffset()*60000+43200000);
+  var nav='<div class="insp-nav tts-skip"><button class="insp-arrow" data-act="insp-prev" title="'+esc(T("اليوم السابق"))+'" aria-label="'+esc(T("اليوم السابق"))+'">'+(rtl?"›":"‹")+'</button>'+
+    '<button class="insp-day" data-act="insp-today"'+(inspireOffset===0?" disabled":"")+'>'+esc(when)+'</button>'+
+    '<button class="insp-arrow" data-act="insp-next"'+(inspireOffset>=0?" disabled":"")+' title="'+esc(T("اليوم التالي"))+'" aria-label="'+esc(T("اليوم التالي"))+'">'+(rtl?"‹":"›")+'</button></div>';
+  var canShare=IS_ANDROID_APP||!!navigator.share, tools='<button class="mini-btn" data-act="insp-copy">'+T("نسخ")+'</button>'+(canShare?'<button class="mini-btn" data-act="insp-share">'+T("مشاركة")+'</button>':"");
+  var streak=v.streak>=2?'<div class="insp-streak">'+esc(T("أيام متتالية: {0}",v.streak))+'</div>':"";
+  var h, L=[];
+  if(it.kind==="seerah"){
+    var s=it.s, d=s.depth, lesson=(d.lessons||{})[it.area]||"", hard=(d.challenges||[])[0]||"";
+    h='<div class="insp-head"><div class="d-label">'+(inspireOffset===0?T("إلهام اليوم من السيرة"):T("إلهام من السيرة"))+'</div>'+nav+'</div>'+
+      '<div class="sc-when">'+esc(d.when)+'</div><div class="d-text">'+esc(s.title)+'</div>'+
+      (hard?'<div class="insp-row"><b>'+T("ما الذي جعل الموقف صعبًا؟")+'</b> '+esc(hard)+'</div>':"")+
+      '<div class="insp-row"><b>'+T("ماذا اختار؟")+'</b> '+esc(d.chose)+'</div>'+
+      (lesson?'<div class="insp-lesson"><b>'+esc(T("درس لحياتك ({0}):",seerahAreaLabel(it.area)))+'</b> '+esc(lesson)+'</div>':"")+
+      '<div class="ev-actions"><button class="mini-btn" data-sit="'+esc(s.id)+'">'+T("اقرأ الموقف كاملًا")+'</button><button class="mini-btn" data-nav="seerah">'+T("كل المواقف بالترتيب ‹")+'</button>'+tools+'</div>';
+    L=[T("إلهام اليوم من السيرة"), s.title, hard?T("ما الذي جعل الموقف صعبًا؟")+" "+hard:"", T("ماذا اختار؟")+" "+d.chose, lesson?T("درس لحياتك ({0}):",seerahAreaLabel(it.area))+" "+lesson:""];
+  } else {
+    var x=it.x, ss=lifeSubOf(x.sub), sr=seerahForLife(x);
+    var needs=(x.need||[]).map(function(id){ return (window.SIT_NEEDS||[]).filter(function(k){ return k.id===id; })[0]; }).filter(Boolean);
+    h='<div class="insp-head"><div class="d-label">'+(inspireOffset===0?T("موقف اليوم من الحياة"):T("موقف من الحياة"))+'</div>'+nav+'</div>'+
+      (ss?'<div class="sc-when">'+esc(tl(ss.cat))+' › '+esc(tl(ss.sub))+'</div>':"")+
+      '<div class="d-text">'+esc(lifeText(x))+'</div>'+
+      '<div class="insp-row">'+T("كيف كنت ستتصرف لو كنت فيه؟ فكّر قليلًا، ثم اقرأ ما يهدي إليه القرآن والسنة والسيرة.")+'</div>'+
+      (needs.length?'<div class="insp-row"><b>'+T("ما قد تحتاجه فيه:")+'</b> '+needs.map(function(k){ return esc(tl(k)); }).join(T("، "))+'</div>':"")+
+      (sr?'<button class="insp-link" data-sit="'+esc(sr.id)+'"><span class="il-h">'+T("من السيرة ما يضيء هذا الموقف:")+'</span> '+esc(sr.title)+'</button>':"")+
+      '<div class="ev-actions"><button class="mini-btn" data-life="'+x.n+'">'+T("اقرأ كيف تتعامل معه")+'</button>'+tools+'</div>';
+    L=[T("موقف اليوم من الحياة"), lifeText(x), sr?T("من السيرة ما يضيء هذا الموقف:")+" "+sr.title:""];
+  }
+  inspireText=L.filter(Boolean).join("\n")+"\n— "+T("رِفقة الأُسوة");
+  box.innerHTML='<div class="card insp">'+h+streak+'</div>';
 }
 /* مواقف «500 موقف من الحياة» القريبة من موقف سيرة: عبر الموضوعات المشتركة (js/data-taxonomy.js) */
 function lifeForSit(s){
@@ -799,7 +919,7 @@ function renderLibrary(){
   qs("libList").innerHTML=items.slice(0,libLimit).map(function(x){
     var it=x.it, isQ=x.k==="quran";
     return '<div class="lib-item"><div class="li-top"><div class="li-ref">'+(isQ?esc(I18N.ref(it.s,it.a)):esc(I18N.src(it.src))+'<span class="grade '+gradeClass(it.g)+'">'+esc(I18N.grade(it.g))+'</span>')+'</div>'+saveBtn(x.k,it.id)+'</div>'+
-      '<div class="li-text'+(isQ?' quran':'')+'"'+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":"«"+esc(hText(it.t))+"»")+'</div>'+(isQ?enAyah(it.s,it.a):enHadith(it.te))+
+      leadHTML(x.k,it.id)+'<div class="li-text'+(isQ?' quran':'')+'"'+AR_ATTR+'>'+(isQ?"﴿ "+esc(qText(it.s,it.a,it.t))+" ﴾":"«"+esc(hText(it.t))+"»")+'</div>'+(isQ?enAyah(it.s,it.a):enHadith(it.te))+
       '<div class="li-note">'+(isQ?"":T("الراوي:")+" "+esc(it.r)+" · ")+esc(it.n)+'</div>'+
       '<div class="li-tags">'+it.th.filter(function(t){return RAG.themeLabel(t);}).map(function(t){return '<span class="tag soft" data-libtheme="'+t+'">'+esc(RAG.themeLabel(t))+'</span>';}).join("")+'</div></div>';
   }).join("")+(items.length>libLimit?'<div style="text-align:center;margin:14px 0;"><button class="btn-ghost" data-act="lib-more">'+T("عرض المزيد")+'</button></div>':"")+
@@ -872,7 +992,7 @@ function closeDetail(fromPop){
 /* ---------------- القراءة الصوتية للصفحة ---------------- */
 var READ_SEL=".user-quote,.notice,.confidence-note,.rc-title,.rc-text,.help-note,.section-title,.i-label,.i-text,.section-body,.reflection-box,"+
   ".evidence-tag,.evidence-quote,.en-trans,.evidence-meta,.evidence-relevance,.ev-note,li,.dw,.dt,.q-item,.lt,.ms-title,.ms-why,.c-title,.c-note,.r-title,"+
-  ".ai-body p,.ai-body h2,.ai-body blockquote,.detail-title,.theme-hero h2";
+  ".ai-body p,.ai-body h2,.ai-body blockquote,.detail-title,.theme-hero h2,.say-lead";
 var SKIP_SEL=".tts-skip,.ev-actions,.result-actions,details.why,.sources-box,.ai-foot,.ai-empty,.rate-box,.dims,.tag-row,.back-link";
 var RATES=[0.8,1,1.2,1.45];
 var ttsEl=null, ttsCount=0, ttsSource=null;
@@ -890,6 +1010,7 @@ function collectSegments(root){
   var segs=[];
   root.querySelectorAll(READ_SEL).forEach(function(el){
     if(el.closest(SKIP_SEL)) return;
+    if(el.matches(".q-lead") && el.closest(".evidence-item")) return;   // للآية تمهيد منطوق يذكر موضعها
     var par=el.parentElement && el.parentElement.closest(READ_SEL);
     if(par && root.contains(par)) return;                       // لا نقرأ العنصر مرتين
     if(el.getAttribute("data-voice")==="ar") return;            // نص عربي في الواجهة الإنجليزية: يُقرأ معناه بعده
@@ -1200,13 +1321,15 @@ function toggleLangMenu(force){
 
 /* ---------------- مفوّض الأحداث العام ---------------- */
 document.addEventListener("click",function(e){
-  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-star],[data-theme-open],[data-focus],[data-nav],[data-sit],[data-life],[data-life-cat],[data-life-sub],[data-seerah-area],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],[data-depth],#segTheme button,#segFs button,#segRate button,#segTk button,#segFf button,[data-setlang],ol.steps li");
+  var el=e.target.closest(".section.collapsible > .section-title,[data-tts],[data-listen],[data-star],[data-theme-open],[data-focus],[data-nav],[data-sit],[data-life],[data-life-cat],[data-life-sub],[data-seerah-area],[data-save],[data-copy],[data-plan],[data-act],[data-libkind],[data-libtheme],[data-close],[data-depth],[data-chapter],[data-clarify-add],#segTheme button,#segFs button,#segRate button,#segTk button,#segFf button,[data-setlang],ol.steps li");
   if(!el) return;
   if(el.matches("ol.steps li")){ el.classList.toggle("done"); return; }
   if(el.matches(".section.collapsible > .section-title")){ toggleSection(el.parentElement); return; }
   if(el.hasAttribute("data-tts")){ ttsControl(el.getAttribute("data-tts")); return; }
   if(el.hasAttribute("data-listen")){ listen(el.getAttribute("data-listen")); return; }
   if(el.hasAttribute("data-star")){ setStars(el.closest(".rate-box"), +el.getAttribute("data-star")); return; }
+  if(el.hasAttribute("data-chapter")){ var cs=qs("chapter-"+el.getAttribute("data-chapter")); if(cs){ toggleSection(cs,true); cs.scrollIntoView({behavior:"smooth",block:"start"}); } return; }
+  if(el.hasAttribute("data-clarify-add")){ var ci=qs("clarifyInput"); if(ci){ ci.value=(ci.value.trim()?ci.value.trim()+" ":"")+el.getAttribute("data-clarify-add"); ci.focus(); ci.setSelectionRange(ci.value.length,ci.value.length); } return; }
   if(el.hasAttribute("data-focus")){ if(lastAnalysis) runSearch(lastAnalysis.input, el.getAttribute("data-focus")); return; }
   if(el.hasAttribute("data-theme-open")){ closeDetail(true); openTheme(el.getAttribute("data-theme-open")); return; }
   if(el.hasAttribute("data-nav")){ var nv=el.getAttribute("data-nav"); closeDetail(true); if(nv==="library") renderLibrary(); if(nv==="saved") renderSaved(); if(nv==="seerah") renderSeerah(); showScreen(nv); return; }
@@ -1272,6 +1395,21 @@ document.addEventListener("click",function(e){
     else navigator.share({title:T("رِفقة الأُسوة"),text:resultSummaryText()}).catch(function(){});
   }
   else if(act==="print") window.print();
+  else if(act==="clarify-run"){
+    var add=(qs("clarifyInput").value||"").trim(), a0=lastAnalysis;
+    if(add.length<3 || !a0){ toast(T("اكتب موقفك بتفصيل أكثر قليلًا")); qs("clarifyInput").focus(); return; }
+    var both=a0.input.replace(/[\s.،,؛;]+$/,"")+(/[ء-ي]/.test(a0.input+add)?"، ":", ")+add; qs("userInput").value=both;
+    runSearch(both, null, null, (a0.round||1)+1);
+  }
+  else if(act==="clarify-topics"){ var tb=document.querySelector(".cl-topics"); if(tb) tb.hidden=!tb.hidden; }
+  else if(act==="insp-prev"){ inspireOffset--; renderSeerahDaily(); }
+  else if(act==="insp-next"){ if(inspireOffset<0){ inspireOffset++; renderSeerahDaily(); } }
+  else if(act==="insp-today"){ inspireOffset=0; renderSeerahDaily(); }
+  else if(act==="insp-copy") copyText(inspireText);
+  else if(act==="insp-share"){
+    if(IS_ANDROID_APP) window.AndroidBridge.share(inspireText);
+    else if(navigator.share) navigator.share({title:T("رِفقة الأُسوة"),text:inspireText}).catch(function(){});
+  }
   else if(act==="lib-more"){ libLimit+=40; renderLibrary(); }
   else if(act==="life-edit"){ showScreen("home"); var lt=qs("userInput"); lt.focus(); lt.setSelectionRange(lt.value.length, lt.value.length); }
   else if(act==="ask-theme"){ showScreen("home"); var ta=qs("userInput"); ta.focus(); ta.placeholder=T("اكتب موقفك المتعلق بـ«{0}» بالتفصيل…",el.getAttribute("data-label")); }

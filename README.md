@@ -47,6 +47,28 @@ Every quoted text comes unchanged from the library; nothing is generated.
 
 Safety notices, distinctions and the limits of each example ("when does this not apply?") are kept at every depth.
 
+**How each text is introduced.** Every verse opens with «قال الله تعالى» ("Allah the Exalted says"), and every hadith with what it actually is (`js/data-attrib.js`, generated and hand-checked by `build/kb/attrib.js`):
+- «قال رسول الله ﷺ» for the Prophet's own words;
+- «فيما يرويه عن ربه» when he relates it from his Lord;
+- «من السنة النبوية» for a narration about him (an event, a question, his practice);
+- «من الأدعية النبوية» for a supplication reported from him;
+- «من الآثار والروايات» for the words of a Companion or a historical report.
+
+A summary in meaning gets no introduction, because it is already labelled as a summary and not the wording.
+
+**Several matters in one message.** When a message names more than one area of life ("dealing with my wife and children abroad"), the engine lists each area with the user's own words, in the order they were written (`facets` in `RAG.understand`, data in `js/data-facets.js`). The answer then opens with one paragraph that gathers them ("I understood three connected matters: …") and links to one chapter per matter. Each chapter has:
+- its Quranic and Prophetic reading;
+- a verse and a hadith that are core to that topic, all passing the citation validator and never repeated across chapters;
+- a practical line for that matter in its setting (for example, children × living abroad);
+- steps, and a Seerah story that sheds light on it;
+- a button to focus the whole answer on that matter.
+
+A last chapter explains what ties the matters together.
+
+**When the message is unclear.**
+- If nothing at all is understood, there is no generic answer. The app asks for the missing details (who, what happened, how you feel, what you want), adds them to what was already written, and analyses again. It can also suggest nearby topics (`RAG.suggest`). If the second attempt is still unclear, the topics are shown straight away.
+- If the two leading topics score within 75% of each other, an optional "Is your situation mainly about…?" row lets the user focus the answer on one of them, with the full answer still shown below. This happens on about 12% of benchmark messages, and never alongside crisis signals.
+
 **Citations.** Every verse and hadith has a "Source details" panel: the reference, the book with its number and section, the gradings recorded in the source edition, and how the text was checked. Before any quotation is shown, a validator (`COMPOSE.validate`) requires:
 - a verification record in `js/data-evidence.js`;
 - an accepted status;
@@ -62,7 +84,7 @@ When the engine finds no clear topic, the result offers nearby topics as buttons
 
 **Inspiration from the Seerah** (the mountain icon) lists those 35 events in order: Makkah, the Hijra, Madinah.
 - The life-area chips (yourself, family, work, community) switch the lesson shown on each card.
-- The home screen shows one event a day.
+- The home screen shows a **daily inspiration**. It alternates between one of these events (what made it hard, what was chosen, and a lesson for one area of life) and one of the 623 everyday situations (with a Seerah story that sheds light on it). The item comes from the date alone, with no network and no randomness: a fixed step, coprime with the list length, visits every item before any repeats. Arrows go back to earlier days, and a count of consecutive days stays on the device.
 - Every event page adds the depth sections and links to similar everyday situations from the taxonomy.
 
 **My situations** is an optional journal. "Save to My situations" keeps the user's own text on the device (`rifqa.journal` in localStorage), and the Saved screen lists it so the reading can be reopened or deleted.
@@ -91,7 +113,7 @@ The held-out set is the honest estimate for messages unlike anything the engine 
 **Source collection**: all 500 situations match the PDF of «500 موقف من الحياة» (`build/taxonomy/PDF-PARITY.md`).
 
 **Speed** (`build/tests/perf.js`, Node on a desktop):
-- Analysing a message takes a median of 9 ms (p95 32 ms).
+- Analysing a message takes a median of 5–9 ms (p95 under 35 ms).
 - Composing an answer takes under 1 ms.
 - With the CPU slowed 4× in Chrome (roughly a mid-range phone), a message takes about 70 ms, and a re-render 35–135 ms.
 
@@ -111,6 +133,8 @@ js/
   nlu.js        pre-understanding: Arabizi → Arabic, English spelling, concepts, safety tiers, vague distress
   data-nlu.js   its data: multilingual/dialect concepts, crisis and soft-risk phrases and rules (never shown)
   compose.js    answer depth (brief / standard / in depth) and the citation validator
+  data-facets.js  areas of life for several-matter messages: names, evidence ids, links and setting × relation lines (ar/en)
+  data-attrib.js  GENERATED (build/kb/attrib.js): how each hadith text is introduced
   data-distinctions.js  14 distinctions (forgiveness vs. ongoing harm, patience vs. passivity…): text in ar/en, evidence by library id, detection rules
 build/
   android/      Android wrapper (WebView), build-android.sh → signed AAB + APK, no Gradle needed
@@ -148,6 +172,8 @@ docs/           GitHub Pages: landing page, interactive user guide (guide.html),
 | Engine speed | `node build/tests/perf.js [--budget]` | load, first analysis, median/p95 per message; `--budget` fails above 40 ms median / 120 ms p95 |
 | Source-collection parity | `python -I build/taxonomy/pdf-parity.py [--write]` (needs PyMuPDF) | `build/taxonomy/PDF-PARITY.md` |
 | Answer composer and citation validator | `node build/tests/test-compose.js` | every message × 3 depths: no citation dropped, depths graded, altered/unknown/unverified texts rejected |
+| Answer structure | `node build/tests/test-structure.js` | introductions in sync and translated, several-matter chapters (no repeated or dropped evidence), unclear messages, "did you mean" rate |
+| Hadith introductions | `node build/kb/attrib.js [--list] [--write]` | `js/data-attrib.js` |
 | Distinctions test | `node build/tests/test-distinctions.js` | evidence ids in the verified library, ar/en complete, detection and false alarms |
 | Single-file HTML | `node build/bundle-html.js dist/RifqaAlUswa.html` | – |
 

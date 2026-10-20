@@ -7,7 +7,7 @@ const JS = path.join(__dirname, "../../js"), FIX = path.join(__dirname, "fixture
 const BUDGET = { buildMs: 1500, medianMs: 40, p95Ms: 120 };
 const FILES = ["data-situations.js", "data-situations-2.js", "data-situations-3.js", "data-situations-4.js", "data-quran.js", "data-quran-kb.js", "data-hadith.js", "data-hadith-kb.js",
   "data-themes.js", "data-seerah-kb.js", "data-evidence.js", "data-life.js", "data-taxonomy.js", "data-reading.js", "data-en.js", "i18n.js", "rag.js", "data-nlu.js",
-  "data-distinctions.js", "nlu.js", "reading.js", "compose.js"];
+  "data-distinctions.js", "data-facets.js", "data-attrib.js", "nlu.js", "reading.js", "compose.js"];
 const now = () => Number(process.hrtime.bigint()) / 1e6;
 const ctx = { console, localStorage: { getItem: () => JSON.stringify({ lang: "ar" }) }, document: {}, navigator: {} }; ctx.window = ctx; vm.createContext(ctx);
 let evalMs = 0; const slow = [];

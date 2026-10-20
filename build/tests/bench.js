@@ -34,7 +34,7 @@ function load(lang) {
   if (cache[lang]) return cache[lang];
   const ctx = { console, localStorage: { getItem: () => JSON.stringify({ lang }) }, document: {}, navigator: {} }; ctx.window = ctx; vm.createContext(ctx);
   const files = ["data-situations.js", "data-situations-2.js", "data-situations-3.js", "data-situations-4.js", "data-quran.js", "data-quran-kb.js", "data-hadith.js", "data-hadith-kb.js", "data-themes.js", "data-seerah-kb.js", "data-evidence.js", "data-life.js", "data-taxonomy.js", "data-reading.js",
-    lang === "ar" ? "data-en.js" : "data-" + lang + ".js", "i18n.js", "rag.js", "data-nlu.js", "data-distinctions.js", "nlu.js", "reading.js"];
+    lang === "ar" ? "data-en.js" : "data-" + lang + ".js", "i18n.js", "rag.js", "data-nlu.js", "data-distinctions.js", "data-facets.js", "data-attrib.js", "nlu.js", "reading.js"];
   for (const f of files) if (fs.existsSync(path.join(JS, f))) vm.runInContext(fs.readFileSync(path.join(JS, f), "utf8"), ctx, { filename: f });
   return cache[lang] = vm.runInContext("({RAG,QURAN_LIB,HADITH_LIB})", ctx);
 }

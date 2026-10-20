@@ -11,6 +11,7 @@ echo "== 1د) سلامة الأدلة"; node "$ROOT/build/tests/test-evidence.js
 echo "== 1هـ) طبقة السيرة"; node "$ROOT/build/tests/test-seerah.js"
 echo "== 1و) التمييزات الدقيقة"; node "$ROOT/build/tests/test-distinctions.js"
 echo "== 1ز) تركيب الإجابة والاستشهادات"; node "$ROOT/build/tests/test-compose.js"
+echo "== 1ز2) بنية الإجابة: التقديم والمحاور والوضوح"; node "$ROOT/build/tests/test-structure.js"
 echo "== 1ح) بلا اتصال بالشبكة"; node "$ROOT/build/tests/test-offline.js"
 echo "== 1ط) السرعة"; node "$ROOT/build/tests/perf.js" --budget
 echo "== 2) HTML مستقل";   node "$ROOT/build/bundle-html.js" "$DIST/RifqaAlUswa.html"
